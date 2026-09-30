@@ -1,0 +1,29 @@
+---
+name: diskort-server
+description: "Production VPS for Diskort — IP, SSH key, domains, deploy/update commands, release flow"
+metadata:
+  node_type: memory
+  type: reference
+  originSessionId: 0f563e3b-738e-42b9-899e-9826e3671029
+  modified: 2026-09-26T16:11:22.122Z
+---
+
+- VPS: isimkayit.com "IK Cloud 4 TR" (Kocaeli/TR, VMware, 2 vCPU, 4 GB, Ubuntu 24.04), IP `185.92.0.242`, monthly 401 TL + KDV, bought 2026-09-26.
+- SSH: `ssh -i ~/.ssh/diskort_vps root@185.92.0.242` — key-only since 2026-09-26 (`/etc/ssh/sshd_config.d/00-diskort-hardening.conf` overrides 50-cloud-init: PasswordAuthentication no, PermitRootLogin prohibit-password). Root password still valid for the provider console. Recovery: console login → delete that file + `systemctl reload ssh`. Safe-change pattern used: systemd-run 5 min auto-rollback timer, test new key session, then stop timer.
+- Repo cloned at `/opt/diskort`; stack in `/opt/diskort/infra` (docker compose: livekit, api, caddy; host network; ufw open 22,80,443,7881/tcp,3478/udp,50000-60000/udp). Secrets in `/opt/diskort/infra/.env` (chmod 600) — never print them.
+- Domains (Cloudflare, ziroo.net, **DNS only / grey cloud**): `diskort.ziroo.net` → API/gateway/download page, `lk.ziroo.net` → LiveKit, `turn.ziroo.net` → TURN/TLS. Let's Encrypt via Caddy.
+- Deploy server changes: `cd /opt/diskort && git pull && cd infra && docker compose up -d --build` (use `--no-deps --build api` to touch only the API). Caddyfile is a single-file bind mount: after `git pull` changes it, `caddy reload` still sees the old file, so run `docker compose restart caddy` (drops TURN/TLS relays briefly; check rooms with the lkstate script first). Take `bash infra/backup-db.sh` before schema migrations. Restarting livekit drops active calls (~6 s, clients auto-reconnect).
+- UDP verified 2026-09-26: 6 Mbps stream, 0% loss, ~22 ms RTT from the user's home.
+- Desktop release: bump apps/desktop/package.json version, commit, `git tag vX && git push origin vX` -> `.github/workflows/release.yml` builds Win/Linux/mac into one pre-created draft (Linux xvfb smoke test) -> publish with `gh release edit vX --draft=false --latest --notes-file ...`. **Since 0.1.3 publishing = mandatory update**: clients update at startup (splash), server rejects older gateway clients (UPDATE_REQUIRED, close 4010) within 5 min (ReleaseService poll); `CLIENT_UPDATE_ENFORCE=0` in infra/.env disables it in emergencies. Clients fetch updates from `https://diskort.ziroo.net/updates/*` (API 302 -> GitHub; channel ymls -> releases/latest/download, versioned files -> their tag). Deploy the server before publishing a client that needs it. Install dir forced to `Programs\diskort` by `apps/desktop/build/installer.nsh`; 0.1.3 migrates the user's old `Programs\@diskortdesktop` and deletes `@diskortdesktop-updater` (verified on the user's PC 2026-09-26: 0.1.3 runs from Programs\diskort, registry + Start/Desktop shortcuts point there, old folder and old cache gone). Updater log: `%APPDATA%\Diskort\logs\updater.log`. macOS: no auto-update, splash sends users to the download page.
+- Download page: `apps/web` (static, no build) served by Caddy at https://diskort.ziroo.net (+ /download). Buttons hit `/download/<platform>` → API 302s to latest GitHub release asset; users never see GitHub. Caddy routes /api/*, /gateway, /download/* to the API.
+
+- Backups (2026-09-26): server timer `diskort-backup.timer` 04:00 Europe/Istanbul (server TZ set to Istanbul) runs `infra/backup-db.sh` → `/var/backups/diskort/diskort-*.db.gz` (14 days, `latest.db.gz` symlink). Restore: `bash infra/restore-db.sh <file>` (tested; keeps pre-restore copy). User's PC: Task Scheduler task "Diskort veritabanı yedeği" daily 12:00 runs `scripts/pull-db-backups.ps1` → `%OneDrive%\Yedekler\Diskort` (60 days, log `yedek-gunlugu.txt`).
+- TURN/TLS on 443 (verified end-to-end 2026-09-26): custom Caddy image `infra/caddy/Dockerfile` (caddy-l4) routes SNI `TURN_DOMAIN` (turn.ziroo.net, Cloudflare DNS only) → TLS terminate → PROXY v2 → LiveKit 127.0.0.1:5349 (`external_tls`, `proxy_protocol`). LiveKit 1.13 actually advertises `turns:turn.ziroo.net:443` (docs claim tls_port); desktop `turnPort.ts` rewrite kept as insurance. Relay-only test from dev Electron: relay/tls, ~23 ms RTT vs ~21 ms direct. Test method: mint 10-min LiveKit JWT inside api container for a non-`ch_` room (webhooks ignore it), import livekit-client in dev renderer via `/@fs/.../node_modules/.vite/deps/livekit-client.js?v=<hash>`, wrap RTCPeerConnection incl. `setConfiguration` (LiveKit sets ICE servers after construction).
+- Server maintenance: all updates applied 2026-09-26 (kernel 6.8.0-142), unattended-upgrades daily + auto-reboot 05:00 (`/etc/apt/apt.conf.d/52diskort-auto-reboot`). SSH briefly refuses connections while openssh upgrades (~90 s).
+- Provider panel has a web console (confirmed by user) — recovery path if the SSH key is lost.
+- UDP buffers: `/etc/sysctl.d/60-diskort-udp.conf` (rmem/wmem_max 5000000) applied 2026-09-26 during a live call; LiveKit was restarted 2026-09-26 22:07 with no rooms open, so it is active. Baseline measured live: 2 users + 1080p/1440p stream ≈ 8.7 Mbps each way, livekit ~22% of one core.
+- Text channels live since 2026-09-26 (schema 3, API deployed before the v0.1.2 client; old clients simply don't show text channels). DB path inside api container: `/data/diskort.db` (read with `docker compose exec -T api node -e ...` + node:sqlite).
+
+Related: [[diskurt-project]], [[diskurt-dev-environment]]
+- Attachments/avatars backup (2026-09-27): diskort-backup.service also runs infra/backup-attachments.sh → hard-link snapshots in /var/backups/diskort/{attachments,avatars} (no extra space; files deleted in app kept 30 days via -links 1 -ctime). PC task mirrors them into OneDrive\Yedekler\Diskort\{ekler,profil-fotograflari}. Server image now includes sharp (vips 8.18.6); DB schema 7 as of 0.3.2.
+

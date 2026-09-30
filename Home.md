@@ -18,6 +18,9 @@ Buradan başla. Her şey buradan ya da bir projenin `_overview.md` dosyasından 
 ## Kaynaklar
 - `30-Resources/`: kalıcı bilgi ve rehberler
 
+## Arşiv
+- [[90-Archive/old-claude-memory/_index|Eski Claude hafıza klasörleri]]
+
 ## Bakım
 - Inbox: `00-Inbox/`
 - Yapı ve yazma kuralları: [[CLAUDE]]

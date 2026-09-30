@@ -1,0 +1,2 @@
+- [Diskort project decisions](diskurt-project.md) — goals, VPS/invite-auth/Windows-first choices; reply in Turkish
+- [Diskort dev environment quirks](diskurt-dev-environment.md) — no C++ build tools, pnpm 12 allowBuilds, PATH refresh, CDP testing of Electron

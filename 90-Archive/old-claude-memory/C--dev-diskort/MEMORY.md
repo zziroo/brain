@@ -1,0 +1,8 @@
+- PROJECT MOVED (2026-09-28) to C:\Users\yusuf\ZZ\zProjects\diskort — its memory lives under projects/C--Users-yusuf-ZZ-zProjects-diskort. Work there; this folder is an old copy.
+- [Diskort project decisions](diskurt-project.md) — goals, VPS/invite-auth/Windows-first choices, public repo yusufholat/diskort; Android OTA via own server; reply in Turkish
+- [Diskort dev environment quirks](diskurt-dev-environment.md) — C:\dev\diskort, no C++ build tools, pnpm 12 allowBuilds, reinstall node_modules after moves, CDP testing
+- [Git push autonomy](git-push-autonomy.md) — may commit + push to main on own judgment after verified changes; never force-push
+- [Diskort production server](diskort-server.md) — VPS 185.92.0.242, ssh key diskort_vps, /opt/diskort compose, diskort/lk.ziroo.net, deploy + release commands
+- [Feedback review workflow](diskort-feedback-workflow.md) — "incele" → server feedback-cli list/show/set, statuses
+- [Open work handoff](diskort-handoff.md) — devir notu: v0.8.1 live (APK 0.7.0, iOS Ad Hoc + automated onboarding), unreleased invite deep links on main, schema 21, profile cosmetics, web admin /admin, iOS live (Ad Hoc), decisions + workflow
+- [Orchestrator mode](orchestrator-mode.md) — Diskort additions to global rules in ~/.claude/CLAUDE.md: verify steps, Windows worktree cleanup, scheduled main-review task (hardcodes C:\dev\diskort)
