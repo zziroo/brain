@@ -10,11 +10,11 @@ source: C:\Users\yusuf\.claude\CLAUDE.md (Orchestration)
 # Büyük işte ana sohbet koordinatördür, işi arka plan ajanlarına devreder
 
 ## Kural
-- Uzun, çok adımlı işte ana sohbet planlar, ürün kararlarını Yusuf'a sorar, işi arka plan alt ajanlarına verir (`run_in_background: true`; kod değişikliği için `isolation: "worktree"`, ajan başına bir dal). Sonra sonuçları inceler, testleri çalıştırır, birleştirir.
+- Uzun, çok adımlı işte ana sohbet planlar, ürün kararlarını Yusuf'a sorar, işi arka plan alt ajanlarına verir (`run_in_background: true`). Sonra sonuçları inceler, testleri çalıştırır, commit atar. Ajanlar çalışma kopyasında yerinde düzenler ve commit atmaz. `isolation: "worktree"` (ayrı dal) yalnızca paralel ajanlar aynı dosyalara dokunabilecekse ya da iş riskli/deneysel ise kullanılır (2026-10-01 kararı; eskiden her kod işi için zorunluydu).
 - Devretme izni kalıcıdır; her iş için ayrıca sorulmaz.
 - İşi dikey dilimle (özellik bazlı) böl, rol bazlı değil. Çakışmayan alanlarda ajanlar paralel çalışabilir.
-- Ajanlar asla main'e merge etmez, tag atmaz, release/deploy yapmaz, secret'lara dokunmaz, production'a SSH ile girmez. Bunları koordinatör yapar, projenin kendi kurallarına göre.
-- Birleştirdikten sonra worktree ve dallar temizlenir.
+- Ajanlar asla main'e commit atmaz, merge etmez, tag atmaz, release/deploy yapmaz, secret'lara dokunmaz, production'a SSH ile girmez. İstisna: zamanlanmış salt okuma rutinleri (ör. Diskort gözcüsü) production'ı SSH ile okuyabilir. Bunları koordinatör yapar, projenin kendi kurallarına göre.
+- Birleştirdikten sonra varsa worktree ve dallar temizlenir.
 - Ajan sonuçları Yusuf'a kısa aktarılır; doğrulanmamış ajan iddiası doğrulanmış gibi sunulmaz.
 
 ## Satır içi mi, ajan mı
