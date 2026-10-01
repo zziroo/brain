@@ -58,3 +58,10 @@ Bu dizin yalnızca güncel-dönem aktarımında yazılan notları listeler (tari
 - 2026-10-01 · decision · [[uygulamaya-ozel-yayin-sesi-ertelendi]] — Yayın sesine dokunulmadı; uygulamaya özel yayın sesi ayrı iş
 - 2026-10-01 · lesson · [[sonar-yayin-sesine-kendi-sesini-katar]] — Sonar kullanan yayıncının kendi sesi yayına karışır, halka yanmadan boğuk duyulur (unverified)
 - 2026-10-01 · session · [[2026-10-01-sinanse-boguk-ses-ve-0-9-5]] — sinanse boğuk ses teşhisi, AGC/sınırlayıcı/yerel halka, 0.9.5 (unverified)
+- 2026-10-02 · decision · [[dm-sesli-arama-ve-calma]] — DM'de arama çalar (30 sn, pencere + zil), cevapsızsa kayıt; mobilde kapalıyken yalnız bildirim
+- 2026-10-02 · decision · [[engelleme-dm-ve-arama]] — Engelleme yalnız DM ve aramayı kapatır, engellenene söylenmez
+- 2026-10-02 · decision · [[dm-aramalari-yonetimde-ozel]] — Panelde DM aramaları "Özel arama", isimsiz; teşhis verisi tutulur
+- 2026-10-02 · decision · [[surum-1-0-ertelendi]] — DM araması 0.9.6 çıktı; 1.0 gerçek kullanımda oturunca
+- 2026-10-02 · lesson · [[yerel-testte-ekran-paylasimi-gercek-pencere]] — Yerel testte ekran paylaşım seçicisi gerçek pencereleri gösterir
+- 2026-10-02 · lesson · [[server-testleri-tam-kosuda-kararsiz]] — Tam koşuda bir dosya testi bir kez düşebilir; tek başına tekrar çalıştır (unverified)
+- 2026-10-02 · session · [[2026-10-02-dm-arama-engelleme-ve-0-9-6]] — DM arama + engelleme, şema 25 deploy, 0.9.6 (unverified)
