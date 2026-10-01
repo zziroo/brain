@@ -53,3 +53,8 @@ Bu dizin yalnızca güncel-dönem aktarımında yazılan notları listeler (tari
 - 2026-10-01 · session · [[2026-10-01-baglanti-teshisi-sadelestirme]] — kayıp sağlayıcı ağında; teşhis tek sekmede toplandı, istemci olay kaydı ve çökme bildirimi
 - 2026-10-01 · decision · [[sahne-izgarada-coklu-yayin]] — Yayınlar ızgarada kendi kutusunda oynar, ızgaraya dönüş, izlemeyi bırak kontrol satırında
 - 2026-10-01 · session · [[2026-10-01-sahne-coklu-yayin-ve-ortalama]] — sahnede çoklu yayın, ızgaraya dönüş, ortalı ızgara/ayarlar (main'de, sürüm yok) (unverified)
+- 2026-10-01 · decision · [[model-calisirken-agc-kapali-ve-sinirlayici]] — DPDFNet çalışırken tarayıcı AGC'si kapalı, ses kapısına gecikmesiz sınırlayıcı
+- 2026-10-01 · decision · [[konusma-halkasi-duyulan-sesten]] — Uzak yeşil halka yerelde çalınan sesten ölçülür (masaüstü)
+- 2026-10-01 · decision · [[uygulamaya-ozel-yayin-sesi-ertelendi]] — Yayın sesine dokunulmadı; uygulamaya özel yayın sesi ayrı iş
+- 2026-10-01 · lesson · [[sonar-yayin-sesine-kendi-sesini-katar]] — Sonar kullanan yayıncının kendi sesi yayına karışır, halka yanmadan boğuk duyulur (unverified)
+- 2026-10-01 · session · [[2026-10-01-sinanse-boguk-ses-ve-0-9-5]] — sinanse boğuk ses teşhisi, AGC/sınırlayıcı/yerel halka, 0.9.5 (unverified)

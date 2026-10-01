@@ -24,15 +24,16 @@ Ses + ekran paylaşımı kalitesi; metin kanalları, tepkiler, dosyalar, roller,
 - Kod haritası: Etkinlik [[etkinlik-kod-haritasi]].
 
 ## Güncel durum (2026-10-01; canlıdan doğrula)
-- **İstemci:** masaüstü 0.9.4 yayında (2026-10-01 06:48 UTC). Mobil yalnız OTA; Android APK 0.9.2 (yamalı Skia, eski APK'lar zorunlu güncelleme ekranı alır), iOS IPA 0.8.5 yeniden kullanılıyor, 0.9.2'den beri iPhone'lara OTA ile ulaşıyor. 0.9.3 = DPDFNet orta arama fallback düzeltmesi, DeepFilterNet 3 kaldırıldı, kozmetikler yalnız hover/açık profilde oynar. 0.9.2 = kozmetik paketleri + sunucu çubuğu rozetleri. **main'de sürümsüz bekleyen:** `573bdd0` sahnede çoklu yayın/ızgaraya dönüş/ortalı düzen ([[sahne-izgarada-coklu-yayin]]); Yusuf "sürüm çıkar" deyince 0.9.5.
-- **Sunucu:** 2026-10-01'de LightNode İstanbul'a taşındı. Eski sağlayıcı gelen UDP'yi ~1400 paket/sn üstünde kesiyordu ([[sunucu-lightnode-istanbula-tasindi]], [[saglayici-udp-paket-siniri]]). DB şeması 24 (son not). Bağlantı teşhisi oturumunda main `3d12e38` sunucuya kuruldu ([[2026-10-01-baglanti-teshisi-sadelestirme]]); sonrası **doğrulanmadı**: `git -C /opt/diskort log -1` ve api container imajına bak. Altı kozmetik paketi `/data/cosmetic-packs` altında, tüm platformlar.
+- **İstemci:** masaüstü 0.9.5 yayında (2026-10-01 akşam): sahnede çoklu yayın ([[sahne-izgarada-coklu-yayin]]) + ses düzeltmeleri ([[model-calisirken-agc-kapali-ve-sinirlayici]], [[konusma-halkasi-duyulan-sesten]]); ikisi de gerçek aramada **doğrulanmadı**. Mobil yalnız OTA; Android APK 0.9.2 (yamalı Skia, eski APK'lar zorunlu güncelleme ekranı alır), iOS IPA 0.8.5 yeniden kullanılıyor, 0.9.2'den beri iPhone'lara OTA ile ulaşıyor. 0.9.4 = bağlantı teşhisi; 0.9.3 = DPDFNet fallback düzeltmesi, kozmetikler yalnız hover/açık profilde.
+- **Sunucu:** 2026-10-01'de LightNode İstanbul'a taşındı. Eski sağlayıcı gelen UDP'yi ~1400 paket/sn üstünde kesiyordu ([[sunucu-lightnode-istanbula-tasindi]], [[saglayici-udp-paket-siniri]]). DB şeması 24 (son not). Sunucuda `2698a0d` çalışıyor (2026-10-01 akşam `git log` ile doğrulandı; sonraki commit'ler yalnız istemci/doküman). Altı kozmetik paketi `/data/cosmetic-packs` altında, tüm platformlar.
 - **Ses kesintileri:** nedeni bulundu ve sunucu taşındı, ama gerçek çok kullanıcılı yayınla **doğrulanmadı**.
 - **Yeni sunucuda eksikler:** otomatik güvenlik güncellemeleri (unattended-upgrades imajda maskeli), SSH sertleştirme dosyası yeniden uygulanmadı. Trafik planı 1000 GB/ay, kullanım ~800 GB civarı. Eski sunucu durdurulmuş durumda, Yusuf silecek.
 - **SignPath:** başvurulmayacak ([[kod-imzalama-ertelendi]]).
 - **Not (izin sistemi):** otomatik mod sınıflandırıcısı, o oturumda Yusuf sohbette söylemedikçe ssh deploy ve release tag/push'u engelleyebilir. Sor, sonra push / ssh / tag / `gh release edit` komutlarını ayrı çağrılar olarak çalıştır.
 
 ### Sıradaki işler
-0. Sahne değişikliklerini (`573bdd0`) uygulamada dene (iki yayın ızgarada, Izgaraya dön/Esc, tam ekranda tek Esc yalnız tam ekrandan çıkmalı, göz butonları, ayarlar ortası); sonra 0.9.5 sürümü.
+0. 0.9.5'i gerçek aramada dene: uzak yeşil halkalar duyulan sesle eş zamanlı mı, hiç yanmayan biri var mı (yerel ölçüm sessizlik verirse sunucu yedeğine dönülmüyor); sinanse bağırınca boğukluk azaldı mı; sahne (iki yayın ızgarada, Izgaraya dön/Esc, göz butonları, ayarlar ortası).
+0b. Yayın sesi: Sonar kullananların kendi sesi sistem sesli yayına karışıyor ([[sonar-yayin-sesine-kendi-sesini-katar]]); kullanıcıya geçici çözüm söylendi. Uygulamaya özel yayın sesi ayrı iş, Yusuf isterse ([[uygulamaya-ozel-yayin-sesi-ertelendi]]).
 1. Yeni sunucudaki ilk gerçek akşam nasıl geçti? (1080p60 yayın + hızlı pencere sürükleme). UDP sınırı düzeltmesi gerçek çok kullanıcılı yayınla henüz doğrulanmadı.
 2. Prob motorunu düzelt: yalnız-UDP kesintileri yakalansın (UDP ve TCP kayıp serileri ayrı sayılsın). Yeni sunucuda "Bağlantı teşhisi" admin sekmesini ve `outages.jsonl`'i oku.
 3. Yeni sunucu: otomatik güvenlik güncellemelerini aç, SSH sertleştirmesini yeniden uygula, çıkış trafiğini ölç, 1000 GB planı izle.
@@ -51,7 +52,8 @@ Ses + ekran paylaşımı kalitesi; metin kanalları, tepkiler, dosyalar, roller,
 - Kayıt: [[kayit-sadece-hesap-davetiyesi]]; ekran paylaşımı: [[ekran-paylasimi-sabit-presetler]]
 - Kozmetik: [[kozmetik-sunucudan-paketler]], [[kozmetik-sadece-hover]]
 - Sunucu: [[sunucu-lightnode-istanbula-tasindi]]
-- Yayın sahnesi: [[yayin-arayuzu-discord-tarzi]], [[sahne-izgarada-coklu-yayin]]
+- Yayın sahnesi: [[yayin-arayuzu-discord-tarzi]], [[sahne-izgarada-coklu-yayin]]; yayın sesi: [[uygulamaya-ozel-yayin-sesi-ertelendi]]
+- Ses: [[model-calisirken-agc-kapali-ve-sinirlayici]], [[konusma-halkasi-duyulan-sesten]]
 - Release: [[surum-cikarma-kurali]]; imzalama: [[kod-imzalama-ertelendi]]
 - Mobil: [[android-min-api-26]], [[mobil-ota-guncelleme]], [[ios-ad-hoc-dagitim]]; UI: [[sunucu-rail-rozeti]]
 
@@ -59,7 +61,7 @@ Ses + ekran paylaşımı kalitesi; metin kanalları, tepkiler, dosyalar, roller,
 [[sunucu-vps]] · [[deploy]] · [[surum-cikarma]] · [[geri-bildirim-inceleme]] · [[kozmetik-yayinlama]] · [[ios-cihaz-ekleme]] · [[yedekler]] · [[admin-paneli-ve-loglar]] · [[gelen-kutusu-ve-rutinler]] · [[yerel-ui-test-ortami]] · [[telefonla-erisim]]
 
 ## Dersler
-[[dev-ortami-tuzaklari]] · [[electron-cdp-testi]] · [[yerel-installer-testi-userdata]] · [[rn-android-border-nan]] · [[kozmetik-avif-tam-aralik]] · [[worktree-silme-windows]] · [[claude-altina-yazma-izin-sorar]] · [[secret-isleme-kurali]] · [[caddy-bind-mount-restart]] · [[dpdfnet-fallback-koku-neden]] · [[saglayici-udp-paket-siniri]]
+[[dev-ortami-tuzaklari]] · [[electron-cdp-testi]] · [[yerel-installer-testi-userdata]] · [[rn-android-border-nan]] · [[kozmetik-avif-tam-aralik]] · [[worktree-silme-windows]] · [[claude-altina-yazma-izin-sorar]] · [[secret-isleme-kurali]] · [[caddy-bind-mount-restart]] · [[dpdfnet-fallback-koku-neden]] · [[saglayici-udp-paket-siniri]] · [[sonar-yayin-sesine-kendi-sesini-katar]]
 
 ## Oturumlar ve ek kararlar/dersler
 - [[sessions/_index-dev-era]]: geliştirme dönemi (C:\dev, 2026-09-26..28)
@@ -69,4 +71,4 @@ Ses + ekran paylaşımı kalitesi; metin kanalları, tepkiler, dosyalar, roller,
 [[20-Areas/working-rules/_index|Çalışma kuralları]] (20-Areas): [[git-push-autonomy]], [[diskort-orchestrator-mode]], [[zamanlanmis-gorevler-ve-skiller]]
 
 ## Sürüm özeti
-0.1.2 metin kanalları (2026-09-26) · 0.1.3 zorunlu otomatik güncelleme · 0.1.4 client-core · 0.2.0 Android v1 · 0.2.x OTA · 0.3.0 tepkiler+ekler · 0.3.1 DeepFilterNet 3 · 0.3.2 profil fotoğrafları · 0.3.3 tema UI · 0.3.4 GPU ekran kodlama · 0.4.0 roller · 0.8.1 iOS Ad Hoc + şema 21 · 0.9.0 Etkinlik · 0.9.2 kozmetik paketleri · 0.9.3 DPDFNet düzeltmesi · 0.9.4 bağlantı teşhisi çalışması.
+0.1.2 metin kanalları (2026-09-26) · 0.1.3 zorunlu otomatik güncelleme · 0.1.4 client-core · 0.2.0 Android v1 · 0.2.x OTA · 0.3.0 tepkiler+ekler · 0.3.1 DeepFilterNet 3 · 0.3.2 profil fotoğrafları · 0.3.3 tema UI · 0.3.4 GPU ekran kodlama · 0.4.0 roller · 0.8.1 iOS Ad Hoc + şema 21 · 0.9.0 Etkinlik · 0.9.2 kozmetik paketleri · 0.9.3 DPDFNet düzeltmesi · 0.9.4 bağlantı teşhisi çalışması · 0.9.5 sahnede çoklu yayın + AGC/sınırlayıcı + yerel konuşma halkası.
