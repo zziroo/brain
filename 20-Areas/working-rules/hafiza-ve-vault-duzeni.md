@@ -25,7 +25,8 @@ Hafıza **klasöre bağlıdır**: Diskort işi için sohbeti `ZZ\zProjects\disko
 ## Kural: tek kaynak
 - **Davranış kuralları ve Yusuf'un kararları** hafızada durur (kısa). Uzun gerekçe ve geçmiş vault'ta.
 - **Güncel proje durumu**: tek kaynak vault'ta `10-Projects/<proje>/_overview.md` → "Güncel durum" ve "Sıradaki işler". Ayrı devir (handoff) notu yoktur. Hafızada yalnızca ince bir başlangıç protokolü durur (`diskort-baslangic`): önce overview'ı oku, sonra inbox, sonra kurallar. Oturum sonunda overview güncellenir.
-- Yeni sohbette tetikleyici: "overview'ı oku" ya da "devam". Eski "handoffu al" aynı anlama gelir.
+- Yeni sohbette tetikleyici: **`/basla`** (kullanıcı skill'i). "overview'ı oku", "devam" ya da eski "handoffu al" aynı anlama gelir.
+- Oturum sonunda: **`/kaydet`** (kullanıcı skill'i). Kararları, dersleri, oturum özetini yazar, `_overview.md`'yi günceller, secret taraması yapar, vault'u commit'ler. Otomatik değildir; çalıştırmak kullanıcıya kalır. Skill dosyaları: `~/.claude/skills/basla/SKILL.md`, `~/.claude/skills/kaydet/SKILL.md`.
 - **Uzun anlatı, geçmiş, doğrulama hikâyesi, commit hash'i**: hafızaya yazma; vault'a (`sessions/`, `decisions/`, `lessons/`) yaz.
 - **Secret**: ikisine de yazma. Sadece konumunu yaz.
 - **Not canlı gerçek değildir**: sunucu, sürüm, repo durumu için önce canlıyı doğrula.
