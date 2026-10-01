@@ -50,4 +50,4 @@ Bu dizin yalnızca güncel-dönem aktarımında yazılan notları listeler (tari
 - 2026-09-30 · session · [[2026-09-30-etkinlik-karti-oynuyor]] — "Oynuyor" etkinlik kartı, 0.9.0-0.9.1, depo tazeleme
 - 2026-09-30 · session · [[2026-09-30-kozmetik-paketleri-on-render]] — kozmetikleri sunucudan gelen ön-render paketlere geçirme, 0.9.2
 - 2026-09-30 · session · [[2026-09-30-mimari-tanitim-videosu]] — mimari tanıtım videoları ve mimari anlatımı
-- [[2026-10-01-baglanti-teshisi-sadelestirme]]: kayıp sağlayıcı ağında; teşhis altyapısı tek sekmede toplandı, istemci olay kaydı ve çökme bildirimi
+- 2026-10-01 · session · [[2026-10-01-baglanti-teshisi-sadelestirme]] — kayıp sağlayıcı ağında; teşhis tek sekmede toplandı, istemci olay kaydı ve çökme bildirimi

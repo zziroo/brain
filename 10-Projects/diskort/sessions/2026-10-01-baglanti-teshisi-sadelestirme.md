@@ -16,7 +16,7 @@ source: Claude Code oturumu 2026-10-01 (koordinatör + Fable ajanları), main 3d
 - Pencere oynatma tetikleyicisi kanıtlanmadı: 02:18 olayında yayıncı 3→10 Mbps, sunucu çıkışı 39 Mbps / 4300 pps, 2 sn sonra çöküş. Sağlayıcıda patlamayla tetiklenen bir süzgeç olabilir; aynı kesinti yayınsızken de var.
 - Varsayılan yayın 1080p60 / 12 Mbps; LiveKit yumuşatmadan (pacer yok) her izleyiciye çoğaltıyor; PLI başına tam kare döngüsü olası (ölçülmedi).
 
-## Yapılanlar (main 3d12e38, gönderildi; sunucuya KURULMADI)
+## Yapılanlar (main 3d12e38; sunucuya kuruldu, istemci 0.9.4)
 - microProbe kaldırıldı (bitiş sırasıyla saydığı için kısa kesintileri kaçırıyordu, saniyede 10 DNS sorgusu atıyordu). Tek sonda motoru: 5 hedef, 4 sonda/sn, gönderim sırasıyla sayım; kesinti = ≥2 farklı hedefte art arda ≥3 kayıp.
 - NIC sessizliği: mutlak sıfıra yakın ölçüt (taban ≥20 pps, eşik clamp(%5, 8, 40)). Yalnız NIC'te görülen = "aday"; ≥2 farklı hedefte kayıp sondayla doğrulanırsa "tam". Gerçek gecenin verisiyle yeniden oynatma testi: 3 gerçek kesinti yakalandı, yanlış alarm 0.
 - Tek NIC örnekleyicisi (SecondSampler); `outages.jsonl`, `netmin-*.jsonl`; `/api/admin/net/live|seconds|outages|minutes`.
@@ -31,11 +31,11 @@ source: Claude Code oturumu 2026-10-01 (koordinatör + Fable ajanları), main 3d
 - Panelden kullanıcının masaüstünde uzaktan hat testi başlatma yapılmadı (ayrı dilim).
 
 ## Açık işler
-1. Sunucu kurulumu (otomatik mod sınıflandırıcısı ssh kurulumunu engelledi; kullanıcı onayı ya da elle).
+1. ~~Sunucu kurulumu~~ yapıldı (3d12e38, 2026-10-01 06:38 UTC).
 2. Kurulumdan sonra: yeni dedektör gerçek trafikte yanlış alarm veriyor mu; konteynerde conntrack okunuyor mu.
 3. Patlama testi (yayın yokken) → sağlayıcıda patlama süzgeci var mı.
 4. Sağlayıcıya (isimkayit / ik-cloud) kesinti raporu.
-5. İstemci sürümü (olay kaydı + çökme bildirimi kullanıcılara ulaşsın).
+5. ~~İstemci sürümü~~ 0.9.4 yayınlandı (2026-10-01 06:48 UTC).
 
 ## İlgili
 - [[ses-kalitesi-udp-kayiplari]] · [[admin-paneli-ve-loglar]] · [[ekran-paylasimi-sabit-presetler]] · [[otomatik-mod-ssh-engeli-yeni-sohbette]]
