@@ -18,6 +18,9 @@ Global kuralların damıtması. Orijinal dosya değiştirilmedi; geçerli olan h
 - [[karar-dagilimi]]: Yusuf neye karar verir, Claude neye
 - [[araclar-ve-raporlar]]: orkestrasyon raporu aracı
 
+## Düzen
+- [[hafiza-ve-vault-duzeni]]: bilgi nerede durur, tek kaynak kuralı, bakım ritmi
+
 ## Diskort'a özgü
 - [[git-push-autonomy]]: doğrulanmış değişiklikte main'e commit + push serbest
 - [[diskort-orchestrator-mode]]: global kurallara Diskort eklemeleri

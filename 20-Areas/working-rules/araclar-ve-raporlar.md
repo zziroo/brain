@@ -10,7 +10,7 @@ source: C:\Users\yusuf\.claude\CLAUDE.md (Tools)
 # Orkestrasyon ve ajan akışı raporu `orchestration-report` klasöründeki betikle üretilir
 
 - Yer: `C:\Users\yusuf\.claude\orchestration-report\`. Çalıştırma: `node report.mjs [--session <id>] [--project <dir-key>]`; çıktı HTML ve JSON olarak `out\` altına yazılır.
-- Yusuf rapor isterse HTML Artifact olarak yayınlanır; yayından önce HTML'in tamamı okunur. İlk rapor yayımlanmış (bağlantı global CLAUDE.md'de); yeni oturumun raporu yeni artifact'a gidebilir.
+- Yusuf rapor isterse HTML Artifact olarak yayınlanır; yayından önce HTML'in tamamı okunur. İlk rapor yayımlanmış: https://claude.ai/artifact/Fif4G4UAd5tCiR78RocHsg (yeni oturumun raporu yeni artifact'a gidebilir).
 - Bilinen tuhaflık: hâlâ çalışan ajanlar raporda "Yarım kaldı" görünür.
 
 ## İlgili
