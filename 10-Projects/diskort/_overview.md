@@ -24,7 +24,7 @@ Ses + ekran paylaşımı kalitesi; metin kanalları, tepkiler, dosyalar, roller,
 - Kod haritası: Etkinlik [[etkinlik-kod-haritasi]].
 
 ## Güncel durum (2026-10-01; canlıdan doğrula)
-- **İstemci:** masaüstü 0.9.4 yayında (2026-10-01 06:48 UTC). Mobil yalnız OTA; Android APK 0.9.2 (yamalı Skia, eski APK'lar zorunlu güncelleme ekranı alır), iOS IPA 0.8.5 yeniden kullanılıyor, 0.9.2'den beri iPhone'lara OTA ile ulaşıyor. 0.9.3 = DPDFNet orta arama fallback düzeltmesi, DeepFilterNet 3 kaldırıldı, kozmetikler yalnız hover/açık profilde oynar. 0.9.2 = kozmetik paketleri + sunucu çubuğu rozetleri.
+- **İstemci:** masaüstü 0.9.4 yayında (2026-10-01 06:48 UTC). Mobil yalnız OTA; Android APK 0.9.2 (yamalı Skia, eski APK'lar zorunlu güncelleme ekranı alır), iOS IPA 0.8.5 yeniden kullanılıyor, 0.9.2'den beri iPhone'lara OTA ile ulaşıyor. 0.9.3 = DPDFNet orta arama fallback düzeltmesi, DeepFilterNet 3 kaldırıldı, kozmetikler yalnız hover/açık profilde oynar. 0.9.2 = kozmetik paketleri + sunucu çubuğu rozetleri. **main'de sürümsüz bekleyen:** `573bdd0` sahnede çoklu yayın/ızgaraya dönüş/ortalı düzen ([[sahne-izgarada-coklu-yayin]]); Yusuf "sürüm çıkar" deyince 0.9.5.
 - **Sunucu:** 2026-10-01'de LightNode İstanbul'a taşındı. Eski sağlayıcı gelen UDP'yi ~1400 paket/sn üstünde kesiyordu ([[sunucu-lightnode-istanbula-tasindi]], [[saglayici-udp-paket-siniri]]). DB şeması 24 (son not). Bağlantı teşhisi oturumunda main `3d12e38` sunucuya kuruldu ([[2026-10-01-baglanti-teshisi-sadelestirme]]); sonrası **doğrulanmadı**: `git -C /opt/diskort log -1` ve api container imajına bak. Altı kozmetik paketi `/data/cosmetic-packs` altında, tüm platformlar.
 - **Ses kesintileri:** nedeni bulundu ve sunucu taşındı, ama gerçek çok kullanıcılı yayınla **doğrulanmadı**.
 - **Yeni sunucuda eksikler:** otomatik güvenlik güncellemeleri (unattended-upgrades imajda maskeli), SSH sertleştirme dosyası yeniden uygulanmadı. Trafik planı 1000 GB/ay, kullanım ~800 GB civarı. Eski sunucu durdurulmuş durumda, Yusuf silecek.
@@ -32,6 +32,7 @@ Ses + ekran paylaşımı kalitesi; metin kanalları, tepkiler, dosyalar, roller,
 - **Not (izin sistemi):** otomatik mod sınıflandırıcısı, o oturumda Yusuf sohbette söylemedikçe ssh deploy ve release tag/push'u engelleyebilir. Sor, sonra push / ssh / tag / `gh release edit` komutlarını ayrı çağrılar olarak çalıştır.
 
 ### Sıradaki işler
+0. Sahne değişikliklerini (`573bdd0`) uygulamada dene (iki yayın ızgarada, Izgaraya dön/Esc, tam ekranda tek Esc yalnız tam ekrandan çıkmalı, göz butonları, ayarlar ortası); sonra 0.9.5 sürümü.
 1. Yeni sunucudaki ilk gerçek akşam nasıl geçti? (1080p60 yayın + hızlı pencere sürükleme). UDP sınırı düzeltmesi gerçek çok kullanıcılı yayınla henüz doğrulanmadı.
 2. Prob motorunu düzelt: yalnız-UDP kesintileri yakalansın (UDP ve TCP kayıp serileri ayrı sayılsın). Yeni sunucuda "Bağlantı teşhisi" admin sekmesini ve `outages.jsonl`'i oku.
 3. Yeni sunucu: otomatik güvenlik güncellemelerini aç, SSH sertleştirmesini yeniden uygula, çıkış trafiğini ölç, 1000 GB planı izle.
@@ -50,6 +51,7 @@ Ses + ekran paylaşımı kalitesi; metin kanalları, tepkiler, dosyalar, roller,
 - Kayıt: [[kayit-sadece-hesap-davetiyesi]]; ekran paylaşımı: [[ekran-paylasimi-sabit-presetler]]
 - Kozmetik: [[kozmetik-sunucudan-paketler]], [[kozmetik-sadece-hover]]
 - Sunucu: [[sunucu-lightnode-istanbula-tasindi]]
+- Yayın sahnesi: [[yayin-arayuzu-discord-tarzi]], [[sahne-izgarada-coklu-yayin]]
 - Release: [[surum-cikarma-kurali]]; imzalama: [[kod-imzalama-ertelendi]]
 - Mobil: [[android-min-api-26]], [[mobil-ota-guncelleme]], [[ios-ad-hoc-dagitim]]; UI: [[sunucu-rail-rozeti]]
 
