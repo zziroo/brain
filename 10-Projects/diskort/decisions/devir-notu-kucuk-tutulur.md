@@ -2,7 +2,7 @@
 type: decision
 project: diskort
 date: 2026-09-29
-status: active
+status: superseded   # 2026-10-01: devir notu tamamen kaldırıldı, durum vault'taki _overview.md'de; bkz. [[hafiza-ve-vault-duzeni]]
 tags: [diskort, hafiza, handoff, context]
 source: a7b70327-6e05-4060-a15b-293ddac27162.jsonl
 ---

@@ -4,10 +4,12 @@ project: diskort
 date: 2026-09-30
 status: active
 tags: [diskort, runbook, gelen-kutusu, rutin]
-source: memory diskort-workflow.md, diskort-handoff.md
+source: memory diskort-workflow.md, diskort-baslangic.md
 ---
 
-# "Handoffu al": gelen kutusundaki okunmamış dosyaları oku, özetle, eylem öner, `okundu\`ya taşı
+# Oturum başında gelen kutusundaki okunmamış dosyaları oku, özetle, eylem öner, `okundu\`ya taşı
+
+Sıra: önce [[_overview]], sonra bu klasör, sonra kurallar. (Eski "handoffu al" tetikleyicisi aynı anlama gelir.)
 
 1. `C:\Users\yusuf\diskort-inbox\` içindeki okunmamış dosyaları oku (`YYYY-MM-DD-HHmm-<tür>.md`, `durum.json`, `hata-ozet.js`).
 2. Özetle, eylem öner, dosyaları `okundu\` altına taşı.

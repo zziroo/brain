@@ -4,10 +4,12 @@ project: diskort
 date: 2026-10-01
 status: active
 tags: [diskort, overview]
-source: memory diskort-handoff.md (2026-09-30), diskurt-project.md, diskort-*.md
+source: handoff notundan (artık kaldırıldı), diskurt-project ve diskort-* hafıza dosyalarından, 2026-10-01 oturumlarından
 ---
 
 # Diskort: Discord kalitesinde sesli sohbet + ekran paylaşımı (Windows-first, kendi sunucusu)
+
+> **Bu sayfa projenin tek durum kaynağıdır.** Ayrı bir devir (handoff) notu yok. Yeni sohbette ilk iş bunu oku. Anlamlı bir oturumun sonunda "Güncel durum" ve "Sıradaki işler" bölümlerini güncelle. Not canlı gerçek değildir: sunucu, sürüm ve repo durumunu işlem yapmadan önce canlıdan doğrula.
 
 ## Nedir
 10-20 kişilik kapalı bir arkadaş grubu için masaüstü (Electron) + mobil (Expo/React Native) uygulama; zamanla tam bir Discord benzeri platform. Yeniden adlandırma: Diskurt -> Diskort (2026-09-26). Klasör `C:\Users\yusuf\ZZ\zProjects\diskort`, repo `yusufholat/diskort` (public), güncellemeler GitHub Releases + kendi sunucumuz üzerinden.
@@ -19,25 +21,27 @@ Ses + ekran paylaşımı kalitesi; metin kanalları, tepkiler, dosyalar, roller,
 - pnpm monorepo: `apps/server` (Fastify, SQLite `node:sqlite`, WebSocket gateway), `packages/shared`, `packages/client-core`, `apps/desktop` (Electron), `apps/mobile` (Expo SDK 57, RN 0.86, @livekit/react-native, react-native-skia, yerel Kotlin modülü `voice-service`), `apps/web` (indirme sayfası), `infra/` (docker compose: LiveKit, api, Caddy).
 - Dağıtım: VPS ([[sunucu-vps]]), Android APK + OTA ([[mobil-ota-guncelleme]]), iOS Ad Hoc ([[ios-ad-hoc-dagitim]]).
 - Gürültü bastırma: DPDFNet (DeepFilterNet 3, 0.9.3'te kaldırıldı).
+- Kod haritası: Etkinlik [[etkinlik-kod-haritasi]].
 
-## Güncel durum (kaynak: handoff notu, 2026-09-30)
-> Bu bölüm `diskort-handoff.md`'den türetildi; 2026-09-30 itibarıyla. Canlı doğrulama yapılmadı (`status` bu bölüm için unverified).
-- **Canlı: v0.9.3** (tag 3d7ec24, 2026-09-30 ~21:00 UTC): DPDFNet orta arama fallback düzeltmesi, DeepFilterNet 3 kaldırıldı (ayarlar deepfilter -> dpdfnet), kozmetikler yalnız hover/açık profilde oynar. 0.9.2 = kozmetik paketleri + sunucu çubuğu rozetleri. Mobil: yalnız OTA (APK 0.9.2 / IPA 0.8.5 yeniden kullanıldı).
-- **Sunucu:** 17d0e3c deploy (şema değişikliği yok, DB şema 24). Altı paket `/data/cosmetic-packs` içinde, tüm platformlar.
-- **Mobil native:** Android APK 0.9.2 (runtime `native-690116b9069056da`, yamalı Skia; eski APK'lar zorunlu güncelleme ekranı alır). iOS hâlâ `Diskort-0.8.5-ios.ipa`; 0.9.2 iPhone'lara OTA ile ulaştı.
-- **Docs denetimi (2026-09-30, main 60c22c1):** README/docs/privacy/udid/code-signing sayfaları koda uyduruldu (1440p yok; 720p60/1080p30/1080p60); indirme sayfasına Mesajlaşma/Etkinlik/Profil süsleri kartları; `pull-db-backups.ps1` geri bildirim ekran görüntülerini de yansılıyor; 30 birleştirilmiş uzak dal silindi. Yayınlanmamış istemci metni: DND açıklaması "Bildirim almayacaksın".
+## Güncel durum (2026-10-01; canlıdan doğrula)
+- **İstemci:** masaüstü 0.9.4 yayında (2026-10-01 06:48 UTC). Mobil yalnız OTA; Android APK 0.9.2 (yamalı Skia, eski APK'lar zorunlu güncelleme ekranı alır), iOS IPA 0.8.5 yeniden kullanılıyor, 0.9.2'den beri iPhone'lara OTA ile ulaşıyor. 0.9.3 = DPDFNet orta arama fallback düzeltmesi, DeepFilterNet 3 kaldırıldı, kozmetikler yalnız hover/açık profilde oynar. 0.9.2 = kozmetik paketleri + sunucu çubuğu rozetleri.
+- **Sunucu:** 2026-10-01'de LightNode İstanbul'a taşındı. Eski sağlayıcı gelen UDP'yi ~1400 paket/sn üstünde kesiyordu ([[sunucu-lightnode-istanbula-tasindi]], [[saglayici-udp-paket-siniri]]). DB şeması 24 (son not). Bağlantı teşhisi oturumunda main `3d12e38` sunucuya kuruldu ([[2026-10-01-baglanti-teshisi-sadelestirme]]); sonrası **doğrulanmadı**: `git -C /opt/diskort log -1` ve api container imajına bak. Altı kozmetik paketi `/data/cosmetic-packs` altında, tüm platformlar.
+- **Ses kesintileri:** nedeni bulundu ve sunucu taşındı, ama gerçek çok kullanıcılı yayınla **doğrulanmadı**.
+- **Yeni sunucuda eksikler:** otomatik güvenlik güncellemeleri (unattended-upgrades imajda maskeli), SSH sertleştirme dosyası yeniden uygulanmadı. Trafik planı 1000 GB/ay, kullanım ~800 GB civarı. Eski sunucu durdurulmuş durumda, Yusuf silecek.
 - **SignPath:** başvurulmayacak ([[kod-imzalama-ertelendi]]).
-- **Etkinlik kod haritası:** sözleşme `packages/shared/src/activity.ts` (`Presence.activities[]`, en yeni önce, max 4; `ACTIVITY_SET`; ikon `/api/activity-icons/<sha256>`). Sunucu: oturum başına bellek içi liste, sıkı PNG doğrulama, 5 sn birleştirici. Masaüstü: `apps/desktop/src/main/activity/` (gizli PowerShell `scan.ps1`, ~90 MB RAM, yalnız girişliyken + anahtar açıkken). Gösterim: `components/status/ActivityCard.tsx`, `sidebar/ActivityHoverCard.tsx`, `VoiceMemberRow.tsx`; mobil `src/components/ActivityCard.tsx`. Karar: [[etkinlik-oyun-aktivitesi]].
-- **Ses kesintileri çözüldü (2026-10-01):** eski sağlayıcı gelen UDP'yi ~1400 paket/sn üstünde kesiyordu; sunucu LightNode İstanbul'a taşındı ([[sunucu-lightnode-istanbula-tasindi]], [[saglayici-udp-paket-siniri]]). Gerçek yayınla doğrulama bekliyor.
-- **Canlı (2026-10-01):** istemci 0.9.4, sunucu yeni IP 38.60.208.88; ayrıntı [[2026-10-01-baglanti-teshisi-sadelestirme]].
+- **Not (izin sistemi):** otomatik mod sınıflandırıcısı, o oturumda Yusuf sohbette söylemedikçe ssh deploy ve release tag/push'u engelleyebilir. Sor, sonra push / ssh / tag / `gh release edit` komutlarını ayrı çağrılar olarak çalıştır.
 
 ### Sıradaki işler
-1. Gelen kutusunu (gözcü/gece) 0.9.x regresyonları için kontrol et. Gece inceleme işaretçisi hâlâ 3adc990'daydı; sonraki çalışma tüm 0.9.x aralığını inceler.
-2. Yusuf'un gerçek hayat Etkinlik geri bildirimini topla (gerçek oyun, anti-cheat, Battle.net, mobil).
-3. **Telefon ısınması:** APK 0.8.13'te DPDFNet bütçe düzeltmesi + termal otomatik kapatma var. Kalan: Yusuf 5-10 dk yayın izler -> telemetri; gerekirse JS seçenekleri (VP9'u bırak / donanım kodlayıcıda 720p30 düşük katman / tam ekran değilse mobil düşük katmana abone).
-4. Yusuf'un cihaz testleri: mobil Skia setleri, mobil ses ekranı/yayın kutucukları, masaüstü sahne otomatik gizleme/şerit/kendi önizleme duraklatma, rolsüz DM profili.
-5. 0.9.2 sonrası borç: telefonda yeni kozmetikler (Android APK kurulumu, Android 10+ kart videosu, iOS OTA), `reportClientError('kozmetik')` izle, `mic.fallback` telemetrisi izle.
-- **Açık öneriler (önce sor):** kanal kategorileri, IPA yalnız kendi sunucumuzdan, release/deploy/geri bildirim için proje skilleri, sunucular arası ses moderasyonu, Spotify tarzı `listening` etkinliği. (Not: handoff SignPath'i de bu listede gösteriyor ama karar "başvurma" idi; bkz. [[kod-imzalama-ertelendi]].)
+1. Yeni sunucudaki ilk gerçek akşam nasıl geçti? (1080p60 yayın + hızlı pencere sürükleme). UDP sınırı düzeltmesi gerçek çok kullanıcılı yayınla henüz doğrulanmadı.
+2. Prob motorunu düzelt: yalnız-UDP kesintileri yakalansın (UDP ve TCP kayıp serileri ayrı sayılsın). Yeni sunucuda "Bağlantı teşhisi" admin sekmesini ve `outages.jsonl`'i oku.
+3. Yeni sunucu: otomatik güvenlik güncellemelerini aç, SSH sertleştirmesini yeniden uygula, çıkış trafiğini ölç, 1000 GB planı izle.
+4. Gelen kutusunu (gözcü/gece) 0.9.x regresyonları için kontrol et; Yusuf'un gerçek hayat Etkinlik geri bildirimini topla (gerçek oyun, anti-cheat, Battle.net, mobil).
+5. DPDFNet fallback düzeltmesini (0.9.3) kullanıcılar oynadıktan sonra telemetri `mic.fallback` ile doğrula; `reportClientError('kozmetik')` kayıtlarını izle.
+6. **Telefon ısınması** (VP9 1080p yayın izlerken): APK 0.8.13'te DPDFNet bütçe düzeltmesi + termal otomatik kapatma var. Kalan: Yusuf 5-10 dk yayın izler, ardından `watch` telemetrisi okunur. Gerekirse JS seçenekleri: VP9'u bırak, donanım kodlayıcıda 720p30 düşük katman, tam ekran değilse mobil düşük katmana abone.
+7. Yusuf'un cihaz testleri: telefonda yeni kozmetikler (Android APK kurulumu, Android 10+ kart videosu, iOS OTA), mobil Skia setleri, mobil ses ekranı/yayın kutucukları, masaüstü sahne otomatik gizleme/şerit/kendi önizleme duraklatma, rolsüz DM profili.
+8. Yusuf'a hatırlat: eski sunucuyu sil (içinde bilinmeyen bir `set-env.sh` var).
+
+**Açık öneriler (önce sor):** kanal kategorileri, IPA yalnız kendi sunucumuzdan, release/deploy/geri bildirim için proje skilleri, sunucular arası ses moderasyonu, Spotify tarzı `listening` etkinliği.
 
 ## Önemli kararlar
 - Hedefler/platformlar: [[proje-hedefleri-ve-platformlar]]
@@ -62,5 +66,5 @@ Ses + ekran paylaşımı kalitesi; metin kanalları, tepkiler, dosyalar, roller,
 ## Çalışma kuralları (Claude)
 [[20-Areas/working-rules/_index|Çalışma kuralları]] (20-Areas): [[git-push-autonomy]], [[diskort-orchestrator-mode]], [[zamanlanmis-gorevler-ve-skiller]]
 
-## Sürüm özeti (kaynak: diskurt-project hafızası)
-0.1.2 metin kanalları (2026-09-26) · 0.1.3 zorunlu otomatik güncelleme · 0.1.4 client-core · 0.2.0 Android v1 · 0.2.x OTA · 0.3.0 tepkiler+ekler · 0.3.1 DeepFilterNet 3 · 0.3.2 profil fotoğrafları · 0.3.3 tema UI · 0.3.4 GPU ekran kodlama · 0.4.0 roller · 0.8.1 iOS Ad Hoc + şema 21 · 0.9.0 Etkinlik · 0.9.2 kozmetik paketleri · 0.9.3 DPDFNet düzeltmesi.
+## Sürüm özeti
+0.1.2 metin kanalları (2026-09-26) · 0.1.3 zorunlu otomatik güncelleme · 0.1.4 client-core · 0.2.0 Android v1 · 0.2.x OTA · 0.3.0 tepkiler+ekler · 0.3.1 DeepFilterNet 3 · 0.3.2 profil fotoğrafları · 0.3.3 tema UI · 0.3.4 GPU ekran kodlama · 0.4.0 roller · 0.8.1 iOS Ad Hoc + şema 21 · 0.9.0 Etkinlik · 0.9.2 kozmetik paketleri · 0.9.3 DPDFNet düzeltmesi · 0.9.4 bağlantı teşhisi çalışması.
