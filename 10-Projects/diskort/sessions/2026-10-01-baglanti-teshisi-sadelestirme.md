@@ -26,11 +26,24 @@ source: Claude Code oturumu 2026-10-01 (koordinatör + Fable ajanları), main 3d
 - Panel: tek "Bağlantı teşhisi" sekmesi (Canlı durum, Olaylar, Testler, Ayrıntı), sağlayıcı raporu (TR+EN).
 - Hat testi: `--patlama` profili (yalnız yönetici kodu; yayın açıkken `--zorla` ister), sunucunun gördüğü kesintiler sonuçta.
 
+## Öğleden sonra: kök neden bulundu ve sunucu taşındı
+- Hat testi (14:55 ve 14:59 TSİ) kök nedeni gösterdi: gelen UDP ~1400 paket/sn üstünde tümüyle kesiliyor ([[saglayici-udp-paket-siniri]]).
+- isimkayit'e yazıldı; istisna reddedildi.
+- LightNode İstanbul saatlik açılıp ölçüldü (10.000 paket/sn kayıpsız), sistem taşındı: veri birebir kopyalandı (155 dosya, veritabanı özeti aynı), sertifikalar taşındı, DNS çevrildi ([[sunucu-lightnode-istanbula-tasindi]]).
+- Yedek betiği, gözcü görevi, hafıza ve kılavuzlardaki adres güncellendi (depo d8212a5).
+
 ## Kararlar
 - Yayın ayarlarına (bit hızı, PLI aralığı, öncelik) dokunulmadı. **Neden:** tetikleyici ölçülmedi; kalite kullanıcının kararı. **Reddedilen:** PLI throttle'ı artırmak, 1080p60'ı 8 Mbps'e indirmek, tek UDP portu — hepsi ölçümden sonra değerlendirilecek.
 - Panelden kullanıcının masaüstünde uzaktan hat testi başlatma yapılmadı (ayrı dilim).
 
-## Açık işler
+## Açık işler (güncel)
+- Gerçek yayınla doğrulama: akşam 1080p60 yayın + hızlı pencere hareketi; "Bağlantı teşhisi" sekmesinde kesinti var mı.
+- Sonda motoru: UDP ve TCP serilerini ayrı say (yalnız-UDP kesintisi kaçıyor).
+- Yeni sunucuda otomatik güvenlik güncellemesi kapalı.
+- Çıkan 40 Mbps ölçülmedi; trafik paketi 1000 GB, gerekirse 2000.
+- Eski sunucuyu birkaç gün sonra sil (kökünde içeriği bilinmeyen `set-env.sh` var).
+
+## Açık işler (sabahki liste)
 1. ~~Sunucu kurulumu~~ yapıldı (3d12e38, 2026-10-01 06:38 UTC).
 2. Kurulumdan sonra: yeni dedektör gerçek trafikte yanlış alarm veriyor mu; konteynerde conntrack okunuyor mu.
 3. Patlama testi (yayın yokken) → sağlayıcıda patlama süzgeci var mı.

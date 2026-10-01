@@ -28,7 +28,8 @@ Ses + ekran paylaşımı kalitesi; metin kanalları, tepkiler, dosyalar, roller,
 - **Docs denetimi (2026-09-30, main 60c22c1):** README/docs/privacy/udid/code-signing sayfaları koda uyduruldu (1440p yok; 720p60/1080p30/1080p60); indirme sayfasına Mesajlaşma/Etkinlik/Profil süsleri kartları; `pull-db-backups.ps1` geri bildirim ekran görüntülerini de yansılıyor; 30 birleştirilmiş uzak dal silindi. Yayınlanmamış istemci metni: DND açıklaması "Bildirim almayacaksın".
 - **SignPath:** başvurulmayacak ([[kod-imzalama-ertelendi]]).
 - **Etkinlik kod haritası:** sözleşme `packages/shared/src/activity.ts` (`Presence.activities[]`, en yeni önce, max 4; `ACTIVITY_SET`; ikon `/api/activity-icons/<sha256>`). Sunucu: oturum başına bellek içi liste, sıkı PNG doğrulama, 5 sn birleştirici. Masaüstü: `apps/desktop/src/main/activity/` (gizli PowerShell `scan.ps1`, ~90 MB RAM, yalnız girişliyken + anahtar açıkken). Gösterim: `components/status/ActivityCard.tsx`, `sidebar/ActivityHoverCard.tsx`, `VoiceMemberRow.tsx`; mobil `src/components/ActivityCard.tsx`. Karar: [[etkinlik-oyun-aktivitesi]].
-- **Ses kesintileri** (09-29 ve 09-30 gecesi): olası sağlayıcı UDP filtresi; Yusuf sağlayıcıyla görüşecekti, sonuç bilinmiyor, sor ([[sunucu-vps]]).
+- **Ses kesintileri çözüldü (2026-10-01):** eski sağlayıcı gelen UDP'yi ~1400 paket/sn üstünde kesiyordu; sunucu LightNode İstanbul'a taşındı ([[sunucu-lightnode-istanbula-tasindi]], [[saglayici-udp-paket-siniri]]). Gerçek yayınla doğrulama bekliyor.
+- **Canlı (2026-10-01):** istemci 0.9.4, sunucu yeni IP 38.60.208.88; ayrıntı [[2026-10-01-baglanti-teshisi-sadelestirme]].
 
 ### Sıradaki işler
 1. Gelen kutusunu (gözcü/gece) 0.9.x regresyonları için kontrol et. Gece inceleme işaretçisi hâlâ 3adc990'daydı; sonraki çalışma tüm 0.9.x aralığını inceler.
@@ -44,6 +45,7 @@ Ses + ekran paylaşımı kalitesi; metin kanalları, tepkiler, dosyalar, roller,
 - Etkinlik: [[etkinlik-oyun-aktivitesi]]; DM: [[dm-sunucu-ayrimi]]
 - Kayıt: [[kayit-sadece-hesap-davetiyesi]]; ekran paylaşımı: [[ekran-paylasimi-sabit-presetler]]
 - Kozmetik: [[kozmetik-sunucudan-paketler]], [[kozmetik-sadece-hover]]
+- Sunucu: [[sunucu-lightnode-istanbula-tasindi]]
 - Release: [[surum-cikarma-kurali]]; imzalama: [[kod-imzalama-ertelendi]]
 - Mobil: [[android-min-api-26]], [[mobil-ota-guncelleme]], [[ios-ad-hoc-dagitim]]; UI: [[sunucu-rail-rozeti]]
 
@@ -51,7 +53,7 @@ Ses + ekran paylaşımı kalitesi; metin kanalları, tepkiler, dosyalar, roller,
 [[sunucu-vps]] · [[deploy]] · [[surum-cikarma]] · [[geri-bildirim-inceleme]] · [[kozmetik-yayinlama]] · [[ios-cihaz-ekleme]] · [[yedekler]] · [[admin-paneli-ve-loglar]] · [[gelen-kutusu-ve-rutinler]] · [[yerel-ui-test-ortami]] · [[telefonla-erisim]]
 
 ## Dersler
-[[dev-ortami-tuzaklari]] · [[electron-cdp-testi]] · [[yerel-installer-testi-userdata]] · [[rn-android-border-nan]] · [[kozmetik-avif-tam-aralik]] · [[worktree-silme-windows]] · [[claude-altina-yazma-izin-sorar]] · [[secret-isleme-kurali]] · [[caddy-bind-mount-restart]] · [[dpdfnet-fallback-koku-neden]]
+[[dev-ortami-tuzaklari]] · [[electron-cdp-testi]] · [[yerel-installer-testi-userdata]] · [[rn-android-border-nan]] · [[kozmetik-avif-tam-aralik]] · [[worktree-silme-windows]] · [[claude-altina-yazma-izin-sorar]] · [[secret-isleme-kurali]] · [[caddy-bind-mount-restart]] · [[dpdfnet-fallback-koku-neden]] · [[saglayici-udp-paket-siniri]]
 
 ## Oturumlar ve ek kararlar/dersler
 - [[sessions/_index-dev-era]]: geliştirme dönemi (C:\dev, 2026-09-26..28)

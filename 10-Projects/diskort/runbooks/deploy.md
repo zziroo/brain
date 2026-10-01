@@ -16,7 +16,7 @@ source: memory diskort-workflow.md, diskort-server.md
 5. `apps/web` yalnız git pull ister.
 - Caddyfile değiştiyse: [[caddy-bind-mount-restart]].
 - Client gerektiren sunucu değişikliğinde: sunucuyu ÖNCE deploy et, sonra client'ı yayınla.
-- Komut biçimi: `ssh -i ~/.ssh/diskort_vps root@185.92.0.242 'cd /opt/diskort/infra && ...'`.
+- Komut biçimi: `ssh -i ~/.ssh/diskort_vps root@38.60.208.88 'cd /opt/diskort/infra && ...'`.
 - Yönetici kuralı: sunucu-only düzeltmeler release beklemeden deploy edilebilir ([[surum-cikarma-kurali]]).
 
 ## İlgili
