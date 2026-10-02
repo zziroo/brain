@@ -38,7 +38,7 @@ Yusuf kamp sürümünü oynadıktan sonra dört şey söyledi, kararı Claude'a 
 
 ## Sonuçlar
 - Oyun botla ~%15 kısaldı; beklemenin çıkmasından geliyor. İnsan süresi hâlâ ölçülmedi.
-- Bağımsız inceleme: kritik/yüksek yok, 2 orta (iki fare tuşuna birlikte basınca atılımın kaybolması, ışının takılı kalması) + 9 düşük; düzeltildi (commit `6ec661a`). Yayına alınmadı: Yusuf'un kararı.
+- Bağımsız inceleme: kritik/yüksek yok, 2 orta (iki fare tuşuna birlikte basınca atılımın kaybolması, ışının takılı kalması) + 9 düşük; düzeltildi (commit `6ec661a`). Yusuf'un onayıyla aynı gün yayına alındı.
 - Eski kayıtlar çalışır; yarım kalmış fener ilerlemesi yeni enerji tablosuna oranlanır (dolu olan yüzde korunur, kayıt sürümü 2).
 - Fare tıklaması artık parlama atmıyor: eski oyuncuya ipucu gösteriliyor.
 

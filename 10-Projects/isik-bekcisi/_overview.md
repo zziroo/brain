@@ -46,11 +46,11 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 | Eski kayıtlar | ilk sürümde oynayanların kaydı yeni sürümde açılıyor (yıldızlar ve fiyatlar aynı). Dönen oyuncu kamp ipucunu ve kapı okunu bir kez görüyor, ilk istekleri kendi düzeyine göre boyutlanıyor |
 | Oynanış hissi, ses | canlı izlenemedi (önizleme paneli rAF'i kısıyor). Yusuf ilk sürümü oynadı ve üç geri bildirim verdi; arkadaşlarıyla deneyip devamını aktaracak |
 | İnceleme kapısı | 1. tur (ilk sürüm): 1 kritik, 3 orta, 11 düşük bulgu; hepsi düzeltildi (`6fd8b65`). 2. tur (kamp/arayüz): kritik/yüksek yok, 2 orta + 11 düşük; hepsi düzeltildi. Düzeltmeler ayrı bir doğrulayıcı ajandan (sonnet) geçti: gerileme yok, 2 nadir düşük bulgu daha, onlar da düzeltildi (`5efa47b`). Orta bulgular için şüpheci ajan yerine koordinatör bulguları tarayıcıda yeniden üretti |
-| Odak ışını, atılım, yeni fener ve yağ dengesi | yerelde, commit `6ec661a`; **canlıda değil** (canlı sürüm `5efa47b`). Bot ~43 sefer / ~50 dk. Gerçek girdiyle ışın, atılım ve telefonda iki parmak denendi; his ve ses denenmedi |
+| Odak ışını, atılım, yeni fener ve yağ dengesi | commit `6ec661a`; **canlıda** (2026-10-02 akşamı yüklendi, canlı sürüm `ac9d0c9`; dosyalar yerelle birebir, canlıda sefer + ışın denendi). Bot ~43 sefer / ~50 dk. Gerçek girdiyle ışın, atılım ve telefonda iki parmak denendi; his ve ses denenmedi |
 | Git | yerel depo, 8 commit, remote yok |
 
 ## Sıradaki işler
-0. Yusuf isterse `6ec661a` sürümünü yayınla; sonra ışın / atılım / fener olayı hakkında geri bildirim al (ışın çok mu güçlü, fenerin son kısmı kısa mı, seferler 35–45 sn iyi mi).
+0. Yayınlandı. Işın / atılım / fener olayı hakkında geri bildirim al (ışın çok mu güçlü, fenerin son kısmı kısa mı, seferler 35–45 sn iyi mi).
 1. Yusuf ve arkadaşlarının oynama geri bildirimini al: tempo (ilk 5 dakika, koşu uzunluğu, fenerlerin hızı), hareket (fare ve dokunmatik), zorluk (pervaneler, gölgeler, boss), ağacın anlaşılırlığı, ses, oyunu bitirme süresi. Sonraki tur buna göre.
 2. Kamp hakkında sor: üs hissi veriyor mu, sakinler ve yürüyüş angarya mı, imleçle kapıdan çıkmak doğal mı (imleç artık kampın içine bir kez girmeden izlenmiyor), yeni arayüz diğer oyundan yeterince ayrışmış mı.
 3. İnsan temposu ölçülünce dengeyi yeniden ayarla (şu an yalnızca bot verisi var).
