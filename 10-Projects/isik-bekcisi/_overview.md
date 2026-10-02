@@ -24,6 +24,7 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 - **Beceri ağacı:** gece göğünde takımyıldızı (8 kol, 48 yıldız): Alev (güç), Yağ, Hale (çap), Adım (hız), Bereket (değer), Çağrı (ruh sayısı), Yoldaşlar (ateş böcekleri), Parlama (aktif patlama). İki para birimi: kıvılcım ve yıldız tozu. Yıldızın bilgisi imlecin yanında açılır; dokunmatikte altta.
 - **Derinlik:** 5 bölge, her biri yeni mekanik getirir: Çayır (temel), Orman (ağaçlar + yağ çalan pervaneler), Bataklık (ışıktan kaçan ürkek ruhlar + sis), Kristal Mağara (zincirleme patlayan kristaller), Harabeler (kovalayan gölgeler).
 - **Fenerler:** her bölgenin sonunda ışıkla doldurulan bir yol feneri var; ilerleme kalıcı. Yanınca koşu zaferle biter, gece duvarı çekilir, yeni yıldız kademesi açılır ve sonraki koşu oradan başlar.
+- **Beceriler (2. geri bildirimden sonra):** odak ışını (fareyi basılı tut: hale daralır, ışık imlece doğru uzanır ve 2,6 kat güçlü vurur), Parlama (Boşluk), Atılım (Shift / Q / sağ tık). Fener, bölgede yakalanan ruhlarla kendiliğinden %80'e kadar dolar; son kısmı başında ışın ve çağrılan ruhlarla tamamlanır. Yağ derin bölgelerde daha hızlı yanar. Ayrıntı: [[2026-10-02-odak-isini-fener-olayi-ve-yag-dengesi]].
 - **Final:** Gecenin Kalbi (3 fazlı boss: gölge çağırma, boşluklu karanlık halkalar). Kazanınca şafak söker.
 - **Arayüz ("gece atlası"):** serif yazı, ince çift çerçeveli plakalar, çentikli düğmeler, emoji yerine kendi çizgi ikon seti, fitil şeklinde yağ göstergesi. Bal Vadisi'nin görünümünden bilinçli olarak ayrıştırıldı.
 
@@ -45,9 +46,11 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 | Eski kayıtlar | ilk sürümde oynayanların kaydı yeni sürümde açılıyor (yıldızlar ve fiyatlar aynı). Dönen oyuncu kamp ipucunu ve kapı okunu bir kez görüyor, ilk istekleri kendi düzeyine göre boyutlanıyor |
 | Oynanış hissi, ses | canlı izlenemedi (önizleme paneli rAF'i kısıyor). Yusuf ilk sürümü oynadı ve üç geri bildirim verdi; arkadaşlarıyla deneyip devamını aktaracak |
 | İnceleme kapısı | 1. tur (ilk sürüm): 1 kritik, 3 orta, 11 düşük bulgu; hepsi düzeltildi (`6fd8b65`). 2. tur (kamp/arayüz): kritik/yüksek yok, 2 orta + 11 düşük; hepsi düzeltildi. Düzeltmeler ayrı bir doğrulayıcı ajandan (sonnet) geçti: gerileme yok, 2 nadir düşük bulgu daha, onlar da düzeltildi (`5efa47b`). Orta bulgular için şüpheci ajan yerine koordinatör bulguları tarayıcıda yeniden üretti |
-| Git | yerel depo, 6 commit, remote yok |
+| Odak ışını, atılım, yeni fener ve yağ dengesi | yerelde, commit `6ec661a`; **canlıda değil** (canlı sürüm `5efa47b`). Bot ~43 sefer / ~50 dk. Gerçek girdiyle ışın, atılım ve telefonda iki parmak denendi; his ve ses denenmedi |
+| Git | yerel depo, 8 commit, remote yok |
 
 ## Sıradaki işler
+0. Yusuf isterse `6ec661a` sürümünü yayınla; sonra ışın / atılım / fener olayı hakkında geri bildirim al (ışın çok mu güçlü, fenerin son kısmı kısa mı, seferler 35–45 sn iyi mi).
 1. Yusuf ve arkadaşlarının oynama geri bildirimini al: tempo (ilk 5 dakika, koşu uzunluğu, fenerlerin hızı), hareket (fare ve dokunmatik), zorluk (pervaneler, gölgeler, boss), ağacın anlaşılırlığı, ses, oyunu bitirme süresi. Sonraki tur buna göre.
 2. Kamp hakkında sor: üs hissi veriyor mu, sakinler ve yürüyüş angarya mı, imleçle kapıdan çıkmak doğal mı (imleç artık kampın içine bir kez girmeden izlenmiyor), yeni arayüz diğer oyundan yeterince ayrışmış mı.
 3. İnsan temposu ölçülünce dengeyi yeniden ayarla (şu an yalnızca bot verisi var).
@@ -61,6 +64,7 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 ## Kararlar
 - [[2026-10-02-isik-bekcisi-tasarim-kararlari]]
 - [[2026-10-02-kamp-gezilebilir-us-ve-ayri-arayuz-kimligi]]
+- [[2026-10-02-odak-isini-fener-olayi-ve-yag-dengesi]]
 
 ## Dersler
 - [[2026-10-02-carpimsal-gelistirmeler-geliri-patlatir]]
