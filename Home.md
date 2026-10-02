@@ -8,6 +8,8 @@ date: 2026-10-01
 Buradan başla. Her şey buradan ya da bir projenin `_overview.md` dosyasından bulunabilmeli.
 
 ## Projeler
+- [[10-Projects/bal-vadisi/_overview|Bal Vadisi]]: 2D arı/çayır temalı incremental oyun (Canvas, derleme yok)
+- [[10-Projects/isik-bekcisi/_overview|Işık Bekçisi]]: fenerle karanlık vadiye koşular yapılan koşu-tabanlı incremental oyun (Canvas, derleme yok)
 - [[10-Projects/diskort/_overview|Diskort]]: sesli sohbet uygulaması (Windows-first, kendi sunucusu)
 - [[10-Projects/kul-tahti/_overview|Kül Tahtı]]: tarayıcıda souls-like 3D boss savaşı demosu (Three.js, derleme yok)
 - [[10-Projects/trencheck/_overview|Trencheck]]
@@ -18,6 +20,7 @@ Buradan başla. Her şey buradan ya da bir projenin `_overview.md` dosyasından 
 
 ## Kaynaklar
 - `30-Resources/`: kalıcı bilgi ve rehberler
+- [[kosu-tabanli-incremental-shelldiver-rock-bottom-analizi]]: koşu-tabanlı incremental türünün kalıbı (Shelldiver, Rock Bottom) ve oyuncu şikâyetleri
 
 ## Arşiv
 - [[90-Archive/old-claude-memory/_index|Eski Claude hafıza klasörleri]]
