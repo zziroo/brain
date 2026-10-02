@@ -1,16 +1,29 @@
 ---
 type: project
 project: ziroobank
-date: 2026-10-02
+date: 2026-10-03
 status: active
 tags: [ziroobank, finans, sunucu]
 ---
 
-# Ziroobank: Dararius / Emre / Tuna taksit takibi (eski Google Sheet "ziroobank-odemeler")
+# Ziroobank: arkadaş grubunun taksit takibi (eski Google Sheet "ziroobank-odemeler")
 
 - Klasör `C:\Users\yusuf\ZZ\zProjects\ziroobank-expenses` (yerel git, remote yok). Node 24, bağımlılık yok, SQLite (`node:sqlite`).
-- Canlı: https://diskort.ziroo.net/tools/ziroobank/ . Sunucu: Diskort VPS ([[sunucu-vps]]). Konteyner `ziroobank` (`/opt/ziroobank`, 127.0.0.1:3100), veri `/opt/ziroobank/data/ziroobank.db`, statik dosyalar `/opt/diskort/apps/web/tools/ziroobank/`, Caddy yolu `/opt/ziroo-sites/ziroobank.caddy`.
-- Hesaplar: dararius, emre, tuna (sabit). Şifreler sunucuda `/opt/ziroobank/secrets/passwords.txt`; sıfırlama `docker compose exec ziroobank node scripts/create-users.mjs --only <ad>`.
-- Kurallar sheet ile aynı: Aylık = Toplam/Taksit, Bitiş = Başlangıç+Taksit−1, Kalan Taksit = Taksit − aralıktaki ödenmiş ay sayısı. Üç kullanıcı da her şeyi düzenleyebilir; her değişiklik Geçmiş'te.
-- Taşıma 2026-10-02: 45 kayıt, 18 ay, 4 ödenmiş ay; KALAN 202.855,78, TOPLAM 336.246 sheet ile birebir. Sheet arşiv; diğer üç kişinin ve servis hesabının erişimi kaldırıldı (yalnız sahibi).
-- Yedek: henüz otomatik yedek yok (açık iş).
+- Canlı: https://diskort.ziroo.net/tools/ziroobank/ . Sunucu: Diskort VPS ([[sunucu-vps]]). Konteyner `ziroobank` (`/opt/ziroobank`, 127.0.0.1:3100), veri `/opt/ziroobank/data/ziroobank.db`, statik dosyalar `/opt/diskort/apps/web/tools/ziroobank/`, Caddy yolu `/opt/ziroo-sites/ziroobank.caddy`. Neden böyle: [[2026-10-02-diskort-sunucusunda-ayri-konteyner]].
+- Kurallar sheet ile aynı: Aylık = Toplam/Taksit, Bitiş = Başlangıç+Taksit−1, Kalan Taksit = Taksit − aralıktaki ödenmiş ay sayısı.
+
+## Güncel durum (2026-10-03)
+- Yayında, DB şeması v1 (roller). Hesaplar: `ziroo` (yönetici, ödeme yapmaz), `dararius`, `emre`, `tuna` (kullanıcı, ödeme yapan). Yetkiler: [[2026-10-03-roller-ve-kullanici-yonetimi]].
+- Yeni kullanıcıyı yönetici "Kullanıcılar" sekmesinden ekler; şifre bir kez gösterilir. İlk dört hesabın şifreleri sunucuda `/opt/ziroobank/secrets/passwords.txt`. Betik: `create-users.mjs --only <ad>` ya da `--all` ([[sifre-betigi-dosyayi-ezdi]]).
+- Sheet'ten taşıma 2026-10-02'de birebir doğrulandı; sheet arşivde, paylaşımı kapalı (yalnız Yusuf).
+- Göç öncesi DB yedekleri sunucuda `/root/ziroobank-pre-admin.db` ve `/root/ziroobank-data-pre-roles-202610030110`.
+- Yayın: `deploy/deploy.sh` rsync istiyor, Windows Git Bash'te yok; şimdiye kadar `git archive | ssh tar x` ile elle yapıldı.
+
+## Sıradaki işler
+1. Otomatik DB yedeği (Diskort yedek düzenine eklenebilir; Yusuf'a önerildi, karar bekliyor).
+2. Kullanıcılar sekmesini canlıda arayüzden denemek.
+3. Kullanıcının kendi kaydını düzenleyip silebilmesi kalsın mı, yalnız eklemeye mi daraltılsın: Yusuf'a soruldu, yanıt yok.
+
+## Notlar
+- Oturumlar: [[2026-10-03-sheet-tasima-ve-roller]]
+- Dersler: [[sifre-betigi-dosyayi-ezdi]] · [[ortak-sunucuda-paralel-oturum]]
