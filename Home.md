@@ -15,6 +15,8 @@ Buradan başla. Her şey buradan ya da bir projenin `_overview.md` dosyasından 
 - [[10-Projects/trencheck/_overview|Trencheck]]
 - [[10-Projects/voice-detector/_overview|Voice Detector]]
 - [[10-Projects/ceviri-araci/_overview|Çeviri Aracı]]: oyun lokalizasyon dosyaları ↔ Excel masaüstü aracı (Electron)
+- [[10-Projects/steam-avgr/_overview|Steam AGCR Paneli]]: Steam ortalama tamamlama oranı paneli, diskort.ziroo.net/tools/steam
+- [[10-Projects/ziroobank/_overview|Ziroobank]]: arkadaş grubu taksit takibi (eski Google Sheet), diskort.ziroo.net/tools/ziroobank
 
 ## Alanlar
 - [[20-Areas/working-rules/_index|Çalışma kuralları]]: Claude ile nasıl çalışıyoruz (orkestrasyon, inceleme kapısı, karar dağılımı)
