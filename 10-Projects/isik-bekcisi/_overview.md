@@ -41,8 +41,8 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 | Tam oyun akışı (başlık → kamp → koşu → özet → kamp → … → boss → son) | yazıldı; gerçek fare/klavye/dokunma olaylarıyla uçtan uca doğrulandı |
 | 5 bölge + boss + son | çalışıyor; her bölge ekran görüntüsüyle kontrol edildi |
 | Kamp, sakinler, istekler, iksirler, yeni arayüz | yazıldı (`84cda67`), inceleme bulguları düzeltildi (`5efa47b`); masaüstü ve 375×812 mobil yerleşimde kontrol edildi |
-| Denge | botla ayarlandı: istek + iksirle ~44 koşu / ~58 dk, onlarsız ~50 / ~64. İnsan için tahmin 1,5–2 saat. Gerçek oyuncu testi yok |
-| Yayın | **canlıdaki sürüm = `5efa47b`** (2026-10-02 16:34'te yüklendi; ilk sürüm 13:48'deydi). Yüklenen 19 dosya yereldekiyle birebir aynı; canlı adreste kamp → sefer → özet → teleskop → yıldız yakma gerçek olaylarla denendi, CSP ihlali ve konsol hatası yok |
+| Denge | botla ayarlandı: istek + iksirle ~43 koşu / ~50 dk, onlarsız ~48 / ~53 (odak ışını sürümü). İnsan için tahmin 1,5–2 saat. Gerçek oyuncu testi yok |
+| Yayın | **canlıdaki sürüm = `ac9d0c9`** (2026-10-02 akşamı; önceki yüklemeler 13:48 ve 16:34). Aşağıdaki canlı deneme 16:34 sürümüne aittir; son sürümde canlıda yalnız sefer başlatma ve ışın denendi. Yüklenen 19 dosya yereldekiyle birebir aynı; canlı adreste kamp → sefer → özet → teleskop → yıldız yakma gerçek olaylarla denendi, CSP ihlali ve konsol hatası yok |
 | Eski kayıtlar | ilk sürümde oynayanların kaydı yeni sürümde açılıyor (yıldızlar ve fiyatlar aynı). Dönen oyuncu kamp ipucunu ve kapı okunu bir kez görüyor, ilk istekleri kendi düzeyine göre boyutlanıyor |
 | Oynanış hissi, ses | canlı izlenemedi (önizleme paneli rAF'i kısıyor). Yusuf ilk sürümü oynadı ve üç geri bildirim verdi; arkadaşlarıyla deneyip devamını aktaracak |
 | İnceleme kapısı | 1. tur (ilk sürüm): 1 kritik, 3 orta, 11 düşük bulgu; hepsi düzeltildi (`6fd8b65`). 2. tur (kamp/arayüz): kritik/yüksek yok, 2 orta + 11 düşük; hepsi düzeltildi. Düzeltmeler ayrı bir doğrulayıcı ajandan (sonnet) geçti: gerileme yok, 2 nadir düşük bulgu daha, onlar da düzeltildi (`5efa47b`). Orta bulgular için şüpheci ajan yerine koordinatör bulguları tarayıcıda yeniden üretti |
@@ -72,6 +72,7 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 - [[2026-10-02-kamera-kayarken-imlecin-dunya-konumu-da-kayar]]
 - [[2026-10-02-duran-imlec-geri-alinamayan-esigi-gecirmemeli]]
 - [[2026-10-02-tikla-git-yuruyusu-koselerde-takilir-tum-alani-tara]]
+- [[2026-10-02-bekleme-kapisi-yerine-avdan-dolan-kapi]]
 - [[10-Projects/bal-vadisi/lessons/2026-10-02-gizli-onizleme-panelinde-raf-durur|Gizli önizleme panelinde rAF durur]]
 
 ## Oturumlar

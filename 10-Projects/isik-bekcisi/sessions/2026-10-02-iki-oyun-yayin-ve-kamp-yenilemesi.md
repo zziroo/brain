@@ -25,12 +25,17 @@ Tek oturumda iki oyun çıktı: [[10-Projects/bal-vadisi/_overview|Bal Vadisi]] 
 11. **14:37–15:25 İkinci inceleme ajanı** (gerçek modülleri Node'da sahte DOM ile çalıştırarak): kritik/yüksek yok, 2 orta + 11 düşük bulgu. Orta olanlar: duran imlecin bekçiyi kapıdan çıkarıp koşu başlatması; dokunmatikte kapıya yandan dokununca bekçinin köşede takılması. Bu arada Yusuf: "inceleme bitince sunucuya yükle" ve "yaptıklarımızı vault'a geçir".
 12. **15:25–16:33 Düzeltmeler (commit `5efa47b`, 13 dosya, +442 / −117):** imleç artık kampın içine bir kez girmeden ve sayfa dışındayken izlenmiyor; örtü açıkken bekçi gerçekten duruyor; tıklayıp gitme engellerin etrafından dolaşıyor ve kapıya kapı ağzından gidiyor; dokunma hedefleri, bitiş ekranı koruması, isteklerin boyutu ve yenilenmesi, eski kayıtla dönen oyuncu için ipucu ve boyutlandırma. Kendi taramam (kampın ~500 noktasından her hedefe) üç takılma daha buldu; ayrı bir doğrulayıcı ajan (sonnet) gerileme bulmadı, iki nadir durum daha gösterdi; hepsi düzeltildi.
 13. **16:34 Üçüncü yayın:** yeni sürüm canlıda. Yüklenen dosyalar yereldekiyle birebir karşılaştırıldı, canlı adreste oyun gerçek olaylarla baştan sona denendi.
+14. **Akşam, ikinci geri bildirim (Yusuf, karar Claude'da):** fener doldurma uzun ve boş; fener iki modlu olsun; daha aktif beceriler; yağ geç oyunda sınırlamıyor.
+15. **Odak ışını, atılım, avdan dolan fener, derinlikle hızlanan yağ** yazıldı ve botla dengelendi (~43 sefer / ~50 dk). Bağımsız inceleme: kritik/yüksek yok, 2 orta + 9 düşük; orta ve önemli düşükler düzeltildi (commit `6ec661a`, `ac9d0c9`).
+16. **Dördüncü yayın** (Yusuf'un onayıyla): `ac9d0c9` canlıda; dosyalar yerelle birebir, canlıda sefer + ışın denendi.
+17. **GitHub:** Yusuf'un isteğiyle özel depo açıldı ve tüm geçmiş push edildi: https://github.com/yusufholat/isik-bekcisi.
 
 ## Alınan kararlar
 - [[2026-10-02-ari-cayir-konsepti]] (Bal Vadisi)
 - [[2026-10-02-oyunlar-diskort-alan-adinda-games-altinda]]
 - [[2026-10-02-isik-bekcisi-tasarim-kararlari]]
 - [[2026-10-02-kamp-gezilebilir-us-ve-ayri-arayuz-kimligi]]
+- [[2026-10-02-odak-isini-fener-olayi-ve-yag-dengesi]]
 
 ## Öğrenilenler
 - [[2026-10-02-idle-degil-kosu-tabanli-incremental-istendi]]: tür adını değil, çekirdek döngüyü tek cümleyle teyit et.
@@ -41,6 +46,7 @@ Tek oturumda iki oyun çıktı: [[10-Projects/bal-vadisi/_overview|Bal Vadisi]] 
 - [[2026-10-02-kamera-kayarken-imlecin-dunya-konumu-da-kayar]]
 - [[2026-10-02-duran-imlec-geri-alinamayan-esigi-gecirmemeli]]
 - [[2026-10-02-tikla-git-yuruyusu-koselerde-takilir-tum-alani-tara]]
+- [[2026-10-02-bekleme-kapisi-yerine-avdan-dolan-kapi]]
 
 ## Orkestrasyon notu
 - Oyunların çekirdeği tek elden (koordinatör) yazıldı; ajanlar yalnızca bağımsız inceleme ve doğrulama için kullanıldı: 2 inceleme (Opus) + 1 doğrulama (Sonnet), üçü de salt-okunur.
@@ -51,5 +57,6 @@ Tek oturumda iki oyun çıktı: [[10-Projects/bal-vadisi/_overview|Bal Vadisi]] 
 - Oynanış hissi ve ses hiç canlı izlenmedi (önizleme paneli animasyonu kısıyor). İlk gerçek test Yusuf ve arkadaşları.
 - İnsan temposu bilinmiyor; denge yalnızca bota dayanıyor (~44 koşu / ~58 dk). Beklenen geri bildirim: tempo, hareket, zorluk, ağacın anlaşılırlığı, ses, süre; ayrıca yeni kamp, istekler ve iksirler.
 - Gerçek bir farenin sayfadan çıkışı (tarayıcı sekmelerine doğru) elle denenmedi; olay sahte olarak üretildi. Davranış beklendiği gibi değilse bekçi yine de kapıdan ancak imleç yolun üzerinde durursa çıkar.
-- İki depo da yalnızca yerelde (remote yok).
+- Bal Vadisi deposu hâlâ yalnızca yerelde; Işık Bekçisi GitHub'da (özel). Sonraki commit'lerin otomatik push edilip edilmeyeceği Yusuf'a soruldu, yanıt bekleniyor.
+- Yeni sürümde canlıda denenmeyenler: atılım, fenerin başındaki son kısım, telefon. Açık bırakılan küçük notlar: çağrılan ruh uzaktan yakalanınca da feneri besliyor; fareyi basılı tutmak ilk adımdan önce yağı başlatıyor; Shift'e 5 kez basmak Windows Yapışkan Tuşlar'ı açabilir.
 - Sunucuda `Cache-Control` yok: yeni sürüm yüklendikten sonra son birkaç dakikada oynamış biri sayfayı yenileyene kadar eski sürümü görebilir.
