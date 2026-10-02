@@ -1,7 +1,7 @@
 ---
 type: project
 project: ceviri-araci
-date: 2026-10-02
+date: 2026-10-03
 status: active
 tags: [ceviri-araci, overview, lokalizasyon]
 source: 2026-10-02 oturumu (string-tool)
@@ -20,18 +20,28 @@ Yusuf'un çevirmen arkadaşı için. Oyun stüdyoları İngilizce dil dosyaları
 - `src/core` saf TS çekirdek (format işleyiciler, Excel, QA, prefill), `src/main` (dosya sistemi/IPC, yol ve uzantı denetimi), `src/renderer` (Türkçe arayüz).
 - Formatlar: JSON, YAML, XML (Android/resx/XLIFF/genel), PO, properties/ini, Apple .strings, CSV/TSV, Ren'Py (.rpy, tl dosyaları), txt.
 - Paket: `npm run dist` → `release/` altında portable `.exe` ve kurulum (imzasız, SmartScreen uyarısı verir).
-- Yayın: https://diskort.ziroo.net/tools/ceviri-araci (indirme sayfası + iki .exe). `bash deploy/deploy.sh` (önce `npm run dist`) Diskort sunucusunda `/opt/diskort/apps/web/tools/` altına statik kopyalar; Caddy değişmez. Yöntem: [[2026-10-02-oyunlar-diskort-alan-adinda-games-altinda]].
+- Yayın: https://diskort.ziroo.net/tools/ceviri-araci (indirme sayfası + iki .exe). `bash deploy/deploy.sh` (önce `npm run dist`) Diskort sunucusunda `/opt/diskort/apps/web/tools/` altına statik kopyalar; Caddy değişmez; betik yalnız kendi yollarına dokunur (`tools/` başka projelerle ortak). Karar: [[2026-10-02-yayin-diskort-tools-altinda]].
 
 ## Kararlar
 - [[2026-10-02-span-tabanli-yazma]]
 - [[2026-10-02-ortaklastirma-yok-dil-kodu-kullanicida]]
+- [[2026-10-02-yayin-diskort-tools-altinda]]
+- [[2026-10-02-renpy-tl-dosyalari]]
+- [[2026-10-02-kelime-sayimi]] (Yusuf onaylamadı)
 
 ## Öğrenilenler
 - [[excel-satir-eslestirme-gizli-id-tek-basina-yetmez]]
+- [[paylasilan-web-kokunde-yalniz-kendi-yollarina-dokun]]
+- [[ajan-arac-tuzaklari-ters-egik-cizgi]]
 
-## Güncel durum (2026-10-02)
-v0.2.0 yayında (sunucuda yalnız son sürüm durur). 333 test geçiyor. v0.2.0 ile: Ren'Py desteği, Excel'de ve uygulamada dosya başına renk (paylaşılan palet `src/core/stats.ts`), Kelime / Dosya Toplamı / Genel Toplam sütunları. Kelime sayımı harf/rakam içeren parçaları sayar (Yusuf'un tablosu boşluk sayıyordu, "-" farkı). Bilinen düşük: başka araçla yapılmış Excel'de "Translation status" gibi başlık çeviri sütunu sanılabilir.
+## Oturumlar
+- [[2026-10-02-ceviri-araci-v0-1-ve-v0-2]]
+
+## Güncel durum (2026-10-03)
+v0.2.0 yayında (sunucuda yalnız son sürüm durur), 333 test geçiyor. v0.2.0 ile: Ren'Py desteği, Excel'de ve uygulamada dosya başına renk (paylaşılan palet `src/core/stats.ts`), Kelime / Dosya Toplamı / Genel Toplam sütunları. Dağıtım betiğinin kapsamı daraltıldı (commit b52a86c); bu düzeltmeden sonra yeniden yayın gerekmedi, sunucudaki dosyalar aynı.
 
 ## Sıradaki işler
-- Arkadaşın gerçek dosyalarıyla denemesi ve geri bildirimi.
-- Bilinen küçük eksikler: geri alma (undo) yok; Excel'de boşaltılan hücre çeviriyi silmiyor; nokta ile başlayan klasör doğrudan sürüklenirse sessizce atlanıyor.
+- Arkadaşın gerçek dosyalarıyla denemesi ve geri bildirimi; Ren'Py çıktısının oyunda denenmesi (doğrulanmadı).
+- Kelime sayımı için Yusuf'un onayı (boşluk sayımı mı, harf/rakam içeren parça mı).
+- Sunucuda Ziroobank statik dosyalarının sahip/izinlerinin eski betikten etkilenip etkilenmediğine SSH ile bakılmadı; sayfa çalışıyor.
+- Bilinen küçük eksikler: undo yok; Excel'de boşaltılan hücre çeviriyi silmiyor; nokta ile başlayan klasör doğrudan sürüklenirse sessizce atlanıyor; başka araçla yapılmış Excel'de "Translation status" başlığı çeviri sütunu sanılabilir; `.exe` imzasız.
