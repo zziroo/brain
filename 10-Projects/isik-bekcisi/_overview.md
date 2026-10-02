@@ -1,70 +1,71 @@
 ---
 type: project
 project: isik-bekcisi
-date: 2026-10-02
+date: 2026-10-03
 status: active
 tags: [isik-bekcisi, oyun, incremental, kosu-tabanli, canvas]
-source: C:\Users\yusuf\ZZ\zProjects\incremantal-game (CLAUDE.md); oturum 2026-10-02
+source: C:\Users\yusuf\ZZ\zProjects\incremantal-game (CLAUDE.md); oturumlar 2026-10-02 (6d8df6c2, 72fd0708)
 ---
 
 # Işık Bekçisi: fenerle karanlık vadiye koşular yapılan koşu-tabanlı incremental oyun
 
 ## Amaç
-Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geliştirme alınan ve tekrar çıkılan döngü (Shelldiver, Rock Bottom; [[kosu-tabanli-incremental-shelldiver-rock-bottom-analizi]]). İlk deneme idle çıkmıştı ([[10-Projects/bal-vadisi/_overview|Bal Vadisi]], [[2026-10-02-idle-degil-kosu-tabanli-incremental-istendi]]). Analizden sonra Yusuf bu konsepti onayladı: "elinden gelenin en iyisini yap, en kaliteli şekilde tasarla".
+Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geliştirme alınan ve tekrar çıkılan döngü (Shelldiver, Rock Bottom; [[kosu-tabanli-incremental-shelldiver-rock-bottom-analizi]]). İlk deneme idle çıkmıştı ([[10-Projects/bal-vadisi/_overview|Bal Vadisi]], [[2026-10-02-idle-degil-kosu-tabanli-incremental-istendi]]). Analizden sonra Yusuf bu konsepti onayladı: "elinden gelenin en iyisini yap, en kaliteli şekilde tasarla". **Masaüstü oyunu** (klavye + fare); mobil yok.
 
 ## Oyun
-- **Koşu ("sefer"):** bekçi imleci/parmağı takip eder, nişan yok. Fenerin ışık çemberi içindeki ruhlar "dolar" ve yakalanır; kıvılcım bırakır. Koşuyu **fener yağı** sınırlar; yağ azalınca ışık daralır.
-- **Kamp (gezilebilir üs):** koşudan sonra bekçi kamp ateşinin yanında uyanır ve yürür. Bir şeyi kullanmak: yaklaş + E / Boşluk / Enter, tıkla ya da dokun.
-  - **Teleskop + Ülker** (eski bekçi): gökyüzü, yani beceri ağacı.
-  - **Kuzey kapısı + Kandil** (kirpi fenerci): kapıdan yürümek koşuyu başlatır; Kandil yanan fenerlerden başlangıç seçtirir.
-  - **İstek panosu + Puhu** (baykuş, 1. fenerden sonra gelir): 3 görev, ödül kıvılcım ya da yıldız tozu.
-  - **Kazan + Vırak** (kurbağa, 2. fenerden sonra gelir): 3 iksirden biri, yalnız bir sonraki sefer için; ardından 2 sefer bekleme.
-  - **Kamp ateşi:** seyir defteri (istatistik, yakalananlar).
-  - Kamp ilerlemeyle büyür: her fener için bir fener direği ve kapı süsünde bir lamba.
-- **Beceri ağacı:** gece göğünde takımyıldızı (8 kol, 48 yıldız): Alev (güç), Yağ, Hale (çap), Adım (hız), Bereket (değer), Çağrı (ruh sayısı), Yoldaşlar (ateş böcekleri), Parlama (aktif patlama). İki para birimi: kıvılcım ve yıldız tozu. Yıldızın bilgisi imlecin yanında açılır; dokunmatikte altta.
-- **Derinlik:** 5 bölge, her biri yeni mekanik getirir: Çayır (temel), Orman (ağaçlar + yağ çalan pervaneler), Bataklık (ışıktan kaçan ürkek ruhlar + sis), Kristal Mağara (zincirleme patlayan kristaller), Harabeler (kovalayan gölgeler).
-- **Fenerler:** her bölgenin sonunda ışıkla doldurulan bir yol feneri var; ilerleme kalıcı. Yanınca koşu zaferle biter, gece duvarı çekilir, yeni yıldız kademesi açılır ve sonraki koşu oradan başlar.
-- **Beceriler (2. geri bildirimden sonra):** odak ışını (fareyi basılı tut: hale daralır, ışık imlece doğru uzanır ve 2,6 kat güçlü vurur), Parlama (Boşluk), Atılım (Shift / Q / sağ tık). Fener, bölgede yakalanan ruhlarla kendiliğinden %80'e kadar dolar; son kısmı başında ışın ve çağrılan ruhlarla tamamlanır. Yağ derin bölgelerde daha hızlı yanar. Ayrıntı: [[2026-10-02-odak-isini-fener-olayi-ve-yag-dengesi]].
-- **Final:** Gecenin Kalbi (3 fazlı boss: gölge çağırma, boşluklu karanlık halkalar). Kazanınca şafak söker.
-- **Arayüz ("gece atlası"):** serif yazı, ince çift çerçeveli plakalar, çentikli düğmeler, emoji yerine kendi çizgi ikon seti, fitil şeklinde yağ göstergesi. Bal Vadisi'nin görünümünden bilinçli olarak ayrıştırıldı.
+- **Sefer:** bekçi WASD ile yürür; fener imlece bakar. Sol tuş (ya da F) basılı = odak ışını; Boşluk = parlama; Shift / Q / sağ tık = atılım. Fenerin ışığındaki ruhlar "dolar" ve yakalanır; kıvılcım bırakır. Seferi **fener yağı** sınırlar; derin bölgede ve odaklıyken daha hızlı yanar.
+- **Işın → lazer:** Mercek hattı (Mercek → Hüzme → Işın → Yıldız Mızrağı) koniyi daraltıp uzatır: erken oyunda meşale, ortada spot, harabelerde lazer çizgisi; hedefte tutuldukça ısınır. Odaklanmak yağı 1,7–2,5 kat yakar (fitilde "×1,8" etiketi); Damıtık Yağ düşürür. Geç bölgeler lazer ister: kabuklu ruh, prizma (ışını böler), gece dikeni (yağ emen halka), açılan Kalp. Ayrıntı: [[2026-10-02-lazere-donusen-isin-yag-bedeli-ve-lazer-dusmanlari]].
+- **Kamp (gezilebilir üs, hikâye anlatır):** bekçi ateşin başında uyanır. E istasyonu kullanır, **F konuşur** (sakine tıklamak da). Teleskop + Ülker → gökyüzü (beceri ağacı); kapı + Kandil → sefer (kapıdan W ile yürüyerek; Kandil'in fenerine tıklayınca yanan fenerlerden başlangıç); pano + Puhu (1. fenerden sonra) → istekler; kazan + Vırak (2. fenerden sonra) → iksir; kamp ateşi → defter (Günce + Kayıtlar). Yeni sözü olan sakinin başında konuşma işareti; konuşmalar alttaki plakada akar; sefer sonrası bir sakin sefere tepki verir. Hikâyenin özü ve kuralları: [[2026-10-02-hikaye-kampi-f-ile-konusma-ve-yumusak-gecisler]]. Kamp ilerlemeyle büyür.
+- **Beceri ağacı:** gece göğünde takımyıldızı (8 kol, 55 yıldız). Beş durum ilk bakışta ayrı (tamam / alınmış / şimdi alınabilir / pahalı / kilitli), sonraki kademenin soluk önizlemesi, satın alma "yıldız yakma" animasyonu, kör satın alma yok. Bilgi kutusu imlecin yanında, en az yıldızı örten tarafta.
+- **Derinlik:** 5 bölge: Çayır, Orman (pervaneler), Bataklık (ürkek ruhlar, sis, ilk kabuklular), Kristal Mağara (patlayan kristaller, prizmalar), Harabeler (gölgeler, dikenler, prizmalar).
+- **Fenerler:** bölgedeki avın ışığı fenere kendiliğinden akar (%80'e kadar), son kısmı başında tamamlanır. Yanınca sefer zaferle biter.
+- **Geçişler:** kapıdan çıkış kesintisiz (fener 1 sn'de yakılır), fenerden başlama bir yolculuk kartı, yağ bitince sönen alev ve eve süzülen kor, kampta ateş başında uyanış, teleskopa iris. Sefer başına ~2 sn.
+- **Final:** Gecenin Kalbi (3 fazlı; gölge çağırır, boşluklu karanlık halkalar atar; gölge çağırınca 3,2 sn açılır ve ışın iki kat işler). Kazanınca şafak; kuzey alacakaranlık kalır, seferler sürer.
+- **Arayüz ("gece atlası"):** serif, ince çift çerçeveli plakalar, çentikli düğmeler, kendi çizgi ikonları, fitil göstergesi. Bal Vadisi'nden bilinçli ayrı.
 
 ## Teknoloji
-- Düz JS ES modülleri + Canvas 2D, derleme yok, dış dosya yok (görsel ve ses kodla üretiliyor). ~5.000 satır JS.
+- Düz JS ES modülleri + Canvas 2D, derleme yok, dış dosya yok. ~9.000 satır JS.
 - Klasör: `C:\Users\yusuf\ZZ\zProjects\incremantal-game`. Çalıştırma: `node serve.mjs` → http://localhost:5174.
-- Kural: oyun kuralları `run.js` / `camp.js` / `quests.js` / `state.js` / `data.js` içinde, DOM'suz; görünen her şey olay yolu (`emit`) üzerinden. Bu sayede denge botu oyunu başsız oynayabiliyor.
-- Test: `tools/dev.js` (elle sürme; `timerFrames()` + `ev` ile gerçek kare döngüsü ve gerçek girdi olayları; `campSweep()` ile kampın her noktasından kapıya ve istasyonlara gidiş taraması), `tools/sim.js` (oyunu baştan sona oynayan denge botu). Ayrıntı deponun `CLAUDE.md` dosyasında.
-- **Canlı:** https://diskort.ziroo.net/games/isik-bekcisi · oyun listesi https://diskort.ziroo.net/games. Yayınlama: `bash deploy/deploy.sh` (oyun); liste sayfası `bal-vadisi` deposundaki `deploy/deploy.sh` ile. Kurallar ve tuhaflıklar: [[2026-10-02-oyunlar-diskort-alan-adinda-games-altinda]]. Yeniden yayın Yusuf istediğinde yapılır.
+- Kural: oyun kuralları `run.js` / `camp.js` / `quests.js` / `talk.js` / `state.js` / `data.js` içinde, DOM'suz; hikâye metni `story.js`; her şey `emit` üzerinden. Bot başsız oynar.
+- Test: `tools/dev.js` (`timerFrames` / `manualFrames` + `ev`, `campSweep`), `tools/sim.js` + `sim-node.mjs` (denge botu), `tools/story-check.mjs` (hikâye). **Sözdizimi: `node --input-type=module --check < dosya`** (`node --check` bu makinede ESM hatası yakalamıyor). Ayrıntı deponun `CLAUDE.md` dosyasında.
+- **Canlı:** https://diskort.ziroo.net/games/isik-bekcisi · liste https://diskort.ziroo.net/games. Yayın: `bash deploy/deploy.sh`; liste sayfası `bal-vadisi` deposundaki `deploy/deploy.sh` ile. Kurallar: [[2026-10-02-oyunlar-diskort-alan-adinda-games-altinda]]. Yayın Yusuf'un kararı.
+- Git: GitHub (özel) https://github.com/yusufholat/isik-bekcisi, dal `main`.
 
-## Durum (2026-10-02)
+## Durum (2026-10-03)
 | Parça | Durum |
 |---|---|
-| Tam oyun akışı (başlık → kamp → koşu → özet → kamp → … → boss → son) | yazıldı; gerçek fare/klavye/dokunma olaylarıyla uçtan uca doğrulandı |
-| 5 bölge + boss + son | çalışıyor; her bölge ekran görüntüsüyle kontrol edildi |
-| Kamp, sakinler, istekler, iksirler, yeni arayüz | yazıldı (`84cda67`), inceleme bulguları düzeltildi (`5efa47b`); masaüstü ve 375×812 mobil yerleşimde kontrol edildi |
-| Denge | botla ayarlandı: istek + iksirle ~43 koşu / ~50 dk, onlarsız ~48 / ~53 (odak ışını sürümü). İnsan için tahmin 1,5–2 saat. Gerçek oyuncu testi yok |
-| Yayın | **canlıdaki sürüm = `ac9d0c9`** (2026-10-02 akşamı; önceki yüklemeler 13:48 ve 16:34). Aşağıdaki canlı deneme 16:34 sürümüne aittir; son sürümde canlıda yalnız sefer başlatma ve ışın denendi. Yüklenen 19 dosya yereldekiyle birebir aynı; canlı adreste kamp → sefer → özet → teleskop → yıldız yakma gerçek olaylarla denendi, CSP ihlali ve konsol hatası yok |
-| Eski kayıtlar | ilk sürümde oynayanların kaydı yeni sürümde açılıyor (yıldızlar ve fiyatlar aynı). Dönen oyuncu kamp ipucunu ve kapı okunu bir kez görüyor, ilk istekleri kendi düzeyine göre boyutlanıyor |
-| Oynanış hissi, ses | canlı izlenemedi (önizleme paneli rAF'i kısıyor). Yusuf ilk sürümü oynadı ve üç geri bildirim verdi; arkadaşlarıyla deneyip devamını aktaracak |
-| İnceleme kapısı | 1. tur (ilk sürüm): 1 kritik, 3 orta, 11 düşük bulgu; hepsi düzeltildi (`6fd8b65`). 2. tur (kamp/arayüz): kritik/yüksek yok, 2 orta + 11 düşük; hepsi düzeltildi. Düzeltmeler ayrı bir doğrulayıcı ajandan (sonnet) geçti: gerileme yok, 2 nadir düşük bulgu daha, onlar da düzeltildi (`5efa47b`). Orta bulgular için şüpheci ajan yerine koordinatör bulguları tarayıcıda yeniden üretti |
-| Odak ışını, atılım, yeni fener ve yağ dengesi | commit `6ec661a`; **canlıda** (2026-10-02 akşamı yüklendi, canlı sürüm `ac9d0c9`; dosyalar yerelle birebir, canlıda sefer + ışın denendi). Bot ~43 sefer / ~50 dk. Gerçek girdiyle ışın, atılım ve telefonda iki parmak denendi; his ve ses denenmedi |
-| Git | GitHub (özel): https://github.com/yusufholat/isik-bekcisi, dal `main`. 2026-10-02 akşamı oluşturuldu |
+| Yerel `main` | `2020af6` (22 commit ileride). **Push edilmedi, yayınlanmadı.** Canlı hâlâ `ac9d0c9` (kontrollerde imleç takibi, dokunmatik, lazersiz ışın) |
+| Kontroller / masaüstü | yazıldı, incelendi, birleşti ([[2026-10-02-masaustu-oyun-wasd-hareket-fare-isik]]) |
+| Lazer, yağ bedeli, kabuklu / prizma / diken, açılan Kalp | yazıldı, incelendi, birleşti; botla dengelendi |
+| Gökyüzü ekranı | yeniden yazıldı, incelendi, birleşti |
+| Hikâye (metin + bağlama) | 29 konuşma, 79 ara söz, 46 tepki, 7 günce sayfası; incelendi, birleşti; Türkçeyi Yusuf'tan başka ana dili konuşan okumadı |
+| Geçişler | yazıldı, incelendi, birleşti; hareket kare kare değerlendirildi, 60 karede izlenmedi |
+| Denge | bot: ~43–45 sefer / ~45–47 dk istek ve iksirle, ~51–52 / ~53–55 onlarsız; Kalp ~4 deneme. Botun nişanı mükemmel, geç oyun sayıları insana göre iyimser. Gerçek oyuncu ölçümü yok |
+| Ses | hiçbir ajan dinlemedi: ışın uğultusu, kamp ateşi ve rüzgâr yatağı, konuşma sesleri, geçiş sesleri seviyeleri tahmin |
+| Eski kayıtlar | yüklenir; yıldız fiyatları 2.–4. kademede arttı (eski oyuncu da öder); `S.story` göçü var |
+| İnceleme kapısı | bu tur 5 dal incelemesi (0 kritik/yüksek, 6 orta, ~27 düşük; hepsi düzeltildi), 1 şüpheci, 1 düzeltme doğrulayıcısı |
 
 ## Sıradaki işler
-0. Yayınlandı. Işın / atılım / fener olayı hakkında geri bildirim al (ışın çok mu güçlü, fenerin son kısmı kısa mı, seferler 35–45 sn iyi mi).
-1. Yusuf ve arkadaşlarının oynama geri bildirimini al: tempo (ilk 5 dakika, koşu uzunluğu, fenerlerin hızı), hareket (fare ve dokunmatik), zorluk (pervaneler, gölgeler, boss), ağacın anlaşılırlığı, ses, oyunu bitirme süresi. Sonraki tur buna göre.
-2. Kamp hakkında sor: üs hissi veriyor mu, sakinler ve yürüyüş angarya mı, imleçle kapıdan çıkmak doğal mı (imleç artık kampın içine bir kez girmeden izlenmiyor), yeni arayüz diğer oyundan yeterince ayrışmış mı.
-3. İnsan temposu ölçülünce dengeyi yeniden ayarla (şu an yalnızca bot verisi var).
-4. İstekler ve iksirler hiç insan tarafından oynanmadı: ödül büyüklükleri, iksirin bekleme süresi ve "4 seferdir ilerlemeyen istek değişir" kuralı ilk geri bildirimde sorulacak.
+0. **Yusuf'un kararı:** push + `deploy/deploy.sh` ile yayın; önce kendisi yerelde bir tur oynasın (lazer hissi, geçiş temposu, ses seviyeleri, hikâyenin Türkçesi).
+1. Oynama geri bildirimi: WASD + fare iyi geldi mi; lazer ve yağ bedeli hissediliyor mu; kabuklu / prizma / diken okunuyor mu; konuşmalar fazla mı az mı; geçişler yavaş mı.
+2. Küçük yerleşim: Kandil'in balonu kapıda ekranın üst kenarına taşabiliyor (1366×768).
+3. 5. fenerden sonra gölge / pervane / ürkek / yaşlı istekleri de yapılamaz olunca panodan çekilsin (şu an 4 boş seferde değişiyor).
+4. İnsan temposu ölçülünce denge; istek ödülleri ve iksir bekleme süresi hâlâ insan tarafından denenmedi.
 
 ## Bilinen küçük eksikler
-- Koşu sırasında kapı direkleri katı değil (yalnız görsel).
-- Kampta klavye ya da düz imleç takibiyle köşelere (Kandil'in doğusundaki çit dibi, kazan ile Vırak arası) girilebilir; çıkmak için yön değiştirmek yeter. Tıklayıp gitme bu köşelerden kendisi çıkıyor.
-- Sunucuda `Cache-Control` yok: yükleme sonrası son birkaç dakikada oynamış biri sayfayı yenileyene kadar eski sürümü görebilir.
+- Sefer sırasında kapı direkleri katı değil (yalnız görsel).
+- Kampta klavyeyle iki köşeye (Kandil'in doğusundaki çit dibi, kazan ile Vırak arası) girilebilir; yön değiştirmek yeter.
+- Sunucuda `Cache-Control` yok: yüklemeden sonra eski sürüm bir süre görünebilir.
+- Pencere değiştirip geri gelince basılı tutulan tuş yeniden basılana kadar yürütmez (bilinçli: tekrar olayları basış sayılmıyor).
+- Bot fazladan ~2 sn'lik geçiş süresini saymıyor (sabit 4 sn/sefer ekliyor).
 
 ## Kararlar
 - [[2026-10-02-isik-bekcisi-tasarim-kararlari]]
 - [[2026-10-02-kamp-gezilebilir-us-ve-ayri-arayuz-kimligi]]
 - [[2026-10-02-odak-isini-fener-olayi-ve-yag-dengesi]]
+- [[2026-10-02-masaustu-oyun-wasd-hareket-fare-isik]]
+- [[2026-10-02-lazere-donusen-isin-yag-bedeli-ve-lazer-dusmanlari]]
+- [[2026-10-02-hikaye-kampi-f-ile-konusma-ve-yumusak-gecisler]]
 
 ## Dersler
 - [[2026-10-02-carpimsal-gelistirmeler-geliri-patlatir]]
@@ -73,7 +74,10 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 - [[2026-10-02-duran-imlec-geri-alinamayan-esigi-gecirmemeli]]
 - [[2026-10-02-tikla-git-yuruyusu-koselerde-takilir-tum-alani-tara]]
 - [[2026-10-02-bekleme-kapisi-yerine-avdan-dolan-kapi]]
+- [[2026-10-02-birlesmeden-sonra-her-sahneye-bak]]
+- [[2026-10-02-paralel-ajan-dallarini-main-ile-ajana-birlestirtmek]]
 - [[10-Projects/bal-vadisi/lessons/2026-10-02-gizli-onizleme-panelinde-raf-durur|Gizli önizleme panelinde rAF durur]]
 
 ## Oturumlar
 - [[2026-10-02-iki-oyun-yayin-ve-kamp-yenilemesi]]
+- [[2026-10-02-ikinci-geri-bildirim-turu-lazer-hikaye-gecisler]]
