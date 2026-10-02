@@ -34,7 +34,7 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 ## Durum (2026-10-03)
 | Parça | Durum |
 |---|---|
-| Yerel `main` | `2020af6` (22 commit ileride). **Push edilmedi, yayınlanmadı.** Canlı hâlâ `ac9d0c9` (kontrollerde imleç takibi, dokunmatik, lazersiz ışın) |
+| Yayın | **canlı = `2020af6`** (2026-10-03 gece, Yusuf'un isteğiyle push + `deploy/deploy.sh`). Canlıdaki 21 dosyanın özeti yereldekiyle birebir; canlı sayfa konsol hatasız açıldı, başlık → kamp denendi |
 | Kontroller / masaüstü | yazıldı, incelendi, birleşti ([[2026-10-02-masaustu-oyun-wasd-hareket-fare-isik]]) |
 | Lazer, yağ bedeli, kabuklu / prizma / diken, açılan Kalp | yazıldı, incelendi, birleşti; botla dengelendi |
 | Gökyüzü ekranı | yeniden yazıldı, incelendi, birleşti |
@@ -46,7 +46,7 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 | İnceleme kapısı | bu tur 5 dal incelemesi (0 kritik/yüksek, 6 orta, ~27 düşük; hepsi düzeltildi), 1 şüpheci, 1 düzeltme doğrulayıcısı |
 
 ## Sıradaki işler
-0. **Yusuf'un kararı:** push + `deploy/deploy.sh` ile yayın; önce kendisi yerelde bir tur oynasın (lazer hissi, geçiş temposu, ses seviyeleri, hikâyenin Türkçesi).
+0. Yayınlandı. Yusuf ve arkadaşları oynasın: lazer hissi, geçiş temposu, ses seviyeleri, hikâyenin Türkçesi.
 1. Oynama geri bildirimi: WASD + fare iyi geldi mi; lazer ve yağ bedeli hissediliyor mu; kabuklu / prizma / diken okunuyor mu; konuşmalar fazla mı az mı; geçişler yavaş mı.
 2. Küçük yerleşim: Kandil'in balonu kapıda ekranın üst kenarına taşabiliyor (1366×768).
 3. 5. fenerden sonra gölge / pervane / ürkek / yaşlı istekleri de yapılamaz olunca panodan çekilsin (şu an 4 boş seferde değişiyor).
