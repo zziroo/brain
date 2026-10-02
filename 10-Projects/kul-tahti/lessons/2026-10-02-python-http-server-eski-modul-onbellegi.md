@@ -20,4 +20,4 @@ source: oturum 2026-10-02 (web-boss-teaser entegrasyonu)
 Derleme adımı olmayan ES modülü projelerinde baştan no-store bir geliştirme sunucusu kullan; "değişiklik çalışmıyor" durumunda önce `transferSize` ile önbelleğe bak.
 
 ## İlgili
-- [[_overview]]
+- [[10-Projects/kul-tahti/_overview|Kül Tahtı]]

@@ -7,20 +7,20 @@ tags: [orkestrasyon, test, tarayici, webgl]
 source: oturum 2026-10-02 (web-boss-teaser ilk sürüm)
 ---
 
-# Ders: Paylaşılan tarayıcı panelinde WebGL oyunu, gizli sekmede requestAnimationFrame durduğu için kareleri elle ilerletip test edilmeli
+# Ders: Paralel ajanlar aynı tarayıcı panelini paylaşırken her modül stub'la, kendi sekmesinde ve step() ile test edilmeli
 
 ## Ne oldu
-Uygulama içi tarayıcı paneli gizliyken (ya da sekme arka plandayken) `requestAnimationFrame` duruyor; oyun ilerlemiyor, ekran görüntüleri bayat kalıyor, CSS geçişleri de ilerlemiyor (ekranlar yarım görünüyor). Dört paralel ajan aynı paneli paylaştı.
+Dört ajan aynı uygulama içi tarayıcı panelinde aynı anda kendi modülünü test etti. Panel gizliyken rAF neredeyse durdu (temel durum: [[2026-10-02-gizli-onizleme-panelinde-raf-durur]]). Ayrıca CSS geçişleri de ilerlemedi, ölüm/zafer ekranları ekran görüntüsünde yarım kaldı. Koordinatör bir kez farkında olmadan başka bir ajanın sekmesinde JS çalıştırdı. Bir ajan kendi sekmesini kapatınca panel tamamen kapandı.
 
 ## Ne işe yaradı
-- Oyuna `__game.step(n, dt)` (n kareyi senkron çalıştır) ve scriptle girdi (`input.virtual.move`, `input.tap('attack')`) eklemek. Böylece giriş sahnesi, savaş ve ölüm akışları görünür pencere olmadan test edildi.
-- Her modül için stub ve `?use=<modül>` bayrağı: ajanlar birbirinin yarım kodundan etkilenmeden test etti.
-- Ajanlara "kendi sekmeni aç, başkasınınkine dokunma, pencereyi yeniden boyutlandırma" kuralı.
+- İskelete baştan `__game.step(n, dt)` ve sanal girdi (`input.virtual.move`, `input.tap('attack')`) koymak. Sanal girdi gerçek girdi modülünün `update()` adımından geçiyor, yani test girdi yolunu atlamıyor (karşı örnek: [[2026-10-02-bot-ve-test-araclari-girdi-yolunu-atladi]]).
+- Her modül için çalışan stub ve `?use=<modül>` / `?stub=<modül>` bayrakları: ajanlar birbirinin yarım kodundan etkilenmeden test etti.
+- Ajan kuralı: kendi sekmeni `tabs_create` ile aç, başkasının sekmesine dokunma, pencereyi yeniden boyutlandırma, sunucuyu başlatma/durdurma.
 
 ## Uygula
-- Gerçek zamanlı bir web projesinde ilk iskelete deterministik `step()` ve sanal girdi kancası koy.
-- CSS animasyonlu ekranları ekran görüntüsüyle doğrularken panel gizliyse geçişlerin bitmemiş olabileceğini hesaba kat.
-- Bir ajan kendi sekmesini kapatınca panel tamamen kapanabiliyor; sonrasında `preview_start` ile yeniden aç.
+- Paralel ajanlı bir web projesinde iskelete deterministik `step()`, sanal girdi ve stub'ları ilk commit'te koy.
+- Koordinatör de JS çalıştırırken `tabId`'yi açıkça ver.
+- Panel kapandıysa `preview_start` ile yeniden aç.
 
 ## İlgili
-- [[_overview]]
+- [[10-Projects/kul-tahti/_overview|Kül Tahtı]]

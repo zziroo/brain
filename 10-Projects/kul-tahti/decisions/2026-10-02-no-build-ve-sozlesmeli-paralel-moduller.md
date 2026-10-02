@@ -33,5 +33,5 @@ Büyük, görsel ağırlıklı bir web oyunu isteniyordu ve "webde çalışsın"
 - Artifact içinde import map'in (sayfa iskeletine sarılınca) çalıştığı doğrulanmadı.
 
 ## İlgili
-- [[_overview]]
+- [[10-Projects/kul-tahti/_overview|Kül Tahtı]]
 - [[2026-10-02-ilk-surum]]
