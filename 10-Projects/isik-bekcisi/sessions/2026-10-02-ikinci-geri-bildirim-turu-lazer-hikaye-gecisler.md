@@ -17,7 +17,7 @@ Yusuf arkadaşlarıyla canlı sürümü (`ac9d0c9`) oynadı ve altı başlıkta 
 3. **2. dalga (paralel, worktree):** hikâyenin kampa bağlanması (`js/talk.js`, F ile konuşma, plaka, günce) ve sahne geçişleri (`transit()`, iris, kor, uyanış). Aynı akış; geçiş dalı `main`'i iki kez birleştirdi (lazer, sonra hikâye).
 4. İnceleme sonrası düzeltme commit'leri ayrıca Sonnet doğrulayıcıdan geçti (40/40 bot oyunu kazandı, gerileme yok).
 5. Koordinatör her birleştirmeden sonra tarayıcıda baktı; sonunda uçtan uca: başlık → kamp → W ile kapıdan çıkış (fener yakılışı) → sefer (koni, ×1,7 etiketi) → yağ bitti → özet → Boşluk → ateş başında uyanış → Kandil'in rekor tepkisi → Ülker'e tıklayıp konuşma → E ile teleskop (iris) → gökyüzü → Esc. Konsol hatasız; `campSweep` 0/2/5 fenerde temiz.
-6. `main` `ac9d0c9` → `2020af6` (22 commit). **Push ve yayın yapılmadı**; ikisi de Yusuf'un kararı.
+6. `main` `ac9d0c9` → `2020af6` (22 commit). Yusuf "push et ve yayınla" dedi: GitHub'a push, `deploy/deploy.sh`; canlı dosyaların özetleri yereldekiyle birebir, canlı sayfa konsol hatasız, başlık → kamp denendi.
 
 ## Kararlar
 - [[2026-10-02-masaustu-oyun-wasd-hareket-fare-isik]]
