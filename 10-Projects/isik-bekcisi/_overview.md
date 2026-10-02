@@ -28,10 +28,10 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 - **Arayüz ("gece atlası"):** serif yazı, ince çift çerçeveli plakalar, çentikli düğmeler, emoji yerine kendi çizgi ikon seti, fitil şeklinde yağ göstergesi. Bal Vadisi'nin görünümünden bilinçli olarak ayrıştırıldı.
 
 ## Teknoloji
-- Düz JS ES modülleri + Canvas 2D, derleme yok, dış dosya yok (görsel ve ses kodla üretiliyor). ~4.800 satır JS.
+- Düz JS ES modülleri + Canvas 2D, derleme yok, dış dosya yok (görsel ve ses kodla üretiliyor). ~5.000 satır JS.
 - Klasör: `C:\Users\yusuf\ZZ\zProjects\incremantal-game`. Çalıştırma: `node serve.mjs` → http://localhost:5174.
 - Kural: oyun kuralları `run.js` / `camp.js` / `quests.js` / `state.js` / `data.js` içinde, DOM'suz; görünen her şey olay yolu (`emit`) üzerinden. Bu sayede denge botu oyunu başsız oynayabiliyor.
-- Test: `tools/dev.js` (elle sürme; `timerFrames()` + `ev` ile gerçek kare döngüsü ve gerçek girdi olayları), `tools/sim.js` (oyunu baştan sona oynayan denge botu). Ayrıntı deponun `CLAUDE.md` dosyasında.
+- Test: `tools/dev.js` (elle sürme; `timerFrames()` + `ev` ile gerçek kare döngüsü ve gerçek girdi olayları; `campSweep()` ile kampın her noktasından kapıya ve istasyonlara gidiş taraması), `tools/sim.js` (oyunu baştan sona oynayan denge botu). Ayrıntı deponun `CLAUDE.md` dosyasında.
 - **Canlı:** https://diskort.ziroo.net/games/isik-bekcisi · oyun listesi https://diskort.ziroo.net/games. Yayınlama: `bash deploy/deploy.sh` (oyun); liste sayfası `bal-vadisi` deposundaki `deploy/deploy.sh` ile. Kurallar ve tuhaflıklar: [[2026-10-02-oyunlar-diskort-alan-adinda-games-altinda]]. Yeniden yayın Yusuf istediğinde yapılır.
 
 ## Durum (2026-10-02)
@@ -39,18 +39,24 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 |---|---|
 | Tam oyun akışı (başlık → kamp → koşu → özet → kamp → … → boss → son) | yazıldı; gerçek fare/klavye/dokunma olaylarıyla uçtan uca doğrulandı |
 | 5 bölge + boss + son | çalışıyor; her bölge ekran görüntüsüyle kontrol edildi |
-| Kamp, sakinler, istekler, iksirler, yeni arayüz | yazıldı (commit `84cda67`); masaüstü ve 375×812 mobil yerleşimde kontrol edildi |
-| Denge | botla ayarlandı: istek + iksirle ~45 koşu / ~60 dk, onlarsız ~51 / ~65. İnsan için tahmin 1,5–2 saat. Gerçek oyuncu testi yok |
-| Yayın | ilk sürüm 13:48'de canlıya alındı (kamp/arayüz yenilemesi öncesi). Yeni sürüm: Yusuf "inceleme bitince yükle" dedi |
+| Kamp, sakinler, istekler, iksirler, yeni arayüz | yazıldı (`84cda67`), inceleme bulguları düzeltildi (`5efa47b`); masaüstü ve 375×812 mobil yerleşimde kontrol edildi |
+| Denge | botla ayarlandı: istek + iksirle ~44 koşu / ~58 dk, onlarsız ~50 / ~64. İnsan için tahmin 1,5–2 saat. Gerçek oyuncu testi yok |
+| Yayın | **canlıdaki sürüm = `5efa47b`** (2026-10-02 16:34'te yüklendi; ilk sürüm 13:48'deydi). Yüklenen 19 dosya yereldekiyle birebir aynı; canlı adreste kamp → sefer → özet → teleskop → yıldız yakma gerçek olaylarla denendi, CSP ihlali ve konsol hatası yok |
+| Eski kayıtlar | ilk sürümde oynayanların kaydı yeni sürümde açılıyor (yıldızlar ve fiyatlar aynı). Dönen oyuncu kamp ipucunu ve kapı okunu bir kez görüyor, ilk istekleri kendi düzeyine göre boyutlanıyor |
 | Oynanış hissi, ses | canlı izlenemedi (önizleme paneli rAF'i kısıyor). Yusuf ilk sürümü oynadı ve üç geri bildirim verdi; arkadaşlarıyla deneyip devamını aktaracak |
-| İnceleme kapısı | 1. tur (ilk sürüm): 1 kritik, 3 orta, 11 düşük bulgu; hepsi düzeltildi (`6fd8b65`). 2. tur (kamp/arayüz): çalışıyor. Şüpheci ajan yerine bulgular koordinatör tarafından tarayıcıda yeniden üretilerek doğrulanıyor |
-| Git | yerel depo, 5 commit, remote yok |
+| İnceleme kapısı | 1. tur (ilk sürüm): 1 kritik, 3 orta, 11 düşük bulgu; hepsi düzeltildi (`6fd8b65`). 2. tur (kamp/arayüz): kritik/yüksek yok, 2 orta + 11 düşük; hepsi düzeltildi. Düzeltmeler ayrı bir doğrulayıcı ajandan (sonnet) geçti: gerileme yok, 2 nadir düşük bulgu daha, onlar da düzeltildi (`5efa47b`). Orta bulgular için şüpheci ajan yerine koordinatör bulguları tarayıcıda yeniden üretti |
+| Git | yerel depo, 6 commit, remote yok |
 
 ## Sıradaki işler
-1. 2. inceleme turunun bulgularını doğrula ve düzelt, ardından yeni sürümü yayınla (Yusuf onayladı: "inceleme bitince sunucuya yükle").
-2. Yusuf ve arkadaşlarının oynama geri bildirimini al: tempo (ilk 5 dakika, koşu uzunluğu, fenerlerin hızı), hareket (fare ve dokunmatik), zorluk (pervaneler, gölgeler, boss), ağacın anlaşılırlığı, ses, oyunu bitirme süresi. Sonraki tur buna göre.
+1. Yusuf ve arkadaşlarının oynama geri bildirimini al: tempo (ilk 5 dakika, koşu uzunluğu, fenerlerin hızı), hareket (fare ve dokunmatik), zorluk (pervaneler, gölgeler, boss), ağacın anlaşılırlığı, ses, oyunu bitirme süresi. Sonraki tur buna göre.
+2. Kamp hakkında sor: üs hissi veriyor mu, sakinler ve yürüyüş angarya mı, imleçle kapıdan çıkmak doğal mı (imleç artık kampın içine bir kez girmeden izlenmiyor), yeni arayüz diğer oyundan yeterince ayrışmış mı.
 3. İnsan temposu ölçülünce dengeyi yeniden ayarla (şu an yalnızca bot verisi var).
-4. Yeni kamp sistemleri (istekler, iksirler) hiç insan tarafından oynanmadı: ödül büyüklükleri ve bekleme süresi ilk geri bildirimde sorulacak.
+4. İstekler ve iksirler hiç insan tarafından oynanmadı: ödül büyüklükleri, iksirin bekleme süresi ve "4 seferdir ilerlemeyen istek değişir" kuralı ilk geri bildirimde sorulacak.
+
+## Bilinen küçük eksikler
+- Koşu sırasında kapı direkleri katı değil (yalnız görsel).
+- Kampta klavye ya da düz imleç takibiyle köşelere (Kandil'in doğusundaki çit dibi, kazan ile Vırak arası) girilebilir; çıkmak için yön değiştirmek yeter. Tıklayıp gitme bu köşelerden kendisi çıkıyor.
+- Sunucuda `Cache-Control` yok: yükleme sonrası son birkaç dakikada oynamış biri sayfayı yenileyene kadar eski sürümü görebilir.
 
 ## Kararlar
 - [[2026-10-02-isik-bekcisi-tasarim-kararlari]]
@@ -60,6 +66,8 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 - [[2026-10-02-carpimsal-gelistirmeler-geliri-patlatir]]
 - [[2026-10-02-bot-ve-test-araclari-girdi-yolunu-atladi]]
 - [[2026-10-02-kamera-kayarken-imlecin-dunya-konumu-da-kayar]]
+- [[2026-10-02-duran-imlec-geri-alinamayan-esigi-gecirmemeli]]
+- [[2026-10-02-tikla-git-yuruyusu-koselerde-takilir-tum-alani-tara]]
 - [[10-Projects/bal-vadisi/lessons/2026-10-02-gizli-onizleme-panelinde-raf-durur|Gizli önizleme panelinde rAF durur]]
 
 ## Oturumlar

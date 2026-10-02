@@ -42,7 +42,13 @@ Yusuf ilk sürümü oynadıktan sonra üç şey söyledi:
 
 ## Sonuçlar
 - Döngü başına ~10-15 sn kamp yürüyüşü eklendi; bot ölçümünde istek + iksir oyunu ~%10 hızlandırıyor (45 koşu / 60 dk'ya karşı 51 / 65), ikisi kabaca birbirini götürüyor.
-- Yeni sürüm yerelde; yayına alınması Yusuf'un kararı.
+- Yusuf'un isteğiyle inceleme bittikten sonra yayına alındı (2026-10-02 16:34, commit `5efa47b`).
+
+## İnceleme sonrası eklenen kurallar
+Kampın yürünebilir olması iki yeni hata sınıfı getirdi; ikisi de incelemeyle bulundu ve kurala bağlandı:
+- **Kapıdan çıkış geri alınamaz**, bu yüzden hiçbir şey bekçiyi yanlışlıkla çıkaramaz: imleç ancak kampın içine girdikten sonra izlenir, örtü açıkken bekçi durur ([[2026-10-02-duran-imlec-geri-alinamayan-esigi-gecirmemeli]]).
+- **Tıklayıp gitme düz çizgide yürümez**: engellerin etrafından dolaşır, kapıya kapı ağzından gider; yerleşim değişince `campSweep()` taraması çalıştırılır ([[2026-10-02-tikla-git-yuruyusu-koselerde-takilir-tum-alani-tara]]).
+- İstekler oyuncunun olağan bir seferine göre boyutlanır (boss ödülü ve iksirli seferler hariç) ve 4 seferdir ilerlemeyen istek değişir; aksi hâlde oyun bitince pano ulaşılamaz isteklerle doluyordu.
 
 ## İlgili
 - [[10-Projects/isik-bekcisi/_overview|Işık Bekçisi]], [[2026-10-02-isik-bekcisi-tasarim-kararlari]]

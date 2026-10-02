@@ -22,7 +22,9 @@ Tek oturumda iki oyun çıktı: [[10-Projects/bal-vadisi/_overview|Bal Vadisi]] 
 8. **13:48 İkinci yayın:** Yusuf arkadaşlarıyla denemek için istedi. https://diskort.ziroo.net/games/isik-bekcisi canlı, oyun listesine kart eklendi.
 9. **13:59 İlk oynama geri bildirimi (Yusuf):** kamp gezilen bir üs olsun ve beceri ağacı bile bir etkileşimle açılsın; arayüz diğer oyuna çok benziyor; yıldız bilgisi en sağda değil imlecin yanında açılsın.
 10. **14:00–14:36 Yeniden düzenleme (commit `84cda67`, 19 dosya, +2196 / −614):** yürünebilir kamp, dört sakin (Ülker, Kandil, Puhu, Vırak), istek panosu, iksir kazanı, seyir defteri, 43 ikonluk kendi seti, "gece atlası" arayüzü, yıldızın yanında açılan bilgi kutusu. Gerçek fare/klavye/dokunma olaylarıyla uçtan uca denendi.
-11. **14:37 İkinci inceleme ajanı** bu değişikliği taramaya başladı. Yusuf: "inceleme bitince sunucuya yükle".
+11. **14:37–15:25 İkinci inceleme ajanı** (gerçek modülleri Node'da sahte DOM ile çalıştırarak): kritik/yüksek yok, 2 orta + 11 düşük bulgu. Orta olanlar: duran imlecin bekçiyi kapıdan çıkarıp koşu başlatması; dokunmatikte kapıya yandan dokununca bekçinin köşede takılması. Bu arada Yusuf: "inceleme bitince sunucuya yükle" ve "yaptıklarımızı vault'a geçir".
+12. **15:25–16:33 Düzeltmeler (commit `5efa47b`, 13 dosya, +442 / −117):** imleç artık kampın içine bir kez girmeden ve sayfa dışındayken izlenmiyor; örtü açıkken bekçi gerçekten duruyor; tıklayıp gitme engellerin etrafından dolaşıyor ve kapıya kapı ağzından gidiyor; dokunma hedefleri, bitiş ekranı koruması, isteklerin boyutu ve yenilenmesi, eski kayıtla dönen oyuncu için ipucu ve boyutlandırma. Kendi taramam (kampın ~500 noktasından her hedefe) üç takılma daha buldu; ayrı bir doğrulayıcı ajan (sonnet) gerileme bulmadı, iki nadir durum daha gösterdi; hepsi düzeltildi.
+13. **16:34 Üçüncü yayın:** yeni sürüm canlıda. Yüklenen dosyalar yereldekiyle birebir karşılaştırıldı, canlı adreste oyun gerçek olaylarla baştan sona denendi.
 
 ## Alınan kararlar
 - [[2026-10-02-ari-cayir-konsepti]] (Bal Vadisi)
@@ -37,10 +39,17 @@ Tek oturumda iki oyun çıktı: [[10-Projects/bal-vadisi/_overview|Bal Vadisi]] 
 - [[2026-10-02-carpimsal-gelistirmeler-geliri-patlatir]]
 - [[2026-10-02-bot-ve-test-araclari-girdi-yolunu-atladi]]
 - [[2026-10-02-kamera-kayarken-imlecin-dunya-konumu-da-kayar]]
+- [[2026-10-02-duran-imlec-geri-alinamayan-esigi-gecirmemeli]]
+- [[2026-10-02-tikla-git-yuruyusu-koselerde-takilir-tum-alani-tara]]
+
+## Orkestrasyon notu
+- Oyunların çekirdeği tek elden (koordinatör) yazıldı; ajanlar yalnızca bağımsız inceleme ve doğrulama için kullanıldı: 2 inceleme (Opus) + 1 doğrulama (Sonnet), üçü de salt-okunur.
+- İnceleme ajanlarına kodu çalıştırma izni vermek belirleyici oldu: ikinci turdaki iki orta bulgu da okuyarak değil, çalıştırarak (oran ve koordinatla) bulundu.
+- Orta bulgular için şüpheci ajan çalıştırılmadı; koordinatör her birini tarayıcıda gerçek olaylarla yeniden üretti. Düzeltme farkı ise ayrı bir doğrulayıcıdan geçti.
 
 ## Açık kalanlar
-- İkinci incelemenin bulguları, düzeltmeleri ve yeni sürümün yayını: sonuç [[10-Projects/isik-bekcisi/_overview|proje durumunda]].
 - Oynanış hissi ve ses hiç canlı izlenmedi (önizleme paneli animasyonu kısıyor). İlk gerçek test Yusuf ve arkadaşları.
-- İnsan temposu bilinmiyor; denge yalnızca bota dayanıyor (~45 koşu / ~60 dk). Beklenen geri bildirim: tempo, hareket, zorluk, ağacın anlaşılırlığı, ses, süre.
+- İnsan temposu bilinmiyor; denge yalnızca bota dayanıyor (~44 koşu / ~58 dk). Beklenen geri bildirim: tempo, hareket, zorluk, ağacın anlaşılırlığı, ses, süre; ayrıca yeni kamp, istekler ve iksirler.
+- Gerçek bir farenin sayfadan çıkışı (tarayıcı sekmelerine doğru) elle denenmedi; olay sahte olarak üretildi. Davranış beklendiği gibi değilse bekçi yine de kapıdan ancak imleç yolun üzerinde durursa çıkar.
 - İki depo da yalnızca yerelde (remote yok).
 - Sunucuda `Cache-Control` yok: yeni sürüm yüklendikten sonra son birkaç dakikada oynamış biri sayfayı yenileyene kadar eski sürümü görebilir.
