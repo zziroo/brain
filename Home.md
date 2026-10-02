@@ -9,6 +9,7 @@ Buradan başla. Her şey buradan ya da bir projenin `_overview.md` dosyasından 
 
 ## Projeler
 - [[10-Projects/diskort/_overview|Diskort]]: sesli sohbet uygulaması (Windows-first, kendi sunucusu)
+- [[10-Projects/kul-tahti/_overview|Kül Tahtı]]: tarayıcıda souls-like 3D boss savaşı demosu (Three.js, derleme yok)
 - [[10-Projects/trencheck/_overview|Trencheck]]
 - [[10-Projects/voice-detector/_overview|Voice Detector]]
 
