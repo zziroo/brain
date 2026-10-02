@@ -47,7 +47,7 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 | Oynanış hissi, ses | canlı izlenemedi (önizleme paneli rAF'i kısıyor). Yusuf ilk sürümü oynadı ve üç geri bildirim verdi; arkadaşlarıyla deneyip devamını aktaracak |
 | İnceleme kapısı | 1. tur (ilk sürüm): 1 kritik, 3 orta, 11 düşük bulgu; hepsi düzeltildi (`6fd8b65`). 2. tur (kamp/arayüz): kritik/yüksek yok, 2 orta + 11 düşük; hepsi düzeltildi. Düzeltmeler ayrı bir doğrulayıcı ajandan (sonnet) geçti: gerileme yok, 2 nadir düşük bulgu daha, onlar da düzeltildi (`5efa47b`). Orta bulgular için şüpheci ajan yerine koordinatör bulguları tarayıcıda yeniden üretti |
 | Odak ışını, atılım, yeni fener ve yağ dengesi | commit `6ec661a`; **canlıda** (2026-10-02 akşamı yüklendi, canlı sürüm `ac9d0c9`; dosyalar yerelle birebir, canlıda sefer + ışın denendi). Bot ~43 sefer / ~50 dk. Gerçek girdiyle ışın, atılım ve telefonda iki parmak denendi; his ve ses denenmedi |
-| Git | yerel depo, 8 commit, remote yok |
+| Git | GitHub (özel): https://github.com/yusufholat/isik-bekcisi, dal `main`. 2026-10-02 akşamı oluşturuldu |
 
 ## Sıradaki işler
 0. Yayınlandı. Işın / atılım / fener olayı hakkında geri bildirim al (ışın çok mu güçlü, fenerin son kısmı kısa mı, seferler 35–45 sn iyi mi).
