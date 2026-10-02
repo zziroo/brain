@@ -20,6 +20,7 @@ Yusuf'un çevirmen arkadaşı için. Oyun stüdyoları İngilizce dil dosyaları
 - `src/core` saf TS çekirdek (format işleyiciler, Excel, QA, prefill), `src/main` (dosya sistemi/IPC, yol ve uzantı denetimi), `src/renderer` (Türkçe arayüz).
 - Formatlar: JSON, YAML, XML (Android/resx/XLIFF/genel), PO, properties/ini, Apple .strings, CSV/TSV, txt.
 - Paket: `npm run dist` → `release/` altında portable `.exe` ve kurulum (imzasız, SmartScreen uyarısı verir).
+- Yayın: https://diskort.ziroo.net/tools/ceviri-araci (indirme sayfası + iki .exe). `bash deploy/deploy.sh` (önce `npm run dist`) Diskort sunucusunda `/opt/diskort/apps/web/tools/` altına statik kopyalar; Caddy değişmez. Yöntem: [[2026-10-02-oyunlar-diskort-alan-adinda-games-altinda]].
 
 ## Kararlar
 - [[2026-10-02-span-tabanli-yazma]]
@@ -29,7 +30,7 @@ Yusuf'un çevirmen arkadaşı için. Oyun stüdyoları İngilizce dil dosyaları
 - [[excel-satir-eslestirme-gizli-id-tek-basina-yetmez]]
 
 ## Güncel durum (2026-10-02)
-v0.1.0 çalışıyor; 282 test geçiyor; iki inceleme turu yapıldı, yüksek bulgu kalmadı. Arkadaşa henüz verilmedi.
+v0.1.0 çalışıyor; 282 test geçiyor; iki inceleme turu yapıldı, yüksek bulgu kalmadı. 2026-10-02 sunucuya yüklendi, link hazır.
 
 ## Sıradaki işler
 - Arkadaşın gerçek dosyalarıyla denemesi ve geri bildirimi.
