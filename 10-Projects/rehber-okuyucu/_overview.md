@@ -22,8 +22,8 @@ Steam'in rehber görüntüleyicisi tek uzun sayfa; okurken sürekli aşağı yuk
 - Arayüzde `innerHTML` yok, inline script/style yok (tools kökeni Ziroobank ile ortak): [[2026-10-03-joker-dns-ve-tools-games-alt-alan-adlari]].
 - Elle müdahale CLI: `node src/cli.js list|show|claim|submit|fail|requeue|delete|stats|add|import-html`.
 
-## Yayın (henüz yapılmadı)
-Hedef https://tools.ziroo.net/rehber → konteyner `rehber` (127.0.0.1:8095, deneme 8096, `/opt/rehber`, veri `/opt/rehber/data`, env `/etc/rehber.env`), Caddy parçası `deploy/rehber.caddy` → `/opt/ziroo-sites/tools/rehber.caddy`. Betik `deploy/deploy.sh` (hiç çalıştırılmadı). Sunucu: [[sunucu-vps]].
+## Yayın (2026-10-04'ten beri)
+https://tools.ziroo.net/rehber → konteyner `rehber` (127.0.0.1:8095, deneme 8096, `/opt/rehber`, veri `/opt/rehber/data`, env `/etc/rehber.env`), Caddy parçası `deploy/rehber.caddy` → `/opt/ziroo-sites/tools/rehber.caddy`. Betik `deploy/deploy.sh` (2026-10-04'te ilk kez çalıştı, sorunsuz; env dosyası `docker run` anında okunur, değiştirince betiği yeniden çalıştır). Araç listesi kartı ziroo-edge `c7782d9` (push edilmedi). Sunucu: [[sunucu-vps]].
 
 ## Kararlar
 - [[2026-10-04-ai-motoru-sunucu-icinde-claude-cli]]
@@ -37,6 +37,6 @@ Hedef https://tools.ziroo.net/rehber → konteyner `rehber` (127.0.0.1:8095, den
 Commit `cbf9a61`, yerelde çalışıyor (`.claude/launch.json`, `.env` gitignore'da). Yerelde üç Hollow Knight rehberi gerçek motorla üretildi (sonnet; 65 bölüm: ~95 sn, 11,5k giriş / 14,7k çıkış token). İnceleme kapısı: 4 tur, bulunan yüksek/orta bulguların hepsi düzeltildi.
 
 ## Sıradaki işler
-- **Yayın Yusuf'un onayını bekliyor.** Öncesinde Yusuf `/etc/rehber.env` içine `OWNER_PASSWORD`, `CLAUDE_CODE_OAUTH_TOKEN` (`claude setup-token`), `ENGINE=claude`, isteğe bağlı `STEAM_API_KEY` yazacak. Sonra araç listesine kart (ziroo-edge `www/tools/index.html`).
-- Doğrulanmadı: Docker imajı ve `deploy.sh`; konteynerde token ile kimlik; `--cap-drop ALL --pids-limit 256` altında CLI; gerçek Steam anahtarıyla resmi başarım listesi; Steam'den canlı çekme (yalnız fixture ile denendi); çok büyük rehberde çıktı sınırı.
-- Karar bekleyen: Steam anahtarı steam-avgr ile ortak mı olsun.
+- **Motor token bekliyor:** `/etc/rehber.env` içinde `ENGINE`, `REHBER_MODEL`, `OWNER_PASSWORD` (sunucuda üretildi), `STEAM_API_KEY` (steam-avgr'den kopyalandı) var; `CLAUDE_CODE_OAUTH_TOKEN` yok. Yusuf `claude setup-token` çıktısını ekleyecek, sonra `deploy.sh` yeniden çalışacak ve konteynerde ilk gerçek üretim denenecek.
+- Canlıda doğrulandı (2026-10-04): imaj, sağlık, Caddy yolu, edge smoke testi, Steam'den canlı çekme, resmi başarım listesi (Hollow Knight 63).
+- Doğrulanmadı: konteynerde token ile kimlik ve `--cap-drop ALL --pids-limit 256` altında CLI; çok büyük rehberde çıktı sınırı.
