@@ -4,7 +4,7 @@ project: kapis
 date: 2026-10-03
 status: active
 tags: [kapis, overview, oyun, three-js]
-source: oturum 2026-10-03 (web-fps-game, KAPIŞ ilk inşa); repo docs/ dosyaları
+source: oturum 2026-10-03 (web-fps-game, KAPIŞ ilk inşa; kill cam); repo docs/ dosyaları
 ---
 
 # KAPIŞ: tarayıcıda Overwatch tarzı hero-shooter (arkadaş grubu için)
@@ -24,7 +24,8 @@ Yusuf'un arkadaş grubu için tarayıcıda oynanan hero-shooter. Repo `C:\Users\
 - Dev sayfaları: `/gallery.html` (kahraman/efekt galerisi), `/audio-demo.html`, `/ui/demo.html`. Debug: `?debug=1&autojoin=new&name=X&hero=volt&bots=6`, `window.__kapis`.
 
 ## Güncel durum (2026-10-03; canlıdan doğrula)
-**Yayında:** https://kapis.ziroo.net (VPS, konteyner `kapis` 127.0.0.1:8085, ziroo-edge Caddy `hosts/kapis.caddy`; [[2026-10-03-yayin-paylasilan-vps-kapis-ziroo-net]]). Repo GitHub'da özel: `yusufholat/web-fps-game`; main'e gelen her commit push'lanır. Son yayın `2597d9b`, 486 test yeşil. Deploy: repo kökünde `bash deploy/deploy.sh` (HEAD'i gönderir).
+**Yayında:** https://kapis.ziroo.net (VPS, konteyner `kapis` 127.0.0.1:8085, ziroo-edge Caddy `hosts/kapis.caddy`; [[2026-10-03-yayin-paylasilan-vps-kapis-ziroo-net]]). Repo GitHub'da özel: `yusufholat/web-fps-game`; main'e gelen her commit push'lanır. Son yayın `a6eaba2`, 521 test yeşil. Deploy: repo kökünde `bash deploy/deploy.sh` (HEAD'i gönderir).
+- **Kill cam**: ölümden önceki son 3,4 sn öldürenin gözünden oynar, Space ile geçilir, ayardan kapatılır; yalnızca istemci tarafı. Respawn 3 → 4 sn ([[2026-10-03-kill-cam-istemci-tarafi-tekrar]]).
 - **Denge paneli** (Esc → Denge): sunucu geneli, PIN korumalı, 252 ayar, kalıcı ([[2026-10-03-denge-paneli-sunucu-geneli-pin]]). PIN sunucuda `/opt/kapis/.env` (600); veri `/opt/kapis/data`.
 - Arkadaşlarla ilk deneme yapıldı: Chrome'da sorunsuz; Opera'da WASD takılıyor (çözülmedi, `docs/POLISH.md`).
 
@@ -33,9 +34,10 @@ Doğrulanmayanlar:
 - Gerçek iGPU fps'i ölçülmedi.
 - Denge paneli gerçek oyuncularla canlıda denenmedi (yalnız iki sekmeyle yerelde doğrulandı).
 - Opera klavye sorununun nedeni bilinmiyor.
+- Kill cam canlıda ve gerçek oyuncuyla denenmedi (yalnız yerelde botlarla); 4 sn respawn'ın tempo etkisi görülmedi.
 
 ### Sıradaki işler
-1. Arkadaşlardan his/denge/ses geri bildirimi → `docs/POLISH.md` cila turu (dipten ateşte beyaz top, patlama/duman görünümü, Şahin barrage kendine hasar, kill cam'de kendi gövdesi).
+1. Arkadaşlardan his/denge/ses geri bildirimi → `docs/POLISH.md` cila turu (dipten ateşte beyaz top, patlama/duman görünümü, Şahin barrage kendine hasar, dönen ölüm kamerasında kendi gövdesi, kill cam eksikleri: kahramana özel silah tepkisi, tekrara karışan canlı roket sesi/hasar sayıları).
 2. Opera klavye sorununu incele ya da giriş ekranına tarayıcı uyarısı koy.
 3. İleride oyun modları eklenirse mod bazlı denge (ön ayar → mod eşlemesi).
 
@@ -45,12 +47,13 @@ Doğrulanmayanlar:
 - [[2026-10-03-yayin-paylasilan-vps-kapis-ziroo-net]]
 - [[2026-10-03-simulasyon-ve-guvenlik-kararlari]]
 - [[2026-10-03-denge-paneli-sunucu-geneli-pin]]
+- [[2026-10-03-kill-cam-istemci-tarafi-tekrar]]
 
 ## Dersler
 [[2026-10-03-kapis-dev-ortami-tuzaklari]] · [[2026-10-03-kullanim-limiti-ve-ajan-dalgasi-boyutu]] · [[2026-10-03-inceleme-ve-test-dersleri]]
 
 ## Oturumlar
-[[2026-10-03-kapis-ilk-insa]] · [[2026-10-03-kapis-yayin-ve-denge-paneli]]
+[[2026-10-03-kapis-ilk-insa]] · [[2026-10-03-kapis-yayin-ve-denge-paneli]] · [[2026-10-03-kapis-kill-cam]]
 
 ## İlgili
 Çalışma kuralları: [[orkestrasyon]], [[karar-dagilimi]]. Aynı VPS ve Caddy: [[diskort/_overview|Diskort]].
