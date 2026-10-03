@@ -4,7 +4,7 @@ project: steam-avgr
 date: 2026-10-03
 status: active
 tags: [steam-avgr, overview, steam]
-source: oturum 2026-10-02 (steam-avgr-calculator)
+source: oturumlar 2026-10-02/03 (steam-avgr-calculator)
 ---
 
 # Steam AGCR Paneli: Steam'deki ortalama oyun tamamlama oranının nereden geldiğini gösteren herkese açık web paneli
@@ -12,25 +12,35 @@ source: oturum 2026-10-02 (steam-avgr-calculator)
 > Not canlı gerçek değildir: sunucu ve konteyner durumunu işlem yapmadan önce doğrula.
 
 ## Nedir
-Yusuf'un eski Google Sheets + Apps Script hesaplayıcısının (`script.py`, yavaş, oyunları tek tek çekiyordu) yerine geçen panel. Herkes SteamID / vanity / profil linki girip kullanabilir. Steam profilindeki AGCR ile hesaplananı karşılaştırır, oyun başına katkı, "şunu bitirirsem" hesabı, en ucuz bitirilecek oyunlar, elle eksik oyun ekleme ve oyun hariç tutma (localStorage) sunar.
+Yusuf'un eski Google Sheets + Apps Script hesaplayıcısının yerine geçen panel. Herkes SteamID / vanity / profil linki girip kullanabilir. Steam profilindeki AGCR ile hesaplananı karşılaştırır (herkese açık ve "tümü" görünümü), en çok düşüren oyunlar, "şunu bitirirsem" hesabı, en ucuz hedefler (kalan başarım ya da tahmini süreye göre), AppID ile oyun ekleme, elle oyun ekleme, oyun hariç tutma (localStorage). Tasarım ziroobank tarzında.
 
 ## Teknoloji
-- Kaynak `C:\Users\yusuf\ZZ\zProjects\steam-avgr-calculator\app` (git yok). Node 22, bağımlılık yok (`server.js` + `public/`), Dockerfile.
-- Hız: `IPlayerService/GetTopAchievementsForGames` ile 20 oyun/istek, paralel; ~2,5 sn soğuk. Sonuç 10 dk önbellek.
-- Sınırlar: IP başına 20 istek/dk, aynı anda 4 hesaplama, 15000 oyun üstü red, önbellek 200 kayıt.
-- Yayın: https://diskort.ziroo.net/tools/steam → konteyner `steam-avgr` (127.0.0.1:8090), Caddy yolu `/opt/ziroo-sites/steam.caddy` ([[2026-10-02-caddy-ortak-site-klasoru]]). Key sunucuda `/etc/steam-avgr.env`. Ayrıntı: [[sunucu-vps]].
+- Kaynak `C:\Users\yusuf\ZZ\zProjects\steam-avgr-calculator\app`, GitHub `yusufholat/steam-avgr-calculator` (private, main). Node 22, bağımlılık yok, Dockerfile. README endpoint ve env'leri anlatır.
+- Hız: `IPlayerService/GetTopAchievementsForGames` 20 oyun/istek, paralel. Sahip profili ~4-6 sn soğuk, önbellek 10 dk.
+- Gizli oyun tespiti: `GetPlayerAchievements` "Profile is not public" → gizli. Key'i harcadığı için yalnız `OWNER_STEAMID` hesabında çalışır.
+- Süreler: Steamhunters `api/apps/<id>` (medyan) ve `/achievements` (oranlar); kalan süre = medyan × Σ(-ln p, kilitli) / Σ(-ln p, tümü), alınamazlar hariç. Sunucuda 7 gün önbellek, eşzamanlılık 4.
+- Yayın: https://diskort.ziroo.net/tools/steam → konteyner `steam-avgr` (127.0.0.1:8090), Caddy yolu `/opt/ziroo-sites/steam.caddy`. Env `/etc/steam-avgr.env` (STEAM_API_KEY, OWNER_STEAMID). Güncelleme: kaynağı `/opt/steam-avgr`'a kopyala, `docker build -t steam-avgr .`, konteyneri aynı parametrelerle yeniden çalıştır (`--read-only --memory 256m -p 127.0.0.1:8090:8080`). Ayrıntı: [[sunucu-vps]].
 
 ## Kararlar
 - [[2026-10-02-caddy-ortak-site-klasoru]]
 - Eski script'teki oyun gizleme (access token ile) taşınmadı.
+- Kullanıcıdan token / Web API key istenmez (hesap çalma dolandırıcılığına benzer). "Steam ile giriş" (OpenID) yalnız kimlik verir, gizli ya da aile oyunlarını açmaz.
+- HLTB yerine Steamhunters (resmi olmayan ama açık JSON API; HLTB'nin API'si yok).
+
+## Bilinenler (Steam davranışı)
+- API key sahibinin gizli oyunları `GetOwnedGames`'te görünür (Knockout City); bazı gizli oyunlar hiç gelmez (MultiVersus 1818750), `GetTopAchievementsForGames` ise verir.
+- Steam kısıtlı/"unvetted" uygulamaları (Bloody Hell, KANNAGI USAGI) sahip görünümünde de saymaz; panel varsayılan hariç tutar.
+- Profildeki AGCR aşağı yuvarlanır (floor), sayısal olarak doğrulandı.
+- Aile Paylaşımı oyunları `GetOwnedGames`'te yok; `IFamilyGroupsService` Web API key'i kabul etmez (401), yalnız kullanıcı token'ı ile çalışır.
 
 ## Oturumlar
 - [[2026-10-02-steam-agcr-paneli-yayinda]]
 
 ## Güncel durum (2026-10-03)
-Yayında. Yusuf'un hesabı: Steam 192 oyun / 133 tam / 6761 başarım / %86; panel 196 / 134 / 6825 / %86,13. 2 fark "unvetted" oyun (Bloody Hell, KANNAGI USAGI), kalan 2 oyun ve 64 başarım açıklanmadı. Eski script'te elle eklenen oyunlar (Awaria, RISK...) `include_played_free_games=1` ile API'den geliyor.
+Yayında, commit `e7b9fa4`. Yusuf'un hesabı (kısıtlılar hariç, MultiVersus eklenmiş): panel tümü 195 / 132 / 6819 / %85,66, herkese açık %86,43; Steam sahip görünümü 197 / 133 / 6855 / %85, herkese açık 192 / 133 / 6761 / %86. Kalan 2 oyun büyük olasılıkla aile oyunları (biri 2/2, biri 34 açık ve bitmemiş); Yusuf kendisi ekleyecek.
 
 ## Sıradaki işler
-- Doğrulanmadı: başka hesaplar, gizli profil, vitrini olmayan profil; hariç tut / ekle / what-if butonları tarayıcıda tıklanmadı; 503 ve 15000 sınırı, SSE kopma ve ping denenmedi; `GetTopAchievementsForGames` yalnız bir oyunda `GetPlayerAchievements` ile karşılaştırıldı.
-- Yusuf karar verdi: eski API key kullanılmaya devam. Öneri duruyor: `script.py`'deki access token/sessionid'yi Steam'den çıkış yaparak geçersiz kılmak.
-- Caddy'yi ayrı edge projesine taşımak (ertelendi, ayrı iş).
+- **Aile oyunları (ertelendi, Yusuf "şimdilik kalsın"):** SteamDB tarzı, büyük olasılıkla eklentiyle. Öneri: Steam mağaza sayfasında çalışan bookmarklet/userscript, sayfanın kendi token'ıyla aile kütüphanesini okur, panele yalnız AppID listesi gönderir. Önce Yusuf'un Chrome'unda izinle fizibilite denemesi.
+- Alternatif (önerildi, karar yok): aile üyelerinin SteamID'lerinden herkese açık kütüphaneleri tarayıp başarımlı oyunları bulmak; "Steam ile giriş" ile ayarları sunucuda saklamak.
+- Doğrulanmadı: başka kullanıcıların gizli oyunlarının görünmediği; başka hesaplar uçtan uca; istemcinin 429 sonrası tekrar denemesi; 503/15000 sınırları; Steamhunters'ta medyanı boş gelen oyunlar (Terraria, Voidigo, Wallpaper Engine) veri yokluğu mu hata mı.
+- Eski API key kullanılmaya devam (Yusuf kararı). Öneri: eski script'teki access token/sessionid'yi Steam'den çıkış yaparak geçersiz kılmak.
