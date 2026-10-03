@@ -15,7 +15,7 @@ source: oturum 2026-10-03/04 (achievement-guide-formatter)
 Steam'in rehber görüntüleyicisi tek uzun sayfa; okurken sürekli aşağı yukarı gidiliyor. Araç bir Steam rehber linkini alır, sayfayı çekip blok modeline ayrıştırır ve okutur: sabit içindekiler, rehber içi arama, bölüm / liste maddesi / tablo satırı işaretleme, kaldığın yerden devam, görsel ızgarası. "AI düzenlemesi" sekmesi rehberi başarım bazlı kartlara çevirir: özet, uyarılar, yol haritası, etiketli kartlar, tek tek işaretlenen kontrol listeleri (toplanabilirler), rehberdeki sorunlar. Resmi başarım listesi varsa her başarıma kart açılır (rehber anlatmıyorsa boş gövdeli).
 
 ## Teknoloji
-- Kaynak `C:\Users\yusuf\ZZ\zProjects\achievement-guide-formatter` (yerel git, remote yok, main). Node 24, bağımlılık yok, `node:sqlite`, ESM. Düzen: `src/`, `public/`, `test/` (79 test), `deploy/`, sözleşme `docs/SPEC.md`.
+- Kaynak `C:\Users\yusuf\ZZ\zProjects\achievement-guide-formatter` (yerel git, remote yok, main). Node 24, bağımlılık yok, `node:sqlite`, ESM. Düzen: `src/`, `public/`, `test/` (93 test), `deploy/`, sözleşme `docs/SPEC.md`.
 - HTML ayrıştırıcı elle yazıldı (`src/html.js`, `src/parse.js`); düğüm bütçesi 200k, derinlik 150, sayfa 3 MB.
 - AI motoru: sunucu içinden `claude -p` başsız kip, araçsız, sahibin Max aboneliği (`CLAUDE_CODE_OAUTH_TOKEN`). Model talimatı `src/ai-prompt.md`. Neden: [[2026-10-04-ai-motoru-sunucu-icinde-claude-cli]].
 - Sahip girişi (`OWNER_PASSWORD`, en az 12 karakter): AI üretimini yalnız sahip başlatır; ziyaretçi rehber ekler ve okur.
@@ -32,11 +32,19 @@ https://tools.ziroo.net/rehber → konteyner `rehber` (127.0.0.1:8095, deneme 80
 ## Dersler
 - [[elle-yazilan-ayristirici-karesel-regex]]
 - [[steam-rehber-sayfasi-hiz-siniri]]
+- [[buyuk-rehberde-model-kisaltiyor]]
+
+## Oturumlar
+- [[2026-10-04-ilk-surum-ve-yayin]]
 
 ## Güncel durum (2026-10-04)
-Commit `cbf9a61`, yerelde çalışıyor (`.claude/launch.json`, `.env` gitignore'da). Yerelde üç Hollow Knight rehberi gerçek motorla üretildi (sonnet; 65 bölüm: ~95 sn, 11,5k giriş / 14,7k çıkış token). İnceleme kapısı: 4 tur, bulunan yüksek/orta bulguların hepsi düzeltildi.
+Yayında, commit `35b4cde`. Motor modeli `opus` (`/etc/rehber.env` içinde `REHBER_MODEL`; değişince `deploy.sh` yeniden çalışır). Sahibe özel kullanım sayfası `usage.html` (üretim başına model, token, süre, sonuç; kayıt 2026-10-04'ten itibaren). Canlıda iki rehber var: Mr Mushroom (hazır, Sonnet) ve Witcher 3 (hazır ama 10 kartlık kısaltılmış Sonnet belgesi).
 
 ## Sıradaki işler
-- **Motor token bekliyor:** `/etc/rehber.env` içinde `ENGINE`, `REHBER_MODEL`, `OWNER_PASSWORD` (sunucuda üretildi), `STEAM_API_KEY` (steam-avgr'den kopyalandı) var; `CLAUDE_CODE_OAUTH_TOKEN` yok. Yusuf `claude setup-token` çıktısını ekleyecek, sonra `deploy.sh` yeniden çalışacak ve konteynerde ilk gerçek üretim denenecek.
-- Canlıda doğrulandı (2026-10-04): imaj, sağlık, Caddy yolu, edge smoke testi, Steam'den canlı çekme, resmi başarım listesi (Hollow Knight 63).
-- Doğrulanmadı: konteynerde token ile kimlik ve `--cap-drop ALL --pids-limit 256` altında CLI; çok büyük rehberde çıktı sınırı.
+- **Witcher 3 rehberini Opus ile yeniden üretmek (Yusuf deneyecek).** Kısaltır ya da çıktı sınırına takılırsa büyük rehberler için parçalı üretim.
+- **Token yenileme:** `CLAUDE_CODE_OAUTH_TOKEN` bir ekran görüntüsüyle sohbete düştü; Yusuf'a yenilemesi önerildi, yapıldığı doğrulanmadı.
+- Karar bekleyen: tek başarımlık rehberde 62 boş kart çıkıyor; "rehber başarımların çoğunu anlatıyorsa tam liste, yoksa yalnız anlattıkları" kuralı önerildi, yanıt yok.
+- Ayrı incelemeden geçmeyen değişiklikler: bilinmeyen alanların atılması, tamlık kuralı, son turdaki regex ve giriş sırası düzeltmeleri.
+- Doğrulanmadı: Opus'un büyük rehberde davranışı; kullanım sayfasının canlıda gerçek veriyle görünümü; yoklamada artan bekleme, 30 dakikada vazgeçme, depolama dolu uyarısı.
+- ziroo-edge `c7782d9` push edilmedi; bu deponun remote'u yok.
+- Canlıda doğrulandı: imaj, sağlık, Caddy yolu, edge smoke testi, Steam'den canlı çekme, resmi başarım listesi, konteynerde token ile üretim (sıkılaştırılmış ayarlarla), şema v4 geçişi.
