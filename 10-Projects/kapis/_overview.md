@@ -24,30 +24,33 @@ Yusuf'un arkadaş grubu için tarayıcıda oynanan hero-shooter. Repo `C:\Users\
 - Dev sayfaları: `/gallery.html` (kahraman/efekt galerisi), `/audio-demo.html`, `/ui/demo.html`. Debug: `?debug=1&autojoin=new&name=X&hero=volt&bots=6`, `window.__kapis`.
 
 ## Güncel durum (2026-10-03; canlıdan doğrula)
-459 test yeşil, yerelde oynanabilir. **Henüz yayınlanmadı.** Yayın planı: [[2026-10-03-yayin-paylasilan-vps-kapis-ziroo-net]] (Caddy hazır: ziroo-edge `hosts/`). Doğrulanmayanlar:
-- Ses motoru hiç dinlenmedi.
-- Gerçek fare / pointer lock hissi denenmedi.
+**Yayında:** https://kapis.ziroo.net (VPS, konteyner `kapis` 127.0.0.1:8085, ziroo-edge Caddy `hosts/kapis.caddy`; [[2026-10-03-yayin-paylasilan-vps-kapis-ziroo-net]]). Repo GitHub'da özel: `yusufholat/web-fps-game`; main'e gelen her commit push'lanır. Son yayın `2597d9b`, 486 test yeşil. Deploy: repo kökünde `bash deploy/deploy.sh` (HEAD'i gönderir).
+- **Denge paneli** (Esc → Denge): sunucu geneli, PIN korumalı, 252 ayar, kalıcı ([[2026-10-03-denge-paneli-sunucu-geneli-pin]]). PIN sunucuda `/opt/kapis/.env` (600); veri `/opt/kapis/data`.
+- Arkadaşlarla ilk deneme yapıldı: Chrome'da sorunsuz; Opera'da WASD takılıyor (çözülmedi, `docs/POLISH.md`).
+
+Doğrulanmayanlar:
+- Ses motoru Yusuf dışında kimse tarafından değerlendirilmedi (geri bildirim gelmedi).
 - Gerçek iGPU fps'i ölçülmedi.
-- Aynı odada birden fazla gerçek insan denenmedi.
-- (Caddy ve Docker build canlıda doğrulandı, 2026-10-03.)
+- Denge paneli gerçek oyuncularla canlıda denenmedi (yalnız iki sekmeyle yerelde doğrulandı).
+- Opera klavye sorununun nedeni bilinmiyor.
 
 ### Sıradaki işler
-1. Deploy (`deploy/deploy.sh`); Caddy tarafı hazır ([[2026-10-03-caddy-ziroo-edge-projesine-ayrildi]]).
-2. Arkadaşlarla test.
-3. `docs/POLISH.md` cila turu: dipten ateşte beyaz top, patlama/duman görünümü, Şahin barrage kendine hasar dengesi, kill cam'de kendi gövdesi.
-4. Sesi dinleme.
+1. Arkadaşlardan his/denge/ses geri bildirimi → `docs/POLISH.md` cila turu (dipten ateşte beyaz top, patlama/duman görünümü, Şahin barrage kendine hasar, kill cam'de kendi gövdesi).
+2. Opera klavye sorununu incele ya da giriş ekranına tarayıcı uyarısı koy.
+3. İleride oyun modları eklenirse mod bazlı denge (ön ayar → mod eşlemesi).
 
 ## Önemli kararlar
 - [[2026-10-03-paylasilan-sim-sunucu-otoritesi-hero-dilimi]]
 - [[2026-10-03-ajan-dalgalari-ve-inceleme-kapisi]]
 - [[2026-10-03-yayin-paylasilan-vps-kapis-ziroo-net]]
 - [[2026-10-03-simulasyon-ve-guvenlik-kararlari]]
+- [[2026-10-03-denge-paneli-sunucu-geneli-pin]]
 
 ## Dersler
 [[2026-10-03-kapis-dev-ortami-tuzaklari]] · [[2026-10-03-kullanim-limiti-ve-ajan-dalgasi-boyutu]] · [[2026-10-03-inceleme-ve-test-dersleri]]
 
 ## Oturumlar
-[[2026-10-03-kapis-ilk-insa]]
+[[2026-10-03-kapis-ilk-insa]] · [[2026-10-03-kapis-yayin-ve-denge-paneli]]
 
 ## İlgili
 Çalışma kuralları: [[orkestrasyon]], [[karar-dagilimi]]. Aynı VPS ve Caddy: [[diskort/_overview|Diskort]].
