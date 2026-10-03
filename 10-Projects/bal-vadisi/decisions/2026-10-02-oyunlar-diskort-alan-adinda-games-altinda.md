@@ -2,10 +2,12 @@
 type: decision
 project: bal-vadisi
 date: 2026-10-02
-status: active
+status: superseded
 tags: [bal-vadisi, diskort, yayin, sunucu, caddy]
 source: oturum 2026-10-02 (incremantal-game); C:\Users\yusuf\ZZ\zProjects\bal-vadisi\deploy\deploy.sh
 ---
+
+> **Güncel değil (2026-10-03):** adres ve sunucu yapısı için yerini [[2026-10-03-joker-dns-ve-tools-games-alt-alan-adlari]] aldı. Aşağısı o günkü bağlam olarak duruyor.
 
 # Oyunlar Diskort sunucusunda diskort.ziroo.net/games altında statik dosya olarak yayınlanır
 

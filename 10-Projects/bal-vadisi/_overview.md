@@ -25,8 +25,8 @@ Kovandan çıkan arılar çayırdaki çiçeklerden nektar toplar, bal geliştirm
 - Denge ölçümü: `tools/balance-sim.js` (`simulate({...})` kilometre taşı sürelerini verir).
 
 ## Yayın
-- **Canlı:** https://diskort.ziroo.net/games/bal-vadisi · oyun listesi: https://diskort.ziroo.net/games
-- Diskort sunucusunda statik dosya olarak duruyor; yayınlama: `bash deploy/deploy.sh` ([[2026-10-02-oyunlar-diskort-alan-adinda-games-altinda]], [[2026-10-02-caddy-try-files-klasor-adresini-cozmuyor]]).
+- **Canlı:** https://games.ziroo.net/bal-vadisi · oyun listesi: https://games.ziroo.net/ (2026-10-03'ten beri; eski adresler 301; oyun kayıtları yeni kökte sıfırdan başladı)
+- Sunucuda statik dosya olarak duruyor (`/opt/ziroo-www/games`); yayınlama: `bash deploy/deploy.sh`, liste kaynağı `deploy/hub/`; betiğin hedefinin yeni köke uyumu doğrulanmadı, yayından önce kontrol et. Karar: [[2026-10-03-joker-dns-ve-tools-games-alt-alan-adlari]] (eski: [[2026-10-02-oyunlar-diskort-alan-adinda-games-altinda]], [[2026-10-02-caddy-try-files-klasor-adresini-cozmuyor]]).
 
 ## Durum (2026-10-02)
 | Parça | Durum |
@@ -41,6 +41,7 @@ Kovandan çıkan arılar çayırdaki çiçeklerden nektar toplar, bal geliştirm
 | İnceleme kapısı | Yusuf'un isteğiyle atlandı (öncelik ürüne bakmak) |
 
 ## Kararlar
+- [[2026-10-03-joker-dns-ve-tools-games-alt-alan-adlari]]
 - [[2026-10-02-ari-cayir-konsepti]]
 - [[2026-10-02-oyunlar-diskort-alan-adinda-games-altinda]]
 

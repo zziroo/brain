@@ -29,6 +29,7 @@ Ses + ekran paylaşımı kalitesi; metin kanalları, tepkiler, dosyalar, roller,
 - **Ses kesintileri:** nedeni bulundu ve sunucu taşındı. 2026-10-01 akşam aramasında `outages.jsonl`'de kesinti yok, dış sondalar temiz; donmalar yayıncı kodlayıcısından (bit hızı sıçraması) ve tek kullanıcının hattından. Yoğun yayınla hâlâ tam kanıtlanmadı.
 - **Yeni sunucuda eksikler:** otomatik güvenlik güncellemeleri (unattended-upgrades imajda maskeli), SSH sertleştirme dosyası yeniden uygulanmadı. Trafik planı 1000 GB/ay, kullanım ~800 GB civarı. Eski sunucu durdurulmuş durumda, Yusuf silecek.
 - **Giriş kapısı:** 2026-10-03'ten beri Caddy ayrı `ziroo-edge` projesinde; Diskort siteleri `infra/caddy/diskort.caddy`, diğer projeler `/opt/ziroo-sites/*.caddy` ve `hosts/*.caddy`, değişiklik `bash /opt/ziroo-edge/reload.sh` ([[2026-10-03-caddy-ziroo-edge-projesine-ayrildi]]).
+- **Alt alan adları:** 2026-10-03'te Diskort dışı projeler `tools.ziroo.net` / `games.ziroo.net`'e taşındı, DNS joker `*.ziroo.net` ([[2026-10-03-joker-dns-ve-tools-games-alt-alan-adlari]]). Açık: eski kopyaların temizliği (runbook Faz D).
 - **SignPath:** başvurulmayacak ([[kod-imzalama-ertelendi]]).
 - **Not (izin sistemi):** otomatik mod sınıflandırıcısı, o oturumda Yusuf sohbette söylemedikçe ssh deploy ve release tag/push'u engelleyebilir. Sor, sonra push / ssh / tag / `gh release edit` komutlarını ayrı çağrılar olarak çalıştır.
 
@@ -53,7 +54,7 @@ Ses + ekran paylaşımı kalitesi; metin kanalları, tepkiler, dosyalar, roller,
 - Etkinlik: [[etkinlik-oyun-aktivitesi]]; DM: [[dm-sunucu-ayrimi]], [[dm-sesli-arama-ve-calma]], [[engelleme-dm-ve-arama]], [[dm-aramalari-yonetimde-ozel]]
 - Kayıt: [[kayit-sadece-hesap-davetiyesi]]; ekran paylaşımı: [[ekran-paylasimi-sabit-presetler]]
 - Kozmetik: [[kozmetik-sunucudan-paketler]], [[kozmetik-sadece-hover]]
-- Sunucu: [[sunucu-lightnode-istanbula-tasindi]]
+- Sunucu: [[sunucu-lightnode-istanbula-tasindi]], [[2026-10-03-joker-dns-ve-tools-games-alt-alan-adlari]]
 - Yayın sahnesi: [[yayin-arayuzu-discord-tarzi]], [[sahne-izgarada-coklu-yayin]]; yayın sesi: [[uygulamaya-ozel-yayin-sesi-ertelendi]]
 - Ses: [[model-calisirken-agc-kapali-ve-sinirlayici]], [[konusma-halkasi-duyulan-sesten]]
 - Release: [[surum-cikarma-kurali]], [[surum-1-0-ertelendi]]; imzalama: [[kod-imzalama-ertelendi]]
@@ -63,11 +64,12 @@ Ses + ekran paylaşımı kalitesi; metin kanalları, tepkiler, dosyalar, roller,
 [[sunucu-vps]] · [[deploy]] · [[surum-cikarma]] · [[geri-bildirim-inceleme]] · [[kozmetik-yayinlama]] · [[ios-cihaz-ekleme]] · [[yedekler]] · [[admin-paneli-ve-loglar]] · [[gelen-kutusu-ve-rutinler]] · [[yerel-ui-test-ortami]] · [[telefonla-erisim]]
 
 ## Dersler
-[[dev-ortami-tuzaklari]] · [[electron-cdp-testi]] · [[yerel-installer-testi-userdata]] · [[rn-android-border-nan]] · [[kozmetik-avif-tam-aralik]] · [[worktree-silme-windows]] · [[claude-altina-yazma-izin-sorar]] · [[secret-isleme-kurali]] · [[caddy-bind-mount-restart]] · [[dpdfnet-fallback-koku-neden]] · [[saglayici-udp-paket-siniri]] · [[sonar-yayin-sesine-kendi-sesini-katar]] · [[yerel-testte-ekran-paylasimi-gercek-pencere]] · [[server-testleri-tam-kosuda-kararsiz]]
+[[dev-ortami-tuzaklari]] · [[electron-cdp-testi]] · [[yerel-installer-testi-userdata]] · [[rn-android-border-nan]] · [[kozmetik-avif-tam-aralik]] · [[worktree-silme-windows]] · [[claude-altina-yazma-izin-sorar]] · [[secret-isleme-kurali]] · [[caddy-bind-mount-restart]] · [[dpdfnet-fallback-koku-neden]] · [[saglayici-udp-paket-siniri]] · [[sonar-yayin-sesine-kendi-sesini-katar]] · [[yerel-testte-ekran-paylasimi-gercek-pencere]] · [[server-testleri-tam-kosuda-kararsiz]] · [[caddy-redir-path-acik-yonlendirme]]
 
 ## Oturumlar ve ek kararlar/dersler
 - [[sessions/_index-dev-era]]: geliştirme dönemi (C:\dev, 2026-09-26..28)
 - [[sessions/_index-current-era]]: güncel dönem (ZZ\zProjects\diskort)
+- [[2026-10-03-tools-games-alt-alan-adi-gecisi]]: tools/games alt alan adları, joker DNS
 
 ## Çalışma kuralları (Claude)
 [[20-Areas/working-rules/_index|Çalışma kuralları]] (20-Areas): [[git-push-autonomy]], [[diskort-orchestrator-mode]], [[zamanlanmis-gorevler-ve-skiller]]

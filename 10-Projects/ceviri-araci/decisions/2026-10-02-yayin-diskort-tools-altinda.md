@@ -2,10 +2,12 @@
 type: decision
 project: ceviri-araci
 date: 2026-10-02
-status: active
+status: superseded
 tags: [ceviri-araci, yayin, sunucu]
 source: 2026-10-02 oturumu (string-tool), Yusuf "bizim servere yükler misin, linkle indirebilsin"
 ---
+
+> **Güncel değil (2026-10-03):** adres ve sunucu yapısı için yerini [[2026-10-03-joker-dns-ve-tools-games-alt-alan-adlari]] aldı. Aşağısı o günkü bağlam olarak duruyor.
 
 # Karar: Çeviri Aracı Diskort sunucusunda diskort.ziroo.net/tools/ceviri-araci altında statik dosya olarak yayınlanır
 

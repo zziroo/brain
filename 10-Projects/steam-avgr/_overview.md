@@ -19,9 +19,10 @@ Yusuf'un eski Google Sheets + Apps Script hesaplayıcısının yerine geçen pan
 - Hız: `IPlayerService/GetTopAchievementsForGames` 20 oyun/istek, paralel. Sahip profili ~4-6 sn soğuk, önbellek 10 dk.
 - Gizli oyun tespiti: `GetPlayerAchievements` "Profile is not public" → gizli. Key'i harcadığı için yalnız `OWNER_STEAMID` hesabında çalışır.
 - Süreler: Steamhunters `api/apps/<id>` (medyan) ve `/achievements` (oranlar); kalan süre = medyan × Σ(-ln p, kilitli) / Σ(-ln p, tümü), alınamazlar hariç. Sunucuda 7 gün önbellek, eşzamanlılık 4.
-- Yayın: https://diskort.ziroo.net/tools/steam → konteyner `steam-avgr` (127.0.0.1:8090), Caddy yolu `/opt/ziroo-sites/steam.caddy`. Env `/etc/steam-avgr.env` (STEAM_API_KEY, OWNER_STEAMID). Güncelleme: kaynağı `/opt/steam-avgr`'a kopyala, `docker build -t steam-avgr .`, konteyneri aynı parametrelerle yeniden çalıştır (`--read-only --memory 256m -p 127.0.0.1:8090:8080`). Ayrıntı: [[sunucu-vps]].
+- Yayın: https://tools.ziroo.net/steam-avgr (2026-10-03'ten beri; eski `diskort.ziroo.net/tools/steam` 301 ile yönlenir, [[2026-10-03-joker-dns-ve-tools-games-alt-alan-adlari]]) → konteyner `steam-avgr` (127.0.0.1:8090), Caddy yolu `/opt/ziroo-sites/tools/steam-avgr.caddy`. Env `/etc/steam-avgr.env` (STEAM_API_KEY, OWNER_STEAMID). Güncelleme: kaynağı `/opt/steam-avgr`'a kopyala, `docker build -t steam-avgr .`, konteyneri aynı parametrelerle yeniden çalıştır (`--read-only --memory 256m -p 127.0.0.1:8090:8080`). Ayrıntı: [[sunucu-vps]].
 
 ## Kararlar
+- [[2026-10-03-joker-dns-ve-tools-games-alt-alan-adlari]]
 - [[2026-10-02-caddy-ortak-site-klasoru]]
 - Eski script'teki oyun gizleme (access token ile) taşınmadı.
 - Kullanıcıdan token / Web API key istenmez (hesap çalma dolandırıcılığına benzer). "Steam ile giriş" (OpenID) yalnız kimlik verir, gizli ya da aile oyunlarını açmaz.
@@ -43,4 +44,5 @@ Yayında, commit `e7b9fa4`. Yusuf'un hesabı (kısıtlılar hariç, MultiVersus 
 - **Aile oyunları (ertelendi, Yusuf "şimdilik kalsın"):** SteamDB tarzı, büyük olasılıkla eklentiyle. Öneri: Steam mağaza sayfasında çalışan bookmarklet/userscript, sayfanın kendi token'ıyla aile kütüphanesini okur, panele yalnız AppID listesi gönderir. Önce Yusuf'un Chrome'unda izinle fizibilite denemesi.
 - Alternatif (önerildi, karar yok): aile üyelerinin SteamID'lerinden herkese açık kütüphaneleri tarayıp başarımlı oyunları bulmak; "Steam ile giriş" ile ayarları sunucuda saklamak.
 - Doğrulanmadı: başka kullanıcıların gizli oyunlarının görünmediği; başka hesaplar uçtan uca; istemcinin 429 sonrası tekrar denemesi; 503/15000 sınırları; Steamhunters'ta medyanı boş gelen oyunlar (Terraria, Voidigo, Wallpaper Engine) veri yokluğu mu hata mı.
+- **Hata (açık):** profil değiştirince süreler yüklenmiyor; Yusuf kendi Steam oturumunda yaptıracak. Script anahtarları Apps Script Script Properties'e taşındı (değerler yerel gitignore'lu `.env`'de).
 - Eski API key kullanılmaya devam (Yusuf kararı). Öneri: eski script'teki access token/sessionid'yi Steam'den çıkış yaparak geçersiz kılmak.

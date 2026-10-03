@@ -2,10 +2,12 @@
 type: decision
 project: ziroobank
 date: 2026-10-02
-status: active
+status: superseded
 tags: [ziroobank, sunucu, caddy, tasima]
 source: ziroobank-expenses oturumu 2026-10-02/03 (sheet taşıma)
 ---
+
+> **Güncel değil (2026-10-03):** adres kısmı (diğer kararlar geçerli: ayrı konteyner, taşıma doğrulaması, sheet erişimi) için yerini [[2026-10-03-joker-dns-ve-tools-games-alt-alan-adlari]] aldı. Aşağısı o günkü bağlam olarak duruyor.
 
 # Karar: Ziroobank, Diskort VPS'te ayrı konteyner olarak diskort.ziroo.net/tools/ziroobank altında çalışır; Google Sheet arşivde ve paylaşımı kapalı.
 
