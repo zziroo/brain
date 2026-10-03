@@ -12,6 +12,7 @@ Buradan başla. Her şey buradan ya da bir projenin `_overview.md` dosyasından 
 - [[10-Projects/isik-bekcisi/_overview|Işık Bekçisi]]: fenerle karanlık vadiye koşular yapılan koşu-tabanlı incremental oyun (Canvas, derleme yok)
 - [[10-Projects/diskort/_overview|Diskort]]: sesli sohbet uygulaması (Windows-first, kendi sunucusu)
 - [[10-Projects/kul-tahti/_overview|Kül Tahtı]]: tarayıcıda souls-like 3D boss savaşı demosu (Three.js, derleme yok)
+- [[10-Projects/kapis/_overview|KAPIŞ]]: tarayıcıda Overwatch tarzı 3D hero-shooter, arkadaş grubu için (three.js + Node ws, otoriteli sunucu)
 - [[10-Projects/trencheck/_overview|Trencheck]]
 - [[10-Projects/voice-detector/_overview|Voice Detector]]
 - [[10-Projects/ceviri-araci/_overview|Çeviri Aracı]]: oyun lokalizasyon dosyaları ↔ Excel masaüstü aracı (Electron)
