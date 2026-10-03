@@ -19,6 +19,7 @@ Buradan başla. Her şey buradan ya da bir projenin `_overview.md` dosyasından 
 - [[10-Projects/steam-avgr/_overview|Steam AGCR Paneli]]: Steam ortalama tamamlama oranı paneli, tools.ziroo.net/steam-avgr
 - [[10-Projects/rehber-okuyucu/_overview|Rehber Okuyucu]]: Steam rehberlerini okunur gösterir, AI ile başarım kartlarına çevirir (yayın bekliyor, hedef tools.ziroo.net/rehber)
 - [[10-Projects/ziroobank/_overview|Ziroobank]]: arkadaş grubu taksit takibi (eski Google Sheet), tools.ziroo.net/ziroobank
+- [[10-Projects/song-finder/_overview|Song Finder]]: link verilen şarkıya sesi gerçekten benzeyen şarkıları bulan kişisel araç (yerelde çalışıyor, yayında değil)
 
 ## Altyapı
 - [[2026-10-03-joker-dns-ve-tools-games-alt-alan-adlari]]: joker DNS, tools.ziroo.net ve games.ziroo.net (araç listesi tools.ziroo.net, oyun listesi games.ziroo.net)
