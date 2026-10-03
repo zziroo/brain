@@ -1,7 +1,7 @@
 ---
 type: project
 project: isik-bekcisi
-date: 2026-10-03
+date: 2026-10-04
 status: active
 tags: [isik-bekcisi, oyun, incremental, kosu-tabanli, canvas]
 source: C:\Users\yusuf\ZZ\zProjects\incremantal-game (CLAUDE.md); oturumlar 2026-10-02 (6d8df6c2, 72fd0708)
@@ -31,10 +31,12 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 - **Canlı:** https://games.ziroo.net/isik-bekcisi · liste https://games.ziroo.net/ (2026-10-03'ten beri; eski adresler 301; oyun kayıtları yeni kökte sıfırdan başladı). Yayın: `bash deploy/deploy.sh`; liste sayfası `bal-vadisi` deposundaki `deploy/deploy.sh` ile. Kurallar: [[2026-10-03-joker-dns-ve-tools-games-alt-alan-adlari]] (eski: [[2026-10-02-oyunlar-diskort-alan-adinda-games-altinda]]). Betik `/opt/ziroo-www/games/isik-bekcisi`e yayınlıyor (2026-10-03 geçişte kullanıldı). Yayın Yusuf'un kararı.
 - Git: GitHub (özel) https://github.com/yusufholat/isik-bekcisi, dal `main`.
 
-## Durum (2026-10-03)
+## Durum (2026-10-04)
 | Parça | Durum |
 |---|---|
-| Yayın | **canlı = `2020af6`** (2026-10-03 gece, Yusuf'un isteğiyle push + `deploy/deploy.sh`). Canlıdaki 21 dosyanın özeti yereldekiyle birebir; canlı sayfa konsol hatasız açıldı, başlık → kamp denendi |
+| Yayın | **canlı = `8685e7a`** (2026-10-04, Yusuf'un onayıyla `deploy/deploy.sh`; canlıda yeni dosyalar doğrulandı). GitHub'a push edilmedi: yerel `main` iki commit ileride |
+| Öğretici ipuçları | "yaparak öğren": oyunu durdurmaz, şeyin yanında çıkar, yapınca tik alır ([[2026-10-04-yaparak-ogren-ipuclari-oyunu-durduran-kart-yerine]]); incelendi; insan oyuncuyla denenmedi |
+| Ses ayarları | Genel / Müzik / Efektler / Ortam kaydırıcıları + sessiz düğmesi; kulakla dinlenmedi |
 | Kontroller / masaüstü | yazıldı, incelendi, birleşti ([[2026-10-02-masaustu-oyun-wasd-hareket-fare-isik]]) |
 | Lazer, yağ bedeli, kabuklu / prizma / diken, açılan Kalp | yazıldı, incelendi, birleşti; botla dengelendi |
 | Gökyüzü ekranı | yeniden yazıldı, incelendi, birleşti |
@@ -46,7 +48,9 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 | İnceleme kapısı | bu tur 5 dal incelemesi (0 kritik/yüksek, 6 orta, ~27 düşük; hepsi düzeltildi), 1 şüpheci, 1 düzeltme doğrulayıcısı |
 
 ## Sıradaki işler
-0. Yayınlandı. Yusuf ve arkadaşları oynasın: lazer hissi, geçiş temposu, ses seviyeleri, hikâyenin Türkçesi.
+0. Yayınlandı. Yusuf ve arkadaşları oynasın: yeni ipuçları anlaşılıyor mu, lazer hissi, geçiş temposu, ses seviyeleri, hikâyenin Türkçesi.
+   - Karar bekliyor: kabuk / prizma / diken / Kalp ipuçlarına durdurmadan dönen küçük canlandırma eklensin mi.
+   - İpucu pürüzleri: kabuklu ruh tek vuruşta yakalanınca tik yok; tıkla-git de "yürü"yü tikliyor; kalabalıkta kutu taraf değiştiriyor.
 1. Oynama geri bildirimi: WASD + fare iyi geldi mi; lazer ve yağ bedeli hissediliyor mu; kabuklu / prizma / diken okunuyor mu; konuşmalar fazla mı az mı; geçişler yavaş mı.
 2. Küçük yerleşim: Kandil'in balonu kapıda ekranın üst kenarına taşabiliyor (1366×768).
 3. 5. fenerden sonra gölge / pervane / ürkek / yaşlı istekleri de yapılamaz olunca panodan çekilsin (şu an 4 boş seferde değişiyor).
@@ -67,6 +71,7 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 - [[2026-10-02-masaustu-oyun-wasd-hareket-fare-isik]]
 - [[2026-10-02-lazere-donusen-isin-yag-bedeli-ve-lazer-dusmanlari]]
 - [[2026-10-02-hikaye-kampi-f-ile-konusma-ve-yumusak-gecisler]]
+- [[2026-10-04-yaparak-ogren-ipuclari-oyunu-durduran-kart-yerine]]
 
 ## Dersler
 - [[2026-10-02-carpimsal-gelistirmeler-geliri-patlatir]]
@@ -77,8 +82,10 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 - [[2026-10-02-bekleme-kapisi-yerine-avdan-dolan-kapi]]
 - [[2026-10-02-birlesmeden-sonra-her-sahneye-bak]]
 - [[2026-10-02-paralel-ajan-dallarini-main-ile-ajana-birlestirtmek]]
+- [[2026-10-04-urun-hissi-kararinda-once-secenek-goster]]
 - [[10-Projects/bal-vadisi/lessons/2026-10-02-gizli-onizleme-panelinde-raf-durur|Gizli önizleme panelinde rAF durur]]
 
 ## Oturumlar
 - [[2026-10-02-iki-oyun-yayin-ve-kamp-yenilemesi]]
 - [[2026-10-02-ikinci-geri-bildirim-turu-lazer-hikaye-gecisler]]
+- [[2026-10-04-ses-ayarlari-ve-yaparak-ogren-ipuclari]]
