@@ -29,8 +29,7 @@ Yusuf'un arkadaş grubu için tarayıcıda oynanan hero-shooter. Repo `C:\Users\
 - Gerçek fare / pointer lock hissi denenmedi.
 - Gerçek iGPU fps'i ölçülmedi.
 - Aynı odada birden fazla gerçek insan denenmedi.
-- Caddy import semantiği canlıda doğrulanmadı.
-- Dockerfile build'i denenmedi (bu makinede Docker yok).
+- (Caddy ve Docker build canlıda doğrulandı, 2026-10-03.)
 
 ### Sıradaki işler
 1. Deploy (`deploy/deploy.sh`); Caddy tarafı hazır ([[2026-10-03-caddy-ziroo-edge-projesine-ayrildi]]).

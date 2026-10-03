@@ -2,7 +2,7 @@
 type: decision
 project: kapis
 date: 2026-10-03
-status: unverified   # Caddy hazır (ziroo-edge), deploy henüz çalıştırılmadı
+status: active
 tags: [kapis, yayin, vps, caddy, docker]
 source: oturum 2026-10-03 (web-fps-game, KAPIŞ ilk inşa); repo deploy/ klasörü
 ---
@@ -13,7 +13,7 @@ source: oturum 2026-10-03 (web-fps-game, KAPIŞ ilk inşa); repo deploy/ klasör
 Oyun arkadaş grubu için; herkesin aynı ping'i alması isteniyor.
 
 ## Karar
-LightNode İstanbul VPS'inde Docker konteyneri `127.0.0.1:8085` üzerinde, önünde Caddy; alan adı `kapis.ziroo.net`. DNS A kaydı eklendi (gri bulut). Repoda `deploy/`: compose host ağı, `TRUST_PROXY=1`, `ALLOWED_ORIGINS=https://kapis.ziroo.net`, `deploy/deploy.sh`. Henüz çalıştırılmadı.
+LightNode İstanbul VPS'inde Docker konteyneri `127.0.0.1:8085` üzerinde, önünde Caddy; alan adı `kapis.ziroo.net`. DNS A kaydı eklendi (gri bulut). Repoda `deploy/`: compose host ağı, `TRUST_PROXY=1`, `ALLOWED_ORIGINS=https://kapis.ziroo.net`, `deploy/deploy.sh`. 2026-10-03 gecesi `deploy/deploy.sh` ile yayınlandı; canlıda oda kurma, bot maçı, ping ~50 ms, 30 snap/s doğrulandı.
 
 **Açık nokta (2026-10-03'te çözüldü):** Caddy ayrı `ziroo-edge` projesine taşındı ve üst seviyede `/opt/ziroo-sites/hosts/*.caddy` içe aktarılıyor ([[2026-10-03-caddy-ziroo-edge-projesine-ayrildi]]). `deploy/deploy.sh` buna göre güncellendi (`SITES=/opt/ziroo-sites/hosts`, reload `bash /opt/ziroo-edge/reload.sh`); deploy henüz çalıştırılmadı.
 
