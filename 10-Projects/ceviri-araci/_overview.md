@@ -20,7 +20,7 @@ Yusuf'un çevirmen arkadaşı için. Oyun stüdyoları İngilizce dil dosyaları
 - `src/core` saf TS çekirdek (format işleyiciler, Excel, QA, prefill), `src/main` (dosya sistemi/IPC, yol ve uzantı denetimi), `src/renderer` (Türkçe arayüz).
 - Formatlar: JSON, YAML, XML (Android/resx/XLIFF/genel), PO, properties/ini, Apple .strings, CSV/TSV, Ren'Py (.rpy, tl dosyaları), txt.
 - Paket: `npm run dist` → `release/` altında portable `.exe` ve kurulum (imzasız, SmartScreen uyarısı verir).
-- Yayın: https://tools.ziroo.net/ceviri-araci (indirme sayfası + iki .exe; eski diskort.ziroo.net/tools/ceviri-araci 301 ile yönlenir). `bash deploy/deploy.sh` (önce `npm run dist`) sunucuda statik kopyalar; betiğin hedefinin yeni kök `/opt/ziroo-www/tools/ceviri-araci` ile uyumu doğrulanmadı, yayından önce kontrol et (eski hedef `/opt/diskort/apps/web/tools/`). Betik yalnız kendi yollarına dokunur. Karar: [[2026-10-02-yayin-diskort-tools-altinda]] (eski), güncel: [[2026-10-03-joker-dns-ve-tools-games-alt-alan-adlari]].
+- Yayın: https://tools.ziroo.net/ceviri-araci (indirme sayfası + iki .exe; eski diskort.ziroo.net/tools/ceviri-araci 301 ile yönlenir). `bash deploy/deploy.sh` (önce `npm run dist`) sunucuda statik kopyalar; hedef `/opt/ziroo-www/tools/ceviri-araci` (2026-10-03 geçişte kullanıldı). Betik yalnız kendi yollarına dokunur. Karar: [[2026-10-02-yayin-diskort-tools-altinda]] (eski), güncel: [[2026-10-03-joker-dns-ve-tools-games-alt-alan-adlari]].
 
 ## Kararlar
 - [[2026-10-02-span-tabanli-yazma]]
