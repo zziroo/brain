@@ -35,6 +35,7 @@ Ertelenmiş işti ([[2026-10-02-caddy-ortak-site-klasoru]]). Sunucuda Diskort d�
 - TURN/TLS l4 bloğu iki yerde duruyor: edge `config/Caddyfile` ve Diskort `infra/Caddyfile` (tek başına kurulum için). İkisi aynı kalmalı.
 - Diskort yönetim panelindeki Caddy upstream listesi artık diğer projelerin arka uçlarını da gösterebilir (kozmetik).
 - Geçiş 2026-10-03'te seste 3 kişi varken yapıldı (Yusuf onayladı). LiveKit sinyali bir an koptu, istemciler yeniden bağlandı. Tüm yollar, lk, TURN sertifikası ve ölçüm ucu doğrulandı.
+- Yeni imaj Caddy 2.11.6 oldu (eski 2.11.4). 2.11.6'da yönetim ucu (2019), Node fetch'in her istekte gönderdiği `Sec-Fetch-Mode` başlığı yüzünden 403 veriyor ve yönetim panelindeki Caddy ölçümleri boş kaldı. Ölçümler artık yalnız yerelden erişilen `http://127.0.0.1:2020 { metrics }` sitesinden okunuyor (Diskort `eb25879`, compose varsayılanı `CADDY_METRICS_URL`).
 - Geri dönüş: eski `diskort-caddy` imajı ve `infra_caddy-data` birimi sunucuda duruyor. Edge'i durdurup `cd /opt/diskort/infra && docker compose --profile caddy up -d caddy` çalıştırmak yeterli.
 
 ## İlgili
