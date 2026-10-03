@@ -24,7 +24,7 @@ Yusuf'un arkadaş grubu için tarayıcıda oynanan hero-shooter. Repo `C:\Users\
 - Dev sayfaları: `/gallery.html` (kahraman/efekt galerisi), `/audio-demo.html`, `/ui/demo.html`. Debug: `?debug=1&autojoin=new&name=X&hero=volt&bots=6`, `window.__kapis`.
 
 ## Güncel durum (2026-10-03; canlıdan doğrula)
-459 test yeşil, yerelde oynanabilir. **Henüz yayınlanmadı.** Yayın planı: [[2026-10-03-yayin-paylasilan-vps-kapis-ziroo-net]] (Caddy onayı bekliyor). Doğrulanmayanlar:
+459 test yeşil, yerelde oynanabilir. **Henüz yayınlanmadı.** Yayın planı: [[2026-10-03-yayin-paylasilan-vps-kapis-ziroo-net]] (Caddy hazır: ziroo-edge `hosts/`). Doğrulanmayanlar:
 - Ses motoru hiç dinlenmedi.
 - Gerçek fare / pointer lock hissi denenmedi.
 - Gerçek iGPU fps'i ölçülmedi.
@@ -33,7 +33,7 @@ Yusuf'un arkadaş grubu için tarayıcıda oynanan hero-shooter. Repo `C:\Users\
 - Dockerfile build'i denenmedi (bu makinede Docker yok).
 
 ### Sıradaki işler
-1. Caddy `import` satırı için Yusuf'un onayı, sonra deploy (`deploy/deploy.sh`).
+1. Deploy (`deploy/deploy.sh`); Caddy tarafı hazır ([[2026-10-03-caddy-ziroo-edge-projesine-ayrildi]]).
 2. Arkadaşlarla test.
 3. `docs/POLISH.md` cila turu: dipten ateşte beyaz top, patlama/duman görünümü, Şahin barrage kendine hasar dengesi, kill cam'de kendi gövdesi.
 4. Sesi dinleme.

@@ -2,10 +2,12 @@
 type: decision
 project: diskort
 date: 2026-10-02
-status: active
+status: superseded
 tags: [diskort, caddy, sunucu, yayin]
 source: oturum 2026-10-02 (steam-avgr-calculator), Diskort commit c87bd9f
 ---
+
+> **2026-10-03:** Caddy ayrı `ziroo-edge` projesine taşındı; `/opt/ziroo-sites` aynı kaldı, reload artık `bash /opt/ziroo-edge/reload.sh`. Bkz. [[2026-10-03-caddy-ziroo-edge-projesine-ayrildi]].
 
 # Diskort dışı projeler Caddy'ye /opt/ziroo-sites/<ad>.caddy dosyasıyla eklenir
 

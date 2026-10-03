@@ -18,7 +18,7 @@ source: handoff notundan (artık kaldırıldı), diskurt-project ve diskort-* ha
 Ses + ekran paylaşımı kalitesi; metin kanalları, tepkiler, dosyalar, roller, DM'ler, profil/kozmetikler, Etkinlik (oynanan oyun). Yusuf canlıda test eder; client release'i onunla çıkar. Ayrıntı: [[proje-hedefleri-ve-platformlar]].
 
 ## Teknoloji
-- pnpm monorepo: `apps/server` (Fastify, SQLite `node:sqlite`, WebSocket gateway), `packages/shared`, `packages/client-core`, `apps/desktop` (Electron), `apps/mobile` (Expo SDK 57, RN 0.86, @livekit/react-native, react-native-skia, yerel Kotlin modülü `voice-service`), `apps/web` (indirme sayfası), `infra/` (docker compose: LiveKit, api, Caddy).
+- pnpm monorepo: `apps/server` (Fastify, SQLite `node:sqlite`, WebSocket gateway), `packages/shared`, `packages/client-core`, `apps/desktop` (Electron), `apps/mobile` (Expo SDK 57, RN 0.86, @livekit/react-native, react-native-skia, yerel Kotlin modülü `voice-service`), `apps/web` (indirme sayfası), `infra/` (docker compose: LiveKit, api, Caddy yalnız `caddy` profiliyle).
 - Dağıtım: VPS ([[sunucu-vps]]), Android APK + OTA ([[mobil-ota-guncelleme]]), iOS Ad Hoc ([[ios-ad-hoc-dagitim]]).
 - Gürültü bastırma: DPDFNet (DeepFilterNet 3, 0.9.3'te kaldırıldı).
 - Kod haritası: Etkinlik [[etkinlik-kod-haritasi]].
@@ -28,7 +28,7 @@ Ses + ekran paylaşımı kalitesi; metin kanalları, tepkiler, dosyalar, roller,
 - **Sunucu:** 2026-10-01'de LightNode İstanbul'a taşındı. Eski sağlayıcı gelen UDP'yi ~1400 paket/sn üstünde kesiyordu ([[sunucu-lightnode-istanbula-tasindi]], [[saglayici-udp-paket-siniri]]). DB şeması **25** (messages.type/call_data, user_blocks). Sunucuda `8168252` çalışıyor (2026-10-02 deploy: yedek alındı, bütünlük ok; sonraki `cadb249` yalnız sürüm numarası). Altı kozmetik paketi `/data/cosmetic-packs` altında, tüm platformlar.
 - **Ses kesintileri:** nedeni bulundu ve sunucu taşındı. 2026-10-01 akşam aramasında `outages.jsonl`'de kesinti yok, dış sondalar temiz; donmalar yayıncı kodlayıcısından (bit hızı sıçraması) ve tek kullanıcının hattından. Yoğun yayınla hâlâ tam kanıtlanmadı.
 - **Yeni sunucuda eksikler:** otomatik güvenlik güncellemeleri (unattended-upgrades imajda maskeli), SSH sertleştirme dosyası yeniden uygulanmadı. Trafik planı 1000 GB/ay, kullanım ~800 GB civarı. Eski sunucu durdurulmuş durumda, Yusuf silecek.
-- **Diskort dışı yollar:** Caddy `/opt/ziroo-sites/*.caddy` içe aktarıyor (c87bd9f, sunucuda çalışıyor) ([[2026-10-02-caddy-ortak-site-klasoru]]). Caddy'yi ayrı edge projesine taşımak ertelendi.
+- **Giriş kapısı:** 2026-10-03'ten beri Caddy ayrı `ziroo-edge` projesinde; Diskort siteleri `infra/caddy/diskort.caddy`, diğer projeler `/opt/ziroo-sites/*.caddy` ve `hosts/*.caddy`, değişiklik `bash /opt/ziroo-edge/reload.sh` ([[2026-10-03-caddy-ziroo-edge-projesine-ayrildi]]).
 - **SignPath:** başvurulmayacak ([[kod-imzalama-ertelendi]]).
 - **Not (izin sistemi):** otomatik mod sınıflandırıcısı, o oturumda Yusuf sohbette söylemedikçe ssh deploy ve release tag/push'u engelleyebilir. Sor, sonra push / ssh / tag / `gh release edit` komutlarını ayrı çağrılar olarak çalıştır.
 
