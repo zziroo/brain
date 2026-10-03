@@ -15,7 +15,7 @@ Steam paneli, Çeviri Aracı, Ziroobank ve iki oyun `diskort.ziroo.net/tools` ve
 ## Karar
 - **DNS:** Cloudflare'da `*.ziroo.net` A → sunucu IP'si (gri bulut). Yusuf açık `diskort`, `lk`, `turn`, `kapis` kayıtlarını sildi; hepsi jokerle çözülüyor. Yeni alt alan adı için DNS gerekmez. Joker silinirse Diskort (ses dahil) ve KAPIŞ da düşer.
 - **Gruplama:** giriş ve kişisel veri olmayanlar `tools.ziroo.net` / `games.ziroo.net` altında; giriş ya da kişisel veri olanlar normalde kendi alt alan adına.
-- **Ziroobank istisna:** Yusuf'un kararıyla `tools.ziroo.net/ziroobank` altında ("tool gibi kullanıyorum, basit seviyede"). Çerez `Path=/ziroobank`; geçişte herkes bir kez yeniden giriş yaptı.
+- **Ziroobank istisna:** Yusuf'un kararıyla `tools.ziroo.net/ziroobank` altında ("tool gibi kullanıyorum, basit seviyede"). Çerez `Path=/ziroobank`; geçişten sonra herkesin bir kez yeniden giriş yapması gerekiyor.
 - **Kural (risk azaltma):** `tools` altındaki araçlarda inline script ve HTML sink (`innerHTML`) yok.
 - **Steam yolu:** Yusuf isteğiyle `/steam-avgr` (eski `/tools/steam`).
 - **Adresler:** `tools.ziroo.net/{steam-avgr,ceviri-araci,ziroobank}` + araç listesi; `games.ziroo.net/{bal-vadisi,isik-bekcisi}` + oyun listesi. Eski adresler 301 ile yenilerine gider.
