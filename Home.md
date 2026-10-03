@@ -17,7 +17,7 @@ Buradan başla. Her şey buradan ya da bir projenin `_overview.md` dosyasından 
 - [[10-Projects/voice-detector/_overview|Voice Detector]]
 - [[10-Projects/ceviri-araci/_overview|Çeviri Aracı]]: oyun lokalizasyon dosyaları ↔ Excel masaüstü aracı (Electron), tools.ziroo.net/ceviri-araci
 - [[10-Projects/steam-avgr/_overview|Steam AGCR Paneli]]: Steam ortalama tamamlama oranı paneli, tools.ziroo.net/steam-avgr
-- [[10-Projects/rehber-okuyucu/_overview|Rehber Okuyucu]]: Steam rehberlerini okunur gösterir, AI ile başarım kartlarına çevirir (yayın bekliyor, hedef tools.ziroo.net/rehber)
+- [[10-Projects/rehber-okuyucu/_overview|Rehber Okuyucu]]: Steam rehberlerini okunur gösterir, AI ile başarım kartlarına çevirir, tools.ziroo.net/rehber
 - [[10-Projects/ziroobank/_overview|Ziroobank]]: arkadaş grubu taksit takibi (eski Google Sheet), tools.ziroo.net/ziroobank
 - [[10-Projects/song-finder/_overview|Song Finder]]: link verilen şarkıya sesi gerçekten benzeyen şarkıları bulan kişisel araç (yerelde çalışıyor, yayında değil)
 
