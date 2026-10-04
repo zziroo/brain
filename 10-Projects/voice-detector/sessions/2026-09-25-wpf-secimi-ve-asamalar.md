@@ -20,9 +20,10 @@ source: oturum 25d1d08a-6c1b-4d7a-9ff7-969cb698abc4 (2026-09-25 21:23..22:59)
 - Aşama 6 için test listesi hazırlandı (antrenman alanı testleri A1..A9 + gerçek maç).
 
 ## Alınan kararlar
-- [[wpf-secimi]], [[tetik-seviyesi-500ms-penceresi]]
+- [[wpf-secimi]], [[tetik-seviyesi-500ms-penceresi]], [[kenarliksiz-pencereli-mod]], [[overlay-dort-serit-yalniz-uyarida-gorunur]], [[kalibrasyon-esik-hesabi]]
 
 ## Öğrenilenler
+- Ayrıntılı: [[wpf-masaustu-tuzaklari]], [[powershell-ui-otomasyon-betikleri]]
 - PowerShell 5.1 BOM'suz UTF-8 betikte Türkçe karakterleri bozar; UI otomasyon betikleri BOM'lu kaydedildi.
 - OneDrive klasöründe bin/obj senkronu derleme kilidi riskiydi (sonra taşındı: [[2026-09-28-tasima]]).
 

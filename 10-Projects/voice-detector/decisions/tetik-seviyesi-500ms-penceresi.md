@@ -31,4 +31,4 @@ Kısa sıçramalar (öksürük, klavye, masaya vurma) tetiklememeli; gerçek yü
 39 birim testi bu davranışı sabitler. Eşikler kalibrasyon sihirbazıyla otomatik yerleşir.
 
 ## İlgili
-- [[wpf-secimi]], [[_overview]]
+- [[wpf-secimi]], [[_overview]], [[overlay-dort-serit-yalniz-uyarida-gorunur]] (overlay tasarımının ayrıntısı), [[kalibrasyon-esik-hesabi]]
