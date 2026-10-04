@@ -51,6 +51,7 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 ## Sıradaki işler
 0. Yayınlandı. Yusuf ve arkadaşları oynasın: fenerden sonra yürümeye devam hissi, lazer hissi, geçiş temposu, ses seviyeleri, hikâyenin Türkçesi.
    - **Öğretici baştan tasarlanabilir** (Yusuf, 2026-10-04): durdurmayan 2–3 yeni yaklaşım seçenek olarak gösterilsin. Eski açık sorular (kabuk / prizma / diken / Kalp için canlandırma; tek vuruşta kabuklu tik yok, tıkla-git "yürü"yü tikliyor, kalabalıkta kutu taraf değiştiriyor) bu tasarıma girdi.
+   - **Erken bölgelerde zorluk yok** (Yusuf, 2026-10-04): Çayır'da hiçbir tehdit yok, ışın bir şeyi "öldürmüyor". Seçenekler (karanlığın kendisi düşman / kaçan ruhlar / ustalık ödülü) [[ders-02-zorluk-dusmandan-gelmez]] içinde; karar bekliyor.
 1. Oynama geri bildirimi: WASD + fare iyi geldi mi; lazer ve yağ bedeli hissediliyor mu; kabuklu / prizma / diken okunuyor mu; konuşmalar fazla mı az mı; geçişler yavaş mı.
 2. Küçük yerleşim: Kandil'in balonu kapıda ekranın üst kenarına taşabiliyor (1366×768).
 3. 5. fenerden sonra gölge / pervane / ürkek / yaşlı istekleri de yapılamaz olunca panodan çekilsin (şu an 4 boş seferde değişiyor).

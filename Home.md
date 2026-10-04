@@ -31,6 +31,7 @@ Buradan başla. Her şey buradan ya da bir projenin `_overview.md` dosyasından 
 ## Kaynaklar
 - `30-Resources/`: kalıcı bilgi ve rehberler
 - [[kosu-tabanli-incremental-shelldiver-rock-bottom-analizi]]: koşu-tabanlı incremental türünün kalıbı (Shelldiver, Rock Bottom) ve oyuncu şikâyetleri
+- [[30-Resources/oyun-tasarimi/_index|Oyun tasarımı dersleri]]: döngüler, zorluk, his, tempo; Işık Bekçisi örnekleriyle
 
 ## Arşiv
 - [[90-Archive/old-claude-memory/_index|Eski Claude hafıza klasörleri]]
