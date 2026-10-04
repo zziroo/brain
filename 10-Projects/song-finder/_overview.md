@@ -34,11 +34,10 @@ https://tools.ziroo.net/song-finder → konteyner `song-finder` (127.0.0.1:8092,
 - İlk canlı arama (Rick Astley linki): 524 sn (yerelde ~4 dk), parça başına ses ölçümü 2,8 sn (yerelde 1,3), bellek tepe ~690 MB, yük ortalaması ~1,0; LiveKit'in CPU'su etkilenmedi (o sırada Diskort'ta görüşme olup olmadığı bilinmiyor).
 
 ## Güncel durum (2026-10-04)
-Yayında, commit `f00f78e`. 88 test geçiyor, iki tur güvenlik incelemesinden geçti (kritik/yüksek bulgu yok, bulunanlar düzeltildi). Last.fm kaynağı çalışıyor.
+Yayında, commit `0596358`. Sahibe özel kullanım sayfası `usage.html` (arama başına model, token, süre, tahmini maliyet; kayıt `DATA_DIR/usage.jsonl`, başarısız aramalar dahil). Giriş parolası Rehber Okuyucu ile aynı değere ayarlandı (iki dosyada ayrı kopya). Araç listesi kartı ziroo-edge `8b7adf6` (push edilmedi). 88 test geçiyor, iki tur güvenlik incelemesinden geçti (kritik/yüksek bulgu yok, bulunanlar düzeltildi). Last.fm kaynağı çalışıyor.
 
 ## Sıradaki işler
 - Yusuf birkaç şarkıyla deneyip öneri kalitesini değerlendirecek (karar onda).
 - Token yenileme: kullanılan token daha önce bir ekran görüntüsüyle sohbete düşmüştü; Yusuf "sonra değiştiririm" dedi. Değişince hem `/etc/claude-token.env` hem `/etc/rehber.env` güncellenmeli ve iki konteyner yeniden başlatılmalı. Rehber Okuyucu'yu ortak dosyaya geçirmek o projenin oturumunda yapılacak.
-- tools.ziroo.net araç listesine kart eklenmedi (ziroo-edge deposu).
 - Canlıda arama ~9 dk; hızlandırmak için `AUDIO_MAX_TRACKS` düşürülebilir.
 - Bilinen zayıflıklar: topluluk kaynağı neredeyse boş; listeler hâlâ çoğunlukla aynı sahneden; eski/alışılmadık kayıtlarda ses puanları düşük çıkıyor (eşik aramaya göre uyarlanıyor); işçi bağlamında hesap e-postası görünüyor (düşük risk, giderilmedi).
