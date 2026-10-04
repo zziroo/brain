@@ -28,11 +28,17 @@ Spotify / YouTube / Apple Music / Deezer linki ya da "Sanatçı - Şarkı" alır
 - [[2026-10-04-bassiz-claude-at-dosya-anmalarini-acar]]
 - [[2026-10-04-muzik-kaynaklarinin-erisilebilirligi]]
 
+## Yayın (2026-10-04'ten beri)
+https://tools.ziroo.net/song-finder → konteyner `song-finder` (127.0.0.1:8092, kaynak `/opt/song-finder/src`, veri `/opt/song-finder/data`), Caddy parçası `/opt/ziroo-sites/tools/song-finder.caddy`. Betik `app/deploy/deploy.sh` (Git Bash'ten, proje kökünden). Konteyner salt okunur, `--memory 1500m --cpus 1 --pids-limit 256`. Env dosyaları `docker run` anında okunur; değiştirince betiği yeniden çalıştır.
+- Sırlar sunucuda: `/etc/claude-token.env` (`CLAUDE_CODE_OAUTH_TOKEN`; ortak dosya olarak açıldı, şimdilik yalnız song-finder okuyor, Rehber Okuyucu hâlâ `/etc/rehber.env` içindeki kopyayı kullanıyor) ve `/etc/song-finder.env` (`APP_PASSWORD` sunucuda rastgele üretildi, `LASTFM_API_KEY`).
+- İlk canlı arama (Rick Astley linki): 524 sn (yerelde ~4 dk), parça başına ses ölçümü 2,8 sn (yerelde 1,3), bellek tepe ~690 MB, yük ortalaması ~1,0; LiveKit'in CPU'su etkilenmedi (o sırada Diskort'ta görüşme olup olmadığı bilinmiyor).
+
 ## Güncel durum (2026-10-04)
-Yerelde çalışıyor, 88 test geçiyor, iki tur güvenlik incelemesinden geçti (kritik/yüksek bulgu yok, bulunanlar düzeltildi). Yayında değil.
+Yayında, commit `f00f78e`. 88 test geçiyor, iki tur güvenlik incelemesinden geçti (kritik/yüksek bulgu yok, bulunanlar düzeltildi). Last.fm kaynağı çalışıyor.
 
 ## Sıradaki işler
 - Yusuf birkaç şarkıyla deneyip öneri kalitesini değerlendirecek (karar onda).
-- Last.fm API anahtarı (Yusuf alıyordu; kök `.env` içine `LASTFM_API_KEY`).
-- Yayın: tools.ziroo.net/song-finder. Docker imajı hiç derlenmedi; VPS'te hız/bellek ölçülmedi (Diskort'la paylaşımlı, `--memory 1500m --cpus 1` denenmemiş başlangıç değerleri). `APP_PASSWORD` en az 16 karakter; Claude token'ı Yusuf `claude setup-token` ile üretip sunucuda env dosyasına koyacak.
+- Token yenileme: kullanılan token daha önce bir ekran görüntüsüyle sohbete düşmüştü; Yusuf "sonra değiştiririm" dedi. Değişince hem `/etc/claude-token.env` hem `/etc/rehber.env` güncellenmeli ve iki konteyner yeniden başlatılmalı. Rehber Okuyucu'yu ortak dosyaya geçirmek o projenin oturumunda yapılacak.
+- tools.ziroo.net araç listesine kart eklenmedi (ziroo-edge deposu).
+- Canlıda arama ~9 dk; hızlandırmak için `AUDIO_MAX_TRACKS` düşürülebilir.
 - Bilinen zayıflıklar: topluluk kaynağı neredeyse boş; listeler hâlâ çoğunlukla aynı sahneden; eski/alışılmadık kayıtlarda ses puanları düşük çıkıyor (eşik aramaya göre uyarlanıyor); işçi bağlamında hesap e-postası görünüyor (düşük risk, giderilmedi).
