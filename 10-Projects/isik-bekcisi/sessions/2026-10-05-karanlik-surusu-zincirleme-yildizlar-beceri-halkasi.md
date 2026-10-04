@@ -7,7 +7,7 @@ tags: [isik-bekcisi, oturum, karanlik-surusu, beceri-agaci, beceri-gostergesi, d
 source: Claude Code oturumu 53393f9a (incremantal-game), 2026-10-04 akşamı – 2026-10-05; commit 0bcc0a0 … e636e29
 ---
 
-# Devir notundaki bulguların hepsi yapıldı: beceri halkası, karacık ailesi, altı zincirleme yıldız, küçük düzeltmeler ve denge (yerel main, yayınlanmadı)
+# Devir notundaki bulguların hepsi yapıldı: beceri halkası, karacık ailesi, altı zincirleme yıldız, küçük düzeltmeler, denge ve süre ölçümü (yayınlandı, 42fc571)
 
 ## İstek
 Yusuf `/basla` özetinden sonra şunu yazdı: "ssh yetkisini veriyorum istediğini yap. burdaki bulguların hepsini sen yapmaya başla." Önceki kural her ürün hissi işinde önce seçenek göstermekti ([[2026-10-04-urun-hissi-kararinda-once-secenek-goster]]). Bu turda seçimler Claude'a bırakıldı; önerilen seçeneklerle ilerlendi.
@@ -51,7 +51,14 @@ Yusuf `/basla` özetinden sonra şunu yazdı: "ssh yetkisini veriyorum istediği
 - Ajan token'ları (devam turları dahil toplam): A 733k, B 786k, C 711k, incelemeler 314k / 294k / 268k, denge 394k.
 
 ## Durum
-- Yerel `main` = `e636e29`; canlının (`071332d`) 9 commit önünde. Push edilmedi, yayınlanmadı; ikisi de Yusuf'un kararı.
+- Yusuf uzunluk notundaki ölçüm önerisini istedi ("3 harika olur"), ardından push ve yayın dedi.
+- **Süre ölçümü** (sonnet ajanı, koordinatör diff'i okudu; commit `42fc571`):
+  - `S.totalTime` kamp dahil sayılıyor; 60 sn dokunulmazsa duruyor.
+  - İlk şafak kaydediliyor: `S.stat.winRuns / winRoad / winTotal`.
+  - Bunlar günlükte ve oyun sonu ekranında görünüyor.
+  - Ajanın bulgusu: oyun zaten sefer ortasında da kaydediyormuş (görünmez olunca, sayfadan çıkarken, 15 sn'de bir). Bu davranışa dokunulmadı; yalnız seferler arası `pagehide` kaydı eklendi.
+- **Yayın:** push edildi (`071332d..42fc571`), `deploy/deploy.sh` ile yayınlandı. SSH ile 22 dosyanın hepsi yerelle aynı, yeni kod canlıda sunuluyor.
+- Arada başka bir oturum `985e64a` ile yayın betiğinin yorumunu güncellemişti (oyun listesi ziroo-edge'de); mantık değişmemişti.
 
 ## Açık kalanlar
 - Geç oyunda karacık neredeyse zararsız (özensiz oyuncu yağının %1–2'sini kaybediyor). Daha çok ısırması bir ürün kararı.

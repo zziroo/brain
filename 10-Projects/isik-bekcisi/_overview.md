@@ -26,7 +26,7 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 - **Arayüz ("gece atlası"):** serif, ince çift çerçeveli plakalar, çentikli düğmeler, kendi çizgi ikonları, fitil göstergesi. Bal Vadisi'nden bilinçli ayrı.
 
 ## Teknoloji
-- Düz JS ES modülleri + Canvas 2D, derleme yok, dış dosya yok. ~9.000 satır JS.
+- Düz JS ES modülleri + Canvas 2D, derleme yok, dış dosya yok. ~11.000 satır JS.
 - Klasör: `C:\Users\yusuf\ZZ\zProjects\incremantal-game`. Çalıştırma: `node serve.mjs` → http://localhost:5174.
 - Kural: oyun kuralları `run.js` / `camp.js` / `quests.js` / `talk.js` / `state.js` / `data.js` içinde, DOM'suz; hikâye metni `story.js`; her şey `emit` üzerinden. Bot başsız oynar.
 - Test: `tools/dev.js` (`timerFrames` / `manualFrames` + `ev`, `campSweep`), `tools/sim.js` + `sim-node.mjs` (denge botu), `tools/story-check.mjs` (hikâye). **Sözdizimi: `node --input-type=module --check < dosya`** (`node --check` bu makinede ESM hatası yakalamıyor). Ayrıntı deponun `CLAUDE.md` dosyasında.
@@ -36,7 +36,8 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 ## Durum (2026-10-05)
 | Parça | Durum |
 |---|---|
-| Yayın | **canlı = `071332d`** (2026-10-05'te SSH ile doğrulandı: 22 dosyanın hepsi aynı). **Yerel `main` = `e636e29`**, 9 commit önde; push edilmedi, yayınlanmadı (Yusuf'un kararı) |
+| Yayın | **canlı = `42fc571`** (2026-10-05, Yusuf'un onayıyla push + `deploy/deploy.sh`; SSH ile 22 dosyanın hepsi yerelle aynı, yeni kod sunuluyor, `Cache-Control: no-cache`). Yerel ve uzak `main` eşit |
+| Süre ölçümü | `S.totalTime` (kamp dahil; başlıktan sonra, sayfa görünürken, 60 sn dokunulmazsa durur) ve ilk şafak (`S.stat.winRuns / winRoad / winTotal`). Günlükteki Kayıtlar'da ("Şafağa kadar: N sefer · süre") ve oyun sonu ekranında görünür. Eski kayıtlarda toplam süre 0'dan başlar |
 | Beceri halkası, karacık ailesi, zincirleme yıldızlar | yazıldı, incelendi (3 dal incelemesi: 0 kritik/yüksek, 1 orta, 9 düşük; hepsi düzeltildi), birleşti; görsel denetim canvas görüntüleriyle yapıldı. Gerçek kare döngüsüyle oynanmadı, sesler dinlenmedi ([[2026-10-05-karanlik-surusu-zincirleme-yildizlar-beceri-halkasi]]) |
 | Fener ve sefer | 1.–4. fener seferi bitirmez, 5. bitirir ([[2026-10-04-fener-seferi-bitirmez-yalniz-besinci-bitirir]]); iki inceleme + şüpheci; tek seferde iki fener tarayıcıda denenmedi |
 | Öğretici ipuçları | "yaparak öğren": oyunu durdurmaz, şeyin yanında çıkar, yapınca tik alır ([[2026-10-04-yaparak-ogren-ipuclari-oyunu-durduran-kart-yerine]]); insan oyuncuyla denenmedi. **Yusuf: tamamen değiştirilebilir** |
@@ -52,7 +53,7 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 | İnceleme kapısı | 2026-10-05: 3 dal incelemesi (sonnet + 2 opus; 1 orta, 9 düşük), şüpheci gerekmedi; denge diff'ini koordinatör okudu |
 
 ## Sıradaki işler
-0. **Onaylı sıranın üçü de yerelde bitti** (2026-10-05; Yusuf "hepsini sen yap" dedi, seçimleri Claude yaptı): beceri halkası, karacık ailesi, zincirleme yıldızlar, küçük düzeltmeler, denge ([[2026-10-04-devir-zorluk-ve-his-bulgulari]] → [[2026-10-05-karanlik-surusu-zincirleme-yildizlar-beceri-halkasi]]). Sırada: push + yayın kararı (Yusuf), sonra Yusuf ve arkadaşları oynasın.
+0. **Onaylı sıranın üçü de yerelde bitti** (2026-10-05; Yusuf "hepsini sen yap" dedi, seçimleri Claude yaptı): beceri halkası, karacık ailesi, zincirleme yıldızlar, küçük düzeltmeler, denge ([[2026-10-04-devir-zorluk-ve-his-bulgulari]] → [[2026-10-05-karanlik-surusu-zincirleme-yildizlar-beceri-halkasi]]). **Yayınlandı** (2026-10-05, `42fc571`). Sırada Yusuf ve arkadaşları oynasın. Bitirenler günlüğün Kayıtlar sayfasındaki "Şafağa kadar" satırını (sefer, toplam süre) ve "Yolda geçen süre"yi söylesin. Bunlar botla ve uzunluk sorusuyla karşılaştırılacak ([[2026-10-05-devir-oyun-uzunlugu]]).
    - Oynayınca bakılacaklar:
      - Karacık Çayır'da yeterince direnç veriyor mu, geç oyunda neredeyse zararsız olması iyi mi?
      - Fener başındaki kuşatma nasıl hissettiriyor?
