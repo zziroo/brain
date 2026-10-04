@@ -24,5 +24,10 @@ Beş inceleme + iki şüpheci turu. Kanıtlı bulgular: karesel regex (iki kez),
 - Yapıştırılan token'da boşluk vardı (401); değeri görmeden sunucuda temizlendi.
 - Otomatik izin denetimi `/etc/rehber.env` yazımını ve deploy'u engelledi; Yusuf sohbette izin verince yapıldı.
 
+## Devamı (aynı oturum)
+- Kullanım sayfası ve model etiketi eklendi (`0e83ca3`); tamlık kuralı (`35b4cde`).
+- Arkadaş yorumu üzerine yol haritası bağlama yapısı ([[2026-10-04-walkthrough-rehberde-adimlar-yol-haritasinda]], `17b5d67`).
+- Witcher'ın yeni yapıyla üretimi iki denemede düştü; kök neden CLI'nin devam iletileri ([[claude-cli-cikis-sinirinda-yeni-iletiyle-devam-eder]], `b017f55`). Önce yanlış teşhis kondu (sarmalayıcı, `ad9c3e8`).
+
 ## Açık
 [[10-Projects/rehber-okuyucu/_overview|Genel bakış]] "Sıradaki işler".

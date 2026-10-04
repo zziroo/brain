@@ -20,6 +20,9 @@ Witcher 3 rehberi (45 bölüm, model girdisi ~281 KB / ~111 bin token, 78 resmi 
 - Motor yolunda bilinmeyen alan belgeyi reddettirmez, atılır: doğrulayıcı çıktıyı yalnız izinli alanlardan kurduğu için güvenlik açısından eşdeğer.
 - Model seçimini küçük girdiyle yapılan denemeye dayandırma; en büyük gerçek girdiyle dene.
 
+## Düzeltme (aynı gün)
+İlk maddedeki "yanlış kapla döndürdü" okuması yanlıştı: gerçek neden çıktının sınırda kesilip yalnız son iletinin okunmasıydı ([[claude-cli-cikis-sinirinda-yeni-iletiyle-devam-eder]]). İkinci maddedeki kısaltma (10 kart, modelin kendi notuyla) ise gerçek. Opus aynı rehberde 78 kart, 321 madde üretti (iki deneme, 17,5 dk, ~125 bin çıkış token'ı).
+
 ## Doğrulanmadı
 Opus'un aynı rehberde tam belge üretip üretmediği (motor 2026-10-04'te Opus'a alındı, deneme Yusuf'ta). Opus da kısaltırsa ya da 64.000 çıkış token sınırına takılırsa sıradaki adım parçalı üretim.
 
