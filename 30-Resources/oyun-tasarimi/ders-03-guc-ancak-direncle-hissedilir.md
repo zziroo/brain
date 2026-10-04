@@ -18,7 +18,7 @@ source: Claude Code oturumu 82134d2a (2026-10-04); Yusuf'un Işık Bekçisi oyna
 ## 1. Zorluk ile hayal kırıklığı farklıdır
 - Zorluk: "kaybettim ama nedenini ve ne yapacağımı biliyorum." Hayal kırıklığı: "kaybettim ve elimden bir şey gelmiyordu / ne olduğunu anlamadım."
 - İyi bir kovalamaca: kazanılabilir, hedef bir açık pencereyi **gösterir**, yakalamak bir ödül anıdır.
-- Kodda (2026-10-04): ürkek ruh 120 hızla kaçıyor, bekçinin temel hızı 100; halenin hemen dışında (×1,15) kaçmaya başlıyor, yani ışığın kenarında oyalanıyor; 2,2 sn kaçınca 1,3 sn yoruluyor ama yorgunluğun ekranda hiçbir işareti yok. Sorun yalnız animasyon değil: hem sayı (yürüyerek kazanılamıyor) hem okunabilirlik (açık pencere görünmüyor).
+- Kodda (2026-10-04): ürkek ruh halenin hemen dışında (×1,15) kaçmaya başlıyor, yani ışığın kenarında oyalanıyor; 120 hızla kaçıyor, 2,2 sn kaçınca 1,3 sn yoruluyor ama yorgunluğun ekranda hiçbir işareti yok. Bekçinin temel hızı 100; Bataklık'a gelen oyuncu Adım yıldızlarıyla genelde daha hızlıdır, ama ışın tutarken ×0,62'ye düşer ve ruhtan yavaşlar. Sorun yalnız animasyon değil: okunabilirlik (açık pencere görünmüyor) ve ışın tutarken yetişememek. (İlk anlatımda "yürüyerek kazanılamıyor" denmişti; bu yalnız temel hızda doğru.)
 - Ders: tasarım teorisi oyuncu deneyimini yenmez; "kaçan ruh" seçeneği kağıtta iyiydi, oynayınca kötü hissettirdi.
 
 ## 2. Güç fantezisi kalabalık ister
