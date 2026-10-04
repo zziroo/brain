@@ -26,7 +26,7 @@ Kovandan çıkan arılar çayırdaki çiçeklerden nektar toplar, bal geliştirm
 
 ## Yayın
 - **Canlı:** https://games.ziroo.net/bal-vadisi · oyun listesi: https://games.ziroo.net/ (2026-10-03'ten beri; eski adresler 301; oyun kayıtları yeni kökte sıfırdan başladı)
-- Sunucuda statik dosya olarak duruyor (`/opt/ziroo-www/games`); yayınlama: `bash deploy/deploy.sh`, liste kaynağı `deploy/hub/`; betik yeni köke yayınlıyor (2026-10-03 geçişte kullanıldı). Karar: [[2026-10-03-joker-dns-ve-tools-games-alt-alan-adlari]] (eski: [[2026-10-02-oyunlar-diskort-alan-adinda-games-altinda]], [[2026-10-02-caddy-try-files-klasor-adresini-cozmuyor]]).
+- Sunucuda statik dosya olarak duruyor (`/opt/ziroo-www/games`); yayınlama: `bash deploy/deploy.sh` (2026-10-05'ten beri yalnız `bal-vadisi/`; oyun listesi ziroo-edge `www/games/`'te, [[2026-10-05-liste-sayfalari-ziroo-edge-te-ortak-neon-tasarim]]); betik yeni köke yayınlıyor (2026-10-03 geçişte kullanıldı). Karar: [[2026-10-03-joker-dns-ve-tools-games-alt-alan-adlari]] (eski: [[2026-10-02-oyunlar-diskort-alan-adinda-games-altinda]], [[2026-10-02-caddy-try-files-klasor-adresini-cozmuyor]]).
 
 ## Durum (2026-10-02)
 | Parça | Durum |
@@ -36,7 +36,7 @@ Kovandan çıkan arılar çayırdaki çiçeklerden nektar toplar, bal geliştirm
 | Denge | bot simülasyonuyla ayarlandı (Lale ~1 dk, prestij ~20-30 dk mantıklı); gerçek oyuncu testi yok |
 | İçerik derinliği | ~1,5-2 saatte tükeniyor (tek prestij katmanı) |
 | Git | yerel depo, 2 commit: `c5a3024` (oyun + yayın betiği), `189b889` (oyun listesine Işık Bekçisi kartı). Remote yok. Kimlik depoya yerel tanımlandı (makinede global git kimliği yok; Diskort deposundakiyle aynı) |
-| Oyun listesi sayfası | bu depoda: `deploy/hub/` (kartlar: Işık Bekçisi, Bal Vadisi). Yeni oyun eklenince kart buraya eklenir ve bu deponun betiği çalıştırılır |
+| Oyun listesi sayfası | 2026-10-05'ten beri bu depoda değil: ziroo-edge `www/games/` (kartlar: KAPIŞ, Işık Bekçisi, Bal Vadisi), yayın `bash deploy-www.sh games`. Yeni oyun eklenince kart oraya eklenir ([[2026-10-05-liste-sayfalari-ziroo-edge-te-ortak-neon-tasarim]]) |
 | Arayüz | Işık Bekçisi'nin arayüzü bu oyundan bilinçli olarak ayrıştırıldı (Yusuf "çok benziyor" dedi): [[2026-10-02-kamp-gezilebilir-us-ve-ayri-arayuz-kimligi]]. Bu oyunun kendi görünümü değişmedi |
 | İnceleme kapısı | Yusuf'un isteğiyle atlandı (öncelik ürüne bakmak) |
 

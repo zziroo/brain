@@ -24,7 +24,7 @@ Yusuf'un arkadaş grubu için tarayıcıda oynanan hero-shooter. Repo `C:\Users\
 - Dev sayfaları: `/gallery.html` (kahraman/efekt galerisi), `/audio-demo.html`, `/ui/demo.html`. Debug: `?debug=1&autojoin=new&name=X&hero=volt&bots=6`, `window.__kapis`.
 
 ## Güncel durum (2026-10-03; canlıdan doğrula)
-**Yayında:** https://kapis.ziroo.net (VPS, konteyner `kapis` 127.0.0.1:8085, ziroo-edge Caddy `hosts/kapis.caddy`; [[2026-10-03-yayin-paylasilan-vps-kapis-ziroo-net]]). Repo GitHub'da özel: `yusufholat/web-fps-game`; main'e gelen her commit push'lanır. Son yayın `a6eaba2`, 521 test yeşil. Deploy: repo kökünde `bash deploy/deploy.sh` (HEAD'i gönderir).
+**Yayında:** https://kapis.ziroo.net (VPS, konteyner `kapis` 127.0.0.1:8085, ziroo-edge Caddy `hosts/kapis.caddy`; [[2026-10-03-yayin-paylasilan-vps-kapis-ziroo-net]]). Repo GitHub'da özel: `yusufholat/web-fps-game`; main'e gelen her commit push'lanır. Son yayın `a6eaba2`, 521 test yeşil. Deploy: repo kökünde `bash deploy/deploy.sh` (HEAD'i gönderir). 2026-10-05'ten beri https://games.ziroo.net/ listesinde ilk kart ([[2026-10-05-liste-sayfalari-ziroo-edge-te-ortak-neon-tasarim]]).
 - **Kill cam**: ölümden önceki son 3,4 sn öldürenin gözünden oynar, Space ile geçilir, ayardan kapatılır; yalnızca istemci tarafı. Respawn 3 → 4 sn ([[2026-10-03-kill-cam-istemci-tarafi-tekrar]]).
 - **Denge paneli** (Esc → Denge): sunucu geneli, PIN korumalı, 252 ayar, kalıcı ([[2026-10-03-denge-paneli-sunucu-geneli-pin]]). PIN sunucuda `/opt/kapis/.env` (600); veri `/opt/kapis/data`.
 - Arkadaşlarla ilk deneme yapıldı: Chrome'da sorunsuz; Opera'da WASD takılıyor (çözülmedi, `docs/POLISH.md`).

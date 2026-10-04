@@ -55,7 +55,7 @@ Ses + ekran paylaşımı kalitesi; metin kanalları, tepkiler, dosyalar, roller,
 - Etkinlik: [[etkinlik-oyun-aktivitesi]]; DM: [[dm-sunucu-ayrimi]], [[dm-sesli-arama-ve-calma]], [[engelleme-dm-ve-arama]], [[dm-aramalari-yonetimde-ozel]]
 - Kayıt: [[kayit-sadece-hesap-davetiyesi]]; ekran paylaşımı: [[ekran-paylasimi-sabit-presetler]]
 - Kozmetik: [[kozmetik-sunucudan-paketler]], [[kozmetik-sadece-hover]]
-- Sunucu: [[sunucu-lightnode-istanbula-tasindi]], [[2026-10-03-joker-dns-ve-tools-games-alt-alan-adlari]]
+- Sunucu: [[sunucu-lightnode-istanbula-tasindi]], [[2026-10-03-joker-dns-ve-tools-games-alt-alan-adlari]], [[2026-10-05-liste-sayfalari-ziroo-edge-te-ortak-neon-tasarim]] (ders: [[ajan-yayin-betigini-sahte-ssh-ile-denerken-canliya-cikti]])
 - Yayın sahnesi: [[yayin-arayuzu-discord-tarzi]], [[sahne-izgarada-coklu-yayin]]; yayın sesi: [[uygulamaya-ozel-yayin-sesi-ertelendi]]
 - Ses: [[model-calisirken-agc-kapali-ve-sinirlayici]], [[konusma-halkasi-duyulan-sesten]]
 - Release: [[surum-cikarma-kurali]], [[surum-1-0-ertelendi]]; imzalama: [[kod-imzalama-ertelendi]]
