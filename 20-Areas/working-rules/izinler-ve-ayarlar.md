@@ -12,7 +12,7 @@ source: C:\Users\yusuf\.claude\settings.json; C:\Users\yusuf\ZZ\zProjects\diskor
 Komut desenleri gruplanmış özettir; literal komutlar, SSH satırları ve hash'ler bilerek kopyalanmadı.
 
 ## `~/.claude/settings.json` (global)
-Tek ayar: `autoUpdatesChannel: latest`. İzin kuralı yok.
+`autoUpdatesChannel: latest` ve iki izin kuralı: `Bash(ssh -i ~/.ssh/diskort_vps *)` ve `Bash(scp -i ~/.ssh/diskort_vps *)` (scp kuralı 2026-10-05'te Yusuf'un onayıyla eklendi: sunucuya dosya kopyalama auto-mode'da engellenmişti). Kurallar önek eşleşir: `-i` anahtardan hemen sonra gelmeli (`scp -q -i ...` eşleşmez, `scp -i ~/.ssh/diskort_vps -q ...` eşleşir). Global olduğu için alt ajanlar da yararlanır; ajan brifinglerinde SSH/yayın yasağını açık yaz ([[ajan-yayin-betigini-sahte-ssh-ile-denerken-canliya-cikti]]).
 
 ## `diskort/.claude/settings.local.json` (yalnız `permissions.allow`, 51 kural)
 | Grup | Ne izinli |
