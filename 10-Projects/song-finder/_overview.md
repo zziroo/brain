@@ -39,12 +39,13 @@ https://tools.ziroo.net/song-finder → konteyner `song-finder` (127.0.0.1:8092,
 - İlk canlı arama (Rick Astley linki): 524 sn (yerelde ~4 dk), parça başına ses ölçümü 2,8 sn (yerelde 1,3), bellek tepe ~690 MB, yük ortalaması ~1,0; LiveKit'in CPU'su etkilenmedi (o sırada Diskort'ta görüşme olup olmadığı bilinmiyor).
 
 ## Güncel durum (2026-10-04)
-Yayında, commit `0596358`. Sahibe özel kullanım sayfası `usage.html` (arama başına model, token, süre, tahmini maliyet; kayıt `DATA_DIR/usage.jsonl`, başarısız aramalar dahil). Giriş parolası Rehber Okuyucu ile aynı değere ayarlandı (iki dosyada ayrı kopya). Araç listesi kartı ziroo-edge `8b7adf6` (push edilmedi). 96 test geçiyor, iki tur güvenlik incelemesinden + kullanım sayfası incelemesinden geçti (kritik/yüksek bulgu yok, bulunanlar düzeltildi). Last.fm kaynağı çalışıyor.
+Yayında, commit `218b5ee`: keşif odaklı sürüm. Sonuçlar dört bilinirlik etiketiyle (keşif / az bilinen / bilinen / çok bilinen; Deezer şarkı `rank` + sanatçı `nb_fan`, `app/lib/popularity.js`) iki bölüme ayrılır: "Keşifler" (yalnız az bilinen, hedef 25) ve "Bilinen benzerler" (en fazla 6); sonuç sayfasında istemci tarafı bilinirlik kaydırıcısı. Topluluk işçisi kaldırıldı. Ses ölçümü 70 parça / 240 sn. Modeller sunucuda `opus` (`/etc/song-finder.env`). Kullanım sayfası `usage.html`. 110 test.
+- Canlı ölçüm (Radiohead – Reckoner, opus): 236 sn, 59 ölçüm (~3 sn/parça); ana liste yalnız 12 şarkı, benzerlik %62-73 (yerelde Duman 25 şarkı, %70+).
 
 ## Sıradaki işler
 - Yusuf birkaç şarkıyla deneyip öneri kalitesini değerlendirecek (karar onda).
 - Token yenileme: kullanılan token daha önce bir ekran görüntüsüyle sohbete düşmüştü; Yusuf "sonra değiştiririm" dedi. Değişince hem `/etc/claude-token.env` hem `/etc/rehber.env` güncellenmeli ve iki konteyner yeniden başlatılmalı. Rehber Okuyucu'yu ortak dosyaya geçirmek o projenin oturumunda yapılacak.
 - Doğrulanmadı: kullanım sayfasının canlıdaki görünümü (koordinatör parolayı girmediği için bakmadı); başarısız aramanın kullanım kaydı; Diskort'ta görüşme varken ses ölçümünün etkisi.
 - Depo GitHub'a gönderilmedi; ziroo-edge'de iki commit (`c7782d9`, `8b7adf6`) push edilmedi.
-- Canlıda arama ~9 dk; hızlandırmak için `AUDIO_MAX_TRACKS` düşürülebilir.
+- Bilinen sınırlar (keşif sürümü): Deezer `rank` bugünkü dinlenmeye bakar, bir zamanların hitleri "az bilinen" görünebilir (6 Underground, Novocaine For The Soul, Cigarette Daydreams); ikinci ölçü (yayın yılı / Last.fm dinlenme) önerildi, karar yok. Bazı türlerde ana liste 25'e ulaşmıyor. Arama sürerken `/api/preview` "Deezer sırası dolu" diyebilir. Deezer verisi eksik aramalar önbelleğe alınmaz.
 - Bilinen zayıflıklar: topluluk kaynağı neredeyse boş; listeler hâlâ çoğunlukla aynı sahneden; eski/alışılmadık kayıtlarda ses puanları düşük çıkıyor (eşik aramaya göre uyarlanıyor); işçi bağlamında hesap e-postası görünüyor (düşük risk, giderilmedi).
