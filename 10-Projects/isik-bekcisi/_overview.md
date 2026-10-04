@@ -52,6 +52,7 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 0. Yayınlandı. Yusuf ve arkadaşları oynasın: fenerden sonra yürümeye devam hissi, lazer hissi, geçiş temposu, ses seviyeleri, hikâyenin Türkçesi.
    - **Öğretici baştan tasarlanabilir** (Yusuf, 2026-10-04): durdurmayan 2–3 yeni yaklaşım seçenek olarak gösterilsin. Eski açık sorular (kabuk / prizma / diken / Kalp için canlandırma; tek vuruşta kabuklu tik yok, tıkla-git "yürü"yü tikliyor, kalabalıkta kutu taraf değiştiriyor) bu tasarıma girdi.
    - **Sıradaki iş, onaylı sıra** (Yusuf oynadıktan sonra, 2026-10-04): (1) beceri hazır işareti bekçinin üzerinde, (2) Çayır'dan başlayan karanlık düşman ailesi ve güçle büyüyen yoğunluk, (3) erken gelen, birbirini tetikleyen niteliksel yükseltmeler. Her birinde önce seçenekleri hareketli taslakla göster. Gözlemler, kod yerleri ve 1. işin A/B/C seçenekleri: [[2026-10-04-devir-zorluk-ve-his-bulgulari]].
+   - **Oyun uzunluğu** (Yusuf, 2026-10-05: "bu tür oyunları 3–4 saatte bitiriyorum, bizimki kısa mı?"). İnsan için tahmin ~1–1,5 saat; seferler baştan sona ~40 sn. Öneri: maliyet değil, sefer uzaması + içerik; hedef ~2–2,5 saat; önce gerçek oyuncu ölç. Hedef süre Yusuf'un kararı: [[2026-10-05-devir-oyun-uzunlugu]].
 1. Oynama geri bildirimi: WASD + fare iyi geldi mi; lazer ve yağ bedeli hissediliyor mu; kabuklu / prizma / diken okunuyor mu; konuşmalar fazla mı az mı; geçişler yavaş mı.
 2. Küçük yerleşim: Kandil'in balonu kapıda ekranın üst kenarına taşabiliyor (1366×768).
 3. 5. fenerden sonra gölge / pervane / ürkek / yaşlı istekleri de yapılamaz olunca panodan çekilsin (şu an 4 boş seferde değişiyor).
@@ -94,3 +95,4 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 - [[2026-10-04-ses-ayarlari-ve-yaparak-ogren-ipuclari]]
 - [[2026-10-04-fener-seferi-bitirmez]]
 - [[2026-10-04-devir-zorluk-ve-his-bulgulari]] (ZZ kökündeki tasarım dersinden devir)
+- [[2026-10-05-devir-oyun-uzunlugu]] (ZZ kökündeki tasarım dersinden devir)
