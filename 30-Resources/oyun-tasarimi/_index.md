@@ -14,6 +14,7 @@ Kodlama değil tasarım: döngüler, his, zorluk, tempo, ilerleme. Her ders bir 
 ## Dersler
 1. [[ders-01-ic-ice-donguler]]: oyun iç içe döngülerden oluşur (an / sefer / meta / yay)
 2. [[ders-02-zorluk-dusmandan-gelmez]]: zorluk direnç, bedel ve ustalık farkından gelir
+3. [[ders-03-guc-ancak-direncle-hissedilir]]: zorluk ile hayal kırıklığı, güç fantezisi kalabalık ister, niteliksel yükseltme ve sinerji, bilgi bakılan yerde olmalı
 
 ## Sıradaki konular (yol haritası)
 - His (game feel / juice): bir yakalama anı neden tatmin eder

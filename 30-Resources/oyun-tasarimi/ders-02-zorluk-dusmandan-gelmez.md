@@ -32,6 +32,7 @@ Tetris ve Celeste'de neredeyse hiç düşman yok ama ikisi de zordur. Doğru sor
 - **A. Gece'nin kendisi düşman:** çembere sürünen karanlık yaratıklar haleyi/yağı kemirir; hale yavaşlatır, ışın eritir. Çayır'da yavaş ve az, derinde hızlı ve çok. Işına ilk dakikadan amaç verir.
 - **B. Ruhlar avlansın:** bazı ruhlar ışık değince kaçar, çemberden çıkar; takip, köşeye sıkıştırma, ışınla uzaktan bitirme. Bataklık'taki ürkeklerin yumuşak hali.
 - **C. Ustalık ödülü:** kopunca sıfırlanan zincir, sefer içi mini hedefler; iyi oynayan daha çok kazanır, kötü oynayan yine ilerler. Tek başına tehlike hissi vermez.
-- Claude'un önerisi: A omurga + Çayır'da B'nin hafif hali. Karar Yusuf'un.
+- Claude'un ilk önerisi: A omurga + Çayır'da B'nin hafif hali. Karar Yusuf'un.
+- **Güncelleme (aynı gün):** Yusuf, Bataklık'taki kaçan ruhların oynarken iyi hissettirmediğini söyledi; B bu haliyle düştü. Nedeni ve geç oyun gözlemleri: [[ders-03-guc-ancak-direncle-hissedilir]].
 
 İlgili: [[30-Resources/oyun-tasarimi/_index|Oyun tasarımı dersleri]], [[ders-01-ic-ice-donguler]], [[10-Projects/isik-bekcisi/_overview|Işık Bekçisi]]
