@@ -13,7 +13,7 @@ source: oturum 2026-10-02 (incremantal-game); Shelldiver ve Rock Bottom analizi
 1. **Tema:** karanlık vadide fenerle ruh toplama. Sınırlayıcı kaynak (yağ) bir sayı değil, daralan ışık çemberinin kendisi.
 2. **Yakalama:** nişan yok; ışık çemberindeki her ruh aynı anda dolar. Beceri = rota, zincir (kombo), Parlama zamanlaması, tehlikeden kaçınma.
 3. **Dünya:** kuzeye uzanan tek bir vadi koridoru; derinlik = ilerleme. Arazi sabit tohumdan, ruhlar her koşuda yeniden üretilir.
-4. **Fener = kapı:** her bölgenin sonundaki fener ışıkla dolar (kalıcı). Yanınca **koşu biter**, yeni kademe yıldız açılır, sonraki koşu oradan başlar. Eski bölgeyi yeniden yürümek ya da kazmak yok.
+4. **Fener = kapı:** her bölgenin sonundaki fener ışıkla dolar (kalıcı). Yanınca **koşu biter**, yeni kademe yıldız açılır, sonraki koşu oradan başlar. Eski bölgeyi yeniden yürümek ya da kazmak yok. *(2026-10-04 değişti: 1.–4. fener seferi bitirmez, yalnız 5. bitirir; bkz. [[2026-10-04-fener-seferi-bitirmez-yalniz-besinci-bitirir]].)*
 5. **Beceri ağacı gökyüzünde:** yıldızlar; kademeler fener yandıkça görünür olur, böylece ağaç bir anda boğmaz.
 6. **Her bölge yeni mekanik getirir** ve oyunun gerçek bir finali (boss + şafak) vardır.
 7. **Koşu sonunda kayıp yok:** yağ bitince toplanan her şey kalır.

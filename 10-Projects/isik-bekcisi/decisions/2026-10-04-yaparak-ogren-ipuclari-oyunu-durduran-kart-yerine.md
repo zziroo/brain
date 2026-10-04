@@ -36,6 +36,7 @@ Yusuf'un geri bildirimi: alttaki ipucu satırı "çok belirsiz", oyuncunun okudu
 ## Sonuçlar / riskler
 - `run.js`: `meet(what, thing)` artık şeyi taşır ve yakınken 6 sn'de bir yeniden duyurur; `R.beaconBeam` eklendi. Simülasyon ve bot değişmedi (43–44 sefer).
 - Bilinen pürüzler: kabuklu ruh tek vuruşta yakalanırsa tik atmaz; kampta tıkla-git yürüyüşü de "yürü"yü tikler; imleç yokken yürümek "feneri çevir"i tikleyebilir; pervane ipucu ancak pervane yanınca tamamlanır; kalabalıkta kutu taraf değiştirebilir.
+- 2026-10-04 (sonraki oturum): Yusuf "tutorial tarafını komple değiştirebiliriz" dedi. Bu ipucu sistemi cilalanacak sabit tasarım değil; durdurmama ilkesi kalır, biçim baştan düşünülebilir.
 - Denenmedi: `prefers-reduced-motion`, ipucunun panel / konuşma altında gizlenmesi (yalnız koddan okundu), insan oyuncuyla his.
 
 ## İlgili
