@@ -65,3 +65,5 @@ Bu dizin yalnızca güncel-dönem aktarımında yazılan notları listeler (tari
 - 2026-10-02 · lesson · [[yerel-testte-ekran-paylasimi-gercek-pencere]] — Yerel testte ekran paylaşım seçicisi gerçek pencereleri gösterir
 - 2026-10-02 · lesson · [[server-testleri-tam-kosuda-kararsiz]] — Tam koşuda bir dosya testi bir kez düşebilir; tek başına tekrar çalıştır (unverified)
 - 2026-10-02 · session · [[2026-10-02-dm-arama-engelleme-ve-0-9-6]] — DM arama + engelleme, şema 25 deploy, 0.9.6 (unverified)
+- 2026-10-04 · lesson · [[caddy-reload-websocketleri-keser]] — Caddy reload açık WebSocket'leri keser; stream_close_delay 5m eklendi
+- 2026-10-04 · session · [[2026-10-04-geri-bildirim-kontrolu-ve-caddy-reload]] — hata kontrolü, Caddy reload kopması düzeltildi, panel deploy
