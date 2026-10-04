@@ -35,7 +35,7 @@ Kovandan çıkan arılar çayırdaki çiçeklerden nektar toplar, bal geliştirm
 | Yayın | canlı; tüm adresler ve oyunun açılışı canlıda doğrulandı. Yazı tipi sistem fontuna düşüyor (site CSP'si Google Fonts'u engelliyor) |
 | Denge | bot simülasyonuyla ayarlandı (Lale ~1 dk, prestij ~20-30 dk mantıklı); gerçek oyuncu testi yok |
 | İçerik derinliği | ~1,5-2 saatte tükeniyor (tek prestij katmanı) |
-| Git | yerel depo, 2 commit: `c5a3024` (oyun + yayın betiği), `189b889` (oyun listesine Işık Bekçisi kartı). Remote yok. Kimlik depoya yerel tanımlandı (makinede global git kimliği yok; Diskort deposundakiyle aynı) |
+| Git | GitHub `yusufholat/bal-vadisi` (origin). Son commit `3b087ee` (oyun listesi ziroo-edge'e taşındı, 2026-10-05). Kimlik depoya yerel tanımlandı (makinede global git kimliği yok; Diskort deposundakiyle aynı) |
 | Oyun listesi sayfası | 2026-10-05'ten beri bu depoda değil: ziroo-edge `www/games/` (kartlar: KAPIŞ, Işık Bekçisi, Bal Vadisi), yayın `bash deploy-www.sh games`. Yeni oyun eklenince kart oraya eklenir ([[2026-10-05-liste-sayfalari-ziroo-edge-te-ortak-neon-tasarim]]) |
 | Arayüz | Işık Bekçisi'nin arayüzü bu oyundan bilinçli olarak ayrıştırıldı (Yusuf "çok benziyor" dedi): [[2026-10-02-kamp-gezilebilir-us-ve-ayri-arayuz-kimligi]]. Bu oyunun kendi görünümü değişmedi |
 | İnceleme kapısı | Yusuf'un isteğiyle atlandı (öncelik ürüne bakmak) |
