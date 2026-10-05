@@ -7,7 +7,7 @@ tags: [pdf-ceviri, trados, ceviri, pdf, overview]
 source: oturum 2026-10-05 (document-formatter)
 ---
 
-# PDF Çeviri Düzeltici: Trados'un bozuk Türkçe DOCX'ini orijinal PDF'in düzenine yerleştirir
+# PDF Çeviri Düzeltici: Trados çevirisini (.sdlxliff ya da bozuk DOCX) orijinal PDF'in düzenine yerleştirir
 
 > Not canlı gerçek değildir: depo ve sunucu durumunu işlem yapmadan önce doğrula.
 
@@ -29,11 +29,26 @@ https://tools.ziroo.net/pdf-ceviri → konteyner `pdf-ceviri` (127.0.0.1:8097, k
 - Trados paragrafları PDF bloklarıyla örtüşmeyebilir (giriş cümlesi + ilk liste maddesi, sayfaya taşan paragraf): Türkçe, sınırlı adaylı DP ile bölünür; bölünen parçalar raporda "kesimi kontrol et" notuyla sarı. Kelime sırası farklı olduğu için bu kesimler zaman zaman bir iki kelime kayar.
 - Bir cümlesi çevrilmemiş paragraf İngilizce bırakılır (raporda not); "Draft" durumundakiler işaretlenir.
 - İlk deneme (4 sayfa RadiologyInfo makalesi, wkhtmltopdf PDF'i): 89 parçanın 85'i, sunucuda 2,5 sn (DOCX yolunda MiniMed 21 sayfa ~145 sn).
+- MiniMed sdlxliff'i (arkadaş PDF'i önce Word'e çevirmiş: `…pdf…docx.sdlxliff`): 852 parçanın 837'si, canlıda 16 sn; kalan 15 sdlxliff'te yok (form başlıkları, yasal notlar) ve Yusuf'un kuralıyla İngilizce kalır.
 - Aynı turda: tiresiz font adları (`ArialBold`) artık kalın/italik çözülüyor; çevrilen link metninin altındaki eski alt çizgiler kaldırılıyor (form doldurma çizgileri korunur); sağa yaslı tek satırlar (alt bilgi) sağa hizalanıyor.
+
+## Güncel durum (2026-10-05)
+Yayında `47eb772`. sdlxliff birincil girdi, DOCX yedek. Arkadaşın ekran görüntülerindeki hatalar (olay listesi, 2-3. adımlar, sabit doz tablosu, hücre içi İngilizce) sdlxliff ile giderildi.
 
 ## Kararlar
 - [[2026-10-05-pdf-ceviri-trados-ciktisini-orijinal-pdfe-yerlestir]]
+- [[2026-10-05-sdlxliff-birincil-girdi]]
 
-## Açık işler
-- `.sdlxliff` içindeki `Page {x} of {x}` gibi alan (field) içeren alt bilgiler çevrilmiyor, İngilizce kalıyor.
+## Öğrenilenler
+- [[2026-10-05-sezgisel-eslestirme-degisikligini-iki-belgede-fark-alarak-dogrula]]
+- [[2026-10-05-sdlxliff-yapisi-ve-tuzaklari]]
+
+## Oturumlar
+- [[2026-10-05-sdlxliff-destegi-ve-minimed-duzeltmeleri]]
+
+## Sıradaki işler
+- Arkadaş yeni sürümü sdlxliff ile denesin; çeviri hataları ("Instinct Settings form" → "İnsülin Ayarları formu", çevrilmemiş bir "Fixed Dose") ona iletilsin.
+- Trados paragrafı bölünen yerlerde kesim kaymaları kalıyor (raporda sarı); gerekirse iyileştirilir.
+- ziroo-edge `5b7f581` (kart metni) push edilmedi.
+- `.sdlxliff` içindeki `Page {x} of {x}` gibi alan içeren alt bilgiler çevrilmiyor, İngilizce kalıyor.
 - Görsel içi metinler çevrilmez; taranmış PDF desteklenmez.
