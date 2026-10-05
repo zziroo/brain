@@ -7,7 +7,9 @@ tags: [mac, gecis, claude, ortam]
 source: ZZ kök oturumu 2026-10-05 (Windows → Mac taşıma paketi)
 ---
 
-# Karar: Çalışma ortamı Windows'tan Mac'e taşınıyor; Claude geçmişi ve hafızası yollar çevrilerek paketle taşınır
+# Karar: Çalışma ortamı Windows'tan Mac'e taşınıyor; Claude hafızası yollar çevrilerek paketle taşınır, konuşma kayıtları Windows'ta kalır
+
+> **Güncelleme (aynı gün, taşımadan önce):** İlk plan konuşma kayıtlarını (`.jsonl`, yaklaşık 1,3 GB) da taşımaktı. Yusuf, kaybın yalnızca token raporunun eski dönemi olduğunu görünce vazgeçti. Kayıtlar Windows'ta arşiv olarak duruyor. Windows döneminin token özeti vault'a kaydedildi: [[2026-10-05-windows-donemi-token-ozeti]]. Paketi tam haliyle üretmek hâlâ mümkün: `TAM=1 bash hazirla.sh`.
 
 ## Bağlam
 Yusuf tüm Claude çalışmasını (ZZ, vault, oturumlar, hafıza, kurallar, token raporu) Windows'tan Mac'e taşımak istedi. Yalnızca ZZ'yi kopyalamak yetmiyor çünkü:
@@ -25,7 +27,7 @@ Yusuf tüm Claude çalışmasını (ZZ, vault, oturumlar, hafıza, kurallar, tok
 - Pakete girenler:
   - ZZ.
   - `diskort-inbox` ve `diskort-review`.
-  - `~/.claude` içinden: `CLAUDE.md`, `settings.json`, `skills/basla` ve `skills/kaydet`, `scheduled-tasks`, `orchestration-report`, `projects`. Oturum geçmişinin tamamı taşınır; eski `C--dev-*` klasörleri adları değişmeden, token raporu için.
+  - `~/.claude` içinden: `CLAUDE.md`, `settings.json`, `skills/basla` ve `skills/kaydet`, `scheduled-tasks`, `orchestration-report`, ve `projects` altından **yalnızca `memory/` klasörleri**. Konuşma kayıtları, eski `C--dev-*` klasörleri ve hafızası boş projeler pakete girmez.
 - Hazırlarken yapılan dönüşümler:
   - `C--Users-yusuf-ZZ*` klasörleri `-Users-ziroo-ZZ*` olarak yeniden adlandırıldı.
   - `.md` dosyalarındaki `C:\Users\yusuf\...` yolları `/Users/ziroo/...` oldu. `.jsonl` transkriptlere dokunulmadı.
@@ -36,8 +38,9 @@ Yusuf tüm Claude çalışmasını (ZZ, vault, oturumlar, hafıza, kurallar, tok
   - Kaydedilmemiş değişikliği olan repolara (vault ve steam-avgr-calculator) `autocrlf=input` verilir, dosyalara dokunulmaz. Not: taşımadan önce vault commit edildi. steam-avgr-calculator'daki değişiklik ise 98d802c düzeltmesini yanlışlıkla geri almış eski bir haldi; Yusuf'un onayıyla son commit'e döndürüldü. Bu nedenle bütün repolar temiz taşınıyor.
 
 ## Neden
-- Geçmiş ve hafıza taşınırsa token raporu kesintisiz devam eder ve hafıza kuralları kaybolmaz. Süreklilik zaten vault ve hafızadan geliyor.
-- Yol çevirisi betikle yapıldı. Bu sayede taşımadan hemen önce `bash hazirla.sh` ile paket tekrar üretilebilir ve son oturumlar da girer.
+- Süreklilik vault'tan, hafızadan ve kurallardan geliyor; bunlar taşınmazsa Mac'teki Claude projeleri ve tercihleri bilmeden başlar.
+- Eski konuşma kayıtlarının Mac'te tek işlevi token raporunu sürdürmek ve geçmişe bakmak olurdu. İçlerindeki Windows yolları yüzünden `--resume` ile devam etmek zaten önerilmiyor. Kayıtlar Windows'ta silinmeden kaldığı için gerçek bir kayıp yok.
+- Yol çevirisi betikle yapıldı. Bu sayede taşımadan hemen önce `bash hazirla.sh` ile paket tekrar üretilebilir ve son hafıza değişiklikleri de girer.
 - Betikleri ayrı bir inceleme ajanı iki tur okudu. Bulunan veri kaybı riski düzeltildi: git adımı tekrar çalışırsa Mac'te yapılmış değişiklikleri silebiliyordu.
 
 ## Reddedilen alternatifler
@@ -47,8 +50,9 @@ Yusuf tüm Claude çalışmasını (ZZ, vault, oturumlar, hafıza, kurallar, tok
   - `.claude.json` (Windows yolları ve hesap durumu içeriyor),
   - `cache`, `session-env`, `shell-snapshots`.
   Bunun yerine Mac'te yeniden giriş yapılıyor.
-- **Transkriptlerin (`.jsonl`) içindeki yolları da çevirmek:** Geçmiş kaydını bozma riski var, kazancı az. Eski oturum `claude --resume` ile açılabiliyor ama yeni iş için yeni oturum açılıyor.
-- **Geçmişi taşımadan Mac'te sıfırdan başlamak:** Token raporu eski dönemi kaybederdi; proje hafızası da elle yeniden kurulmak zorunda kalırdı.
+- **Konuşma kayıtlarını da taşımak (ilk plan):** Paket 761 MB olurdu; tek kazanç Mac'teki token raporunun eski dönemi de sayması olurdu. Bunun yerine Windows dönemi bir özet notla kapatıldı.
+- **Transkriptlerin (`.jsonl`) içindeki yolları da çevirmek:** Geçmiş kaydını bozma riski var, kazancı az. Kayıtlar zaten taşınmıyor.
+- **Mac'te tamamen sıfırdan başlamak (hafıza dahil):** Proje hafızası ve kurallar elle yeniden kurulmak zorunda kalırdı. Bunların bir kısmı unutulurdu.
 
 ## Sonuçlar / riskler
 - Pakette olmayanlar:
@@ -58,7 +62,7 @@ Yusuf tüm Claude çalışmasını (ZZ, vault, oturumlar, hafıza, kurallar, tok
   - diskort'taki yerel dosyalar (`.claude/settings.local.json`, `.claude/etkinlik-ekran/`, `now.txt`) taşındı ama git onları `.git/info/exclude` ile yok sayıyor. Bunlar commit edilmez, çünkü repo herkese açık.
 - SSH anahtarı (`~/.ssh/diskort_vps`) pakette yok, Yusuf kendisi taşır. iOS imza dosyaları OneDrive'daki `Yedekler` klasöründe.
 - Pakette projelerin `.env` dosyaları var. Kişisel yolla (USB ya da kendi bulut hesabı) taşınır, kurulumdan sonra silinir.
-- Masaüstü uygulamasının kenar çubuğundaki eski oturum listesi büyük ihtimalle Mac'te görünmez. Eski oturumlar `claude --resume` ile açılır.
+- Eski oturumlar Mac'te açılamaz; bakmak gerekirse Windows'tan bakılır. Mac'te token raporu sıfırdan başlar. Windows dönemi: [[2026-10-05-windows-donemi-token-ozeti]].
 - Zamanlanmış görevler Mac'te yeniden kurulana kadar Windows'ta çalışmaya devam eder. Mac'te kurulunca Windows'takiler kapatılmalı, yoksa gözcü iki kez çalışır.
 - Vault artık GitHub'da da var: özel repo `yusufholat/brain`, 2026-10-05'te açıldı. Önce gizli değer taraması yapıldı, çalışma ağacında ve geçmişte bir şey çıkmadı; notlarda yalnızca sunucu IP'leri var. İki makine bu repo üzerinden eşitlenir. Vault kuralları, `/basla` (pull) ve `/kaydet` (push) buna göre güncellendi.
 - Mac tarafında yapılacakların listesi: [[mac-gecisi-kontrol-listesi]].

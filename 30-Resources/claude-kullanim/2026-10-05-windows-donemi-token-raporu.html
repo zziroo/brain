@@ -1,0 +1,156 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Claude Kullanım Özeti</title>
+<style>
+:root{color-scheme:light;--bg:#fcfcfb;--panel:#fff;--text:#0b0b0b;--muted:#52514e;--border:#e6e4df;--grid:#efeeea;
+--s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--s4:#eda100;--s5:#e87ba4;--s6:#008300;--s7:#4a3aa7;--s8:#e34948}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#1a1a19;--panel:#222220;--text:#fff;--muted:#c3c2b7;--border:#3a3a37;--grid:#2c2c2a;
+--s1:#3987e5;--s2:#d95926;--s3:#199e70;--s4:#c98500;--s5:#d55181;--s6:#008300;--s7:#9085e9;--s8:#e66767}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#1a1a19;--panel:#222220;--text:#fff;--muted:#c3c2b7;--border:#3a3a37;--grid:#2c2c2a;
+--s1:#3987e5;--s2:#d95926;--s3:#199e70;--s4:#c98500;--s5:#d55181;--s6:#008300;--s7:#9085e9;--s8:#e66767}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:14px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:1100px;margin:0 auto;padding:24px 16px 48px}h1{font-size:22px;margin:0 0 4px}h2{font-size:16px;margin:0 0 12px}
+.sub{color:var(--muted);margin:0 0 20px}.card{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:16px;margin-bottom:16px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:16px}
+.kpi{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:12px 14px}.kpi b{display:block;font-size:24px;font-variant-numeric:tabular-nums}.kpi span{color:var(--muted);font-size:12px}
+.note{border-left:3px solid var(--s4);padding:8px 12px;background:var(--panel);border-radius:6px;color:var(--muted);font-size:13px;margin-bottom:16px}
+.hrow{display:grid;grid-template-columns:150px 1fr 120px;gap:10px;align-items:center;margin:6px 0}.hl{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hv{text-align:right;font-variant-numeric:tabular-nums}.hv small,small{color:var(--muted)}
+.track{display:flex;gap:2px;height:16px;align-items:stretch}.seg{display:block;height:100%;min-width:2px;border-radius:0}.seg:first-child{border-radius:4px 0 0 4px}.seg:last-child{border-radius:0 4px 4px 0}.seg:only-child{border-radius:4px}
+.cols{display:flex;gap:8px;align-items:flex-end;height:240px;border-bottom:1px solid var(--border);overflow-x:auto;padding-top:20px}
+.col{flex:1;min-width:34px;display:flex;flex-direction:column;align-items:center;height:100%}.vtrack{flex:1;width:70%;max-width:56px;display:flex;flex-direction:column;justify-content:flex-end;gap:2px}
+.vseg{display:block;width:100%;min-height:2px}.vtrack .vseg:first-child{border-radius:4px 4px 0 0}.colv{font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums}.coll{font-size:11px;color:var(--muted);padding:4px 0}
+.legend{display:flex;flex-wrap:wrap;gap:14px;margin:0 0 12px;font-size:13px;color:var(--muted)}.legend i,.sw{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:baseline}
+.tw{overflow-x:auto}table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}th,td{padding:6px 8px;border-bottom:1px solid var(--grid);text-align:left;white-space:nowrap}th{color:var(--muted);font-weight:500;font-size:12px}td.num{font-weight:600}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}@media(max-width:760px){.grid2{grid-template-columns:1fr}.hrow{grid-template-columns:100px 1fr 90px}}
+#tip{position:fixed;pointer-events:none;background:var(--text);color:var(--bg);padding:4px 8px;border-radius:6px;font-size:12px;display:none;z-index:9}
+footer{color:var(--muted);font-size:12px}
+</style></head><body><main>
+<h1>Claude kullanım özeti</h1>
+<p class="sub">2026-09-25 → 2026-10-05 · 11 gün · 235 oturum, 358 subagent, 33.781 model çağrısı</p>
+<div class="note">Max aboneliğinde gerçek ödeme sabit. Buradaki $ değerleri, aynı token'ları API liste fiyatından ödeseydin tutacak <b>eşdeğer maliyet</b> — hangi modelin/projenin limitini ne kadar yediğini karşılaştırmak için.</div>
+<div class="kpis">
+<div class="kpi"><span>API-eşdeğeri toplam</span><b>$3,713</b></div>
+<div class="kpi"><span>Günlük ortalama</span><b>$338</b></div>
+<div class="kpi"><span>Toplam token</span><b>10.12B</b></div>
+<div class="kpi"><span>Çıktı token</span><b>16.8M</b></div>
+<div class="kpi"><span>Önbellekten okunan pay</span><b>97.9%</b></div>
+</div>
+<section class="card"><h2>Model bazında</h2><div class="hrow"><div class="hl">Opus 5.5</div>
+<div class="track"><span class="seg" style="width:100.00%;background:var(--s1)" data-tip="Opus 5.5: $2,599 · 8.26B token"></span></div>
+<div class="hv">$2,599 <small>70.0%</small></div></div><div class="hrow"><div class="hl">Fable 5.1</div>
+<div class="track"><span class="seg" style="width:32.34%;background:var(--s2)" data-tip="Fable 5.1: $840 · 1.01B token"></span></div>
+<div class="hv">$840 <small>22.6%</small></div></div><div class="hrow"><div class="hl">Sonnet 5.5</div>
+<div class="track"><span class="seg" style="width:10.04%;background:var(--s3)" data-tip="Sonnet 5.5: $261 · 794.3M token"></span></div>
+<div class="hv">$261 <small>7.0%</small></div></div><div class="hrow"><div class="hl">Sonnet 5</div>
+<div class="track"><span class="seg" style="width:0.50%;background:var(--s4)" data-tip="Sonnet 5: $12.90 · 46.0M token"></span></div>
+<div class="hv">$12.90 <small>0.3%</small></div></div>
+<div class="tw" style="margin-top:14px"><table><thead><tr><th>Model</th><th>Çağrı</th><th>Giriş</th><th>Çıktı</th><th>Önbellek okuma</th><th>Önbellek yazma</th><th>Maliyet</th><th>Pay</th></tr></thead><tbody><tr><td><i class="sw" style="background:var(--s1)"></i>Opus 5.5</td><td>26.323</td>
+<td>53.8K</td><td>11.6M</td><td>8.12B</td><td>133.7M</td>
+<td class="num">$2,599</td><td>70.0%</td></tr><tr><td><i class="sw" style="background:var(--s2)"></i>Fable 5.1</td><td>3.170</td>
+<td>23.3K</td><td>3.7M</td><td>983.4M</td><td>26.6M</td>
+<td class="num">$840</td><td>22.6%</td></tr><tr><td><i class="sw" style="background:var(--s3)"></i>Sonnet 5.5</td><td>3.922</td>
+<td>7.9K</td><td>1.4M</td><td>755.3M</td><td>37.6M</td>
+<td class="num">$261</td><td>7.0%</td></tr><tr><td><i class="sw" style="background:var(--s4)"></i>Sonnet 5</td><td>366</td>
+<td>732</td><td>35.1K</td><td>44.6M</td><td>1.5M</td>
+<td class="num">$12.90</td><td>0.3%</td></tr></tbody></table></div></section>
+<section class="card"><h2>Günlük</h2><div class="legend"><span><i style="background:var(--s1)"></i>Opus 5.5</span><span><i style="background:var(--s2)"></i>Fable 5.1</span><span><i style="background:var(--s3)"></i>Sonnet 5.5</span><span><i style="background:var(--s4)"></i>Sonnet 5</span></div><div class="cols"><div class="col"><div class="colv">$11.43</div><div class="vtrack"><span class="vseg" style="height:1.395%;background:var(--s1)" data-tip="2026-09-25 · Opus 5.5: $11.43"></span></div><div class="coll">09.25</div></div><div class="col"><div class="colv">$137</div><div class="vtrack"><span class="vseg" style="height:16.730%;background:var(--s1)" data-tip="2026-09-26 · Opus 5.5: $137"></span></div><div class="coll">09.26</div></div><div class="col"><div class="colv">$528</div><div class="vtrack"><span class="vseg" style="height:64.424%;background:var(--s1)" data-tip="2026-09-27 · Opus 5.5: $528"></span></div><div class="coll">09.27</div></div><div class="col"><div class="colv">$266</div><div class="vtrack"><span class="vseg" style="height:1.574%;background:var(--s4)" data-tip="2026-09-28 · Sonnet 5: $12.90"></span><span class="vseg" style="height:30.900%;background:var(--s1)" data-tip="2026-09-28 · Opus 5.5: $253"></span></div><div class="coll">09.28</div></div><div class="col"><div class="colv">$138</div><div class="vtrack"><span class="vseg" style="height:0.955%;background:var(--s3)" data-tip="2026-09-29 · Sonnet 5.5: $7.82"></span><span class="vseg" style="height:15.860%;background:var(--s1)" data-tip="2026-09-29 · Opus 5.5: $130"></span></div><div class="coll">09.29</div></div><div class="col"><div class="colv">$370</div><div class="vtrack"><span class="vseg" style="height:3.427%;background:var(--s3)" data-tip="2026-09-30 · Sonnet 5.5: $28.07"></span><span class="vseg" style="height:41.716%;background:var(--s1)" data-tip="2026-09-30 · Opus 5.5: $342"></span></div><div class="coll">09.30</div></div><div class="col"><div class="colv">$257</div><div class="vtrack"><span class="vseg" style="height:1.761%;background:var(--s3)" data-tip="2026-10-01 · Sonnet 5.5: $14.42"></span><span class="vseg" style="height:18.997%;background:var(--s2)" data-tip="2026-10-01 · Fable 5.1: $156"></span><span class="vseg" style="height:10.603%;background:var(--s1)" data-tip="2026-10-01 · Opus 5.5: $86.84"></span></div><div class="coll">10.01</div></div><div class="col"><div class="colv">$819</div><div class="vtrack"><span class="vseg" style="height:7.969%;background:var(--s3)" data-tip="2026-10-02 · Sonnet 5.5: $65.27"></span><span class="vseg" style="height:51.026%;background:var(--s2)" data-tip="2026-10-02 · Fable 5.1: $418"></span><span class="vseg" style="height:41.004%;background:var(--s1)" data-tip="2026-10-02 · Opus 5.5: $336"></span></div><div class="coll">10.02</div></div><div class="col"><div class="colv">$351</div><div class="vtrack"><span class="vseg" style="height:2.100%;background:var(--s3)" data-tip="2026-10-03 · Sonnet 5.5: $17.20"></span><span class="vseg" style="height:27.381%;background:var(--s2)" data-tip="2026-10-03 · Fable 5.1: $224"></span><span class="vseg" style="height:13.375%;background:var(--s1)" data-tip="2026-10-03 · Opus 5.5: $110"></span></div><div class="coll">10.03</div></div><div class="col"><div class="colv">$781</div><div class="vtrack"><span class="vseg" style="height:14.536%;background:var(--s3)" data-tip="2026-10-04 · Sonnet 5.5: $119"></span><span class="vseg" style="height:5.211%;background:var(--s2)" data-tip="2026-10-04 · Fable 5.1: $42.68"></span><span class="vseg" style="height:75.621%;background:var(--s1)" data-tip="2026-10-04 · Opus 5.5: $619"></span></div><div class="coll">10.04</div></div><div class="col"><div class="colv">$55.62</div><div class="vtrack"><span class="vseg" style="height:1.117%;background:var(--s3)" data-tip="2026-10-05 · Sonnet 5.5: $9.15"></span><span class="vseg" style="height:5.674%;background:var(--s1)" data-tip="2026-10-05 · Opus 5.5: $46.47"></span></div><div class="coll">10.05</div></div></div></section>
+<section class="card"><h2>Proje bazında</h2><div class="legend"><span><i style="background:var(--s1)"></i>Opus 5.5</span><span><i style="background:var(--s2)"></i>Fable 5.1</span><span><i style="background:var(--s3)"></i>Sonnet 5.5</span><span><i style="background:var(--s4)"></i>Sonnet 5</span></div><div class="hrow"><div class="hl">diskort</div><div class="track"><span class="seg" style="width:86.769%;background:var(--s1)" data-tip="diskort · Opus 5.5: $1,497"></span><span class="seg" style="width:10.050%;background:var(--s2)" data-tip="diskort · Fable 5.1: $173"></span><span class="seg" style="width:2.434%;background:var(--s3)" data-tip="diskort · Sonnet 5.5: $41.98"></span><span class="seg" style="width:0.748%;background:var(--s4)" data-tip="diskort · Sonnet 5: $12.90"></span></div>
+<div class="hv">$1,725 <small>46.5%</small></div></div><div class="hrow"><div class="hl">web-fps-game</div><div class="track"><span class="seg" style="width:26.217%;background:var(--s1)" data-tip="web-fps-game · Opus 5.5: $452"></span><span class="seg" style="width:18.449%;background:var(--s2)" data-tip="web-fps-game · Fable 5.1: $318"></span><span class="seg" style="width:8.112%;background:var(--s3)" data-tip="web-fps-game · Sonnet 5.5: $140"></span></div>
+<div class="hv">$910 <small>24.5%</small></div></div><div class="hrow"><div class="hl">incremantal-game</div><div class="track"><span class="seg" style="width:17.026%;background:var(--s1)" data-tip="incremantal-game · Opus 5.5: $294"></span><span class="seg" style="width:13.850%;background:var(--s2)" data-tip="incremantal-game · Fable 5.1: $239"></span><span class="seg" style="width:2.593%;background:var(--s3)" data-tip="incremantal-game · Sonnet 5.5: $44.73"></span></div>
+<div class="hv">$577 <small>15.5%</small></div></div><div class="hrow"><div class="hl">achievement-guide-formatter</div><div class="track"><span class="seg" style="width:5.948%;background:var(--s1)" data-tip="achievement-guide-formatter · Opus 5.5: $103"></span><span class="seg" style="width:2.347%;background:var(--s2)" data-tip="achievement-guide-formatter · Fable 5.1: $40.48"></span><span class="seg" style="width:0.384%;background:var(--s3)" data-tip="achievement-guide-formatter · Sonnet 5.5: $6.63"></span></div>
+<div class="hv">$150 <small>4.0%</small></div></div><div class="hrow"><div class="hl">web-boss-teaser</div><div class="track"><span class="seg" style="width:5.125%;background:var(--s1)" data-tip="web-boss-teaser · Opus 5.5: $88.41"></span><span class="seg" style="width:0.107%;background:var(--s3)" data-tip="web-boss-teaser · Sonnet 5.5: $1.84"></span></div>
+<div class="hv">$90.25 <small>2.4%</small></div></div><div class="hrow"><div class="hl">song-finder</div><div class="track"><span class="seg" style="width:0.662%;background:var(--s1)" data-tip="song-finder · Opus 5.5: $11.43"></span><span class="seg" style="width:4.025%;background:var(--s2)" data-tip="song-finder · Fable 5.1: $69.43"></span><span class="seg" style="width:0.468%;background:var(--s3)" data-tip="song-finder · Sonnet 5.5: $8.07"></span></div>
+<div class="hv">$88.93 <small>2.4%</small></div></div><div class="hrow"><div class="hl">ZZ (genel)</div><div class="track"><span class="seg" style="width:3.197%;background:var(--s1)" data-tip="ZZ (genel) · Opus 5.5: $55.14"></span><span class="seg" style="width:0.628%;background:var(--s3)" data-tip="ZZ (genel) · Sonnet 5.5: $10.84"></span></div>
+<div class="hv">$65.98 <small>1.8%</small></div></div><div class="hrow"><div class="hl">string-tool</div><div class="track"><span class="seg" style="width:2.801%;background:var(--s1)" data-tip="string-tool · Opus 5.5: $48.31"></span><span class="seg" style="width:0.362%;background:var(--s3)" data-tip="string-tool · Sonnet 5.5: $6.25"></span></div>
+<div class="hv">$54.56 <small>1.5%</small></div></div><div class="hrow"><div class="hl">voice-detector</div><div class="track"><span class="seg" style="width:1.165%;background:var(--s1)" data-tip="voice-detector · Opus 5.5: $20.10"></span></div>
+<div class="hv">$20.10 <small>0.5%</small></div></div><div class="hrow"><div class="hl">steam-avgr-calculator</div><div class="track"><span class="seg" style="width:1.098%;background:var(--s1)" data-tip="steam-avgr-calculator · Opus 5.5: $18.94"></span><span class="seg" style="width:0.042%;background:var(--s3)" data-tip="steam-avgr-calculator · Sonnet 5.5: $0.72"></span></div>
+<div class="hv">$19.65 <small>0.5%</small></div></div><div class="hrow"><div class="hl">ziroobank-expenses</div><div class="track"><span class="seg" style="width:0.630%;background:var(--s1)" data-tip="ziroobank-expenses · Opus 5.5: $10.88"></span></div>
+<div class="hv">$10.88 <small>0.3%</small></div></div><div class="hrow"><div class="hl">diskurt</div><div class="track"><span class="seg" style="width:0.014%;background:var(--s1)" data-tip="diskurt · Opus 5.5: $0.25"></span></div>
+<div class="hv">$0.25 <small>0.0%</small></div></div></section>
+<div class="grid2">
+<section class="card"><h2>Ana oturum vs subagent</h2><div class="tw"><table><thead><tr><th></th><th>Çağrı</th><th>Çıktı</th><th>Token</th><th>Maliyet</th><th>Pay</th></tr></thead><tbody><tr><td>Ana oturum</td><td>8.144</td><td>7.7M</td><td>2.51B</td><td class="num">$1,131</td><td>30.5%</td></tr><tr><td>Subagent</td><td>25.637</td><td>9.1M</td><td>7.61B</td><td class="num">$2,582</td><td>69.5%</td></tr></tbody></table></div></section>
+<section class="card"><h2>Subagent türleri</h2><div class="tw"><table><thead><tr><th>Tür</th><th>Çağrı</th><th>Çıktı</th><th>Maliyet</th></tr></thead><tbody><tr><td>general-purpose</td><td>23.839</td><td>9.0M</td><td class="num">$2,487</td></tr><tr><td>?</td><td>1.752</td><td>88.6K</td><td class="num">$92.49</td></tr><tr><td>Explore</td><td>37</td><td>21.3K</td><td class="num">$2.20</td></tr><tr><td>claude-code-guide</td><td>9</td><td>100</td><td class="num">$0.29</td></tr></tbody></table></div></section>
+</div>
+<section class="card"><h2>En pahalı 25 oturum</h2><div class="legend"><span><i style="background:var(--s1)"></i>Opus 5.5</span><span><i style="background:var(--s2)"></i>Fable 5.1</span><span><i style="background:var(--s3)"></i>Sonnet 5.5</span><span><i style="background:var(--s4)"></i>Sonnet 5</span></div><div class="tw"><table><thead><tr><th>#</th><th>Oturum</th><th>Proje</th><th>Başlangıç</th><th>Subagent</th><th>Token</th><th>Maliyet</th><th>Model dağılımı</th></tr></thead><tbody><tr><td>1</td>
+<td>farkli temalar eklenmesi</td><td>web-fps-game</td><td>2026-10-04</td>
+<td>19</td><td>1.66B</td><td class="num">$540</td>
+<td style="min-width:120px"><div class="track"><span class="seg" style="width:83.652%;background:var(--s1)" data-tip="farkli temalar eklenmesi · Opus 5.5: $452"></span><span class="seg" style="width:16.348%;background:var(--s3)" data-tip="farkli temalar eklenmesi · Sonnet 5.5: $88.33"></span></div></td></tr><tr><td>2</td>
+<td>Diskort gelistirme</td><td>diskort</td><td>2026-09-26</td>
+<td>14</td><td>1.34B</td><td class="num">$344</td>
+<td style="min-width:120px"><div class="track"><span class="seg" style="width:63.588%;background:var(--s1)" data-tip="Diskort gelistirme · Opus 5.5: $344"></span></div></td></tr><tr><td>3</td>
+<td>Diskort gelistirme devam</td><td>diskort</td><td>2026-09-27</td>
+<td>38</td><td>1.05B</td><td class="num">$292</td>
+<td style="min-width:120px"><div class="track"><span class="seg" style="width:54.079%;background:var(--s1)" data-tip="Diskort gelistirme devam · Opus 5.5: $292"></span></div></td></tr><tr><td>4</td>
+<td>diskort suslu tasarimlar gelistirmesi</td><td>diskort</td><td>2026-09-30</td>
+<td>26</td><td>754.5M</td><td class="num">$260</td>
+<td style="min-width:120px"><div class="track"><span class="seg" style="width:46.054%;background:var(--s1)" data-tip="diskort suslu tasarimlar gelistirmesi · Opus 5.5: $249"></span><span class="seg" style="width:1.985%;background:var(--s3)" data-tip="diskort suslu tasarimlar gelistirmesi · Sonnet 5.5: $10.73"></span></div></td></tr><tr><td>5</td>
+<td>Web tabanlı FPS oyunu</td><td>web-fps-game</td><td>2026-10-02</td>
+<td>28</td><td>419.8M</td><td class="num">$250</td>
+<td style="min-width:120px"><div class="track"><span class="seg" style="width:37.438%;background:var(--s2)" data-tip="Web tabanlı FPS oyunu · Fable 5.1: $202"></span><span class="seg" style="width:8.879%;background:var(--s3)" data-tip="Web tabanlı FPS oyunu · Sonnet 5.5: $47.98"></span></div></td></tr><tr><td>6</td>
+<td>geribildirim gelistirmeleri</td><td>incremantal-game</td><td>2026-10-02</td>
+<td>13</td><td>619.2M</td><td class="num">$211</td>
+<td style="min-width:120px"><div class="track"><span class="seg" style="width:32.687%;background:var(--s1)" data-tip="geribildirim gelistirmeleri · Opus 5.5: $177"></span><span class="seg" style="width:5.616%;background:var(--s2)" data-tip="geribildirim gelistirmeleri · Fable 5.1: $30.35"></span><span class="seg" style="width:0.660%;background:var(--s3)" data-tip="geribildirim gelistirmeleri · Sonnet 5.5: $3.57"></span></div></td></tr><tr><td>7</td>
+<td>Achievement guide formatter ve analyzer</td><td>achievement-guide-formatter</td><td>2026-10-03</td>
+<td>13</td><td>352.0M</td><td class="num">$150</td>
+<td style="min-width:120px"><div class="track"><span class="seg" style="width:18.987%;background:var(--s1)" data-tip="Achievement guide formatter ve analyzer · Opus 5.5: $103"></span><span class="seg" style="width:7.492%;background:var(--s2)" data-tip="Achievement guide formatter ve analyzer · Fable 5.1: $40.48"></span><span class="seg" style="width:1.227%;background:var(--s3)" data-tip="Achievement guide formatter ve analyzer · Sonnet 5.5: $6.63"></span></div></td></tr><tr><td>8</td>
+<td>yayin baglanti sorunlari analizi</td><td>diskort</td><td>2026-10-01</td>
+<td>7</td><td>175.4M</td><td class="num">$148</td>
+<td style="min-width:120px"><div class="track"><span class="seg" style="width:27.339%;background:var(--s2)" data-tip="yayin baglanti sorunlari analizi · Fable 5.1: $148"></span></div></td></tr><tr><td>9</td>
+<td>2D inkremental oyun tasarımı</td><td>incremantal-game</td><td>2026-10-02</td>
+<td>3</td><td>219.3M</td><td class="num">$143</td>
+<td style="min-width:120px"><div class="track"><span class="seg" style="width:25.022%;background:var(--s2)" data-tip="2D inkremental oyun tasarımı · Fable 5.1: $135"></span><span class="seg" style="width:1.503%;background:var(--s3)" data-tip="2D inkremental oyun tasarımı · Sonnet 5.5: $8.12"></span></div></td></tr><tr><td>10</td>
+<td>hissiyat guncellemeleri</td><td>incremantal-game</td><td>2026-10-04</td>
+<td>8</td><td>464.6M</td><td class="num">$138</td>
+<td style="min-width:120px"><div class="track"><span class="seg" style="width:19.594%;background:var(--s1)" data-tip="hissiyat guncellemeleri · Opus 5.5: $106"></span><span class="seg" style="width:6.037%;background:var(--s3)" data-tip="hissiyat guncellemeleri · Sonnet 5.5: $32.62"></span></div></td></tr><tr><td>11</td>
+<td>diskort gelistirmeye devam</td><td>diskort</td><td>2026-09-28</td>
+<td>32</td><td>440.3M</td><td class="num">$134</td>
+<td style="min-width:120px"><div class="track"><span class="seg" style="width:24.121%;background:var(--s1)" data-tip="diskort gelistirmeye devam · Opus 5.5: $130"></span><span class="seg" style="width:0.447%;background:var(--s3)" data-tip="diskort gelistirmeye devam · Sonnet 5.5: $2.41"></span><span class="seg" style="width:0.303%;background:var(--s4)" data-tip="diskort gelistirmeye devam · Sonnet 5: $1.64"></span></div></td></tr><tr><td>12</td>
+<td>3D boss savaşı demosu</td><td>web-boss-teaser</td><td>2026-10-02</td>
+<td>7</td><td>277.3M</td><td class="num">$90.05</td>
+<td style="min-width:120px"><div class="track"><span class="seg" style="width:16.325%;background:var(--s1)" data-tip="3D boss savaşı demosu · Opus 5.5: $88.21"></span><span class="seg" style="width:0.341%;background:var(--s3)" data-tip="3D boss savaşı demosu · Sonnet 5.5: $1.84"></span></div></td></tr><tr><td>13</td>
+<td>Diskort gelistirme devam 2</td><td>diskort</td><td>2026-09-28</td>
+<td>3</td><td>264.5M</td><td class="num">$73.62</td>
+<td style="min-width:120px"><div class="track"><span class="seg" style="width:13.625%;background:var(--s1)" data-tip="Diskort gelistirme devam 2 · Opus 5.5: $73.62"></span></div></td></tr><tr><td>14</td>
+<td>dm uzerinden konusma ve yayin ozellikleri</td><td>diskort</td><td>2026-10-01</td>
+<td>9</td><td>187.0M</td><td class="num">$67.54</td>
+<td style="min-width:120px"><div class="track"><span class="seg" style="width:12.180%;background:var(--s1)" data-tip="dm uzerinden konusma ve yayin ozellikleri · Opus 5.5: $65.82"></span><span class="seg" style="width:0.319%;background:var(--s3)" data-tip="dm uzerinden konusma ve yayin ozellikleri · Sonnet 5.5: $1.73"></span></div></td></tr><tr><td>15</td>
+<td>diskortumuzu gelistiriyoruz</td><td>diskort</td><td>2026-09-29</td>
+<td>14</td><td>185.1M</td><td class="num">$67.07</td>
+<td style="min-width:120px"><div class="track"><span class="seg" style="width:11.724%;background:var(--s1)" data-tip="diskortumuzu gelistiriyoruz · Opus 5.5: $63.35"></span><span class="seg" style="width:0.689%;background:var(--s3)" data-tip="diskortumuzu gelistiriyoruz · Sonnet 5.5: $3.72"></span></div></td></tr><tr><td>16</td>
+<td>diskort etkinlik karti tasarimi</td><td>diskort</td><td>2026-09-30</td>
+<td>15</td><td>195.3M</td><td class="num">$63.63</td>
+<td style="min-width:120px"><div class="track"><span class="seg" style="width:11.263%;background:var(--s1)" data-tip="diskort etkinlik karti tasarimi · Opus 5.5: $60.86"></span><span class="seg" style="width:0.513%;background:var(--s3)" data-tip="diskort etkinlik karti tasarimi · Sonnet 5.5: $2.77"></span></div></td></tr><tr><td>17</td>
+<td>Web tabanlı FPS oyunu</td><td>web-fps-game</td><td>2026-10-02</td>
+<td></td><td>44.6M</td><td class="num">$59.62</td>
+<td style="min-width:120px"><div class="track"><span class="seg" style="width:11.034%;background:var(--s2)" data-tip="Web tabanlı FPS oyunu · Fable 5.1: $59.62"></span></div></td></tr><tr><td>18</td>
+<td>Oyun çeviri dosyası dönüştürücü</td><td>string-tool</td><td>2026-10-02</td>
+<td>10</td><td>137.0M</td><td class="num">$54.56</td>
+<td style="min-width:120px"><div class="track"><span class="seg" style="width:8.941%;background:var(--s1)" data-tip="Oyun çeviri dosyası dönüştürücü · Opus 5.5: $48.31"></span><span class="seg" style="width:1.157%;background:var(--s3)" data-tip="Oyun çeviri dosyası dönüştürücü · Sonnet 5.5: $6.25"></span></div></td></tr><tr><td>19</td>
+<td>Benzer şarkı bulma aracı</td><td>song-finder</td><td>2026-10-03</td>
+<td>6</td><td>74.6M</td><td class="num">$54.32</td>
+<td style="min-width:120px"><div class="track"><span class="seg" style="width:2.115%;background:var(--s1)" data-tip="Benzer şarkı bulma aracı · Opus 5.5: $11.43"></span><span class="seg" style="width:7.831%;background:var(--s2)" data-tip="Benzer şarkı bulma aracı · Fable 5.1: $42.31"></span><span class="seg" style="width:0.108%;background:var(--s3)" data-tip="Benzer şarkı bulma aracı · Sonnet 5.5: $0.58"></span></div></td></tr><tr><td>20</td>
+<td>Discord benzeri ses platformu (fork)</td><td>diskort</td><td>2026-09-26</td>
+<td></td><td>123.8M</td><td class="num">$43.61</td>
+<td style="min-width:120px"><div class="track"><span class="seg" style="width:8.070%;background:var(--s1)" data-tip="Discord benzeri ses platformu (fork) · Opus 5.5: $43.61"></span></div></td></tr><tr><td>21</td>
+<td>Web tabanlı FPS oyunu</td><td>web-fps-game</td><td>2026-10-02</td>
+<td>4</td><td>68.2M</td><td class="num">$41.45</td>
+<td style="min-width:120px"><div class="track"><span class="seg" style="width:7.002%;background:var(--s2)" data-tip="Web tabanlı FPS oyunu · Fable 5.1: $37.83"></span><span class="seg" style="width:0.669%;background:var(--s3)" data-tip="Web tabanlı FPS oyunu · Sonnet 5.5: $3.62"></span></div></td></tr><tr><td>22</td>
+<td>Ses ayarları paneli ve guide menüleri</td><td>incremantal-game</td><td>2026-10-03</td>
+<td>4</td><td>68.1M</td><td class="num">$39.47</td>
+<td style="min-width:120px"><div class="track"><span class="seg" style="width:7.305%;background:var(--s2)" data-tip="Ses ayarları paneli ve guide menüleri · Fable 5.1: $39.47"></span></div></td></tr><tr><td>23</td>
+<td>Diskort gelistirme devam 3</td><td>diskort</td><td>2026-09-28</td>
+<td>11</td><td>123.0M</td><td class="num">$35.81</td>
+<td style="min-width:120px"><div class="track"><span class="seg" style="width:5.440%;background:var(--s1)" data-tip="Diskort gelistirme devam 3 · Opus 5.5: $29.40"></span><span class="seg" style="width:1.187%;background:var(--s4)" data-tip="Diskort gelistirme devam 3 · Sonnet 5: $6.41"></span></div></td></tr><tr><td>24</td>
+<td>Benzer şarkı bulma aracı</td><td>song-finder</td><td>2026-10-03</td>
+<td>11</td><td>55.8M</td><td class="num">$34.60</td>
+<td style="min-width:120px"><div class="track"><span class="seg" style="width:5.019%;background:var(--s2)" data-tip="Benzer şarkı bulma aracı · Fable 5.1: $27.12"></span><span class="seg" style="width:1.385%;background:var(--s3)" data-tip="Benzer şarkı bulma aracı · Sonnet 5.5: $7.48"></span></div></td></tr><tr><td>25</td>
+<td>2D inkremental oyun tasarımı</td><td>incremantal-game</td><td>2026-10-02</td>
+<td>1</td><td>40.8M</td><td class="num">$33.90</td>
+<td style="min-width:120px"><div class="track"><span class="seg" style="width:6.273%;background:var(--s2)" data-tip="2D inkremental oyun tasarımı · Fable 5.1: $33.90"></span></div></td></tr></tbody></table></div></section>
+<footer>Fiyatlar ($/MTok, giriş/çıktı): Fable 5.1 10/50 · Opus 5.5 4/20 · Sonnet 5.5 ve 5 2/10. Önbellek okuma: Fable 0.25, Opus/Sonnet 0.20; yazma 5 dk = 1.25×, 1 sa = 2× giriş. Kaynak: claude-api skill tablosu (2026-09-25). Aynı mesaj id'si birden çok dosyada geçerse bir kez sayıldı. Oluşturma: 2026-10-05T12:30:49.659Z</footer>
+</main><div id="tip"></div>
+<script>
+const tip=document.getElementById('tip');
+document.addEventListener('mousemove',e=>{const t=e.target.closest('[data-tip]');if(!t){tip.style.display='none';return}
+tip.textContent=t.dataset.tip;tip.style.display='block';const x=Math.min(e.clientX+12,innerWidth-tip.offsetWidth-8);tip.style.left=x+'px';tip.style.top=(e.clientY+14)+'px'});
+</script></body></html>

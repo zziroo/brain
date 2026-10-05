@@ -34,6 +34,7 @@ Buradan başla. Her şey buradan ya da bir projenin `_overview.md` dosyasından 
 - `30-Resources/`: kalıcı bilgi ve rehberler
 - [[kosu-tabanli-incremental-shelldiver-rock-bottom-analizi]]: koşu-tabanlı incremental türünün kalıbı (Shelldiver, Rock Bottom) ve oyuncu şikâyetleri
 - [[30-Resources/oyun-tasarimi/_index|Oyun tasarımı dersleri]]: döngüler, zorluk, his, tempo; Işık Bekçisi örnekleriyle
+- [[2026-10-05-windows-donemi-token-ozeti]]: Windows dönemi Claude kullanımı (API karşılığı yaklaşık 3.713 $, model ve proje bazında)
 
 ## Arşiv
 - [[90-Archive/old-claude-memory/_index|Eski Claude hafıza klasörleri]]

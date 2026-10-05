@@ -25,9 +25,8 @@ Karar ve gerekçe: [[2026-10-05-windowstan-maca-gecis]]. Mac'te ilk oturumda bu 
 
 ## Mac'te ilk Claude oturumu (Claude)
 - [ ] Kurulumu doğrula:
-  - `~/.claude/projects/-Users-ziroo-ZZ*` klasörleri var.
-  - `claude --resume` eski oturumları listeliyor.
-  - `node ~/.claude/orchestration-report/usage.mjs` çalışıyor ve eski dönemi de sayıyor.
+  - `~/.claude/projects/-Users-ziroo-ZZ*/memory` klasörleri var. Konuşma kayıtları bilerek taşınmadı.
+  - `node ~/.claude/orchestration-report/usage.mjs` çalışıyor. Yalnızca Mac oturumlarını sayar; Windows dönemi: [[2026-10-05-windows-donemi-token-ozeti]].
 - [ ] Zamanlanmış görevleri yeniden kur: `diskort-geri-bildirim-kontrolu` saatlik, `diskort-main-kod-inceleme` 00:10'da. Metinleri `~/.claude/scheduled-tasks/` altında.
 - [ ] Mac'teki görevler çalışmaya başlayınca Yusuf'a Windows'takileri kapattır. Yoksa gözcü iki kez çalışır.
 - [ ] `git status` ile repoların temiz göründüğünü kontrol et. Taşımadan önce bütün repolar temizdi; `kur.sh` hepsini bir kez LF satır sonuna çevirdi.
