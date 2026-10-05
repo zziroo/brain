@@ -33,7 +33,7 @@ Yusuf tüm Claude çalışmasını (ZZ, vault, oturumlar, hafıza, kurallar, tok
   - `usage.mjs` "ZZ (genel)" eşlemesi Mac klasör adını da tanıyor.
 - Git satır sonu sorunu `kur.sh` içinde çözülüyor. Windows'ta `core.autocrlf=true` vardı, yani dosyalar diskte CRLF.
   - Taşınırken temiz olan repolar Mac'te bir kez LF'ye yeniden yazılır (`rm --cached` + `reset --hard`). Bu adım hâlâ temiz olduğu tekrar kontrol edilmeden çalışmaz. Repo `mactasima.lf=done` ile işaretlenir.
-  - Kaydedilmemiş değişikliği olan repolara (vault ve steam-avgr-calculator) `autocrlf=input` verilir, dosyalara dokunulmaz.
+  - Kaydedilmemiş değişikliği olan repolara (vault ve steam-avgr-calculator) `autocrlf=input` verilir, dosyalara dokunulmaz. Not: taşımadan önce vault commit edildi. steam-avgr-calculator'daki değişiklik ise 98d802c düzeltmesini yanlışlıkla geri almış eski bir haldi; Yusuf'un onayıyla son commit'e döndürüldü. Bu nedenle bütün repolar temiz taşınıyor.
 
 ## Neden
 - Geçmiş ve hafıza taşınırsa token raporu kesintisiz devam eder ve hafıza kuralları kaybolmaz. Süreklilik zaten vault ve hafızadan geliyor.
@@ -55,6 +55,7 @@ Yusuf tüm Claude çalışmasını (ZZ, vault, oturumlar, hafıza, kurallar, tok
   - `node_modules` ve Python `venv` klasörleri,
   - büyük derleme çıktıları (`diskort/apps/desktop/release` ve `out`, `string-tool/release`, `web-fps-game/shots`),
   - diskort'un eski agent worktree'leri. İçlerinde kaydedilmemiş değişiklik yoktu, dalları repoda duruyor.
+  - diskort'taki yerel dosyalar (`.claude/settings.local.json`, `.claude/etkinlik-ekran/`, `now.txt`) taşındı ama git onları `.git/info/exclude` ile yok sayıyor. Bunlar commit edilmez, çünkü repo herkese açık.
 - SSH anahtarı (`~/.ssh/diskort_vps`) pakette yok, Yusuf kendisi taşır. iOS imza dosyaları OneDrive'daki `Yedekler` klasöründe.
 - Pakette projelerin `.env` dosyaları var. Kişisel yolla (USB ya da kendi bulut hesabı) taşınır, kurulumdan sonra silinir.
 - Masaüstü uygulamasının kenar çubuğundaki eski oturum listesi büyük ihtimalle Mac'te görünmez. Eski oturumlar `claude --resume` ile açılır.

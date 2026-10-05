@@ -12,7 +12,7 @@ source: ZZ kök oturumu 2026-10-05; C:\Users\yusuf\mac-tasima\BENIOKU.md
 Karar ve gerekçe: [[2026-10-05-windowstan-maca-gecis]]. Mac'te ilk oturumda bu listeyi oku. Biten maddeyi işaretle. Liste bitince `status: done` yap ve notu `90-Archive/` altına taşı.
 
 ## Windows'ta, taşımadan hemen önce
-- [ ] Vault değişikliklerini commit et.
+- [x] Vault değişikliklerini commit et. Claude yaptı (2026-10-05); bütün repolar temiz.
 - [ ] Paketi tazele: Git Bash'te `bash /c/Users/yusuf/mac-tasima/hazirla.sh`.
 
 ## Mac'te kurulum (Yusuf)
@@ -30,8 +30,9 @@ Karar ve gerekçe: [[2026-10-05-windowstan-maca-gecis]]. Mac'te ilk oturumda bu 
   - `node ~/.claude/orchestration-report/usage.mjs` çalışıyor ve eski dönemi de sayıyor.
 - [ ] Zamanlanmış görevleri yeniden kur: `diskort-geri-bildirim-kontrolu` saatlik, `diskort-main-kod-inceleme` 00:10'da. Metinleri `~/.claude/scheduled-tasks/` altında.
 - [ ] Mac'teki görevler çalışmaya başlayınca Yusuf'a Windows'takileri kapattır. Yoksa gözcü iki kez çalışır.
-- [ ] `git status` ile repoların temiz göründüğünü kontrol et. Kaydedilmemiş değişikliği olan iki repoda `autocrlf=input` var: vault ve steam-avgr-calculator.
-- [ ] Projelerde bağımlılıkları kur: diskort'ta `pnpm install`, diğerlerinde `npm install`. trencheck için `python3 -m venv venv` ve `pip install -r requirements.txt`.
+- [ ] `git status` ile repoların temiz göründüğünü kontrol et. Taşımadan önce bütün repolar temizdi; `kur.sh` hepsini bir kez LF satır sonuna çevirdi.
+- [ ] Bağımlılıkları `kur.sh` kendisi kurar: diskort için `pnpm install --frozen-lockfile`, song-finder, string-tool ve web-fps-game için `npm ci`, trencheck için venv. Node o sırada kurulu değildiyse sonradan `bash kur.sh bagimliliklar` çalıştır. `!!` ile başlayan hata satırı varsa birlikte bak.
+- [ ] Git: repoların kimliği kendi `.git/config` dosyalarında (Ziroo / zziroo.ai@gmail.com). Global kimliği `kur.sh` ayarlar. Push için Yusuf `gh auth login` ile giriş yapar, ardından `bash kur.sh git-kimlik` çalıştırır.
 - [ ] Diskort: hafızadaki `diskort-dev-environment` notunun Windows maddelerini Mac'te doğrula ve notu güncelle.
 - [ ] Diskort: Windows masaüstü sürümü (NSIS `.exe`) şu ana kadar Windows'ta paketleniyordu. Mac'ten nasıl yayınlanacağını netleştir: GitHub Actions mı, Windows makinesi mi? Karar Yusuf'un.
 - [ ] Windows'a özgü vault notlarını güncelle ya da Windows dönemine ait olduklarını belirt:
