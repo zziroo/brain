@@ -17,6 +17,8 @@ source: oturum 2026-10-05 (document-formatter): "sdlxliff'i incele", arkadaşın
 - Yayın: `47eb772`, tools.ziroo.net/pdf-ceviri; ziroo-edge kart metni `5b7f581` (push edilmedi).
 - Sonuçlar: RadiologyInfo 85/89 (kalan 4 "Page x of 4"), MiniMed 837/852, canlıda 16 sn (kalan 15 sdlxliff'te yok).
 
+- Ek tur (`51b1d6c`, yayında): konuma göre aramadan sonra bitişik satırlara yayılım + bitişiklik puanı; iki paragrafa taşan satırın sonraki paragraftaki ucu ("…meals. One") Türkçesiyle sonraki parçaya ekleniyor (sabit doz hücresindeki "Bir" artık düşmüyor, Trados'ta cümle tamdı); sekmeli hücrelerde kesim sekmede ("Başlangıç Zamanı / Bitiş Zamanı / Ayar"). MiniMed 834/849, canlı 17 sn.
+
 ## Alınan kararlar
 - [[2026-10-05-sdlxliff-birincil-girdi]]
 
@@ -25,6 +27,6 @@ source: oturum 2026-10-05 (document-formatter): "sdlxliff'i incele", arkadaşın
 - [[2026-10-05-sdlxliff-yapisi-ve-tuzaklari]]
 
 ## Açık kalanlar
-- Trados paragrafı bölünen yerlerde kesim kaymaları (ör. sabit doz hücresinde "Bir karbonhidrat" düşüyor; "dose calculator?" satırı).
+- Trados paragrafı bölünen yerlerde kalan kesim kaymaları (ör. "dose calculator?" satırı); paragraf sonuna taşan satır uçlarının Türkçesi hâlâ atılıyor (ör. form tablosunda "grams").
 - Çeviri hataları (araçtan değil): "Instinct Settings form" → "İnsülin Ayarları formu"; bir "Fixed Dose" başlığı çevrilmemiş. Arkadaşa iletilmeli.
 - Doğrulanmadı: arkadaşın yeni çıktıyı kendisinin denediği; başka belge türleri (formu/tablosu yoğun PDF'lerde alt çizgi silme ve sağa hizalama kuralı).
