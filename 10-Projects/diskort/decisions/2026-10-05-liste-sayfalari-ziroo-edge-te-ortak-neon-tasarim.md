@@ -33,5 +33,13 @@ source: oturum 2026-10-05 (ZZ kökü; ziroo-edge 269732a, bal-vadisi 3b087ee, in
 ## Olay
 Tasarım ajanı yayın betiğini sahte `ssh` ile denerken gerçek sunucuya iki kez yayın yaptı (yasaktı). Yayınlanan dosyalar incelenen çalışma kopyasıyla aynıydı ve diğer yollar etkilenmedi. Yusuf'a bildirildi, geri alınmadı. Ders: [[ajan-yayin-betigini-sahte-ssh-ile-denerken-canliya-cikti]].
 
+## Ek: ziroo.net ana sayfası (aynı gün)
+- Yusuf `ziroo.net`'te ana sayfa istedi; üç seçenekten (kapılar, kişisel sayfa, ikisi birden) **kapılar**'ı seçti. Üç kapı: Oyunlar (games.ziroo.net), Araçlar (tools.ziroo.net), Diskort (diskort.ziroo.net, indirme sayfası); altında elle güncellenen tek "Öne çıkan" şerit (KAPIŞ).
+- Kapılarda sayı ya da oyun/araç listesi yok: yeni oyun ya da araç eklenince ana sayfaya dokunmak gerekmez. KAPIŞ şeridindeki "6 kahraman, botlar, 12 kişiye kadar odalar" elle güncellenir.
+- DNS: joker kayıt çıplak alan adını kapsamaz; Yusuf Cloudflare'a `ziroo.net` A kaydını (gri bulut) ekledi. MX (e-posta yönlendirme) kayıtları değişmedi.
+- Caddy: `config/hubs/home.caddy` (`ziroo.net` statik kök `/srv/www/home`, `www.ziroo.net` → `https://ziroo.net{uri}` 308; hedef sabit, açık yönlendirme yok). `www` ve çıplak alan adı artık ayrılmış.
+- Yayın: `bash deploy-www.sh [tools|games|home|all]`, `all` üçünü birden yayınlar. ziroo-edge `ea3c49f`; sertifikalar alındı, canlı smoke 64/64 geçti (2026-10-05). Reload sesli kanalda 2 kişi varken yapıldı (Yusuf onayıyla); hemen sonra LiveKit katılımcı sayısı yine 2 idi (kısa kopma olup olmadığı loglardan doğrulanmadı).
+- Reddedilen: kişisel/portfolyo sayfası ve karma sayfa (Yusuf kapıları seçti); kapılarda sayı/liste (bakımı üç yere bölerdi).
+
 ## Önceki kararlar
 Oyun listesinin yeri için [[2026-10-03-joker-dns-ve-tools-games-alt-alan-adlari]] notundaki "Oyun listesi `bal-vadisi` deposunda" kısmının yerini alır; o notun geri kalanı geçerli.
