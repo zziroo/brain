@@ -24,9 +24,16 @@ Yusuf'un çevirmen bir arkadaşı için. Arkadaş çeviriyi **Trados**'ta yapmak
 https://tools.ziroo.net/pdf-ceviri → konteyner `pdf-ceviri` (127.0.0.1:8097, kaynak `/opt/pdf-ceviri/src`), Caddy parçası `/opt/ziroo-sites/tools/pdf-ceviri.caddy`. Betik `deploy/deploy.sh` (proje kökünden). Sır yok, kalıcı veri yok: yükleme `/tmp` tmpfs'e yazılır, iş biter bitmez silinir, sonuç tek ZIP olarak döner. Aynı anda tek dönüştürme (en fazla 3 yükleme), 100 MB üst sınır, DOCX document.xml ≤ 30 MB, 400 sayfa. Sunucuda 21 sayfalık belge ~145 sn (Mac'te ~35 sn).
 - Font: sunucuda Avenir yok; Avenir benzeri **Nunito Sans** (OFL, `web/fonts`, değişken fonttan statik ağırlıklar) + yedek Liberation.
 
+## sdlxliff yolu (2026-10-05'ten beri)
+- Trados projesindeki `.sdlxliff` verilirse eşleştirme tahmin edilmez: Trados'un İngilizce–Türkçe çiftleri kullanılır, PDF satırları İngilizce metinde birebir aranır (`docfmt/xliff.py`). Web'de aynı alana yüklenir, tür otomatik tanınır.
+- Trados paragrafları PDF bloklarıyla örtüşmeyebilir (giriş cümlesi + ilk liste maddesi, sayfaya taşan paragraf): Türkçe, sınırlı adaylı DP ile bölünür; bölünen parçalar raporda "kesimi kontrol et" notuyla sarı. Kelime sırası farklı olduğu için bu kesimler zaman zaman bir iki kelime kayar.
+- Bir cümlesi çevrilmemiş paragraf İngilizce bırakılır (raporda not); "Draft" durumundakiler işaretlenir.
+- İlk deneme (4 sayfa RadiologyInfo makalesi, wkhtmltopdf PDF'i): 89 parçanın 85'i, sunucuda 2,5 sn (DOCX yolunda MiniMed 21 sayfa ~145 sn).
+- Aynı turda: tiresiz font adları (`ArialBold`) artık kalın/italik çözülüyor; çevrilen link metninin altındaki eski alt çizgiler kaldırılıyor (form doldurma çizgileri korunur); sağa yaslı tek satırlar (alt bilgi) sağa hizalanıyor.
+
 ## Kararlar
 - [[2026-10-05-pdf-ceviri-trados-ciktisini-orijinal-pdfe-yerlestir]]
 
 ## Açık işler
-- Trados projesindeki iki dilli `.sdlxliff` dosyası kullanılırsa eşleştirme neredeyse kesinleşir; arkadaştan örnek istenmedi.
+- `.sdlxliff` içindeki `Page {x} of {x}` gibi alan (field) içeren alt bilgiler çevrilmiyor, İngilizce kalıyor.
 - Görsel içi metinler çevrilmez; taranmış PDF desteklenmez.
