@@ -29,4 +29,4 @@ Kademeli açılım: önce `Home.md`, sonra ilgili projenin `_overview.md` dosyas
 ## Bakım
 - Haftalık: Inbox'ı boşalt, yetim notları bul, `Home.md`'yi güncelle.
 - Oturum sonunda: önemli kararlar `decisions/` altına, öğrenilenler `lessons/` altına.
-- Vault bir git deposudur (yalnızca yerel). Büyük değişiklikten sonra commit at.
+- Vault bir git deposudur ve GitHub'da özel bir kopyası var (`yusufholat/brain`, 2026-10-05'ten beri). Yazmadan önce `git pull --ff-only` çalıştır. Büyük değişiklikten sonra commit at ve `git push` yap; böylece iki makine (Windows ve Mac) aynı vault'u görür.

@@ -34,7 +34,7 @@ Hafıza **klasöre bağlıdır**: Diskort işi için sohbeti `ZZ\zProjects\disko
 ## Bakım ritmi
 - Oturum sonu: kararlar `decisions/`, öğrenilenler `lessons/`, güncel durum `_overview.md`.
 - Haftalık: `00-Inbox/` boşalt, yetim ve yinelenen notları birleştir, hafıza dosyalarında eskiyeni sil.
-- Büyük değişiklikten önce vault'ta `git commit`. Global `CLAUDE.md` ve hafıza git dışında: değiştirmeden önce kopyasını al (`C:\Users\yusuf\ZZ\_backups\`).
+- Büyük değişiklikten önce vault'ta `git commit`. Vault GitHub'da özel repo olarak duruyor (`yusufholat/brain`): yazmadan önce `pull --ff-only`, commit'ten sonra `push`. Global `CLAUDE.md` ve hafıza git dışında: değiştirmeden önce kopyasını al (`C:\Users\yusuf\ZZ\_backups\`).
 
 ## İlgili
 - [[_index]], [[orkestrasyon]], [[izinler-ve-ayarlar]]

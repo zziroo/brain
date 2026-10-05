@@ -33,6 +33,7 @@ Karar ve gerekçe: [[2026-10-05-windowstan-maca-gecis]]. Mac'te ilk oturumda bu 
 - [ ] `git status` ile repoların temiz göründüğünü kontrol et. Taşımadan önce bütün repolar temizdi; `kur.sh` hepsini bir kez LF satır sonuna çevirdi.
 - [ ] Bağımlılıkları `kur.sh` kendisi kurar: diskort için `pnpm install --frozen-lockfile`, song-finder, string-tool ve web-fps-game için `npm ci`, trencheck için venv. Node o sırada kurulu değildiyse sonradan `bash kur.sh bagimliliklar` çalıştır. `!!` ile başlayan hata satırı varsa birlikte bak.
 - [ ] Git: repoların kimliği kendi `.git/config` dosyalarında (Ziroo / zziroo.ai@gmail.com). Global kimliği `kur.sh` ayarlar. Push için Yusuf `gh auth login` ile giriş yapar, ardından `bash kur.sh git-kimlik` çalıştırır.
+- [ ] Vault: GitHub'da özel repo `yusufholat/brain` (2026-10-05). `kur.sh`, gh girişi varsa vault'u oradan en güncel haline çeker. Giriş sonradan yapıldıysa `bash kur.sh git-kimlik` çalıştır. `/basla` her oturumda pull yapar, `/kaydet` commit'ten sonra push eder.
 - [ ] Diskort: hafızadaki `diskort-dev-environment` notunun Windows maddelerini Mac'te doğrula ve notu güncelle.
 - [ ] Diskort: Windows masaüstü sürümü (NSIS `.exe`) şu ana kadar Windows'ta paketleniyordu. Mac'ten nasıl yayınlanacağını netleştir: GitHub Actions mı, Windows makinesi mi? Karar Yusuf'un.
 - [ ] Windows'a özgü vault notlarını güncelle ya da Windows dönemine ait olduklarını belirt:
