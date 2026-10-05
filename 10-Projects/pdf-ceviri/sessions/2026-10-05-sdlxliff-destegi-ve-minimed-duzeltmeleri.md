@@ -22,6 +22,7 @@ source: oturum 2026-10-05 (document-formatter): "sdlxliff'i incele", arkadaşın
 
 ## Alınan kararlar
 - [[2026-10-05-sdlxliff-birincil-girdi]]
+- [[2026-10-05-cevrilen-her-metin-gorunsun]]
 
 ## Öğrenilenler
 - [[2026-10-05-sezgisel-eslestirme-degisikligini-iki-belgede-fark-alarak-dogrula]]
