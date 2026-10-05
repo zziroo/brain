@@ -42,6 +42,7 @@ Yusuf'un çevirmen arkadaşı için. Oyun stüdyoları İngilizce dil dosyaları
 v0.2.0 yayında (sunucuda yalnız son sürüm durur), 333 test geçiyor. v0.2.0 ile: Ren'Py desteği, Excel'de ve uygulamada dosya başına renk (paylaşılan palet `src/core/stats.ts`), Kelime / Dosya Toplamı / Genel Toplam sütunları. Dağıtım betiğinin kapsamı daraltıldı (commit b52a86c); bu düzeltmeden sonra yeniden yayın gerekmedi, sunucudaki dosyalar aynı.
 
 ## Sıradaki işler
+- İsteğe bağlı: Electron arayüzünü de neon temaya almak (Windows kurulumunu yeniden paketlemek gerekir; Mac'ten paketleme kararı açık, [[mac-gecisi-kontrol-listesi]]).
 - Arkadaşın gerçek dosyalarıyla denemesi ve geri bildirimi; Ren'Py çıktısının oyunda denenmesi (doğrulanmadı).
 - Kelime sayımı için Yusuf'un onayı (boşluk sayımı mı, harf/rakam içeren parça mı).
 - Sunucuda Ziroobank statik dosyalarının sahip/izinlerinin eski betikten etkilenip etkilenmediğine SSH ile bakılmadı; sayfa çalışıyor.

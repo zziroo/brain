@@ -58,4 +58,4 @@ Yayında, commit `fb767ec` (son DB yedeği `/opt/rehber/backup/20261005-180314`)
 - Altyapı (ayrı iş): AI araştırmasında WebFetch aynı Docker ağındaki diğer konteynerlere ulaşabilir; `rehber` konteynerini ayrı ağa almak.
 - Karar bekleyen (önceki oturumdan): Opus belgelerde görselleri az kullanıyor (talimat ayarı önerildi). Kart açıklamasının resmi açıklama olması (çevirisi olmayan oyunda Türkçe belgede İngilizce açıklama) Yusuf'a bildirildi, yanıt yok.
 - **Token yenileme** (önceki oturumdan, doğrulanmadı): `CLAUDE_CODE_OAUTH_TOKEN` yenilenip eski satır iptal edildi mi?
-- ziroo-edge `c7782d9` push edilmedi; bu deponun remote'u yok.
+- Bu deponun remote'u yok (GitHub'a gönderilmedi). ziroo-edge `c7782d9` 2026-10-05 akşamı itibarıyla push edilmiş.

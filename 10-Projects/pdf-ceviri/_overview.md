@@ -49,6 +49,7 @@ Yayında `9f216b3`. Çevrilen her Türkçe metin çıktıda bir yerde görünür
 - [[2026-10-05-sdlxliff-destegi-ve-minimed-duzeltmeleri]]
 
 ## Sıradaki işler
+- İsteğe bağlı: `docfmt`'in ürettiği `.rapor.html`'i de neon temaya almak (web arayüzü 2026-10-05'te geçti).
 - Arkadaş yeni sürümü sdlxliff ile denesin; çeviri hataları ("Instinct Settings form" → "İnsülin Ayarları formu", çevrilmemiş bir "Fixed Dose") ona iletilsin.
 - Trados paragrafı bölünen yerlerde kesim kaymaları kalıyor (raporda sarı); gerekirse iyileştirilir. Taşan/kurtarılan Türkçe parçalar PDF'teki yerine birebir oturmayabilir (raporda notlu).
 - Son tur (`9f216b3`) ayrı bir inceleme ajanından geçmedi; doğrulama iki belgede satır satır karşılaştırma ve kelime düzeyi görünürlük kontrolüyle yapıldı.

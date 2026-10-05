@@ -47,6 +47,6 @@ Yayında, commit `218b5ee`: keşif odaklı sürüm. Sonuçlar dört bilinirlik e
 - Yusuf birkaç şarkıyla deneyip öneri kalitesini değerlendirecek (karar onda).
 - Token yenileme: kullanılan token daha önce bir ekran görüntüsüyle sohbete düşmüştü; Yusuf "sonra değiştiririm" dedi. Değişince hem `/etc/claude-token.env` hem `/etc/rehber.env` güncellenmeli ve iki konteyner yeniden başlatılmalı. Rehber Okuyucu'yu ortak dosyaya geçirmek o projenin oturumunda yapılacak.
 - Doğrulanmadı: kullanım sayfasının canlıdaki görünümü (koordinatör parolayı girmediği için bakmadı); başarısız aramanın kullanım kaydı; Diskort'ta görüşme varken ses ölçümünün etkisi.
-- Depo GitHub'a gönderilmedi; ziroo-edge'de iki commit (`c7782d9`, `8b7adf6`) push edilmedi.
+- Depo GitHub'a gönderilmedi (remote yok). ziroo-edge `c7782d9` ve `8b7adf6` 2026-10-05 akşamı itibarıyla push edilmiş.
 - Bilinen sınırlar (keşif sürümü): Deezer `rank` bugünkü dinlenmeye bakar, bir zamanların hitleri "az bilinen" görünebilir (6 Underground, Novocaine For The Soul, Cigarette Daydreams); ikinci ölçü (yayın yılı / Last.fm dinlenme) önerildi, karar yok. Bazı türlerde ana liste 25'e ulaşmıyor. Arama sürerken `/api/preview` "Deezer sırası dolu" diyebilir. Deezer verisi eksik aramalar önbelleğe alınmaz.
 - Bilinen zayıflıklar: topluluk kaynağı neredeyse boş; listeler hâlâ çoğunlukla aynı sahneden; eski/alışılmadık kayıtlarda ses puanları düşük çıkıyor (eşik aramaya göre uyarlanıyor); işçi bağlamında hesap e-postası görünüyor (düşük risk, giderilmedi).
