@@ -41,5 +41,13 @@ Tasarım ajanı yayın betiğini sahte `ssh` ile denerken gerçek sunucuya iki k
 - Yayın: `bash deploy-www.sh [tools|games|home|all]`, `all` üçünü birden yayınlar. ziroo-edge `ea3c49f`; sertifikalar alındı, canlı smoke 64/64 geçti (2026-10-05). Reload sesli kanalda 2 kişi varken yapıldı (Yusuf onayıyla); hemen sonra LiveKit katılımcı sayısı yine 2 idi (kısa kopma olup olmadığı loglardan doğrulanmadı).
 - Reddedilen: kişisel/portfolyo sayfası ve karma sayfa (Yusuf kapıları seçti); kapılarda sayı/liste (bakımı üç yere bölerdi).
 
+## Ek: araçların kendi arayüzleri (aynı gün akşam)
+- Yusuf araçların kendi arayüzlerinin de bu temaya benzemesini istedi ("tematik, çok hareketli olmak zorunda değil") ve yolu Claude'a bıraktı.
+- Karar: her araç kendi CSS dosyasında temanın renklerini, font yığınlarını ve kendi kart vurgusunu (`tools.css`'teki `.t-<ad>`) taşır; `hub.css`'e bağlanmaz. Arka plan ışığı sabit; hareket yalnız hover/basma, `prefers-reduced-motion` ile kapanır. Her sayfanın altında `← Araçlar · ziroo.net` footer'ı (`https://tools.ziroo.net/`).
+- Neden: her araç kendi deposundan tek başına yayınlanıyor ve yerelde de çalışmalı; ortak dosyaya bağlanınca `hub.css` değişikliği altı aracı birden bozabilirdi. Tema sürüklenmesi riski kabul edildi: `hub.css` renkleri değişirse araçlar elle güncellenir.
+- Reddedilen: araçlardan `/hub.css`'e bağlanmak (aynı kökende olduğu için CSP izin verirdi, ama sınıf adları çakışır ve araçlar yerelde temasız kalır); liste sayfalarındaki gibi hareketli ışık bulutları (Yusuf sakin istedi, araçlarda içerik önde).
+- Çeviri Aracı'nda yalnız web indirme sayfası; Electron arayüzü kapsam dışı (yeniden paketleme gerekir).
+- Oturum: [[2026-10-05-araclarin-arayuzu-neon-temaya-gecti]].
+
 ## Önceki kararlar
 Oyun listesinin yeri için [[2026-10-03-joker-dns-ve-tools-games-alt-alan-adlari]] notundaki "Oyun listesi `bal-vadisi` deposunda" kısmının yerini alır; o notun geri kalanı geçerli.

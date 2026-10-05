@@ -1,7 +1,7 @@
 ---
 type: project
 project: steam-avgr
-date: 2026-10-03
+date: 2026-10-05
 status: active
 tags: [steam-avgr, overview, steam]
 source: oturumlar 2026-10-02/03 (steam-avgr-calculator)
@@ -38,6 +38,7 @@ Yusuf'un eski Google Sheets + Apps Script hesaplayıcısının yerine geçen pan
 - [[2026-10-02-steam-agcr-paneli-yayinda]]
 
 ## Güncel durum (2026-10-03)
+- **2026-10-05:** arayüz neon temada, altta Araçlar'a dönüş linki; yayında `b9ff4c3` ([[2026-10-05-araclarin-arayuzu-neon-temaya-gecti]]).
 Yayında, commit `e7b9fa4`. Yusuf'un hesabı (kısıtlılar hariç, MultiVersus eklenmiş): panel tümü 195 / 132 / 6819 / %85,66, herkese açık %86,43; Steam sahip görünümü 197 / 133 / 6855 / %85, herkese açık 192 / 133 / 6761 / %86. Kalan 2 oyun büyük olasılıkla aile oyunları (biri 2/2, biri 34 açık ve bitmemiş); Yusuf kendisi ekleyecek.
 
 ## Sıradaki işler

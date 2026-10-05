@@ -1,7 +1,7 @@
 ---
 type: project
 project: ceviri-araci
-date: 2026-10-03
+date: 2026-10-05
 status: active
 tags: [ceviri-araci, overview, lokalizasyon]
 source: 2026-10-02 oturumu (string-tool)
@@ -38,6 +38,7 @@ Yusuf'un çevirmen arkadaşı için. Oyun stüdyoları İngilizce dil dosyaları
 - [[2026-10-02-ceviri-araci-v0-1-ve-v0-2]]
 
 ## Güncel durum (2026-10-03)
+- **2026-10-05:** indirme sayfası neon temada (`29bb7ef`), elle yayınlandı çünkü betik Mac'te `.exe` olmadan çalışmıyor ([[mac-ten-yayin-copyfile-disable-ve-exe-siz-ceviri-sayfasi]]). Electron arayüzü eski görünümde.
 v0.2.0 yayında (sunucuda yalnız son sürüm durur), 333 test geçiyor. v0.2.0 ile: Ren'Py desteği, Excel'de ve uygulamada dosya başına renk (paylaşılan palet `src/core/stats.ts`), Kelime / Dosya Toplamı / Genel Toplam sütunları. Dağıtım betiğinin kapsamı daraltıldı (commit b52a86c); bu düzeltmeden sonra yeniden yayın gerekmedi, sunucudaki dosyalar aynı.
 
 ## Sıradaki işler

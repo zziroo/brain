@@ -74,6 +74,7 @@ Ses + ekran paylaşımı kalitesi; metin kanalları, tepkiler, dosyalar, roller,
 - [[2026-10-03-tools-games-alt-alan-adi-gecisi]]: tools/games alt alan adları, joker DNS
 - [[2026-10-04-geri-bildirim-kontrolu-ve-caddy-reload]]: hata kontrolü, Caddy reload kopması, panel deploy
 - [[2026-10-05-liste-sayfalari-ve-ziroo-net-ana-sayfa]]: listeler neon tasarıma geçti, KAPIŞ eklendi, ziroo.net ana sayfası
+- [[2026-10-05-araclarin-arayuzu-neon-temaya-gecti]]: altı aracın kendi arayüzü neon temaya geçti, Mac'ten ilk yayın ([[mac-ten-yayin-copyfile-disable-ve-exe-siz-ceviri-sayfasi]])
 
 ## Çalışma kuralları (Claude)
 [[20-Areas/working-rules/_index|Çalışma kuralları]] (20-Areas): [[git-push-autonomy]], [[diskort-orchestrator-mode]], [[zamanlanmis-gorevler-ve-skiller]]

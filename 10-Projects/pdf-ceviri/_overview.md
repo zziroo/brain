@@ -33,6 +33,7 @@ https://tools.ziroo.net/pdf-ceviri → konteyner `pdf-ceviri` (127.0.0.1:8097, k
 - Aynı turda: tiresiz font adları (`ArialBold`) artık kalın/italik çözülüyor; çevrilen link metninin altındaki eski alt çizgiler kaldırılıyor (form doldurma çizgileri korunur); sağa yaslı tek satırlar (alt bilgi) sağa hizalanıyor.
 
 ## Güncel durum (2026-10-05)
+- **2026-10-05 akşam:** web arayüzü neon temada, yayında `53d6521` ([[2026-10-05-araclarin-arayuzu-neon-temaya-gecti]]). `.rapor.html` eski stilde.
 Yayında `9f216b3`. Çevrilen her Türkçe metin çıktıda bir yerde görünür; görünemeyenler raporda listelenir. sdlxliff birincil girdi, DOCX yedek. Arkadaşın ekran görüntülerindeki hatalar (olay listesi, 2-3. adımlar, sabit doz tablosu, hücre içi İngilizce) sdlxliff ile giderildi.
 
 ## Kararlar

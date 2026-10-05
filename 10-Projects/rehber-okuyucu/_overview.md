@@ -49,6 +49,7 @@ https://tools.ziroo.net/rehber → konteyner `rehber` (127.0.0.1:8095, deneme 80
 - [[2026-10-05-kalite-dil-arastirma-iptal]]
 
 ## Güncel durum (2026-10-05)
+- **2026-10-05 akşam:** arayüz neon temada (`6239cde`); arayüzde "sahip" yerine "admin", bilgi etiketleri büyük harfe çevrilmiyor (`a5114d9`). Yayında; DB yedeği `/opt/rehber/backup/20261005-190742` ([[2026-10-05-araclarin-arayuzu-neon-temaya-gecti]]).
 Yayında, commit `fb767ec` (son DB yedeği `/opt/rehber/backup/20261005-180314`). Motor `opus` (araştırma da `opus`), günlük sınır 30. Canlıda 6 rehber + 1 AI araştırması (Wolfenstein II, `app612880`, İngilizce, hazır; yol haritası zayıftı → araştırma istemine oynanış sırası eklendi, yeniden araştırma bekliyor). Witcher 3 artık hazır (Yusuf yeniden üretmiş). Bu oturumda yayına girenler: her bilgi tek yerde + tek Dikkat paneli + nedenli Dikkat maddeleri, Özgün/TR/EN çıktı ve Steam resmi başarım adları (okuyucuda dil seçimi), AI araştırması, üretim iptali, `@` genişletmesinin kapatılması, İngilizce belgede "İ" büyük harf düzeltmesi.
 
 ## Sıradaki işler

@@ -1,7 +1,7 @@
 ---
 type: project
 project: song-finder
-date: 2026-10-04
+date: 2026-10-05
 status: active
 tags: [song-finder, overview, muzik]
 source: oturum 2026-10-03/04 (song-finder)
@@ -39,6 +39,7 @@ https://tools.ziroo.net/song-finder → konteyner `song-finder` (127.0.0.1:8092,
 - İlk canlı arama (Rick Astley linki): 524 sn (yerelde ~4 dk), parça başına ses ölçümü 2,8 sn (yerelde 1,3), bellek tepe ~690 MB, yük ortalaması ~1,0; LiveKit'in CPU'su etkilenmedi (o sırada Diskort'ta görüşme olup olmadığı bilinmiyor).
 
 ## Güncel durum (2026-10-04)
+- **2026-10-05:** arayüz neon temada, yayında `bbb2659` ([[2026-10-05-araclarin-arayuzu-neon-temaya-gecti]]).
 Yayında, commit `218b5ee`: keşif odaklı sürüm. Sonuçlar dört bilinirlik etiketiyle (keşif / az bilinen / bilinen / çok bilinen; Deezer şarkı `rank` + sanatçı `nb_fan`, `app/lib/popularity.js`) iki bölüme ayrılır: "Keşifler" (yalnız az bilinen, hedef 25) ve "Bilinen benzerler" (en fazla 6); sonuç sayfasında istemci tarafı bilinirlik kaydırıcısı. Topluluk işçisi kaldırıldı. Ses ölçümü 70 parça / 240 sn. Modeller sunucuda `opus` (`/etc/song-finder.env`). Kullanım sayfası `usage.html`. 110 test.
 - Canlı ölçüm (Radiohead – Reckoner, opus): 236 sn, 59 ölçüm (~3 sn/parça); ana liste yalnız 12 şarkı, benzerlik %62-73 (yerelde Duman 25 şarkı, %70+).
 

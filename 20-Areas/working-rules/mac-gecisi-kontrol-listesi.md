@@ -42,5 +42,8 @@ Karar ve gerekçe: [[2026-10-05-windowstan-maca-gecis]]. Mac'te ilk oturumda bu 
   - [[izinler-ve-ayarlar]]
   - [[zamanlanmis-gorevler-ve-skiller]] (gelen kutusu yolu)
 
+## Notlar
+- 2026-10-05 akşam Mac'ten ilk yayın yapıldı (altı araç): [[mac-ten-yayin-copyfile-disable-ve-exe-siz-ceviri-sayfasi]]. SSH anahtarı ve `gh` push çalışıyor.
+
 ## İlgili
 - [[2026-10-05-windowstan-maca-gecis]], [[_index]]

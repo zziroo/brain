@@ -1,7 +1,7 @@
 ---
 type: project
 project: ziroobank
-date: 2026-10-03
+date: 2026-10-05
 status: active
 tags: [ziroobank, finans, sunucu]
 ---
@@ -13,11 +13,12 @@ tags: [ziroobank, finans, sunucu]
 - Kurallar sheet ile aynı: Aylık = Toplam/Taksit, Bitiş = Başlangıç+Taksit−1, Kalan Taksit = Taksit − aralıktaki ödenmiş ay sayısı.
 
 ## Güncel durum (2026-10-03)
+- **2026-10-05:** arayüz neon temada (`9b1ae8a`); Özet tablosunda geciken (geçmiş, ödenmemiş) aylar kırmızı + "Gecikti" rozeti (`3e69e03`). Yayında, `deploy/deploy.sh` Mac'ten çalıştı ([[2026-10-05-araclarin-arayuzu-neon-temaya-gecti]]).
 - Yayında, DB şeması v1 (roller). Hesaplar: `ziroo` (yönetici, ödeme yapmaz), `dararius`, `emre`, `tuna` (kullanıcı, ödeme yapan). Yetkiler: [[2026-10-03-roller-ve-kullanici-yonetimi]].
 - Yeni kullanıcıyı yönetici "Kullanıcılar" sekmesinden ekler; şifre bir kez gösterilir. İlk dört hesabın şifreleri sunucuda `/opt/ziroobank/secrets/passwords.txt`. Betik: `create-users.mjs --only <ad>` ya da `--all` ([[sifre-betigi-dosyayi-ezdi]]).
 - Sheet'ten taşıma 2026-10-02'de birebir doğrulandı; sheet arşivde, paylaşımı kapalı (yalnız Yusuf).
 - Göç öncesi DB yedekleri sunucuda `/root/ziroobank-pre-admin.db` ve `/root/ziroobank-data-pre-roles-202610030110`.
-- Yayın: `deploy/deploy.sh` rsync istiyor, Windows Git Bash'te yok; şimdiye kadar `git archive | ssh tar x` ile elle yapıldı.
+- Yayın: `bash deploy/deploy.sh` (artık `tar | ssh`, rsync gerekmez; Mac'te `COPYFILE_DISABLE=1` ile).
 
 ## Sıradaki işler
 1. Otomatik DB yedeği (Diskort yedek düzenine eklenebilir; Yusuf'a önerildi, karar bekliyor).
