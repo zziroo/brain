@@ -53,6 +53,6 @@ Yayında `9f216b3`. Çevrilen her Türkçe metin çıktıda bir yerde görünür
 - Arkadaş yeni sürümü sdlxliff ile denesin; çeviri hataları ("Instinct Settings form" → "İnsülin Ayarları formu", çevrilmemiş bir "Fixed Dose") ona iletilsin.
 - Trados paragrafı bölünen yerlerde kesim kaymaları kalıyor (raporda sarı); gerekirse iyileştirilir. Taşan/kurtarılan Türkçe parçalar PDF'teki yerine birebir oturmayabilir (raporda notlu).
 - Son tur (`9f216b3`) ayrı bir inceleme ajanından geçmedi; doğrulama iki belgede satır satır karşılaştırma ve kelime düzeyi görünürlük kontrolüyle yapıldı.
-- ziroo-edge `5b7f581` (kart metni) push edilmedi.
+- ziroo-edge `5b7f581` (kart metni) GitHub'da (2026-10-05 akşamı doğrulandı).
 - `.sdlxliff` içindeki `Page {x} of {x}` gibi alan içeren alt bilgiler bilerek çevrilmiyor (Türkçesi sayısız "Sayfadan"), İngilizce kalıyor.
 - Görsel içi metinler çevrilmez; taranmış PDF desteklenmez.
