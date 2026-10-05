@@ -28,6 +28,7 @@ Buradan başla. Her şey buradan ya da bir projenin `_overview.md` dosyasından 
 
 ## Alanlar
 - [[20-Areas/working-rules/_index|Çalışma kuralları]]: Claude ile nasıl çalışıyoruz (orkestrasyon, inceleme kapısı, karar dağılımı)
+- [[mac-gecisi-kontrol-listesi]]: **Windows → Mac geçişi (2026-10-05).** Mac'teki ilk oturum bu listeyi işler
 
 ## Kaynaklar
 - `30-Resources/`: kalıcı bilgi ve rehberler

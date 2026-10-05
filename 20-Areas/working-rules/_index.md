@@ -28,3 +28,7 @@ Global kuralların damıtması. Orijinal dosya değiştirilmedi; geçerli olan h
 ## Ortam ve otomasyon
 - [[izinler-ve-ayarlar]]: settings.json ve settings.local.json özeti
 - [[zamanlanmis-gorevler-ve-skiller]]: gözcü, gece incelemesi, senkronize skiller
+
+## Mac geçişi (2026-10-05)
+- [[2026-10-05-windowstan-maca-gecis]]: Windows → Mac taşıma kararı, paket ve yol çevirisi
+- [[mac-gecisi-kontrol-listesi]]: Mac tarafında yapılacaklar (açık)

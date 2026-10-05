@@ -26,6 +26,8 @@ Prompt'ları düzenlenebilir dosyalardır: `~/.claude/scheduled-tasks/<ad>/SKILL
 
 Ortak: Türkçe yazarlar, gelen kutusu `C:\Users\yusuf\diskort-inbox\`. Akış ve komutlar: [[gelen-kutusu-ve-rutinler]].
 
+**Mac geçişi (2026-10-05):** Görev metinleri Mac yollarına çevrilip taşındı (gelen kutusu `/Users/ziroo/diskort-inbox/`). Görevler Mac'te yeniden kurulmalı, ardından Windows'takiler kapatılmalı: [[mac-gecisi-kontrol-listesi]].
+
 ## `skills/synced`
 Tek bir senkronizasyon klasörü (hesap kimliği adlı) var; içinde Anthropic hesap skilleri: built-in-browser, chrome-browser, computer-use, deep-research, docs, docx, google-workspace, import-memory, morning, pdf, pptx, setup-writing-style, skill-creator, xlsx, bir `manifest.json`. Kullanıcıya özgü skill burada görünmüyor (içerikleri tek tek okunmadı, yalnız klasör adlarına bakıldı).
 
