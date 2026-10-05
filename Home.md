@@ -20,6 +20,7 @@ Buradan başla. Her şey buradan ya da bir projenin `_overview.md` dosyasından 
 - [[10-Projects/rehber-okuyucu/_overview|Rehber Okuyucu]]: Steam rehberlerini okunur gösterir, AI ile başarım kartlarına çevirir, tools.ziroo.net/rehber
 - [[10-Projects/ziroobank/_overview|Ziroobank]]: arkadaş grubu taksit takibi (eski Google Sheet), tools.ziroo.net/ziroobank
 - [[10-Projects/song-finder/_overview|Song Finder]]: link verilen şarkıya sesi gerçekten benzeyen şarkıları bulan kişisel araç (tools.ziroo.net/song-finder)
+- [[10-Projects/pdf-ceviri/_overview|PDF Çeviri Düzeltici]]: Trados'un bozuk Türkçe DOCX'ini orijinal PDF düzenine yerleştirir, tools.ziroo.net/pdf-ceviri
 
 ## Altyapı
 - [[2026-10-03-joker-dns-ve-tools-games-alt-alan-adlari]]: joker DNS, tools.ziroo.net ve games.ziroo.net (araç listesi tools.ziroo.net, oyun listesi games.ziroo.net)
