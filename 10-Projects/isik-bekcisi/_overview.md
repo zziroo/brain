@@ -133,6 +133,8 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 - [[2026-10-06-buyuyen-isaret-en-yakin-nokta-tiklamasini-bozar]]
 - [[2026-10-06-tehdidi-hic-karsilamayan-bot-onu-vergi-gibi-oder]]
 - [[2026-10-06-kamera-kaymasi-tehdidi-ekran-disina-iter]]
+- [[2026-10-06-angarya-sanilan-adim-gizli-gelir-olabilir]]
+- [[2026-10-06-olayla-tiklenen-ipucu-kacabilir-durum-sorgula]]
 
 ## Oturumlar
 - [[2026-10-02-iki-oyun-yayin-ve-kamp-yenilemesi]]
