@@ -44,3 +44,4 @@ Buradan başla. Her şey buradan ya da bir projenin `_overview.md` dosyasından 
 ## Bakım
 - Inbox: `00-Inbox/`
 - Yapı ve yazma kuralları: [[CLAUDE]]
+- [[10-Projects/silksong-mod/_overview|Silksong modu]] — özgün boss, Team Cherry kalitesi hedefi
