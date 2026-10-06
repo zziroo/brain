@@ -15,7 +15,7 @@ source: oturumlar 2026-10-02/03 (steam-avgr-calculator)
 Yusuf'un eski Google Sheets + Apps Script hesaplayıcısının yerine geçen panel. Herkes SteamID / vanity / profil linki girip kullanabilir. Steam profilindeki AGCR ile hesaplananı karşılaştırır (herkese açık ve "tümü" görünümü), en çok düşüren oyunlar, "şunu bitirirsem" hesabı, en ucuz hedefler (kalan başarım ya da tahmini süreye göre), AppID ile oyun ekleme, elle oyun ekleme, oyun hariç tutma (localStorage). Tasarım ziroobank tarzında.
 
 ## Teknoloji
-- Kaynak `C:\Users\yusuf\ZZ\zProjects\steam-avgr-calculator\app`, GitHub `yusufholat/steam-avgr-calculator` (private, main). Node 22, bağımlılık yok, Dockerfile. README endpoint ve env'leri anlatır.
+- Kaynak `C:\Users\yusuf\ZZ\zProjects\steam-avgr-calculator\app`, GitHub `zziroo/steam-avgr-calculator` (private, main). Node 22, bağımlılık yok, Dockerfile. README endpoint ve env'leri anlatır.
 - Hız: `IPlayerService/GetTopAchievementsForGames` 20 oyun/istek, paralel. Sahip profili ~4-6 sn soğuk, önbellek 10 dk.
 - Gizli oyun tespiti: `GetPlayerAchievements` "Profile is not public" → gizli. Key'i harcadığı için yalnız `OWNER_STEAMID` hesabında çalışır.
 - Süreler: Steamhunters `api/apps/<id>` (medyan) ve `/achievements` (oranlar); kalan süre = medyan × Σ(-ln p, kilitli) / Σ(-ln p, tümü), alınamazlar hariç. Sunucuda 7 gün önbellek, eşzamanlılık 4.

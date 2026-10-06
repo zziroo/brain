@@ -64,7 +64,7 @@ Yusuf tüm Claude çalışmasını (ZZ, vault, oturumlar, hafıza, kurallar, tok
 - Pakette projelerin `.env` dosyaları var. Kişisel yolla (USB ya da kendi bulut hesabı) taşınır, kurulumdan sonra silinir.
 - Windows oturumları Mac'teki Claude uygulamasının kenar çubuğunda hesap üzerinden görünür, ama Windows makinesinde çalışırlar. Windows kapalıysa ya da uykudaysa "Can't reach your computer" der; mesaj yazılırsa Windows'taki dosyalarda iş yapılır. Mac'te iş için Mac klasörüyle yeni oturum açılır. (Kontrol 2026-10-05: Yusuf'un Mac ekranında görüldü.) Mac'te token raporu sıfırdan başlar. Windows dönemi: [[2026-10-05-windows-donemi-token-ozeti]].
 - Zamanlanmış görevler Mac'te yeniden kurulana kadar Windows'ta çalışmaya devam eder. Mac'te kurulunca Windows'takiler kapatılmalı, yoksa gözcü iki kez çalışır.
-- Vault artık GitHub'da da var: özel repo `yusufholat/brain`, 2026-10-05'te açıldı. Önce gizli değer taraması yapıldı, çalışma ağacında ve geçmişte bir şey çıkmadı; notlarda yalnızca sunucu IP'leri var. İki makine bu repo üzerinden eşitlenir. Vault kuralları, `/basla` (pull) ve `/kaydet` (push) buna göre güncellendi.
+- Vault artık GitHub'da da var: özel repo `zziroo/brain`, 2026-10-05'te açıldı. Önce gizli değer taraması yapıldı, çalışma ağacında ve geçmişte bir şey çıkmadı; notlarda yalnızca sunucu IP'leri var. İki makine bu repo üzerinden eşitlenir. Vault kuralları, `/basla` (pull) ve `/kaydet` (push) buna göre güncellendi.
 - Mac tarafında yapılacakların listesi: [[mac-gecisi-kontrol-listesi]].
 
 ## İlgili

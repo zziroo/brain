@@ -10,7 +10,7 @@ source: memory git-push-autonomy.md (diskort proje hafızası)
 # Claude, Diskort reposunda doğrulanmış değişikliği kendi takdiriyle main'e commit edip push edebilir
 
 ## Bağlam
-Yusuf 2026-09-26'da `yusufholat/diskort` için her push'ta sormaya gerek olmadığını söyledi.
+Yusuf 2026-09-26'da `zziroo/diskort` için her push'ta sormaya gerek olmadığını söyledi.
 
 ## Karar
 Tutarlı, doğrulanmış bir değişiklikten sonra (typecheck + testler geçince) Türkçe commit mesajıyla `main`'e commit + push serbest.

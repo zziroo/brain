@@ -32,3 +32,6 @@ Global kuralların damıtması. Orijinal dosya değiştirilmedi; geçerli olan h
 ## Mac geçişi (2026-10-05)
 - [[2026-10-05-windowstan-maca-gecis]]: Windows → Mac taşıma kararı, paket ve yol çevirisi
 - [[mac-gecisi-kontrol-listesi]]: Mac tarafında yapılacaklar (açık)
+
+## GitHub hesabı (2026-10-06)
+- [[2026-10-06-github-repolari-zziroo-hesabina-tasindi]]: 15 repo `zziroo` hesabına taşındı, yönlendirme ve remote notları
