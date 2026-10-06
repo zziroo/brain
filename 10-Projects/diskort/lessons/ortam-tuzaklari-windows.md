@@ -2,12 +2,14 @@
 type: lesson
 project: diskort
 date: 2026-10-01
-status: active
-tags: [diskort, windows, powershell, claude-cli, ortam]
+status: windows-donemi
+tags: [diskort, windows, windows-donemi, powershell, claude-cli, ortam]
 source: 5b97b763-8400-43fd-9e9e-ca9d48766518.jsonl, a7b70327-6e05-4060-a15b-293ddac27162.jsonl
 ---
 
 # Windows ortam tuzakları: cmd/PowerShell, claude CLI PATH, Remote Control
+
+> **Windows dönemi (2026-10-05'e kadar).** Bu not yalnız eski Windows makinesi için geçerlidir (kullanıcı `yusuf`, PowerShell, MSIX, WinGet). Yusuf Mac'e (`ziroo`, zsh, Homebrew) geçti; Mac'e özgü doğrulanmış ortam bilgisi [[dev-ortami-tuzaklari]] ve [[telefonla-erisim]] notlarında. Mac için ayrı bir tuzak listesi henüz yok; doğrulanmadan uydurulmadı.
 
 - Kullanıcıya cmd komutu verilip PowerShell'de çalıştırılınca hata verdi; ortamı sor ya da PowerShell karşılığını ver (`Remove-Item -Recurse -Force`).
 - Yusuf'un PowerShell'inde script çalıştırma kapalı: `pnpm dev:desktop` `pnpm.ps1 cannot be loaded` hatası verir. Komutu `pnpm.cmd ...` olarak ver; Execution Policy'yi biz değiştirmeyiz (güvenlik ayarı, isterse kendisi `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned`). (2026-10-01)

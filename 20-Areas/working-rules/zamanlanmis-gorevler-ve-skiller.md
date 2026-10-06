@@ -1,10 +1,10 @@
 ---
 type: resource
 project: diskort
-date: 2026-10-01
+date: 2026-10-07
 status: active
 tags: [working-rules, zamanlanmis-gorev, skill]
-source: C:\Users\yusuf\.claude\scheduled-tasks\*\SKILL.md; C:\Users\yusuf\.claude\skills\synced
+source: /Users/ziroo/.claude/scheduled-tasks/*/SKILL.md (Mac, 2026-10-07); Windows dönemi: C:\Users\yusuf\.claude\scheduled-tasks\*\SKILL.md ve skills\synced
 ---
 
 # İki yerel zamanlanmış görev Diskort'u izler; senkronize skiller hesap skilleridir
@@ -24,12 +24,12 @@ Prompt'ları düzenlenebilir dosyalardır: `~/.claude/scheduled-tasks/<ad>/SKILL
 - Bulgu orta+ ise tek bir sonnet skeptic çalıştırır. Sonucu gelen kutusuna yazar; yalnız hayatta kalan yüksek/kritik bulguda push bildirimi.
 - Salt okunur: repoyu değiştirmez, SSH/deploy yok.
 
-Ortak: Türkçe yazarlar, gelen kutusu `C:\Users\yusuf\diskort-inbox\`. Akış ve komutlar: [[gelen-kutusu-ve-rutinler]].
+Ortak: Türkçe yazarlar, gelen kutusu Mac'te `/Users/ziroo/diskort-inbox/` (var, eski raporlar içinde; inceleme işaretçisi `/Users/ziroo/diskort-review/`). Windows dönemi: `C:\Users\yusuf\diskort-inbox\`. Akış ve komutlar: [[gelen-kutusu-ve-rutinler]].
 
-**Mac geçişi (2026-10-05):** Görev metinleri Mac yollarına çevrilip taşındı (gelen kutusu `/Users/ziroo/diskort-inbox/`). Görevler Mac'te yeniden kurulmalı, ardından Windows'takiler kapatılmalı: [[mac-gecisi-kontrol-listesi]].
+**Mac durumu (2026-10-07):** Görev metinleri (`SKILL.md`) Mac yollarına çevrilip `/Users/ziroo/.claude/scheduled-tasks/diskort-geri-bildirim-kontrolu/` ve `diskort-main-kod-inceleme/` altında duruyor (içlerinde `/Users/ziroo/diskort-inbox/` yolu doğrulandı). **Zamanlanmış görevler Mac'te bilerek henüz kurulmadı** (Yusuf ertelemeye karar verdi); SKILL.md dosyaları duruyor; zamanlayıcıya kayıt yapılmadı (Yusuf'un kararı; zamanlayıcıdaki durum ayrıca listelenmedi). Kurulum ve Windows'takileri kapatma sırası: [[mac-gecisi-kontrol-listesi]].
 
 ## `skills/synced`
-Tek bir senkronizasyon klasörü (hesap kimliği adlı) var; içinde Anthropic hesap skilleri: built-in-browser, chrome-browser, computer-use, deep-research, docs, docx, google-workspace, import-memory, morning, pdf, pptx, setup-writing-style, skill-creator, xlsx, bir `manifest.json`. Kullanıcıya özgü skill burada görünmüyor (içerikleri tek tek okunmadı, yalnız klasör adlarına bakıldı).
+**Windows dönemi bilgisi:** Tek bir senkronizasyon klasörü (hesap kimliği adlı) vardı; içinde Anthropic hesap skilleri: built-in-browser, chrome-browser, computer-use, deep-research, docs, docx, google-workspace, import-memory, morning, pdf, pptx, setup-writing-style, skill-creator, xlsx, bir `manifest.json`. Mac'te `~/.claude/skills/synced` yok (2026-10-07); `~/.claude/skills/` altında kullanıcı skilleri `basla` ve `kaydet` var. Windows'ta kullanıcıya özgü skill burada görünmüyordu (içerikleri tek tek okunmadı, yalnız klasör adlarına bakıldı).
 
 ## İlgili
 - [[inceleme-kapisi]], [[izinler-ve-ayarlar]], [[_index]]

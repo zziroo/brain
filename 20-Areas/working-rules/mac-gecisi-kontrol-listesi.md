@@ -24,20 +24,20 @@ Karar ve gerekçe: [[2026-10-05-windowstan-maca-gecis]]. Mac'te ilk oturumda bu 
 - [ ] Kurulum bitince `mac-tasima` paketini sil. İçinde `.env` dosyaları var.
 
 ## Mac'te ilk Claude oturumu (Claude)
-- [ ] Kurulumu doğrula:
+- [x] Kurulumu doğrula (2026-10-07: 7 memory klasörü var, usage.mjs çalışıyor):
   - `~/.claude/projects/-Users-ziroo-ZZ*/memory` klasörleri var. Konuşma kayıtları bilerek taşınmadı.
   - `node ~/.claude/orchestration-report/usage.mjs` çalışıyor. Yalnızca Mac oturumlarını sayar; Windows dönemi: [[2026-10-05-windows-donemi-token-ozeti]].
-- [ ] Zamanlanmış görevleri yeniden kur: `diskort-geri-bildirim-kontrolu` saatlik, `diskort-main-kod-inceleme` 00:10'da. Metinleri `~/.claude/scheduled-tasks/` altında.
+- [ ] (Yusuf 2026-10-07: şimdilik ertelendi) Zamanlanmış görevleri yeniden kur: `diskort-geri-bildirim-kontrolu` saatlik, `diskort-main-kod-inceleme` 00:10'da. Metinleri `~/.claude/scheduled-tasks/` altında.
 - [ ] Mac'teki görevler çalışmaya başlayınca Yusuf'a Windows'takileri kapattır. Yoksa gözcü iki kez çalışır.
-- [ ] `git status` ile repoların temiz göründüğünü kontrol et. Taşımadan önce bütün repolar temizdi; `kur.sh` hepsini bir kez LF satır sonuna çevirdi.
-- [ ] Bağımlılıkları `kur.sh` kendisi kurar: diskort için `pnpm install --frozen-lockfile`, song-finder, string-tool ve web-fps-game için `npm ci`, trencheck için venv. Node o sırada kurulu değildiyse sonradan `bash kur.sh bagimliliklar` çalıştır. `!!` ile başlayan hata satırı varsa birlikte bak.
-- [ ] Git: repoların kimliği kendi `.git/config` dosyalarında (Ziroo / zziroo.ai@gmail.com). Global kimliği `kur.sh` ayarlar. Push için Yusuf `gh auth login` ile giriş yapar, ardından `bash kur.sh git-kimlik` çalıştırır.
-- [ ] Vault: GitHub'da özel repo `zziroo/brain` (2026-10-05). `kur.sh`, gh girişi varsa vault'u oradan en güncel haline çeker. Giriş sonradan yapıldıysa `bash kur.sh git-kimlik` çalıştır. `/basla` her oturumda pull yapar, `/kaydet` commit'ten sonra push eder.
+- [x] (2026-10-07: 15 repo temiz, fetch sonrası geride/ileride yok) `git status` ile repoların temiz göründüğünü kontrol et. Taşımadan önce bütün repolar temizdi; `kur.sh` hepsini bir kez LF satır sonuna çevirdi.
+- [x] (2026-10-07: gerekenlerin hepsi kurulu; node_modules'u olmayan 3 projenin bağımlılığı yok) Bağımlılıkları `kur.sh` kendisi kurar: diskort için `pnpm install --frozen-lockfile`, song-finder, string-tool ve web-fps-game için `npm ci`, trencheck için venv. Node o sırada kurulu değildiyse sonradan `bash kur.sh bagimliliklar` çalıştır. `!!` ile başlayan hata satırı varsa birlikte bak.
+- [x] (2026-10-07: global kimlik Ziroo / zziroo.ai@gmail.com, gh `zziroo`) Git: repoların kimliği kendi `.git/config` dosyalarında (Ziroo / zziroo.ai@gmail.com). Global kimliği `kur.sh` ayarlar. Push için Yusuf `gh auth login` ile giriş yapar, ardından `bash kur.sh git-kimlik` çalıştırır.
+- [x] Vault: GitHub'da özel repo `zziroo/brain` (2026-10-05). `kur.sh`, gh girişi varsa vault'u oradan en güncel haline çeker. Giriş sonradan yapıldıysa `bash kur.sh git-kimlik` çalıştır. `/basla` her oturumda pull yapar, `/kaydet` commit'ten sonra push eder.
 - [x] GitHub hesabı (2026-10-06, Mac'te 2026-10-06 yapıldı: gh `zziroo` aktif, 15 remote çevrildi ve ls-remote ile test edildi): 15 repo `zziroo` hesabına taşındı ([[2026-10-06-github-repolari-zziroo-hesabina-tasindi]]). Mac'te Yusuf `gh auth login` ile `zziroo` olarak girer (HTTPS) ve ardından `gh auth setup-git` çalıştırır. Sonra remote'ları çevir. Aşağıdaki komut yalnızca taşınan repoların remote'unu değiştirir, SSH remote'ları da HTTPS'e çevirir. Klasörler `~/ZZ` altında değilse yolu düzelt:
   `L=" brain isik-bekcisi diskort ziroo-edge ziroobank-expenses web-fps-game bal-vadisi document-formatter song-finder achievement-guide-formatter string-tool steam-avgr-calculator web-boss-teaser voice-detector trencheck "; for d in ~/ZZ/brain ~/ZZ/zProjects/*/; do u=$(git -C "$d" remote get-url origin 2>/dev/null) || continue; r=$(basename "$u" .git); case "$u" in *yusufholat/*) case "$L" in *" $r "*) git -C "$d" remote set-url origin "https://github.com/zziroo/$r.git" && echo "$d -> zziroo/$r";; esac;; esac; done`
-- [ ] Diskort: hafızadaki `diskort-dev-environment` notunun Windows maddelerini Mac'te doğrula ve notu güncelle.
+- [x] (2026-10-07) Diskort: hafızadaki `diskort-dev-environment` notunun Windows maddelerini Mac'te doğrula ve notu güncelle.
 - [x] Diskort Windows `.exe`: Karar GitHub Actions (Yusuf, 2026-10-07). Zaten kuruluymuş: `release.yml`'deki `windows` işi `v*` etiketiyle `windows-latest`'te paketleyip taslağa yüklüyor (v0.9.1–v0.9.6 hep başarılı, Windows işi ~2 dk). Windows makinesine gerek yok; `pnpm release:win` (scripts/release-win.mjs) yalnızca yedek yol.
-- [ ] Windows'a özgü vault notlarını güncelle ya da Windows dönemine ait olduklarını belirt:
+- [x] (2026-10-07; diskort `.claude/settings.local.json` içindeki Windows yol kuralları bayat, bkz. [[izinler-ve-ayarlar]]) Windows'a özgü vault notlarını güncelle ya da Windows dönemine ait olduklarını belirt:
   - [[ortam-tuzaklari-windows]]
   - [[dev-ortami-tuzaklari]]
   - `10-Projects/diskort/runbooks/telefonla-erisim.md` (`claude.exe` yolu)
