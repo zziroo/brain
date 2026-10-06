@@ -12,7 +12,7 @@ source: oturum 53393f9a (incremantal-game), commit 0bcc0a0; seçenekler [[2026-1
 ## Karar
 Devir notundaki B seçeneği seçildi. Yusuf bu turda ürün hissi seçimlerini Claude'a bıraktı ("hepsini sen yap").
 - **Parlama:** fenerin çevresinde 13 px'lik ince bir halka (gri iz, saat yönünde dolan kor rengi yay). Hazır olunca parlar ve ince bir halka açılarak söner.
-- **Atılım:** ayak dibinde 19×6 px'lik yatık elips. Hazır olunca parlar ve küçük bir toz bulutu çıkar.
+- **Atılım:** ayak dibinde 19×6 px'lik yatık elips. Hazır olunca parlar ve küçük bir toz bulutu çıkar. *2026-10-06'da değişti: Atılım'ın halkası artık imleçte ([[2026-10-06-atilim-halkasi-imlecte]]).*
 - **Ses:** Parlama hazır olunca yüksek bir çan sesi, Atılım için daha pes bir ton. Hazır değilken basınca boğuk bir tık duyulur ve halka iki kez yanıp söner.
 - Her şey hazırken ekranda hiçbir şey yok. Sağ alttaki gösterge yedek olarak duruyor. Hareketi azaltma tercihinde yalnız kısa bir parlama var.
 - Kural tarafı run.js'teki `watchSkills()` içinde: `skillReady` ve `skillNo` olaylarını yayar, çizim render.js'teki `skillSigns()` içinde.
