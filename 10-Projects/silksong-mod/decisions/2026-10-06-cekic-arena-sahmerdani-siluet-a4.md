@@ -2,12 +2,14 @@
 type: decision
 project: silksong-mod
 date: 2026-10-06
-status: active
+status: partially-superseded
 tags: [silksong, boss, tasarim, lora, animasyon]
 source: Windows oturumu 2026-10-06 (konsept turları D:\SilksongMod\ai\out\scoria_v2, scoria_r2)
 ---
 
 # Scoria'nın çekici kola kaynamış değil, arenanın şahmerdanı; siluet A4 (kaya baş-gövde, zincirli maşa)
+
+> **Güncelleme (aynı gün, gece):** Siluet kısmı geçersiz: Yusuf pelerinli şövalye karakterini seçti (bkz. [[2026-10-06-karakter-lora-caption-ve-kukla]] ve `_overview`). Şahmerdan kararı geçerli.
 
 **Karar (Yusuf, 2026-10-06):** Çekiç, örsün üstünde zincirle asılı prosedürel bir arena mekanizması olur; Scoria zinciri çekerek indirir. Kendi silahı 1. fazda zincirli maşa/kanca, 2. fazda bitmemiş iğne. Siluet, LoRA v2 konsept A4: tek parça çatlak cüruf kaya baş-gövde, iki kor göz, çok uzun ince kollar ve bacaklar, kambur ve yorgun duruş.
 
