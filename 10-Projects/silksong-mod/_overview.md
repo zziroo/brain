@@ -12,7 +12,7 @@ source: ZZ kök oturumu 2026-10-06
 Kişisel kullanım ve arkadaşlarla oynamak için Hollow Knight: Silksong'a mod olarak yeni içerik. Dağıtım yok, ticari amaç yok.
 
 ## Durum
-- 2026-10-06: Genel DLC çerçevesi (`design/00-dlc-overview-sunken-forge.md`: The Sunken Forge, 7 oda, 3 düşman, mini-boss, NPC, Wish, Crest; v0.1/0.2/0.3 sürümleri) ve ilk boss (`design/boss-01-kilnwright-scoria.md`) yazıldı. Tasarım dosyaları `~/ZZ/zProjects/silksong-mod/design/`.
+- 2026-10-06: Genel DLC çerçevesi (`design/00-dlc-overview-sunken-forge.md`: The Sunken Forge, 7 oda, 3 düşman, mini-boss, NPC, Wish, Crest; v0.1/0.2/0.3 sürümleri) ve ilk boss (`design/boss-01-kilnwright-scoria.md`) yazıldı. Tasarım dosyaları bu vault içinde: [[10-Projects/silksong-mod/design/00-dlc-overview-sunken-forge|DLC çerçevesi]], [[10-Projects/silksong-mod/design/boss-01-kilnwright-scoria|Boss 01 Scoria]] (Mac kopyası `~/ZZ/zProjects/silksong-mod/design/`).
 - Henüz kod yok. Proje klasörü: `~/ZZ/zProjects/silksong-mod/`.
 
 ## Kararlar
