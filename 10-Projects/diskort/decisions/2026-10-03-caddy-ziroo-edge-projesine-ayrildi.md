@@ -13,7 +13,7 @@ source: oturum 2026-10-03, Diskort commit 5e40243, ziroo-edge repo (yusufholat/z
 Ertelenmiş işti ([[2026-10-02-caddy-ortak-site-klasoru]]). Sunucuda Diskort dışı projeler çoğalıyor (steam, ziroobank, oyunlar). Kapis kendi alan adını (`kapis.ziroo.net`) istiyordu, ama eski yapı yalnızca Diskort site bloğunun içindeki yolları içe aktarabiliyordu. Yusuf "edge projesine ayır" dedi.
 
 ## Karar
-- **ziroo-edge:** Sunucuda `/opt/ziroo-edge`, kapsayıcı adı `ziroo-edge`, host ağı. GitHub'da özel depo `yusufholat/ziroo-edge`, yerelde `zProjects\ziroo-edge`. Sunucuya scp ile kopyalanır. Caddy-l4 imajını, TURN/TLS SNI kuralını (global blok) ve içe aktarmaları tutar.
+- **ziroo-edge:** Sunucuda `/opt/ziroo-edge`, kapsayıcı adı `ziroo-edge`, host ağı. GitHub'da özel depo `zziroo/ziroo-edge` (2026-10-06'ya kadar `yusufholat`), yerelde `zProjects\ziroo-edge`. Sunucuya scp ile kopyalanır. Caddy-l4 imajını, TURN/TLS SNI kuralını (global blok) ve içe aktarmaları tutar.
 - **Diskort siteleri:** Diskort deposunda kaldı (`infra/caddy/diskort.caddy`). Edge bu klasörü bağlayıp içe aktarır. Değişiklik `git pull` ve ardından `bash /opt/ziroo-edge/reload.sh` ile yayına girer. Yeniden başlatma gerekmez, çünkü tek dosya değil klasör bağlı.
 - **Diğer projeler:**
   - `/opt/ziroo-sites/<ad>.caddy`: Diskort alan adı altındaki yollar, eskisi gibi.
