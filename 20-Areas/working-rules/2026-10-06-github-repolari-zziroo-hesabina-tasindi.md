@@ -32,6 +32,7 @@ Yusuf "Ziroo" işleri için ayrı bir kimlik istedi. Adres doğrulanınca eski c
 - Diskort masaüstü uygulaması GitHub Releases'tan güncelleniyor. Yayımlanmış sürümler eski adrese gidiyor ve yönlendirmeye dayanıyor. Bir sonraki sürümde yayın ayarındaki owner `zziroo` yapılmalı (Diskort oturumunda). **Doğrulanmadı:** Yönlendirme üzerinden güncellemenin çalıştığı denenmedi.
 - Açık: Mac'teki remote'lar ([[mac-gecisi-kontrol-listesi]]) ve VPS'teki git remote'ları. VPS'te GitHub'dan çeken bir klon olup olmadığı kontrol edilmedi.
 - Grafik: 834 commit'in hepsi `zziroo`'ya bağlandı ve 26 Eylül–6 Ekim arasındaki her güne dağılıyor. Taşıma günü grafikte yalnızca birkaç gün görünüyordu. **Doğrulanmadı:** Yeniden hesaplamanın tamamlandığı (24 saati bulabilir) kontrol edilmedi.
+- Mac (2026-10-06): `gh` yalnızca `zziroo` ile girişli. Yusuf eski repolara erişim istemediği için `yusufholat` oturumu kapatıldı (`gh auth logout -u yusufholat`). Keychain'de GitHub kimliği yok. Eski repolara gerekirse yeniden `gh auth login` ile girilir.
 - Ortam tuzağı: Terminal panelinde yapılan `gh auth login` Claude'un araçlarına yansımadı ([[ortam-tuzaklari-windows]]).
 
 ## İlgili
