@@ -18,8 +18,10 @@ source: Windows PC oturumu 2026-10-06 (repo C:\Users\yusuf\ZZ\zProjects\silksong
 - AI ortamı: ComfyUI portable (cu130), kohya sd-scripts (torch 2.8 cu128, Python 3.12 venv), Illustrious-XL v2.0 ve SDXL Base 1.0. Hepsi `D:\SilksongMod\ai\`.
 - Deneme eğitimi → taban SDXL Base: [[2026-10-06-lora-tabani-sdxl-base]]. v1 (2400 adım): en iyi checkpoint 1200; sonrasında aşırı öğrenme.
 
+- Akşam: veri seti v2 (Real-ESRGAN x4), stil LoRA v2 (1500 adım, 1000 en iyi, belirgin keskin). 3 konsept turu (18 + 20 + 34 görsel); Yusuf A3/A4/B4/C4/B1 beğendi, çekiç arenaya taşındı, A4 kilitlendi: [[2026-10-06-cekic-arena-sahmerdani-siluet-a4]]. Karakter LoRA `scoria_char_v1` ve Idle denemesi başarılı.
+
 **Sonuç:** Stil öğreniliyor (kontur, düz gölge, gri zemin, lav mağarası arka planları). Scoria konseptleri siluet olarak doğru yönde ama çizgiler bulanık ve tarif tam takip edilmiyor.
 
 **Dersler:** [[2026-10-06-bepinex-preloader-hatayi-yutar]], [[2026-10-06-sd-scripts-onbellegi-modele-ozgu]]
 
-**Sıradaki:** v2 LoRA (Real-ESRGAN ile yeniden büyütme, zengin caption'lar, ~1200–1500 adım); sonra Scoria karakter LoRA'sı ve kukla + img2img kare hattı. Mod tarafında "merhaba" sahnesi ve Deep Docks gizli kapı keşfi.
+**Sıradaki:** parçalı kukla ve ControlNet ile büyük pozlar; TK2D'ye aktarım ve oyunda Idle testi. Mod tarafında "merhaba" sahnesi ve Deep Docks gizli kapı keşfi.

@@ -3,6 +3,7 @@
 > Silksong modu için özgün boss. Hedef: Team Cherry'nin yayınladığı bir boss gibi hissettirmek.
 > Doğrulama sonuçları `notes-dogrulama.md` içinde (2026-10-06, oyun build 22479045). Hâlâ açık olanlar satır içinde `[doğrula]` ile işaretli.
 > Kullanıcı kararları (2026-10-06): HP ~700 ve faz eşikleri %75/%40; arena lavı oyunun gerçek lavı; Forge Daughter'ın yerine geçen usta olarak Scoria; Cinder Fang hasarı 4 / 12 / 2.
+> 2026-10-06: çekiç arenaya taşındı (karar), siluet A4. Çekiç artık Scoria'nın koluna kaynık değil; tavandan zincirle asılı arena şahmerdanı (§5, §6, §8, §11).
 
 ---
 
@@ -21,7 +22,7 @@ Deep Docks'un lavlarının altındaki Batık Ocak'ta, bitiremediği bir iğneyi 
 
 Sitadel'in parladığı çağda Deep Docks cevher ve metal taşıyordu (oyunda: `DOCKS_NOTE_1`, zil vuruşlarına göre Sitadel'e smelt sevkiyatı) ve ocakların en büyüğü Scoria'nındı. Sitadel'in hacılarına verilen iğneler, Bellway'lerin çanlarının dilleri, Grand Gate'in menteşeleri onun elinden çıktı. Bu nesnelerin kökeni oyunda anlatılmıyor; mod-özgün lore, ama "Docks Sitadel'e metal gönderirdi" çerçevesine bağlı.
 
-Sonra Sitadel ince işi kendi gözünde "kutsal" bir zanaata devretti ve Scoria'nın yerine Forgehome'dan bir Forge Daughter getirtti. Siparişler yukarı çıktı, Scoria aşağıda kaldı. Sitadel sustuğunda geriye kalan siparişler de kesildi. Scoria son bir sipariş uydurdu kendine: "Geri dönecek olan için" bir iğne. Kimin döneceğini kendi de bilmiyor; belki bir kraliçe, belki bir hacı, belki hiç kimse. Ocağı söndürmedi. Yıllar içinde cüruf şişen bedenine yapıştı, göğsü bir fırın ızgarasına dönüştü, çekici koluna kaynadı. Yukarıdaki dock işçileri "duvarın ardındaki vuruş"u efsane sanıyor.
+Sonra Sitadel ince işi kendi gözünde "kutsal" bir zanaata devretti ve Scoria'nın yerine Forgehome'dan bir Forge Daughter getirtti. Siparişler yukarı çıktı, Scoria aşağıda kaldı. Sitadel sustuğunda geriye kalan siparişler de kesildi. Scoria son bir sipariş uydurdu kendine: "Geri dönecek olan için" bir iğne. Kimin döneceğini kendi de bilmiyor; belki bir kraliçe, belki bir hacı, belki hiç kimse. Ocağı söndürmedi. Yıllar içinde cüruf şişen bedenine yapıştı, göğsü kor yanan bir fırına dönüştü, baş ve gövdesi tek bir cüruf kütlesine kaynadı. Ocağın şahmerdanı ise hâlâ tavanda, zincirinde asılı; onu artık kendi zinciriyle çekiyor. Yukarıdaki dock işçileri "duvarın ardındaki vuruş"u efsane sanıyor.
 
 Hornet geldiğinde Scoria onu bitmemiş iğnenin sahibi sanır. Değil. Bunu anlayınca dövüş başlar: ya Hornet iğneyi alır ya da Scoria onu da cürufa katar.
 
@@ -37,9 +38,13 @@ Hornet geldiğinde Scoria onu bitmemiş iğnenin sahibi sanır. Değil. Bunu anl
 
 ## 5. Görsel konsept
 
-**Silüet:** Uzun, kambur, iki ayaklı böcek. Omuzlar geniş, baş küçük ve öne eğik. Sağ kol dirsekten itibaren dev bir çekiç; kemik ile demirin kaynaştığı yer belli, pürüzlü. Sol kol normal, uzun, maşa gibi iki parmaklı. Hornet'in yaklaşık 2,5 katı boy. Siluet tek başına tanınmalı: **çekiç kol + kambur + göğüs ızgarası.**
+**Silüet (A4, kilitli):** Kambur, iki ayaklı böcek. Baş ve gövde tek sert kütle: büyük, çatlak cüruf "kaya"; baş gövdeden ayrı bir parça değil. İki parlak turuncu göz. Kollar çok uzun ve ince: sol kol iki parmaklı maşa-el, sağ elde zincirli maşa (kanca ucu). Bacaklar uzun ve ince. Duruş yorgun, trajik. Hornet'in yaklaşık 2,5 katı boy. Siluet tek başına tanınmalı: **kaya baş-gövde + zincirli maşa + kor göğüs.**
 
-**Yüzey:** Kabuk kömür karası, çatlaklardan turuncu kor sızıyor. Göğüs boşluğu dökme demir fırın kapağı gibi; içinde yanan ateş görünüyor, fazlara göre parlıyor. Sırtında dört baca deliği, duman tüter. Belinde yanmış zincir-ipek bir önlük parçası; ipeğin yandığını göstermek Silksong için anlamlı bir detay.
+**Çekiç yok:** Çekiç Scoria'nın kolu değil, arenanın mekanizması: tavandan zincirle asılı dev bir şahmerdan (bkz. §6). Scoria kendi silahı olarak Faz 1'de zincirli maşayı, Faz 2'de bitmemiş iğneyi taşır.
+
+**Kaynak ve gerekçe (karar 2026-10-06):** Konsept LoRA v2 örneği A4'ten geldi (`D:\SilksongMod\ai\out\scoria_v2\A_00_s4.png`). Stil modeli zincir, maşa ve kor aletini doğal çiziyor, çekiç kolu hiç çizmiyor. Çekiç prosedürel sprite olunca animasyon yükü de düşüyor. Tematik olarak Scoria kendi ocağıyla dövüşüyor.
+
+**Yüzey:** Kabuk kömür karası, çatlaklardan turuncu kor sızıyor. Göğüste tek bir parlayan kor bölgesi (kor yaması; fırın kapağı ya da ızgara kapısı şart değil), fazlara göre parlıyor. Sırtında dört baca deliği isteğe bağlı, duman tüter. Belinde yanmış zincir-ipek bir önlük parçası; ipeğin yandığını göstermek Silksong için anlamlı bir detay.
 
 **Gözler:** İki kor noktası, göz kapağı yok. Öfkelenince parlar, ölürken söner.
 
@@ -59,6 +64,7 @@ Hornet geldiğinde Scoria onu bitmemiş iğnenin sahibi sanır. Değil. Bunu anl
 Dairesel ocak çukuru, genişlik **32–36 birim**. Karşılaştırma: kamera tek ekranı 29,2 birim; Lace 2 savaş kilidi ~37, Widow ~34, Bell Beast ~37, Signis & Gron ~37.
 
 - **Zemin:** Ortada örs (Scoria'nın çalışma noktası, çarpışma var, Hornet üstüne çıkabilir). İki yanda taş platform. Platformlara ve örse `HazardRespawnMarker` konur.
+- **Şahmerdan (arena mekanizması):** Örsün tam üstünde, tavandan kalın bir zincirle asılı dev bir demirci çekici. Prosedürel nesnedir (gövde sprite'ının parçası değil, 3 sprite: yükselme, düşüş, temas). Askıdayken hasar vermez ve oyuncu için engel değildir. Yalnızca düşerken hasar kutusu açılır (2 maske). Scoria zinciri çekince yükselir, bırakınca örse düşer (bkz. A1, B3). Scoria'nın ölümünde hareketsiz asılı kalır.
 - **Alt:** Oyunun gerçek lavı (`HazardType.LAVA`, Deep Docks `Lava Box` bileşeni kopyası): değince **2 maske** + en son güvenli noktaya respawn (`HazardRespawnMarker`). Magma Bell bu hasarı yarıya indirir. Ölüm değil ama bedeli var. Faz 2'de yan platformlar yutulunca respawn işaretleri örse ve kalan platforma taşınmalı.
 - **Üst:** Tavandan iki zincir sarkar; ucunda **Harpoon Ring** (zincirde asılı varyant, `HarpoonRingChain`). Clawline yalnızca ring'lere kancalanır. 2. fazda lav yükselince hayatta kalma yolu.
 - **Arka plan:** Dev körük, soğuk ocaklar, duvara saplı yarım iğneler. Körük Scoria'nın nefesi ile hareket eder (3. fazda hızlanır).
@@ -88,32 +94,32 @@ Dairesel ocak çukuru, genişlik **32–36 birim**. Karşılaştırma: kamera te
 
 Her saldırı: telegraph (ön hazırlık), aktif süre, toparlanma, kaçış yolu. Süreler saniye.
 
-### Faz 1: Çekiç (Hammer)
+### Faz 1: Şahmerdan ve Zincir (Hammer)
 
-Scoria yavaş ama alanı kontrol eder. Oyuncu ritmi öğrenir.
+Scoria yavaş ama alanı kontrol eder; kendi ocağının mekanizmasını kullanır. Oyuncu ritmi öğrenir.
 
 **A1. Örs Vuruşu (Anvil Slam)**
-- Telegraph 0,6: çekiç kolu başının üstüne kalkar, göğüs ateşi parlar.
-- Aktif: çekiç yere iner, iki yöne zemin dalgası (hız orta, yükseklik 1 birim).
-- Toparlanma 0,8.
+- Telegraph 0,6: Scoria tavandan sarkan şahmerdan zincirini maşayla kavrar ve çeker; şahmerdan yükselir, göğüs ateşi parlar. Telegraph'ın görsel işareti zincir çekişi ve yükselen şahmerdandır.
+- Aktif: Scoria zinciri bırakır, şahmerdan örse düşer, iki yöne zemin dalgası (hız orta, yükseklik 1 birim).
+- Toparlanma 0,8: şahmerdan birkaç kez sallanıp durur, Scoria zinciri bırakır.
 - Kaçış: zıpla. Dalga ikinci sıçramada yan platformlara ulaşır.
-- Not: Örsün üstündeysen dalga olmaz ama çekiç doğrudan iner.
+- Not: Örsün üstündeysen dalga olmaz ama şahmerdan doğrudan düşer.
 
 **A2. Zincir Kırbacı (Chain Lash)**
-- Telegraph 0,5: sol el beline uzanır, zincir şıngırdar, kanca görünür.
-- Aktif: zincir yatay salınır, önce ileri sonra geri (iki tur). Alçak.
+- Telegraph 0,5: sağ el zincirli maşayı geriye savurur, zincir şıngırdar, kanca (maşa ucu) görünür.
+- Aktif: maşa-zincir yatay salınır, önce ileri sonra geri (iki tur). Alçak.
 - Kaçış: zıpla; ikinci turu unutma. Tavan zincirlerindeki Harpoon Ring'e Clawline ile tutunarak da kaçılır.
-- Hasar bölgesi: zincirin tamamı. Kanca ucu vurursa Hornet geri fırlar.
+- Hasar bölgesi: zincirin tamamı. Maşa (kanca) ucu vurursa Hornet geri fırlar.
 
 **A3. Cüruf Tükürüğü (Slag Spit)**
-- Telegraph 0,7: başını geri atar, boğazı turuncu parlar.
+- Telegraph 0,7: kaya başını geri atar, çatlakları ve göğsündeki kor turuncu parlar.
 - Aktif: 3 kavisli kor topu, farklı menzillere düşer. Düştükleri yerde 2,5 saniye yanan birikinti.
 - Kaçış: boş aralığa koş, ya da örs üstüne.
 - Amaç: alanı kirletmek, oyuncunun durma alışkanlığını kırmak.
 
 **A4. Söndürme (Quench)**
 - Sadece stagger sonrası ya da oyuncu çok yakın uzun süre kalırsa.
-- Telegraph 0,4: çekici lavlara daldırır.
+- Telegraph 0,4: lavın kıyısına eğilip maşanın ucunu lava daldırır.
 - Aktif: Scoria'nın etrafında buhar sütunu, yarıçap 3 birim, 0,5 sn.
 - Kaçış: geri çekil.
 - Amaç: sırtına yapışıp vurma stratejisini cezalandırmak.
@@ -122,7 +128,7 @@ Scoria yavaş ama alanı kontrol eder. Oyuncu ritmi öğrenir.
 
 ### Geçiş 1 → 2: İğne
 
-Scoria örse yürür, çekiç kolu ile örsün üstündeki bitmemiş iğneyi kavrar, çekerken bağırmaz; tek bir ağır nefes. Lav bir seviye yükselir (1,5 saniye, oyuncuya zincirdeki Harpoon Ring'e tutunma zamanı). Yan platformlar yarıya iner; respawn işaretleri kalan zemine taşınır.
+Scoria örse yürür, maşayla örsün üstündeki bitmemiş iğneyi kancalayıp çeker, sonra iğneyi eline alır (zincirli maşa beline asılır); çekerken bağırmaz, tek bir ağır nefes. Şahmerdan yukarıda hareketsiz asılı kalır. Lav bir seviye yükselir (1,5 saniye, oyuncuya zincirdeki Harpoon Ring'e tutunma zamanı). Yan platformlar yarıya iner; respawn işaretleri kalan zemine taşınır.
 
 Diyalog (ekranda tek satır, oyun fontu):
 > *"Not yours. Not anyone's."*
@@ -147,9 +153,10 @@ Hornet'in hareket setinin aynası. Scoria hızlanır, alan daralmıştır.
 - Not: Fırlatma sırasında iğne 1 saniye yerde kalır. Hornet o sırada iğneye vurursa Scoria çekilemez ve 1,2 saniye açık kalır. **Gizli karşı hamle**, öğrenen oyuncuya ödül.
 
 **B3. Kıvılcım Fırtınası (Sparkstorm)**
-- Telegraph 0,8: iğneyi örse dayar, çekiç kalkar.
-- Aktif: çekiç iğneye vurur, tavandan 8–10 kıvılcım yağar, yere düşünce kısa patlama. Düşüş noktaları yerde 0,4 saniye önceden kızıl nokta ile gösterilir.
+- Telegraph 0,8: iğneyi örse yatırır, sol maşa-elle şahmerdan zincirini çeker; şahmerdan yükselir.
+- Aktif: şahmerdan iğneye vurur, tavandan 8–10 kıvılcım yağar, yere düşünce kısa patlama. Düşüş noktaları yerde 0,4 saniye önceden kızıl nokta ile gösterilir.
 - Kaçış: noktaların arasında kal. Zincirler bu saldırıda güvensiz, kıvılcımlar yukarıdan gelir.
+- Not: Örsün üstü bu saldırıda en tehlikeli yer; şahmerdan doğrudan iner.
 - Amaç: "zincirde bekle" taktiğini kırmak.
 
 **B4. Alçak Süpürme (Low Sweep)**
@@ -161,7 +168,7 @@ Hornet'in hareket setinin aynası. Scoria hızlanır, alan daralmıştır.
 
 ### Geçiş 2 → 3: Yeniden Tutuşma
 
-Scoria diz çöker. Çekiç kolu ile kendi göğüs kapağını kırar. İçerideki ateş dışarı taşar, çatlaklar beyaza döner. Arka plandaki körük kendiliğinden hızlı çalışmaya başlar. 2 saniye hareketsiz; **tek büyük cezalandırma penceresi**, oyuncuya nefes.
+Scoria diz çöker. Sol maşa-elle kendi göğsündeki cüruf kabuğunu parçalar. İçerideki ateş dışarı taşar, çatlaklar beyaza döner. Arka plandaki körük kendiliğinden hızlı çalışmaya başlar. 2 saniye hareketsiz; **tek büyük cezalandırma penceresi**, oyuncuya nefes.
 
 Diyalog yok. Sadece ses (ses sonraya) ve ışık.
 
@@ -179,7 +186,7 @@ Tüm Faz 2 saldırıları, telegraph süreleri %20 kısa, toparlanmalar aynı. F
 
 ### Ölüm
 
-Scoria iğneyi örse saplar, iki eliyle tutunur, dizleri bükülür. Göğüs ateşi tek tek baca deliklerinden sönene kadar 3 saniye. Çatlaklar kararır. Son kare: kül rengi, hareketsiz, ama ayakta, örse yaslı. **Düşmez.** Bitmemiş iğne örste titrer, Hornet alır.
+Scoria iğneyi örse saplar, iki eliyle tutunur, dizleri bükülür. Göğüs ateşi 3 saniyede kısılıp söner (sırttaki baca delikleri varsa duman onlardan çıkar). Çatlaklar kararır. Son kare: kül rengi, hareketsiz, ama ayakta, örse yaslı. **Düşmez.** Şahmerdan yukarıda zincirinde hareketsiz asılı. Bitmemiş iğne örste titrer, Hornet alır.
 
 Ölüm diyaloğu (Hornet yaklaşınca):
 > *"Then take it. Finish it... or don't. The fire never cared."*
@@ -201,35 +208,37 @@ Scoria iğneyi örse saplar, iki eliyle tutunur, dizleri bükülür. Göğüs at
 
 ## 10. Animasyon listesi
 
-Sprite oyun standardında: tk2d koleksiyonu başına 1 atlas, 64 piksel/birim; klipler çoğunlukla 12 fps (1463 klibin 1075'i), hızlı vuruşlar 15–30 fps. Oyun boss'larının toplam kare sayısı: Signis 176, Gron 178, Moorwing 232, Widow 384, Lace 642 (medyan klip 4–5 kare). Bizim ~160 kare alt sınırda ama Signis/Gron düzeyinde, yeterli.
+Sprite oyun standardında: tk2d koleksiyonu başına 1 atlas, 64 piksel/birim; klipler çoğunlukla 12 fps (1463 klibin 1075'i), hızlı vuruşlar 15–30 fps. Oyun boss'larının toplam kare sayısı: Signis 176, Gron 178, Moorwing 232, Widow 384, Lace 642 (medyan klip 4–5 kare). Bizim ~150 kare alt sınırda ama Signis/Gron düzeyinde, yeterli.
 
 | Animasyon | Kare | Not |
 |---|---|---|
 | Idle | 8 | Körük nefesi, göğüs ateşi titrer, duman döngüsü ayrı katman |
 | Walk | 10 | Ağır, sol ayak geride sürüklenir |
 | Turn | 3 | |
-| A1 Anvil Slam | 6 + 4 | Kalkış + iniş; dalga ayrı efekt sprite'ı |
-| A2 Chain Lash | 5 + 8 | Hazırlık + iki tur; zincir ayrı, prosedürel segment |
+| Zincir çekme | 6 | Uzanma 2 + çekiş 2 + bırakma 2; A1'in gövde pozları (hazırlık ve toparlanma). Dalga ayrı efekt sprite'ı |
+| A2 Chain Lash | 5 + 6 | Hazırlık + iki tur gövde pozu; maşa ve zincir prosedürel segment (kare sayılmaz) |
 | A3 Slag Spit | 7 | Kor topları ayrı sprite (4 kare döngü) |
 | A4 Quench | 5 | Buhar ayrı efekt |
-| Geçiş 1→2 | 14 | İğneyi örsten çekme |
+| Geçiş 1→2 | 14 | Maşayla iğneyi örsten kancalama |
 | B1 Lunge | 4 + 3 + 5 | Çekiş + hamle + toparlanma; duvara saplanma varyantı +3 |
 | B2 Pin and Pull | 6 + 2 + 6 | Nişan + fırlatma + çekiliş; iğne ayrı sprite |
-| B3 Sparkstorm | 8 | Kıvılcım ayrı efekt |
+| B3 Sparkstorm | 8 | İğneyi örse yatırma 3 + sol elle zincir çekme 5 (Zincir çekme pozunun ayna varyantı); kıvılcım ayrı efekt |
 | B4 Low Sweep | 5 | |
-| Geçiş 2→3 | 12 | Göğüs kırma |
+| Geçiş 2→3 | 12 | Göğsündeki kabuğu kırma |
 | C1 Bellows | 9 | |
 | Stagger | 4 | |
 | Death | 16 | Sönme sırası baca katmanlarıyla |
-| **Toplam** | **~160 kare** | |
+| Şahmerdan (ayrı prosedürel sprite) | 3 | Yükselme + düşüş + temas; gövde karesi değil, arena nesnesi |
+| **Toplam** | **~150 kare** | 147 gövde + 3 şahmerdan. Çekiç kolu kareleri kalktı; maşa ve zincir kare saymaz |
 
-**Üretim notu:** Scoria'nın tasarımında kasıtlı olarak ayrı katmanlar var: ana gövde, çekiç kol, sol kol, iğne, zincir, duman, göğüs ateşi. Böylece gövde kareleri LoRA ile üretilip kol/iğne/zincir kodla hareket ettirilebilir, yine de "kare kare çizilmiş" hissi gövde katmanından gelir. Bu hibrit, oyunun kendi tekniğine en yakın ulaşabileceğimiz yol.
+**Üretim notu:** Scoria'nın tasarımında kasıtlı olarak ayrı katmanlar var: ana gövde (kaya baş-gövde, tek sert kütle), sağ kol, sol maşa-el, iğne, maşa ve zincir, duman, göğüs kor yaması; şahmerdan ise gövdeden bağımsız arena sprite'ı. Böylece gövde kareleri LoRA ile üretilip kol/iğne/maşa/zincir/şahmerdan kodla hareket ettirilebilir, yine de "kare kare çizilmiş" hissi gövde katmanından gelir. Bu hibrit, oyunun kendi tekniğine en yakın ulaşabileceğimiz yol.
 
 ## 11. Teknik kapsam (mod kodu, kısa)
 
 - BepInEx eklentisi, Harmony ile Deep Docks sahnesine kapı ve yeni sahne yükleme.
 - Boss davranışı: oyunun boss'ları PlayMaker FSM kullanır (boss = `HealthManager` + `tk2dSpriteAnimator` + `DamageHero` hitbox'ları + `Control` FSM (60–159 state) + şablon `Stun Control` FSM). Biz FSM'yi kodla kurmayız; kendi C# state machine'imizi yazarız ve oyunun bileşenlerini yeniden kullanırız: `HealthManager`, `DamageHero`, `tk2dSpriteAnimator`. Faz geçişleri oyundaki gibi başta `hp` okunup eşik = HP × oran ile kontrol edilir.
 - Hasar/can: `HealthManager` (hp, `damageScaling` Level1..5Mult, `TakeDamage`, `IHitResponder`) yeniden kullanılır. Fazlar kendi kodumuzda `hp` ile izlenir. Stagger: oyundaki `Stun Control` mantığı (Lace 2: 1,0 sn içinde 13 isabet, en fazla 15) kodda taklit edilir.
+- Şahmerdan: Scoria'nın parçası değil, arena nesnesi; kendi küçük state machine'i var: `Askıda` → `Yükseliyor` (Scoria zinciri çekerken) → `Düşüyor` (hasar kutusu açık, `DamageHero` 2) → `Temas` (zemin dalgası ve kıvılcım olayı) → `Sallanıp durur` → `Askıda`. Scoria'nın state machine'i ona `Çek` ve `Bırak` olayları yollar; Scoria ölünce `Askıda` kilitlenir. Prosedürel sprite (3 sprite) ve zincir segmentleri koddan hareket eder. Scoria'nın maşa zinciri de prosedürel segmentlerle çizilir; maşa ucunun hasar kutusu A2'de açılır.
 - Lav: `Lava Box` prefab'ı kopyalanır (`BoxCollider2D` + `LavaBox` efekt + `DamageHero` LAVA, 2 + `DamageEnemies` + `NonBouncer`); `HazardRespawnMarker`'lar elle konur.
 - Tool: mevcut bir kırmızı Tool'u temel al, davranışını değiştir (`ToolItemBasic`, fırlatma prefab'ı `DamageEnemies` taşır).
 - Kayıt: boss yenildi bayrağı oyunun `PlayerData`'sına değil, ayrı bir mod kayıt dosyasına yazılır. `PlayerData` sabit alanlı, reflection ile okunur, runtime'da alan eklenemez; bilinmeyen anahtar riski de var. Mod kaldırılınca kayıt bozulmaz. (Kayıt klasörü yönlendirmesi: `DesktopPlatform.Awake`, `CLAUDE.md` kuralı.)

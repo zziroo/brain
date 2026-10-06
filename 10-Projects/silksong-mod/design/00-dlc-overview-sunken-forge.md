@@ -51,7 +51,7 @@ Deep Docks'un en alt lav seviyesinden gizli duvar. Aday: Dock_13 (Dock_15'in sol
 - **R4 Bench + Ferrun.** Tek güvenli oda. Bench sönmüş bir ocağın içine kurulmuş. NPC Ferrun burada oturur (v0.3). Bellway yok; dönüş yolu Deep Docks bench'i (Dock_10). Rosary çeşmesi yok, bir tane kırık "shard" deposu var (oyunun `Shell Shard Fossil Dock` kırılabilir nesnesinin kopyası).
 - **R5 Körük galerisi.** Dikey yukarı. Dev körükler ritmik çalışır (Scoria'nın nefesi), çalıştıkları an rüzgârla iter. Zamanlama platformu. Düşman: Perçinci (E3), mini-boss "Ustabaşı" ile ilk karşılaşma değil, Ustabaşı R3'ün gizli yan odasında.
 - **R6 Ön oda.** Duvarlara saplı 4 yarım iğne, her biri incelenebilir (lore). Son nefes alanı. Bench yok.
-- **R7 Arena.** `boss-01` dokümanında.
+- **R7 Arena.** `boss-01` dokümanında. Örsün üstünde tavandan zincirle asılı şahmerdan arenanın mekanizmasıdır (Scoria'nın silahı değil, prosedürel arena nesnesi).
 
 **Gizli oda R3b:** R3'ün bir ocağının arkasından dalışla açılır. Mini-boss Ustabaşı. Ödül: Kırık Kalıp (görev nesnesi) + rosary.
 
@@ -86,7 +86,7 @@ Hepsi Deep Docks düşmanlarının teknik iskeletini kullanır. Oyunda düşmanl
 ## 6. Mini-boss: Ustabaşı (The Foreman)
 
 - Perçinci'nin büyük versiyonu değil; onların eski ustabaşısı. Göğsünde Scoria'nın ocak izi (dövme) var, yani Scoria'nın "ekibi".
-- 2 kat Hornet boyu. İki el iki çekiç. Yüzü yok, kask gibi kaynamış kabuk.
+- 2 kat Hornet boyu. İki el iki çekiç (el aletleri, Perçinci'nin çekiçleriyle aynı mantık; Scoria'nın çekici ise arena şahmerdanıdır, bkz. `boss-01` §6). Yüzü yok, kask gibi kaynamış kabuk.
 - Saldırılar: çift vuruş, zıplayıp çökme (zemin dalgası, Scoria'nın A1'inin öğreticisi), duvar vuruşu ile tavandan taş düşürme.
 - HP 300 (Sister Splinter 310 düzeyi; Moorwing 600). Act 2 için 400–500 de düşünülebilir. Tek faz. Boss gibi `damageScaling` (Level1..5Mult) uygulanır.
 - Ödül: Kırık Kalıp (görev) + 120 rosary.
@@ -135,15 +135,15 @@ BepInEx iskelet (Win)  →  Boss kodu  →  Oda yükleme  →  Rig/animasyon (Ma
 **Sprite bütçesi (tahmin)**
 | Öge | Kare |
 |---|---|
-| Scoria | ~160 |
+| Scoria (şahmerdan 3 sprite dahil) | ~150 |
 | Ustabaşı | ~60 |
 | E1 + E2 + E3 | ~75 |
 | Ferrun | ~20 |
 | Efektler (dalga, kıvılcım, buhar, kor) | ~40 |
 | Tileset ve arka plan parçaları | ~30 parça |
-| **Toplam** | **~385 kare + 30 parça** |
+| **Toplam** | **~345 kare + 30 parça** |
 
-LoRA ile her kareden ortalama 4 üretip 1 seçersek ~1500 üretim, 5070'de 3–5 sn/kare: **2–3 saat GPU**. Eleme ve rötuş insan zamanı, asıl maliyet orası.
+LoRA ile her kareden ortalama 4 üretip 1 seçersek ~1400 üretim, 5070'de 3–5 sn/kare: **2–3 saat GPU**. Eleme ve rötuş insan zamanı, asıl maliyet orası.
 
 ## 11. Riskler
 

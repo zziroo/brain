@@ -27,10 +27,10 @@ Kişisel kullanım ve arkadaşlarla oynamak için Hollow Knight: Silksong'a mod 
 - Kayıt yönlendirme diske gömülü DLL ile; mod durumu ayrı dosyada, PlayerData'ya yazılmaz.
 
 ## Sıradaki adımlar
-1. Stil LoRA v2: Real-ESRGAN ile sprite'ları yeniden büyütme, zengin caption'lar, ~1200–1500 adım.
-2. Scoria konsept seçimi (Yusuf) → Scoria karakter LoRA'sı.
+1. Parçalı kukla (gövde / kollar / bacaklar / zincir maskeleri) → Walk ve zincir çekme kareleri; büyük pozlar için ControlNet (SDXL lineart/depth, ~2,5 GB, indirme onayı gerekli).
+2. Kareleri TK2D sprite collection'a çevirme ve oyunda test (Idle ile).
 3. Mod: "merhaba" sahnesi, Deep Docks gizli kapı adayını (Dock_13) oyunda görme.
-4. Kukla + img2img kare hattı denemesi (Idle animasyonu).
+4. Şahmerdan ve arena nesneleri (örs, zincir, Harpoon Ring) için görsel üretim.
 
 ## Oturumlar
 - [[2026-10-06-windows-kurulum-kayit-guvenligi-ilk-lora]]
