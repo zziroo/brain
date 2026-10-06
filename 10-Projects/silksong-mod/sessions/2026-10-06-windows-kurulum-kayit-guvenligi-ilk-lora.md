@@ -22,6 +22,8 @@ source: Windows PC oturumu 2026-10-06 (repo C:\Users\yusuf\ZZ\zProjects\silksong
 
 - Gece: karakter pelerinli şövalyeye döndü (kontrol sütunundan çıkan 'kaza' görsel; ders: iterasyon yönü doğrulamaz, yan ürünlere bak). `kilnwright_char_v1` caption hatası (özellikler etiketlere bağlandı) → v2 yalnız tetikleyici ile düzeldi. Parçalı kukla (`tools/anim/puppet.py`): kollar pivotlu, pelerin gecikmeli, clean-plate delik dolgusu; Idle için saf kukla seçildi (yeniden çizim kıtırdatıyor). `TestSprite` ile oyun içinde ilk sprite görüldü.
 
+- 23:12 oyun içi ilk sprite (ekran görüntüsü `BepInEx\SunkenForge_screens\`); boyut ~3,8× Hornet çıktı, `PixelsPerUnit=98` ile 2,5×'e ayarlandı (denenmedi). Karar: [[2026-10-06-karakter-pelerinli-sovalye-kirmizi-goz]].
+
 **Sonuç:** Stil öğreniliyor (kontur, düz gölge, gri zemin, lav mağarası arka planları). Scoria konseptleri siluet olarak doğru yönde ama çizgiler bulanık ve tarif tam takip edilmiyor.
 
 **Dersler:** [[2026-10-06-bepinex-preloader-hatayi-yutar]], [[2026-10-06-sd-scripts-onbellegi-modele-ozgu]]

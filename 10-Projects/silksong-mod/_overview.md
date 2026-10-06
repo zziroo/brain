@@ -26,12 +26,17 @@ Kişisel kullanım ve arkadaşlarla oynamak için Hollow Knight: Silksong'a mod 
 - Animasyon hibrit: stil LoRA + Scoria karakter LoRA'sı; kareler katmanlı kukladan ControlNet/img2img ile yeniden çizilir.
 - Ses ve müzik şimdilik kapsam dışı (Yusuf'un kararı).
 - Kayıt yönlendirme diske gömülü DLL ile; mod durumu ayrı dosyada, PlayerData'ya yazılmaz.
+- Boss karakteri pelerinli şövalye, kırmızı göz; Idle saf kukla: [[2026-10-06-karakter-pelerinli-sovalye-kirmizi-goz]].
 
 ## Sıradaki adımlar
 1. Oyun içi görünümü değerlendir (boyut, renk doygunluğu oyuna göre fazla parlak olabilir, 12 fps hissi); gerekirse renk düzeltmesi (pelerin `#5a1a1a`'ya yaklaştır).
 2. Walk ve zincir çekme kareleri: kukla + büyük pozlar için ControlNet (SDXL lineart/depth, ~2,5 GB, indirme onayı gerekli).
 3. Mod: "merhaba" sahnesi, Deep Docks gizli kapı adayını (Dock_13) oyunda görme.
 4. Şahmerdan ve arena nesneleri (örs, zincir, Harpoon Ring) için görsel üretim.
+
+## Doğrulanmayanlar
+- Oyun içi boyut (`PixelsPerUnit=98` henüz denenmedi), renk doygunluğu, 12 fps hissi; Yusuf'un oyun içi izlenimi bekleniyor.
+- Lore/isim geçici; Forge Daughter bağı ve saldırı metinlerindeki eski 'cüruf/çatlak kabuk' ifadeleri güncellenmedi.
 
 ## Oturumlar
 - [[2026-10-06-windows-kurulum-kayit-guvenligi-ilk-lora]]
