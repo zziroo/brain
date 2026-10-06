@@ -21,7 +21,7 @@ Karar ve gerekçe: [[2026-10-05-windowstan-maca-gecis]]. Mac'te ilk oturumda bu 
 - [ ] (2026-10-07: Node v24 ve Claude masaüstü uygulaması var; Obsidian `/Applications`'ta yok) Node.js LTS, Claude Code CLI ve Obsidian'ı kur. Obsidian'da `~/ZZ/brain` klasörünü kasa olarak aç.
 - [x] `~/.ssh/diskort_vps` anahtarını taşı ve `chmod 600` ile izinlerini daralt.
 - [ ] (2026-10-07: OneDrive kurulu değil) OneDrive'ı kur; `Yedekler/Diskort` klasörü oradan gelir.
-- [ ] (2026-10-07: `~`, Masaüstü ve İndirilenler'de bulunamadı; silinmiş olabilir) Kurulum bitince `mac-tasima` paketini sil. İçinde `.env` dosyaları var.
+- [x] (2026-10-07: paket yok; yalnızca `~/.claude/mac-tasima/` altında kur.sh'ın iki CRLF kayıt dosyası kaldı, `.env` yok) Kurulum bitince `mac-tasima` paketini sil. İçinde `.env` dosyaları var.
 
 ## Mac'te ilk Claude oturumu (Claude)
 - [x] Kurulumu doğrula (2026-10-07: 7 memory klasörü var, usage.mjs çalışıyor):
