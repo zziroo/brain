@@ -13,15 +13,15 @@ Karar ve gerekçe: [[2026-10-05-windowstan-maca-gecis]]. Mac'te ilk oturumda bu 
 
 ## Windows'ta, taşımadan hemen önce
 - [x] Vault değişikliklerini commit et. Claude yaptı (2026-10-05); bütün repolar temiz.
-- [ ] Paketi tazele: Git Bash'te `bash /c/Users/yusuf/mac-tasima/hazirla.sh`.
+- [x] Paketi tazele: Git Bash'te `bash /c/Users/yusuf/mac-tasima/hazirla.sh`.
 
 ## Mac'te kurulum (Yusuf)
-- [ ] `mac-tasima` klasörünü Mac'e kopyala ve `bash kur.sh` çalıştır. `~/ZZ` boş olmalı.
-- [ ] Git için Xcode araçları yoksa önce `xcode-select --install`, sonra `bash kur.sh git`.
-- [ ] Node.js LTS, Claude Code CLI ve Obsidian'ı kur. Obsidian'da `~/ZZ/brain` klasörünü kasa olarak aç.
-- [ ] `~/.ssh/diskort_vps` anahtarını taşı ve `chmod 600` ile izinlerini daralt.
-- [ ] OneDrive'ı kur; `Yedekler/Diskort` klasörü oradan gelir.
-- [ ] Kurulum bitince `mac-tasima` paketini sil. İçinde `.env` dosyaları var.
+- [x] `mac-tasima` klasörünü Mac'e kopyala ve `bash kur.sh` çalıştır. `~/ZZ` boş olmalı.
+- [x] Git için Xcode araçları yoksa önce `xcode-select --install`, sonra `bash kur.sh git`.
+- [ ] (2026-10-07: Node v24 ve Claude masaüstü uygulaması var; Obsidian `/Applications`'ta yok) Node.js LTS, Claude Code CLI ve Obsidian'ı kur. Obsidian'da `~/ZZ/brain` klasörünü kasa olarak aç.
+- [x] `~/.ssh/diskort_vps` anahtarını taşı ve `chmod 600` ile izinlerini daralt.
+- [ ] (2026-10-07: OneDrive kurulu değil) OneDrive'ı kur; `Yedekler/Diskort` klasörü oradan gelir.
+- [ ] (2026-10-07: `~`, Masaüstü ve İndirilenler'de bulunamadı; silinmiş olabilir) Kurulum bitince `mac-tasima` paketini sil. İçinde `.env` dosyaları var.
 
 ## Mac'te ilk Claude oturumu (Claude)
 - [x] Kurulumu doğrula (2026-10-07: 7 memory klasörü var, usage.mjs çalışıyor):
