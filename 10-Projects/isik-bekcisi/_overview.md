@@ -38,6 +38,7 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 |---|---|
 | Yayın | **canlı = `da7c5cd`** (2026-10-06, Yusuf'un isteğiyle; kontrol edilen dosyalar yerelle aynı). Yerel ve uzak `main` eşit. Aynı gün önce: `1e64b38`, `1773c16`, `9ec4f66`, `8e6ef52` |
 | Oynama turu 2026-10-06 (yapışma yavaşlatır, pervane döner-dalar, Atılım imleçte, hale tutar, kabuklu sürüsü, elitler) | hepsi yazıldı, incelendi (kritik/yüksek yok; 3 orta, şüpheci ile), canlıda. Sesler dinlenmedi, 60 karede izlenmedi, insan oynamadı ([[2026-10-06-oynama-geri-bildirimi-hale-elitler]]) |
+| Kamera yakın + bekçi 1,2× + kalın HUD; **Fener Nöbeti** (fenerin son beşte biri kuşatma) | yerelde main'de (`a352450`, `8b10c02`→`74dc1f7`), **canlıda değil**. İkisi de incelendi (0 orta+; 7 + 7 düşük, hepsi düzeltildi), koordinatör main'de duman testi yaptı. Botta uzunluk aynı, şekil değişti: 3.–5. fener erken, Kalp ~7–8 deneme (Yusuf'un onayı bekleniyor). İnsan oynamadı, ses dinlenmedi ([[2026-10-06-kamera-yakin-bekci-buyuk-arayuz-kalin]], [[2026-10-06-fener-nobeti-son-beste-bir-kusatma]]) |
 | Bekçi Feneri (ilk yükseltme, kapalı kapı) | yazıldı, incelendi (0 kritik/yüksek/orta, 7 düşük, hepsi düzeltildi), canlıda; ilk ziyaret gerçek olaylarla oynatıldı, insan oynamadı ([[2026-10-06-bekci-feneri-agacin-koku-kapi-kapali]]) |
 | Okunurluk (kamp işaretleri S3, gece E3, pervane) | 4+4 seçenek gerçek ekran görüntüleriyle karşılaştırıldı, Yusuf S3 ve E3'ü seçti; incelendi (1 orta → şüpheci düşüğe indirdi, düzeltildi), canlıda. Hareket hâli 60 karede görülmedi ([[2026-10-06-karanlik-tehdidi-gizlemez-isaretler-sekliyle]]) |
 | Süre ölçümü | `S.totalTime` (kamp dahil; başlıktan sonra, sayfa görünürken, 60 sn dokunulmazsa durur) ve ilk şafak (`S.stat.winRuns / winRoad / winTotal`). Günlükteki Kayıtlar'da ("Şafağa kadar: N sefer · süre") ve oyun sonu ekranında görünür. Eski kayıtlarda toplam süre 0'dan başlar |
@@ -56,6 +57,8 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 | İnceleme kapısı | 2026-10-06: iki opus incelemesi + bir sonnet şüpheci. 2026-10-05: 3 dal incelemesi (sonnet + 2 opus; 1 orta, 9 düşük), şüpheci gerekmedi; denge diff'ini koordinatör okudu |
 
 ## Sıradaki işler
+-1. **Kamera + Fener Nöbeti yayına alınsın mı?** Yerelde hazır, Yusuf'un kararı (`bash deploy/deploy.sh`). Oynarken bakılacak: bekçi artık yeterince büyük mü, Mağara'da gece hâlâ okunuyor mu, nöbet 12–18 s iyi mi, Kalp'te takılma hissi var mı (bot 7–8 deneme; ilk kaldıraç `BOSS.bounty`).
+-0.5. **İs ekonomisi** (Yusuf'un fikri, "şimdilik bekle"): yanan karanlık **is** bırakır, kampta arıtılır; A kamp yapıları (öneri) / B mürekkep-atlas / C iksir bedeli. Nöbet ve kamera oynandıktan sonra A için tasarım notu ([[2026-10-06-kamera-ve-fener-nobeti]]).
 0. **Genel denge hedefi (Yusuf'un kararı):** eski tempo mu (özensiz bot ~46 sefer), daha uzun mu? Öneri: önce yeni hale, kabuklu ve elitleri birkaç sefer oynasın; günlükteki "Şafağa kadar" satırı ve yolda geçen süre veri olsun. Sonra `TIER_SCALE` ile tek seferde ayar.
    - Oynayınca bakılacaklar (2026-10-06 turu): yanmış karacık halkası zorluyor mu sıkıyor mu; odaklanıp camdan yakmak hissediliyor mu; kabuk kırmak tatmin edici mi; pervaneden kaçmak adil mi (hazırlık 0,4 sn); elitler direnç veriyor mu, Kurukafa haksız mı.
 0b. **Daha önce:** Yusuf canlıda kendisi oynuyor (2026-10-06). Ondan beklenen geri bildirim:
@@ -108,6 +111,8 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 - [[2026-10-06-hale-tutar-bilincli-isik-bitirir]]
 - [[2026-10-06-kabuklu-surusunu-korur-kirilinca-patlar]]
 - [[2026-10-06-her-bolgeye-bir-elit]]
+- [[2026-10-06-kamera-yakin-bekci-buyuk-arayuz-kalin]]
+- [[2026-10-06-fener-nobeti-son-beste-bir-kusatma]]
 
 ## Dersler
 - [[2026-10-02-carpimsal-gelistirmeler-geliri-patlatir]]
@@ -140,3 +145,4 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 - [[2026-10-06-bekci-feneri-ve-okunurluk]]
 - [[2026-10-06-oynama-geri-bildirimi-hale-elitler]]
 - [[2026-10-06-devir-genex-dogrulama-fikirleri]] (ZZ kökündeki Genex incelemesinden devir; tartışılacak)
+- [[2026-10-06-kamera-ve-fener-nobeti]]
