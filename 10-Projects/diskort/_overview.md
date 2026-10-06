@@ -1,7 +1,7 @@
 ---
 type: project
 project: diskort
-date: 2026-10-06
+date: 2026-10-07
 status: active
 tags: [diskort, overview]
 source: handoff notundan (artık kaldırıldı), diskurt-project ve diskort-* hafıza dosyalarından, 2026-10-01/02 oturumlarından
@@ -47,7 +47,7 @@ Ses + ekran paylaşımı kalitesi; metin kanalları, tepkiler, dosyalar, roller,
 6. **Telefon ısınması** (VP9 1080p yayın izlerken): APK 0.8.13'te DPDFNet bütçe düzeltmesi + termal otomatik kapatma var. Kalan: Yusuf 5-10 dk yayın izler, ardından `watch` telemetrisi okunur. Gerekirse JS seçenekleri: VP9'u bırak, donanım kodlayıcıda 720p30 düşük katman, tam ekran değilse mobil düşük katmana abone.
 7. Yusuf'un cihaz testleri: telefonda yeni kozmetikler (Android APK kurulumu, Android 10+ kart videosu, iOS OTA), mobil Skia setleri, mobil ses ekranı/yayın kutucukları, masaüstü sahne otomatik gizleme/şerit/kendi önizleme duraklatma, rolsüz DM profili.
 8. Yusuf'a hatırlat: eski sunucuyu sil (içinde bilinmeyen bir `set-env.sh` var).
-9. **GitHub repo taşındı (2026-10-06):** `yusufholat/diskort` → `zziroo/diskort` ([[2026-10-06-github-repolari-zziroo-hesabina-tasindi]]). Kod tarafı 2026-10-06'da çevrildi (commit 94aa7a5: publish.owner, sunucu `GITHUB_REPO` varsayılanı, release-win, belgeler). Yeni owner bir sonraki sürümle yayına çıkar; o sürüme kadar kurulu uygulamalar eski adresten yönlendirmeyle güncellenir (denenmedi). VPS'teki `/opt` klonlarının remote'larını kontrol et (Diskort, ziroo-edge ve diğerleri). `yusufholat` altında aynı adla repo açılmamalı.
+9. **GitHub repo taşındı (2026-10-06):** `yusufholat/diskort` → `zziroo/diskort` ([[2026-10-06-github-repolari-zziroo-hesabina-tasindi]]). Kod çevrildi (commit 94aa7a5), VPS remote'u ve iOS dispatch anahtarı 2026-10-07'de `zziroo` ile yenilendi ([[ince-taneli-anahtar-repo-baska-hesaba-tasininca-calismaz]]). Kalan: yeni publish.owner bir sonraki sürümle yayına çıkar (o zamana kadar yönlendirme, denenmedi); sunucu `GITHUB_REPO` varsayılanı bir sonraki api kurulumunda devreye girer; Yusuf eski `yusufholat` anahtarını iptal eder. `yusufholat` altında aynı adla repo açılmamalı. Windows `.exe` Mac'ten de GitHub Actions ile çıkar (`release.yml` windows işi).
 
 **Açık öneriler (önce sor):** kanal kategorileri, IPA yalnız kendi sunucumuzdan, release/deploy/geri bildirim için proje skilleri, sunucular arası ses moderasyonu, Spotify tarzı `listening` etkinliği.
 
@@ -67,7 +67,7 @@ Ses + ekran paylaşımı kalitesi; metin kanalları, tepkiler, dosyalar, roller,
 [[sunucu-vps]] · [[deploy]] · [[surum-cikarma]] · [[geri-bildirim-inceleme]] · [[kozmetik-yayinlama]] · [[ios-cihaz-ekleme]] · [[yedekler]] · [[admin-paneli-ve-loglar]] · [[gelen-kutusu-ve-rutinler]] · [[yerel-ui-test-ortami]] · [[telefonla-erisim]]
 
 ## Dersler
-[[dev-ortami-tuzaklari]] · [[electron-cdp-testi]] · [[yerel-installer-testi-userdata]] · [[rn-android-border-nan]] · [[kozmetik-avif-tam-aralik]] · [[worktree-silme-windows]] · [[claude-altina-yazma-izin-sorar]] · [[secret-isleme-kurali]] · [[caddy-bind-mount-restart]] · [[dpdfnet-fallback-koku-neden]] · [[saglayici-udp-paket-siniri]] · [[sonar-yayin-sesine-kendi-sesini-katar]] · [[yerel-testte-ekran-paylasimi-gercek-pencere]] · [[server-testleri-tam-kosuda-kararsiz]] · [[caddy-redir-path-acik-yonlendirme]] · [[caddy-reload-websocketleri-keser]] · [[ajan-yayin-betigini-sahte-ssh-ile-denerken-canliya-cikti]] · [[turkce-sayfada-css-buyuk-harf-noktali-i]]
+[[dev-ortami-tuzaklari]] · [[electron-cdp-testi]] · [[yerel-installer-testi-userdata]] · [[rn-android-border-nan]] · [[kozmetik-avif-tam-aralik]] · [[worktree-silme-windows]] · [[claude-altina-yazma-izin-sorar]] · [[secret-isleme-kurali]] · [[caddy-bind-mount-restart]] · [[dpdfnet-fallback-koku-neden]] · [[saglayici-udp-paket-siniri]] · [[sonar-yayin-sesine-kendi-sesini-katar]] · [[yerel-testte-ekran-paylasimi-gercek-pencere]] · [[server-testleri-tam-kosuda-kararsiz]] · [[caddy-redir-path-acik-yonlendirme]] · [[caddy-reload-websocketleri-keser]] · [[ajan-yayin-betigini-sahte-ssh-ile-denerken-canliya-cikti]] · [[turkce-sayfada-css-buyuk-harf-noktali-i]] · [[ince-taneli-anahtar-repo-baska-hesaba-tasininca-calismaz]]
 
 ## Oturumlar ve ek kararlar/dersler
 - [[sessions/_index-dev-era]]: geliştirme dönemi (C:\dev, 2026-09-26..28)
@@ -76,6 +76,7 @@ Ses + ekran paylaşımı kalitesi; metin kanalları, tepkiler, dosyalar, roller,
 - [[2026-10-04-geri-bildirim-kontrolu-ve-caddy-reload]]: hata kontrolü, Caddy reload kopması, panel deploy
 - [[2026-10-05-liste-sayfalari-ve-ziroo-net-ana-sayfa]]: listeler neon tasarıma geçti, KAPIŞ eklendi, ziroo.net ana sayfası
 - [[2026-10-05-araclarin-arayuzu-neon-temaya-gecti]]: altı aracın kendi arayüzü neon temaya geçti, Mac'ten ilk yayın ([[mac-ten-yayin-copyfile-disable-ve-exe-siz-ceviri-sayfasi]])
+- [[2026-10-07-zziroo-tasimasi-tamamlandi-ve-mac-listesi]]: zziroo taşımasının Mac/VPS tarafı, iOS anahtarı yenilendi, Mac listesi işlendi
 
 ## Çalışma kuralları (Claude)
 [[20-Areas/working-rules/_index|Çalışma kuralları]] (20-Areas): [[git-push-autonomy]], [[diskort-orchestrator-mode]], [[zamanlanmis-gorevler-ve-skiller]]
