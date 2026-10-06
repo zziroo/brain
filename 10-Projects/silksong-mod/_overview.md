@@ -4,28 +4,36 @@ project: silksong-mod
 date: 2026-10-06
 status: active
 tags: [oyun, mod, silksong, unity, lora]
-source: ZZ kök oturumu 2026-10-06
+source: Windows oturumu 2026-10-06
 ---
 
 # Silksong modu: Team Cherry kalitesinde özgün boss
 
 Kişisel kullanım ve arkadaşlarla oynamak için Hollow Knight: Silksong'a mod olarak yeni içerik. Dağıtım yok, ticari amaç yok.
 
-## Durum
-- 2026-10-06: Genel DLC çerçevesi (`design/00-dlc-overview-sunken-forge.md`: The Sunken Forge, 7 oda, 3 düşman, mini-boss, NPC, Wish, Crest; v0.1/0.2/0.3 sürümleri) ve ilk boss (`design/boss-01-kilnwright-scoria.md`) yazıldı. Tasarım dosyaları bu vault içinde: [[10-Projects/silksong-mod/design/00-dlc-overview-sunken-forge|DLC çerçevesi]], [[10-Projects/silksong-mod/design/boss-01-kilnwright-scoria|Boss 01 Scoria]] (Mac kopyası `~/ZZ/zProjects/silksong-mod/design/`).
-- Henüz kod yok. Proje klasörü: `~/ZZ/zProjects/silksong-mod/`.
+## Güncel durum (2026-10-06, Windows PC)
+- Repo: `C:\Users\yusuf\ZZ\zProjects\silksong-mod` (yerel git, remote yok). Proje kuralları ve kurulum komutları repo `CLAUDE.md`'de. Mac'te repo yok; tasarım dosyalarının ana kopyası bu vault.
+- Oyun: Unity 6000.0.50f1, **Mono**, TK2D, PlayMaker. Mod kopyası `D:\SilksongMod\Hollow Knight Silksong` (BepInEx 5.4.23.5 kurulu); Steam kurulumu vanilla.
+- **Kayıt güvenliği çalışıyor:** modlu kopya kayıtları `...\Hollow Knight Silksong\_SunkenForgeMod\`'a yazar, ilk çalıştırmada doğrulandı. Bkz. [[2026-10-06-kayit-yonlendirme-diske-gomulu-dll]].
+- Tasarım: [[10-Projects/silksong-mod/design/00-dlc-overview-sunken-forge|DLC çerçevesi]], [[10-Projects/silksong-mod/design/boss-01-kilnwright-scoria|Boss 01 Scoria]], [[10-Projects/silksong-mod/design/notes-dogrulama|doğrulama notları]]. Denge ve lore kararları: [[2026-10-06-scoria-denge-ve-lore-kararlari]].
+- LoRA: SDXL Base üzerinde stil LoRA v1 (en iyi checkpoint 1200. adım), `D:\SilksongMod\ai\loras\`. Bkz. [[2026-10-06-lora-tabani-sdxl-base]].
+- Henüz mod içeriği (sahne, boss kodu) yok; eklenti şimdilik yalnızca kayıt güvenliği yapıyor.
 
 ## Kararlar
 - Önce tek tam boss, "DLC" sonra. Gerekçe: hat (tersine mühendislik → LoRA → sprite → mod kodu) bir kez uçtan uca işlemeden kapsam büyütülmez.
-- Görsel üretim ve LoRA eğitimi Windows PC'de (RTX 5070); tasarım ve rig kodu Mac'te olabilir.
-- Animasyon: oyun kare kare el çizimi kullanıyor. Yaklaşım hibrit: gövde kareleri LoRA ile, hareketli parçalar (kol, iğne, zincir) katman olarak kodla.
+- Görsel üretim ve LoRA eğitimi Windows PC'de (RTX 5070); tasarım Mac'te de olabilir.
+- Animasyon hibrit: stil LoRA + Scoria karakter LoRA'sı; kareler katmanlı kukladan ControlNet/img2img ile yeniden çizilir.
 - Ses ve müzik şimdilik kapsam dışı (Yusuf'un kararı).
+- Kayıt yönlendirme diske gömülü DLL ile; mod durumu ayrı dosyada, PlayerData'ya yazılmaz.
 
-## Sıradaki adımlar (Windows oturumu)
-1. Oyun klasörünü aç: Mono mu IL2CPP mi, Unity sürümü.
-2. BepInEx kur, boş eklenti yüklendiğini doğrula.
-3. AssetRipper ile sprite atlas'larını çıkar; tasarımdaki `[doğrula]` işaretlerini kapat.
-4. ComfyUI + SDXL LoRA hattı.
+## Sıradaki adımlar
+1. Stil LoRA v2: Real-ESRGAN ile sprite'ları yeniden büyütme, zengin caption'lar, ~1200–1500 adım.
+2. Scoria konsept seçimi (Yusuf) → Scoria karakter LoRA'sı.
+3. Mod: "merhaba" sahnesi, Deep Docks gizli kapı adayını (Dock_13) oyunda görme.
+4. Kukla + img2img kare hattı denemesi (Idle animasyonu).
+
+## Oturumlar
+- [[2026-10-06-windows-kurulum-kayit-guvenligi-ilk-lora]]
 
 ## Notlar
-- Oyun asset'leri ve LoRA PC'de kalır; arkadaşlara sadece mod klasörü verilir.
+- Oyun asset'leri, veri seti ve LoRA PC'de kalır; arkadaşlara sadece mod klasörü verilir.

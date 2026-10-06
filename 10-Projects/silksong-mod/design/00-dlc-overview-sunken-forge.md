@@ -1,7 +1,7 @@
 # DLC Tasarımı: The Sunken Forge (Batık Ocak)
 
 > Silksong için mod olarak yapılacak mini-genişleme. Merkez: `boss-01-kilnwright-scoria.md`.
-> Oyunla temas eden noktalar `[doğrula]` ile işaretli, oyun dosyaları açılınca kapatılır.
+> Doğrulama sonuçları `notes-dogrulama.md` içinde (2026-10-06). Hâlâ açık olanlar satır içinde `[doğrula]` ile işaretli.
 
 ---
 
@@ -29,7 +29,7 @@ Her sürüm kendi başına oynanabilir. v0.1 bitmeden v0.2'ye kod yazılmaz.
 ## 4. Bölge: Batık Ocak
 
 ### Konum ve giriş
-Deep Docks'un en alt lav seviyesinden gizli duvar `[doğrula: sahne ve koordinat]`. Giriş koşulu Clawline. Oyun 2. perde, tamamen opsiyonel. Harita Shakra'dan alınmaz; oyuncu kendi keşfeder, haritası Scoria yenilince ön odada bulunan "ocak planı" ile açılır.
+Deep Docks'un en alt lav seviyesinden gizli duvar. Aday: Dock_13 (Dock_15'in solunda çıkmaz dikey kuyu) dibinde sol alt duvar; alternatif Dock_11. En yakın bench Dock_10. Haritada ayrıca `Dock_15_secret` diye işaretli bir gizli alan var. `[doğrula: koordinatlar yaklaşık, duvar geometrisi okunmadı; oyun içinde bakılacak]` Giriş koşulu Clawline (yalnızca Harpoon Ring'lere kancalanır, duvara değil). Oyun 2. perde, tamamen opsiyonel. Harita Shakra'dan alınmaz; oyuncu kendi keşfeder, haritası Scoria yenilince ön odada bulunan "ocak planı" ile açılır.
 
 ### Oda planı (7 oda)
 
@@ -46,9 +46,9 @@ Deep Docks'un en alt lav seviyesinden gizli duvar `[doğrula: sahne ve koordinat
 ```
 
 - **R1 Giriş.** Kısa koridor, sıcak kızıl duvar, 3 vuruşla kırılır. Yere dökülmüş soğumuş cüruf; adım atınca çatlak sesi (ses sonra). Hiç düşman yok. Oyuncuya "burası farklı" dedirtir.
-- **R2 Zincir kuyusu.** Dikey oda. Tavandan sarkan zincirler, Clawline ile inilir. Lav altta. Düşman: Cüruf Kabuğu (E1) duvarlarda. Platform dersi: zincir → zincir geçişi, Scoria arenasına hazırlık.
+- **R2 Zincir kuyusu.** Dikey oda. Tavandan sarkan zincirlerin ucunda Harpoon Ring'ler (zincirde asılı varyant), Clawline ile inilir. Lav altta; `HazardRespawnMarker` gerekir. Düşman: Cüruf Kabuğu (E1) duvarlarda. Platform dersi: zincir → zincir geçişi, Scoria arenasına hazırlık.
 - **R3 Soğuk ocaklar.** Yatay, geniş. Sönmüş ocaklar dizisi; birkaçının içinden Kor Kurdu (E2) fırlar. Arka planda devasa soğuk körükler. Lore nesnesi 1: duvar yazısı.
-- **R4 Bench + Ferrun.** Tek güvenli oda. Bench sönmüş bir ocağın içine kurulmuş. NPC Ferrun burada oturur (v0.3). Bellway yok; dönüş yolu Deep Docks bench'i. Rosary çeşmesi yok, bir tane kırık "shard" deposu var `[doğrula: shard ödül nesnesi]`.
+- **R4 Bench + Ferrun.** Tek güvenli oda. Bench sönmüş bir ocağın içine kurulmuş. NPC Ferrun burada oturur (v0.3). Bellway yok; dönüş yolu Deep Docks bench'i (Dock_10). Rosary çeşmesi yok, bir tane kırık "shard" deposu var (oyunun `Shell Shard Fossil Dock` kırılabilir nesnesinin kopyası).
 - **R5 Körük galerisi.** Dikey yukarı. Dev körükler ritmik çalışır (Scoria'nın nefesi), çalıştıkları an rüzgârla iter. Zamanlama platformu. Düşman: Perçinci (E3), mini-boss "Ustabaşı" ile ilk karşılaşma değil, Ustabaşı R3'ün gizli yan odasında.
 - **R6 Ön oda.** Duvarlara saplı 4 yarım iğne, her biri incelenebilir (lore). Son nefes alanı. Bench yok.
 - **R7 Arena.** `boss-01` dokümanında.
@@ -56,13 +56,13 @@ Deep Docks'un en alt lav seviyesinden gizli duvar `[doğrula: sahne ve koordinat
 **Gizli oda R3b:** R3'ün bir ocağının arkasından dalışla açılır. Mini-boss Ustabaşı. Ödül: Kırık Kalıp (görev nesnesi) + rosary.
 
 ### Bölge kuralları
-- Lav her yerde: dokunma 1 maske + geri sıçrama, ölüm değil. Oyunun mevcut lavı `[doğrula]`.
-- Sıcak hava: oyuncu 8 saniyeden fazla lavın hemen üstünde zincirde asılı kalırsa 1 maske. Zincirde kamp yapmayı engeller. Görsel: ekran kenarları hafif kızarır.
+- Lav her yerde: oyunun gerçek lavı (`HazardType.LAVA`). Dokunma 2 maske + en son güvenli noktaya respawn (`HazardRespawnMarker`); Magma Bell yarıya indirir. Ölüm değil. Lavlı her odaya respawn işaretleri konur.
+- Sıcak hava: oyuncu 8 saniyeden fazla lavın hemen üstünde zincirde (Harpoon Ring) asılı kalırsa 1 maske. Zincirde kamp yapmayı engeller. Görsel: ekran kenarları hafif kızarır. Bu hasar lav değil, mod-özgün: `hazardType` ENEMY, `damageDealt` 1, Flame bayrağı yok (böylece 1 maske kalır, respawn olmaz). `[doğrula: Clawline ile ring'de asılı kalma süresi oyun içinde ölçülmeli, 8 sn buna göre ayarlanır]`
 - Rosary yoğunluğu Deep Docks ile aynı, biraz altı. Yeni bölgeler ödülü düşmanla verir, çeşmeyle değil.
 
 ## 5. Düşmanlar
 
-Hepsi Deep Docks düşmanlarının teknik iskeletini kullanır `[doğrula: hangi düşman sınıfları kopyalanabilir]`.
+Hepsi Deep Docks düşmanlarının teknik iskeletini kullanır. Oyunda düşmanlar C# sınıfı değil, FSM'li sahne prefab'ları: Smelt Shoveller (`Dock Worker`, HP 30), Shield Dockworker 40, Flintstone Flyer 30, Flintflame Flyer 60, Deep Diver (`Dock Charger`) 90, Tar Slug 15 / Huge 85, Bone Circler 14 / Vicious 27. Yol: sahne önyükleme + klonlama (HK modlarındaki preload deseni) ya da kendi C# davranışımız + oyun bileşenleri (`HealthManager`, `DamageHero`, `tk2dSpriteAnimator`). Animasyon ve sprite kitaplıkları `areadocks` paketlerinde.
 
 **E1. Cüruf Kabuğu (Slag Husk)** — duvar düşmanı
 - Duvara yapışık cüruf yumrusu, yaklaşınca kabuğu çatlar, içinden sıcak böcek fırlar ve 1 kez saldırır, sonra tekrar kapanır.
@@ -88,7 +88,7 @@ Hepsi Deep Docks düşmanlarının teknik iskeletini kullanır `[doğrula: hangi
 - Perçinci'nin büyük versiyonu değil; onların eski ustabaşısı. Göğsünde Scoria'nın ocak izi (dövme) var, yani Scoria'nın "ekibi".
 - 2 kat Hornet boyu. İki el iki çekiç. Yüzü yok, kask gibi kaynamış kabuk.
 - Saldırılar: çift vuruş, zıplayıp çökme (zemin dalgası, Scoria'nın A1'inin öğreticisi), duvar vuruşu ile tavandan taş düşürme.
-- HP 300 `[doğrula: Sister Splinter, Moorwing seviyesi]`. Tek faz.
+- HP 300 (Sister Splinter 310 düzeyi; Moorwing 600). Act 2 için 400–500 de düşünülebilir. Tek faz. Boss gibi `damageScaling` (Level1..5Mult) uygulanır.
 - Ödül: Kırık Kalıp (görev) + 120 rosary.
 - Amaç: oyuncu Scoria'ya gitmeden "zemin dalgasına zıpla" ve "tavandan düşene dikkat" reflekslerini kazanır. Team Cherry'nin mini-boss → boss öğretme düzeni.
 
@@ -97,20 +97,20 @@ Hepsi Deep Docks düşmanlarının teknik iskeletini kullanır `[doğrula: hangi
 - Yaşlı, küçük, bir gözü cam. Eski iğne dağıtıcısı: Scoria'nın yaptığı iğneleri Sitadel'e taşırdı. Sitadel sustuktan sonra geri döndü, bir daha çıkmadı. "Bir sipariş daha gelir" diye bekliyor.
 - Sönmüş ocağın içinde oturur, bench'in yanında. Konuşmaları kısa, hafif alaycı, Silksong NPC tonunda.
 - 3 konuşma aşaması: ilk karşılaşma, Ustabaşı sonrası, Scoria sonrası.
-- Scoria sonrası son satırı: *"Quiet now. Suppose I'll carry one last thing up."* Sonrasında Bone Bottom ya da Bellhart'ta görünür `[doğrula: NPC yer değiştirme sistemi]`. Oyunun "NPC'ler yolculuk eder" kuralına uyar.
+- Scoria sonrası son satırı: *"Quiet now. Suppose I'll carry one last thing up."* Sonrasında Bone Bottom ya da Bellhart'ta görünür. Oyunda merkezi bir NPC yer değiştirme sistemi yok; sahne başına `PlayerDataTestResponse` / `DeactivateIfPlayerdata*` / `ActivateIfPlayerdata*` ile koşullu açma var. Biz Ferrun'u ilgili sahneye mod bayrağına göre runtime'da enjekte ederiz. Oyunun "NPC'ler yolculuk eder" kuralına uyar.
 
 ## 8. Görev: "Kırık Kalıp" (Wish) (v0.3)
 
-Oyunun Wish tahtası sistemine takılır `[doğrula: Wish veri yapısı]`.
+Oyunun Wish tahtası sistemine takılır: `Quest` ScriptableObject (+ `QuestType`, tahta listeleri Belltown / Bonetown / Enclave / Pilgrim's Rest). Yeni Quest SO runtime'da oluşturulup tahta listesine eklenir; ilerleme `PlayerData.QuestCompletionData`'ya değil mod kayıt dosyasına yazılır.
 1. Ferrun'dan alınır: "Aşağıda kalıp var. Getir."
 2. Ustabaşı'dan Kırık Kalıp düşer.
-3. Kalıp Forge Daughter'a götürülür. Forge Daughter onu tanır, konuşmaz, alır. 1 oyun döngüsü sonra `[doğrula: zaman ilerletme = bench kullanımı]` Crest hazır.
+3. Kalıp Forge Daughter'a götürülür. Forge Daughter onu tanır, konuşmaz, alır. "1 oyun döngüsü" sonra Crest hazır. Oyunda genel bir gün/dinlenme sayacı yok (Forge Daughter üretimi anlık dükkân alışverişi); mod kendi sayacını tutar (bench'e oturmayı veya sahne geçişini dinleyerek).
 4. Crest alınır. Ferrun'a dönülürse ek diyalog, ödül yok.
 
-**Ödül Crest: Kilnwright Crest (Ocak Arması)** `[doğrula: Crest veri yapısı, slot düzeni]`
+**Ödül Crest: Kilnwright Crest (Ocak Arması)**: `ToolCrest` ScriptableObject (`slots[]`, `heroConfig`, sprite'lar). Crest ödül olarak eklenirse kayıttan önce temizlenmeli (mod kaldırılınca bilinmeyen anahtar riski).
 - Saldırı: iğne vuruşu yavaş ama ağır (Reaper'a benzer temp), her 3. vuruş zemine kor izi bırakır.
-- Silk Skill: "Quench" — ileriye kısa bir buhar patlaması, düşmanları iter ve yavaşlatır. Hasar düşük, kontrol yüksek.
-- Slotlar: 2 kırmızı, 1 mavi, 1 sarı (ağırlıklı saldırı, Scoria'nın karakteri).
+- "Quench": ileriye kısa bir buhar patlaması, düşmanları iter ve yavaşlatır. Hasar düşük, kontrol yüksek. Silk Skill crest'in parçası değil, ayrı bir `ToolItemSkill`; bu yüzden iki seçenek var: (a) crest'in özel hareketi (`hasCustomAction` / `heroConfig`), (b) ayrı bir Skill tool. Varsayılan (a); v0.3'te karar verilir.
+- Slotlar: **1 Skill**, 2 kırmızı, 1 mavi, 1 sarı (ağırlıklı saldırı, Scoria'nın karakteri). Crest'te en az 1 Skill slotu bulunmalı; oyundaki neredeyse her crest'te var (ör. Reaper S R R(k) B(k) B Y(k) Y).
 - Gerekçe: Hornet'in setinde "ağır ve alan bırakan" bir Crest yok. Cinder Fang Tool'u ile doğal sinerji.
 
 ## 9. Lore dağılımı
@@ -121,8 +121,8 @@ Hiçbir şey doğrudan anlatılmaz. Parçalar:
 - R6: 4 yarım iğne, her biri bir satır: kime yapılıyordu, neden bitmedi.
 - Ferrun: 3 konuşma.
 - Scoria: 2 satır (geçiş + ölüm).
-- Forge Daughter: 2 yeni satır. Scoria'nın adını hiç söylemez.
-- Toplam yeni metin: ~40 satır. Çeviri: oyun TR destekliyorsa `[doğrula]` iki dilde yazılır.
+- Forge Daughter: 2 yeni satır. Scoria'nın adını hiç söylemez. Çünkü onun yerine geçen odur: Sitadel onu Forgehome'dan getirtti ("An age ago"), Scoria'yı bu rolden etti. Bunu açıklamaz, yalnızca "aşağıdaki vuruş durdu" gibi bir şey der.
+- Toplam yeni metin: ~40 satır. Çeviri: oyunun 10 dilinde (EN, DE, ES, FR, IT, JA, KO, PT, RU, ZH) Türkçe yok. Metinler EN + TR yazılır; TR'yi mod kendisi sağlar (`Language.Get` prefix yamasıyla kendi anahtarlarımız, oyun dilinden bağımsız mod ayarı).
 
 ## 10. Üretim hattı
 
@@ -150,15 +150,17 @@ LoRA ile her kareden ortalama 4 üretip 1 seçersek ~1500 üretim, 5070'de 3–5
 | Risk | Etki | Önlem |
 |---|---|---|
 | Sprite'lar oyun stilinden sapar | DLC "mod gibi" durur | LoRA'yı Deep Docks sprite'larıyla eğit, ilk testi tek Perçinci ile yap |
-| Yeni sahne yüklemek zor | v0.2 gecikir | v0.1'de arena, mevcut sahneye eklenen alt oda olarak dener |
-| IL2CPP çıkarsa | Decompile zorlaşır | Il2CppInterop ile BepInEx yine çalışır, iş 1,5 katına çıkar |
+| Yeni sahne yüklemek zor | v0.2 gecikir | İki yol var: (a) kendi Addressables kataloğumuz (`Scenes/<Yeni>` anahtarı, oyunun `SceneLoad`'u yamasız çalışır), (b) küçük mevcut sahneyi (ör. Dock_14) yükleyip içeriğini değiştirmek. v0.1'de (b) ile dene |
+| IL2CPP çıkarsa | Decompile zorlaşır | Kapandı: oyun Mono (`Assembly-CSharp.dll` okunabildi) |
+| Kayıt ve mod kaldırma | Kayıt bozulur | Mod durumu ayrı mod kayıt dosyasında; `PlayerData` genişletilemez. Tool/Crest eklenirse kayıttan önce temizlenir |
 | Oyun güncellemesi modu kırar | Yeniden yama | Sürüm sabitle, Steam otomatik güncellemeyi kapat |
 | Kapsam şişer | Hiçbir şey bitmez | v0.1 bitmeden v0.2 yok. Kural. |
 
-## 12. Açık sorular (Windows'ta kapanacak)
+## 12. Sorular ve cevapları (2026-10-06)
 
-1. Deep Docks sahne yapısı: alt oda eklenebilir mi, yeni sahne mi gerekir?
-2. Düşman ve boss'lar PlayMaker FSM mi? Cevap kod mimarisini belirler.
-3. Wish ve Crest veri yapıları mod ile genişletilebilir mi, yoksa mevcut bir kaydı mı ezmek gerekir?
-4. NPC yer değiştirme sistemi dışarıdan kullanılabilir mi?
-5. Oyunun Türkçe yerelleştirmesi var mı?
+1. Deep Docks sahne yapısı: alt oda eklenebilir mi, yeni sahne mi gerekir? Cevap: ikisi de olur (bkz. §11, iki yol). Hangisinin seçileceği v0.1'de denenir.
+2. Düşman ve boss'lar PlayMaker FSM mi? Cevap: evet (%95). Kendi C# state machine'imizi yazma kararı geçerli; oyun bileşenleri yeniden kullanılır.
+3. Wish ve Crest veri yapıları genişletilebilir mi? Cevap: `Quest` ve `ToolCrest` ScriptableObject'leri runtime'da oluşturulabilir; ilerleme mod dosyasında tutulur. `PlayerData` genişletilemez.
+4. NPC yer değiştirme sistemi dışarıdan kullanılabilir mi? Cevap: merkezi sistem yok; mod bayrağına göre sahneye enjekte edilir (bkz. §7).
+5. Oyunun Türkçe yerelleştirmesi var mı? Cevap: yok; TR'yi mod sağlar (bkz. §9).
+6. **Açık:** gizli duvarın tam konumu (Dock_13 / Dock_11), Clawline ring'de asılı kalma süresi ve bench'ten koşu süresi oyun içinde ölçülecek.
