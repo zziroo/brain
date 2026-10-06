@@ -26,7 +26,7 @@ Yusuf "Ziroo" işleri için ayrı bir kimlik istedi. Adres doğrulanınca eski c
 
 ## Sonuçlar / riskler
 - Transferden sonra `yusufholat` taşınan repolarda collaborator olarak kaldı: push yetkisi var, admin yetkisi yok.
-- Windows'ta `gh` iki hesapla giriş yapmış durumda: aktif hesap `zziroo`, ikinci hesap `yusufholat`. `yusufholat`'ta kalan özel repolara (roo-bot, veriyapilariodev1) push için `gh auth switch -u yusufholat` gerekir.
+- Windows (2026-10-07): `yusufholat` oturumu da kapatıldı (`gh auth logout -u yusufholat`, Kimlik Yöneticisi'ndeki `gh:github.com:yusufholat` kaydı silindi). Gerçek ve paket içi `hosts.yml` eşitlendi, `gh` yalnızca `zziroo` ile girişli. Eski repolara gerekirse yeniden `gh auth login` ile girilir.
 - Windows'ta vault ve `zProjects` altındaki 11 reponun remote'u `zziroo/...` yapıldı ve `ls-remote` ile test edildi (2026-10-06).
 - Eski `github.com/yusufholat/<repo>` adresleri yönlendiriliyor. **`yusufholat` altında bu isimlerde yeni repo açma**, yoksa yönlendirme kırılır.
 - Diskort masaüstü uygulaması GitHub Releases'tan güncelleniyor. Yayımlanmış sürümler eski adrese gidiyor ve yönlendirmeye dayanıyor. Bir sonraki sürümde yayın ayarındaki owner `zziroo` yapılmalı (Diskort oturumunda). **Doğrulanmadı:** Yönlendirme üzerinden güncellemenin çalıştığı denenmedi.
