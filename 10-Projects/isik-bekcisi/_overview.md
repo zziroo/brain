@@ -1,10 +1,10 @@
 ---
 type: project
 project: isik-bekcisi
-date: 2026-10-05
+date: 2026-10-06
 status: active
 tags: [isik-bekcisi, oyun, incremental, kosu-tabanli, canvas]
-source: C:\Users\yusuf\ZZ\zProjects\incremantal-game (CLAUDE.md); oturumlar 2026-10-02 (6d8df6c2, 72fd0708), 2026-10-04 (9e4d0124), 2026-10-05 (53393f9a)
+source: C:\Users\yusuf\ZZ\zProjects\incremantal-game (CLAUDE.md); oturumlar 2026-10-02 (6d8df6c2, 72fd0708), 2026-10-04 (9e4d0124), 2026-10-05 (53393f9a), 2026-10-06 (fb8e3060)
 ---
 
 # Işık Bekçisi: fenerle karanlık vadiye koşular yapılan koşu-tabanlı incremental oyun
@@ -15,10 +15,10 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 ## Oyun
 - **Sefer:** bekçi WASD ile yürür; fener imlece bakar. Sol tuş (ya da F) basılı = odak ışını; Boşluk = parlama; Shift / Q / sağ tık = atılım. Fenerin ışığındaki ruhlar "dolar" ve yakalanır; kıvılcım bırakır. Seferi **fener yağı** sınırlar; derin bölgede ve odaklıyken daha hızlı yanar.
 - **Işın → lazer:** Mercek hattı (Mercek → Hüzme → Işın → Yıldız Mızrağı) koniyi daraltıp uzatır: erken oyunda meşale, ortada spot, harabelerde lazer çizgisi; hedefte tutuldukça ısınır. Odaklanmak yağı 1,7–2,5 kat yakar (fitilde "×1,8" etiketi); Damıtık Yağ düşürür. Geç bölgeler lazer ister: kabuklu ruh, prizma (ışını böler), gece dikeni (yağ emen halka), açılan Kalp. Ayrıntı: [[2026-10-02-lazere-donusen-isin-yag-bedeli-ve-lazer-dusmanlari]].
-- **Kamp (gezilebilir üs, hikâye anlatır):** bekçi ateşin başında uyanır. E istasyonu kullanır, **F konuşur** (sakine tıklamak da). Teleskop + Ülker → gökyüzü (beceri ağacı); kapı + Kandil → sefer (kapıdan W ile yürüyerek; Kandil'in fenerine tıklayınca yanan fenerlerden başlangıç); pano + Puhu (1. fenerden sonra) → istekler; kazan + Vırak (2. fenerden sonra) → iksir; kamp ateşi → defter (Günce + Kayıtlar). Yeni sözü olan sakinin başında konuşma işareti; konuşmalar alttaki plakada akar; sefer sonrası bir sakin sefere tepki verir. Hikâyenin özü ve kuralları: [[2026-10-02-hikaye-kampi-f-ile-konusma-ve-yumusak-gecisler]]. Kamp ilerlemeyle büyür.
-- **Beceri ağacı:** gece göğünde takımyıldızı (8 kol, 61 yıldız). Beş durum ilk bakışta ayrı (tamam / alınmış / şimdi alınabilir / pahalı / kilitli), sonraki kademenin soluk önizlemesi, satın alma "yıldız yakma" animasyonu, kör satın alma yok. Bilgi kutusu imlecin yanında, en az yıldızı örten tarafta. Altı **zincirleme yıldız** var (Işık Gölü, Nakarat, Tutuşma, Kor İzi, Kayan Yıldız, Akkor), dördü 0–1. kademede; birbirini tetikler, her halka yeni bir yakalama ister ([[2026-10-05-zincirleme-yildizlar]]).
+- **Kamp (gezilebilir üs, hikâye anlatır):** bekçi ateşin başında uyanır. E istasyonu kullanır, **F konuşur** (sakine tıklamak da). Teleskop + Ülker → gökyüzü (beceri ağacı); kapı + Kandil → sefer (kapıdan W ile yürüyerek; Kandil'in fenerine tıklayınca yanan fenerlerden başlangıç); pano + Puhu (1. fenerden sonra) → istekler; kazan + Vırak (2. fenerden sonra) → iksir; kamp ateşi → defter (Günce + Kayıtlar). Yeni sözü olan sakinin başında soğuk renkte konuşma balonu, istasyonda bekleyen bir şey varsa sıcak renkte eşkenar dörtgen ([[2026-10-06-karanlik-tehdidi-gizlemez-isaretler-sekliyle]]); konuşmalar alttaki plakada akar; sefer sonrası bir sakin sefere tepki verir. Hikâyenin özü ve kuralları: [[2026-10-02-hikaye-kampi-f-ile-konusma-ve-yumusak-gecisler]]. Kamp ilerlemeyle büyür. **Yeni oyun:** bekçi fenersiz uyanır, Ülker teleskopa çağırır; Bekçi Feneri alınana kadar Kandil kapıdan geçirmez ([[2026-10-06-bekci-feneri-agacin-koku-kapi-kapali]]).
+- **Beceri ağacı:** gece göğünde takımyıldızı (8 kol, 62 yıldız). Ortada kök yıldız **Bekçi Feneri** var ("0. yükseltme", 3 kıvılcım, etkisi yok); her kol ondan çıkar. Beş durum ilk bakışta ayrı (tamam / alınmış / şimdi alınabilir / pahalı / kilitli), sonraki kademenin soluk önizlemesi, satın alma "yıldız yakma" animasyonu, kör satın alma yok. Bilgi kutusu imlecin yanında, en az yıldızı örten tarafta. Altı **zincirleme yıldız** var (Işık Gölü, Nakarat, Tutuşma, Kor İzi, Kayan Yıldız, Akkor), dördü 0–1. kademede; birbirini tetikler, her halka yeni bir yakalama ister ([[2026-10-05-zincirleme-yildizlar]]).
 - **Beceri halkası:** Parlama ve Atılım beklerken bekçinin üzerinde dolan bir halka görünür (fenerin çevresinde yay, ayak dibinde elips). Hazır olunca parlar ve ses verir; hazır değilken basınca boğuk bir tık duyulur ([[2026-10-05-beceri-hazir-halkasi-bekcinin-uzerinde]]).
-- **Karanlık sürüsü (gecenin kendisi):** Karacık, Çayır'dan itibaren karanlıktan sürünüp gelir. Hale onu yavaşlatır, ışın eritir; çömelip sıçrar, yapışırsa yağ içer ve haleyi kısar. Karabasan Bataklık'tan itibaren gelir ve yanınca bölünür. Sayıları oyuncunun gücüyle büyür; Mağara ve Harabeler'de ışınla süpürülecek yaylar hâlinde gelir. Pervane, gölge ve diken aynı aileden görünür ([[2026-10-05-karanlik-surusu-karacik-ve-karabasan]]).
+- **Karanlık sürüsü (gecenin kendisi):** Karacık, Çayır'dan itibaren karanlıktan sürünüp gelir. Hale onu yavaşlatır, ışın eritir; çömelip sıçrar, yapışırsa yağ içer ve haleyi kısar. Karabasan Bataklık'tan itibaren gelir ve yanınca bölünür. Sayıları oyuncunun gücüyle büyür; Mağara ve Harabeler'de ışınla süpürülecek yaylar hâlinde gelir. Pervane, gölge ve diken aynı aileden görünür ([[2026-10-05-karanlik-surusu-karacik-ve-karabasan]]). **Karanlık tehdidi gizlemez** (2026-10-06): gözler, soğuk parıltı ve ay ışığı kenarı yaklaştıkça güçlenir; pervanenin gözleri kırmızı kor gibi parlar, arkasında kanat tozu izi kalır ([[2026-10-06-karanlik-tehdidi-gizlemez-isaretler-sekliyle]]).
 - **Derinlik:** 5 bölge: Çayır (karacıklar), Orman (pervaneler), Bataklık (ürkek ruhlar, sis, ilk kabuklular, karabasan), Kristal Mağara (patlayan kristaller, prizmalar), Harabeler (gölgeler, dikenler, prizmalar). Ürkek ruh haleden kaçar ama ışında donar; yorgunluğu görünür.
 - **Fenerler:** bölgedeki avın ışığı fenere kendiliğinden akar (%80'e kadar), son kısmı başında tamamlanır. 1.–4. fener yanınca sefer **sürer** (1,8 sn yağ yanmaz, dolum yok, kalan yağla sonraki bölgeye); 5. fener seferi bitirir, Kalp ancak kamptan sonra ([[2026-10-04-fener-seferi-bitirmez-yalniz-besinci-bitirir]]).
 - **Geçişler:** kapıdan çıkış kesintisiz (fener 1 sn'de yakılır), fenerden başlama bir yolculuk kartı, yağ bitince sönen alev ve eve süzülen kor, kampta ateş başında uyanış, teleskopa iris. Sefer başına ~2 sn.
@@ -27,16 +27,18 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 
 ## Teknoloji
 - Düz JS ES modülleri + Canvas 2D, derleme yok, dış dosya yok. ~11.000 satır JS.
-- Klasör: `C:\Users\yusuf\ZZ\zProjects\incremantal-game`. Çalıştırma: `node serve.mjs` → http://localhost:5174.
+- Klasör: Mac'te `/Users/ziroo/ZZ/zProjects/incremantal-game` (Windows'ta `C:\Users\yusuf\ZZ\zProjects\incremantal-game`). Çalıştırma: `node serve.mjs` → http://localhost:5174.
 - Kural: oyun kuralları `run.js` / `camp.js` / `quests.js` / `talk.js` / `state.js` / `data.js` içinde, DOM'suz; hikâye metni `story.js`; her şey `emit` üzerinden. Bot başsız oynar.
 - Test: `tools/dev.js` (`timerFrames` / `manualFrames` + `ev`, `campSweep`), `tools/sim.js` + `sim-node.mjs` (denge botu), `tools/story-check.mjs` (hikâye). **Sözdizimi: `node --input-type=module --check < dosya`** (`node --check` bu makinede ESM hatası yakalamıyor). Ayrıntı deponun `CLAUDE.md` dosyasında.
 - **Canlı:** https://games.ziroo.net/isik-bekcisi · liste https://games.ziroo.net/ (2026-10-03'ten beri; eski adresler 301; oyun kayıtları yeni kökte sıfırdan başladı). Yayın: `bash deploy/deploy.sh`; liste sayfası ziroo-edge `www/games/`'te, `bash deploy-www.sh games` ile ([[2026-10-05-liste-sayfalari-ziroo-edge-te-ortak-neon-tasarim]]). Kurallar: [[2026-10-03-joker-dns-ve-tools-games-alt-alan-adlari]] (eski: [[2026-10-02-oyunlar-diskort-alan-adinda-games-altinda]]). Betik `/opt/ziroo-www/games/isik-bekcisi`e yayınlıyor (2026-10-03 geçişte kullanıldı). Yayın Yusuf'un kararı.
 - Git: GitHub (özel) https://github.com/yusufholat/isik-bekcisi, dal `main`.
 
-## Durum (2026-10-05)
+## Durum (2026-10-06)
 | Parça | Durum |
 |---|---|
-| Yayın | **canlı = `42fc571`** (2026-10-05, Yusuf'un onayıyla push + `deploy/deploy.sh`; SSH ile 22 dosyanın hepsi yerelle aynı, yeni kod sunuluyor, `Cache-Control: no-cache`). Yerel ve uzak `main` eşit |
+| Yayın | **canlı = `1e64b38`** (2026-10-06, Yusuf'un isteğiyle push ve `deploy/deploy.sh`; kontrol edilen 4 dosya yerelle aynı). Yerel ve uzak `main` eşit. Önceki: `42fc571` (2026-10-05) |
+| Bekçi Feneri (ilk yükseltme, kapalı kapı) | yazıldı, incelendi (0 kritik/yüksek/orta, 7 düşük, hepsi düzeltildi), canlıda; ilk ziyaret gerçek olaylarla oynatıldı, insan oynamadı ([[2026-10-06-bekci-feneri-agacin-koku-kapi-kapali]]) |
+| Okunurluk (kamp işaretleri S3, gece E3, pervane) | 4+4 seçenek gerçek ekran görüntüleriyle karşılaştırıldı, Yusuf S3 ve E3'ü seçti; incelendi (1 orta → şüpheci düşüğe indirdi, düzeltildi), canlıda. Hareket hâli 60 karede görülmedi ([[2026-10-06-karanlik-tehdidi-gizlemez-isaretler-sekliyle]]) |
 | Süre ölçümü | `S.totalTime` (kamp dahil; başlıktan sonra, sayfa görünürken, 60 sn dokunulmazsa durur) ve ilk şafak (`S.stat.winRuns / winRoad / winTotal`). Günlükteki Kayıtlar'da ("Şafağa kadar: N sefer · süre") ve oyun sonu ekranında görünür. Eski kayıtlarda toplam süre 0'dan başlar |
 | Beceri halkası, karacık ailesi, zincirleme yıldızlar | yazıldı, incelendi (3 dal incelemesi: 0 kritik/yüksek, 1 orta, 9 düşük; hepsi düzeltildi), birleşti; görsel denetim canvas görüntüleriyle yapıldı. Gerçek kare döngüsüyle oynanmadı, sesler dinlenmedi ([[2026-10-05-karanlik-surusu-zincirleme-yildizlar-beceri-halkasi]]) |
 | Fener ve sefer | 1.–4. fener seferi bitirmez, 5. bitirir ([[2026-10-04-fener-seferi-bitirmez-yalniz-besinci-bitirir]]); iki inceleme + şüpheci; tek seferde iki fener tarayıcıda denenmedi |
@@ -50,10 +52,14 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 | Denge | bot (karacık ve yıldızlardan sonra, geçişler de sayılıyor): ~43 sefer / ~47 dk istek ve iksirle, ~51 / ~55 onlarsız; Kalp 3–4 deneme (1–6). Yıldızların kısalttığı tempo `TIER_SCALE` 2–4 ile eski hâline döndü ([[2026-10-05-denge-tier-scale-ile-eski-tempoya-donus]]). Botun nişanı mükemmel; özensiz bot varyantı da var (`"bot":"sloppy"`). Gerçek oyuncu ölçümü yok |
 | Ses | hiçbir ajan dinlemedi: ışın uğultusu, kamp ateşi ve rüzgâr yatağı, konuşma sesleri, geçiş sesleri seviyeleri tahmin |
 | Eski kayıtlar | yüklenir; yıldız fiyatları 2.–4. kademede yine arttı (2026-10-05, eski oyuncu da öder); `S.story` göçü var; yeni istek türü `soot` eski kayıtta sorunsuz |
-| İnceleme kapısı | 2026-10-05: 3 dal incelemesi (sonnet + 2 opus; 1 orta, 9 düşük), şüpheci gerekmedi; denge diff'ini koordinatör okudu |
+| İnceleme kapısı | 2026-10-06: iki opus incelemesi + bir sonnet şüpheci. 2026-10-05: 3 dal incelemesi (sonnet + 2 opus; 1 orta, 9 düşük), şüpheci gerekmedi; denge diff'ini koordinatör okudu |
 
 ## Sıradaki işler
-0. **Onaylı sıranın üçü de yerelde bitti** (2026-10-05; Yusuf "hepsini sen yap" dedi, seçimleri Claude yaptı): beceri halkası, karacık ailesi, zincirleme yıldızlar, küçük düzeltmeler, denge ([[2026-10-04-devir-zorluk-ve-his-bulgulari]] → [[2026-10-05-karanlik-surusu-zincirleme-yildizlar-beceri-halkasi]]). **Yayınlandı** (2026-10-05, `42fc571`). Sırada Yusuf ve arkadaşları oynasın. Bitirenler günlüğün Kayıtlar sayfasındaki "Şafağa kadar" satırını (sefer, toplam süre) ve "Yolda geçen süre"yi söylesin. Bunlar botla ve uzunluk sorusuyla karşılaştırılacak ([[2026-10-05-devir-oyun-uzunlugu]]).
+0. **Yusuf canlıda kendisi oynuyor** (2026-10-06). Ondan beklenen geri bildirim:
+   - Ormanda pervaneler artık zamanında fark ediliyor mu? Hâlâ haksız geliyorsa sıradakiler: yaklaşan kanat çırpma sesi ve halenin kenarında bir tur dönüp öyle dalma (bu davranış dengeyi değiştirir).
+   - İlk açılışta fener alma adımı akıcı mı, kapı gereksiz yere bekletiyor mu?
+   - Kamp işaretleri artık yeterince belirgin mi?
+1. **Onaylı sıranın üçü de yerelde bitti** (2026-10-05; Yusuf "hepsini sen yap" dedi, seçimleri Claude yaptı): beceri halkası, karacık ailesi, zincirleme yıldızlar, küçük düzeltmeler, denge ([[2026-10-04-devir-zorluk-ve-his-bulgulari]] → [[2026-10-05-karanlik-surusu-zincirleme-yildizlar-beceri-halkasi]]). **Yayınlandı** (2026-10-05, `42fc571`). Sırada Yusuf ve arkadaşları oynasın. Bitirenler günlüğün Kayıtlar sayfasındaki "Şafağa kadar" satırını (sefer, toplam süre) ve "Yolda geçen süre"yi söylesin. Bunlar botla ve uzunluk sorusuyla karşılaştırılacak ([[2026-10-05-devir-oyun-uzunlugu]]).
    - Oynayınca bakılacaklar:
      - Karacık Çayır'da yeterince direnç veriyor mu, geç oyunda neredeyse zararsız olması iyi mi?
      - Fener başındaki kuşatma nasıl hissettiriyor?
@@ -62,8 +68,8 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
      - Ürkek ruh artık iyi hissettiriyor mu?
    - **Öğretici baştan tasarlanabilir** (Yusuf, 2026-10-04): durdurmayan 2–3 yeni yaklaşım seçenek olarak gösterilsin. Tek vuruşta kabuklu, tıkla-git ve kalabalıkta taraf değiştirme sorunları 2026-10-05'te düzeltildi. Kabuk / prizma / diken / Kalp için canlandırma hâlâ açık.
    - **Oyun uzunluğu** (Yusuf, 2026-10-05: "bu tür oyunları 3–4 saatte bitiriyorum, bizimki kısa mı?"). İnsan için tahmin ~1–1,5 saat; seferler baştan sona ~40 sn. Öneri: maliyet değil, sefer uzaması + içerik; hedef ~2–2,5 saat; önce gerçek oyuncu ölç. Hedef süre Yusuf'un kararı: [[2026-10-05-devir-oyun-uzunlugu]].
-1. Oynama geri bildirimi: WASD + fare iyi geldi mi; lazer ve yağ bedeli hissediliyor mu; kabuklu / prizma / diken okunuyor mu; konuşmalar fazla mı az mı; geçişler yavaş mı.
-2. İnsan temposu ölçülünce denge; istek ödülleri ve iksir bekleme süresi hâlâ insan tarafından denenmedi.
+2. Oynama geri bildirimi: WASD + fare iyi geldi mi; lazer ve yağ bedeli hissediliyor mu; kabuklu / prizma / diken okunuyor mu; konuşmalar fazla mı az mı; geçişler yavaş mı.
+3. İnsan temposu ölçülünce denge; istek ödülleri ve iksir bekleme süresi hâlâ insan tarafından denenmedi.
 
 ## Bilinen küçük eksikler
 - Pencere değiştirip geri gelince basılı tutulan tuş yeniden basılana kadar yürütmez (bilinçli: tekrar olayları basış sayılmıyor).
@@ -91,6 +97,8 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 - [[2026-10-05-karanlik-surusu-karacik-ve-karabasan]]
 - [[2026-10-05-zincirleme-yildizlar]]
 - [[2026-10-05-denge-tier-scale-ile-eski-tempoya-donus]]
+- [[2026-10-06-bekci-feneri-agacin-koku-kapi-kapali]]
+- [[2026-10-06-karanlik-tehdidi-gizlemez-isaretler-sekliyle]]
 
 ## Dersler
 - [[2026-10-02-carpimsal-gelistirmeler-geliri-patlatir]]
@@ -107,6 +115,8 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 - [[2026-10-05-paralel-dallar-ayni-olay-adini-farkli-anlamda-kullanabilir]]
 - [[2026-10-05-gizli-panelde-canvas-goruntusu-yerel-aliciyla]]
 - [[2026-10-05-yakalama-basina-odul-sinerjiyi-carpana-cevirir]]
+- [[2026-10-06-gorunum-birlestirme-okunurlugu-geriletebilir]]
+- [[2026-10-06-buyuyen-isaret-en-yakin-nokta-tiklamasini-bozar]]
 
 ## Oturumlar
 - [[2026-10-02-iki-oyun-yayin-ve-kamp-yenilemesi]]
@@ -116,3 +126,4 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 - [[2026-10-04-devir-zorluk-ve-his-bulgulari]] (ZZ kökündeki tasarım dersinden devir)
 - [[2026-10-05-devir-oyun-uzunlugu]] (ZZ kökündeki tasarım dersinden devir)
 - [[2026-10-05-karanlik-surusu-zincirleme-yildizlar-beceri-halkasi]]
+- [[2026-10-06-bekci-feneri-ve-okunurluk]]

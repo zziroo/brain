@@ -17,7 +17,7 @@ source: oturum 53393f9a (incremantal-game), commit e19451e, aa8f31f, e636e29; Yu
 - **Karabasan:** Bataklıktan itibaren gelen iri karacık. Yanınca 3–4 sersem karacığa bölünür.
 - **Bölgeye göre:** Çayır'da öğretme alanı gibi tek tek ve yavaş gelir; ilk karacık 5. saniyede tam karşıdan, ipucuyla çıkar. Mağara ve Harabeler'de 6–9'luk sürüler, çoğu ışınla süpürülecek yay hattı hâlinde. Bot Mağara'da ortalama 8, Harabeler'de 13 görüyor, zirvede 20–30.
 - **Sayı güçle büyür, dayanıklılık büyümez.** Çarpan m = clamp(1 + 0,5·log2(güç / bölge eşiği), 1, 3). Gelme aralığı √m'ye bölünür, sürü √m ile çarpılır.
-- **Mevcut gece varlıkları:** Pervane, gölge ve diken aynı görünüşü aldı (mürekkep gövde, solgun gözler, dumanlı kenar, aynı is bulutu), kuralları değişmedi.
+- **Mevcut gece varlıkları:** Pervane, gölge ve diken aynı görünüşü aldı (mürekkep gövde, solgun gözler, dumanlı kenar, aynı is bulutu), kuralları değişmedi. *Görünüş 2026-10-06'da güncellendi: bu birleştirme pervanenin karanlıktaki parıltısını da kaldırmıştı. Yerine gözler, ay ışığı kenarı ve pervaneye özgü kor gözler geldi ([[2026-10-06-karanlik-tehdidi-gizlemez-isaretler-sekliyle]]).*
 - **Ürkek ruh** kaldırılmadı, düzeltildi:
   - Hale onu ürkütür; halenin kenarında oyalanmadan ışıktan kaçar.
   - Işık onu yerinde dondurur (far ışığındaki geyik gibi).

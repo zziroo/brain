@@ -15,6 +15,7 @@ source: oturum 2026-10-03/04 (incremantal-game, 55919b05)
 ## Ders
 - Oyunun **hissini** değiştiren seçim (durdurur mu, araya girer mi, ne kadar yer kaplar) Yusuf'un kararıdır; istek tek yoruma açık değilse inşadan önce 2–3 seçeneği kısa bir çizimle sor. İkinci turda seçenek sorusu tek mesajda çözüldü.
 - Öğreticide varsayılan: oyunu durdurma. Yusuf duran paneli sevmiyor.
+- İşe yarayan yöntem (2026-10-06): seçenekleri oyunun içinde bir geliştirici anahtarının arkasına kur (`?look=s3n3`), aynı anları her seçenekle çekip yan yana koy, karardan sonra kaybedenleri sil. Yusuf dört kamp işareti ve dört gece görünümü arasından tek mesajda seçti ([[2026-10-06-karanlik-tehdidi-gizlemez-isaretler-sekliyle]]).
 - Geri alınması kolay yan parça (ses kaydırıcıları, uyarı bandı) sormadan yapılabilir; ikisi de kaldı.
 
 ## İlgili
