@@ -20,6 +20,8 @@ source: Windows PC oturumu 2026-10-06 (repo C:\Users\yusuf\ZZ\zProjects\silksong
 
 - Akşam: veri seti v2 (Real-ESRGAN x4), stil LoRA v2 (1500 adım, 1000 en iyi, belirgin keskin). 3 konsept turu (18 + 20 + 34 görsel); Yusuf A3/A4/B4/C4/B1 beğendi, çekiç arenaya taşındı, A4 kilitlendi: [[2026-10-06-cekic-arena-sahmerdani-siluet-a4]]. Karakter LoRA `scoria_char_v1` ve Idle denemesi başarılı.
 
+- Gece: karakter pelerinli şövalyeye döndü (kontrol sütunundan çıkan 'kaza' görsel; ders: iterasyon yönü doğrulamaz, yan ürünlere bak). `kilnwright_char_v1` caption hatası (özellikler etiketlere bağlandı) → v2 yalnız tetikleyici ile düzeldi. Parçalı kukla (`tools/anim/puppet.py`): kollar pivotlu, pelerin gecikmeli, clean-plate delik dolgusu; Idle için saf kukla seçildi (yeniden çizim kıtırdatıyor). `TestSprite` ile oyun içinde ilk sprite görüldü.
+
 **Sonuç:** Stil öğreniliyor (kontur, düz gölge, gri zemin, lav mağarası arka planları). Scoria konseptleri siluet olarak doğru yönde ama çizgiler bulanık ve tarif tam takip edilmiyor.
 
 **Dersler:** [[2026-10-06-bepinex-preloader-hatayi-yutar]], [[2026-10-06-sd-scripts-onbellegi-modele-ozgu]]

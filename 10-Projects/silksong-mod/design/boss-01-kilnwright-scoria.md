@@ -4,12 +4,13 @@
 > Doğrulama sonuçları `notes-dogrulama.md` içinde (2026-10-06, oyun build 22479045). Hâlâ açık olanlar satır içinde `[doğrula]` ile işaretli.
 > Kullanıcı kararları (2026-10-06): HP ~700 ve faz eşikleri %75/%40; arena lavı oyunun gerçek lavı; Forge Daughter'ın yerine geçen usta olarak Scoria; Cinder Fang hasarı 4 / 12 / 2.
 > 2026-10-06: çekiç arenaya taşındı (karar), siluet A4. Çekiç artık Scoria'nın koluna kaynık değil; tavandan zincirle asılı arena şahmerdanı (§5, §6, §8, §11).
+> 2026-10-06 akşam: siluet pelerinli şövalye (havuz A_orig_s24), gözler kırmızı; karakter LoRA `kilnwright_char_v1`. A4 kaya-golem siluetinin yerini aldı; lore uyarlaması minimal, hikâye ayrıntıları sonra netleşecek (§3, §5, §10, §12).
 
 ---
 
 ## 1. Tek cümle
 
-Deep Docks'un lavlarının altındaki Batık Ocak'ta, bitiremediği bir iğneyi yüzyıllardır döven, bedeni cürufla kaynamış eski bir demirci ustası; Hornet'in kendi iğnesinin karanlık aynası.
+Deep Docks'un lavlarının altındaki Batık Ocak'ta, bitiremediği bir iğneyi yüzyıllardır döven, kaskı yüzüne kaynamış eski bir demirci ustası; Hornet'in kendi iğnesinin karanlık aynası.
 
 ## 2. Neden bu boss
 
@@ -22,7 +23,7 @@ Deep Docks'un lavlarının altındaki Batık Ocak'ta, bitiremediği bir iğneyi 
 
 Sitadel'in parladığı çağda Deep Docks cevher ve metal taşıyordu (oyunda: `DOCKS_NOTE_1`, zil vuruşlarına göre Sitadel'e smelt sevkiyatı) ve ocakların en büyüğü Scoria'nındı. Sitadel'in hacılarına verilen iğneler, Bellway'lerin çanlarının dilleri, Grand Gate'in menteşeleri onun elinden çıktı. Bu nesnelerin kökeni oyunda anlatılmıyor; mod-özgün lore, ama "Docks Sitadel'e metal gönderirdi" çerçevesine bağlı.
 
-Sonra Sitadel ince işi kendi gözünde "kutsal" bir zanaata devretti ve Scoria'nın yerine Forgehome'dan bir Forge Daughter getirtti. Siparişler yukarı çıktı, Scoria aşağıda kaldı. Sitadel sustuğunda geriye kalan siparişler de kesildi. Scoria son bir sipariş uydurdu kendine: "Geri dönecek olan için" bir iğne. Kimin döneceğini kendi de bilmiyor; belki bir kraliçe, belki bir hacı, belki hiç kimse. Ocağı söndürmedi. Yıllar içinde cüruf şişen bedenine yapıştı, göğsü kor yanan bir fırına dönüştü, baş ve gövdesi tek bir cüruf kütlesine kaynadı. Ocağın şahmerdanı ise hâlâ tavanda, zincirinde asılı; onu artık kendi zinciriyle çekiyor. Yukarıdaki dock işçileri "duvarın ardındaki vuruş"u efsane sanıyor.
+Sonra Sitadel ince işi kendi gözünde "kutsal" bir zanaata devretti ve Scoria'nın yerine Forgehome'dan bir Forge Daughter getirtti. Siparişler yukarı çıktı, Scoria aşağıda kaldı. Sitadel sustuğunda geriye kalan siparişler de kesildi. Scoria son bir sipariş uydurdu kendine: "Geri dönecek olan için" bir iğne. Kimin döneceğini kendi de bilmiyor; belki bir kraliçe, belki bir hacı, belki hiç kimse. Ocağı söndürmedi. Yıllar içinde kaskı yüzüne, maşası eline kaynadı; pelerini ocak ateşinde kavruldu (pelerinin altında göğsünde cılız bir kor parıltısı hâlâ yanıyor). Ocağın şahmerdanı ise hâlâ tavanda, zincirinde asılı; onu artık kendi zinciriyle çekiyor. Yukarıdaki dock işçileri "duvarın ardındaki vuruş"u efsane sanıyor.
 
 Hornet geldiğinde Scoria onu bitmemiş iğnenin sahibi sanır. Değil. Bunu anlayınca dövüş başlar: ya Hornet iğneyi alır ya da Scoria onu da cürufa katar.
 
@@ -38,22 +39,25 @@ Hornet geldiğinde Scoria onu bitmemiş iğnenin sahibi sanır. Değil. Bunu anl
 
 ## 5. Görsel konsept
 
-**Silüet (A4, kilitli):** Kambur, iki ayaklı böcek. Baş ve gövde tek sert kütle: büyük, çatlak cüruf "kaya"; baş gövdeden ayrı bir parça değil. İki parlak turuncu göz. Kollar çok uzun ve ince: sol kol iki parmaklı maşa-el, sağ elde zincirli maşa (kanca ucu). Bacaklar uzun ve ince. Duruş yorgun, trajik. Hornet'in yaklaşık 2,5 katı boy. Siluet tek başına tanınmalı: **kaya baş-gövde + zincirli maşa + kor göğüs.**
+**Silüet (pelerinli şövalye, kilitli; 2026-10-06 akşam):** İnce yapılı böcek şövalye. Yüzüne kaynamış gri, perçinli demir kask-maske; içinde iki parlak kırmızı göz. Kukuletalı, yırtık pırtık koyu kızıl pelerin (yanmış zincir-ipek önlük/pelerin olarak okunur). Kollar çok uzun, ince ve siyah, uçları kıskaç-el; küçük demir ocak aletleri taşır: Faz 1'de zincirli maşa, Faz 2'de bitmemiş iğne. Bacaklar uzun ve ince. Duruş dik ama yorgun (eski kambur taslağa göre daha az kambur). Hornet'in yaklaşık 2,5 katı boy (değişmedi). Siluet tek başına tanınmalı: **kukuletalı pelerin + perçinli kask-maske ve kırmızı gözler + uzun ince kollarda zincirli maşa.**
 
 **Çekiç yok:** Çekiç Scoria'nın kolu değil, arenanın mekanizması: tavandan zincirle asılı dev bir şahmerdan (bkz. §6). Scoria kendi silahı olarak Faz 1'de zincirli maşayı, Faz 2'de bitmemiş iğneyi taşır.
 
-**Kaynak ve gerekçe (karar 2026-10-06):** Konsept LoRA v2 örneği A4'ten geldi (`D:\SilksongMod\ai\out\scoria_v2\A_00_s4.png`). Stil modeli zincir, maşa ve kor aletini doğal çiziyor, çekiç kolu hiç çizmiyor. Çekiç prosedürel sprite olunca animasyon yükü de düşüyor. Tematik olarak Scoria kendi ocağıyla dövüşüyor.
+**Kaynak ve gerekçe (karar 2026-10-06):** Çekiç kararı gündüz alındı (A4 kaya-golem taslağı üzerinden): stil modeli zincir, maşa ve kor aletini doğal çiziyor, çekiç kolu hiç çizmiyor; çekiç prosedürel sprite olunca animasyon yükü de düşüyor; tematik olarak Scoria kendi ocağıyla dövüşüyor. Akşam siluet değişti: karakter LoRA havuzundan pelerinli şövalye seçildi (referans `D:\SilksongMod\ai\out\knight_v1\A_orig_s24.png`, havuz `_knight_havuz.png`; eski A4: `D:\SilksongMod\ai\out\scoria_v2\A_00_s4.png`). Çekiç/şahmerdan kararı aynen geçerli.
 
-**Yüzey:** Kabuk kömür karası, çatlaklardan turuncu kor sızıyor. Göğüste tek bir parlayan kor bölgesi (kor yaması; fırın kapağı ya da ızgara kapısı şart değil), fazlara göre parlıyor. Sırtında dört baca deliği isteğe bağlı, duman tüter. Belinde yanmış zincir-ipek bir önlük parçası; ipeğin yandığını göstermek Silksong için anlamlı bir detay.
+**Yüzey:** Kask-maske soğuk çelik grisi, perçinli, çizik ve dövme izli; yüze kaynak izleri görünür. Pelerin koyu kızıl, kenarları yanık ve yırtık, ocak isiyle kararmış; tek esnek katman. Kollar ve bacaklar kömür karası, eklemlerde dövme izleri ve perçinler. Pelerinin altında, göğüs hizasında cılız bir kor parıltısı (isteğe bağlı, küçük; fazlara göre hafifçe parlar, Faz 3'te pelerinin altından sızar). Belinde yanmış zincir-ipek önlük parçası ipeğin yandığını anlatır; pelerin bu detayı da taşır. Eski kaya yüzeyi, çatlak kor ve baca delikleri kalktı.
 
-**Gözler:** İki kor noktası, göz kapağı yok. Öfkelenince parlar, ölürken söner.
+**Gözler:** Kask yarığında iki parlak kırmızı nokta (`#ff2a2a`), göz kapağı yok. Öfkelenince parlar, ölürken söner. Not: Hornet'in kırmızısına yakın; şimdilik kabul, ileride renk değişebilir (kor turuncusuna ya da soğuk bir tona).
 
 **Renk paleti:**
-- Kömür karası `#1a1614`
-- Kül grisi `#6b625c`
-- Kor turuncusu `#ff7a1a`
-- Sıcak sarı (çatlak merkezi) `#ffd166`
-- Soğuk çelik mavisi (iğne) `#9fb7c9`
+- Kömür karası `#1a1614` (kollar, bacaklar, gövde)
+- Pelerin kızılı `#5a1a1a` (koyu kızıl, yanık kenarlar kömüre doğru)
+- Kask çelik grisi `#6b6f73`
+- Göz kırmızısı `#ff2a2a`
+- Kül grisi `#6b625c` (is, duman, ikincil gölge)
+- Kor turuncusu `#ff7a1a` (azaltıldı: yalnız pelerin altı kor, Slag Spit, kıvılcım ve lav efektleri)
+- Sıcak sarı `#ffd166` (kor merkezi ve kıvılcım; seyrek)
+- Soğuk çelik mavisi `#9fb7c9` (iğne)
 
 **Referans ton:** Hollow Knight'ın Nosk ve Silksong'un Crust King Khann'ı arasında bir ağırlık; ama Scoria'da organik değil "zanaat" dokusu var: perçinler, eklem yerlerinde dövme izleri.
 
@@ -212,7 +216,7 @@ Sprite oyun standardında: tk2d koleksiyonu başına 1 atlas, 64 piksel/birim; k
 
 | Animasyon | Kare | Not |
 |---|---|---|
-| Idle | 8 | Körük nefesi, göğüs ateşi titrer, duman döngüsü ayrı katman |
+| Idle | 8 | Nefes, pelerin hafif salınır, pelerin altındaki kor titrer; duman döngüsü ayrı katman |
 | Walk | 10 | Ağır, sol ayak geride sürüklenir |
 | Turn | 3 | |
 | Zincir çekme | 6 | Uzanma 2 + çekiş 2 + bırakma 2; A1'in gövde pozları (hazırlık ve toparlanma). Dalga ayrı efekt sprite'ı |
@@ -231,7 +235,7 @@ Sprite oyun standardında: tk2d koleksiyonu başına 1 atlas, 64 piksel/birim; k
 | Şahmerdan (ayrı prosedürel sprite) | 3 | Yükselme + düşüş + temas; gövde karesi değil, arena nesnesi |
 | **Toplam** | **~150 kare** | 147 gövde + 3 şahmerdan. Çekiç kolu kareleri kalktı; maşa ve zincir kare saymaz |
 
-**Üretim notu:** Scoria'nın tasarımında kasıtlı olarak ayrı katmanlar var: ana gövde (kaya baş-gövde, tek sert kütle), sağ kol, sol maşa-el, iğne, maşa ve zincir, duman, göğüs kor yaması; şahmerdan ise gövdeden bağımsız arena sprite'ı. Böylece gövde kareleri LoRA ile üretilip kol/iğne/maşa/zincir/şahmerdan kodla hareket ettirilebilir, yine de "kare kare çizilmiş" hissi gövde katmanından gelir. Bu hibrit, oyunun kendi tekniğine en yakın ulaşabileceğimiz yol.
+**Üretim notu:** Scoria ayrı katmanlardan kurulur: gövde (kask-maske + gövde, tek parça), pelerin (tek esnek katman), iki kol, iki bacak, iğne, maşa ve zincir (prosedürel), duman, pelerin altı kor parıltısı; şahmerdan ise gövdeden bağımsız arena sprite'ı. Pelerin ikincil harekete sahip olur: gövde hareketini gecikmeyle izler (yay/sarkaç benzeri, hızlı hamlelerde savrulur, durunca sallanıp oturur); bu yüzden pelerin kareleri el çizimi yerine kodla (mesh/segment eğilmesi) ya da gövdeden bağımsız kısa döngülerle verilir. Gövde kareleri LoRA ile üretilir, kol/bacak/iğne/maşa/zincir/şahmerdan kodla hareket ettirilebilir; "kare kare çizilmiş" hissi gövde ve pelerin katmanından gelir. Bu hibrit, oyunun kendi tekniğine en yakın ulaşabileceğimiz yol. Uyarı: attack/transition satırlarında geçen "göğüs ateşi / çatlak / kabuk" ifadeleri eski silüete göre yazıldı; animasyon tasarımı sırasında pelerin ve kor parıltısına uyarlanacak.
 
 ## 11. Teknik kapsam (mod kodu, kısa)
 
@@ -250,6 +254,7 @@ Sprite oyun standardında: tk2d koleksiyonu başına 1 atlas, 64 piksel/birim; k
 2. ~~Forge Daughter geçmişi çelişkisi~~ Kapandı: Scoria, Forge Daughter'ın yerine geçtiği eski usta (bkz. §3).
 3. Tool yerine yeni Crest daha mı iyi ödül? Crest çok daha fazla iş; ilk sürümde Tool, ikinci sürümde değerlendir.
 4. Steel Soul modu oyunda var (`permadeathMode`, bazı sahnelerde `Steel Soul States` dalı). Boss orada da erişilebilir olsun mu? Karar kullanıcıda.
+5. Lore ve isim yeniden gözden geçirilebilir: karakterin cüruf-golem arka planına bağlı kalması gerekmiyor (pelerinli şövalye siluetiyle "cüruf bedene yapıştı" anlatısı zaten kalktı). Kırmızı gözlerin Hornet'in kırmızısına yakınlığı da açık.
 
 ## 13. Sıradaki adımlar
 

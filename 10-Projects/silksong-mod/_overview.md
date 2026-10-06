@@ -17,7 +17,8 @@ Kişisel kullanım ve arkadaşlarla oynamak için Hollow Knight: Silksong'a mod 
 - **Kayıt güvenliği çalışıyor:** modlu kopya kayıtları `...\Hollow Knight Silksong\_SunkenForgeMod\`'a yazar, ilk çalıştırmada doğrulandı. Bkz. [[2026-10-06-kayit-yonlendirme-diske-gomulu-dll]].
 - Tasarım: [[10-Projects/silksong-mod/design/00-dlc-overview-sunken-forge|DLC çerçevesi]], [[10-Projects/silksong-mod/design/boss-01-kilnwright-scoria|Boss 01 Scoria]], [[10-Projects/silksong-mod/design/notes-dogrulama|doğrulama notları]]. Denge ve lore kararları: [[2026-10-06-scoria-denge-ve-lore-kararlari]].
 - LoRA: SDXL Base üzerinde stil LoRA v1 (en iyi checkpoint 1200. adım), `D:\SilksongMod\ai\loras\`. Bkz. [[2026-10-06-lora-tabani-sdxl-base]].
-- Henüz mod içeriği (sahne, boss kodu) yok; eklenti şimdilik yalnızca kayıt güvenliği yapıyor.
+- **Karakter değişti (akşam):** Yusuf kaya-golem yerine karakter LoRA'sının kontrol sütunundan çıkan pelerinli şövalyeyi seçti (gri kask-maske, kırmızı göz, kızıl pelerin, uzun maşa kollar). Karakter LoRA `kilnwright_char_v2` (caption yalnız tetikleyici). Tasarım dokümanı §5 buna göre güncellendi; lore sonra netleşecek.
+- **Oyun içi ilk sprite (23:12):** parçalı kukla Idle (12 kare) → RGBA PNG → `TestSprite` (runtime tk2d atlas + animator, hero materyali/sorting kopyası) → Abyss_12'de Hornet'in yanında çalıştı. Ekran görüntüsü `D:\SilksongMod\Hollow Knight Silksong\BepInEx\SunkenForge_screens\`. Boyut ayarı: `PixelsPerUnit = 98` (2,5× Hornet collider).
 
 ## Kararlar
 - Önce tek tam boss, "DLC" sonra. Gerekçe: hat (tersine mühendislik → LoRA → sprite → mod kodu) bir kez uçtan uca işlemeden kapsam büyütülmez.
@@ -27,8 +28,8 @@ Kişisel kullanım ve arkadaşlarla oynamak için Hollow Knight: Silksong'a mod 
 - Kayıt yönlendirme diske gömülü DLL ile; mod durumu ayrı dosyada, PlayerData'ya yazılmaz.
 
 ## Sıradaki adımlar
-1. Parçalı kukla (gövde / kollar / bacaklar / zincir maskeleri) → Walk ve zincir çekme kareleri; büyük pozlar için ControlNet (SDXL lineart/depth, ~2,5 GB, indirme onayı gerekli).
-2. Kareleri TK2D sprite collection'a çevirme ve oyunda test (Idle ile).
+1. Oyun içi görünümü değerlendir (boyut, renk doygunluğu oyuna göre fazla parlak olabilir, 12 fps hissi); gerekirse renk düzeltmesi (pelerin `#5a1a1a`'ya yaklaştır).
+2. Walk ve zincir çekme kareleri: kukla + büyük pozlar için ControlNet (SDXL lineart/depth, ~2,5 GB, indirme onayı gerekli).
 3. Mod: "merhaba" sahnesi, Deep Docks gizli kapı adayını (Dock_13) oyunda görme.
 4. Şahmerdan ve arena nesneleri (örs, zincir, Harpoon Ring) için görsel üretim.
 
