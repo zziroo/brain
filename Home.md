@@ -35,6 +35,7 @@ Buradan başla. Her şey buradan ya da bir projenin `_overview.md` dosyasından 
 - `30-Resources/`: kalıcı bilgi ve rehberler
 - [[kosu-tabanli-incremental-shelldiver-rock-bottom-analizi]]: koşu-tabanlı incremental türünün kalıbı (Shelldiver, Rock Bottom) ve oyuncu şikâyetleri
 - [[30-Resources/oyun-tasarimi/_index|Oyun tasarımı dersleri]]: döngüler, zorluk, his, tempo; Işık Bekçisi örnekleriyle
+- [[genex-desktop-oyunu-insansiz-dogrulama-yontemleri]]: Genex Desktop (AI ile oyun yapan uygulama) oyunu insan oynamadan nasıl doğruluyor: test kancası, hareket şeridi, kör hakemler, saçma kontrol maddesi
 - [[2026-10-05-windows-donemi-token-ozeti]]: Windows dönemi Claude kullanımı (API karşılığı yaklaşık 3.713 $, model ve proje bazında)
 
 ## Arşiv

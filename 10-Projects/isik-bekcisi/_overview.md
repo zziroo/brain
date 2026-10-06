@@ -127,3 +127,4 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 - [[2026-10-05-devir-oyun-uzunlugu]] (ZZ kökündeki tasarım dersinden devir)
 - [[2026-10-05-karanlik-surusu-zincirleme-yildizlar-beceri-halkasi]]
 - [[2026-10-06-bekci-feneri-ve-okunurluk]]
+- [[2026-10-06-devir-genex-dogrulama-fikirleri]] (ZZ kökündeki Genex incelemesinden devir; tartışılacak)
