@@ -1,7 +1,7 @@
 ---
 type: project
 project: diskort
-date: 2026-10-05
+date: 2026-10-06
 status: active
 tags: [diskort, overview]
 source: handoff notundan (artık kaldırıldı), diskurt-project ve diskort-* hafıza dosyalarından, 2026-10-01/02 oturumlarından
@@ -47,6 +47,7 @@ Ses + ekran paylaşımı kalitesi; metin kanalları, tepkiler, dosyalar, roller,
 6. **Telefon ısınması** (VP9 1080p yayın izlerken): APK 0.8.13'te DPDFNet bütçe düzeltmesi + termal otomatik kapatma var. Kalan: Yusuf 5-10 dk yayın izler, ardından `watch` telemetrisi okunur. Gerekirse JS seçenekleri: VP9'u bırak, donanım kodlayıcıda 720p30 düşük katman, tam ekran değilse mobil düşük katmana abone.
 7. Yusuf'un cihaz testleri: telefonda yeni kozmetikler (Android APK kurulumu, Android 10+ kart videosu, iOS OTA), mobil Skia setleri, mobil ses ekranı/yayın kutucukları, masaüstü sahne otomatik gizleme/şerit/kendi önizleme duraklatma, rolsüz DM profili.
 8. Yusuf'a hatırlat: eski sunucuyu sil (içinde bilinmeyen bir `set-env.sh` var).
+9. **GitHub repo taşındı (2026-10-06):** `yusufholat/diskort` → `zziroo/diskort` ([[2026-10-06-github-repolari-zziroo-hesabina-tasindi]]). Bir sonraki sürümden önce masaüstü otomatik güncellemenin yayın ayarındaki owner'ı `zziroo` yap. Yayımlanmış sürümler şimdilik eski adresten yönlendirmeyle çalışıyor olmalı (denenmedi). VPS'teki `/opt` klonlarının remote'larını kontrol et (Diskort, ziroo-edge ve diğerleri). `yusufholat` altında aynı adla repo açılmamalı.
 
 **Açık öneriler (önce sor):** kanal kategorileri, IPA yalnız kendi sunucumuzdan, release/deploy/geri bildirim için proje skilleri, sunucular arası ses moderasyonu, Spotify tarzı `listening` etkinliği.
 
