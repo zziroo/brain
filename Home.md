@@ -26,6 +26,7 @@ Buradan başla. Her şey buradan ya da bir projenin `_overview.md` dosyasından 
 - [[2026-10-03-joker-dns-ve-tools-games-alt-alan-adlari]]: joker DNS, tools.ziroo.net ve games.ziroo.net (araç listesi tools.ziroo.net, oyun listesi games.ziroo.net)
 - [[2026-10-05-liste-sayfalari-ziroo-edge-te-ortak-neon-tasarim]]: ziroo.net ana sayfası (kapılar) ve iki liste, ziroo-edge `www/`, `deploy-www.sh`
 - [[sunucu-vps]]: sunucu, DNS, Caddy yolları
+- [[2026-10-07-ziroo-maskotu-ziro]]: ziroo.net maskotu Ziro (neon sıfır, perçemi favicon'daki Z), karakter sayfası artifact'ta
 
 ## Alanlar
 - [[20-Areas/working-rules/_index|Çalışma kuralları]]: Claude ile nasıl çalışıyoruz (orkestrasyon, inceleme kapısı, karar dağılımı)
