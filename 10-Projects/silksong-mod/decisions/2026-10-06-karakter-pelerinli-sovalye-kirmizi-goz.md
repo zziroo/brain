@@ -28,4 +28,6 @@ source: Windows oturumu 2026-10-06 gece (D:\SilksongMod\ai\out\knight_v1\A_orig_
 - *Idle'ı img2img ile yeniden çizmek:* kıtırdama.
 - *Karanlık oyuk göz (HK tarzı):* Yusuf kırmızıyı seçti.
 
-**Doğrulanmayan:** oyun içi boyut (bir sonraki açılışta `PixelsPerUnit=98` ile 2,5× Hornet), renk doygunluğunun oyun paletine uyumu, 12 fps hissi; Yusuf'un oyun içi izlenimi henüz alınmadı.
+**Güncelleme 2026-10-07:** silüet, kask ve göz kararı geçerli; oranlar (ince uzun uzuvlar), pelerin rengi ve boyut [[2026-10-07-boss-oranlari-v8c-ve-boyut-2-5x]] ile değişti. Idle artık kavisli bacaklı V8C kuklası.
+
+**Doğrulanmayan (2026-10-06 itibarıyla):** oyun içi boyut (bir sonraki açılışta `PixelsPerUnit=98` ile 2,5× Hornet), renk doygunluğunun oyun paletine uyumu, 12 fps hissi; Yusuf'un oyun içi izlenimi henüz alınmadı.
