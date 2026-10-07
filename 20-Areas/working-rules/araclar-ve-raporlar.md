@@ -16,6 +16,7 @@ source: C:\Users\yusuf\.claude\CLAUDE.md (Tools)
 - 2026-10-05'ten itibaren Mac'te yer: `~/.claude/orchestration-report/`.
 - **Kaynaklar (2026-10-07'den beri):** `usage.mjs`, `report.mjs` ve konuşma analizi için `ayikla.py`, `~/Arsiv/claude-konusmalar/kaynaklar.json`'daki iki kökü birlikte okur: Mac (`~/.claude/projects`) ve Windows arşivi (`~/Arsiv/claude-konusmalar/windows/projects`, 25 Eylül – 7 Ekim). Aynı proje iki makinedeki klasör adıyla da tek proje sayılır. `report.mjs --session <id>` Windows oturumlarını da bulur. Windows'tan yeni kayıt `ice-aktar.py` ile alınır; ayrıntı arşivdeki `BENIOKU.md`'de ve [[2026-10-05-windowstan-maca-gecis]] ekinde.
 - Kontrol (2026-10-07): `--kaynak windows --until 2026-10-05T12:31:00Z` eski Windows özetini birebir verdi (235 oturum, 358 subagent, 3.713 $; [[2026-10-05-windows-donemi-token-ozeti]]). Birleşik toplam o gün 279 oturum, 446 subagent, yaklaşık 4.328 $.
+- **Pano (2026-10-07'den beri):** `/pano` komutu ya da `node pano.mjs [--since] [--until] [--kaynak] [--metinsiz] [--yenile] [--ac]`. Bütün geçmişten animasyonlu, tek dosyalık dashboard üretir (`out/pano.html`): token/maliyet, projeler, oturum başına oynatılabilir zaman çizelgesi, araç akışları, ajanlar, alışkanlıklar, dosyalar. Toplamları `usage.mjs` ile birebir aynıdır. Veri sözleşmesi `pano/SEMA.md`, ayrıntı README'de. Kararlar: [[2026-10-07-pano-dashboard]].
 
 ## İlgili
 - [[orkestrasyon]], [[_index]]
