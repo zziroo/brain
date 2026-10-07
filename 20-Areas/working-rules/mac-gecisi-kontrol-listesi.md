@@ -25,7 +25,7 @@ Karar ve gerekçe: [[2026-10-05-windowstan-maca-gecis]]. Mac'te ilk oturumda bu 
 
 ## Mac'te ilk Claude oturumu (Claude)
 - [x] Kurulumu doğrula (2026-10-07: 7 memory klasörü var, usage.mjs çalışıyor):
-  - `~/.claude/projects/-Users-ziroo-ZZ*/memory` klasörleri var. Konuşma kayıtları bilerek taşınmadı. (2026-10-07: sonradan arşiv olarak `~/Arsiv/claude-windows/` altına alındı, bkz. [[2026-10-05-windowstan-maca-gecis]] eki.)
+  - `~/.claude/projects/-Users-ziroo-ZZ*/memory` klasörleri var. Konuşma kayıtları bilerek taşınmadı. (2026-10-07: sonradan `~/Arsiv/claude-konusmalar/` altına alındı, bkz. [[2026-10-05-windowstan-maca-gecis]] eki.)
   - `node ~/.claude/orchestration-report/usage.mjs` çalışıyor. Yalnızca Mac oturumlarını sayar; Windows dönemi: [[2026-10-05-windows-donemi-token-ozeti]].
 - [ ] (Yusuf 2026-10-07: şimdilik ertelendi) Zamanlanmış görevleri yeniden kur: `diskort-geri-bildirim-kontrolu` saatlik, `diskort-main-kod-inceleme` 00:10'da. Metinleri `~/.claude/scheduled-tasks/` altında.
 - [ ] Mac'teki görevler çalışmaya başlayınca Yusuf'a Windows'takileri kapattır. Yoksa gözcü iki kez çalışır.

@@ -67,10 +67,12 @@ Yusuf tüm Claude çalışmasını (ZZ, vault, oturumlar, hafıza, kurallar, tok
 - Vault artık GitHub'da da var: özel repo `zziroo/brain`, 2026-10-05'te açıldı. Önce gizli değer taraması yapıldı, çalışma ağacında ve geçmişte bir şey çıkmadı; notlarda yalnızca sunucu IP'leri var. İki makine bu repo üzerinden eşitlenir. Vault kuralları, `/basla` (pull) ve `/kaydet` (push) buna göre güncellendi.
 - Mac tarafında yapılacakların listesi: [[mac-gecisi-kontrol-listesi]].
 
-## Ek (2026-10-07): konuşma kayıtları arşiv olarak Mac'e alındı
-- **Neden:** Kayıtların tek kopyası Windows'taydı; makine sıfırlanırsa giderdi. Karakter analizi gibi işlerde (bkz. [[2026-10-07-ziroo-maskotu-ziro]]) eski mesajlar gerekti.
-- **Nasıl:** Yusuf Windows'ta `.claude\projects` klasörünü zip'leyip Mac'e attı. Zip açılmadan `~/Arsiv/claude-windows/` altında duruyor (709 MB, 2.542 dosya, 681 `.jsonl`, `testzip` temiz; klasör `chmod 700`). Yanında yalnız Yusuf'un yazdığı 764 mesajın ayıklanmış hâli (`kullanici-mesajlari-windows.json`) ve bir `BENIOKU.md` var.
-- **Bilerek yapılmayanlar:** Kayıtlar `~/.claude/projects` içine konmadı. Klasör adları Windows yollarından türedi, Mac'teki Claude onları açamaz; ayrıca token raporuna ve oturum aramalarına karışırlardı. Arşiv ZZ dışında, çünkü içinde komut çıktıları ve olası anahtarlar var, projelerde arama yapan ajanlar görmesin. Buluta, GitHub'a ya da vault'a girmez.
+## Ek (2026-10-07): bütün konuşmalar tek klasörde
+- **Neden:** Karakter analizi yalnız Mac'teki 89 mesajı gördü ve yanıldı (bkz. [[2026-10-07-ziroo-maskotu-ziro]]). Windows kayıtlarının tek kopyası Windows'taydı. Yusuf yaptığı her şeyin tek yerde durmasını istedi.
+- **Nasıl:** `~/Arsiv/claude-konusmalar/` (`chmod 700`). `windows/` içinde Windows'taki `.claude\projects` klasörünün zip'i, açılmadan (709 MB, 2.542 dosya, 681 `.jsonl`, `testzip` temiz). `mac` ise `~/.claude/projects`'e sembolik bağ: kopya yok, hep güncel. `ayikla.py` iki kaynaktan mesajları tek JSON'a çıkarır, ayrıntı `BENIOKU.md`'de.
+- **Saklanan şey tam oturumlar.** Yalnız Yusuf'un mesajlarını ayrı dosyada tutmak denendi, Yusuf'un itirazıyla bırakıldı: o dosya türetilmiş, gerektiğinde `ayikla.py` ile üretilip silinir.
+- **Silinme riski:** Masaüstü uygulamasında açılan oturumlar `cleanupPeriodDays` (30 gün) süpürmesinden muaf (`desktopSessionCleanupPeriodDays` varsayılanı 0 = sınırsız). Terminal `claude` oturumları 30 günde silinir. `~/.claude/settings.json`'a `"cleanupPeriodDays": 36500` eklemek önerildi; Claude'un kendi ayarını değiştirmesi izin sisteminde engellendi, ekleme Yusuf'a kaldı.
+- **Reddedilenler:** Windows kayıtlarını `~/.claude/projects` içine koymak (klasör adları Windows yollarından türedi, Mac'teki Claude açamaz; token raporuna ve oturum aramalarına karışır). Oturum kapanınca Mac oturumlarını arşive kopyalayan kanca (masaüstü oturumları zaten silinmediği için gereksiz; bağ yeterli). Arşivi ZZ içinde tutmak (komut çıktıları ve olası anahtarlar var, projelerde arama yapan ajanlar görmesin). Buluta, GitHub'a ya da vault'a koymak.
 - **Kalan adım:** Windows'taki kopya, sayılar Windows'ta karşılaştırıldıktan sonra silinebilir (komutlar `BENIOKU.md`'de).
 
 ## İlgili
