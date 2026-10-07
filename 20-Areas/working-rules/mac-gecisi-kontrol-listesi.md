@@ -45,6 +45,17 @@ Karar ve gerekçe: [[2026-10-05-windowstan-maca-gecis]]. Mac'te ilk oturumda bu 
   - [[izinler-ve-ayarlar]]
   - [[zamanlanmis-gorevler-ve-skiller]] (gelen kutusu yolu)
 
+## Windows temizliği (2026-10-07)
+Karar (Yusuf, 2026-10-07): Windows silinmiyor, yalnız Silksong modu için kalıyor (LoRA eğitimi Windows'ta). O oturumlar Mac'ten Remote Control ile sürülür. Geri kalan her şey Windows'tan gitti. Windows'ta yapılanlar: [[2026-10-07-windows-makinesi-yalniz-silksong-icin]].
+- [x] **Işık Bekçisi:** "Camın ısısı" `b14f502` ile `main`'e girdi ve push edildi. Mac'te pull edildi (2026-10-07).
+- [x] **Silksong modu:** Windows'ta kalıyor. Kodu `C:\Users\yusuf\ZZ\zProjects\silksong-mod` ve `D:\SilksongMod\work` altında; GitHub'da repo yok. Mac'teki `silksong-mod` klasöründe yalnız 2 tasarım dosyası var, asıl kopya sayılmaz.
+- [x] **Diskort'ta yalnız Windows'ta duran 2 commit:** `origin/mimari-tanitim-videosu` dalına push'landı, Mac'te görünüyor. Merge kararı Yusuf'ta.
+- [x] **Windows oturumları:** Silksong dışındaki 212 oturum Windows'ta arşivlendi; Mac kenar çubuğundaki `isik-bekcisi · yusufholat` grubu bunlardandı.
+- [ ] **Telefondan açılmış iki eski Windows oturumu** ("projenin mimarisini anlatan bir motion design video…", "diskortumuzu geliştiriyoruz", 2026-09-29/30, eski `C:\dev\diskort`): Windows arşivlemesine girmedi, Mac kenar çubuğunda "Other" altında duruyor. Kayıtları zip'te; arşivlenebilir.
+- [ ] **Konuşma arşivi:** Windows Masaüstü'ndeki `claude-konusmalar-windows-son.zip` (2.553 dosya, 690 `.jsonl`) Mac'e getirilip `~/Arsiv/claude-konusmalar/windows/` içindeki eski zip'in yerine konacak; sayılar ve `testzip` Mac'te denetlenir.
+- [ ] **Claude hafızası:** Windows'taki `incremantal-game` hafızası geçişten sonra değişti. Yeni zip'ten Mac'teki `-Users-ziroo-ZZ-zProjects-incremantal-game/memory` klasörüne, yollar çevrilerek ve Mac'teki değişikliklerle birleştirilerek alınır. `silksong-mod` hafızası Windows'ta kalır.
+- [ ] **Zamanlanmış görevler:** Windows'taki iki Diskort görevi kapalı (gözcü 2026-10-06'dan beri çalışmıyor), Mac'te kurulmadı. Yani gözcü şu an hiçbir yerde çalışmıyor; kurulum yukarıdaki ertelenmiş maddede.
+
 ## Notlar
 - 2026-10-05 akşam Mac'ten ilk yayın yapıldı (altı araç): [[mac-ten-yayin-copyfile-disable-ve-exe-siz-ceviri-sayfasi]]. SSH anahtarı ve `gh` push çalışıyor.
 
