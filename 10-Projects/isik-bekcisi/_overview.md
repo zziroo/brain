@@ -4,7 +4,7 @@ project: isik-bekcisi
 date: 2026-10-07
 status: active
 tags: [isik-bekcisi, oyun, incremental, kosu-tabanli, canvas]
-source: C:\Users\yusuf\ZZ\zProjects\incremantal-game (CLAUDE.md); oturumlar 2026-10-02 (6d8df6c2, 72fd0708), 2026-10-04 (9e4d0124), 2026-10-05 (53393f9a), 2026-10-06 (fb8e3060, iki tur), 2026-10-07 (e5a9fa92 / 5f403d52)
+source: C:\Users\yusuf\ZZ\zProjects\incremantal-game (CLAUDE.md); oturumlar 2026-10-02 (6d8df6c2, 72fd0708), 2026-10-04 (9e4d0124), 2026-10-05 (53393f9a), 2026-10-06 (fb8e3060, iki tur), 2026-10-07 (e5a9fa92 / 5f403d52, akşam 1249d80e)
 ---
 
 # Işık Bekçisi: fenerle karanlık vadiye koşular yapılan koşu-tabanlı incremental oyun
@@ -44,8 +44,12 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 ## Durum (2026-10-07)
 | Parça | Durum |
 |---|---|
-| Yayın | **canlı = `b14f502`** (2026-10-07; Yusuf: "bu hâliyle yayınla, sonra düzeltiriz"; açık inceleme bulgularıyla birlikte yayınlandı). Yayından sonra 5 dosya canlıyla karşılaştırıldı, aynı. Yerel ve GitHub `main` eşit. Önceki canlı: `74dc1f7` (2026-10-06) |
-| Camın ısısı + fener/köşe göstergesi + halkasız bekçi (2026-10-07) | **canlıda (`b14f502`), açık bulgularla.** 4 tasarım turu, Yusuf her turu oynadı. Son inceleme: 1 orta (aşırı ısınmadaki hale kısılması kararma sayacına girmiyor; şüpheci kontrolü oturum kesilince yarım kaldı), 3 düşük, eski yorumlar; hiçbiri düzeltilmedi. Botlar: düzgün 38,0, insana yakın 43,4, hep basılı 47,7 sefer. Sesler dinlenmedi, hareket azaltma hâli emüle edilmedi ([[2026-10-07-cam-isinir-ve-isi-gostergesi]]) |
+| Yayın | **canlı = `a8bebee`** (2026-10-07 akşam; Yusuf onayladı, push + `deploy.sh`, dosyalar canlıyla karşılaştırıldı). Main'de push edilmemiş 2 commit: `ebefda2` (test sayfaları sessiz) ve `3ecd9a6` (H1b kalıcı); ikisi de oyuncuya görünmüyor. Önceki canlılar: `a67e9cb`, `b14f502` |
+| Isının okunması (2026-10-07 akşam) | **canlıda.** Köşedeki simge boşalıyor; kırmızıda ışın solup daralıyor, kızıllık fenerin yanında, bekçinin yüzü temiz; halenin kenarında ışın yönünde iki yandan azalan kor yay (H1b); kilitte hale küçük, kilit 4 sn; `outDip` kaldırıldı. Odaklanınca kamera kaymıyor, fener sabitleniyor. İncelendi (1 orta, şüpheci doğruladı, düzeltildi). Sesler dinlenmedi ([[2026-10-07-isi-isinin-solmasi-ve-hale-kenarinda-anlatilir]], [[2026-10-07-kilitte-hale-kuculur-kilit-dort-saniye]], [[2026-10-07-odakta-kamera-kaymaz-fener-sabitlenir]]) |
+| Kuzey Yolu (yön) | **canlıda** (`a67e9cb`'den beri): yol, kuzeye akan ışık, kararan yanlar, ilk üç seferde ipucu, Kandil'in cümlesi; bot aynı. İki inceleme, 0 orta+ ([[2026-10-07-kuzey-yolu-ileri-gitmenin-isareti]]) |
+| Uzun seferler + Yol Fenerleri + ruh yenilenmesi | **yerel dal, incelenmedi, main'e girmedi:** `worktree-agent-ab86d63263f65aa59` @ `27f5fb7` (main `a8bebee` içine alındı). İnsan tahmini ~123 dk; Kalp geçici olarak tek denemede düşüyor, bu yüzden Son Nöbet'siz yayınlanmayacak ([[2026-10-07-uzun-seferler-yol-fenerleri-ruh-yenilenmesi]]) |
+| Son Nöbet (Kalp) | yalnız tasarım; kod yok ([[2026-10-07-kalp-son-nobet-olarak-yeniden-tasarlanacak]]) |
+| Camın ısısı (ilk sürüm, `b14f502`) | yerini "Isının okunması" satırı aldı; açık bulguların hepsi `cf358c1` ile kapandı ([[2026-10-07-cam-isinir-ve-isi-gostergesi]]) |
 | Oynama turu 2026-10-06 (yapışma yavaşlatır, pervane döner-dalar, Atılım imleçte, hale tutar, kabuklu sürüsü, elitler) | hepsi yazıldı, incelendi (kritik/yüksek yok; 3 orta, şüpheci ile), canlıda. Sesler dinlenmedi, 60 karede izlenmedi, insan oynamadı ([[2026-10-06-oynama-geri-bildirimi-hale-elitler]]) |
 | Kamera yakın + bekçi 1,2× + kalın HUD; **Fener Nöbeti** (fenerin son beşte biri kuşatma) | main'de ve **canlıda** (`a352450`, `8b10c02`→`74dc1f7`). İkisi de incelendi (0 orta+; 7 + 7 düşük, hepsi düzeltildi), koordinatör main'de duman testi yaptı. Botta uzunluk aynı, şekil değişti: 3.–5. fener erken, Kalp ~7–8 deneme (Yusuf'un onayı bekleniyor). İnsan oynamadı, ses dinlenmedi ([[2026-10-06-kamera-yakin-bekci-buyuk-arayuz-kalin]], [[2026-10-06-fener-nobeti-son-beste-bir-kusatma]]) |
 | Bekçi Feneri (ilk yükseltme, kapalı kapı) | yazıldı, incelendi (0 kritik/yüksek/orta, 7 düşük, hepsi düzeltildi), canlıda; ilk ziyaret gerçek olaylarla oynatıldı, insan oynamadı ([[2026-10-06-bekci-feneri-agacin-koku-kapi-kapali]]) |
@@ -66,15 +70,13 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 | İnceleme kapısı | 2026-10-06: iki opus incelemesi + bir sonnet şüpheci. 2026-10-05: 3 dal incelemesi (sonnet + 2 opus; 1 orta, 9 düşük), şüpheci gerekmedi; denge diff'ini koordinatör okudu |
 
 ## Sıradaki işler
--2. **Camın ısısını bitir** (2026-10-07; `b14f502` canlıda, düzeltmeler bekliyor; ayrıntı: [[2026-10-07-cam-isinir-ve-isi-gostergesi]]):
-   1. **Orta bulgu:** aşırı ısınmadaki hale kısılması (`outDip`) kararma sayacına girmiyor. Şüpheci kontrolünü yeniden çalıştır. Muhtemel düzeltme: kısılmayı kaldırmak.
-   2. **Düşük bulgular:** sınırda basınca teklemeler yeniden tetikleniyor; buhar ve duman hareket azaltma ayarına uymuyor; kilitliyken art arda basılınca köşedeki simge yalnız bir kez yanıp sönüyor. Eski yorumlar da temizlenecek.
-   3. **Yusuf oynasın:**
-      - Kırmızı bölgede camın kızarması yeterince görünüyor mu (görüntülerde zayıftı)?
-      - Hep basmak caydırıyor mu?
-      - Atılım'ın dolduğu köşeden okunuyor mu?
-      - Hep basanın cezası ~4 seferde kaldı. Gerekirse "kilit boyunca hale de boğulsun" eklenebilir; karar verilmedi.
-   4. Düzeltmelerden sonra yeniden inceleme, commit ve yeniden yayın (Yusuf: "sonra düzeltiriz"). Orta bulgu ışığa duyarlılıkla ilgili; öncelikli. Sesler hâlâ dinlenmedi.
+-3. **Sıradaki oturum (2026-10-07 akşamdan devir):**
+   1. **Uzun seferler dalını incelet** (`worktree-agent-ab86d63263f65aa59`, worktree `.claude/worktrees/agent-ab86d63263f65aa59`; büyük diff: data, run, world, render, ui, state, sim). Düzeltmeler, sonra aynı dalda **Son Nöbet**: önce çekirdek dilim (Şafak Feneri, nöbet, çatlatınca ruh saçılması, 3 basamak, ödeme, bot). Yusuf ilk dilimi oynamadan sonrakiler yok. İkisi birlikte main'e ve yayına (yayın Yusuf'un kararı).
+   2. Açık denge soruları: Harabeler'de yağ arenadan hızlı yanıyor (2,9 / 2,5); yedek yağ fenere "ne zaman uğrasam" kararını azaltıyor; Harabeler'de özensiz bot 9,3 sefer.
+   3. **Arayüz ve kamera turu:** odak simgesi diğerlerinden büyük olsun (Yusuf); geç oyunda lazerin ~%45–50'si ekranda (seçenekler kararda).
+   4. Yusuf canlıda bakacak: hale yayı, sabit kamera ve fener, boşalan simge, solan ışın, 4 sn kilit hep basmayı caydırıyor mu, Kuzey Yolu yön gösteriyor mu.
+   5. Sonraya: A'nın kızıl lazeri "aşırı yükleme" için; kayan yıldızlar / eski bekçi fenerleri / bölge olayları; ışığı kesen harita (önce "ışın duvarda biter", sonra köy tek yer); elitler gerçek oyuncunun karşısına az çıkıyor olabilir (Yusuf: kemirgen 2, İri Karacık 7).
+   6. `main`'de push edilmemiş `ebefda2`, `3ecd9a6`.
 -1.5. **Gamepad desteği** planlanıyor (Yusuf, 2026-10-07; tarih yok). Yeni göstergeler imlece bağlanmasın ([[2026-10-07-isi-fenerde-ve-kosede-imlecte-gosterge-yok]]). Atılım için ayrı bir gösterge "sonra düşünülebilir".
 -1. **Kamera + Fener Nöbeti canlıda** (2026-10-06 akşam). Yusuf oynarken bakılacak: bekçi artık yeterince büyük mü, Mağara'da gece hâlâ okunuyor mu, nöbet 12–18 s iyi mi, Kalp'te takılma hissi var mı (bot 7–8 deneme; ilk kaldıraç `BOSS.bounty`).
 -0.5. **İs ekonomisi** (Yusuf'un fikri, "şimdilik bekle"): yanan karanlık **is** bırakır, kampta arıtılır; A kamp yapıları (öneri) / B mürekkep-atlas / C iksir bedeli. Nöbet ve kamera oynandıktan sonra A için tasarım notu ([[2026-10-06-kamera-ve-fener-nobeti]]).
@@ -135,6 +137,12 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 - [[2026-10-07-isin-camini-isitir-asiri-isinma-kilidi]]
 - [[2026-10-07-isi-fenerde-ve-kosede-imlecte-gosterge-yok]]
 - [[2026-10-07-beceri-halkalari-bekciden-kalkti-yalniz-hazir-ani]]
+- [[2026-10-07-isi-isinin-solmasi-ve-hale-kenarinda-anlatilir]]
+- [[2026-10-07-kilitte-hale-kuculur-kilit-dort-saniye]]
+- [[2026-10-07-odakta-kamera-kaymaz-fener-sabitlenir]]
+- [[2026-10-07-kuzey-yolu-ileri-gitmenin-isareti]]
+- [[2026-10-07-uzun-seferler-yol-fenerleri-ruh-yenilenmesi]]
+- [[2026-10-07-kalp-son-nobet-olarak-yeniden-tasarlanacak]]
 
 ## Dersler
 - [[2026-10-02-carpimsal-gelistirmeler-geliri-patlatir]]
@@ -161,6 +169,9 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 - [[2026-10-07-sayidaki-zayiflama-hissedilmez]]
 - [[2026-10-07-kilit-cezasi-mola-olabilir]]
 - [[2026-10-07-isiga-duyarlilik-siniri-tek-yerde-sayilmali]]
+- [[2026-10-07-kirmizi-isin-guclenme-gibi-okunur]]
+- [[2026-10-07-ilk-gercek-olcum-kamp-suresi-botun-iki-kati]]
+- [[2026-10-07-uzun-sefer-icin-yag-yetmez-av-yenilenmeli]]
 
 ## Oturumlar
 - [[2026-10-02-iki-oyun-yayin-ve-kamp-yenilemesi]]
@@ -175,3 +186,4 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 - [[2026-10-06-devir-genex-dogrulama-fikirleri]] (ZZ kökündeki Genex incelemesinden devir; tartışılacak)
 - [[2026-10-06-kamera-ve-fener-nobeti]]
 - [[2026-10-07-cam-isinir-ve-isi-gostergesi]]
+- [[2026-10-07-oynama-turu-cam-yon-uzunluk-kalp]]

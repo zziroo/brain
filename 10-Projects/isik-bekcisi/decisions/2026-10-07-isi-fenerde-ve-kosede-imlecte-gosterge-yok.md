@@ -2,10 +2,12 @@
 type: decision
 project: isik-bekcisi
 date: 2026-10-07
-status: active
+status: superseded
 tags: [isik-bekcisi, arayuz, isin, gamepad, okunurluk]
 source: oturum e5a9fa92 / 5f403d52 (incremantal-game, 2026-10-07); commit b14f502
 ---
+
+> Kısmen yerine geçti (2026-10-07 akşam): imleçte ve bekçide gösterge olmaması ilkesi sürüyor; ısının nasıl gösterildiği için bkz. [[2026-10-07-isi-isinin-solmasi-ve-hale-kenarinda-anlatilir]].
 
 # Karar: camın ısısı fenerin kendisinde ve sağ alttaki odak simgesinde görünür; imlece ve bekçinin üstüne gösterge çizilmez
 
