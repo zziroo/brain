@@ -9,7 +9,9 @@ source: node ~/.claude/orchestration-report/usage.mjs, Windows, 2026-10-05 15:30
 
 # Windows dönemi Claude kullanımı (2026-09-26 – 2026-10-05): API karşılığı yaklaşık 3.713 $
 
-Bu, Mac'e geçmeden önce Windows'ta çıkarılan son token raporu. Konuşma kayıtları Mac'e taşınmadı ([[2026-10-05-windowstan-maca-gecis]]), bu yüzden Mac'teki rapor sıfırdan başlar. Bu dönemin toplamı burada kalıcı olarak duruyor. Tam HTML rapor bu notun yanında: `2026-10-05-windows-donemi-token-raporu.html`.
+Bu, Mac'e geçmeden önce Windows'ta çıkarılan son token raporu. Konuşma kayıtları Mac'e taşınmadı ([[2026-10-05-windowstan-maca-gecis]]), bu yüzden Mac'teki rapor sıfırdan başlar.
+
+> **Güncelleme (2026-10-07):** Windows kayıtları sonradan Mac'teki arşive alındı ve `usage.mjs` artık Mac ile Windows'u birlikte okuyor ([[araclar-ve-raporlar]]). Bu not geçmiş bir kesit olarak duruyor; aynı sayılar `node usage.mjs --kaynak windows --until 2026-10-05T12:31:00Z` ile yeniden üretilebiliyor. Bu dönemin toplamı burada kalıcı olarak duruyor. Tam HTML rapor bu notun yanında: `2026-10-05-windows-donemi-token-raporu.html`.
 
 **Dolar değerleri hakkında:** Max aboneliğinde gerçek fatura sabit. Buradaki $ değerleri "aynı işi API'den yapsaydın ne tutardı" tahmini.
 
