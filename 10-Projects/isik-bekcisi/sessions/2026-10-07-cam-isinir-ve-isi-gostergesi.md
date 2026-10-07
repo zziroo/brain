@@ -13,7 +13,7 @@ source: oturum e5a9fa92 / 5f403d52 (incremantal-game, 2026-10-07; arada Claude s
 - **Başlangıç:** Windows kopyası `origin/main`'in 11 commit gerisindeydi; `git pull --ff-only` ile `74dc1f7`'ye getirildi. Canlıdaki üç JS dosyası `origin/main` ile karşılaştırıldı, aynıydı.
 - **Sorun:** Yusuf arkadaşının ışını hiç bırakmadan oynadığını gördü. Bot varyantıyla ölçüldü: Kalp dahil hep basmak hiçbir şeye mal olmuyordu ([[2026-10-07-baskin-stratejiyi-bot-varyantiyla-olc]]).
 - **Dört tur tasarım,** her biri Yusuf'un oynamasıyla değişti:
-  1. **Cam ısınır, ışın %50'ye iner** (commit **0ac3876**, yerel main'de, push edilmedi). Hissedilmedi: [[2026-10-07-sayidaki-zayiflama-hissedilmez]].
+  1. **Cam ısınır, ışın %50'ye iner** (commit **0ac3876**). Hissedilmedi: [[2026-10-07-sayidaki-zayiflama-hissedilmez]].
   2. **Tekle, sonra sön; cam soğuk geri gelir.** Hep basana yalnız ~2 sefer ceza.
   3. **`?cam=1` sıcak geri gelir / `?cam=2` yeniden bas,** yan yana denendi. Yusuf ikinciyi seçti, ama kaynak çubuğu kalıbını istedi.
   4. **Isı bir kaynak, aşırı ısınınca kilit, yeniden bas:** [[2026-10-07-isin-camini-isitir-asiri-isinma-kilidi]].
@@ -34,7 +34,7 @@ source: oturum e5a9fa92 / 5f403d52 (incremantal-game, 2026-10-07; arada Claude s
 - [[2026-10-07-isiga-duyarlilik-siniri-tek-yerde-sayilmali]]
 
 ## Açık kalanlar
-- **Commit durumu:** son sürüm (ısı kaynağı, fener + köşe göstergesi, halkasız bekçi) commit edilmedi; çalışma kopyasında 12 dosya değişik. Yerel main `0ac3876`, `origin/main`'in 1 commit önünde ve push edilmedi. Canlı = `74dc1f7`.
+- **Commit durumu:** son sürüm `b14f502` olarak commit edildi ve GitHub'a push edildi (2026-10-07; `0ac3876` ile birlikte). Açık inceleme bulguları commit mesajında yazılı. Canlı hâlâ `74dc1f7`; yayın Yusuf'un kararı.
 - **Son inceleme bulguları açık:**
   - **Orta:** aşırı ısınma anındaki hale kısılması (`outDip`) kararma sayacına girmiyor, bir saniyede 4 kararma mümkün. Şüpheci kontrolü oturum kesilince yarım kaldı; yeniden çalıştırılmalı. Muhtemel düzeltme: kısılmayı kaldırmak.
   - **Düşük:** son saniyedeki iki tekleme sınırda basan oyuncuda her seferinde yeniden tetikleniyor (saniyede ~2,8 kararma, kesintisiz).

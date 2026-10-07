@@ -4,7 +4,7 @@ project: isik-bekcisi
 date: 2026-10-07
 status: active
 tags: [isik-bekcisi, isin, odak, denge, oyun-hissi]
-source: oturum e5a9fa92 / 5f403d52 (incremantal-game, 2026-10-07); ilk sürüm commit 0ac3876, son sürüm commit edilmemiş çalışma kopyasında
+source: oturum e5a9fa92 / 5f403d52 (incremantal-game, 2026-10-07); ilk sürüm commit 0ac3876, son sürüm commit b14f502
 ---
 
 # Karar: ışın fenerin camını ısıtır; ısı bir kaynaktır, dolarsa ışın söner ve yeniden basılana kadar kilitli kalır
@@ -50,7 +50,7 @@ Bot sonuçları, 24 oyun:
 
 - İkisi de hiç aşırı ısınmıyor.
 - **Hep basanın cezası ~4 seferde kaldı.** Kilit süresi ve açılma eşiği bunu değiştirmiyor, çünkü kilit bir moladır: [[2026-10-07-kilit-cezasi-mola-olabilir]]. Önerilen sonraki kaldıraç, aşırı ısınan camın kilit boyunca haleyi de boğması. Karar verilmedi; önce Yusuf oynayacak.
-- Son sürüm commit edilmedi. İnceleme bulguları açık (oturum notunda).
+- Son sürüm `b14f502` ile main'e girdi ve push edildi; canlıda değil. İnceleme bulguları açık (oturum notunda).
 - Sesleri kimse dinlemedi. Hareket azaltma hâli yalnız kodda kontrol edildi.
 
 ## İlgili

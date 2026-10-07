@@ -15,7 +15,7 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 ## Oyun
 - **Sefer:** bekçi WASD ile yürür; fener imlece bakar. Sol tuş (ya da F) basılı = odak ışını; Boşluk = parlama; Shift / Q / sağ tık = atılım. Fenerin ışığındaki ruhlar "dolar" ve yakalanır; kıvılcım bırakır. **Hale geceyi tutar, öldürmez** (en fazla %30'a kadar yakar); düşmanı ışın, Parlama, Atılım ve zincirleme ışıklar bitirir ([[2026-10-06-hale-tutar-bilincli-isik-bitirir]]). Seferi **fener yağı** sınırlar; derin bölgede ve odaklıyken daha hızlı yanar.
 - **Işın → lazer:** Mercek hattı (Mercek → Hüzme → Işın → Yıldız Mızrağı) koniyi daraltıp uzatır: erken oyunda meşale, ortada spot, harabelerde lazer çizgisi; hedefte tutuldukça ısınır. Odaklanmak yağı 1,7–2,5 kat yakar (fitilde "×1,8" etiketi); Damıtık Yağ düşürür. Geç bölgeler lazer ister: kabuklu ruh, prizma (ışını böler), gece dikeni (yağ emen halka), açılan Kalp. Ayrıntı: [[2026-10-02-lazere-donusen-isin-yag-bedeli-ve-lazer-dusmanlari]].
-- **Camın ısısı (2026-10-07, commit edilmedi):** ışın tutulunca fenerin camı ısınır; ısı bir kaynaktır.
+- **Camın ısısı (2026-10-07, main `b14f502`, canlıda değil):** ışın tutulunca fenerin camı ısınır; ısı bir kaynaktır.
   - Dolma süresi: 5,5 sn, Mercek hattıyla 8,5 sn. Son 2,5 sn kırmızı uyarıdır: ışın tekler ve zayıflar.
   - Bırakınca cam 1,2 sn'de soğur. Tekrar basınca ışın kalan ısıdan devam eder.
   - Cam dolarsa ışın söner. Cam %40'a soğuyana kadar kilitli kalır, sonra **yeniden basmak** gerekir.
@@ -25,7 +25,7 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 - **Beceri ağacı:** gece göğünde takımyıldızı (8 kol, 62 yıldız). Ortada kök yıldız **Bekçi Feneri** var ("0. yükseltme", 3 kıvılcım, etkisi yok); her kol ondan çıkar. Beş durum ilk bakışta ayrı (tamam / alınmış / şimdi alınabilir / pahalı / kilitli), sonraki kademenin soluk önizlemesi, satın alma "yıldız yakma" animasyonu, kör satın alma yok. Bilgi kutusu imlecin yanında, en az yıldızı örten tarafta. Altı **zincirleme yıldız** var (Işık Gölü, Nakarat, Tutuşma, Kor İzi, Kayan Yıldız, Akkor), dördü 0–1. kademede; birbirini tetikler, her halka yeni bir yakalama ister ([[2026-10-05-zincirleme-yildizlar]]).
 - **Beceri işaretleri:**
   - **Canlıda:** Parlama ve Atılım beklerken bekçinin üzerinde dolan bir halka görünür; Atılım'ınki imleçte ([[2026-10-05-beceri-hazir-halkasi-bekcinin-uzerinde]], [[2026-10-06-atilim-halkasi-imlecte]]).
-  - **2026-10-07'de değişti (commit edilmedi):** halkalar bekçiden kalkıyor. Bekçide yalnız "hazır" anı görünür: Parlama için fener bir an parlar, Atılım için ayakta toz kalkar; ikisinde de ses var. Bekleme süresinin ilerlemesi yalnız sağ alttaki köşede. Erken basılınca boğuk tık ve köşedeki simge iki kez yanıp söner ([[2026-10-07-beceri-halkalari-bekciden-kalkti-yalniz-hazir-ani]]).
+  - **2026-10-07'de değişti (main `b14f502`, canlıda değil):** halkalar bekçiden kalkıyor. Bekçide yalnız "hazır" anı görünür: Parlama için fener bir an parlar, Atılım için ayakta toz kalkar; ikisinde de ses var. Bekleme süresinin ilerlemesi yalnız sağ alttaki köşede. Erken basılınca boğuk tık ve köşedeki simge iki kez yanıp söner ([[2026-10-07-beceri-halkalari-bekciden-kalkti-yalniz-hazir-ani]]).
 - **Karanlık sürüsü (gecenin kendisi):** Karacık, Çayır'dan itibaren karanlıktan sürünüp gelir. Hale onu yavaşlatır ve yakar ama öldürmez, ışın eritir; çömelip sıçrar, yapışırsa bekçiyi yavaşlatır (her biri %10), yağ içer ve haleyi kısar ([[2026-10-06-yapisan-karacik-yavaslatir]]). Karabasan Bataklık'tan itibaren gelir ve yanınca bölünür. Sayıları oyuncunun gücüyle büyür; Mağara ve Harabeler'de ışınla süpürülecek yaylar hâlinde gelir. Pervane, gölge ve diken aynı aileden görünür ([[2026-10-05-karanlik-surusu-karacik-ve-karabasan]]). **Pervane** halenin kenarında döner, 0,4 sn hazırlanır ve düz dalar; yana çekilerek kaçılır ([[2026-10-06-pervane-doner-sonra-dalar]]). **Her bölgenin bir eliti** var: İri Karacık, Kurukafa Pervanesi, Karabasan, Işık Kemirgeni, Karakoncolos ([[2026-10-06-her-bolgeye-bir-elit]]). **Karanlık tehdidi gizlemez** (2026-10-06): gözler, soğuk parıltı ve ay ışığı kenarı yaklaştıkça güçlenir; pervanenin gözleri kırmızı kor gibi parlar, arkasında kanat tozu izi kalır ([[2026-10-06-karanlik-tehdidi-gizlemez-isaretler-sekliyle]]).
 - **Derinlik:** 5 bölge: Çayır (karacıklar), Orman (pervaneler), Bataklık (ürkek ruhlar, sis, ilk kabuklular: kabuklu sürüsünü korur, kırılınca sürü bir anda yakalanır [[2026-10-06-kabuklu-surusunu-korur-kirilinca-patlar]]; karabasan), Kristal Mağara (patlayan kristaller, prizmalar), Harabeler (gölgeler, dikenler, prizmalar). Ürkek ruh haleden kaçar ama ışında donar; yorgunluğu görünür.
 - **Fenerler:** bölgedeki avın ışığı fenere kendiliğinden akar (%80'e kadar), son kısmı başında tamamlanır. 1.–4. fener yanınca sefer **sürer** (1,8 sn yağ yanmaz, dolum yok, kalan yağla sonraki bölgeye); 5. fener seferi bitirir, Kalp ancak kamptan sonra ([[2026-10-04-fener-seferi-bitirmez-yalniz-besinci-bitirir]]).
@@ -44,8 +44,8 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 ## Durum (2026-10-07)
 | Parça | Durum |
 |---|---|
-| Yayın | **canlı = `74dc1f7`** (2026-10-06 akşam, Yusuf "yayınla" dedi). 2026-10-07 oturum başında 3 JS dosyası canlıyla karşılaştırıldı, aynıydı. **Windows'ta yerel `main` = `0ac3876`:** `origin/main`'in 1 commit önünde, push edilmedi. Üstüne 12 dosyada commit edilmemiş değişiklik var (camın ısısı, son hâli) |
-| Camın ısısı + fener/köşe göstergesi + halkasız bekçi (2026-10-07) | **commit edilmedi.** 4 tasarım turu, Yusuf her turu oynadı. Son inceleme: 1 orta (aşırı ısınmadaki hale kısılması kararma sayacına girmiyor; şüpheci kontrolü oturum kesilince yarım kaldı), 3 düşük, eski yorumlar; hiçbiri düzeltilmedi. Botlar: düzgün 38,0, insana yakın 43,4, hep basılı 47,7 sefer. Sesler dinlenmedi, hareket azaltma hâli emüle edilmedi ([[2026-10-07-cam-isinir-ve-isi-gostergesi]]) |
+| Yayın | **canlı = `74dc1f7`** (2026-10-06 akşam, Yusuf "yayınla" dedi). 2026-10-07 oturum başında 3 JS dosyası canlıyla karşılaştırıldı, aynıydı. **GitHub `main` = `b14f502`** (2026-10-07: `0ac3876` + `b14f502` push edildi; yerel ve uzak eşit). Canlıya henüz yayınlanmadı |
+| Camın ısısı + fener/köşe göstergesi + halkasız bekçi (2026-10-07) | **main'de ve GitHub'da (`b14f502`), canlıda değil.** 4 tasarım turu, Yusuf her turu oynadı. Son inceleme: 1 orta (aşırı ısınmadaki hale kısılması kararma sayacına girmiyor; şüpheci kontrolü oturum kesilince yarım kaldı), 3 düşük, eski yorumlar; hiçbiri düzeltilmedi. Botlar: düzgün 38,0, insana yakın 43,4, hep basılı 47,7 sefer. Sesler dinlenmedi, hareket azaltma hâli emüle edilmedi ([[2026-10-07-cam-isinir-ve-isi-gostergesi]]) |
 | Oynama turu 2026-10-06 (yapışma yavaşlatır, pervane döner-dalar, Atılım imleçte, hale tutar, kabuklu sürüsü, elitler) | hepsi yazıldı, incelendi (kritik/yüksek yok; 3 orta, şüpheci ile), canlıda. Sesler dinlenmedi, 60 karede izlenmedi, insan oynamadı ([[2026-10-06-oynama-geri-bildirimi-hale-elitler]]) |
 | Kamera yakın + bekçi 1,2× + kalın HUD; **Fener Nöbeti** (fenerin son beşte biri kuşatma) | main'de ve **canlıda** (`a352450`, `8b10c02`→`74dc1f7`). İkisi de incelendi (0 orta+; 7 + 7 düşük, hepsi düzeltildi), koordinatör main'de duman testi yaptı. Botta uzunluk aynı, şekil değişti: 3.–5. fener erken, Kalp ~7–8 deneme (Yusuf'un onayı bekleniyor). İnsan oynamadı, ses dinlenmedi ([[2026-10-06-kamera-yakin-bekci-buyuk-arayuz-kalin]], [[2026-10-06-fener-nobeti-son-beste-bir-kusatma]]) |
 | Bekçi Feneri (ilk yükseltme, kapalı kapı) | yazıldı, incelendi (0 kritik/yüksek/orta, 7 düşük, hepsi düzeltildi), canlıda; ilk ziyaret gerçek olaylarla oynatıldı, insan oynamadı ([[2026-10-06-bekci-feneri-agacin-koku-kapi-kapali]]) |
@@ -66,7 +66,7 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 | İnceleme kapısı | 2026-10-06: iki opus incelemesi + bir sonnet şüpheci. 2026-10-05: 3 dal incelemesi (sonnet + 2 opus; 1 orta, 9 düşük), şüpheci gerekmedi; denge diff'ini koordinatör okudu |
 
 ## Sıradaki işler
--2. **Camın ısısını bitir** (2026-10-07; çalışma kopyasında, commit edilmedi; ayrıntı: [[2026-10-07-cam-isinir-ve-isi-gostergesi]]):
+-2. **Camın ısısını bitir** (2026-10-07; main `b14f502`, canlıda değil; ayrıntı: [[2026-10-07-cam-isinir-ve-isi-gostergesi]]):
    1. **Orta bulgu:** aşırı ısınmadaki hale kısılması (`outDip`) kararma sayacına girmiyor. Şüpheci kontrolünü yeniden çalıştır. Muhtemel düzeltme: kısılmayı kaldırmak.
    2. **Düşük bulgular:** sınırda basınca teklemeler yeniden tetikleniyor; buhar ve duman hareket azaltma ayarına uymuyor; kilitliyken art arda basılınca köşedeki simge yalnız bir kez yanıp sönüyor. Eski yorumlar da temizlenecek.
    3. **Yusuf oynasın:**
@@ -74,7 +74,7 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
       - Hep basmak caydırıyor mu?
       - Atılım'ın dolduğu köşeden okunuyor mu?
       - Hep basanın cezası ~4 seferde kaldı. Gerekirse "kilit boyunca hale de boğulsun" eklenebilir; karar verilmedi.
-   4. Yeniden inceleme, commit, push. Yayın Yusuf'un kararı. Sesler hâlâ dinlenmedi.
+   4. Düzeltmelerden sonra yeniden inceleme ve commit. Canlıya yayın Yusuf'un kararı. Açık bulgular düzeltilmeden yayınlamak önerilmez (ışığa duyarlılık). Sesler hâlâ dinlenmedi.
 -1.5. **Gamepad desteği** planlanıyor (Yusuf, 2026-10-07; tarih yok). Yeni göstergeler imlece bağlanmasın ([[2026-10-07-isi-fenerde-ve-kosede-imlecte-gosterge-yok]]). Atılım için ayrı bir gösterge "sonra düşünülebilir".
 -1. **Kamera + Fener Nöbeti canlıda** (2026-10-06 akşam). Yusuf oynarken bakılacak: bekçi artık yeterince büyük mü, Mağara'da gece hâlâ okunuyor mu, nöbet 12–18 s iyi mi, Kalp'te takılma hissi var mı (bot 7–8 deneme; ilk kaldıraç `BOSS.bounty`).
 -0.5. **İs ekonomisi** (Yusuf'un fikri, "şimdilik bekle"): yanan karanlık **is** bırakır, kampta arıtılır; A kamp yapıları (öneri) / B mürekkep-atlas / C iksir bedeli. Nöbet ve kamera oynandıktan sonra A için tasarım notu ([[2026-10-06-kamera-ve-fener-nobeti]]).
@@ -99,7 +99,7 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 ## Bilinen küçük eksikler
 - Pencere değiştirip geri gelince basılı tutulan tuş yeniden basılana kadar yürütmez (bilinçli: tekrar olayları basış sayılmıyor).
 - Puhu'nun istek değişti cümlesi (`p_swap`) tekil; artık birden fazla istek aynı anda değişebiliyor.
-- Fener başa yakınken Parlama halkası bekçinin yüzüne biniyor (okunurluğu bozmuyor). *Çalışma kopyasında halkalar kalktığı için commit edilince kapanır.*
+- Fener başa yakınken Parlama halkası bekçinin yüzüne biniyor (okunurluğu bozmuyor). *Halkalar `b14f502` ile kalktı; yayınlanınca kapanır.*
 - Botun saati sefer başına sabit 4 sn ve ~3,4 sn geçiş ekliyor; sabit 4 sn'nin neyi karşıladığı belirsiz.
 - Kapanan eksikler (2026-10-05):
   - Kapı direkleri artık katı.

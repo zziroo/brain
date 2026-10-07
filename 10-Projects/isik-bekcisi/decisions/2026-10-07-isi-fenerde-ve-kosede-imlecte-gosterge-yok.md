@@ -4,7 +4,7 @@ project: isik-bekcisi
 date: 2026-10-07
 status: active
 tags: [isik-bekcisi, arayuz, isin, gamepad, okunurluk]
-source: oturum e5a9fa92 / 5f403d52 (incremantal-game, 2026-10-07); commit edilmemiş çalışma kopyası
+source: oturum e5a9fa92 / 5f403d52 (incremantal-game, 2026-10-07); commit b14f502
 ---
 
 # Karar: camın ısısı fenerin kendisinde ve sağ alttaki odak simgesinde görünür; imlece ve bekçinin üstüne gösterge çizilmez
