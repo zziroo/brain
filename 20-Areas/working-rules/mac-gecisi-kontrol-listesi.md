@@ -52,8 +52,8 @@ Karar (Yusuf, 2026-10-07): Windows silinmiyor, yalnız Silksong modu için kalı
 - [x] **Diskort'ta yalnız Windows'ta duran 2 commit:** `origin/mimari-tanitim-videosu` dalına push'landı, Mac'te görünüyor. Merge kararı Yusuf'ta.
 - [x] **Windows oturumları:** Silksong dışındaki 212 oturum Windows'ta arşivlendi; Mac kenar çubuğundaki `isik-bekcisi · yusufholat` grubu bunlardandı.
 - [ ] **Telefondan açılmış iki eski Windows oturumu** ("projenin mimarisini anlatan bir motion design video…", "diskortumuzu geliştiriyoruz", 2026-09-29/30, eski `C:\dev\diskort`): Windows arşivlemesine girmedi, Mac kenar çubuğunda "Other" altında duruyor. Kayıtları zip'te; arşivlenebilir.
-- [ ] **Konuşma arşivi:** Windows Masaüstü'ndeki `claude-konusmalar-windows-son.zip` (2.553 dosya, 690 `.jsonl`) Mac'e getirilip `~/Arsiv/claude-konusmalar/windows/` içindeki eski zip'in yerine konacak; sayılar ve `testzip` Mac'te denetlenir.
-- [ ] **Claude hafızası:** Windows'taki `incremantal-game` hafızası geçişten sonra değişti. Yeni zip'ten Mac'teki `-Users-ziroo-ZZ-zProjects-incremantal-game/memory` klasörüne, yollar çevrilerek ve Mac'teki değişikliklerle birleştirilerek alınır. `silksong-mod` hafızası Windows'ta kalır.
+- [x] **Konuşma arşivi** (2026-10-07): Windows'taki son zip (2.553 dosya, 690 `.jsonl`) Mac'te denetlendi ve `~/Arsiv/claude-konusmalar/windows/` içinde eskisinin yerine kondu; eskisi çöpte.
+- [x] **Claude hafızası** (2026-10-07): Geçişten sonra Windows'ta değişen hafıza notları Mac'tekilerle karşılaştırıldı. `incremantal-game`'e yeni `gamepad-later-keep-keeper-clean` notu eklendi; diskort `dev-environment` notuna `yusufholat` oturumunun iki makinede kapandığı işlendi. Windows'a özgü `msix-appdata-sanallastirma` (ZZ) ve `silksong-mod` hafızası Windows'ta kaldı; diğer farklar Mac'in daha yeni ya da Mac'e uyarlanmış hâli.
 - [ ] **Zamanlanmış görevler:** Windows'taki iki Diskort görevi kapalı (gözcü 2026-10-06'dan beri çalışmıyor), Mac'te kurulmadı. Yani gözcü şu an hiçbir yerde çalışmıyor; kurulum yukarıdaki ertelenmiş maddede.
 
 ## Notlar

@@ -44,7 +44,7 @@ Geri kalan çalışma Mac'e geçti ([[2026-10-05-windowstan-maca-gecis]]). Mac't
 
 ## Sonuçlar / açık işler
 - Mac'te `cleanupPeriodDays` hâlâ ayarlı değil. Değer 3650 olmalı: [[mac-gecisi-kontrol-listesi]].
-- Masaüstündeki zip, Mac'te `~/Arsiv/claude-konusmalar/windows/` altındaki zip'ten daha yeni. Mac'e taşınıp eskisinin yerine konup konmayacağı sohbette konuşulmadı; karar Yusuf'ta.
+- ~~Masaüstündeki zip'in Mac'e alınıp alınmayacağı~~ Yapıldı (2026-10-07, Mac): zip Mac arşivinde eskisinin yerine kondu, ayrıntı [[2026-10-05-windowstan-maca-gecis]] ekinde.
 - Diskort'ta `.claude/worktrees/` altında iki eski ajan worktree'si duruyor. İçerikleri origin'de, silinmeleri kayıp değil.
 - Windows'taki proje kopyaları eski. Silksong dışındaki işler Mac'te ya da origin'den güncel klonla yapılır.
 
