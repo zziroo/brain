@@ -50,7 +50,7 @@ Bot sonuçları, 24 oyun:
 
 - İkisi de hiç aşırı ısınmıyor.
 - **Hep basanın cezası ~4 seferde kaldı.** Kilit süresi ve açılma eşiği bunu değiştirmiyor, çünkü kilit bir moladır: [[2026-10-07-kilit-cezasi-mola-olabilir]]. Önerilen sonraki kaldıraç, aşırı ısınan camın kilit boyunca haleyi de boğması. Karar verilmedi; önce Yusuf oynayacak.
-- Son sürüm `b14f502` ile main'e girdi ve push edildi; canlıda değil. İnceleme bulguları açık (oturum notunda).
+- Son sürüm `b14f502` 2026-10-07'de açık inceleme bulgularıyla yayınlandı (Yusuf: "bu hâliyle yayınla, sonra düzeltiriz"). Bulgular oturum notunda.
 - Sesleri kimse dinlemedi. Hareket azaltma hâli yalnız kodda kontrol edildi.
 
 ## İlgili

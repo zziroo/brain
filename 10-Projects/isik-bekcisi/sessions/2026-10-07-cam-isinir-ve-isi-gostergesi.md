@@ -34,7 +34,7 @@ source: oturum e5a9fa92 / 5f403d52 (incremantal-game, 2026-10-07; arada Claude s
 - [[2026-10-07-isiga-duyarlilik-siniri-tek-yerde-sayilmali]]
 
 ## Açık kalanlar
-- **Commit durumu:** son sürüm `b14f502` olarak commit edildi ve GitHub'a push edildi (2026-10-07; `0ac3876` ile birlikte). Açık inceleme bulguları commit mesajında yazılı. Canlı hâlâ `74dc1f7`; yayın Yusuf'un kararı.
+- **Commit durumu:** son sürüm `b14f502` olarak commit edildi ve GitHub'a push edildi (2026-10-07; `0ac3876` ile birlikte). Açık inceleme bulguları commit mesajında yazılı. **Yayınlandı:** Yusuf "bu hâliyle yayınla, sonra düzeltiriz" dedi; `deploy.sh` çalıştı ve 5 dosya canlıyla karşılaştırıldı, aynı. Canlı = `b14f502`.
 - **Son inceleme bulguları açık:**
   - **Orta:** aşırı ısınma anındaki hale kısılması (`outDip`) kararma sayacına girmiyor, bir saniyede 4 kararma mümkün. Şüpheci kontrolü oturum kesilince yarım kaldı; yeniden çalıştırılmalı. Muhtemel düzeltme: kısılmayı kaldırmak.
   - **Düşük:** son saniyedeki iki tekleme sınırda basan oyuncuda her seferinde yeniden tetikleniyor (saniyede ~2,8 kararma, kesintisiz).
