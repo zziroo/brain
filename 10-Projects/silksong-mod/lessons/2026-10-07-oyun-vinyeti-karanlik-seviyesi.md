@@ -16,3 +16,5 @@ source: Windows oturumu 2026-10-07 (NEW2-m oyun içi testi, RoomBuilder.cs)
 - **Karşılaştırma için:** `ShotArtOnly` vinyeti ve hero ışığını bir kare kapatıp ek görüntü alır. Yalnız ışık parçaları (`HeroLight` alanları + `Vignette`) kapatılmalı; `heroLight.gameObject` alt ağacını gezmek Hornet'i de gizler.
 
 İlgili: [[2026-10-07-sahne-yolu-kabuk-demo-end-ve-kayit-hijyeni]], [[2026-10-07-silksong-sahne-yapisi-olculen-degerler]]
+
+> **Ek (2026-10-07 akşam):** Karanlık seviyesi 1 (Dock_13'ün ayarı), dokuya koyuluk işlenmiş yeni paletli odamızda ekranı %85 siyah yapıyor (parlaklık 0,022–0,029); `new2d_*` setleri seviye 0'da. Bkz. [[2026-10-07-oda-paleti-soguk-mavi-gri-boss-koyulugu]].

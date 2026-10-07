@@ -25,3 +25,5 @@ source: Windows oturumu 2026-10-06 (konsept turları D:\SilksongMod\ai\out\scori
 - *C4 / B4:* ürkütücü ve karakterli ama animasyon maliyeti yüksek ya da kolsuz.
 
 Sonuç: karakter LoRA'sı `scoria_char_v1` (15 görsel, stil v2 üstüne, 400. adım en iyi) tutarlı Scoria üretiyor; Idle denemesi 8 karede titremesiz. Tasarım dokümanı güncellendi (repo commit ab4caa2).
+
+> **Ek (2026-10-07):** zincir geometrisi netleşti: makaralı, sabit çekme noktası. Bkz. [[2026-10-07-zincir-mekanigi-makarali-sabit-cekme-noktasi]].
