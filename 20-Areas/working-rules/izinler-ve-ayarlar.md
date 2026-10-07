@@ -32,7 +32,7 @@ Windows dönemi satırları (artık Mac dosyasında yok): `curl` (iOS manifest, 
 - **Mac yolları (2026-10-07):** `git -C C:/Users/yusuf/...` ve `//c/Users/yusuf/diskort-inbox|review/**` kuralları Yusuf'un onayıyla `/Users/ziroo/...` yollarına çevrildi.
 - Windows dönemi kalıntısı: eski `~/.claude/diskort-review/` yolu Mac'te yok (`~/.claude/` altında `diskort-review` klasörü bulunmuyor).
 - Tek seferlik `docker compose exec -T api node - <sayı>` kalıntı kuralı 2026-10-07'de silindi.
-- Global dosya Mac'te Windows ile aynı (`autoUpdatesChannel: latest` + iki ssh/scp kuralı), karşılaştırıldı.
+- Global dosya Mac'te Windows ile aynı (`autoUpdatesChannel: latest` + iki ssh/scp kuralı), karşılaştırıldı. **2026-10-07'den beri fark var:** Windows'ta `"cleanupPeriodDays": 3650` eklendi (kayıtlar 30 yerine 10 yıl tutulur), Mac'te henüz yok ([[2026-10-07-windows-makinesi-yalniz-silksong-icin]]).
 - Zamanlanmış görevler bu izinlere göre yazıldı: [[zamanlanmis-gorevler-ve-skiller]].
 
 ## İlgili

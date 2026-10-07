@@ -31,6 +31,7 @@ Buradan başla. Her şey buradan ya da bir projenin `_overview.md` dosyasından 
 ## Alanlar
 - [[20-Areas/working-rules/_index|Çalışma kuralları]]: Claude ile nasıl çalışıyoruz (orkestrasyon, inceleme kapısı, karar dağılımı)
 - [[mac-gecisi-kontrol-listesi]]: **Windows → Mac geçişi (2026-10-05).** Mac'teki ilk oturum bu listeyi işler
+- [[2026-10-07-windows-makinesi-yalniz-silksong-icin]]: **Windows makinesi 2026-10-07'den beri yalnız Silksong modu (LoRA eğitimi) için**; diğer işler Mac'te
 
 ## Kaynaklar
 - `30-Resources/`: kalıcı bilgi ve rehberler

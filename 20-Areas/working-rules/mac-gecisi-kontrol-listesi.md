@@ -1,7 +1,7 @@
 ---
 type: resource
 project: genel
-date: 2026-10-05
+date: 2026-10-07
 status: active
 tags: [mac, gecis, kontrol-listesi]
 source: ZZ kök oturumu 2026-10-05; C:\Users\yusuf\mac-tasima\BENIOKU.md
@@ -28,7 +28,8 @@ Karar ve gerekçe: [[2026-10-05-windowstan-maca-gecis]]. Mac'te ilk oturumda bu 
   - `~/.claude/projects/-Users-ziroo-ZZ*/memory` klasörleri var. Konuşma kayıtları bilerek taşınmadı. (2026-10-07: sonradan `~/Arsiv/claude-konusmalar/` altına alındı, bkz. [[2026-10-05-windowstan-maca-gecis]] eki.)
   - `node ~/.claude/orchestration-report/usage.mjs` çalışıyor. Yalnızca Mac oturumlarını sayar; Windows dönemi: [[2026-10-05-windows-donemi-token-ozeti]].
 - [ ] (Yusuf 2026-10-07: şimdilik ertelendi) Zamanlanmış görevleri yeniden kur: `diskort-geri-bildirim-kontrolu` saatlik, `diskort-main-kod-inceleme` 00:10'da. Metinleri `~/.claude/scheduled-tasks/` altında.
-- [ ] Mac'teki görevler çalışmaya başlayınca Yusuf'a Windows'takileri kapattır. Yoksa gözcü iki kez çalışır.
+- [x] (2026-10-07: Windows'taki iki görev zaten kapalı, `enabled: false`; Windows artık yalnız Silksong için, bkz. [[2026-10-07-windows-makinesi-yalniz-silksong-icin]]) Mac'teki görevler çalışmaya başlayınca Yusuf'a Windows'takileri kapattır. Yoksa gözcü iki kez çalışır.
+- [ ] Mac'te `~/.claude/settings.json` içine `"cleanupPeriodDays": 3650` ekle (belgelenen üst sınır; 36500 değil). Masaüstü oturumları zaten süresiz; bu ayar alt ajan kayıtlarını, araç çıktılarını ve terminal oturumlarını korur. Windows'ta 2026-10-07'de eklendi.
 - [x] (2026-10-07: 15 repo temiz, fetch sonrası geride/ileride yok) `git status` ile repoların temiz göründüğünü kontrol et. Taşımadan önce bütün repolar temizdi; `kur.sh` hepsini bir kez LF satır sonuna çevirdi.
 - [x] (2026-10-07: gerekenlerin hepsi kurulu; node_modules'u olmayan 3 projenin bağımlılığı yok) Bağımlılıkları `kur.sh` kendisi kurar: diskort için `pnpm install --frozen-lockfile`, song-finder, string-tool ve web-fps-game için `npm ci`, trencheck için venv. Node o sırada kurulu değildiyse sonradan `bash kur.sh bagimliliklar` çalıştır. `!!` ile başlayan hata satırı varsa birlikte bak.
 - [x] (2026-10-07: global kimlik Ziroo / zziroo.ai@gmail.com, gh `zziroo`) Git: repoların kimliği kendi `.git/config` dosyalarında (Ziroo / zziroo.ai@gmail.com). Global kimliği `kur.sh` ayarlar. Push için Yusuf `gh auth login` ile giriş yapar, ardından `bash kur.sh git-kimlik` çalıştırır.

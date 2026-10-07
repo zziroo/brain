@@ -1,7 +1,7 @@
 ---
 type: resource
 project: genel
-date: 2026-10-01
+date: 2026-10-07
 status: active
 tags: [working-rules, claude]
 source: C:\Users\yusuf\.claude\CLAUDE.md
@@ -32,6 +32,7 @@ Global kuralların damıtması. Orijinal dosya değiştirilmedi; geçerli olan h
 ## Mac geçişi (2026-10-05)
 - [[2026-10-05-windowstan-maca-gecis]]: Windows → Mac taşıma kararı, paket ve yol çevirisi
 - [[mac-gecisi-kontrol-listesi]]: Mac tarafında yapılacaklar (açık)
+- [[2026-10-07-windows-makinesi-yalniz-silksong-icin]]: Windows makinesi yalnız Silksong (LoRA) için kaldı; son temizlik (2026-10-07)
 
 ## GitHub hesabı (2026-10-06)
 - [[2026-10-06-github-repolari-zziroo-hesabina-tasindi]]: 15 repo `zziroo` hesabına taşındı, yönlendirme ve remote notları

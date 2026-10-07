@@ -28,6 +28,8 @@ Ortak: Türkçe yazarlar, gelen kutusu Mac'te `/Users/ziroo/diskort-inbox/` (var
 
 **Mac durumu (2026-10-07):** Görev metinleri (`SKILL.md`) Mac yollarına çevrilip `/Users/ziroo/.claude/scheduled-tasks/diskort-geri-bildirim-kontrolu/` ve `diskort-main-kod-inceleme/` altında duruyor (içlerinde `/Users/ziroo/diskort-inbox/` yolu doğrulandı). **Zamanlanmış görevler Mac'te bilerek henüz kurulmadı** (Yusuf ertelemeye karar verdi); SKILL.md dosyaları duruyor; zamanlayıcıya kayıt yapılmadı (Yusuf'un kararı; zamanlayıcıdaki durum ayrıca listelenmedi). Kurulum ve Windows'takileri kapatma sırası: [[mac-gecisi-kontrol-listesi]].
 
+**Windows durumu (2026-10-07):** iki görev de kapalı (`enabled: false`; gözcünün son çalışması 2026-10-06, gece incelemesininki 2026-10-05). Eski çalıştırma oturumları arşivlendi. Windows artık yalnız Silksong için: [[2026-10-07-windows-makinesi-yalniz-silksong-icin]].
+
 ## `skills/synced`
 **Windows dönemi bilgisi:** Tek bir senkronizasyon klasörü (hesap kimliği adlı) vardı; içinde Anthropic hesap skilleri: built-in-browser, chrome-browser, computer-use, deep-research, docs, docx, google-workspace, import-memory, morning, pdf, pptx, setup-writing-style, skill-creator, xlsx, bir `manifest.json`. Mac'te `~/.claude/skills/synced` yok (2026-10-07); `~/.claude/skills/` altında kullanıcı skilleri `basla` ve `kaydet` var. Windows'ta kullanıcıya özgü skill burada görünmüyordu (içerikleri tek tek okunmadı, yalnız klasör adlarına bakıldı).
 
