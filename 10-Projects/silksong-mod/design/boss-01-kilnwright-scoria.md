@@ -5,6 +5,7 @@
 > Kullanıcı kararları (2026-10-06): HP ~700 ve faz eşikleri %75/%40; arena lavı oyunun gerçek lavı; Forge Daughter'ın yerine geçen usta olarak Scoria; Cinder Fang hasarı 4 / 12 / 2.
 > 2026-10-06: çekiç arenaya taşındı (karar), siluet A4. Çekiç artık Scoria'nın koluna kaynık değil; tavandan zincirle asılı arena şahmerdanı (§5, §6, §8, §11).
 > 2026-10-06 akşam: siluet pelerinli şövalye (havuz A_orig_s24), gözler kırmızı; karakter LoRA `kilnwright_char_v1`. A4 kaya-golem siluetinin yerini aldı; lore uyarlaması minimal, hikâye ayrıntıları sonra netleşecek (§3, §5, §10, §12).
+> 2026-10-07: zincir mekaniği netleşti (Yusuf, seçenek A): şahmerdan zinciri tavandaki makaradan geçer, ucu örsün yanında **sabit bir çekme noktasına** iner; Scoria A1/B3 için önce oraya yürür (yürüyüş ek telegraph). Maşayla uzaktan kancalama (B) ertelendi: A hasarla oynanıp örse yürüme sıkıcı gelirse eklenir. Çekici ele almak (C) reddedildi: LoRA çekiçli kolu çizemiyor, kare yükü artar (§6, §8).
 
 ---
 
@@ -70,7 +71,7 @@ Hornet geldiğinde Scoria onu bitmemiş iğnenin sahibi sanır. Değil. Bunu anl
 Dairesel ocak çukuru, genişlik **32–36 birim**. Karşılaştırma: kamera tek ekranı 29,2 birim; Lace 2 savaş kilidi ~37, Widow ~34, Bell Beast ~37, Signis & Gron ~37.
 
 - **Zemin:** Ortada örs (Scoria'nın çalışma noktası, çarpışma var, Hornet üstüne çıkabilir). İki yanda taş platform. Platformlara ve örse `HazardRespawnMarker` konur.
-- **Şahmerdan (arena mekanizması):** Örsün tam üstünde, tavandan kalın bir zincirle asılı dev bir demirci çekici. Prosedürel nesnedir (gövde sprite'ının parçası değil, 3 sprite: yükselme, düşüş, temas). Askıdayken hasar vermez ve oyuncu için engel değildir. Yalnızca düşerken hasar kutusu açılır (2 maske). Scoria zinciri çekince yükselir, bırakınca örse düşer (bkz. A1, B3). Scoria'nın ölümünde hareketsiz asılı kalır.
+- **Şahmerdan (arena mekanizması):** Örsün tam üstünde, tavandan kalın bir zincirle asılı dev bir demirci çekici. Prosedürel nesnedir (gövde sprite'ının parçası değil, 3 sprite: yükselme, düşüş, temas). Askıdayken hasar vermez ve oyuncu için engel değildir. Yalnızca düşerken hasar kutusu açılır (2 maske). Scoria zinciri çekince yükselir, bırakınca örse düşer (bkz. A1, B3). Scoria'nın ölümünde hareketsiz asılı kalır. **Zincir geometrisi (2026-10-07):** zincir şahmerdandan tavandaki makaraya çıkar, ikinci makaradan örsün yanındaki sabit çekme noktasına iner; Scoria ucu aşağı çektikçe şahmerdan yükselir. Çekme noktası tek ve sabittir; Scoria A1/B3'ten önce oraya yürür. Yükselmiş şahmerdan kamera görüş alanında kalmalı. Örsün çarpışması Scoria'yı da durdurur (içinden geçmez).
 - **Alt:** Oyunun gerçek lavı (`HazardType.LAVA`, Deep Docks `Lava Box` bileşeni kopyası): değince **2 maske** + en son güvenli noktaya respawn (`HazardRespawnMarker`). Magma Bell bu hasarı yarıya indirir. Ölüm değil ama bedeli var. Faz 2'de yan platformlar yutulunca respawn işaretleri örse ve kalan platforma taşınmalı.
 - **Üst:** Tavandan iki zincir sarkar; ucunda **Harpoon Ring** (zincirde asılı varyant, `HarpoonRingChain`). Clawline yalnızca ring'lere kancalanır. 2. fazda lav yükselince hayatta kalma yolu.
 - **Arka plan:** Dev körük, soğuk ocaklar, duvara saplı yarım iğneler. Körük Scoria'nın nefesi ile hareket eder (3. fazda hızlanır).
