@@ -2,10 +2,12 @@
 type: decision
 project: isik-bekcisi
 date: 2026-10-06
-status: active
+status: superseded
 tags: [isik-bekcisi, arayuz, beceri-gostergesi, atilim]
 source: oturum fb8e3060 (incremantal-game), commit 242654b + 9ec4f66; Yusuf'un 2026-10-06 oynama gözlemi
 ---
+
+> **Yerini aldı (2026-10-07):** imleçte gösterge yok, Atılım halkası bekçiden de kalktı: [[2026-10-07-beceri-halkalari-bekciden-kalkti-yalniz-hazir-ani]].
 
 # Karar: Atılımın beklemesi imlecin çevresinde dolan bir halka (D2); imleç yoksa ayak dibinde kalın halka
 

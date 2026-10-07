@@ -2,10 +2,12 @@
 type: decision
 project: isik-bekcisi
 date: 2026-10-05
-status: active
+status: superseded
 tags: [isik-bekcisi, arayuz, beceri-gostergesi, ses, oyun-hissi]
 source: oturum 53393f9a (incremantal-game), commit 0bcc0a0; seçenekler [[2026-10-04-devir-zorluk-ve-his-bulgulari]]
 ---
+
+> **Yerini aldı (2026-10-07):** halkalar bekçiden kalktı, yalnız "hazır" anı görünüyor: [[2026-10-07-beceri-halkalari-bekciden-kalkti-yalniz-hazir-ani]].
 
 # Beceri hazır işareti bekçinin üzerinde: Parlama fenerin çevresinde yay, Atılım ayak dibinde elips; yalnız beklemedeyken görünür
 
