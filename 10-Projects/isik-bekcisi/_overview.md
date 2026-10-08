@@ -4,7 +4,7 @@ project: isik-bekcisi
 date: 2026-10-08
 status: active
 tags: [isik-bekcisi, oyun, incremental, kosu-tabanli, canvas]
-source: C:\Users\yusuf\ZZ\zProjects\incremantal-game (CLAUDE.md); oturumlar 2026-10-02 (6d8df6c2, 72fd0708), 2026-10-04 (9e4d0124), 2026-10-05 (53393f9a), 2026-10-06 (fb8e3060, iki tur), 2026-10-07 (e5a9fa92 / 5f403d52, akşam 1249d80e), 2026-10-07 gece → 10-08 (dd56e56a + a15a1fc5)
+source: C:\Users\yusuf\ZZ\zProjects\incremantal-game (CLAUDE.md); oturumlar 2026-10-02 (6d8df6c2, 72fd0708), 2026-10-04 (9e4d0124), 2026-10-05 (53393f9a), 2026-10-06 (fb8e3060, iki tur), 2026-10-07 (e5a9fa92 / 5f403d52, akşam 1249d80e), 2026-10-07 gece → 10-08 (dd56e56a + a15a1fc5), 2026-10-08 (nöbet tavanı)
 ---
 
 # Işık Bekçisi: fenerle karanlık vadiye koşular yapılan koşu-tabanlı incremental oyun
@@ -28,7 +28,7 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
   - **2026-10-07'den beri (canlıda, `b14f502`):** halkalar bekçiden kalktı. Bekçide yalnız "hazır" anı görünür: Parlama için fener bir an parlar, Atılım için ayakta toz kalkar; ikisinde de ses var. Bekleme süresinin ilerlemesi yalnız sağ alttaki köşede. Erken basılınca boğuk tık ve köşedeki simge iki kez yanıp söner ([[2026-10-07-beceri-halkalari-bekciden-kalkti-yalniz-hazir-ani]]).
 - **Karanlık sürüsü (gecenin kendisi):** Karacık, Çayır'dan itibaren karanlıktan sürünüp gelir. Hale onu yavaşlatır ve yakar ama öldürmez, ışın eritir; çömelip sıçrar, yapışırsa bekçiyi yavaşlatır (her biri %10), yağ içer ve haleyi kısar ([[2026-10-06-yapisan-karacik-yavaslatir]]). Karabasan Bataklık'tan itibaren gelir ve yanınca bölünür. Sayıları oyuncunun gücüyle büyür; Mağara ve Harabeler'de ışınla süpürülecek yaylar hâlinde gelir. Pervane, gölge ve diken aynı aileden görünür ([[2026-10-05-karanlik-surusu-karacik-ve-karabasan]]). **Pervane** halenin kenarında döner, 0,4 sn hazırlanır ve düz dalar; yana çekilerek kaçılır ([[2026-10-06-pervane-doner-sonra-dalar]]). **Her bölgenin bir eliti** var: İri Karacık, Kurukafa Pervanesi, Karabasan, Işık Kemirgeni, Karakoncolos ([[2026-10-06-her-bolgeye-bir-elit]]). **Karanlık tehdidi gizlemez** (2026-10-06): gözler, soğuk parıltı ve ay ışığı kenarı yaklaştıkça güçlenir; pervanenin gözleri kırmızı kor gibi parlar, arkasında kanat tozu izi kalır ([[2026-10-06-karanlik-tehdidi-gizlemez-isaretler-sekliyle]]).
 - **Derinlik:** 5 bölge: Çayır (karacıklar), Orman (pervaneler), Bataklık (ürkek ruhlar, sis, ilk kabuklular: kabuklu sürüsünü korur, kırılınca sürü bir anda yakalanır [[2026-10-06-kabuklu-surusunu-korur-kirilinca-patlar]]; karabasan), Kristal Mağara (patlayan kristaller, prizmalar), Harabeler (gölgeler, dikenler, prizmalar). Ürkek ruh haleden kaçar ama ışında donar; yorgunluğu görünür.
-- **Fenerler:** bölgedeki avın ışığı fenere kendiliğinden akar (%80'e kadar), son kısmı başında tamamlanır. 1.–4. fener yanınca sefer **sürer** (1,8 sn yağ yanmaz, dolum yok, kalan yağla sonraki bölgeye); 5. fener seferi bitirir, Kalp ancak kamptan sonra ([[2026-10-04-fener-seferi-bitirmez-yalniz-besinci-bitirir]]).
+- **Fenerler (2026-10-08'den beri):** akış küçük (bölgeye varınca 1–3 seferde hazır); nöbetin **görünür güç tavanı** var: nöbet payı ancak fenerin gücüyle (Fitil yıldızları, iksir) orantılı yere kadar tutuşur, orada durur ("Alev daha güçlü bir ışık istiyor"), ilerleme kalır, güçlenince devam; oyunun uzunluğu kotadan ağaca (kademe maliyetleri) taşındı ([[2026-10-08-fener-zayif-isiga-direnir-nobet-tavani-uzunluk-agacta]]). 1.–4. fener yanınca sefer **sürer** (1,8 sn yağ yanmaz, dolum yok, kalan yağla sonraki bölgeye); 5. fener seferi bitirir, Kalp ancak kamptan sonra ([[2026-10-04-fener-seferi-bitirmez-yalniz-besinci-bitirir]]).
 - **Geçişler:** kapıdan çıkış kesintisiz (fener 1 sn'de yakılır), fenerden başlama bir yolculuk kartı, yağ bitince sönen alev ve eve süzülen kor, kampta ateş başında uyanış, teleskopa iris. Sefer başına ~2 sn.
 - **Final: Son Nöbet** (2026-10-08). Gecenin Kalbi'nin çevresindeki üç parçalı Şafak Çemberi (Tan, Şafak, Sabah) dolunca Kalp kırılır. Tek hedef Kalp: ışın onu çatlatır, saçılan ruhlar ve kabuklu sürüler çemberi doldurur. Her basamak bölgelerin elitlerini salar (Çayır+Orman, Bataklık+Mağara, Harabeler). Halkalar, açılma anı ve yağ çeken çevre sürer. Her deneme sıfırdan, ~2 dk ([[2026-10-08-son-nobet-safak-cemberi-tek-hedef-bes-bolge]]). Kazanınca şafak; kuzey alacakaranlık kalır, seferler sürer.
 - **Arayüz ("gece atlası"):** serif, ince çift çerçeveli plakalar, çentikli düğmeler, kendi çizgi ikonları, fitil göstergesi. Bal Vadisi'nden bilinçli ayrı.
@@ -44,7 +44,8 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 ## Durum (2026-10-08)
 | Parça | Durum |
 |---|---|
-| Yayın | **canlı = `b2bedf1`** (2026-10-08; Yusuf "sen yükle canlıya" dedi; main fast-forward + push, `deploy.sh`, her dosya canlıyla karşılaştırıldı, fark yok). İçinde: uzun seferler, Son Nöbet, kalın lazer, gamepad. Önceki canlılar: `a8bebee`, `a67e9cb`, `b14f502` |
+| Yayın | **canlı = `ec77919`** (2026-10-08 akşam; Yusuf "pushla canlıya al"; `deploy.sh`, dört ana dosya canlıyla birebir). İçinde: nöbet tavanı + uzun ilk seferler. Önceki canlılar: `b2bedf1` (uzun seferler, Son Nöbet, kalın lazer, gamepad), `a8bebee`, `a67e9cb`, `b14f502` |
+| Nöbet tavanı + uzunluk ağaçta (2026-10-08) | **canlıda.** İncelendi (0 orta+, 10 düşük düzeltildi), koordinatör sayfada duman testi yaptı (tavan, v4 kayıt göçü). Botta ana ~37–38 sefer / ~82–86 dk, özensiz ~47–48 / ~94–98 dk, ölü sefer 0; Kalp aynı. Harabeler 5,7–6,6 sefer (hedef 7–9) ve özensiz botta Orman ~9,5 açık. İnsan oynamadı, ses dinlenmedi ([[2026-10-08-fener-zayif-isiga-direnir-nobet-tavani-uzunluk-agacta]]) |
 | Isının okunması (2026-10-07 akşam) | **canlıda.** Köşedeki simge boşalıyor; kırmızıda ışın solup daralıyor, kızıllık fenerin yanında, bekçinin yüzü temiz; halenin kenarında ışın yönünde iki yandan azalan kor yay (H1b); kilitte hale küçük, kilit 4 sn; `outDip` kaldırıldı. Odaklanınca kamera kaymıyor, fener sabitleniyor. İncelendi (1 orta, şüpheci doğruladı, düzeltildi). Sesler dinlenmedi ([[2026-10-07-isi-isinin-solmasi-ve-hale-kenarinda-anlatilir]], [[2026-10-07-kilitte-hale-kuculur-kilit-dort-saniye]], [[2026-10-07-odakta-kamera-kaymaz-fener-sabitlenir]]) |
 | Kuzey Yolu (yön) | **canlıda** (`a67e9cb`'den beri): yol, kuzeye akan ışık, kararan yanlar, ilk üç seferde ipucu, Kandil'in cümlesi; bot aynı. İki inceleme, 0 orta+ ([[2026-10-07-kuzey-yolu-ileri-gitmenin-isareti]]) |
 | Uzun seferler + Yol Fenerleri + ruh yenilenmesi | **canlıda** (2026-10-08). İncelendi (1 orta: gerideki yol feneri de dolduruyordu, düzeltildi; 5 düşük). Botta ana ~37,5 sefer / ~84 dk, özensiz ~48 / ~96 dk; insan tahmini ~135–139 dk ([[2026-10-07-uzun-seferler-yol-fenerleri-ruh-yenilenmesi]]) |
@@ -66,13 +67,16 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 | Gökyüzü ekranı | yeniden yazıldı, incelendi, birleşti |
 | Hikâye (metin + bağlama) | 29 konuşma, 82 ara söz, 48 tepki, 7 günce sayfası (karacık satırları eklendi); incelendi, birleşti; Türkçeyi Yusuf'tan başka ana dili konuşan okumadı |
 | Geçişler | yazıldı, incelendi, birleşti; hareket kare kare değerlendirildi, 60 karede izlenmedi |
-| Denge | **Ara durum (2026-10-06):** özensiz (insana yakın) bot ~40–41 sefer, ana bot ~37; genel ayar bilerek yapılmadı, hedef uzunluk Yusuf'ta. Hissi değiştiren ayarlar özensiz bota göre ([[2026-10-06-tehdidi-hic-karsilamayan-bot-onu-vergi-gibi-oder]]). Önceki: bot ~43 sefer / ~47 dk istek ve iksirle, ~51 / ~55 onlarsız; Kalp 3–4 deneme (1–6). Yıldızların kısalttığı tempo `TIER_SCALE` 2–4 ile eski hâline döndü ([[2026-10-05-denge-tier-scale-ile-eski-tempoya-donus]]). Botun nişanı mükemmel; özensiz bot varyantı da var (`"bot":"sloppy"`). Gerçek oyuncu ölçümü yok |
+| Denge | **2026-10-08:** uzunluk artık kotada değil kademe maliyetlerinde (`TIER_SCALE` [2,1, 110, 5800, 97000, 1,8M]); temel yağ 40, ilk sefer 40 sn, Çayır ~70, Bataklık ~100, Mağara ~130, Harabeler ~135 sn. **Eski ara durum (2026-10-06):** özensiz (insana yakın) bot ~40–41 sefer, ana bot ~37; genel ayar bilerek yapılmadı, hedef uzunluk Yusuf'ta. Hissi değiştiren ayarlar özensiz bota göre ([[2026-10-06-tehdidi-hic-karsilamayan-bot-onu-vergi-gibi-oder]]). Önceki: bot ~43 sefer / ~47 dk istek ve iksirle, ~51 / ~55 onlarsız; Kalp 3–4 deneme (1–6). Yıldızların kısalttığı tempo `TIER_SCALE` 2–4 ile eski hâline döndü ([[2026-10-05-denge-tier-scale-ile-eski-tempoya-donus]]). Botun nişanı mükemmel; özensiz bot varyantı da var (`"bot":"sloppy"`). Gerçek oyuncu ölçümü yok |
 | Ses | hiçbir ajan dinlemedi: ışın uğultusu, kamp ateşi ve rüzgâr yatağı, konuşma sesleri, geçiş sesleri seviyeleri tahmin |
 | Eski kayıtlar | yüklenir; yıldız fiyatları 2.–4. kademede yine arttı (2026-10-05, eski oyuncu da öder); `S.story` göçü var; yeni istek türü `soot` eski kayıtta sorunsuz |
 | İnceleme kapısı | 2026-10-06: iki opus incelemesi + bir sonnet şüpheci. 2026-10-05: 3 dal incelemesi (sonnet + 2 opus; 1 orta, 9 düşük), şüpheci gerekmedi; denge diff'ini koordinatör okudu |
 
 ## Sıradaki işler
--3. **Sıradaki oturum (2026-10-08'den devir):**
+-4. **Sıradaki oturum (2026-10-08 akşamından devir):**
+   1. **Yusuf canlıda sıfırdan oynayacak (nöbet tavanı):** her sefer sonunda fenere uğrayıp "biraz daha ileri" görmek eğlenceli mi, tekdüze mi; "Fitil al" cevabı açık mı (tavan yalnız Fitil'den: dar gelirse ölçü genişletilir); nöbet dalgaları fazla kolay mı (bota görünmüyor, elle sertleştirilir); 40 sn'lik ilk sefer ve ~70 sn'lik Çayır seferleri; iki notalı "henüz değil" sesi. Kayıtlar'daki "N. Fener: ağaç X. seferde doldu · Y. seferde yandı" satırları veri.
+   2. Açık denge: Harabeler 5,7–6,6 sefer (hedef 7–9; kısa sefer ister, 135 sn uzlaşma), özensiz botta Orman 9,3–9,8.
+-3. **Önceki devir (2026-10-08 sabah):**
    1. **Yusuf canlıda oynayacak:** kalın lazer ("delme" yalnız prizmalarda; yeterli mi; genişlik 30 iyi mi), Kalp'in son hâli (beş bölge, basamak geçişi, duvar kırma, tam build'de yoğunluk), gamepad'in 2. dilimi (gökyüzü, paneller), arena yağı 3,2 farklı hissettiriyor mu.
    2. **Son Nöbet son dilimi:** ses (kulakla), ipuçları, Kalp'e kaybetme sonrası iki eski hikâye cümlesi (`r.heart.low1`, `high1`), adlar (Yusuf: "sonradan değiştiririz").
    3. **Atılımı kaldırmayı incele** (Yusuf: "fazladan bir mekanik gibi"; karar yok). Bot zaten atılmıyor; Atılım, Kor İzi ve Kayan Yıldız yerine yıldız seçenekleri gösterilecek, sahiplerine iade, Kurukafa'nın çift dalışı yürüyerek ölçülecek.
@@ -146,6 +150,7 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 - [[2026-10-08-son-nobet-safak-cemberi-tek-hedef-bes-bolge]]
 - [[2026-10-08-lazer-incelmez-prizmalari-deler]]
 - [[2026-10-08-gamepad-destegi-omuz-tuslari]]
+- [[2026-10-08-fener-zayif-isiga-direnir-nobet-tavani-uzunluk-agacta]]
 
 ## Dersler
 - [[2026-10-02-carpimsal-gelistirmeler-geliri-patlatir]]
@@ -178,6 +183,7 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 - [[2026-10-08-iki-hedefli-boss-oyuncuyu-bir-noktaya-baglar]]
 - [[2026-10-08-mac-te-gamepad-tarayiciya-yalniz-bluetooth-ile-gorunur]]
 - [[2026-10-08-ajan-worktree-i-eski-commit-ten-acilabilir]]
+- [[2026-10-08-kota-kapisi-agac-dolunca-olu-sefer-uretir]]
 
 ## Oturumlar
 - [[2026-10-02-iki-oyun-yayin-ve-kamp-yenilemesi]]
@@ -194,3 +200,4 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 - [[2026-10-07-cam-isinir-ve-isi-gostergesi]]
 - [[2026-10-07-oynama-turu-cam-yon-uzunluk-kalp]]
 - [[2026-10-08-son-nobet-gamepad-lazer-yayin]]
+- [[2026-10-08-nobet-tavani-ve-uzunluk-agacta]]
