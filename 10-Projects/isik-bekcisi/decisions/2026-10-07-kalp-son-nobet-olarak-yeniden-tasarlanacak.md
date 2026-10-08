@@ -2,12 +2,15 @@
 type: decision
 project: isik-bekcisi
 date: 2026-10-07
-status: active
+status: superseded
 tags: [isik-bekcisi, kalp, boss, tasarim, nobet]
 source: oturum 1249d80e (incremantal-game, 2026-10-07 akşam); tasarım ajanı raporu (Plan); kod yok
 ---
 
+
 # Karar: Gecenin Kalbi "Son Nöbet" olarak yeniden tasarlanacak; oyuncunun bildiği mekaniklerle, her deneme sıfırdan
+
+> **Yerini aldı (2026-10-08):** girişteki Şafak Feneri iki hedef yarattı; Kalp artık etrafındaki Şafak Çemberi'yle kırılıyor, basamaklar beş bölgenin tehditlerini salıyor: [[2026-10-08-son-nobet-safak-cemberi-tek-hedef-bes-bolge]]. "Her deneme sıfırdan", "kaybetmek de öder" ve "bildik mekanikler" ilkeleri sürüyor.
 
 ## Bağlam
 Yusuf Kalp'e erken geldi ve orada çok uğraştı. Sorunları:

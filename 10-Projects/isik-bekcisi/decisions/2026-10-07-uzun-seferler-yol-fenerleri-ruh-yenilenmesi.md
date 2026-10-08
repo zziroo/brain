@@ -47,7 +47,7 @@ source: oturum 1249d80e (incremantal-game, 2026-10-07 akşam); dal worktree-agen
 - **Işığı kesen harita (terk edilmiş köy):** Yusuf'un fikri. Neredeyse her sistemi değiştirir (gölge, tehditlerin yolu, bot). Sınırlı hâli sonraya: önce "ışın duvarda biter", sonra köy tek bir yer olarak.
 
 ## Sonuçlar / açık
-- Dal incelenmedi ve main'e girmedi. Son Nöbet'le birlikte yayınlanmalı.
+- **2026-10-08:** dal incelendi (1 orta: başlanan fenerin gerisindeki yol feneri de dolduruyordu, artık doldurmuyor; 5 düşük), Son Nöbet'le birlikte main'e girdi ve canlıda (`b2bedf1`). Bot 0,4–0,8 sefer uzadı, yeniden ayar yok. Son hâli: [[2026-10-08-son-nobet-gamepad-lazer-yayin]].
 - Yedek yağ, fenere "ne zaman uğrasam" kararını azaltıyor (ajanın sorusu). Gerekirse yedek, dökülen miktardan küçük tutulabilir.
 - Harabeler'de özensiz bot 9,3 sefer, sefer ~128 sn; hedefin biraz üstünde.
 - Kayıt sürümü 4; eski kayıtlar fener paylarına göre ölçekleniyor.

@@ -9,6 +9,8 @@ source: Claude Code oturumu 72fd0708 (incremantal-game); Yusuf'un ikinci oynama 
 
 # Odak ışını geç oyunda lazere dönüşür, odaklanmak yağ yakar ve geç bölgeler lazer ister
 
+> **Güncelleme (2026-10-08):** geç oyunda ışın artık incelmiyor; Işın ve Mızrak onu prizmaları delen kalın bir banda çeviriyor: [[2026-10-08-lazer-incelmez-prizmalari-deler]].
+
 ## Bağlam
 Yusuf: "ışık yoğunlaştırma mekanizmasını sonlara doğru daha lazer gibi yapabilir miyiz? Buna uygun çevre ve düşman tasarımları yapabiliriz" ve "yoğunlaştırdıkça daha fazla harcıyor mu tam hissedemedim, bu şekilde bir mekanik kullanabiliriz." Önceki karar ([[2026-10-02-odak-isini-fener-olayi-ve-yag-dengesi]]) ışına yağ bedeli koymamıştı; oyuncu bedel olmadığını fark etti ve bedel istedi.
 
