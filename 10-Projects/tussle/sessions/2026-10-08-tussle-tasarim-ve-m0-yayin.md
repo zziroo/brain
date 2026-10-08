@@ -14,4 +14,5 @@ source: oturum 2026-10-08 (mobil-playus)
 - Kararlar: [[2026-10-08-web-cekirdegi-capacitor-ve-ad-tussle]], [[2026-10-08-deterministik-sim-ve-sunucuda-tekrar-oynatma]]. Yusuf: öncelik "her cihazda hiç kasmasın", mimari ve oyun seçimi Claude'da, Google/Apple girişi şart, markete global çıkış.
 - M0 inşa: çekirdek + Refleks (1 ajan), Kule/Matematik/Bıçak + sunucu/lobi (4 paralel), 2 inceleme + 3 şüpheci + 3 düzeltme ajanı. Sonuç 211 test, 2 commit, yayın https://tussle.ziroo.net.
 - Pazarlama sohbeti: yumuşak çıkış (TR), uygulama içi viral döngü (davet linki, paylaşım kartı, puan isteme), ASO, resmî çıkış vuruşu (kısa video, topluluklar).
+- Akşam: Yusuf Xiaomi 17 Pro + Chrome ile test etti; hızlı dokunuşta 58 fps. Teşhis zinciri (sim/çizim ms → ses/titreşim A/B → Event Timing → sabit 60 Hz testi) telefonun 60↔120 Hz dokunma geçişini gösterdi; oyun kodu masum. Pasif olmayan touch dinleyicileri kaldırıldı, `desynchronized` canvas denenip geri alındı, debug paneline deploy sürümü eklendi. Son yayın `0658bd1`.
 - Dersler: [[2026-10-08-tussle-m0-dersleri]]. Sıradaki: cila turu, Kule zorluğu, canlı kapışma, Capacitor, mağaza.

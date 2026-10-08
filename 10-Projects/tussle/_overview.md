@@ -21,7 +21,7 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 - Oyunlar (M0): Refleks Işığı, Kule, Hızlı Matematik, Bıçak At; her biri varyantlı ve host panelinde parametreli.
 
 ## Güncel durum (2026-10-08; canlıdan doğrula)
-**Yayında:** https://tussle.ziroo.net (VPS konteyner `tussle`, 127.0.0.1:8087, `/opt/tussle`, Caddy `hosts/tussle.caddy`, veri `/opt/tussle/data`, sırlar `/opt/tussle/.env`). Deploy: `bash deploy/deploy.sh`. Son yayın `710dd91`, 211 test yeşil. Google/Apple girişi kodda hazır, env yok (Yusuf OAuth client + Services ID oluşturacak, `docs/AUTH-SETUP.md`). iOS Simulator'da gerçek WebKit ile uçtan uca doğrulandı (iPhone skoru = sunucu tekrarı).
+**Yayında:** https://tussle.ziroo.net (VPS konteyner `tussle`, 127.0.0.1:8087, `/opt/tussle`, Caddy `hosts/tussle.caddy`, veri `/opt/tussle/data`, sırlar `/opt/tussle/.env`). Deploy: `bash deploy/deploy.sh`. Son yayın `0658bd1` (2026-10-08 akşam; debug paneli ve Ayarlar deploy sürümünü gösterir), 211 test yeşil. Google/Apple girişi kodda hazır, env yok (Yusuf OAuth client + Services ID oluşturacak, `docs/AUTH-SETUP.md`). iOS Simulator'da gerçek WebKit ile uçtan uca doğrulandı (iPhone skoru = sunucu tekrarı).
 
 Gerçek telefon (Xiaomi 17 Pro, Chrome): oyun 0,6 ms/kare; dokunuşta kaçan kare telefonun 60↔120 Hz geçişinden (sabit 60 Hz ile kayboldu), çözüm mağaza sürümünde sabit kare hızı. Doğrulanmayanlar: Android titreşim, 120 Hz algılama, SW kaydı (gömülü panelde başarısızdı), Google/Apple gerçek giriş, arkadaşlarla oyun.
 
@@ -30,7 +30,8 @@ Gerçek telefon (Xiaomi 17 Pro, Chrome): oyun 0,6 ms/kare; dokunuşta kaçan kar
 2. Kule zorluk ayarı ve `docs/POLISH.md` maddeleri; gerçek telefon ölçümü (`?debug=1`).
 3. Canlı kapışma (M1 hayalet katmanı), sonra Parti Gecesi (M2).
 4. Capacitor kabukları → Google kapalı test (12 kişi, 14 gün) + TestFlight → mağaza listeleri (ikon, ekran görüntüsü, gizlilik politikası), paylaşım kartı, puan isteme.
-5. Ertelenen güvenlik: ID token nonce, CSP.
+5. Pazarlama planı (sohbette uzlaşıldı, karar değil): yumuşak çıkış TR, uygulama içi viral döngü (davet linki, paylaşım kartı, sezon tacından sonra puan isteme), ASO, resmî çıkış için kısa dikey videolar ve topluluklar.
+6. Ertelenen güvenlik: ID token nonce, CSP. Titreşim Xiaomi/Chrome'da hissedilmedi (incelenecek).
 
 ## Önemli kararlar
 - [[2026-10-08-web-cekirdegi-capacitor-ve-ad-tussle]]
