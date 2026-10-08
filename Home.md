@@ -8,6 +8,7 @@ date: 2026-10-01
 Buradan başla. Her şey buradan ya da bir projenin `_overview.md` dosyasından bulunabilmeli.
 
 ## Projeler
+- [[10-Projects/tussle/_overview|Tussle]]: arkadaşlarla günlük mini oyun kapışması, Playus'un hafif rakibi (TS + Canvas PWA, Node ws, sunucuda tekrar oynatma), tussle.ziroo.net; mağaza hedefi
 - [[10-Projects/bal-vadisi/_overview|Bal Vadisi]]: 2D arı/çayır temalı incremental oyun (Canvas, derleme yok), games.ziroo.net/bal-vadisi
 - [[10-Projects/isik-bekcisi/_overview|Işık Bekçisi]]: fenerle karanlık vadiye koşular yapılan koşu-tabanlı incremental oyun (Canvas, derleme yok), games.ziroo.net/isik-bekcisi
 - [[10-Projects/diskort/_overview|Diskort]]: sesli sohbet uygulaması (Windows-first, kendi sunucusu)
