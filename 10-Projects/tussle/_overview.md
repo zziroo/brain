@@ -23,7 +23,7 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 ## Güncel durum (2026-10-08; canlıdan doğrula)
 **Yayında:** https://tussle.ziroo.net (VPS konteyner `tussle`, 127.0.0.1:8087, `/opt/tussle`, Caddy `hosts/tussle.caddy`, veri `/opt/tussle/data`, sırlar `/opt/tussle/.env`). Deploy: `bash deploy/deploy.sh`. Son yayın `710dd91`, 211 test yeşil. Google/Apple girişi kodda hazır, env yok (Yusuf OAuth client + Services ID oluşturacak, `docs/AUTH-SETUP.md`). iOS Simulator'da gerçek WebKit ile uçtan uca doğrulandı (iPhone skoru = sunucu tekrarı).
 
-Doğrulanmayanlar: gerçek telefonda kare süresi, Android titreşim, 120 Hz algılama, SW kaydı (gömülü panelde başarısızdı), Google/Apple gerçek giriş, arkadaşlarla oyun.
+Gerçek telefon (Xiaomi 17 Pro, Chrome): oyun 0,6 ms/kare; dokunuşta kaçan kare telefonun 60↔120 Hz geçişinden (sabit 60 Hz ile kayboldu), çözüm mağaza sürümünde sabit kare hızı. Doğrulanmayanlar: Android titreşim, 120 Hz algılama, SW kaydı (gömülü panelde başarısızdı), Google/Apple gerçek giriş, arkadaşlarla oyun.
 
 ### Sıradaki işler
 1. Görsel yönerge + arayüz ve 4 oyuna cila turu (Yusuf görsel yönü Claude'a bıraktı; "oyuncak" yumuşak şekiller, yüzler, squash-stretch, bütçeli parçacık).
