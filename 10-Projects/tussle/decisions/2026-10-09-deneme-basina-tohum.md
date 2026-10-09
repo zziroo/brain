@@ -2,10 +2,12 @@
 type: decision
 project: tussle
 date: 2026-10-09
-status: active
+status: superseded
 tags: [tussle, adalet, hile, tohum, sunucu]
 source: oturum 2026-10-09 (mobil-playus: oda/sohbet/hareket/dil turu + oyun üretim kiti + Parti A), Parti A inceleme ajanı (yüksek bulgu)
 ---
+
+> Eskidi (2026-10-09): deneme numarası artık "Başla"da sunucuda ayrılıyor ve gün tohumu istemciye gitmiyor; bkz. [[2026-10-09-deneme-hakki-baslangicta-ayrilir]]. Kutu'nun hash2 karıştırması eski istisna olarak kaldı ([[2026-10-09-gizli-cekilisler-yalniz-tohumdan]]).
 
 # Karar: Günün k'inci denemesi `mixSeed(gün tohumu, k)` ile oynanır; antrenman rotası tohum almaz
 

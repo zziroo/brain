@@ -4,7 +4,7 @@ project: tussle
 date: 2026-10-09
 status: active
 tags: [tussle, overview, oyun, mobil, pwa]
-source: oturum 2026-10-09 (mobil-playus: sohbet merkezli oda, kit, Parti A)
+source: oturum 2026-10-09 (mobil-playus: Parti B + C, deneme hakkı ayırma, şans hakkı, skor ölçüleri)
 ---
 
 # Tussle: arkadaşlarla günlük mini oyun kapışması (Playus'un hafif rakibi)
@@ -18,23 +18,29 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 - İstemci: saf TS + Vite + Canvas 2D, framework yok; menüler DOM (rAF yalnız oyunda). PWA (manifest + SW; SW `/api`'yi hiç önbelleklemez).
 - Oyun sözleşmesi: 60 Hz sabit adım deterministik sim (`sim.ts`, DOM'suz) + `view.ts`; sim'de `Math.sin/cos/pow/hypot/random/Date` yasak (`shared/dmath`, `shared/rng`); adım başına sıfır tahsis; varsayılan 60 kare sınırı, "Yüksek kare hızı" ayarı.
 - Sunucu: Node 24 + `ws` + `node:sqlite`, tek konteyner; girdi günlüğü sunucuda tekrar oynatılır, skor sunucuda hesaplanır (hile ve tekrar izleme). Oda kodu (4 harf), günün oyunu `mixSeed(oda, gün, sezon)`, deneme hakkı, sezon, sohbet + otomatik akış satırları, misafir kimliği + Google/Apple bağlama (JWT doğrulama `node:crypto`), günlük `VACUUM INTO` yedek.
-- Oyunlar (10): M0 dörtlüsü (Refleks Işığı, Kule, Hızlı Matematik, Bıçak At) + Parti A (Renk Eşleşti, Çift Dokun, Işık Sırası, Terazi, Zıpla, Kutu Seç). Varyantlı; **oda parametresi yok**, denge kodda. Üretim kiti: `src/games/shell`, `npm run new-game`, `docs/GAME-CONTRACT.md`, yol haritası `docs/GAMES-ROADMAP.md`.
+- Oyunlar (22): M0 dörtlüsü + Parti A (6) + Parti B (Sek Sek, Karşıya Geç, Sayı Zinciri, Farklı Olan, Yüksek mi Alçak mı, Hızlı Fren) + Parti C (Top Nerede, Kart Çevir, Şeker Avı, Balon, Şeker Yağmuru, Denge). Varyantlı; **oda parametresi yok**, denge kodda. Meta: `gesture` (hayalet el), `score {unit, decimals, better}` (doğal ölçü). Üretim kiti: `src/games/shell`, `npm run new-game`, `docs/GAME-CONTRACT.md`, yol haritası `docs/GAMES-ROADMAP.md`.
 - i18n: TR/EN (`src/client/i18n`, `docs/I18N.md`); sunucu hata kodları; akış satırları yapısal.
 
 ## Güncel durum (2026-10-09; canlıdan doğrula)
-**Yayında:** https://tussle.ziroo.net (VPS konteyner `tussle`, 127.0.0.1:8087, `/opt/tussle`, Caddy `hosts/tussle.caddy`, veri `/opt/tussle/data`, sırlar `/opt/tussle/.env`). Deploy: `bash deploy/deploy.sh`. Son yayın `bffcca0` (2026-10-09): oda ekranı **sohbet merkezli** (podyum şeridi, Tablo/Sezon/Üyeler alt sayfa, tepki + yanıt + emoji paneli, sezon çizgi grafiği, oyuncu kartı), **hareket paketi**, **TR/EN dil ayarı**, günün oyununa **deneme turu** (geçmiş gün antrenmanı kalktı), host paneli yeni dilde ve "hariç tutma" havuzu, **oyun üretim kiti**, **Parti A: 6 yeni oyun** (10 oyun), **deneme başına tohum** (ezber kapandı), günün oyunu rotasyonu (7 gün tekrar yok, aynı tür ≤2 gün). DB migration 4–6 uygulandı. 500 test yeşil. Google/Apple girişi kodda hazır, env yok (Yusuf OAuth client + Services ID, `docs/AUTH-SETUP.md`).
+**Yayında:** https://tussle.ziroo.net (VPS konteyner `tussle`, 127.0.0.1:8087, `/opt/tussle`, Caddy `hosts/tussle.caddy`, veri `/opt/tussle/data`, sırlar `/opt/tussle/.env`). Deploy: `bash deploy/deploy.sh`. Son yayın `9dab21c` (2026-10-09), DB sürümü 10 (migrasyon 7 deneme ayırma, 8 şans hakkı, 9 günün kuralları, 10 skor yeniden hesaplama). Yayın öncesi yedekler `/opt/tussle/data/pre-037f08d.db`, `pre-9dab21c.db`. 857 test yeşil.
+- Başlangıç: kartta hayalet el + renkli hareket kelimeleri, yalnız "Başla" düğmesi, sonra sahanın üstünde 3-2-1.
+- Deneme "Başla"da sunucuda ayrılır; oyunda çıkış yok; gün tohumu istemciye gitmez; outbox; şans hakkı (yazı tura).
+- Puanlama sabit (en iyi, 10/7/5/3); deneme sayısı + şans hakkı günün ilk denemesinde donar.
+- Skor doğal ölçü (ms, kat, tur, sn, adım, şeker, top; diğerleri puan + ikincil ölçü).
+- Google/Apple girişi kodda hazır, env yok (`docs/AUTH-SETUP.md`).
 
-Gerçek telefon: hiçbir şey bu turdan sonra görülmedi. Önceki bilinen: 120 Hz'de dokunuşta kaçan kare (çözüm Capacitor'da sabit kare hızı), titreşim Xiaomi/Chrome'da hissedilmiyor.
-Doğrulanmayanlar: klavye açıkken gönderme çubuğu (iOS/Android), uzun basma/sağa kaydırma jestleri, alt sayfa çekme (`pan-down` Android, iOS yalnız tutamak), View Transitions görünümü, Gece teması, İngilizce mod, 6 yeni oyun (özellikle Terazi'nin ilk sorusu anlaşılıyor mu, Çift Dokun tek elle, Zıpla 60/120 Hz), PWA ikon yenilenmesi, SW kaydı.
+Gerçek telefon: Parti B'nin ilk hali görüldü (geri bildirimle Sek Sek, Hızlı Fren, Top Nerede, Şeker Yağmuru, Karşıya Geç ipucu düzeltildi). **Bu son yayının hiçbir parçası telefonda görülmedi.**
+Doğrulanmayanlar: hayalet el boyutu/hızı, 3-2-1 animasyonu, Android geri tuşu ve arka plan/kapatma akışı, outbox (uçak modu), şans hakkı para dönüşü (iOS), Sek Sek sis + top gecikmesi, Hızlı Fren hızlanması, Top Nerede hızı, Şeker Yağmuru başparmak hissi, Balon sertliği (iyi oyuncu balonların ~yarısını patlatıyor), Kart Çevir 0,6 sn, Denge/Şeker Avı genel his, 120 Hz akıcılık.
 
 ### Sıradaki işler
-1. **Telefon turu** (yukarıdaki liste) + arkadaşlarla gerçek gün; açık sayfayı bir kez yenile (eski sayfa "yenile" hatası alır).
-2. **Parti B** (6 oyun, karışık tür, basit + "bir tur daha", özgün-ama-basit serbest): listeyi Yusuf'a gösterip başla. Bütçe: parti ≈ haftalık limitin %5–7'si; 2026-10-09 itibarıyla hafta %80'de, büyük ihtimalle 2026-10-12 sonrası.
-3. Kit açıkları: HUD rozeti metne göre genişlesin, `gradeSticker` meta/view hook'u olsun, `TextLabel.set` params tahsisi, GameClock'tan süre düşme yardımcısı, seçim düğmeleri yardımcısı, ScorePop tek pop tutuyor.
-4. Sohbete GIF (Tenor/GIPHY anahtarı); sunucu takip: deneme başına skorlar, diğer oyuncuların serisi (oyuncu kartı için).
-5. Canlı kapışma (M1) havuz 15–20 olunca: sohbetten kapışma kartı, 2–4 kişi ([[2026-10-09-oyun-uretim-kiti-ve-partiler]]). Sonra Parti Gecesi (M2).
-6. Capacitor kabukları (sabit kare hızı) → kapalı test + TestFlight → mağaza; havuz 25+.
-7. Ertelenen teknik: ID token nonce, CSP (satır içi tema + dil betiklerinin hash'i), pasif sözlük tembel yükleme (3. dilde), tepki toggle'ını idempotent yapma, `GET me` 30 odada ağırlaşabilir.
+1. **Telefon turu** (yukarıdaki liste); hak harcamadan deneme: `https://tussle.ziroo.net/#/oyun/<id>`.
+2. Şeker Yağmuru kapağı (sepet artık yukarıda; kapakta altta).
+3. Görünümü yetişkinleştirme (konuşuldu, ertelendi): önce palet + yazı tipi + kabukta yüz aç/kapa ile 2–3 oyunda örnek; sonra partiler halinde. Maliyet: renk/yazı ucuz, yüzler ≈ bir parti.
+4. Kit açıkları: HUD rozeti metne göre genişlesin, `gradeSticker` hook'u, `TextLabel.set` tahsisi, seçim düğmeleri yardımcısı, ScorePop tek pop; 360×640'ta skor çarpıyla çakışıyor.
+5. Şüpheli koşu bayrakları (kutu, yuksek, refleks) hiçbir yerde kullanılmıyor; istenirse tablodan ayırma.
+6. Sohbete GIF; canlı kapışma (M1, havuz 22 ≥ 15–20 şartı sağlandı); sonra Parti Gecesi (M2).
+7. Capacitor kabukları → TestFlight → mağaza (havuz 25+).
+8. Ertelenen teknik: ID token nonce, CSP, pasif sözlük tembel yükleme, tepki toggle idempotent, `GET me` 30 odada.
 
 ## Önemli kararlar
 - [[2026-10-08-web-cekirdegi-capacitor-ve-ad-tussle]]
@@ -50,19 +56,28 @@ Doğrulanmayanlar: klavye açıkken gönderme çubuğu (iOS/Android), uzun basma
 - [[2026-10-09-dil-altyapisi-tr-en]]
 - [[2026-10-09-havuz-haric-tutma-listesi]]
 - [[2026-10-09-oyun-uretim-kiti-ve-partiler]]
-- [[2026-10-09-deneme-basina-tohum]]
+- [[2026-10-09-deneme-basina-tohum]] (eskidi)
+- [[2026-10-09-deneme-hakki-baslangicta-ayrilir]]
+- [[2026-10-09-gizli-cekilisler-yalniz-tohumdan]]
+- [[2026-10-09-sans-hakki-yazi-tura]]
+- [[2026-10-09-puanlama-sabit-gunun-kurallari-donar]]
+- [[2026-10-09-skor-dogal-olcu]]
+- [[2026-10-09-baslangic-karti-basla-dugmesi-ve-sayac]]
+- [[2026-10-09-sure-siniri-yerine-sonsuz-hizlanan]]
 
 ## Dersler
 - [[2026-10-08-tussle-m0-dersleri]]
 - [[2026-10-08-cila-turu-dersleri]]
 - [[2026-10-08-ui-yenileme-dersleri]]
 - [[2026-10-09-parti-a-dersleri]]
+- [[2026-10-09-parti-b-c-dersleri]]
 
 ## Oturumlar
 - [[2026-10-08-tussle-tasarim-ve-m0-yayin]]
 - [[2026-10-08-tussle-cila-turu-ve-tema]]
 - [[2026-10-08-tussle-ui-yenileme-seker-dukkani]]
 - [[2026-10-09-tussle-sohbet-merkezli-oda-kit-ve-parti-a]]
+- [[2026-10-09-tussle-parti-b-c-deneme-hakki-ve-skor]]
 
 ## İlgili
 Aynı VPS ve Caddy: [[10-Projects/kapis/_overview|KAPIŞ]] (ws sunucu kalıbı buradan), [[10-Projects/diskort/_overview|Diskort]]. Çalışma kuralları: [[orkestrasyon]], [[karar-dagilimi]].
