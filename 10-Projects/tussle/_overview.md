@@ -32,10 +32,11 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 
 ### Sıradaki işler
 1. **Telefon turu**: D/E/F oyunları + önceki liste; hak harcamadan `https://tussle.ziroo.net/#/oyun/<id>`. Bakılacaklar: Fırlat hassasiyeti, İp Atla ilk oyuncu süresi, Şeker Ritmi geniş şeker/sıçrama, Vinç bantları, Çizgi Takip zorluk.
-2. **Parti G** (haftalık limit sıfırlanınca, ~2026-10-12): bilinen beceri oyunları, ilk oyunların tarzında, ajanlar tarayıcıda oynar. Adaylar: Kanat Çırp (Flappy), Şeker Kes (Fruit Ninja), Spiral Kule (Helix), Renk Geçidi (Color Switch), Yılan, Tuğla Kır.
-3. **Canlı kapışma (M1)**: sohbetten kapışma kartı, 2–4 kişi (bütçe sıfırlanınca).
-4. Tema toptan düzenleme (Yusuf kararı, sonra). Jeton İtici kural yeniden tasarımı (tek şerit baskın).
-5. Kit/teknik: seçim düğmeleri yardımcısı; bayrakları tabloda ayırma (istenirse); Capacitor → TestFlight → mağaza; ertelenenler (ID token nonce, CSP, sözlük tembel yükleme, tepki toggle idempotent, `GET me` 30 oda).
+2. **Kapaklar**: D/E/F'nin havuzdaki 14 oyunu yer tutucu kapakta (kapı, örüntü, ipatla, firlat, cark, hazine, vinc, gecit, pinyata, sifre, katane, cizgi, doldur, ritim). Kapak koordinatör işi (paylaşılan `covers-core.ts` + `theme.css`, docs/VISUAL.md §4.1); Yusuf'a 48 px önizlemeyle tur tur göster. Toptan tema değişikliği yakınsa ona bırak.
+3. **Parti G** (haftalık limit sıfırlanınca, ~2026-10-12): bilinen beceri oyunları, ilk oyunların tarzında, ajanlar tarayıcıda oynar. Adaylar: Kanat Çırp (Flappy), Şeker Kes (Fruit Ninja), Spiral Kule (Helix), Renk Geçidi (Color Switch), Yılan, Tuğla Kır.
+4. **Canlı kapışma (M1)**: sohbetten kapışma kartı, 2–4 kişi (bütçe sıfırlanınca).
+5. Tema toptan düzenleme (Yusuf kararı, sonra). Jeton İtici kural yeniden tasarımı (tek şerit baskın).
+6. Kit/teknik: seçim düğmeleri yardımcısı; bayrakları tabloda ayırma (istenirse); Capacitor → TestFlight → mağaza; ertelenenler (ID token nonce, CSP, sözlük tembel yükleme, tepki toggle idempotent, `GET me` 30 oda).
 
 ## Önemli kararlar
 - [[2026-10-08-web-cekirdegi-capacitor-ve-ad-tussle]]
