@@ -17,7 +17,7 @@ Steam'in rehber görüntüleyicisi tek uzun sayfa; okurken sürekli aşağı yuk
 ## Teknoloji
 - Kaynak `C:\Users\yusuf\ZZ\zProjects\achievement-guide-formatter` (Windows) ve `/Users/ziroo/ZZ/zProjects/achievement-guide-formatter` (Mac; yerel git, remote yok, main). Node 24, bağımlılık yok, `node:sqlite`, ESM, şema v6. Düzen: `src/`, `public/`, `test/` (157 test, çalıştırma `node --test test/*.test.js`), `deploy/`, sözleşme `docs/SPEC.md`.
 - HTML ayrıştırıcı elle yazıldı (`src/html.js`, `src/parse.js`); düğüm bütçesi 200k, derinlik 150, sayfa 3 MB.
-- AI motoru: sunucu içinden `claude -p` başsız kip, araçsız, sahibin Max aboneliği (`CLAUDE_CODE_OAUTH_TOKEN`). Model talimatı `src/ai-prompt.md`; araştırma aşaması `src/research-prompt.md` (yalnız WebSearch/WebFetch). CLI'ye giden metinde `@` → `＠`. Neden: [[2026-10-04-ai-motoru-sunucu-icinde-claude-cli]].
+- AI motoru: sunucu içinden `claude -p` başsız kip, araçsız, kimlik 2026-10-09'dan beri Console API anahtarı `rehber-prod` (`ANTHROPIC_API_KEY`, `/etc/rehber.env`); anahtar yoksa abonelik belirtecine (`CLAUDE_CODE_OAUTH_TOKEN`) döner: [[10-Projects/song-finder/decisions/2026-10-09-motor-kimligi-uygulama-basina-console-api-anahtari|karar]]. Model talimatı `src/ai-prompt.md`; araştırma aşaması `src/research-prompt.md` (yalnız WebSearch/WebFetch). CLI'ye giden metinde `@` → `＠`. Neden: [[2026-10-04-ai-motoru-sunucu-icinde-claude-cli]].
 - Sahip girişi (`OWNER_PASSWORD`, en az 12 karakter): AI üretimini yalnız sahip başlatır; ziyaretçi rehber ekler ve okur.
 - Arayüzde `innerHTML` yok, inline script/style yok (tools kökeni Ziroobank ile ortak): [[2026-10-03-joker-dns-ve-tools-games-alt-alan-adlari]].
 - Elle müdahale CLI: `node src/cli.js list|show|claim|submit|fail|requeue|delete|stats|add|import-html|research|cancel`.
@@ -57,5 +57,5 @@ Yayında, commit `fb767ec` (son DB yedeği `/opt/rehber/backup/20261005-180314`)
 - Doğrulanmadı (`status: unverified`): yeni istemlerin gerçek çıktıya etkisi; gerçek `claude` süreciyle iptal; okuyucudaki başarım dili seçicisinin son düzeltmeleri (yalnız ilk sürüm canlıda denendi); gizli başarımlarda kart açıklaması; araştırmada `error_max_turns` alt tipinin gerçek davranışı.
 - Altyapı (ayrı iş): AI araştırmasında WebFetch aynı Docker ağındaki diğer konteynerlere ulaşabilir; `rehber` konteynerini ayrı ağa almak.
 - Karar bekleyen (önceki oturumdan): Opus belgelerde görselleri az kullanıyor (talimat ayarı önerildi). Kart açıklamasının resmi açıklama olması (çevirisi olmayan oyunda Türkçe belgede İngilizce açıklama) Yusuf'a bildirildi, yanıt yok.
-- **Token yenileme** (önceki oturumdan, doğrulanmadı): `CLAUDE_CODE_OAUTH_TOKEN` yenilenip eski satır iptal edildi mi?
+- **Eski belirteç temizliği**: `/etc/rehber.env` içindeki `CLAUDE_CODE_OAUTH_TOKEN` satırı silinecek, Console'da setup-token belirteci iptal edilecek (API anahtarına geçildi, 2026-10-09).
 - Bu deponun remote'u yok (GitHub'a gönderilmedi). ziroo-edge `c7782d9` 2026-10-05 akşamı itibarıyla push edilmiş.

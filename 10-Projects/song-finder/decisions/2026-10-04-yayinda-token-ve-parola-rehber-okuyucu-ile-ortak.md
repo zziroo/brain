@@ -2,10 +2,12 @@
 type: decision
 project: song-finder
 date: 2026-10-04
-status: active
+status: superseded
 tags: [song-finder, karar, yayin, sirlar]
 source: oturum "Benzer şarkı bulma aracı" (2026-10-04)
 ---
+
+> 2026-10-09: Token kısmı geçersiz, iki araç uygulama başına Console API anahtarı kullanıyor: [[2026-10-09-motor-kimligi-uygulama-basina-console-api-anahtari]]. Parola kısmı sürüyor.
 
 # Yayında Claude token'ı ve giriş parolası şimdilik Rehber Okuyucu ile aynı değerleri kullanır
 
