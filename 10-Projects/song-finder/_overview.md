@@ -36,7 +36,7 @@ Spotify / YouTube / Apple Music / Deezer linki ya da "Sanatçı - Şarkı" alır
 
 ## Yayın (2026-10-04'ten beri)
 https://tools.ziroo.net/song-finder → konteyner `song-finder` (127.0.0.1:8092, kaynak `/opt/song-finder/src`, veri `/opt/song-finder/data`), Caddy parçası `/opt/ziroo-sites/tools/song-finder.caddy`. Betik `app/deploy/deploy.sh` (Git Bash'ten, proje kökünden). Konteyner salt okunur, `--memory 1500m --cpus 1 --pids-limit 256`. Env dosyaları `docker run` anında okunur; değiştirince betiği yeniden çalıştır.
-- Sırlar sunucuda: `/etc/song-finder.env` (`ANTHROPIC_API_KEY` = song-finder-prod; `APP_PASSWORD`: Rehber Okuyucu'nun parolasıyla aynı değer; `LASTFM_API_KEY`). `/etc/claude-token.env` (eski abonelik belirteci) hâlâ `--env-file` ile veriliyor ama kod geçirmiyor; temizlik bekliyor.
+- Sırlar sunucuda: `/etc/song-finder.env` (`ANTHROPIC_API_KEY` = song-finder-prod; `APP_PASSWORD`: Rehber Okuyucu'nun parolasıyla aynı değer; `LASTFM_API_KEY`). `/etc/claude-token.env` boşaltıldı (yalnız yorum satırı), eski belirteç iptal edildi. Modeller `SF_MODEL_RESEARCH`/`SF_MODEL_RANK`=sonnet (kredi maliyeti için opus'tan çekildi).
 - İlk canlı arama (Rick Astley linki): 524 sn (yerelde ~4 dk), parça başına ses ölçümü 2,8 sn (yerelde 1,3), bellek tepe ~690 MB, yük ortalaması ~1,0; LiveKit'in CPU'su etkilenmedi (o sırada Diskort'ta görüşme olup olmadığı bilinmiyor).
 
 ## Güncel durum (2026-10-04)
@@ -46,7 +46,7 @@ Yayında, commit `218b5ee`: keşif odaklı sürüm. Sonuçlar dört bilinirlik e
 
 ## Sıradaki işler
 - Yusuf birkaç şarkıyla deneyip öneri kalitesini değerlendirecek (karar onda).
-- Eski abonelik belirteci (daha önce ekran görüntüsüyle sohbete düşmüştü) artık kullanılmıyor; iptali ve env dosyalarından silinmesi bekliyor (bkz. 2026-10-09 kararındaki temizlik listesi).
+- Eski abonelik belirteci (daha önce ekran görüntüsüyle sohbete düşmüştü) iptal edildi ve env dosyalarından silindi (2026-10-09).
 - Doğrulanmadı: kullanım sayfasının canlıdaki görünümü (koordinatör parolayı girmediği için bakmadı); başarısız aramanın kullanım kaydı; Diskort'ta görüşme varken ses ölçümünün etkisi.
 - Depo GitHub'a gönderilmedi (remote yok). ziroo-edge `c7782d9` ve `8b7adf6` 2026-10-05 akşamı itibarıyla push edilmiş.
 - Bilinen sınırlar (keşif sürümü): Deezer `rank` bugünkü dinlenmeye bakar, bir zamanların hitleri "az bilinen" görünebilir (6 Underground, Novocaine For The Soul, Cigarette Daydreams); ikinci ölçü (yayın yılı / Last.fm dinlenme) önerildi, karar yok. Bazı türlerde ana liste 25'e ulaşmıyor. Arama sürerken `/api/preview` "Deezer sırası dolu" diyebilir. Deezer verisi eksik aramalar önbelleğe alınmaz.

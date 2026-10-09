@@ -57,5 +57,5 @@ Yayında, commit `fb767ec` (son DB yedeği `/opt/rehber/backup/20261005-180314`)
 - Doğrulanmadı (`status: unverified`): yeni istemlerin gerçek çıktıya etkisi; gerçek `claude` süreciyle iptal; okuyucudaki başarım dili seçicisinin son düzeltmeleri (yalnız ilk sürüm canlıda denendi); gizli başarımlarda kart açıklaması; araştırmada `error_max_turns` alt tipinin gerçek davranışı.
 - Altyapı (ayrı iş): AI araştırmasında WebFetch aynı Docker ağındaki diğer konteynerlere ulaşabilir; `rehber` konteynerini ayrı ağa almak.
 - Karar bekleyen (önceki oturumdan): Opus belgelerde görselleri az kullanıyor (talimat ayarı önerildi). Kart açıklamasının resmi açıklama olması (çevirisi olmayan oyunda Türkçe belgede İngilizce açıklama) Yusuf'a bildirildi, yanıt yok.
-- **Eski belirteç temizliği**: `/etc/rehber.env` içindeki `CLAUDE_CODE_OAUTH_TOKEN` satırı silinecek, Console'da setup-token belirteci iptal edilecek (API anahtarına geçildi, 2026-10-09).
+- Eski belirteç temizliği 2026-10-09'da tamamlandı; `REHBER_MODEL=sonnet` (kredi maliyeti için opus'tan çekildi, kalite düşerse geri alınır).
 - Bu deponun remote'u yok (GitHub'a gönderilmedi). ziroo-edge `c7782d9` 2026-10-05 akşamı itibarıyla push edilmiş.

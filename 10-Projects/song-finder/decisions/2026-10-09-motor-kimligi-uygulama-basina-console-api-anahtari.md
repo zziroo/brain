@@ -29,9 +29,11 @@ source: oturum ZZ kökü 2026-10-09 (API anahtarına geçiş)
 - Konteyner içini elle yamamak (deploy'suz): salt okunur dosya sistemi, ilk yeniden başlatmada kaybolur.
 
 ## Sonuçlar / riskler
+- **Model (2026-10-09, aynı gün):** sunucuda ikisi de `opus` ayarlıydı (abonelikte bedelsizdi). Kredide Opus Sonnet'in kabaca beş katı olduğu için Yusuf'un onayıyla Sonnet'e çekildi: song-finder `SF_MODEL_RESEARCH`/`SF_MODEL_RANK`, rehber `REHBER_MODEL` (`/etc/*.env`), iki deploy yenilendi. Kart kalitesi düşerse yalnız rehber Opus'a geri alınır.
+- **Temizlik tamamlandı (2026-10-09):** eski belirteç satırları env dosyalarından kaldırıldı (yedek `/root/env-backup/`), konteynerler yalnız API anahtarı taşıyor; Yusuf Console'da eski anahtarları ve setup-token belirtecini sildi.
 - Kredi kullanımla erir (song-finder arama başına 45-60 bin token + web araması). Console'da aylık harcama limiti koyulmalı; auto-reload kapalı kalmalı.
 - Anahtar süresi: ilk denemede 30 gün seçilmişti, rehber-prod bu yüzden yeniden üretildi. Eski rehber-prod anahtarı Console'da silinmeli.
-- Temizlik (2026-10-09 itibarıyla bekliyor, Claude'un sunucuya yazma izni yok): `/etc/rehber.env` içindeki `CLAUDE_CODE_OAUTH_TOKEN` satırı ve `/etc/claude-token.env` içeriği kaldırılacak, iki konteyner yeniden başlatılacak; Console > Authorization tokens'taki yalnız `user:inference` kapsamlı belirteç (setup-token) iptal edilecek. Kod belirteci zaten geçirmediği için acil değil.
+- Temizlik planı (aynı gün tamamlandı, yukarıya bak): `/etc/rehber.env` içindeki `CLAUDE_CODE_OAUTH_TOKEN` satırı ve `/etc/claude-token.env` içeriği kaldırılacak, iki konteyner yeniden başlatılacak; Console > Authorization tokens'taki yalnız `user:inference` kapsamlı belirteç (setup-token) iptal edilecek. Kod belirteci zaten geçirmediği için acil değil.
 - [[2026-10-04-yayinda-token-ve-parola-rehber-okuyucu-ile-ortak]] kararının token kısmı geçersiz; parola kısmı sürüyor.
 
 ## İlgili
