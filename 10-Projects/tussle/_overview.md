@@ -22,19 +22,20 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 - i18n: TR/EN (`src/client/i18n`, `docs/I18N.md`); sunucu hata kodları; akış satırları yapısal.
 
 ## Güncel durum (2026-10-09; canlıdan doğrula)
-**Yayında:** https://tussle.ziroo.net (VPS konteyner `tussle`, 127.0.0.1:8087, `/opt/tussle`, Caddy `hosts/tussle.caddy`, veri `/opt/tussle/data` (konteyner içinde `/data`), sırlar `/opt/tussle/.env`). Deploy: `bash deploy/deploy.sh`. Son yayın `2482f79` (2026-10-09), DB sürümü 10. Yayın öncesi yedekler `/opt/tussle/data/pre-*.db` (son: `pre-2482f79.db`; alma: `docker exec tussle node -e` ile `VACUUM INTO`). 1.279 test yeşil.
+**Yayında:** https://tussle.ziroo.net (VPS konteyner `tussle`, 127.0.0.1:8087, `/opt/tussle`, Caddy `hosts/tussle.caddy`, veri `/opt/tussle/data` (konteyner içinde `/data`), sırlar `/opt/tussle/.env`). Deploy: `bash deploy/deploy.sh`. Son yayın `30532cf` (2026-10-09), DB sürümü 10. Yayın öncesi yedekler `/opt/tussle/data/pre-*.db` (son: `pre-30532cf.db`; alma: `docker exec tussle node -e` ile `VACUUM INTO`). 1.593 test yeşil.
 - Havuz beceri öncelikli: anlık kontrol, sonuç oyuncunun elinde; şans/izleme oyunları `OFF_POOL`'da (linkle oynanır). [[2026-10-09-havuz-beceri-oncelikli-havuz-disi-liste]]
-- Havuzdaki 36 oyunun hepsinin çizimli kapağı var (D/E/F'nin 14'ü `2482f79`'da); yer tutucu yalnız havuz dışı 4'te. Antrenman yalnız canlı havuzu listeler, ana sayfa satırında 4 küçük kapak.
+- **Parti G+H yayında (`30532cf`)**: 14 yeni oyun (Kanat Çırp, Şeker Kes, Spiral Kule, Bambu Kes, Diken Duvar, Tuğla Kır, Jöle Kes, Tam Zamanı, Renk Hafızası, Havada Tut, Hedef Avı, Yörünge, Yılan, Zikzak) + kapakları; 54 kayıtlı, 50 havuzda/Antrenman'da. Yeni skor birimleri: kesim, yuzde, vurus, tugla. İnceleme düzeltmeleri: bambu tempo sınırı, kes daire ovalama, yorunge dokunuş aralığı; tamzaman/renkhafiza şüpheli bayrakları. [[2026-10-09-tussle-parti-g-h]]
+- Havuzdaki oyunların hepsinin çizimli kapağı var (D/E/F'nin 14'ü `2482f79`'da); yer tutucu yalnız havuz dışı 4'te. Antrenman yalnız canlı havuzu listeler, ana sayfa satırında 4 küçük kapak.
 - E+F oyunları tarayıcıda canlandırıldı (sahne, karakter, ödül anı). Görsel tarz: ilk oyunlar gibi devam; tüm oyunların teması sonra toptan düzenlenebilir (Yusuf, limit yenilenince).
 - Şüpheli koşu bayrakları: kutu, yuksek, refleks, gecit, plinko, hazine, sifre, katane (saklanıyor, hiçbir yerde gösterilmiyor).
 - Google/Apple girişi kodda hazır, env yok (`docs/AUTH-SETUP.md`).
 
-**Telefonda hiç görülmedi:** D, E, F partilerinin tamamı (yeni Vinç kuralı ve yeni kapaklar dahil) ve önceki turun listesi (hayalet el, 3-2-1, Android geri, outbox, şans hakkı, 120 Hz).
+**Telefonda hiç görülmedi:** G+H'nin 14 oyunu, D, E, F partilerinin tamamı (yeni Vinç kuralı ve yeni kapaklar dahil) ve önceki turun listesi (hayalet el, 3-2-1, Android geri, outbox, şans hakkı, 120 Hz).
 
 ### Sıradaki işler
 1. **Telefon turu**: D/E/F oyunları + önceki liste; hak harcamadan `https://tussle.ziroo.net/#/oyun/<id>`. Bakılacaklar: Fırlat hassasiyeti, İp Atla ilk oyuncu süresi, Şeker Ritmi geniş şeker/sıçrama, Vinç bantları, Çizgi Takip zorluk.
 2. **Kapaklara bakış**: 14 yeni kapak Yusuf onayı beklemeden yayında; beğenilmeyenleri varyantla daralt. Koyu temada ritim/gecit panel ayrışması kart içinde kontrol edilmedi; panel renk yakınlıkları (vinc~matematik, cark~renk, ritim~denge). Havuz dışı 4 hâlâ yer tutucu.
-3. **Parti G + H** (haftalık limit sıfırlanınca, ~2026-10-12): hedef 54 kayıtlı / ~50 havuz (Yusuf: "50'yi geçebiliriz, zayıfları sonra eleriz"). Liste `docs/GAMES-ROADMAP.md` "Parti G–H" (Playus kataloğu taramasından): G = Kanat Çırp, Şeker Kes, Spiral Kule, Bambu Kes, Diken Duvar, Tuğla Kır; H = Jöle Kes, Tam Zamanı, Renk Hafızası, Havada Tut, Hedef Avı, Yörünge, Yılan, Zikzak. İlk oyunların tarzında, ajanlar tarayıcıda oynar.
+3. **G+H telefon turu**: denge şüpheleri — Spiral 10–30. kat ekşi yoğunluğu, Zikzak 8 karo/sn tavanı, Yılan dönüş parmak kalkınca, Hedef küçük hedefte merkez, Yörünge erken çiviler kolay mı, Bambu 10/sn sınırı hissettiriyor mu. Sonra zayıflar `OFF_POOL`'a. Yedek adaylar: Basket, Ok Duvarı, Jetpack, Şerit Kaç, Kargo Ayır.
 4. **Canlı kapışma (M1)**: sohbetten kapışma kartı, 2–4 kişi (bütçe sıfırlanınca).
 5. Tema toptan düzenleme (Yusuf kararı, sonra). Jeton İtici kural yeniden tasarımı (tek şerit baskın).
 6. Kit/teknik: seçim düğmeleri yardımcısı; bayrakları tabloda ayırma (istenirse); Capacitor → TestFlight → mağaza; ertelenenler (ID token nonce, CSP, sözlük tembel yükleme, tepki toggle idempotent, `GET me` 30 oda).
@@ -81,6 +82,7 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 - [[2026-10-09-tussle-parti-b-c-deneme-hakki-ve-skor]]
 - [[2026-10-09-tussle-parti-d-e-f-ve-canlandirma]]
 - [[2026-10-09-tussle-kapaklar-ve-antrenman-duzeltmesi]]
+- [[2026-10-09-tussle-parti-g-h]]
 
 ## İlgili
 Aynı VPS ve Caddy: [[10-Projects/kapis/_overview|KAPIŞ]] (ws sunucu kalıbı buradan), [[10-Projects/diskort/_overview|Diskort]]. Çalışma kuralları: [[orkestrasyon]], [[karar-dagilimi]].
