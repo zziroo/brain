@@ -1,7 +1,7 @@
 ---
 type: project
 project: rehber-okuyucu
-date: 2026-10-05
+date: 2026-10-09
 status: active
 tags: [rehber-okuyucu, overview, steam, ai-motoru]
 source: oturum 2026-10-03/04/05 (achievement-guide-formatter)
@@ -47,15 +47,17 @@ https://tools.ziroo.net/rehber → konteyner `rehber` (127.0.0.1:8095, deneme 80
 ## Oturumlar
 - [[2026-10-04-ilk-surum-ve-yayin]]
 - [[2026-10-05-kalite-dil-arastirma-iptal]]
+- [[10-Projects/song-finder/sessions/2026-10-09-api-anahtarina-gecis-ve-sonnet|2026-10-09 API anahtarına geçiş ve Sonnet]] (Song Finder ile ortak oturum)
 
-## Güncel durum (2026-10-05)
+## Güncel durum (2026-10-09)
+- **2026-10-09:** motor kimliği Console API anahtarı `rehber-prod`, `REHBER_MODEL=sonnet` (opus'tan çekildi; araştırma modeli boş olduğu için o da sonnet), yayında `c695e5a`. Sonnet ile kart kalitesi henüz denenmedi; düşerse yalnız bu araç Opus'a döner.
 - **2026-10-05 akşam:** arayüz neon temada (`6239cde`); arayüzde "sahip" yerine "admin", bilgi etiketleri büyük harfe çevrilmiyor (`a5114d9`). Yayında; DB yedeği `/opt/rehber/backup/20261005-190742` ([[2026-10-05-araclarin-arayuzu-neon-temaya-gecti]]).
-Yayında, commit `fb767ec` (son DB yedeği `/opt/rehber/backup/20261005-180314`). Motor `opus` (araştırma da `opus`), günlük sınır 30. Canlıda 6 rehber + 1 AI araştırması (Wolfenstein II, `app612880`, İngilizce, hazır; yol haritası zayıftı → araştırma istemine oynanış sırası eklendi, yeniden araştırma bekliyor). Witcher 3 artık hazır (Yusuf yeniden üretmiş). Bu oturumda yayına girenler: her bilgi tek yerde + tek Dikkat paneli + nedenli Dikkat maddeleri, Özgün/TR/EN çıktı ve Steam resmi başarım adları (okuyucuda dil seçimi), AI araştırması, üretim iptali, `@` genişletmesinin kapatılması, İngilizce belgede "İ" büyük harf düzeltmesi.
+Yayında, commit `fb767ec` (son DB yedeği `/opt/rehber/backup/20261005-180314`). Motor o tarihte `opus` (2026-10-09'dan beri `sonnet`), günlük sınır 30. Canlıda 6 rehber + 1 AI araştırması (Wolfenstein II, `app612880`, İngilizce, hazır; yol haritası zayıftı → araştırma istemine oynanış sırası eklendi, yeniden araştırma bekliyor). Witcher 3 artık hazır (Yusuf yeniden üretmiş). Bu oturumda yayına girenler: her bilgi tek yerde + tek Dikkat paneli + nedenli Dikkat maddeleri, Özgün/TR/EN çıktı ve Steam resmi başarım adları (okuyucuda dil seçimi), AI araştırması, üretim iptali, `@` genişletmesinin kapatılması, İngilizce belgede "İ" büyük harf düzeltmesi.
 
 ## Sıradaki işler
 - Yusuf yeni kuralları deneyecek: Wolfenstein II'yi "Yeniden araştır" (oynanış sırası → görev görev yol haritası beklenir); yeni istemle normal rehber üretimi (tekrar ve Dikkat maddeleri).
 - Doğrulanmadı (`status: unverified`): yeni istemlerin gerçek çıktıya etkisi; gerçek `claude` süreciyle iptal; okuyucudaki başarım dili seçicisinin son düzeltmeleri (yalnız ilk sürüm canlıda denendi); gizli başarımlarda kart açıklaması; araştırmada `error_max_turns` alt tipinin gerçek davranışı.
 - Altyapı (ayrı iş): AI araştırmasında WebFetch aynı Docker ağındaki diğer konteynerlere ulaşabilir; `rehber` konteynerini ayrı ağa almak.
 - Karar bekleyen (önceki oturumdan): Opus belgelerde görselleri az kullanıyor (talimat ayarı önerildi). Kart açıklamasının resmi açıklama olması (çevirisi olmayan oyunda Türkçe belgede İngilizce açıklama) Yusuf'a bildirildi, yanıt yok.
-- Eski belirteç temizliği 2026-10-09'da tamamlandı; `REHBER_MODEL=sonnet` (kredi maliyeti için opus'tan çekildi, kalite düşerse geri alınır).
+- Bir hafta sonra Console Usage'da `rehber-prod` harcamasına bak.
 - Bu deponun remote'u yok (GitHub'a gönderilmedi). ziroo-edge `c7782d9` 2026-10-05 akşamı itibarıyla push edilmiş.
