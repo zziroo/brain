@@ -34,7 +34,7 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 ### Sıradaki işler
 1. **Telefon turu**: D/E/F oyunları + önceki liste; hak harcamadan `https://tussle.ziroo.net/#/oyun/<id>`. Bakılacaklar: Fırlat hassasiyeti, İp Atla ilk oyuncu süresi, Şeker Ritmi geniş şeker/sıçrama, Vinç bantları, Çizgi Takip zorluk.
 2. **Kapaklara bakış**: 14 yeni kapak Yusuf onayı beklemeden yayında; beğenilmeyenleri varyantla daralt. Koyu temada ritim/gecit panel ayrışması kart içinde kontrol edilmedi; panel renk yakınlıkları (vinc~matematik, cark~renk, ritim~denge). Havuz dışı 4 hâlâ yer tutucu.
-3. **Parti G** (haftalık limit sıfırlanınca, ~2026-10-12): bilinen beceri oyunları, ilk oyunların tarzında, ajanlar tarayıcıda oynar. Adaylar: Kanat Çırp (Flappy), Şeker Kes (Fruit Ninja), Spiral Kule (Helix), Renk Geçidi (Color Switch), Yılan, Tuğla Kır.
+3. **Parti G + H** (haftalık limit sıfırlanınca, ~2026-10-12): hedef 54 kayıtlı / ~50 havuz (Yusuf: "50'yi geçebiliriz, zayıfları sonra eleriz"). Liste `docs/GAMES-ROADMAP.md` "Parti G–H" (Playus kataloğu taramasından): G = Kanat Çırp, Şeker Kes, Spiral Kule, Bambu Kes, Diken Duvar, Tuğla Kır; H = Jöle Kes, Tam Zamanı, Renk Hafızası, Havada Tut, Hedef Avı, Yörünge, Yılan, Zikzak. İlk oyunların tarzında, ajanlar tarayıcıda oynar.
 4. **Canlı kapışma (M1)**: sohbetten kapışma kartı, 2–4 kişi (bütçe sıfırlanınca).
 5. Tema toptan düzenleme (Yusuf kararı, sonra). Jeton İtici kural yeniden tasarımı (tek şerit baskın).
 6. Kit/teknik: seçim düğmeleri yardımcısı; bayrakları tabloda ayırma (istenirse); Capacitor → TestFlight → mağaza; ertelenenler (ID token nonce, CSP, sözlük tembel yükleme, tepki toggle idempotent, `GET me` 30 oda).
