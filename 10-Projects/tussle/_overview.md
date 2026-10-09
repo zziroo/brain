@@ -4,7 +4,7 @@ project: tussle
 date: 2026-10-09
 status: active
 tags: [tussle, overview, oyun, mobil, pwa]
-source: oturum 2026-10-09 (mobil-playus: Parti D-E-F, canlandırma, beceri öncelikli havuz)
+source: oturum 2026-10-09 (mobil-playus: D/E/F kapakları, Antrenman düzeltmesi)
 ---
 
 # Tussle: arkadaşlarla günlük mini oyun kapışması (Playus'un hafif rakibi)
@@ -22,17 +22,18 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 - i18n: TR/EN (`src/client/i18n`, `docs/I18N.md`); sunucu hata kodları; akış satırları yapısal.
 
 ## Güncel durum (2026-10-09; canlıdan doğrula)
-**Yayında:** https://tussle.ziroo.net (VPS konteyner `tussle`, 127.0.0.1:8087, `/opt/tussle`, Caddy `hosts/tussle.caddy`, veri `/opt/tussle/data` (konteyner içinde `/data`), sırlar `/opt/tussle/.env`). Deploy: `bash deploy/deploy.sh`. Son yayın `4576161` (2026-10-09), DB sürümü 10. Yayın öncesi yedekler `/opt/tussle/data/pre-*.db` (son: `pre-4576161.db`; alma: `docker exec tussle node -e` ile `VACUUM INTO`). 1.279 test yeşil.
+**Yayında:** https://tussle.ziroo.net (VPS konteyner `tussle`, 127.0.0.1:8087, `/opt/tussle`, Caddy `hosts/tussle.caddy`, veri `/opt/tussle/data` (konteyner içinde `/data`), sırlar `/opt/tussle/.env`). Deploy: `bash deploy/deploy.sh`. Son yayın `2482f79` (2026-10-09), DB sürümü 10. Yayın öncesi yedekler `/opt/tussle/data/pre-*.db` (son: `pre-2482f79.db`; alma: `docker exec tussle node -e` ile `VACUUM INTO`). 1.279 test yeşil.
 - Havuz beceri öncelikli: anlık kontrol, sonuç oyuncunun elinde; şans/izleme oyunları `OFF_POOL`'da (linkle oynanır). [[2026-10-09-havuz-beceri-oncelikli-havuz-disi-liste]]
+- Havuzdaki 36 oyunun hepsinin çizimli kapağı var (D/E/F'nin 14'ü `2482f79`'da); yer tutucu yalnız havuz dışı 4'te. Antrenman yalnız canlı havuzu listeler, ana sayfa satırında 4 küçük kapak.
 - E+F oyunları tarayıcıda canlandırıldı (sahne, karakter, ödül anı). Görsel tarz: ilk oyunlar gibi devam; tüm oyunların teması sonra toptan düzenlenebilir (Yusuf, limit yenilenince).
 - Şüpheli koşu bayrakları: kutu, yuksek, refleks, gecit, plinko, hazine, sifre, katane (saklanıyor, hiçbir yerde gösterilmiyor).
 - Google/Apple girişi kodda hazır, env yok (`docs/AUTH-SETUP.md`).
 
-**Telefonda hiç görülmedi:** D, E, F partilerinin tamamı (yeni Vinç kuralı dahil) ve önceki turun listesi (hayalet el, 3-2-1, Android geri, outbox, şans hakkı, 120 Hz).
+**Telefonda hiç görülmedi:** D, E, F partilerinin tamamı (yeni Vinç kuralı ve yeni kapaklar dahil) ve önceki turun listesi (hayalet el, 3-2-1, Android geri, outbox, şans hakkı, 120 Hz).
 
 ### Sıradaki işler
 1. **Telefon turu**: D/E/F oyunları + önceki liste; hak harcamadan `https://tussle.ziroo.net/#/oyun/<id>`. Bakılacaklar: Fırlat hassasiyeti, İp Atla ilk oyuncu süresi, Şeker Ritmi geniş şeker/sıçrama, Vinç bantları, Çizgi Takip zorluk.
-2. **Kapaklar**: D/E/F'nin havuzdaki 14 oyunu yer tutucu kapakta (kapı, örüntü, ipatla, firlat, cark, hazine, vinc, gecit, pinyata, sifre, katane, cizgi, doldur, ritim). Kapak koordinatör işi (paylaşılan `covers-core.ts` + `theme.css`, docs/VISUAL.md §4.1); Yusuf'a 48 px önizlemeyle tur tur göster. Toptan tema değişikliği yakınsa ona bırak.
+2. **Kapaklara bakış**: 14 yeni kapak Yusuf onayı beklemeden yayında; beğenilmeyenleri varyantla daralt. Koyu temada ritim/gecit panel ayrışması kart içinde kontrol edilmedi; panel renk yakınlıkları (vinc~matematik, cark~renk, ritim~denge). Havuz dışı 4 hâlâ yer tutucu.
 3. **Parti G** (haftalık limit sıfırlanınca, ~2026-10-12): bilinen beceri oyunları, ilk oyunların tarzında, ajanlar tarayıcıda oynar. Adaylar: Kanat Çırp (Flappy), Şeker Kes (Fruit Ninja), Spiral Kule (Helix), Renk Geçidi (Color Switch), Yılan, Tuğla Kır.
 4. **Canlı kapışma (M1)**: sohbetten kapışma kartı, 2–4 kişi (bütçe sıfırlanınca).
 5. Tema toptan düzenleme (Yusuf kararı, sonra). Jeton İtici kural yeniden tasarımı (tek şerit baskın).
@@ -70,6 +71,7 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 - [[2026-10-09-parti-a-dersleri]]
 - [[2026-10-09-parti-b-c-dersleri]]
 - [[2026-10-09-parti-d-e-f-dersleri]]
+- [[2026-10-09-kapak-turu-dersleri]]
 
 ## Oturumlar
 - [[2026-10-08-tussle-tasarim-ve-m0-yayin]]
@@ -78,6 +80,7 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 - [[2026-10-09-tussle-sohbet-merkezli-oda-kit-ve-parti-a]]
 - [[2026-10-09-tussle-parti-b-c-deneme-hakki-ve-skor]]
 - [[2026-10-09-tussle-parti-d-e-f-ve-canlandirma]]
+- [[2026-10-09-tussle-kapaklar-ve-antrenman-duzeltmesi]]
 
 ## İlgili
 Aynı VPS ve Caddy: [[10-Projects/kapis/_overview|KAPIŞ]] (ws sunucu kalıbı buradan), [[10-Projects/diskort/_overview|Diskort]]. Çalışma kuralları: [[orkestrasyon]], [[karar-dagilimi]].
