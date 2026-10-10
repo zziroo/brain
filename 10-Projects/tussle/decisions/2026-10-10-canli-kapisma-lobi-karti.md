@@ -20,6 +20,7 @@ M1 (canlı kapışma) ilk sürümü 30/60/120 sn katılım penceresiyle yapıld�
 - Aynı tohum, sunucu zamanlı ortak başlangıç, her oyuncunun girdi günlüğü sunucuda tekrar oynatılır; sonuç aynı karta yazılır. **Sezona, günlük tabloya ve deneme hakkına sayılmaz** (Yusuf: "sayılmasın").
 - Kopan oynamaya devam eder (outbox); son teslimde günlüğü yoksa son canlı skoruyla "bağlantı koptu" etiketiyle sıralanır.
 - **Hayalet = yalnız HUD altındaki yarış şeridi**, oyun alanına hiçbir şey çizilmez (Yusuf dikkat dağıtmasından çekindi): avatar noktaları canlı skora göre, geçince "X'i geçtin!" balonu, seni geçenin noktası parlar, bitiren bayrak. 10 Hz röle.
+- **Ek (yayın `398b84d`):** Yusuf: "hareketli olursa odak bozulur; günlük oyunda da üstte bir şerit olsun, oynayanların skorları sabit, yalnız biz hareketli olalım" ve "geçtin yazmasına gerek yok, ufak bir işaret yeter". Günlük oyunda (sayılan deneme + Deneme turu) sabit işaretli şerit; geçme anı her iki şeritte yazısız ✓. Reddedilen: başkalarının girdi kayıtlarını tekrar oynatan hareketli hayalet (dikkat dağıtır, ek işlem). Girdi kayıtları sunucuda kalır (doğrulama ve rescore için şart).
 - Ekran dışındaki açık kartlar için sağ altta ⚔ sayılı rozet; dokununca en yeni karta kayar, tekrar dokununca sıradakine.
 
 ## Neden
