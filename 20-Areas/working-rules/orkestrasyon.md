@@ -1,7 +1,7 @@
 ---
 type: resource
 project: genel
-date: 2026-10-01
+date: 2026-10-10
 status: active
 tags: [working-rules, orkestrasyon, ajan]
 source: C:\Users\yusuf\.claude\CLAUDE.md (Orchestration)
@@ -22,7 +22,15 @@ Her ajan soğuk başlar (iş yapmadan ~45-50k token bağlam) ve kodu yeniden oku
 - Satır içi: kısa, az okuma gerektiren iş (tek satır düzeltme, config/hafıza düzenleme, git/deploy adımları, hızlı kontrol).
 - Ajan: çok okuma/düzenleme gerektiren iş (çok dosya, uzun araştırma), değişiklik küçük olsa bile; koordinatörün bağlamını temiz tutar. Koordinatörün bağlamı şişmişse yine ajana ver.
 
+## Ajan boyutu ve yalın bağlam (2026-10-10)
+- Ajan başına ~≤100 çağrı, ≤300k bağlam; 150+ çağrılık iş aşamalara bölünür, her aşama devir notuyla yeni ajana. Küçük iş bölünmez.
+- Aynı kalıpta tekrarlayan iş: ilk örnek + ortak altyapı bir ajanda, kalanlar net tarifle; mekanik tekrar `sonnet`, tasarım `opus`.
+- Her ajan istemine yalın bağlam kuralı: grep → satır aralığı, tekrar okuma yok, log önce hata grep'i sonra `tail -40`.
+- Koordinatör inceleme bulgularına güvenir; ~400k bağlamda vault'a yaz + `/compact` ya da yeni oturum.
+- Karar ve gerekçe: [[2026-10-10-ajan-boyutu-ve-yalin-baglam]].
+
 ## Model seçimi
+- **Güncel (CLAUDE.md, 2026-10-10'da okundu):** koordinatör Fable'da çalışır; alt ajanlar onu asla devralmaz, `model` her zaman açıkça verilir. Varsayılan `opus` + `effort: "medium"` (çapraz kesen/tasarım ağırlıklı iş ve derin incelemede `high`). Aşağıdaki maddeler eski kuraldır.
 - Opus (inherit): çapraz kesen veya tasarım ağırlıklı iş, derin inceleme.
 - `sonnet`: dar ve iyi tanımlı değişiklik, doğrulayıcı/skeptic geçişi, araçlar.
 - `haiku` ya da Explore: salt okunur arama.
@@ -35,4 +43,4 @@ Kaynakta gerekçe açık yazılmamış. Ima edilen: bağlamı temiz tutmak ve li
 Kaynakta yok.
 
 ## İlgili
-- [[inceleme-kapisi]], [[karar-dagilimi]], [[_index]]
+- [[inceleme-kapisi]], [[karar-dagilimi]], [[_index]], [[2026-10-10-ajan-token-analizi]]

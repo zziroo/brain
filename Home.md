@@ -1,6 +1,6 @@
 ---
 type: home
-date: 2026-10-01
+date: 2026-10-10
 ---
 
 # Home: ikinci beyin haritası
@@ -40,6 +40,7 @@ Buradan başla. Her şey buradan ya da bir projenin `_overview.md` dosyasından 
 - [[30-Resources/oyun-tasarimi/_index|Oyun tasarımı dersleri]]: döngüler, zorluk, his, tempo; Işık Bekçisi örnekleriyle
 - [[genex-desktop-oyunu-insansiz-dogrulama-yontemleri]]: Genex Desktop (AI ile oyun yapan uygulama) oyunu insan oynamadan nasıl doğruluyor: test kancası, hareket şeridi, kör hakemler, saçma kontrol maddesi
 - [[2026-10-05-windows-donemi-token-ozeti]]: Windows dönemi Claude kullanımı (API karşılığı yaklaşık 3.713 $, model ve proje bazında)
+- [[2026-10-10-ajan-token-analizi]]: ajan maliyetinin kaynağı bağlam boyutu; son 7 gün karşılaştırması ve efor (2026-10-10)
 
 ## Arşiv
 - [[90-Archive/old-claude-memory/_index|Eski Claude hafıza klasörleri]]
