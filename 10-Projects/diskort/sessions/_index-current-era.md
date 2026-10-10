@@ -67,3 +67,9 @@ Bu dizin yalnızca güncel-dönem aktarımında yazılan notları listeler (tari
 - 2026-10-02 · session · [[2026-10-02-dm-arama-engelleme-ve-0-9-6]] — DM arama + engelleme, şema 25 deploy, 0.9.6 (unverified)
 - 2026-10-04 · lesson · [[caddy-reload-websocketleri-keser]] — Caddy reload açık WebSocket'leri keser; stream_close_delay 5m eklendi
 - 2026-10-04 · session · [[2026-10-04-geri-bildirim-kontrolu-ve-caddy-reload]] — hata kontrolü, Caddy reload kopması düzeltildi, panel deploy
+- 2026-10-10 · decision · [[macos-developer-id-imza-ve-otomatik-guncelleme]] — macOS Developer ID imza + notarizasyon + otomatik güncelleme (0.10.3)
+- 2026-10-10 · decision · [[telefondan-bagli-gostergesi]] — Yalnız telefondan bağlıysa durum noktası telefon simgesi
+- 2026-10-10 · decision · [[2026-10-10-gozcu-gunluk-gece-incelemesi-kaldirildi]] — Gece kod incelemesi rutini kaldırıldı, gözcü günlük
+- 2026-10-10 · lesson · [[electron-builder-csc-link-anahtar-zinciri-parolasi]] — electron-builder CSC_LINK macOS 26'da düşer; sertifikayı kendin aktar
+- 2026-10-10 · lesson · [[rutin-calisma-klasoru-silinince-oturum-acmaz]] — Rutinin çalışma klasörü yoksa oturum açılmaz
+- 2026-10-10 · session · [[2026-10-10-macos-imza-telefon-gostergesi-0-10-3]] — rutin klasörü, macOS imza, telefon göstergesi, 0.10.3

@@ -18,7 +18,7 @@ Yalnız Yusuf "sürüm çıkar" deyince ([[surum-cikarma-kurali]]).
 5. `https://diskort.ziroo.net/updates/latest.yml`'i yokla.
 - GitHub push bazen bağlanamaz: tekrar dene.
 - **Yayın = zorunlu güncelleme (0.1.3'ten beri):** istemciler açılışta (splash) günceller; sunucu eski gateway istemcilerini 5 dk içinde reddeder (UPDATE_REQUIRED, kapanış kodu 4010). Acil durumda infra/.env `CLIENT_UPDATE_ENFORCE=0`.
-- Güncellemeler `https://diskort.ziroo.net/updates/*` üzerinden (API 302 -> GitHub). Masaüstü kurulum klasörü `Programs\diskort` (`installer.nsh`); güncelleyici günlüğü `%APPDATA%\Diskort\logs\updater.log`. macOS otomatik güncellemez (splash indirme sayfasına yollar).
+- Güncellemeler `https://diskort.ziroo.net/updates/*` üzerinden (API 302 -> GitHub). Masaüstü kurulum klasörü `Programs\diskort` (`installer.nsh`); güncelleyici günlüğü `%APPDATA%\Diskort\logs\updater.log`. macOS 0.10.3'ten beri Developer ID imzalı + notarize ve otomatik güncellenir ([[macos-developer-id-imza-ve-otomatik-guncelleme]]); macOS işi notarizasyonla ~35 dk sürer, sertifika secret'ı yoksa iş hata verir.
 - Android: APK yalnız GitHub Actions'ta (`android.yml`), release.yml tag'de çağırır. Manuel CI çalışması yalnız arm64 (hızlı test APK).
 - Mobil: [[mobil-ota-guncelleme]].
 

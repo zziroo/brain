@@ -2,10 +2,12 @@
 type: decision
 project: diskort
 date: 2026-09-29
-status: active
+status: superseded
 tags: [diskort, rutin, otomasyon, code-review]
 source: 5b97b763-8400-43fd-9e9e-ca9d48766518.jsonl, a7b70327-6e05-4060-a15b-293ddac27162.jsonl, 394744c4-d9f8-5503-a075-3edda0039f1c.jsonl
 ---
+
+> Yerini aldı: [[2026-10-10-gozcu-gunluk-gece-incelemesi-kaldirildi]] (gece incelemesi silindi, gözcü günlük).
 
 # Karar: Geri bildirim + hata tarama (gözcü, saatlik) ve gece kod incelemesi yerel zamanlanmış görev olarak çalışır; gelen kutusu `.claude` dışındadır
 
