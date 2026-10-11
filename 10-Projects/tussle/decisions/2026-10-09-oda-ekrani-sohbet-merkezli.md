@@ -2,10 +2,12 @@
 type: decision
 project: tussle
 date: 2026-10-09
-status: active
+status: superseded
 tags: [tussle, ui, sohbet, oda]
 source: oturum 2026-10-09 (mobil-playus: oda/sohbet/hareket/dil turu + oyun üretim kiti + Parti A)
 ---
+
+> **2026-10-11:** Yerleşim kısmı (üst kart, podyum şeridi, Tablo/Sezon/Üyeler hapları ve alt sayfaları) [[2026-10-11-oda-ekrani-sezon-bandi-ve-canli-ilk-3]] ile değişti. Sohbet tepki/yanıt, emoji paneli ve sezon grafiği kararları geçerli.
 
 # Karar: Oda ekranı sohbet merkezli; Tablo/Sezon/Üyeler alt sayfa; tepki ve yanıt var, GIF ertelendi
 

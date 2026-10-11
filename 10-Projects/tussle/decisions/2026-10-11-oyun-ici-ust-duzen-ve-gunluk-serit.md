@@ -13,7 +13,7 @@ source: oturum 2026-10-10/11 (mobil-playus: günlük şerit, üst düzen)
 Kapışmadaki yarış şeridi beğenildi. Yusuf günlük oyunda da bir şerit istedi ama "hareketli olursa odak bozulur". Sonra Playus ekranlarını yerleşim örneği olarak gösterdi (üstte oyuncular, altında süre çubuğu, ortada "La puntuación cuenta" yazısı).
 
 ## Karar
-- **Günlük oyun şeridi** (sayılan deneme ve Deneme turu; Antrenman ve link oyununda yok): bugün oynayanların en iyileri sabit işaret, yalnız kendi noktan hareketli (yerel 10 Hz, ağ yok). En çok 4 işaret: lider + önündeki 2 + arkandaki 1. Bugünkü en iyin ince bir çentik. Kimse oynamadıysa şerit yok.
+- **Günlük oyun şeridi** (sayılan deneme ve Deneme turu; Antrenman ve link oyununda yok): bugün oynayanların en iyileri sabit işaret, yalnız kendi noktan hareketli (yerel 10 Hz, ağ yok). En çok 4 işaret: lider + önündeki 2 + arkandaki 1. Bugünkü en iyin ince bir çentik (2026-10-11 sonradan: açıklamasız kaldığı için mavi, konturlu üçgen flamaya döndü, `27861cd`; kontrollü bayrak "bitirdi" anlamında olduğundan düz flama). Kimse oynamadıysa şerit yok.
 - **Geçme anı** her iki şeritte yazısız: noktan zıplar, geçilenin üstünde 0,5 sn minik ✓ (Yusuf: "geçtin yazmasına gerek yok, ufak bir işaret yeter").
 - **Yakın işaretler** yan yana, hafif iç içe avatar grubu (en çok 3, fazlası solda "+n"). Dikey kaydırma denendi, "garip" bulundu.
 - **Üst düzen** yukarıdan aşağı: şerit (kapat düğmesinin yanında; sağda da aynı boşluk, ortalı) → durum etiketi (Puan sayılıyor / Deneme turu / Kapışma; Antrenman'da yok) → ortalı %60 genişlikte süre çubuğu, **saniye yazısı yok**, son 5 sn kırmızı + hafif nabız (enerji çubuklarında yok: bambu, spiral) → skor satırı. Her ekranda aynı sıra; kısa ekranda yalnız aralıklar küçülür.
