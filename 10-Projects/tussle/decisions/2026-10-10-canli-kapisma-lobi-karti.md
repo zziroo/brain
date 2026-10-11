@@ -40,6 +40,7 @@ Clash Royale isteği gibi "canlı" hissi; süre baskısı yok. Sahibi ortada olm
 - Maç başladığında oda ekranında olmayan "Oyna"ya basmalı; bildirim yok. Oyun ortasında sayfa yenilenirse son canlı skorla sıralanır.
 
 ## İlgili
+- [[2026-10-11-oyun-ici-ust-duzen-ve-gunluk-serit]] (şerit ve üst düzenin ayrıntılı kararı)
 - [[2026-10-10-tussle-canli-kapisma-m1]]
 - [[2026-10-08-deterministik-sim-ve-sunucuda-tekrar-oynatma]]
 - [[2026-10-09-oda-ekrani-sohbet-merkezli]]
