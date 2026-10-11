@@ -1,0 +1,1 @@
+- [Kül Tahtı project goal](project-kul-tahti-goal.md) — browser boss-fight demo; user wants to see Claude's limits

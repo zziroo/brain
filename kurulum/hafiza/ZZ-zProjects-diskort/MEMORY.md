@@ -1,0 +1,11 @@
+- [Diskort session start](diskort-baslangic.md) — START HERE: read vault overview (single source of state), then inbox, then rules; for server/error questions verify live first
+- [Diskort rules](diskort-rules.md) — user decisions & rejected ideas (keep simple, Etkinlik, DM≠server, releases, signing, cosmetics)
+- [Diskort workflow](diskort-workflow.md) — merge/deploy/release steps, admin logs, routines + inbox, local test env
+- [Diskort production server](diskort-server.md) — LightNode Istanbul VPS, ssh key path, domains, restart pitfalls, backups
+- [Diskort iOS](diskort-ios.md) — Ad Hoc distribution, device onboarding, secret file locations/handling
+- [Feedback review workflow](diskort-feedback-workflow.md) — feedback-cli list/show/set, statuses
+- [Cosmetics](diskort-cosmetics-plan.md) — server-delivered pre-rendered packs: decisions, publish pointer, risks
+- [Diskort project decisions](diskort-project.md) — goals, hosting/auth/platform decisions, priority order; Turkish replies
+- [Diskort dev environment quirks](diskort-dev-environment.md) — no C++ build tools, pnpm allowBuilds, CDP testing
+- [Git push autonomy](git-push-autonomy.md) — may commit + push to main after verified changes; never force-push
+- [Orchestrator mode](orchestrator-mode.md) — Diskort additions to global orchestration rules

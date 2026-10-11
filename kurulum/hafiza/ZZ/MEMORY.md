@@ -1,0 +1,5 @@
+- [Proje işi proje oturumunda](proje-isi-proje-oturumunda.md) — ZZ kökünde kod yazma; vault'a devir notu yaz, iş projenin klasöründeki oturumda
+- [Arayüzde admin terimi](arayuzde-admin-terimi.md) — yetkili giriş metinlerinde "sahip" değil "admin"
+- [Konuşma arşivi](windows-konusma-arsivi.md) — Mac + Windows oturumları tek sistem: usage.mjs/report.mjs/pano.mjs/ayikla.py kaynaklar.json'daki iki kökü okur; yeni Windows zip'i ice-aktar.py ile
+- [Sunucu yazma: komutu kullanıcıya](sunucu-yazma-kullaniciya-komut.md) — VPS env dosyalarına yazma engelli, sır soran komutlar Terminal sekmesinde; deploy.sh serbest
+- [Koordinatör eforu kullanıcıda](koordinator-eforu-kullanicida.md) — ana oturum eforunu kullanıcı seçer, Claude değiştirmez

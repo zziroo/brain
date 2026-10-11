@@ -1,0 +1,15 @@
+- [Işık Bekçisi project](isik-bekcisi-project.md) — the game in this folder: approved concept, "best quality" bar, published on the user's server; check what is live vs local
+- [UI and base preferences](ui-and-base-preferences.md) — own UI identity per game, a walkable base between runs, info shown next to the hovered item
+- [Run-based incremental wanted](run-based-incremental-wanted.md) — user's "incremental" = Shelldiver / Rock Bottom style runs + upgrades, not idle
+- [Bal Vadisi concept](bal-vadisi-concept.md) — first (idle) game, moved to zProjects\bal-vadisi, live at diskort.ziroo.net/games/bal-vadisi
+- [Desktop only, WASD, laser direction](desktop-only-wasd-and-laser-direction.md) — second playtest feedback: PC only, WASD movement, mouse aims the light, beam → laser, story camp, softer transitions, livelier sky
+- [Coordinator delegates code](coordinator-delegates-code.md) — main chat avoids writing code here; opus subagents implement, coordinator designs, reviews, merges
+- [No pausing tutorials](no-pausing-tutorials.md) — guides must not stop the game: learn-by-doing hints next to the thing; show options before building product-feel changes
+- [Tutorial open to redesign](tutorial-open-to-redesign.md) — 2026-10-04: the coach marks may be replaced wholesale, not just polished
+- [Git identity per repo](git-identity-per-repo.md) — no global git identity; set repo-local `Ziroo <zziroo.ai@gmail.com>` in new repos and commit without asking
+- [Camera/UI scale + soot economy, parked](camera-ui-scale-and-soot-economy-pending.md) — 2026-10-06: keeper reads too small (4 % vs Shelldiver 8 %), "collect darkness, refine at camp" idea; plan after the parallel halo rework lands
+- [Gamepad later, keeper uncluttered](gamepad-later-keep-keeper-clean.md) — 2026-10-07: no cursor-pinned UI (gamepad planned), less UI drawn on the keeper; diegetic + skills corner
+- [Agents: own port, silent tests](agents-own-port-and-silent.md) — never kill the user's 5174 server; test pages muted
+- [Dash removal to evaluate](dash-removal-to-evaluate.md) — 2026-10-07: Atılım may go; examine after the waymark branch merges, show replacement stars first
+- [User's pad: Flydigi on Mac](user-gamepad-flydigi-mac.md) — Vader 5 Pro is seen by browsers only over Bluetooth (Xbox Wireless, standard)
+- [Mac git: Xcode license trap](mac-git-xcode-license-use-clt-git.md) — if /usr/bin/git says accept the Xcode license, use /Library/Developer/CommandLineTools/usr/bin/git

@@ -11,7 +11,7 @@ source: memory diskort-workflow.md
 
 - **Panel:** https://diskort.ziroo.net/admin (geri bildirim, güvenlik, ses kalitesi + "İzlenen yayın" grafikleri, altyapı, API sağlığı, sunucular, iPhone cihazları).
 - **Loglar (api konteynerinde):** `/data/client-errors.jsonl` (zararsız gürültü `apps/server/src/routes/clientErrors.ts` içinde süzülür), `/data/server-errors.jsonl`, `/data/telemetry/*.jsonl` (+ `incidents.jsonl`), `auth-log.jsonl`.
-- **Okuma:** `ssh -i ~/.ssh/diskort_vps root@38.60.208.88 'cd /opt/diskort/infra && docker compose exec -T api ...'`. scp yok; indirmek için `ssh ... cat dosya > yerel`. Gruplanmış hata özeti: `docker compose exec -T api node - <sinceMs>` komutuna `C:/Users/yusuf/diskort-inbox/hata-ozet.js` verilir.
+- **Okuma:** `ssh -i ~/.ssh/diskort_vps root@<VPS_IP> 'cd /opt/diskort/infra && docker compose exec -T api ...'`. scp yok; indirmek için `ssh ... cat dosya > yerel`. Gruplanmış hata özeti: `docker compose exec -T api node - <sinceMs>` komutuna `C:/Users/yusuf/diskort-inbox/hata-ozet.js` verilir.
 - Telefon ısınma incelemesi örneği: `grep '"watch":{' /data/telemetry/<tarih>.jsonl`.
 
 ## İlgili

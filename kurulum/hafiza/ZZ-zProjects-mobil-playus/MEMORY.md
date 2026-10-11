@@ -1,0 +1,6 @@
+- [Tussle projesi](tussle-proje.md) — Playus benzeri hafif mini oyun partisi; tasarım docs/DESIGN.md, web çekirdeği + Capacitor önerisi (mağaza hedefi), kapasite §11, açık kararlar §12
+- [Öncelik: akıcılık](oncelik-akicilik.md) — her cihazda hiç kasmama bir numaralı kural; mimari Claude'da
+- [Yusuf görsel tercihleri](yusuf-gorsel-tercihler.md) — referansa birebir benzemesin (telif), ikon seçimi çok turlu + 48 px önizleme, varyant türetme, referans ekran = yerleşim örneği (teyit et)
+- [Oyun seçim ölçütleri](oyun-secim-olcutleri.md) — basit anlaşılır, bir tur daha hissi, tutmuş mekanikler serbest, özgün olabilir ama basit, karışık parti
+- [Oyun yayını partiler halinde](oyun-yayini-partiler.md) — yeni oyun fikri sıradaki partiye eklenir, tek tek çıkmaz
+- [Ajanlar tarayıcıda oynar](telefon-testi-tarayici-yerine.md) — görmeden yazılan E partisi zayıf kaldı; her ajan kendi klasör+port, önce/sonra ekran görüntüsü

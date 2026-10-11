@@ -1,0 +1,9 @@
+{
+  "name": "orkestra",
+  "version": "0.1.0",
+  "description": "Çalışan Claude Code oturumlarını ve alt ajanlarını canlı gösteren şerit + panel (canli.mjs sunucusundan okur)",
+  "types": "./types/index.d.ts",
+  "author": {
+    "name": "ziroo"
+  }
+}

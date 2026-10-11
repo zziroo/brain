@@ -1,3 +1,5 @@
+> **Bu dal (`analiz-paketi`) salt okunur analiz içindir.** Önce `ANALIZ-REHBERI.md` dosyasını oku. Aşağıdaki not yazma kuralları asıl vault kullanımı içindir; bu analizde vault'a yazma.
+
 # Second Brain: kullanım kuralları (Claude için)
 
 Bu klasör Yusuf'un ikinci beyni: düz Markdown, yerel, Obsidian ile uyumlu. Dil: **Türkçe**.

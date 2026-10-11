@@ -1,0 +1,1 @@
+- [docfmt amacı](docfmt-purpose.md) — Trados çıktısını orijinal PDF düzenine yerleştirir; sdlxliff birincil, sdlxliff dışı metin İngilizce kalır

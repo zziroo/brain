@@ -13,7 +13,7 @@ source: Claude Code oturumu 2026-10-01 (bağlantı teşhisi + taşıma)
 Yayında pencere hızlı oynatılınca herkesin sesi ve yayını duruyor, gösterge kırmızı oluyor, ping artmıyordu. Hat testiyle iki kez tekrarlandı (2026-10-01 14:55 ve 14:59 TSİ): eski sunucuya (185.92.0.242) gelen UDP saniyede ~1400 paketi geçince gelen TÜM UDP kesiliyor; TCP ve çıkan trafik etkilenmiyor; sunucunun ağ kartında düşüş yok. Ayrıntı: [[saglayici-udp-paket-siniri]].
 
 ## Karar
-Sunucu LightNode "Istanbul II" bölgesine taşındı: KVM, CPU Shared 2 vCPU, 4 GB, 50 GB, Ubuntu 24.04, saatlik faturalı (~14 $/ay), trafik paketi 1000 GB. Yeni IP `38.60.208.88`. Üç DNS kaydı (diskort, lk, turn) Cloudflare'de yeni IP'ye çevrildi.
+Sunucu LightNode "Istanbul II" bölgesine taşındı: KVM, CPU Shared 2 vCPU, 4 GB, 50 GB, Ubuntu 24.04, saatlik faturalı (~14 $/ay), trafik paketi 1000 GB. Yeni IP `<VPS_IP>`. Üç DNS kaydı (diskort, lk, turn) Cloudflare'de yeni IP'ye çevrildi.
 
 ## Neden
 - isimkayit desteği istisna tanımlamayı reddetti ("standart VDS'te IP/port bazlı eşik tanımlanmaz"), sınırı da doğrulamadı.

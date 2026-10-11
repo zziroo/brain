@@ -1,0 +1,4 @@
+- [KAPIŞ project](kapis-project.md) — browser hero-shooter; contracts in docs/, wave-based agent workflow, debug hook
+- [KAPIŞ status](kapis-status.md) — live at kapis.ziroo.net since 2026-10-03; deploy script, next steps
+- [KAPIŞ push on commit](kapis-push-on-commit.md) — push main to GitHub after every commit
+- [No limit throttling](no-limit-throttling.md) — don't postpone agent waves for usage limits; resume after reset

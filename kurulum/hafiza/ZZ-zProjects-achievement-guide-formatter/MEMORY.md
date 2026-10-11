@@ -1,0 +1,3 @@
+- [Vault notu](vault-notu.md) — proje durumu ve kararlar vault'ta
+- [Komutlar PowerShell](komutlar-powershell.md) — Yusuf'a verilen komutlar PowerShell sözdiziminde; gizli değerde ekran görüntüsü riski
+- [Yayın öncesi kuyruk](yayin-oncesi-kuyruk.md) — deploy'dan önce AI kuyruğunu ayrı adımda kontrol et
