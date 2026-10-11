@@ -4,7 +4,7 @@ project: tussle
 date: 2026-10-11
 status: active
 tags: [tussle, overview, oyun, mobil, pwa]
-source: oturum 2026-10-11 (mobil-playus: deneme turu, rekor flaması, oda ekranı yeniden tasarımı F)
+source: oturum 2026-10-11 (mobil-playus: M1 tek seferlik koşu + Parti Gecesi)
 ---
 
 # Tussle: arkadaşlarla günlük mini oyun kapışması (Playus'un hafif rakibi)
@@ -22,8 +22,10 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 - i18n: TR/EN (`src/client/i18n`, `docs/I18N.md`); sunucu hata kodları; akış satırları yapısal.
 
 ## Güncel durum (2026-10-11; canlıdan doğrula)
-**Yayında:** https://tussle.ziroo.net (VPS konteyner `tussle`, 127.0.0.1:8087, `/opt/tussle`, Caddy `hosts/tussle.caddy`, veri `/opt/tussle/data` (konteyner içinde `/data`), sırlar `/opt/tussle/.env`). Deploy: `bash deploy/deploy.sh`. Son yayın `339f0ca` (2026-10-11), DB sürümü 11; GitHub `zziroo/tussle` da `339f0ca`. Yayın öncesi yedekler `/opt/tussle/data/pre-*.db` (son: `pre-339f0ca.db`; alma: `docker exec tussle node -e` ile `VACUUM INTO '/data/pre-<rev>.db'`, veri `/data/tussle.db`). 1.591 test yeşil (`bicak`/`diken` GC testleri yükte ara sıra düşüyor).
+**Yayında:** https://tussle.ziroo.net (VPS konteyner `tussle`, 127.0.0.1:8087, `/opt/tussle`, Caddy `hosts/tussle.caddy`, veri `/opt/tussle/data` (konteyner içinde `/data`), sırlar `/opt/tussle/.env`). Deploy: `bash deploy/deploy.sh`. Son yayın `f22ed1a` (2026-10-11), DB sürümü 13; GitHub `zziroo/tussle` da `f22ed1a`. Yayın öncesi yedekler `/opt/tussle/data/pre-*.db` (son: `pre-f22ed1a.db`; alma: `docker exec tussle node -e` ile `VACUUM INTO '/data/pre-<rev>.db'`, veri `/data/tussle.db`). 1.618 test yeşil (`bicak`/`diken` GC testleri yükte ara sıra düşüyor).
 - **Canlı kapışma (M1) yayında (`1ecfed0`)**: sohbette "Kapışma iste" (2026-10-11'den beri mesaj satırındaki ⚔) → süresiz canlı lobi kartı (2–4 kişi, oyun ya da Rastgele), dolunca ya da atan ≥2 ile Başlat; atan odadan 20 sn ayrılırsa iptal; aynı tohum + sunucu zamanlı başlangıç + sunucuda doğrulama; sonuç kartta, sezona/hakka sayılmaz; HUD altında yarış şeridi; ekran dışı kartlar için ⚔ rozeti. **Günlük oyunda da şerit** (`398b84d`): bugün oynayanların en iyileri sabit işaret (lider + 2 önde + 1 arkada), yalnız kendi noktan hareketli; geçince yazı yok, minik ✓ (kapışmada da). **Oyun içi üst düzen** (`bf3c248`, [[2026-10-11-oyun-ici-ust-duzen-ve-gunluk-serit]]): en üstte kapat düğmesinin yanında dolu şerit (simetrik, ortalı; yakın avatarlar yan yana grup + "+n"), altında durum etiketi (Puan sayılıyor / Deneme turu / Kapışma), altında ortalı %60 süre çubuğu (saniye yok, son 5 sn kırmızı + nabız; enerji çubuklarında yok), sonra skor satırı. Şerit varken oyunlar üstte yer ayırır (`Viewport.band`, sözleşme `docs/GAME-CONTRACT.md` §5); yalnız görünüm, sim/girdi/skor değişmedi. [[2026-10-10-canli-kapisma-lobi-karti]], plan `docs/M1-PLAN.md`.
+- **Parti Gecesi yayında (`f22ed1a`)**, [[2026-10-11-parti-gecesi]]: yalnız oda sahibi açar ("Kapışma iste" penceresinin üstünden), odada tek parti, odadaki herkes katılır (≤16), oda sahibi Başlat; 3/5/7 oyun (seçim + Rastgele), art arda canlı maç; sıra puanı N−p+1, çıkan/kaçıran 0; ~9 sn ara sahne (kazanan, uçan +n, sayan toplamlar, yer değiştiren sıralama, fark, sıradaki oyun) ve kürsü + konfeti. Skorlar parti maçında 5 Hz toplu. Sözleşme `docs/PARTY-PLAN.md`, migration 13.
+- **Canlı kapışmada koşu tek seferlik (`6507a23`)**, [[2026-10-11-canli-kapisma-tek-seferlik-kosu]]: çıkan/yenileyen/bağlantısı kopan/ikinci sekmede oynayan 10 sn sonra "çıktı" (sunucuda, migration 12); yeniden katılma, rövanş, maç geçmişi yok (Yusuf: kart anlık, öylesine).
 - **Oda ekranı yeniden tasarlandı (F, `80fa7b0`/`d3e72fb`/`339f0ca`)**, [[2026-10-11-oda-ekrani-sezon-bandi-ve-canli-ilk-3]]: üst bar (oda adı → Üyeler), sarı sezon bandı (sıra, puan, lider, 14 gün kutusu = o günkü sıran; `SeasonInfo.myDays`), bugün kartı tek dokunma alanı (banner + ▶ → başlangıç kartı; bitince ince şerit) ve **her durumda canlı ilk 3** (dokununca yerinde tam liste). Haplar, skor alt sayfası, sekmeler kalktı. Tek sayfa kaydırma; kaydırınca üst barda sezon çipi ve altında bugün şeridi. Sohbette oyuncu günü tek skor kartı, küçük olaylar katlanmış, ⚔ mesaj satırında. Maketler `src/client/mockups/` (yalnız geliştirme).
 - **Deneme turu** günde bir kez, yalnız ilk sayılan denemeden önce, başlangıç kartında ([[2026-10-11-deneme-turu-gunde-bir-baslangic-kartinda]]). Günlük şeritte "bugünkü en iyin" artık mavi flama.
 - Havuz beceri öncelikli: anlık kontrol, sonuç oyuncunun elinde; şans/izleme oyunları `OFF_POOL`'da (linkle oynanır). [[2026-10-09-havuz-beceri-oncelikli-havuz-disi-liste]]
@@ -33,16 +35,17 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 - Şüpheli koşu bayrakları: kutu, yuksek, refleks, gecit, plinko, hazine, sifre, katane (saklanıyor, hiçbir yerde gösterilmiyor).
 - Google/Apple girişi kodda hazır, env yok (`docs/AUTH-SETUP.md`).
 
-**Telefonda hiç görülmedi:** yeni oda ekranı (klavye açılınca bugün şeridi gizleniyor mu, mesaj satırı yeri, çip/şerit belirişi, skor kartları), rekor flaması, canlı kapışma ("Geçtin!" balonu gerçek maçta hiç görülmedi, eş zamanlı başlangıç, arka plandan dönüş), G+H'nin 14 oyunu, D, E, F partilerinin tamamı (yeni Vinç kuralı ve yeni kapaklar dahil) ve önceki turun listesi (hayalet el, 3-2-1, Android geri, outbox, şans hakkı, 120 Hz).
+**Telefonda hiç görülmedi:** Parti Gecesi (gerçek kişilerle de oynanmadı: sahne animasyonu/hızı, konfeti, ses/titreşim, koyu tema, 16 kişide şerit "+n" okunurluğu), tek seferlik kuralın iPhone arka plan davranışı, yeni oda ekranı (klavye açılınca bugün şeridi gizleniyor mu, mesaj satırı yeri, çip/şerit belirişi, skor kartları), rekor flaması, canlı kapışma ("Geçtin!" balonu gerçek maçta hiç görülmedi, eş zamanlı başlangıç, arka plandan dönüş), G+H'nin 14 oyunu, D, E, F partilerinin tamamı (yeni Vinç kuralı ve yeni kapaklar dahil) ve önceki turun listesi (hayalet el, 3-2-1, Android geri, outbox, şans hakkı, 120 Hz).
 
 ### Sıradaki işler
 0. **Yeni oda ekranı telefon turu** (iOS + Android): klavye ve mesaj satırı, kaydırınca sezon çipi/bugün şeridi, canlı ilk 3 ve tam liste, skor kartları, başlangıç kartındaki deneme bağlantısı. Bilerek bırakılan düşükler: klavye açıkken ⚔ sıçrama payı, şerit eşikte "Önceki mesajlar"a biniyor.
-0a. **Arkadaşlarla canlı kapışma + günlük oyun denemesi** (Yusuf: oyunları arkadaşlarla test edecekler, sonra ekle/çıkar). Bakılacaklar: geçme ✓'si, herkes aynı anda oyuna geçiyor mu, şerit/etiket/çubuk arası ferah mı, son 5 sn nabzı rahatsız ediyor mu, arka plandan dönüşte kart durumu.
+0a. **Arkadaşlarla Parti Gecesi denemesi** (oda sahibi açar): sahneler anlaşılıyor mu, puanlar net mi, herkese aynı anda açılıyor mu, 9 sn sahne kısa/uzun mu, kürsü. Sonra 2. tur cila.
+0a2. **Arkadaşlarla canlı kapışma + günlük oyun denemesi** (Yusuf: oyunları arkadaşlarla test edecekler, sonra ekle/çıkar). Bakılacaklar: geçme ✓'si, herkes aynı anda oyuna geçiyor mu, şerit/etiket/çubuk arası ferah mı, son 5 sn nabzı rahatsız ediyor mu, arka plandan dönüşte kart durumu.
 0b. **Süreli ~18 oyunu sonsuz-hızlanana çevirme** (Claude önerisi, Yusuf onayı bekliyor): toplam süre yerine tur başına kısalan süre + can/ilk hatada biter; önce 3–4 oyunla deneme. Liste: cark, cift, farkli, gecit, hafiza, hazine, isik, karsiya, kostebek, kutu, matematik, renk, terazi, yuksek, zincir, zipla.
 1. **Telefon turu**: D/E/F oyunları + önceki liste; hak harcamadan `https://tussle.ziroo.net/#/oyun/<id>`. Bakılacaklar: Fırlat hassasiyeti, İp Atla ilk oyuncu süresi, Şeker Ritmi geniş şeker/sıçrama, Vinç bantları, Çizgi Takip zorluk.
 2. **Kapaklara bakış**: 14 yeni kapak Yusuf onayı beklemeden yayında; beğenilmeyenleri varyantla daralt. Koyu temada ritim/gecit panel ayrışması kart içinde kontrol edilmedi; panel renk yakınlıkları (vinc~matematik, cark~renk, ritim~denge). 
 3. **G+H telefon turu**: denge şüpheleri — Spiral 10–30. kat ekşi yoğunluğu, Zikzak 8 karo/sn tavanı, Yılan dönüş parmak kalkınca, Hedef küçük hedefte merkez, Yörünge erken çiviler kolay mı, Bambu 10/sn sınırı hissettiriyor mu. Sonra zayıflar `OFF_POOL`'a. Yedek adaylar: Basket, Ok Duvarı, Jetpack, Şerit Kaç, Kargo Ayır.
-4. **Canlı sonrası**: dolaylı etkileşim modu (Tetris tarzı rakibe engel) ve gerçek arena oyunları; önce tek prototip (öneri sumo, gecikmeye dayanıklı; deterministik sim → geri sarmalı ağ kodu). M1 eksikleri: rövanş, maç geçmişi, bildirim, sayfa yenilemede yeniden katılma.
+4. **Canlı sonrası**: dolaylı etkileşim modu (Tetris tarzı rakibe engel) ve gerçek arena oyunları; önce tek prototip (öneri sumo, gecikmeye dayanıklı; deterministik sim → geri sarmalı ağ kodu). M1: rövanş, maç geçmişi, yeniden katılma Yusuf kararıyla yok; oyun başına kişi sayısı filtresi kalabalık/canlı oyunlar gelince; bildirim Capacitor ile.
 5. Tema toptan düzenleme (Yusuf kararı, sonra).
 6. Kit/teknik: seçim düğmeleri yardımcısı; bayrakları tabloda ayırma (istenirse); Capacitor → TestFlight → mağaza; ertelenenler (ID token nonce, CSP, sözlük tembel yükleme, tepki toggle idempotent, `GET me` 30 oda).
 
@@ -73,6 +76,8 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 - [[2026-10-11-oyun-ici-ust-duzen-ve-gunluk-serit]]
 - [[2026-10-11-oda-ekrani-sezon-bandi-ve-canli-ilk-3]] ([[2026-10-09-oda-ekrani-sohbet-merkezli]] yerleşimini değiştirdi)
 - [[2026-10-11-deneme-turu-gunde-bir-baslangic-kartinda]]
+- [[2026-10-11-canli-kapisma-tek-seferlik-kosu]]
+- [[2026-10-11-parti-gecesi]]
 - [[2026-10-09-ajanlar-tarayicida-oynar]]
 
 ## Dersler
@@ -86,6 +91,7 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 - [[2026-10-10-m1-dersleri]]
 - [[2026-10-11-ust-duzen-dersleri]]
 - [[2026-10-11-oda-yeniden-tasarim-dersleri]]
+- [[2026-10-11-parti-gecesi-dersleri]]
 
 ## Oturumlar
 - [[2026-10-08-tussle-tasarim-ve-m0-yayin]]
@@ -99,6 +105,7 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 - [[2026-10-10-tussle-canli-kapisma-m1]]
 - [[2026-10-11-tussle-gunluk-serit-ve-ust-duzen]]
 - [[2026-10-11-tussle-oda-ekrani-yeniden-tasarim]]
+- [[2026-10-11-tussle-m1-tek-seferlik-ve-parti-gecesi]]
 
 ## İlgili
 Aynı VPS ve Caddy: [[10-Projects/kapis/_overview|KAPIŞ]] (ws sunucu kalıbı buradan), [[10-Projects/diskort/_overview|Diskort]]. Çalışma kuralları: [[orkestrasyon]], [[karar-dagilimi]].
