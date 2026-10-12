@@ -15,6 +15,7 @@ Global kuralların damıtması. Orijinal dosya değiştirilmedi; geçerli olan h
 - [[genel-kurallar]]: dil, plan/limit bilgisi
 - [[orkestrasyon]]: koordinatör + arka plan ajanları, satır içi mi ajan mı, model seçimi
 - [[2026-10-10-ajan-boyutu-ve-yalin-baglam]]: ajan boyutu sınırı, aşamalara bölme, yalın bağlam (token analizinden)
+- [[2026-10-13-token-tasarrufu-ikinci-tur]]: review diff'e sınırlı, 200k tavan, Haiku keşif, ekran görüntüsü kısıtı (ikinci tur analiz)
 - [[inceleme-kapisi]]: merge öncesi ayrı inceleme ajanı, skeptic, bulgu eşikleri
 - [[karar-dagilimi]]: Yusuf neye karar verir, Claude neye
 - [[araclar-ve-raporlar]]: orkestrasyon raporu aracı

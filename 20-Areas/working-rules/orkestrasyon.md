@@ -29,6 +29,13 @@ Her ajan soğuk başlar (iş yapmadan ~45-50k token bağlam) ve kodu yeniden oku
 - Koordinatör inceleme bulgularına güvenir; ~400k bağlamda vault'a yaz + `/compact` ya da yeni oturum.
 - Karar ve gerekçe: [[2026-10-10-ajan-boyutu-ve-yalin-baglam]].
 
+## İkinci tur (2026-10-13)
+- Ajan tavanı ≤200k bağlam; koordinatör devir eşiği ~300k.
+- Review ajanı diff'e sınırlı: diff + ~40 satır çevre + doğrudan çağıranlar; ≤30 çağrı, ≤120k.
+- Ajanlarda tarayıcı: read_page/get_page_text/javascript_tool; ekran görüntüsü yalnız düzen sorusunda, scale 0.5, sonda.
+- Kod öncesi keşif `haiku`/Explore ile; Haiku kapsamı: keşif, log/test özeti, yayın öncesi metin okuma.
+- Karar ve ölçüm: [[2026-10-13-token-tasarrufu-ikinci-tur]].
+
 ## Model seçimi
 - **Güncel (CLAUDE.md, 2026-10-10'da okundu):** koordinatör Fable'da çalışır; alt ajanlar onu asla devralmaz, `model` her zaman açıkça verilir. Varsayılan `opus` + `effort: "medium"` (çapraz kesen/tasarım ağırlıklı iş ve derin incelemede `high`). Aşağıdaki maddeler eski kuraldır.
 - Opus (inherit): çapraz kesen veya tasarım ağırlıklı iş, derin inceleme.
