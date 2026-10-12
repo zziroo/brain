@@ -1,7 +1,7 @@
 ---
 type: project
 project: diskort
-date: 2026-10-10
+date: 2026-10-12
 status: active
 tags: [diskort, overview]
 source: handoff notundan (artık kaldırıldı), diskurt-project ve diskort-* hafıza dosyalarından, 2026-10-01/02 oturumlarından
@@ -23,7 +23,8 @@ Ses + ekran paylaşımı kalitesi; metin kanalları, tepkiler, dosyalar, roller,
 - Gürültü bastırma: DPDFNet (DeepFilterNet 3, 0.9.3'te kaldırıldı).
 - Kod haritası: Etkinlik [[etkinlik-kod-haritasi]].
 
-## Güncel durum (2026-10-10; canlıdan doğrula)
+## Güncel durum (2026-10-12; canlıdan doğrula)
+- **Main, yayınlanmamış (2026-10-12):** rol etiketleme @rol ([[rol-etiketleme]]), rol verme hedefin seviyesine bakmaz ([[rol-verme-hedefin-seviyesine-bakmaz]]), DPDFNet eşikleri gevşetildi + Android ayrı iş parçacığı 30 ms tampon, **yeni APK gerekir** ([[dpdfnet-esikler-gevsetildi-android-ayri-is-parcacigi]]), masaüstü yazılımsal AGC + konuşma seviyesi telemetrisi ([[masaustu-yazilimsal-agc]]), Android ses ekranı Animated OOM düzeltmesi, çıkış aygıtı sink-id düzeltmesi. Sunucu deploy edilmedi (şema değişmedi), sürüm yok. Oturum: [[sessions/2026-10-12-rol-etiketi-dpdfnet-agc-oom]].
 - **0.10.3 (2026-10-10):** macOS Developer ID imzalı + notarize, otomatik güncelleme ([[macos-developer-id-imza-ve-otomatik-guncelleme]]; ilk deneme 0.10.2 [[electron-builder-csc-link-anahtar-zinciri-parolasi]] ile düştü, taslak silindi), macOS menü çubuğu şablon ikonu, [[telefondan-bagli-gostergesi]], boştan çevrimiçiye 1 sn'de dönüş. Sunucuda `e63209c` (şema 26, değişiklik yok); web sayfası `6a16ed2`. `latest*.yml` 0.10.3. Oturum: [[sessions/2026-10-10-macos-imza-telefon-gostergesi-0-10-3]].
 - **0.10.1 (2026-10-08 22:50):** mobilde LiveKit tek bağlantı kipi kapatıldı ([[mobil-livekit-tek-baglanti-kipi-kapatildi]]): kanala üçüncü kişi gelince Android telefonlarda ses kopuyordu (negotiation timed out). JS-only, OTA; APK/IPA yeniden kullanıldı; `latest.yml` ve expo/android 0.10.1 veriyor. 2026-10-10 taraması: "negotiation timed out" yalnız 0.9.6/0.10.0'da, 0.10.1'de yok (az veri, tutuyor gibi).
 - **0.10.0 (2026-10-08):** arkadaşlık sistemi ([[arkadaslik-sistemi]], şema 26), donanım kodlayıcıda ekran paylaşımı simulcast (telefon/zayıf hat alt katman alır), 720p30 ön ayarı, macOS güncelleyici RangeError ve "killed" gürültüsü düzeltmeleri ([[electron-net-fetch-rangeerror]]). Sunucu deploy edildi (56d1c8a + sürüm commit'i, şema 26). v0.10.0 2026-10-08 21:15'te yayınlandı (macOS/iOS işleri runner kapasitesi yüzünden 5 kez iptal oldu, 6. denemede geçti: [[github-macos-runner-kapasitesi]]); `latest.yml`/`latest-mac.yml`/ota-ios 0.10.0 veriyor; geri bildirim #32/#33 tamamlandı. Yönlendirme artık `zziroo/diskort` üzerinden çalışıyor (denendi). Oturum: [[sessions/2026-10-08-arkadaslik-sistemi-ve-0-10-0]].
@@ -39,6 +40,7 @@ Ses + ekran paylaşımı kalitesi; metin kanalları, tepkiler, dosyalar, roller,
 - **Not (izin sistemi):** otomatik mod sınıflandırıcısı, o oturumda Yusuf sohbette söylemedikçe ssh deploy ve release tag/push'u engelleyebilir. Sor, sonra push / ssh / tag / `gh release edit` komutlarını ayrı çağrılar olarak çalıştır.
 
 ### Sıradaki işler
+0000. **2026-10-12 işlerini canlıya al:** sunucu deploy (rol etiketi, rol kuralı, telemetri şeması), ardından sürüm (masaüstü AGC + DPDFNet + rol etiketi; mobil OTA + **yeni APK** Kotlin için). Sonra: AGC gerçek mikrofonla dinlenir, admin "Konuşma seviyesi" ile telefon/PC farkı ölçülür; telefonda DPDFNet 30 ms tampon + "geç" sayısı; Android OOM tekrarı (bellek telemetrisi ertelendi).
 000. **0.10.3 doğrulama:** Yusuf Mac'te 0.10.3'ü bir kez elle kurar (izinler yeniden istenir); sonraki sürümde macOS otomatik güncellemeyi uçtan uca gör; menü çubuğu ikonu, telefon rozeti boyutu (üye listesi, 80 px profil), boşta düzeltmesi, mobil OTA 0.10.3. `.p12` yedek klasörüne taşınıp Documents'tan silinecek. enginbabapro'nun 0.10.1 yığınsız Android çökmesi (PSS ~700 MB) tekrar ederse incele.
 00. **0.10.0 canlı doğrulama:** arkadaşlık akışı iki cihazla (istek, kabul, bildirim, sunucusuz DM), donanım simulcast'in GPU'da kaldığı (bağlantı paneli kodlayıcı satırında OpenH264 geçmemeli), telefonda izleme FPS'i; `mic.fallback`/kozmetik kayıtlarıyla birlikte gelen kutusunu izle.
 0. 0.9.6 DM araması Yusuf'a göre sorunsuz (2026-10-08). Kalan: 1.0 kararı ([[surum-1-0-ertelendi]]).
