@@ -2,12 +2,14 @@
 type: decision
 project: isik-bekcisi
 date: 2026-10-08
-status: active
+status: superseded
 tags: [isik-bekcisi, fener, nobet, denge, uzunluk, ilerleme-hissi]
 source: oturum 2026-10-08 (incremantal-game, nöbet tavanı), commit ec77919; bot ölçümleri (seed 1 ve 3)
 ---
 
 # Karar: fener zayıf ışığa direnir; akış küçüldü, nöbete görünür güç tavanı geldi, oyunun uzunluğu kotadan ağaca taşındı
+
+> **Geçersiz (2026-10-12):** Yusuf tavanı beğenmedi ("zorunlu olarak beni kampa gönderiyor"); kaldırıldı: [[2026-10-12-kapi-yok-uzunluk-icerikten-atilim-silindi-sonsuz-yildizlar]].
 
 ## Bağlam
 Yusuf sıfırdan oynadı: Çayır'da ağaç 7–8 seferde doldu, sonra seferler "ruh toplayıp fenerin barını doldurmak" oldu; para ölü birikti (sonraki kademe fener yanmadan açılmıyor), nöbet bar dolar dolmaz tek seferde geçildi. Hissettiği: ilerleme yok. Kök neden notlarda açıkça yazılıydı: bölge başına sefer sayısını yıldızlar değil fenerin ışık kotası (`BEACON_ENERGY`, akış %80'e kadar) belirliyordu ([[2026-10-07-uzun-seferler-yol-fenerleri-ruh-yenilenmesi]]). Bot sıkılmaz, insan sıkıldı ([[2026-10-08-kota-kapisi-agac-dolunca-olu-sefer-uretir]]).
