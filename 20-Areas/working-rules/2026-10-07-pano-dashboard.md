@@ -1,6 +1,6 @@
 ---
 type: decision
-project: genel
+project: pano
 date: 2026-10-07
 status: active
 tags: [arac, rapor, pano, token]
@@ -18,12 +18,15 @@ Yusuf "istediğimde token raporu, konuşmalar, akışlar, oturumların ilerleyi�
 - **Önbellek** (`out/.pano-onbellek.json`, dosya boyutu + mtime) ilk taramayı ~5 sn'den sonrakilerde <1 sn'ye indirir. `redact` değişince kendiliğinden geçersizleşir.
 - **Zamanlanmış görevler ayrı işaretlenir** (`zamanli`). Neden: 283 oturumun 186'sı Diskort gözcü/geri bildirim görevleriydi (neredeyse istemsiz, $59). İşaretlenmeseydi oturum sayılarını boğardı.
 - **Yerel kalır.** İstem metinleri içerdiği için Artifact olarak yayınlanmaz. Paylaşılacaksa `--metinsiz` ile üretilip HTML'in tamamı okunur.
+  - **Güncelleme (2026-10-13):** Yusuf'un isteğiyle claude.ai'de özel, metinli ve maskeli bir Artifact kopyası eklendi. Yerel pano değişmedi. Ayrıntı: [[2026-10-13-pano-artifact-yayini]].
 
 ## Reddedilen alternatifler
-- **Artifact olarak yayınlamak:** özel veri içerir, her güncellemede yeniden yayın gerekir.
+- **Artifact olarak yayınlamak:** özel veri içerir, her güncellemede yeniden yayın gerekir. 2026-10-13'te istek üzerine ek bir kopya olarak yapıldı; yerel pano asıl araç olarak kaldı.
 - **CDN grafik kütüphanesi (Chart.js, D3):** çevrimdışı açılmaz, CSP gevşer. Animasyonlar elle yazılmış SVG/Canvas ile yeterli oldu.
 - **Grafikleri toplayıcıda önceden hesaplamak:** her filtre için yeniden üretim gerekirdi.
 - **`usage.mjs`/`report.mjs`'i hemen `ortak.mjs`'e taşımak:** yerinde bırakıldı, risk azaltıldı. `ortak.mjs` şimdilik kopya; fiyat tablosu değişirse üçü elle eşitlenir. Sonra birleştirilebilir.
+
+Proje: [[10-Projects/pano/_overview|Pano]].
 
 ## Açık noktalar
 - `ortak.mjs` ile `usage.mjs` ve `report.mjs` arasında fiyat tablosu ve yardımcılar kopya halinde.
