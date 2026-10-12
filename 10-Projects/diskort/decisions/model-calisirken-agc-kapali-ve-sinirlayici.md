@@ -3,6 +3,7 @@ type: decision
 project: diskort
 date: 2026-10-01
 status: active
+see_also: masaustu-yazilimsal-agc
 tags: [diskort, ses, mikrofon, dpdfnet, agc]
 source: Claude Code oturumu 2026-10-01 (sinanse boğuk ses), main d3ed74f, sürüm 0.9.5
 ---
@@ -29,3 +30,6 @@ Asıl şikâyetin büyük kısmı ayrıca yayın sesindeki Sonar yankısından g
 
 ## İlgili
 - [[konusma-halkasi-duyulan-sesten]] · [[2026-10-01-sinanse-boguk-ses-ve-0-9-5]]
+
+
+> 2026-10-12 ek: tarayıcı AGC'si hâlâ kapalı; yerine kapı worklet'inde yazılımsal kazanç çalışıyor, bkz. [[masaustu-yazilimsal-agc]].

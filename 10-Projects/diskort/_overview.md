@@ -65,10 +65,10 @@ Ses + ekran paylaşımı kalitesi; metin kanalları, tepkiler, dosyalar, roller,
 - Etkinlik: [[etkinlik-oyun-aktivitesi]]; DM: [[dm-sunucu-ayrimi]], [[dm-sesli-arama-ve-calma]], [[engelleme-dm-ve-arama]], [[dm-aramalari-yonetimde-ozel]]
 - Kayıt: [[kayit-sadece-hesap-davetiyesi]]; ekran paylaşımı: [[ekran-paylasimi-sabit-presetler]]
 - Kozmetik: [[kozmetik-sunucudan-paketler]], [[kozmetik-sadece-hover]]
-- Arkadaşlık: [[arkadaslik-sistemi]]
+- Arkadaşlık: [[arkadaslik-sistemi]]; roller: [[rol-etiketleme]], [[rol-verme-hedefin-seviyesine-bakmaz]]
 - Sunucu: [[sunucu-lightnode-istanbula-tasindi]], [[2026-10-03-joker-dns-ve-tools-games-alt-alan-adlari]], [[2026-10-05-liste-sayfalari-ziroo-edge-te-ortak-neon-tasarim]] (ders: [[ajan-yayin-betigini-sahte-ssh-ile-denerken-canliya-cikti]])
 - Yayın sahnesi: [[yayin-arayuzu-discord-tarzi]], [[sahne-izgarada-coklu-yayin]]; yayın sesi: [[uygulamaya-ozel-yayin-sesi-ertelendi]]
-- Ses: [[model-calisirken-agc-kapali-ve-sinirlayici]], [[konusma-halkasi-duyulan-sesten]]
+- Ses: [[model-calisirken-agc-kapali-ve-sinirlayici]], [[masaustu-yazilimsal-agc]], [[dpdfnet-esikler-gevsetildi-android-ayri-is-parcacigi]], [[konusma-halkasi-duyulan-sesten]]
 - Release: [[surum-cikarma-kurali]], [[surum-1-0-ertelendi]]; imzalama: [[kod-imzalama-ertelendi]] (Windows), [[macos-developer-id-imza-ve-otomatik-guncelleme]]
 - Rutin: [[2026-10-10-gozcu-gunluk-gece-incelemesi-kaldirildi]]; presence: [[telefondan-bagli-gostergesi]]
 - Mobil: [[android-min-api-26]], [[mobil-ota-guncelleme]], [[ios-ad-hoc-dagitim]]; UI: [[sunucu-rail-rozeti]]
@@ -77,7 +77,7 @@ Ses + ekran paylaşımı kalitesi; metin kanalları, tepkiler, dosyalar, roller,
 [[sunucu-vps]] · [[deploy]] · [[surum-cikarma]] · [[geri-bildirim-inceleme]] · [[kozmetik-yayinlama]] · [[ios-cihaz-ekleme]] · [[yedekler]] · [[admin-paneli-ve-loglar]] · [[gelen-kutusu-ve-rutinler]] · [[yerel-ui-test-ortami]] · [[telefonla-erisim]]
 
 ## Dersler
-[[dev-ortami-tuzaklari]] · [[electron-cdp-testi]] · [[yerel-installer-testi-userdata]] · [[rn-android-border-nan]] · [[kozmetik-avif-tam-aralik]] · [[worktree-silme-windows]] · [[claude-altina-yazma-izin-sorar]] · [[secret-isleme-kurali]] · [[caddy-bind-mount-restart]] · [[dpdfnet-fallback-koku-neden]] · [[saglayici-udp-paket-siniri]] · [[sonar-yayin-sesine-kendi-sesini-katar]] · [[yerel-testte-ekran-paylasimi-gercek-pencere]] · [[server-testleri-tam-kosuda-kararsiz]] · [[caddy-redir-path-acik-yonlendirme]] · [[caddy-reload-websocketleri-keser]] · [[ajan-yayin-betigini-sahte-ssh-ile-denerken-canliya-cikti]] · [[turkce-sayfada-css-buyuk-harf-noktali-i]] · [[ince-taneli-anahtar-repo-baska-hesaba-tasininca-calismaz]] · [[github-macos-runner-kapasitesi]] · [[electron-net-fetch-rangeerror]] · [[electron-builder-csc-link-anahtar-zinciri-parolasi]] · [[rutin-calisma-klasoru-silinince-oturum-acmaz]]
+[[dev-ortami-tuzaklari]] · [[electron-cdp-testi]] · [[yerel-installer-testi-userdata]] · [[rn-android-border-nan]] · [[kozmetik-avif-tam-aralik]] · [[worktree-silme-windows]] · [[claude-altina-yazma-izin-sorar]] · [[secret-isleme-kurali]] · [[caddy-bind-mount-restart]] · [[dpdfnet-fallback-koku-neden]] · [[saglayici-udp-paket-siniri]] · [[sonar-yayin-sesine-kendi-sesini-katar]] · [[yerel-testte-ekran-paylasimi-gercek-pencere]] · [[server-testleri-tam-kosuda-kararsiz]] · [[caddy-redir-path-acik-yonlendirme]] · [[caddy-reload-websocketleri-keser]] · [[ajan-yayin-betigini-sahte-ssh-ile-denerken-canliya-cikti]] · [[turkce-sayfada-css-buyuk-harf-noktali-i]] · [[ince-taneli-anahtar-repo-baska-hesaba-tasininca-calismaz]] · [[github-macos-runner-kapasitesi]] · [[electron-net-fetch-rangeerror]] · [[electron-builder-csc-link-anahtar-zinciri-parolasi]] · [[rutin-calisma-klasoru-silinince-oturum-acmaz]] · [[rn-animated-interpolate-render-icinde-oom]] · [[kotlin-derlemesi-mac-te-yok-android-ci-ile-dogrula]] · [[livekit-default-cikis-aygitini-somut-kimlige-sabitler]]
 
 ## Oturumlar ve ek kararlar/dersler
 - [[sessions/_index-dev-era]]: geliştirme dönemi (C:\dev, 2026-09-26..28)
@@ -88,9 +88,10 @@ Ses + ekran paylaşımı kalitesi; metin kanalları, tepkiler, dosyalar, roller,
 - [[2026-10-05-araclarin-arayuzu-neon-temaya-gecti]]: altı aracın kendi arayüzü neon temaya geçti, Mac'ten ilk yayın ([[mac-ten-yayin-copyfile-disable-ve-exe-siz-ceviri-sayfasi]])
 - [[2026-10-07-zziroo-tasimasi-tamamlandi-ve-mac-listesi]]: zziroo taşımasının Mac/VPS tarafı, iOS anahtarı yenilendi, Mac listesi işlendi
 - [[sessions/2026-10-08-arkadaslik-sistemi-ve-0-10-0]]: arkadaşlık sistemi, donanım simulcast, 720p30, 0.10.0
+- [[sessions/2026-10-12-rol-etiketi-dpdfnet-agc-oom]]: rol etiketi, rol verme kuralı, DPDFNet eşikleri, masaüstü AGC, OOM, sink-id, 0.11.0
 
 ## Çalışma kuralları (Claude)
 [[20-Areas/working-rules/_index|Çalışma kuralları]] (20-Areas): [[git-push-autonomy]], [[diskort-orchestrator-mode]], [[zamanlanmis-gorevler-ve-skiller]]
 
 ## Sürüm özeti
-0.1.2 metin kanalları (2026-09-26) · 0.1.3 zorunlu otomatik güncelleme · 0.1.4 client-core · 0.2.0 Android v1 · 0.2.x OTA · 0.3.0 tepkiler+ekler · 0.3.1 DeepFilterNet 3 · 0.3.2 profil fotoğrafları · 0.3.3 tema UI · 0.3.4 GPU ekran kodlama · 0.4.0 roller · 0.8.1 iOS Ad Hoc + şema 21 · 0.9.0 Etkinlik · 0.9.2 kozmetik paketleri · 0.9.3 DPDFNet düzeltmesi · 0.9.4 bağlantı teşhisi çalışması · 0.9.5 sahnede çoklu yayın + AGC/sınırlayıcı + yerel konuşma halkası · 0.9.6 DM'de arama + ekran paylaşımı + engelleme (şema 25) · 0.10.0 arkadaşlık + donanım simulcast + 720p30 (şema 26).
+0.1.2 metin kanalları (2026-09-26) · 0.1.3 zorunlu otomatik güncelleme · 0.1.4 client-core · 0.2.0 Android v1 · 0.2.x OTA · 0.3.0 tepkiler+ekler · 0.3.1 DeepFilterNet 3 · 0.3.2 profil fotoğrafları · 0.3.3 tema UI · 0.3.4 GPU ekran kodlama · 0.4.0 roller · 0.8.1 iOS Ad Hoc + şema 21 · 0.9.0 Etkinlik · 0.9.2 kozmetik paketleri · 0.9.3 DPDFNet düzeltmesi · 0.9.4 bağlantı teşhisi çalışması · 0.9.5 sahnede çoklu yayın + AGC/sınırlayıcı + yerel konuşma halkası · 0.9.6 DM'de arama + ekran paylaşımı + engelleme (şema 25) · 0.10.0 arkadaşlık + donanım simulcast + 720p30 (şema 26) · 0.10.3 macOS imza + telefon göstergesi · 0.11.0 rol etiketi + masaüstü AGC + DPDFNet eşikleri (yeni APK).
