@@ -31,6 +31,7 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
   - **Öncelik** ([[2026-10-13-once-magaza-sonra-denge]]): önce Capacitor/mağaza, denge sonra.
   - **Oyun adları her dilde ortak** ([[2026-10-13-oyun-adlari-her-dilde-ortak]]): 51 ad İngilizce kökenli, kısa; eski Türkçe adlar GAMES-ROADMAP tablosunda. Yayın `a2865d0`. Yusuf 24 şekersiz kapağa telefonda baktı: "garip duran yok".
   - **Capacitor yolu** ([[2026-10-13-capacitor-gomulu-web-ve-canli-guncelleme]]): gömülü web + imzalı canlı güncelleme; URL-kabuk değil.
+- **2026-10-13 üçüncü oturum, devamı** ([[2026-10-13-tussle-android-kabugu-testflight-play]]): Android kabuğu `c1344fd`+`2740e7b` (main, GitHub; canlı hâlâ `7c97dd6`, fark yalnız uygulama içi). TestFlight 1.0 (1) yüklendi; Play Console hesabı açıldı. Telefonda (Xiaomi, Android 16) oynandı: akıcı, hatasız.
 - **2026-10-13 üçüncü oturum** ([[2026-10-13-tussle-seker-kalintilari-ve-capacitor-ios]]), yayın **`7c97dd6`** (yedek `pre-7c97dd6.db`), 1.702 test:
   - **Capacitor iOS kabuğu** ([[2026-10-13-paket-kimligi-net-ziroo-tussle-ve-ios-kabuk]]): `net.ziroo.tussle`, `ios/` repoda (SPM), gömülü web, `src/client/platform.ts` dikişi, sunucuda listeli origin'lere CORS, compose `ALLOWED_ORIGINS` genişledi; `npm run build:app`; rehber `docs/CAPACITOR.md`. Simülatörde yerel sunucuyla tam akış doğrulandı; gerçek cihaz ve TestFlight henüz yok. Uygulamada Google/Apple düğmeleri gizli.
   - **Şeker kalıntıları temizlendi** (`3795d6e`): Karşıya Geç, Kart Çevir, Köstebek sahneleri düz. Giriş ekranı kapak şeridi 4'e döndü (51 çiziyordu).
@@ -67,7 +68,11 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 **Telefonda hiç görülmedi:** Parti J'nin 3 oyunu (Köprü Kur, Ok Duvarı, Topla 10; Köprü Kur maskot kutusu ölçülmedi), 24 yeni şekersiz kapak, Dört Ok koyu tema, Parti I'in 4 oyunu (Basket, Jetpack, Şerit Kaç, Kargo Ayır), 13 oyunun yeni süre modeli ("+N sn" balonu dahil), Balon "+1 balon" yazısı, canlı alt sayfanın yeni düzeni (Yusuf gördü mü belirsiz, doğrulanmadı), sezon çipi Android düzeltmesi, Parti Gecesi (gerçek kişilerle de oynanmadı: sahne animasyonu/hızı, konfeti, ses/titreşim, koyu tema, 16 kişide şerit "+n" okunurluğu), tek seferlik kuralın iPhone arka plan davranışı, yeni oda ekranı (klavye açılınca bugün şeridi gizleniyor mu, mesaj satırı yeri, çip/şerit belirişi, skor kartları), rekor flaması, canlı kapışma ("Geçtin!" balonu gerçek maçta hiç görülmedi, eş zamanlı başlangıç, arka plandan dönüş), G+H'nin 14 oyunu, D, E, F partilerinin tamamı (yeni Vinç kuralı ve yeni kapaklar dahil) ve önceki turun listesi (hayalet el, 3-2-1, Android geri, outbox, şans hakkı, 120 Hz).
 
 ### Sıradaki işler
-00-c. **TestFlight / mağaza**: iOS yapı 1.0 (1) App Store Connect'te "Ready to Submit" (2026-10-13); mağaza adı **"Tussle: Daily Mini Games"** ("Tussle" alınmıştı; ikon altı ad Tussle), birincil dil English (U.S.), Türkçe sonra eklenecek. Sırada: iç grup + kendi telefonu, dış grup (Apple beta incelemesi ~1 gün, public link); mağaza için ekran görüntüleri/metin/gizlilik sonra (simülatörden üretilecek); gerçek cihazda açılış ekranı, koyu tema durum çubuğu, paylaşım; sonra Android kabuğu (Yusuf Android Studio Rabbit 1 kuruyor; Play Console 25 $ kayıt, test e-postaları). Sonra imzalı OTA güncelleme (Capgo `capacitor-updater`, kendi sunucudan) ve native Google/Apple giriş (Apple 4.8).
+00-c. **Mağaza testleri (2026-10-13 gece durumu)** ([[2026-10-13-magaza-hesaplari-apple-bireysel-play-ziroo]], [[2026-10-13-android-kabuk-ve-durum-cubugu-seridi]]):
+  - iOS: 1.0 (1) ASC'de "Ready to Submit"; **External Testing görünmüyor → Apple destek cevabı bekleniyor**. Gelince: dış grup "Arkadaşlar" + public link; Yusuf'un iOS cihazı yok.
+  - Android: kabuk hazır (`2740e7b`), Yusuf'un telefonunda `dist/tussle-debug.apk` (sideload) çalışıyor. **Play Console bireysel hesap açıldı (Ziroo), kimlik doğrulaması bekleniyor.** Sırada: yükleme anahtarı + imzalı AAB (`*.keystore` gitignore'da; anahtar yedeği Yusuf'ta), gizlilik politikası sayfası (`tussle.ziroo.net/privacy`; takma ad, cihaz kimliği, skorlar, isteğe bağlı Google/Apple), mağaza görselleri (ikon 512, özellik grafiği 1024×500, ≥2 ekran görüntüsü; simülatör/emülatörden), veri güvenliği + içerik derecelendirme formları, iç test grubu (arkadaş e-postaları).
+  - Küçük: uygulamada dokunuş başına boş `console` satırı (zararsız); Capgo OTA ve native Google/Apple giriş sonra.
+00-c-eski. **TestFlight / mağaza (önceki not)**: iOS yapı 1.0 (1) App Store Connect'te "Ready to Submit" (2026-10-13); mağaza adı **"Tussle: Daily Mini Games"** ("Tussle" alınmıştı; ikon altı ad Tussle), birincil dil English (U.S.), Türkçe sonra eklenecek. Sırada: iç grup + kendi telefonu, dış grup (Apple beta incelemesi ~1 gün, public link); mağaza için ekran görüntüleri/metin/gizlilik sonra (simülatörden üretilecek); gerçek cihazda açılış ekranı, koyu tema durum çubuğu, paylaşım; sonra Android kabuğu (Yusuf Android Studio Rabbit 1 kuruyor; Play Console 25 $ kayıt, test e-postaları). Sonra imzalı OTA güncelleme (Capgo `capacitor-updater`, kendi sunucudan) ve native Google/Apple giriş (Apple 4.8).
 00-c0. ~~Capacitor → telefon/mağaza EN ÖNCE~~ (iOS kabuğu `7c97dd6` ile geldi) ([[2026-10-13-once-magaza-sonra-denge]], yol: [[2026-10-13-capacitor-gomulu-web-ve-canli-guncelleme]]; Yusuf'tan gerekecekler: Google Play 25 $ kayıt, test kullanıcı e-postaları; Apple Developer var; Yusuf: önce markete çıkalım, sonra herkes early access/test ile uygulamada direkt denesin).
 00-d. **Dört Ok telefon geri bildirimi bekleniyor** (v3 `3fe3dc2`: uzun rampa, alt çubuk, beginPath düzeltmesi).
 00-s. ~~Oyun içi şeker kalıntıları~~ kapandı (`3795d6e`); açık soru: Karşıya Geç kahramanı oyunda top, kapakta blok.
@@ -130,6 +135,8 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 - [[2026-10-13-once-magaza-sonra-denge]]
 - [[2026-10-13-dort-ok-oyunu]]
 - [[2026-10-13-paket-kimligi-net-ziroo-tussle-ve-ios-kabuk]]
+- [[2026-10-13-magaza-hesaplari-apple-bireysel-play-ziroo]]
+- [[2026-10-13-android-kabuk-ve-durum-cubugu-seridi]]
 - [[2026-10-13-oyun-adlari-her-dilde-ortak]]
 - [[2026-10-13-capacitor-gomulu-web-ve-canli-guncelleme]]
 
@@ -167,6 +174,7 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 - [[2026-10-13-tussle-eleme-sure-modeli-parti-i]]
 - [[2026-10-13-tussle-kapaklar-parti-j-varyantlar-dort-ok]]
 - [[2026-10-13-tussle-seker-kalintilari-ve-capacitor-ios]]
+- [[2026-10-13-tussle-android-kabugu-testflight-play]]
 
 ## İlgili
 Aynı VPS ve Caddy: [[10-Projects/kapis/_overview|KAPIŞ]] (ws sunucu kalıbı buradan), [[10-Projects/diskort/_overview|Diskort]]. Çalışma kuralları: [[orkestrasyon]], [[karar-dagilimi]].
