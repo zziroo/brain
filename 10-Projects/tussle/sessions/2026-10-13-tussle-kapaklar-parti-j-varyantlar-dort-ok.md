@@ -20,3 +20,8 @@ Günün ikinci oturumu (önceki: [[2026-10-13-tussle-eleme-sure-modeli-parti-i]]
 - **Doğrulanmayanlar:** Parti J'nin üç oyunu ve 24 yeni kapak telefonda görülmedi (Yusuf yalnız Dört Ok'u denedi); Dört Ok koyu temada bakılmadı; Köprü Kur maskot kutusu ölçülmeden yazıldı; oyun içi şeker kalıntıları; Vinç beyazı vb. önceki liste aynen duruyor.
 
 Dersler: [[2026-10-13-kapak-varyant-dort-ok-dersleri]].
+
+## Ek (aynı gün, sonra)
+- Yusuf 24 kapağa telefonda baktı: garip duran yok.
+- Oyun adları her dilde ortak oldu, yayın `a2865d0` ([[2026-10-13-oyun-adlari-her-dilde-ortak]]).
+- Capacitor yolu kararlaştırıldı ([[2026-10-13-capacitor-gomulu-web-ve-canli-guncelleme]]).

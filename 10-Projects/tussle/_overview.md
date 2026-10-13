@@ -22,13 +22,15 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 - i18n: TR/EN (`src/client/i18n`, `docs/I18N.md`); sunucu hata kodları; akış satırları yapısal.
 
 ## Güncel durum (2026-10-13; canlıdan doğrula)
-**Yayında:** https://tussle.ziroo.net (VPS konteyner `tussle`, 127.0.0.1:8087, `/opt/tussle`, Caddy `hosts/tussle.caddy`, veri `/opt/tussle/data` (konteyner içinde `/data`), sırlar `/opt/tussle/.env`). Deploy: `bash deploy/release.sh` (yedek + `deploy/deploy.sh`) ya da yalnız `bash deploy/deploy.sh`. Son yayın `3fe3dc2` (2026-10-13), DB sürümü 13 (şema değişmedi); GitHub `zziroo/tussle` aynı. Yayın öncesi yedekler `/opt/tussle/data/pre-*.db` (son: `pre-3fe3dc2.db`; elle alma: `docker exec tussle node -e` ile `VACUUM INTO '/data/pre-<rev>.db'`, veri `/data/tussle.db`; rev'i önce yerelde değişkene al). 1.699 test yeşil.
+**Yayında:** https://tussle.ziroo.net (VPS konteyner `tussle`, 127.0.0.1:8087, `/opt/tussle`, Caddy `hosts/tussle.caddy`, veri `/opt/tussle/data` (konteyner içinde `/data`), sırlar `/opt/tussle/.env`). Deploy: `bash deploy/release.sh` (yedek + `deploy/deploy.sh`) ya da yalnız `bash deploy/deploy.sh`. Son yayın `a2865d0` (2026-10-13, ortak oyun adları), DB sürümü 13 (şema değişmedi); GitHub `zziroo/tussle` aynı. Yayın öncesi yedekler `/opt/tussle/data/pre-*.db` (son: `pre-a2865d0.db`; elle alma: `docker exec tussle node -e` ile `VACUUM INTO '/data/pre-<rev>.db'`, veri `/data/tussle.db`; rev'i önce yerelde değişkene al). 1.699 test yeşil.
 - **2026-10-13 ikinci oturum** ([[2026-10-13-tussle-kapaklar-parti-j-varyantlar-dort-ok]]), main `2609905` → `3fe3dc2` (18 commit), yayınlar `fd7368a`, `f04ef65`, `e1c252f`, `2db56a3`, `3fe3dc2`:
   - **Kapaklar şekersiz** ([[2026-10-13-kapaklar-ve-kucuk-resimler-sekersiz]]): 24 kapak yeniden çizildi, küçük resimler aynı SVG'den düzeldi; Şeker Dükkânı yalnız arayüz paleti.
   - **Parti J** ([[2026-10-13-terazi-ip-atla-firlat-yerine-parti-j]]): Terazi, İp Atla, Fırlat silindi (410 `game_gone`); Köprü Kur `kopru`, Ok Duvarı `okduvar`, Topla 10 `onluk`.
   - **Varyant yok** ([[2026-10-13-varyantlar-kaldirildi-oyunlar-tek-ve-sabit]]): 12 oyunda yalnız ilk mod, sim birebir, altın tohum testleri; silinmiş mod id'si klasik + varsayılana çözülür.
   - **Dört Ok v3** ([[2026-10-13-dort-ok-oyunu]]): 2×2 oklu karo, kendi süre çubukları, 4 → 2 → 1,4 sn; Yusuf telefonda denedi.
   - **Öncelik** ([[2026-10-13-once-magaza-sonra-denge]]): önce Capacitor/mağaza, denge sonra.
+  - **Oyun adları her dilde ortak** ([[2026-10-13-oyun-adlari-her-dilde-ortak]]): 51 ad İngilizce kökenli, kısa; eski Türkçe adlar GAMES-ROADMAP tablosunda. Yayın `a2865d0`. Yusuf 24 şekersiz kapağa telefonda baktı: "garip duran yok".
+  - **Capacitor yolu** ([[2026-10-13-capacitor-gomulu-web-ve-canli-guncelleme]]): gömülü web + imzalı canlı güncelleme; URL-kabuk değil.
 - Önceki durum (2026-10-13 ilk oturum, yayın `2609905`): aşağıdaki maddeler yerinde; Terazi/Fırlat geçen satırlar tarihsel.
 - **2026-10-13 yayın zinciri:** `00211aa` canlı alt sayfa UI, `75bb90e` sezon çipi, `ba6dccc` küçük bulgular, `d2f3ab3` 4 oyun silme, `be2f534` `BonusClock` çekirdeği, Parti I merge'leri + `f33df9a` inceleme düzeltmeleri, `2323498` kapaklar, `ef42a91` süre modeli A, B merge + `2609905` Renk Hafızası bayrak düzeltmesi. [[2026-10-13-tussle-eleme-sure-modeli-parti-i]]
 - **Oyun eleme** ([[2026-10-13-duz-sans-oyunlari-ve-oruntu-kaldirildi]]): silinen gecit, kutu, yuksek, oruntu; Refleks, Tam Zamanı, Top Nerede, Terazi, Kaç Tane, Hazine, Şifre, Renk Hafızası ve Çark kaldı. **Parti I** ([[2026-10-13-parti-i-dort-hypercasual-oyun]]): Basket, Jetpack, Şerit Kaç, Kargo Ayır (yeni birim `paket`); kapakları ikinci oturumda şekersiz yapıldı. O an toplam 50.
@@ -62,7 +64,7 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 **Telefonda hiç görülmedi:** Parti J'nin 3 oyunu (Köprü Kur, Ok Duvarı, Topla 10; Köprü Kur maskot kutusu ölçülmedi), 24 yeni şekersiz kapak, Dört Ok koyu tema, Parti I'in 4 oyunu (Basket, Jetpack, Şerit Kaç, Kargo Ayır), 13 oyunun yeni süre modeli ("+N sn" balonu dahil), Balon "+1 balon" yazısı, canlı alt sayfanın yeni düzeni (Yusuf gördü mü belirsiz, doğrulanmadı), sezon çipi Android düzeltmesi, Parti Gecesi (gerçek kişilerle de oynanmadı: sahne animasyonu/hızı, konfeti, ses/titreşim, koyu tema, 16 kişide şerit "+n" okunurluğu), tek seferlik kuralın iPhone arka plan davranışı, yeni oda ekranı (klavye açılınca bugün şeridi gizleniyor mu, mesaj satırı yeri, çip/şerit belirişi, skor kartları), rekor flaması, canlı kapışma ("Geçtin!" balonu gerçek maçta hiç görülmedi, eş zamanlı başlangıç, arka plandan dönüş), G+H'nin 14 oyunu, D, E, F partilerinin tamamı (yeni Vinç kuralı ve yeni kapaklar dahil) ve önceki turun listesi (hayalet el, 3-2-1, Android geri, outbox, şans hakkı, 120 Hz).
 
 ### Sıradaki işler
-00-c. **Capacitor → telefon/mağaza EN ÖNCE** ([[2026-10-13-once-magaza-sonra-denge]]; Yusuf: önce markete çıkalım, sonra herkes early access/test ile uygulamada direkt denesin).
+00-c. **Capacitor → telefon/mağaza EN ÖNCE** ([[2026-10-13-once-magaza-sonra-denge]], yol: [[2026-10-13-capacitor-gomulu-web-ve-canli-guncelleme]]; Yusuf'tan gerekecekler: Google Play 25 $ kayıt, test kullanıcı e-postaları; Apple Developer var; Yusuf: önce markete çıkalım, sonra herkes early access/test ile uygulamada direkt denesin).
 00-d. **Dört Ok telefon geri bildirimi bekleniyor** (v3 `3fe3dc2`: uzun rampa, alt çubuk, beginPath düzeltmesi).
 00-s. **Oyun içi şeker kalıntıları** (kapaklar şekersiz oldu, sahnelerde kaldı): Karşıya Geç şeker küp, Kart Çevir lolipop simgeleri, Köstebek bonbon; Kes kapağındaki dikenli tehlike oyundan.
 00. **Denge turu telefon testi (sonraya; mağaza/early access sonrası)** (2026-10-12 tur penceresi + tek hata oyunları ve 2026-10-13 süre modeli 13 oyunu, `#/oyun/<id>`): sert gelenleri tek tek yumuşat; Renk tabanı 1,1–1,2 sn'ye, Şeker Avı tek kaçırma, Ritim pencere, Fren ilk turlar adaylar. Sonra kalan sonsuz oyunların rampaları.
@@ -122,6 +124,8 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 - [[2026-10-13-varyantlar-kaldirildi-oyunlar-tek-ve-sabit]]
 - [[2026-10-13-once-magaza-sonra-denge]]
 - [[2026-10-13-dort-ok-oyunu]]
+- [[2026-10-13-oyun-adlari-her-dilde-ortak]]
+- [[2026-10-13-capacitor-gomulu-web-ve-canli-guncelleme]]
 
 ## Dersler
 - [[2026-10-08-tussle-m0-dersleri]]
