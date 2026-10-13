@@ -37,5 +37,11 @@ source: 2026-10-13 oturumu "pano: son 1 gün token analizi"; ~/.claude/CLAUDE.md
 - Review kapsamı daralınca değişen fonksiyonun uzak çağıranlarındaki kırılma kaçabilir; skeptik ve testler dengeliyor.
 - Etkisi doğrulanmadı: **14 Ekim'de aynı analiz** (`usage.mjs --since 2026-10-13T01:00:00Z`) tekrarlanacak; bakılacak: çağrı başı ortalama bağlam, review ajanı çağrı/zirve, Haiku çağrı sayısı.
 
+## Ölçüm (13 Ekim 04:00 → 23:00, kurallardan sonraki gün)
+- Toplam değişmedi: 194 $ (önceki gün 200 $), 497M token, 3.185 çağrı, çağrı başı ortalama bağlam yine 156k; haftalık kota +13 puan (%25). İş karışımı farklı: 5 uzun oturum (12 kısa yerine), 58 ajan.
+- Uygulanan: review ajanları 8–43 çağrı, zirve 65–224k (önceki gün 60–75 çağrı, 215–243k) ✓. Haiku ilk kez kullanıldı: 3 ajan, 42 çağrı, 0,08 $ ✓. Ajan maliyeti 126 → 105 $, ajan başı ortalama bağlam 151k → 140k ✓.
+- Uygulanmayan: koordinatör devir eşiği (Fable oturumları 412k, 322k, 321k, 277k zirve; 5–7 saat; koordinatör maliyeti 65 → 89 $). Ajan 200k tavanı incremantal-game'de aşıldı (5 ajan 254–324k, 80–124 çağrı; js/run.js 3.480 satır, render.js 2.552 satır). Ekran görüntüleri sürüyor (ajanlarda 11–17 görüntü, koordinatörde 14–15).
+- Sonuç: ajan tarafı ucuzladı, kazanç koordinatör şişmesine gitti. Sonraki hedef koordinatör devri ve incremantal-game'de dosya/aşama bölme.
+
 ## İlgili
 - [[2026-10-10-ajan-boyutu-ve-yalin-baglam]], [[orkestrasyon]], [[inceleme-kapisi]], [[araclar-ve-raporlar]], [[_index]]
