@@ -158,6 +158,8 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 - [[2026-10-12-kapi-yok-uzunluk-icerikten-atilim-silindi-sonsuz-yildizlar]]
 - [[2026-10-12-is-yildiz-tozunun-yerine-tek-kaynak-gece]]
 - [[2026-10-13-guc-ekranda-gorunsun-dunya-kirilir]]
+- [[2026-10-13-kirilan-dunya-ve-zincir-firtina-yazildi]]
+- [[2026-10-13-parlama-evrimi-sok-dalgasi-yanan-halka-gun-dogumu]]
 
 ## Dersler
 - [[2026-10-02-carpimsal-gelistirmeler-geliri-patlatir]]
@@ -191,6 +193,8 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 - [[2026-10-08-mac-te-gamepad-tarayiciya-yalniz-bluetooth-ile-gorunur]]
 - [[2026-10-08-ajan-worktree-i-eski-commit-ten-acilabilir]]
 - [[2026-10-08-kota-kapisi-agac-dolunca-olu-sefer-uretir]]
+- [[2026-10-13-ayri-olculen-ozellikler-ust-uste-binince-kisaltir]]
+- [[2026-10-13-ikinci-evre-ajani-birinci-evrenin-hatasini-bulur]]
 
 ## Oturumlar
 - [[2026-10-02-iki-oyun-yayin-ve-kamp-yenilemesi]]
@@ -209,3 +213,4 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 - [[2026-10-08-son-nobet-gamepad-lazer-yayin]]
 - [[2026-10-08-nobet-tavani-ve-uzunluk-agacta]]
 - [[2026-10-12-tavan-kalkti-atilim-silindi-is-geldi]]
+- [[2026-10-13-kirilan-dunya-firtina-parlama-evrimi-yayin]]

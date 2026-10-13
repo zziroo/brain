@@ -2,7 +2,7 @@
 type: decision
 project: isik-bekcisi
 date: 2026-10-13
-status: proposed
+status: accepted
 tags: [isik-bekcisi, tasarim, core-loop, guc, icerik, yon]
 source: oturum b89a4bee (incremantal-game, 2026-10-13); Yusuf'un yorumu; henüz kod yok
 ---
@@ -26,3 +26,6 @@ Ağaç buna göre yeniden kesilir: "+%" yıldızları azalır (sayı işi sonsuz
 
 ## Durum
 Önerildi, sıra kararlaştırılmadı; Yusuf yeni oturumda devam edecek. Önerilen sıra: dünya kırılır → Parlama → fırtına.
+
+## Gerçekleşme
+2026-10-13: 1 (dünya kırılır), 2 (Parlama evrilir) ve 3 (zincir fırtına) yazılıp yayınlandı: [[2026-10-13-kirilan-dunya-ve-zincir-firtina-yazildi]], [[2026-10-13-parlama-evrimi-sok-dalgasi-yanan-halka-gun-dogumu]]. 4 (hale geceyi korkutur) ve 5 (yoldaşlar fener taşır) ile ağacın yeniden kesimi açık.
