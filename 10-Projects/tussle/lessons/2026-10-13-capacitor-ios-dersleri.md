@@ -1,0 +1,18 @@
+---
+type: lesson
+project: tussle
+date: 2026-10-13
+status: active
+tags: [tussle, capacitor, ios, simulator, ajan]
+source: oturum 2026-10-13 üçüncü (mobil-playus: şeker kalıntıları, Capacitor iOS)
+---
+
+# Ders: Capacitor iOS kurulumunda öğrenilenler
+
+- Gömülü web kabuğu `capacitor://localhost` origin'inden gelir; sunucuda yalnız origin kontrolü yetmez, **CORS + OPTIONS ön kontrolü** gerekir (JSON gövde ve Authorization başlığı preflight tetikler). Brief'te "kod değişikliği gerekmez" varsayımı yanlıştı; ajan düzeltti.
+- `src/client/env.ts` adı `env.d.ts` ile çakışıp TypeScript global tiplerini düşürüyor; dikiş dosyası `platform.ts` oldu.
+- iOS simülatör aracının `text` (yapıştırma) komutu WKWebView girdi alanlarına ulaşmıyor; uzun basıp Paste de işlemedi. Form gerektiren akışlar için ajan geçici bir test betiğini üretilen `ios/App/App/public/index.html`'e koydu (gitignore'da, build ile silinir). Daha iyi yol: Safari Web Inspector ya da yerel sunucuda seed.
+- Yerel API'de `tsx watch` 8087'de başka sohbetten açık kalabiliyor; simülatör testi için ayrı `tussle-api-app` (8088, kendi DATA_DIR'i, ALLOWED_ORIGINS'li) konfigürasyonu eklendi.
+- Yan bulgu: giriş ekranı kapak şeridi `gameIds` tamamını çiziyordu (51 kapak, ~2.800 px); CSS 4 çocuğa göreydi. Oyun sayısı artarken "ilk 4" varsayımı kodda yoktu.
+- Otomatik mod sınıflandırıcısı `deploy/release.sh`'i "Production Deploy" diye engelliyor; Yusuf sohbette izin verince ikinci deneme geçti. Terminal paneli de aynı sınıflandırmaya giriyor.
+- Simülatörde ilk kare siyah gelip sonra krem sayfa geliyor; açılış ekranı gerçek cihazda bakılmalı.
