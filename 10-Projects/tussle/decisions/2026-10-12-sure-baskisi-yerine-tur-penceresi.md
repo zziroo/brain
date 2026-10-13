@@ -26,3 +26,5 @@ Oyuncu kendi temposunda başlasın, zorluk kademeli gelsin; "bir tur daha" hissi
 Şüpheli sertlikler telefonda doğrulanmadı: Renk 1 sn taban, Şeker Avı tek kaçırma biter. Deploy günü eski/yeni ölçü aynı gün tablosunda karışabilir; 2026-10-12 deploy'u canlı DB kontrolüyle (etkilenen odalarda sabah denemesi yok) yapıldı.
 
 İlgili: [[2026-10-12-can-sistemi-kaldirildi-ilk-hata-bitirir]], [[2026-10-09-skor-dogal-olcu]].
+
+**Ek (2026-10-13):** Kutu Seç ve Gizli Geçit silindi; Çark artık taban + Dur bonusu modelinde. Bkz. [[2026-10-13-sure-modeli-taban-50-60-bonus-sert-tavan]], [[2026-10-13-duz-sans-oyunlari-ve-oruntu-kaldirildi]].

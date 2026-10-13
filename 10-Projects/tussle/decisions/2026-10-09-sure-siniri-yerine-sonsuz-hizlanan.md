@@ -26,3 +26,5 @@ Sek Sek, Şeker Yağmuru, Denge, Hızlı Fren (3 can, 20 tur tavanı), Top Nered
 
 ## İlgili
 - [[2026-10-09-skor-dogal-olcu]]
+
+**Ek (2026-10-13):** Karşıya Geç ve Zıpla süresiz sonsuz oldu (teknik tavan 120 sn); süreli oyunlar için yeni model: [[2026-10-13-sure-modeli-taban-50-60-bonus-sert-tavan]].

@@ -18,3 +18,5 @@ source: oturum 2026-10-09 (mobil-playus: Parti D-E-F, canlandırma, OFF_POOL)
 **Ek (2026-10-10, yayın `1ecfed0`):** Yusuf'un kararıyla dört havuz dışı oyun (itici, plinko, salyangoz, zar) koddan tamamen silindi ("silebilirsin, sorun değil; bundan sonra oyunlara ekle çıkar yaparız"). `OFF_POOL` mekanizması boş küme olarak duruyor. Eski kayıtlardaki silinmiş oyun id'leri okunabilir kalır, yeni deneme 410 `game_gone`, rescore atlar ([[2026-10-10-tussle-canli-kapisma-m1]]).
 
 Bağlantı: [[2026-10-09-havuz-haric-tutma-listesi]], [[2026-10-09-ajanlar-tarayicida-oynar]].
+
+**Ek (2026-10-13):** Düz şans oyunları (gecit, kutu, yuksek) ve Örüntü OFF_POOL yerine koddan silindi: [[2026-10-13-duz-sans-oyunlari-ve-oruntu-kaldirildi]].

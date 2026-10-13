@@ -1,10 +1,10 @@
 ---
 type: project
 project: tussle
-date: 2026-10-12
+date: 2026-10-13
 status: active
 tags: [tussle, overview, oyun, mobil, pwa]
-source: oturum 2026-10-12 (mobil-playus: denge turu + sade tema)
+source: oturum 2026-10-13 (mobil-playus: eleme, süre modeli, Parti I)
 ---
 
 # Tussle: arkadaşlarla günlük mini oyun kapışması (Playus'un hafif rakibi)
@@ -18,11 +18,25 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 - İstemci: saf TS + Vite + Canvas 2D, framework yok; menüler DOM (rAF yalnız oyunda). PWA (manifest + SW; SW `/api`'yi hiç önbelleklemez).
 - Oyun sözleşmesi: 60 Hz sabit adım deterministik sim (`sim.ts`, DOM'suz) + `view.ts`; sim'de `Math.sin/cos/pow/hypot/random/Date` yasak (`shared/dmath`, `shared/rng`); adım başına sıfır tahsis; varsayılan 60 kare sınırı, "Yüksek kare hızı" ayarı.
 - Sunucu: Node 24 + `ws` + `node:sqlite`, tek konteyner; girdi günlüğü sunucuda tekrar oynatılır, skor sunucuda hesaplanır (hile ve tekrar izleme). Oda kodu (4 harf), günün oyunu `mixSeed(oda, gün, sezon)`, deneme hakkı, sezon, sohbet + otomatik akış satırları, misafir kimliği + Google/Apple bağlama (JWT doğrulama `node:crypto`), günlük `VACUUM INTO` yedek.
-- Oyunlar (50 kayıtlı, hepsi günlük havuzda): M0 dörtlüsü + Parti A–H. Plinko, Zar Kulesi, Salyangoz, Jeton İtici 2026-10-10'da silindi; `src/shared/pool.ts` `OFF_POOL` mekanizması boş küme olarak duruyor. Varyantlı; **oda parametresi yok**, denge kodda. Meta: `gesture` (hayalet el), `score {unit, decimals, better}` (doğal ölçü). Üretim kiti: `src/games/shell`, `npm run new-game`, `docs/GAME-CONTRACT.md`, yol haritası `docs/GAMES-ROADMAP.md`.
+- Oyunlar (50 kayıtlı, hepsi günlük havuzda): M0 dörtlüsü + Parti A–H + Parti I. Plinko, Zar Kulesi, Salyangoz, Jeton İtici 2026-10-10'da; Gizli Geçit, Kutu Seç, Yüksek/Alçak, Örüntü 2026-10-13'te silindi; `src/shared/pool.ts` `OFF_POOL` mekanizması boş küme olarak duruyor. Varyantlı; **oda parametresi yok**, denge kodda. Meta: `gesture` (hayalet el), `score {unit, decimals, better}` (doğal ölçü). Üretim kiti: `src/games/shell`, `npm run new-game`, `docs/GAME-CONTRACT.md`, yol haritası `docs/GAMES-ROADMAP.md`.
 - i18n: TR/EN (`src/client/i18n`, `docs/I18N.md`); sunucu hata kodları; akış satırları yapısal.
 
-## Güncel durum (2026-10-12; canlıdan doğrula)
-**Yayında:** https://tussle.ziroo.net (VPS konteyner `tussle`, 127.0.0.1:8087, `/opt/tussle`, Caddy `hosts/tussle.caddy`, veri `/opt/tussle/data` (konteyner içinde `/data`), sırlar `/opt/tussle/.env`). Deploy: `bash deploy/deploy.sh`. Son yayın `062408b` (2026-10-12; repo HEAD `d8abd0d` yalnız `scripts/canvas-shot`), DB sürümü 13; GitHub `zziroo/tussle` `d8abd0d`. Yayın öncesi yedekler `/opt/tussle/data/pre-*.db` (son: `pre-062408b.db`; alma: `docker exec tussle node -e` ile `VACUUM INTO '/data/pre-<rev>.db'`, veri `/data/tussle.db`; rev'i önce yerelde değişkene al). 1.670 test yeşil.
+## Güncel durum (2026-10-13; canlıdan doğrula)
+**Yayında:** https://tussle.ziroo.net (VPS konteyner `tussle`, 127.0.0.1:8087, `/opt/tussle`, Caddy `hosts/tussle.caddy`, veri `/opt/tussle/data` (konteyner içinde `/data`), sırlar `/opt/tussle/.env`). Deploy: `bash deploy/deploy.sh`. Son yayın `2609905` (2026-10-13), DB sürümü 13 (şema değişmedi); GitHub `zziroo/tussle` aynı. Yayın öncesi yedekler `/opt/tussle/data/pre-*.db` (son: `pre-2609905.db`, önceki `pre-00211aa.db`; alma: `docker exec tussle node -e` ile `VACUUM INTO '/data/pre-<rev>.db'`, veri `/data/tussle.db`; rev'i önce yerelde değişkene al). 1.669 test yeşil.
+- **2026-10-13 yayın zinciri:** `00211aa` canlı alt sayfa UI, `75bb90e` sezon çipi, `ba6dccc` küçük bulgular, `d2f3ab3` 4 oyun silme, `be2f534` `BonusClock` çekirdeği, Parti I merge'leri + `f33df9a` inceleme düzeltmeleri, `2323498` kapaklar, `ef42a91` süre modeli A, B merge + `2609905` Renk Hafızası bayrak düzeltmesi. [[2026-10-13-tussle-eleme-sure-modeli-parti-i]]
+- **Oyun eleme** ([[2026-10-13-duz-sans-oyunlari-ve-oruntu-kaldirildi]]): silinen gecit, kutu, yuksek, oruntu; Refleks, Tam Zamanı, Top Nerede, Terazi, Kaç Tane, Hazine, Şifre, Renk Hafızası ve Çark kaldı. **Parti I** ([[2026-10-13-parti-i-dort-hypercasual-oyun]]): Basket, Jetpack, Şerit Kaç, Kargo Ayır (yeni birim `paket`), şekerli kapaklar. Toplam 50.
+- **Süre modeli** ([[2026-10-13-sure-modeli-taban-50-60-bonus-sert-tavan]]): taban 50–60 sn, iyi oyun bonus, sert tavan 90 sn (sonsuzlarda teknik 120).
+
+  | Kalıp | Oyunlar |
+  |---|---|
+  | A süre (`BonusClock`, "+N sn") | Çift Dokun, Işık Sırası (20 tur), Çark (Dur'da çeviriş başına +1, en çok +5) |
+  | A adet (`EV_EXTRA`) | Bardak Doldur 16, Fırlat 16, Balon 16 (+1), Refleks 8 tur, Tam Zamanı 7 tur, Hazine 20 kürek/90 sn |
+  | B sonsuz (çubuk yok, 120 sn teknik) | Karşıya Geç, Zıpla |
+  | Tur penceresi | Jöle Kes (6→2,5 sn), Renk Hafızası (bakış 2→0,6, cevap 8→3 sn, skor 'puan') |
+
+  Kalan ~30 oyun zaten sonsuz/tur pencereli. Canlı maç deadline'ı `maxTicks/60 + 60 sn` (`src/server/live.ts`, parti de aynı).
+- **Canlı alt sayfa yeni düzen** ([[2026-10-13-canli-alt-sayfa-sekmeler-baslik-oldu]]): sekme şeridi başlık, ızgara ≥2 satır, ipucu 2 satır sabit, 88dvh; sezon çipi Android kenarı `rotate` özelliğiyle düzeldi.
+- Önceki durum (2026-10-12): aşağıdaki maddeler yerinde (son yayın o gün `062408b`).
 - **Denge turu yayında (`8214e9a`)**, [[2026-10-12-sure-baskisi-yerine-tur-penceresi]], [[2026-10-12-can-sistemi-kaldirildi-ilk-hata-bitirir]]: 7 sabit süreli oyun (Matematik, Terazi, Zincir, Farklı, Renk, Şeker Avı, Kart Çevir) tur penceresine geçti, skor doğal sayı; 12 oyunda canlar kalktı, ilk hata bitirir, başlangıç yumuşak (Fren tavanı 40 tur, Yüksek/Alçak skor = doğru). Hepsinin sürümü arttı; eski denemeler yeniden puanlanmadı (kural değişti). **Telefonda denenmedi**, bot ölçümü. Şüpheli sertlikler: Renk 1 sn taban, Ritim tek kaçırma (p10 ~7 sn), Fren açgözlü 1–3 tur, Şeker Avı tek kaçırma.
 - **Sade sahne yayında (`062408b`)**, [[2026-10-12-oyun-sahnesi-sade]]: `docs/VISUAL.md` §2.1; Şeker Yağmuru'ndan Zikzak'a 30 oyunun view'ı yeniden çizildi (~22k→~14k satır), sim değişmedi. **Yusuf'un gözüyle bakılacaklar:** Piñata düz top, Vinç makine hissi, Şifre düz süre çubuğu, Çark 2 ton, Gecit 3 renkli kapı, Yılan damalı ızgara, Sepet yüzsüz iyi şekerler. Ajanlar için canvas yakalama aracı `scripts/canvas-shot/` ([[2026-10-12-denge-ve-tema-turu-dersleri]]).
 - Önceki durum (2026-10-11): aşağıdaki maddeler yerinde.
@@ -35,22 +49,24 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 - **Parti G+H yayında (`30532cf`)**: 14 yeni oyun (Kanat Çırp, Şeker Kes, Spiral Kule, Bambu Kes, Diken Duvar, Tuğla Kır, Jöle Kes, Tam Zamanı, Renk Hafızası, Havada Tut, Hedef Avı, Yörünge, Yılan, Zikzak) + kapakları; (o an 54 kayıtlı; 2026-10-10 silmeyle 50). Yeni skor birimleri: kesim, yuzde, vurus, tugla. İnceleme düzeltmeleri: bambu tempo sınırı, kes daire ovalama, yorunge dokunuş aralığı; tamzaman/renkhafiza şüpheli bayrakları. [[2026-10-09-tussle-parti-g-h]]
 - Havuzdaki oyunların hepsinin çizimli kapağı var (D/E/F'nin 14'ü `2482f79`'da); havuz dışı 4 oyun silindi. Antrenman yalnız canlı havuzu listeler, ana sayfa satırında 4 küçük kapak.
 - E+F oyunları tarayıcıda canlandırıldı (sahne, karakter, ödül anı). Görsel tarz: ilk oyunlar gibi devam; tüm oyunların teması sonra toptan düzenlenebilir (Yusuf, limit yenilenince).
-- Şüpheli koşu bayrakları: kutu, yuksek, refleks, gecit, plinko, hazine, sifre, katane (saklanıyor, hiçbir yerde gösterilmiyor).
+- Şüpheli koşu bayrakları: refleks, hazine, sifre, katane, tamzaman, renkhafiza (saklanıyor, hiçbir yerde gösterilmiyor; kutu/yuksek/gecit/plinko oyunlarla silindi).
 - Google/Apple girişi kodda hazır, env yok (`docs/AUTH-SETUP.md`).
 
-**Telefonda hiç görülmedi:** Parti Gecesi (gerçek kişilerle de oynanmadı: sahne animasyonu/hızı, konfeti, ses/titreşim, koyu tema, 16 kişide şerit "+n" okunurluğu), tek seferlik kuralın iPhone arka plan davranışı, yeni oda ekranı (klavye açılınca bugün şeridi gizleniyor mu, mesaj satırı yeri, çip/şerit belirişi, skor kartları), rekor flaması, canlı kapışma ("Geçtin!" balonu gerçek maçta hiç görülmedi, eş zamanlı başlangıç, arka plandan dönüş), G+H'nin 14 oyunu, D, E, F partilerinin tamamı (yeni Vinç kuralı ve yeni kapaklar dahil) ve önceki turun listesi (hayalet el, 3-2-1, Android geri, outbox, şans hakkı, 120 Hz).
+**Telefonda hiç görülmedi:** Parti I'in 4 oyunu (Basket, Jetpack, Şerit Kaç, Kargo Ayır), 13 oyunun yeni süre modeli ("+N sn" balonu dahil), Balon "+1 balon" yazısı, canlı alt sayfanın yeni düzeni (Yusuf gördü mü belirsiz, doğrulanmadı), sezon çipi Android düzeltmesi, Parti Gecesi (gerçek kişilerle de oynanmadı: sahne animasyonu/hızı, konfeti, ses/titreşim, koyu tema, 16 kişide şerit "+n" okunurluğu), tek seferlik kuralın iPhone arka plan davranışı, yeni oda ekranı (klavye açılınca bugün şeridi gizleniyor mu, mesaj satırı yeri, çip/şerit belirişi, skor kartları), rekor flaması, canlı kapışma ("Geçtin!" balonu gerçek maçta hiç görülmedi, eş zamanlı başlangıç, arka plandan dönüş), G+H'nin 14 oyunu, D, E, F partilerinin tamamı (yeni Vinç kuralı ve yeni kapaklar dahil) ve önceki turun listesi (hayalet el, 3-2-1, Android geri, outbox, şans hakkı, 120 Hz).
 
 ### Sıradaki işler
-00. **Denge turu telefon testi** (19 oyun, `#/oyun/<id>`): sert gelenleri tek tek yumuşat; Renk tabanı 1,1–1,2 sn'ye, Şeker Avı tek kaçırma, Ritim pencere, Fren ilk turlar adaylar. Sonra kalan sonsuz oyunların rampaları (Yusuf: süre baskısı asıl sorundu, rampa değil).
+00. **Denge turu telefon testi** (Yusuf sonra konuşacak; 2026-10-12 tur penceresi + tek hata oyunları ve 2026-10-13 süre modeli 13 oyunu, `#/oyun/<id>`): sert gelenleri tek tek yumuşat; Renk tabanı 1,1–1,2 sn'ye, Şeker Avı tek kaçırma, Ritim pencere, Fren ilk turlar adaylar. Sonra kalan sonsuz oyunların rampaları.
+00-k. **Kapak sorusu açık:** kapaklar şekerli mi kalsın (Yusuf cevaplamadı; Parti I kapakları şekerli yapıldı).
+00-p. **Arkadaşlarla Parti Gecesi / canlı kapışma denemesi** (aşağıdaki 0a, 0a2).
+00-c. **Sonra Capacitor → telefon/mağaza** (Yusuf: "devamında artık telefona çıkartmaya başlayalım").
 00a. **Sade sahne göz turu** (30 oyun iki tema): yukarıdaki "bakılacaklar"; istenirse Piñata'ya kulak, Çark'a çok renk geri (tek satır: `WEDGE_CANDY`).
-00b. Düşük bulgular: canlı maç deadline'ı Renk/Şeker Avı'nda tavandan kısa (`live.ts` `2*typicalSec+30`); Vinç 8 tür 7 renk; `rescore` tablosu eskidi (roadmap'te tarihli not var).
+00b. Düşük bulgular (2026-10-13 kapandı: Vinç 8. renk eklendi, rescore tablosu "tarihsel" notu aldı, canlı deadline maxTicks'e bağlandı). Telefonda bakılacak: Vinç yeni marshmallow beyazı Gündüz'de ayrışıyor mu.
 0. **Yeni oda ekranı telefon turu** (2026-10-12: Yusuf "Parti Gecesi hariç denedik, sorun yok" dedi; Parti Gecesi hâlâ denenmedi) (iOS + Android): klavye ve mesaj satırı, kaydırınca sezon çipi/bugün şeridi, canlı ilk 3 ve tam liste, skor kartları, başlangıç kartındaki deneme bağlantısı. Bilerek bırakılan düşükler: klavye açıkken ⚔ sıçrama payı, şerit eşikte "Önceki mesajlar"a biniyor.
 0a. **Arkadaşlarla Parti Gecesi denemesi** (oda sahibi açar): sahneler anlaşılıyor mu, puanlar net mi, herkese aynı anda açılıyor mu, 9 sn sahne kısa/uzun mu, kürsü. Sonra 2. tur cila.
 0a2. **Arkadaşlarla canlı kapışma + günlük oyun denemesi** (Yusuf: oyunları arkadaşlarla test edecekler, sonra ekle/çıkar). Bakılacaklar: geçme ✓'si, herkes aynı anda oyuna geçiyor mu, şerit/etiket/çubuk arası ferah mı, son 5 sn nabzı rahatsız ediyor mu, arka plandan dönüşte kart durumu.
-0b. **Süreli ~18 oyunu sonsuz-hızlanana çevirme** (Claude önerisi, Yusuf onayı bekliyor): toplam süre yerine tur başına kısalan süre + can/ilk hatada biter; önce 3–4 oyunla deneme. Liste: cark, cift, farkli, gecit, hafiza, hazine, isik, karsiya, kostebek, kutu, matematik, renk, terazi, yuksek, zincir, zipla.
 1. **Telefon turu**: D/E/F oyunları + önceki liste; hak harcamadan `https://tussle.ziroo.net/#/oyun/<id>`. Bakılacaklar: Fırlat hassasiyeti, İp Atla ilk oyuncu süresi, Şeker Ritmi geniş şeker/sıçrama, Vinç bantları, Çizgi Takip zorluk.
 2. **Kapaklara bakış**: 14 yeni kapak Yusuf onayı beklemeden yayında; beğenilmeyenleri varyantla daralt. Koyu temada ritim/gecit panel ayrışması kart içinde kontrol edilmedi; panel renk yakınlıkları (vinc~matematik, cark~renk, ritim~denge). 
-3. **G+H telefon turu**: denge şüpheleri — Spiral 10–30. kat ekşi yoğunluğu, Zikzak 8 karo/sn tavanı, Yılan dönüş parmak kalkınca, Hedef küçük hedefte merkez, Yörünge erken çiviler kolay mı, Bambu 10/sn sınırı hissettiriyor mu. Sonra zayıflar `OFF_POOL`'a. Yedek adaylar: Basket, Ok Duvarı, Jetpack, Şerit Kaç, Kargo Ayır.
+3. **G+H telefon turu**: denge şüpheleri — Spiral 10–30. kat ekşi yoğunluğu, Zikzak 8 karo/sn tavanı, Yılan dönüş parmak kalkınca, Hedef küçük hedefte merkez, Yörünge erken çiviler kolay mı, Bambu 10/sn sınırı hissettiriyor mu. Sonra zayıflar `OFF_POOL`'a. G+H denge sonra. Yedek aday: Ok Duvarı (Basket, Jetpack, Şerit Kaç, Kargo Ayır Parti I ile geldi).
 4. **Canlı sonrası**: dolaylı etkileşim modu (Tetris tarzı rakibe engel) ve gerçek arena oyunları; önce tek prototip (öneri sumo, gecikmeye dayanıklı; deterministik sim → geri sarmalı ağ kodu). M1: rövanş, maç geçmişi, yeniden katılma Yusuf kararıyla yok; oyun başına kişi sayısı filtresi kalabalık/canlı oyunlar gelince; bildirim Capacitor ile.
 5. Tema toptan düzenleme (Yusuf kararı, sonra).
 6. Kit/teknik: seçim düğmeleri yardımcısı; bayrakları tabloda ayırma (istenirse); Capacitor → TestFlight → mağaza; ertelenenler (ID token nonce, CSP, sözlük tembel yükleme, tepki toggle idempotent, `GET me` 30 oda).
@@ -88,6 +104,10 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 - [[2026-10-12-sure-baskisi-yerine-tur-penceresi]]
 - [[2026-10-12-can-sistemi-kaldirildi-ilk-hata-bitirir]]
 - [[2026-10-12-oyun-sahnesi-sade]]
+- [[2026-10-13-duz-sans-oyunlari-ve-oruntu-kaldirildi]]
+- [[2026-10-13-sure-modeli-taban-50-60-bonus-sert-tavan]]
+- [[2026-10-13-parti-i-dort-hypercasual-oyun]]
+- [[2026-10-13-canli-alt-sayfa-sekmeler-baslik-oldu]]
 
 ## Dersler
 - [[2026-10-08-tussle-m0-dersleri]]
@@ -102,6 +122,7 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 - [[2026-10-11-oda-yeniden-tasarim-dersleri]]
 - [[2026-10-11-parti-gecesi-dersleri]]
 - [[2026-10-12-denge-ve-tema-turu-dersleri]]
+- [[2026-10-13-parti-i-ve-sure-modeli-dersleri]]
 
 ## Oturumlar
 - [[2026-10-08-tussle-tasarim-ve-m0-yayin]]
@@ -117,6 +138,7 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 - [[2026-10-11-tussle-oda-ekrani-yeniden-tasarim]]
 - [[2026-10-11-tussle-m1-tek-seferlik-ve-parti-gecesi]]
 - [[2026-10-12-tussle-denge-ve-sade-tema]]
+- [[2026-10-13-tussle-eleme-sure-modeli-parti-i]]
 
 ## İlgili
 Aynı VPS ve Caddy: [[10-Projects/kapis/_overview|KAPIŞ]] (ws sunucu kalıbı buradan), [[10-Projects/diskort/_overview|Diskort]]. Çalışma kuralları: [[orkestrasyon]], [[karar-dagilimi]].
