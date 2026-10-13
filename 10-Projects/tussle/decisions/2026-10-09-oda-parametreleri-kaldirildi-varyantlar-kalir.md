@@ -2,10 +2,12 @@
 type: decision
 project: tussle
 date: 2026-10-09
-status: active
+status: superseded
 tags: [tussle, denge, host-paneli, urun]
 source: oturum 2026-10-09 (mobil-playus: oda/sohbet/hareket/dil turu + oyun üretim kiti + Parti A)
 ---
+
+> **Superseded (2026-10-13):** varyantlar da kaldırıldı, her oyun tek ve sabit. Bkz. [[2026-10-13-varyantlar-kaldirildi-oyunlar-tek-ve-sabit]]. Oda parametresi yok kısmı geçerli.
 
 # Karar: Oda başına oyun parametresi yok; oyun her odada aynı hisseder, denge kodda, varyantlar kalır
 
@@ -30,3 +32,4 @@ Oyun hissi sabit olmalı; denge tek yerde (kod) olunca test edilebilir ve karş�
 
 ## İlgili
 - [[_overview]]
+- [[2026-10-13-varyantlar-kaldirildi-oyunlar-tek-ve-sabit]] (yerine geçen)

@@ -25,4 +25,6 @@ Sadelik ilk oyunlarla tutarlı, okunurluk ve kare bütçesi daha iyi; süs bilgi
 ## Sonuçlar / riskler
 Süsle birlikte bilgi silinmesi riski (inceleme yakaladı: Bardak Doldur hız ipucu, Sepet ekşi ayrımı, Diken/Yılan renk yakınlığı; düzeltildi). Yusuf'un gözüyle bakılacaklar: Piñata düz top (eşek/yıldız hissi gitti), Vinç makine hissi azaldı, Şifre'de fitil yerine düz süre çubuğu, Çark 2 tonlu, Gecit kapıları 3 renk, Yılan damalı ızgara kaldı.
 
+> **Kapak kısmı 2026-10-13'te değişti:** yukarıdaki "kapaklar Şeker Dükkânı olarak kalır" artık geçersiz; kapaklar ve küçük resimler de şekersiz, yalnız arayüz paleti Şeker Dükkânı. Bkz. [[2026-10-13-kapaklar-ve-kucuk-resimler-sekersiz]].
+
 İlgili: [[2026-10-08-gorsel-kimlik-seker-dukkani-acik-varsayilan]], [[2026-10-12-denge-ve-tema-turu-dersleri]].

@@ -35,8 +35,11 @@ source: oturum 2026-10-08 gece (mobil-playus UI yenileme)
 - iOS durum çubuğu `default` yapıldı (krem zeminde beyaz saat okunmuyordu); Gece'de ince açık şerit kalır, kabul edildi.
 - Yeni oyun/ekran eklerken `docs/VISUAL.md` yasak listesine bakılacak.
 
+> **Kapak kısmı 2026-10-13'te değişti:** oyun kapakları ve küçük resimler artık şekersiz; Şeker Dükkânı yalnız arayüz paleti olarak sürüyor. Bkz. [[2026-10-13-kapaklar-ve-kucuk-resimler-sekersiz]].
+
 ## İlgili
 - [[2026-10-08-gorsel-dil-neon-oyuncak-koyu-varsayilan]] (önceki, superseded)
 - [[2026-10-08-font-nunito-tek-aile]]
 - [[2026-10-08-marka-maskotu-uclu-blok-ve-ikon]]
 - [[2026-10-08-ui-yenileme-dersleri]]
+- [[2026-10-13-kapaklar-ve-kucuk-resimler-sekersiz]] (kapaklar şekersiz)
