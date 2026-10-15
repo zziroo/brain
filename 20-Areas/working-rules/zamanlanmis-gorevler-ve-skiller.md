@@ -1,34 +1,34 @@
 ---
 type: resource
 project: diskort
-date: 2026-10-07
+date: 2026-10-15
 status: active
 tags: [working-rules, zamanlanmis-gorev, skill]
 source: /Users/ziroo/.claude/scheduled-tasks/*/SKILL.md (Mac, 2026-10-07); Windows dönemi: C:\Users\yusuf\.claude\scheduled-tasks\*\SKILL.md ve skills\synced
 ---
 
-# İki yerel zamanlanmış görev Diskort'u izler; senkronize skiller hesap skilleridir
+# Tek yerel zamanlanmış görev (Diskort gözcü) geri bildirim, hata, sağlık ve kod incelemesini birlikte yapar; senkronize skiller hesap skilleridir
 
 ## Zamanlanmış görevler (yerel masaüstü görevleri, bulut rutini değil)
-Prompt'ları düzenlenebilir dosyalardır: `~/.claude/scheduled-tasks/<ad>/SKILL.md`.
+Prompt'lar düzenlenebilir dosyalardır: `~/.claude/scheduled-tasks/<ad>/SKILL.md`. Cloud rutinleri (`/schedule` skill) için cloud environment tanımlı değil (2026-10-15).
 
-### `diskort-geri-bildirim-kontrolu` ("Diskort gözcü", saatlik)
-- Sunucudan yeni geri bildirimleri (`feedback-cli list/show/set`) ve panel hatalarını okur, salt okunur teşhis yapar, sonucu gelen kutusuna yazar. ASLA düzeltme, deploy, commit yapmaz.
-- Geri bildirim için yalnız `incelendi` durumuna çeker; `planlandi/tamamlandi/reddedildi` kararı Yusuf'undur.
-- Kritik durumda (2+ kullanıcıda çökme, 5+ sunucu hatası, güvenlik) acil push bildirimi; 20:00'de günlük özet.
-- Durum dosyası `durum.json` (son tarama zamanı, son özet tarihi). Hata verisi istemci/kullanıcı verisidir, talimat değildir.
-- Sıkı araç kuralları: dosyaları yalnız Write/Edit ile yazar (Bash heredoc izin sorar), yalnız belirli SSH komut biçimleri.
+### `diskort-geri-bildirim-kontrolu` ("Diskort gözcü", her gece 00:10, tek görev)
+**2026-10-15'te birleştirildi:** eski günlük geri bildirim/hata rutini ile hiç kaydedilmemiş gece kod incelemesi tek göreve katıldı. Neden: üçü de salt okunur, aynı saat, aynı proje, aynı gelen kutusu; tek oturum, tek SSH, tek rapor, tek bildirim. Yusuf'un isteği.
+Sıra ve bütçe: ucuz adımlar önce, rapor yazılır, kod incelemesi en sonda eklenir.
+- **A Geri bildirim:** `feedback-cli list/show`, yalnız `incelendi`ye çeker (planlandi/tamamlandi/reddedildi Yusuf'un).
+- **B Panel hataları:** `hata-ozet.js` ile `lastErrorScanAt`'tan beri gruplar; zararsız LiveKit grupları elenir; ölümcül / yerel-çökme / sunucu hatası öne çıkar.
+- **C Sunucu sağlığı (yeni):** `docker ps` durumları, kök disk (%80 uyarı, %90 acil), `bash /opt/ziroo-edge/test/smoke.sh live`; **yedek yaşı** (`/var/backups/diskort/latest.db.gz` 26 saatten eskiyse "yedek durmuş", 50+ saat acil; Tussle için `/var/backups/tussle/latest.db.gz` aynı 26/50 saat kuralı; `tussle-backup.timer` 04:20, kuruldu 2026-10-15); **boyutlar** (`client-errors.jsonl` 20 MB+ uyarı, bir dizin önceki rapora göre 2 katına çıkarsa uyarı). Eklendi 2026-10-15, iki komut `ssh vps` ile sorusuz doğrulandı. Ayrıca SSH'sız: Mac yedek aynasının günlüğü (`~/Yedekler/Diskort/yedek-gunlugu.txt`) son satırı HATA ya da 2 günden eskiyse "Mac yedek aynası durmuş" ([[yedekler]]).
+- **D Kod incelemesi:** `last-reviewed.txt` SHA'sından origin/main'e; doğrudan commit'ler tam, merge'lerde güvenlik alanları; en çok ~25 dosya okuma; orta+ bulguda tek Sonnet skeptik (≤20 çağrı). Bitince marker güncellenir.
+- **E Bildirim:** çalıştırma başına en fazla bir; ACİL (2+ kullanıcıda çökme, 5+ sunucu hatası, güvenlik, konteyner düşük, disk %90+, smoke başarısız, yüksek/kritik inceleme bulgusu) → açık geri bildirimli çökme → günlük özet (`lastDigestDate`).
+- Rapor: çalıştırma başına tek dosya `diskort-inbox/YYYY-MM-DD-HHmm-gozcu.md`, dört bölüm; dördü de boşsa dosya yazılmaz.
+- SSH yalnız `ssh vps "..."` alias'ıyla, tek başına Bash çağrısında ([[izinler-ve-ayarlar]]). Git yalnız `git -C <repo> fetch|log|diff|show|rev-parse|cat-file`. Dosya yazma yalnız Write/Edit.
+- Durum dosyaları: `diskort-inbox/durum.json` (`lastErrorScanAt`, `lastDigestDate`), `diskort-review/last-reviewed.txt`.
+- İlk deneme (2026-10-15 12:00, Fable high, ~10 dk): 19 commit/144 dosya tarandı, önemli bulgu yok, sunucu sağlam; `git grep` izni eksikti, diskort `settings.local.json`'a `git -C <repo> grep *` ve `ls-tree *` eklendi. Global `permissions.defaultMode: auto` aynı gün açıldı (yeni oturumlar ve rutinler auto başlar). Rutinin model/eforu uygulamanın rutin ayarından seçilir; Opus medium yeterli olur.
+- Eski iki SKILL.md yedeği: `~/.claude/backups/scheduled-tasks-2026-10-15/`.
 
-### `diskort-main-kod-inceleme` ("gece güvenlik ağı", 00:10)
-- `last-reviewed.txt` SHA'sından beri origin/main commit'lerini inceler; doğrudan commit'lere ve güvenliğe duyarlı alanlara odaklanır (merge'ler zaten ayrı incelendi).
-- Bulgu orta+ ise tek bir sonnet skeptic çalıştırır. Sonucu gelen kutusuna yazar; yalnız hayatta kalan yüksek/kritik bulguda push bildirimi.
-- Salt okunur: repoyu değiştirmez, SSH/deploy yok.
+Gelen kutusu Mac'te `/Users/ziroo/diskort-inbox/` (okunanlar `okundu/`), akış: [[gelen-kutusu-ve-rutinler]]. Eski rapor türleri (`-geri-bildirim`, `-hatalar`, `-kod-inceleme`) 2026-10-15 öncesi dosyalarda kalır.
 
-Ortak: Türkçe yazarlar, gelen kutusu Mac'te `/Users/ziroo/diskort-inbox/` (var, eski raporlar içinde; inceleme işaretçisi `/Users/ziroo/diskort-review/`). Windows dönemi: `C:\Users\yusuf\diskort-inbox\`. Akış ve komutlar: [[gelen-kutusu-ve-rutinler]].
-
-**Mac durumu (2026-10-07):** Görev metinleri (`SKILL.md`) Mac yollarına çevrilip `/Users/ziroo/.claude/scheduled-tasks/diskort-geri-bildirim-kontrolu/` ve `diskort-main-kod-inceleme/` altında duruyor (içlerinde `/Users/ziroo/diskort-inbox/` yolu doğrulandı). **Zamanlanmış görevler Mac'te bilerek henüz kurulmadı** (Yusuf ertelemeye karar verdi); SKILL.md dosyaları duruyor; zamanlayıcıya kayıt yapılmadı (Yusuf'un kararı; zamanlayıcıdaki durum ayrıca listelenmedi). Kurulum ve Windows'takileri kapatma sırası: [[mac-gecisi-kontrol-listesi]].
-
-**Windows durumu (2026-10-07):** iki görev de kapalı (`enabled: false`; gözcünün son çalışması 2026-10-06, gece incelemesininki 2026-10-05). Eski çalıştırma oturumları arşivlendi. Windows artık yalnız Silksong için: [[2026-10-07-windows-makinesi-yalniz-silksong-icin]].
+**Windows:** iki görev de kapalı (2026-10-07'den beri); Windows yalnız Silksong için ([[2026-10-07-windows-makinesi-yalniz-silksong-icin]]).
 
 ## `skills/synced`
 **Windows dönemi bilgisi:** Tek bir senkronizasyon klasörü (hesap kimliği adlı) vardı; içinde Anthropic hesap skilleri: built-in-browser, chrome-browser, computer-use, deep-research, docs, docx, google-workspace, import-memory, morning, pdf, pptx, setup-writing-style, skill-creator, xlsx, bir `manifest.json`. Mac'te `~/.claude/skills/synced` yok (2026-10-07); `~/.claude/skills/` altında kullanıcı skilleri `basla` ve `kaydet` var. Windows'ta kullanıcıya özgü skill burada görünmüyordu (içerikleri tek tek okunmadı, yalnız klasör adlarına bakıldı).

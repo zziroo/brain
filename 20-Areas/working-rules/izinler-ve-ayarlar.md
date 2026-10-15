@@ -12,6 +12,8 @@ source: /Users/ziroo/.claude/settings.json; /Users/ziroo/ZZ/zProjects/diskort/.c
 Komut desenleri gruplanmış özettir; literal komutlar, SSH satırları ve hash'ler bilerek kopyalanmadı.
 
 ## `~/.claude/settings.json` (global)
+**2026-10-15 güncellemesi:** `~/.ssh/config`'e `vps` alias'ı eklendi (anahtar, root, ConnectTimeout, ServerAliveInterval orada). Global izne üç kural daha: `Bash(ssh vps *)`, `Bash(scp * vps:*)`, `Bash(scp vps:* *)`. Kural: sunucuya her zaman `ssh vps '...'`, bayrak ve IP yazılmaz; ssh/scp çağrısı yerel komutlarla zincirlenmez (bileşik komutta her parça bir kurala uymalı, yoksa sınıflandırıcı engeller). Neden: son 10 günde 101 oturumda SSH geçti, en sık biçim `ssh -o ConnectTimeout=15 -i ...` olduğu için önek kuralı tutmuyor, `find … ; ssh …` gibi zincirler de reddediliyordu. Aynı turda `ssh vps 'hostname'` izin sorusu çıkmadan çalıştı. Eski `-i` kuralları geriye uyumluluk için duruyor.
+
 `autoUpdatesChannel: latest` ve iki izin kuralı: `Bash(ssh -i ~/.ssh/diskort_vps *)` ve `Bash(scp -i ~/.ssh/diskort_vps *)` (scp kuralı 2026-10-05'te Yusuf'un onayıyla eklendi: sunucuya dosya kopyalama auto-mode'da engellenmişti). Kurallar önek eşleşir: `-i` anahtardan hemen sonra gelmeli (`scp -q -i ...` eşleşmez, `scp -i ~/.ssh/diskort_vps -q ...` eşleşir). Global olduğu için alt ajanlar da yararlanır; ajan brifinglerinde SSH/yayın yasağını açık yaz ([[ajan-yayin-betigini-sahte-ssh-ile-denerken-canliya-cikti]]).
 
 ## `diskort/.claude/settings.local.json` (yalnız `permissions.allow`)

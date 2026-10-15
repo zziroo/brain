@@ -1,7 +1,7 @@
 ---
 type: resource
 project: genel
-date: 2026-10-10
+date: 2026-10-15
 status: active
 tags: [working-rules, claude]
 source: C:\Users\yusuf\.claude\CLAUDE.md
@@ -16,6 +16,8 @@ Global kuralların damıtması. Orijinal dosya değiştirilmedi; geçerli olan h
 - [[orkestrasyon]]: koordinatör + arka plan ajanları, satır içi mi ajan mı, model seçimi
 - [[2026-10-10-ajan-boyutu-ve-yalin-baglam]]: ajan boyutu sınırı, aşamalara bölme, yalın bağlam (token analizinden)
 - [[2026-10-13-token-tasarrufu-ikinci-tur]]: review diff'e sınırlı, 200k tavan, Haiku keşif, ekran görüntüsü kısıtı (ikinci tur analiz)
+- [[2026-10-15-yan-oturum-ssh-alias-auto-mod]]: masaüstü güncellemesi; yan oturum ne zaman, `ssh vps` tek biçim, varsayılan izin kipi auto
+- [[2026-10-15-oneri-karti-mevcut-klasorde-acilir]]: ders; öneri kartı preset taşımaz, proje işi kartla önerilmez
 - [[inceleme-kapisi]]: merge öncesi ayrı inceleme ajanı, skeptic, bulgu eşikleri
 - [[karar-dagilimi]]: Yusuf neye karar verir, Claude neye
 - [[araclar-ve-raporlar]]: orkestrasyon raporu aracı
@@ -29,7 +31,7 @@ Global kuralların damıtması. Orijinal dosya değiştirilmedi; geçerli olan h
 
 ## Ortam ve otomasyon
 - [[izinler-ve-ayarlar]]: settings.json ve settings.local.json özeti
-- [[zamanlanmis-gorevler-ve-skiller]]: gözcü, gece incelemesi, senkronize skiller
+- [[zamanlanmis-gorevler-ve-skiller]]: Diskort gözcü (geri bildirim + hata + sağlık + kod incelemesi, tek görev), senkronize skiller
 
 ## Mac geçişi (2026-10-05)
 - [[2026-10-05-windowstan-maca-gecis]]: Windows → Mac taşıma kararı, paket ve yol çevirisi

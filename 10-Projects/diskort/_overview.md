@@ -1,7 +1,7 @@
 ---
 type: project
 project: diskort
-date: 2026-10-12
+date: 2026-10-15
 status: active
 tags: [diskort, overview]
 source: handoff notundan (artık kaldırıldı), diskurt-project ve diskort-* hafıza dosyalarından, 2026-10-01/02 oturumlarından
@@ -49,7 +49,7 @@ Ses + ekran paylaşımı kalitesi; metin kanalları, tepkiler, dosyalar, roller,
 0c. **Zayıf hatlı izleyiciye düşük katman (ertelendi, Yusuf isteyince):** 2026-10-02 akşamı bir DM aramasında yayın 8-16 Mbps'e çıkınca Android izleyicinin indirme hattı doldu (ping 4585 ms'ye, gelen kayıp %21'e çıktı; sunucu ve yayıncı temizdi, yayın durunca 1 sn'de düzeldi). Ekran paylaşımı tek katman gidiyor (`simulcast: false`, masaüstü `voiceClient.ts`; 1080p60 ön ayarı 12 Mbps), sunucu zayıf hatta daha düşük akış veremiyor. Öneri: simulcast yalnız ekran kartı kodlayıcısı varken açılsın (yazılım kodlayıcıda CPU yüzünden kapalı kalsın). Geçici çözüm: telefondan izleyen varken yayıncı 720p ya da 1080p30 seçer. 0a ve 6. maddeyle ilgili.
 2. Prob motorunu düzelt: yalnız-UDP kesintileri yakalansın (UDP ve TCP kayıp serileri ayrı sayılsın); boş odadaki 1-2 sn'lik "aday" gürültüsünü azalt.
 3. Yeni sunucu: bekleyen güvenlik güncellemelerini (2026-10-05: 143) sakin bir saatte kur, otomatik güvenlik güncellemelerini aç, çıkış trafiğini ölç, 1000 GB planı izle.
-4. **Rutin:** yalnız gözcü kaldı, günde bir 00:10 ([[2026-10-10-gozcu-gunluk-gece-incelemesi-kaldirildi]]); çalışma klasörü 2026-10-10'da düzeltildi ([[rutin-calisma-klasoru-silinince-oturum-acmaz]]), ilk gece çalışmasını doğrula. Kod incelemesi için tüm projelere ortak düzenek düşünülüyor. Gelen kutusunu 0.9.x/0.10.0 regresyonları için kontrol et; Yusuf'un gerçek hayat Etkinlik geri bildirimini topla (gerçek oyun, anti-cheat, Battle.net, mobil).
+4. **Rutin:** gözcü 2026-10-15'te dört bölüme birleşti: geri bildirim + panel hataları + sunucu sağlığı (konteyner, disk, smoke, yedek yaşı, boyutlar, Mac ayna günlüğü) + main kod incelemesi, her gece 00:10 ([[2026-10-15-gozcu-birlesik-dort-bolum]]). İlk elle çalışma temiz; yeni metinle ilk gece çalışmasını doğrula. Rutinin modelini Opus medium'a düşür (uygulamanın rutin ayarı). Yedek aynası Mac'te launchd 12:00 ([[2026-10-15-yedek-aynasi-mac-launchd]]); Tussle yedeğini aynaya ekle. Gelen kutusunu kontrol et; Yusuf'un gerçek hayat Etkinlik geri bildirimini topla (gerçek oyun, anti-cheat, Battle.net, mobil).
 5. DPDFNet fallback düzeltmesini (0.9.3) kullanıcılar oynadıktan sonra telemetri `mic.fallback` ile doğrula; `reportClientError('kozmetik')` kayıtlarını izle.
 6. **Telefon ısınması** (VP9 1080p yayın izlerken): APK 0.8.13'te DPDFNet bütçe düzeltmesi + termal otomatik kapatma var. Kalan: Yusuf 5-10 dk yayın izler, ardından `watch` telemetrisi okunur. Gerekirse JS seçenekleri: VP9'u bırak, donanım kodlayıcıda 720p30 düşük katman, tam ekran değilse mobil düşük katmana abone.
 7. Yusuf'un cihaz testleri: telefonda yeni kozmetikler (Android APK kurulumu, Android 10+ kart videosu, iOS OTA), mobil Skia setleri, mobil ses ekranı/yayın kutucukları, masaüstü sahne otomatik gizleme/şerit/kendi önizleme duraklatma, rolsüz DM profili.
@@ -88,6 +88,7 @@ Ses + ekran paylaşımı kalitesi; metin kanalları, tepkiler, dosyalar, roller,
 - [[2026-10-05-araclarin-arayuzu-neon-temaya-gecti]]: altı aracın kendi arayüzü neon temaya geçti, Mac'ten ilk yayın ([[mac-ten-yayin-copyfile-disable-ve-exe-siz-ceviri-sayfasi]])
 - [[2026-10-07-zziroo-tasimasi-tamamlandi-ve-mac-listesi]]: zziroo taşımasının Mac/VPS tarafı, iOS anahtarı yenilendi, Mac listesi işlendi
 - [[sessions/2026-10-08-arkadaslik-sistemi-ve-0-10-0]]: arkadaşlık sistemi, donanım simulcast, 720p30, 0.10.0
+- [[sessions/2026-10-15-gozcu-birlesik-ve-yedek-aynasi]]: masaüstü güncellemesi, gözcü dört bölüm, ssh vps alias'ı, Mac yedek aynası, Tussle gece yedeği
 - [[sessions/2026-10-12-rol-etiketi-dpdfnet-agc-oom]]: rol etiketi, rol verme kuralı, DPDFNet eşikleri, masaüstü AGC, OOM, sink-id, 0.11.0
 
 ## Çalışma kuralları (Claude)

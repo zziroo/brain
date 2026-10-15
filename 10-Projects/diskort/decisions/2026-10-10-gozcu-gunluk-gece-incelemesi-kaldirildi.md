@@ -2,10 +2,12 @@
 type: decision
 project: diskort
 date: 2026-10-10
-status: active
+status: superseded
 tags: [diskort, rutin, otomasyon, code-review]
 source: Claude Code oturumu 2026-10-10
 ---
+
+> Yerini aldı: [[2026-10-15-gozcu-birlesik-dort-bolum]] (gece kod incelemesi gözcüye dördüncü bölüm olarak geri döndü, sunucu sağlığı eklendi).
 
 # Karar: Yalnız gözcü (geri bildirim + hata) rutini kalır, günde bir kez 00:10'da; gece kod incelemesi rutini kaldırıldı
 

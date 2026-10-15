@@ -17,6 +17,9 @@ source: C:\Users\yusuf\.claude\CLAUDE.md (Orchestration)
 - Birleştirdikten sonra varsa worktree ve dallar temizlenir.
 - Ajan sonuçları Yusuf'a kısa aktarılır; doğrulanmamış ajan iddiası doğrulanmış gibi sunulmaz.
 
+## Yan oturum mu, alt ajan mı (2026-10-15, masaüstü uygulaması güncellemesi)
+Uygulama artık oturumları dört yerde açabiliyor (bu bilgisayar, SSH bağlantısı, cloud environment, preset) ve Claude `start_session` ile yan oturum başlatabiliyor. Karar: alt ajan varsayılan kalır (mekanik iş, review, keşif, tek dilim; en ucuz). Yan oturum üç durumda: (a) ZZ kökünde proje işi çıkınca devir notu vault'a yazılıp Yusuf'un oturum açması beklenmez, not brief olarak projenin preset'iyle doğrudan başlatılır (hafıza notu `proje-isi-proje-oturumunda` kuralının yeni biçimi); (b) saatler sürecek ya da Yusuf'un izleyip yönlendireceği iş; (c) uzun geçmişten değil sıfırdan başlaması daha iyi olan kendi başına sonraki görev. Workflow ve cloud yalnız istenirse; cloud environment tanımlı değil. Preset'ler: ZZ, mobil-playus, incremantal-game, diskort. Reddedilen: uygulamanın SSH bağlantısıyla VPS'te oturum açmak (root ile production'da oturum, güvenlik sınırı Yusuf'un; alias çözümü yetti, bkz. [[izinler-ve-ayarlar]]).
+
 ## Satır içi mi, ajan mı
 Her ajan soğuk başlar (iş yapmadan ~45-50k token bağlam) ve kodu yeniden okur.
 - Satır içi: kısa, az okuma gerektiren iş (tek satır düzeltme, config/hafıza düzenleme, git/deploy adımları, hızlı kontrol).
