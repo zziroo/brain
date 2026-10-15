@@ -25,5 +25,5 @@ source: Claude Code yan oturumu 2026-10-16 gece (Mac) "diskort: admin Altyapı s
 - Yeni ders yok. Deploy sırasında seste kişi varken api konteynerini yeniden kurmak sesi düşürmedi (LiveKit ayrı; gateway yeniden bağlandı).
 
 ## Açık kalanlar
-- Sunucuda `/data/system-history.json` sahipsiz; silinebilir.
-- `#makine` ile açılınca adres çubuğu yeniden yazılmıyor (kozmetik).
+- Sunucuda `/data/system-history.json` sahipsiz; Yusuf siliyor.
+- ~~`#makine` ile açılınca adres çubuğu yeniden yazılmıyor~~ → `cfeb160`: yalnız aynı sayfadaki hashchange yolunda eksikti (takma ad açık sekmeye çözülünce `setTab` çağrılmıyordu); düzeltildi, sunucuda yayında.

@@ -33,7 +33,7 @@ source: Claude Code yan oturumu 2026-10-16 "diskort: admin Altyapı sekmesi" (op
 
 ## Sonuçlar / riskler
 - Sunucuda `/data/system-history.json` sahipsiz kaldı; silinebilir (zararsız).
-- Adres çubuğu `#makine` ile açılınca sekme doğru ama hash yeniden yazılmıyor (sekmeye tıklayınca düzelir); kozmetik.
+- Adres çubuğu: eski `#makine`/`#sunucu` taze yüklemede ve aynı sayfada `#altyapi`ye yazılır (`cfeb160`).
 - `SystemMonitor` hâlâ cpu/memUsed topluyor ve `/api/admin/dashboard` bunları gönderiyor; istemci yalnız `online`/`voice` serisini kullanıyor. Zararsız, istenirse sonra sadeleştirilir.
 
 ## İlgili
