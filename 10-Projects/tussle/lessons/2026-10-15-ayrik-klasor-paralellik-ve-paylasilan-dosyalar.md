@@ -12,5 +12,6 @@ source: oturum 2026-10-15 (mobil-playus: tema sadeleştirme, parti ayarları, so
 - 5 denge ajanı (4 denge + 1 silme) aynı çalışma kopyasında, ayrık oyun klasörlerinde sorunsuz çalıştı; worktree gerekmedi.
 - Paylaşılan dosyalar (i18n, kapaklar, registry testleri) ajanlara yasaklandı; ajanlar gereken değişikliği raporda yazdı, koordinatör sonda tek seferde uyguladı. Çakışma çıkmadı.
 - Worktree'deki dallar (gün kayması, sohbet), ana kopya kirliyken i18n yüzünden birleşemedi; denge commit'leri atılınca birleşti. Kural: **paylaşılan dosyalara dokunan worktree işlerini ana kopya temizken birleştir.**
+- Aynı gün ikinci tur (Yayın 1, 15 ajan): ajanlara i18n tr/en'de **yalnız kendi oyununun satırlarını** Edit ile değiştirme izni verildi ("dosya değiştiyse satırları yeniden oku, asla tüm dosyayı yazma"); 15 ajan paralel yazdı, çakışma çıkmadı, koordinatör sonda toplu düzeltme yapmadı. Tek yan etki: Vite sık yeniden yüklendi ([[2026-10-15-vite-yeniden-yuklemeleri-tarayici-testini-boluyor]]) ve bir ajanın ara hali (`MAX_ROUNDS` export'u) uygulamayı birkaç dakika kırdı; tarayıcı testi yapan ajanlar bunu beklemeyi bilmeli.
 
 İlgili: [[2026-10-13-parti-i-ve-sure-modeli-dersleri]] (ortak kayıt dosyası çakışmaları), [[2026-10-15-ajanlar-ortak-calisma-kopyasinda-git-stash-yasak]], [[2026-10-15-tussle-tema-parti-sonraki-gun-denge-turu]].
