@@ -18,6 +18,7 @@ Global kuralların damıtması. Orijinal dosya değiştirilmedi; geçerli olan h
 - [[2026-10-13-token-tasarrufu-ikinci-tur]]: review diff'e sınırlı, 200k tavan, Haiku keşif, ekran görüntüsü kısıtı (ikinci tur analiz)
 - [[2026-10-15-yan-oturum-ssh-alias-auto-mod]]: masaüstü güncellemesi; yan oturum ne zaman, `ssh vps` tek biçim, varsayılan izin kipi auto
 - [[2026-10-15-oneri-karti-mevcut-klasorde-acilir]]: ders; öneri kartı preset taşımaz, proje işi kartla önerilmez
+- [[2026-10-15-oturum-basliklari-konu-oneki-ve-klasor-adlari]]: oturum başlığı `<proje>: <konu>`, ZZ kökünde önek konu (sistem/araştırma/marka/kişisel); mobil-playus ve incremantal-game klasörleri değişmedi, nedenleri
 - [[inceleme-kapisi]]: merge öncesi ayrı inceleme ajanı, skeptic, bulgu eşikleri
 - [[karar-dagilimi]]: Yusuf neye karar verir, Claude neye
 - [[araclar-ve-raporlar]]: orkestrasyon raporu aracı
