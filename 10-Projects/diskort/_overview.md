@@ -73,7 +73,7 @@ Ses + ekran paylaşımı kalitesi; metin kanalları, tepkiler, dosyalar, roller,
 - Kayıt: [[kayit-sadece-hesap-davetiyesi]]; ekran paylaşımı: [[ekran-paylasimi-sabit-presetler]]
 - Kozmetik: [[kozmetik-sunucudan-paketler]], [[kozmetik-sadece-hover]]
 - Arkadaşlık: [[arkadaslik-sistemi]]; roller: [[rol-etiketleme]], [[rol-verme-hedefin-seviyesine-bakmaz]]
-- İzleme: [[2026-10-16-ops-katmani-kuma-netdata-ziroo-edge]], [[2026-10-16-admin-paneli-makine-geneli-netdataya-tasindi]] (panel yalnız Diskort'a ait bilgi, makine geneli Netdata'da)
+- İzleme: [[2026-10-16-ops-katmani-kuma-netdata-ziroo-edge]], [[2026-10-16-makine-sagligi-kuma-push-gozcuden-cikti]] (yedek/disk/smoke saatlik betikle Kuma'ya), ders [[lessons/2026-10-16-saglik-ucu-surecten-cevaplanmali-kuma-netdata-tuzaklari]], [[2026-10-16-admin-paneli-makine-geneli-netdataya-tasindi]] (panel yalnız Diskort'a ait bilgi, makine geneli Netdata'da)
 - Sunucu: [[sunucu-lightnode-istanbula-tasindi]], [[2026-10-03-joker-dns-ve-tools-games-alt-alan-adlari]], [[2026-10-05-liste-sayfalari-ziroo-edge-te-ortak-neon-tasarim]] (ders: [[ajan-yayin-betigini-sahte-ssh-ile-denerken-canliya-cikti]])
 - Yayın sahnesi: [[yayin-arayuzu-discord-tarzi]], [[sahne-izgarada-coklu-yayin]]; yayın sesi: [[uygulamaya-ozel-yayin-sesi-ertelendi]]
 - Ses: [[model-calisirken-agc-kapali-ve-sinirlayici]], [[2026-10-15-kisisel-giris-sesi]], [[masaustu-yazilimsal-agc]], [[dpdfnet-esikler-gevsetildi-android-ayri-is-parcacigi]], [[konusma-halkasi-duyulan-sesten]]

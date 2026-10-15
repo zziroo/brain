@@ -17,6 +17,7 @@ source: Claude Code oturumu 2026-10-16 "ziroo-edge: ops katmanı (Kuma + Netdata
 - Standart: [[20-Areas/altyapi/proje-altyapi-standardi]].
 
 ## Öğrenilenler
+Ayrıntı: [[lessons/2026-10-16-saglik-ucu-surecten-cevaplanmali-kuma-netdata-tuzaklari]].
 - Kuma mobil düzeninde Kaydet düğmesi alt menünün arkasında; formu URL/ad alanında Enter ile gönder. Bildirim formu açıkken sayfa yenilenirse form gider.
 - Netdata 2.12 ajan ayarıyla bulut daveti kapanmıyor; "Skip" bir kez.
 - Diskort'ta `/healthz` eskiden Caddy SPA yedeğine düşüp HTML 200 veriyordu: sağlık ucu her zaman uygulamanın sürecinden cevaplanmalı, dışarıdan `content-type` ile doğrulanmalı.
