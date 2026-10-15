@@ -43,5 +43,10 @@ source: 2026-10-13 oturumu "pano: son 1 gün token analizi"; ~/.claude/CLAUDE.md
 - Uygulanmayan: koordinatör devir eşiği (Fable oturumları 412k, 322k, 321k, 277k zirve; 5–7 saat; koordinatör maliyeti 65 → 89 $). Ajan 200k tavanı incremantal-game'de aşıldı (5 ajan 254–324k, 80–124 çağrı; js/run.js 3.480 satır, render.js 2.552 satır). Ekran görüntüleri sürüyor (ajanlarda 11–17 görüntü, koordinatörde 14–15).
 - Sonuç: ajan tarafı ucuzladı, kazanç koordinatör şişmesine gitti. Sonraki hedef koordinatör devri ve incremantal-game'de dosya/aşama bölme.
 
+## Ölçüm 2 (14 Ekim 04:00 → 15 Ekim 03:20)
+- 68 $, 178M token, 1.227 çağrı, 5 oturum, 18 ajan; çağrı başı ortalama bağlam 145k (156k'dan). Hafif gün, haftalık +4 puan (%29).
+- Review ajanları 4–18 çağrı, ≤108k ✓. Koordinatör zirve 253k (300k altı) ✓. Ekran görüntüsü ajan başına 0–6 (biri 13) ↓.
+- Kalan: mobil-playus denge turunda 5 Opus ajanı 100–172 çağrı, zirve 201–303k; 172 çağrılık ajan bölünmemiş (~10 $). Sonraki hedef: ajan brief'inde "tek oyun / ≤80 çağrı" sınırı.
+
 ## İlgili
 - [[2026-10-10-ajan-boyutu-ve-yalin-baglam]], [[orkestrasyon]], [[inceleme-kapisi]], [[araclar-ve-raporlar]], [[_index]]
