@@ -29,7 +29,7 @@ Buradan başla. Her şey buradan ya da bir projenin `_overview.md` dosyasından 
 - [[2026-10-05-liste-sayfalari-ziroo-edge-te-ortak-neon-tasarim]]: ziroo.net ana sayfası (kapılar) ve iki liste, ziroo-edge `www/`, `deploy-www.sh`
 - [[sunucu-vps]]: sunucu, DNS, Caddy yolları
 - [[2026-10-16-ops-katmani-kuma-netdata-ziroo-edge]]: makine izleme `ops.ziroo.net` (Uptime Kuma + Telegram, Netdata `/netdata/`), ziroo-edge `ops/`; 23 monitör + Telegram; yedek yaşı/disk/smoke saatlik betikle push ([[2026-10-16-makine-sagligi-kuma-push-gozcuden-cikti]]), gözcüden çıktı
-- [[2026-10-07-ziroo-maskotu-ziro]]: ziroo.net maskotu Ziro (neon sıfır, perçemi favicon'daki Z), karakter sayfası artifact'ta
+- [[2026-10-07-ziroo-maskotu-ziro]]: ziroo.net maskotu Ziro (neon sıfır) **askıda**; [[2026-10-15-marka-maskot-ve-karakter-analizi]]: Yusuf'un karakter analizi + 15 maskot adayı, seçim yapılmadı
 
 ## Alanlar
 - [[20-Areas/altyapi/proje-altyapi-standardi|Proje altyapı standardı]]: her uygulama ne sunar (/healthz, konteyner, yedek, admin paneli bölümleri), Kuma'ya nasıl kaydedilir, makine bilgisi nerede durur
@@ -45,6 +45,8 @@ Buradan başla. Her şey buradan ya da bir projenin `_overview.md` dosyasından 
 - [[genex-desktop-oyunu-insansiz-dogrulama-yontemleri]]: Genex Desktop (AI ile oyun yapan uygulama) oyunu insan oynamadan nasıl doğruluyor: test kancası, hareket şeridi, kör hakemler, saçma kontrol maddesi
 - [[2026-10-05-windows-donemi-token-ozeti]]: Windows dönemi Claude kullanımı (API karşılığı yaklaşık 3.713 $, model ve proje bazında)
 - [[2026-10-10-ajan-token-analizi]]: ajan maliyetinin kaynağı bağlam boyutu; son 7 gün karşılaştırması ve efor (2026-10-10)
+- [[2026-10-06-graphify-ve-ponytail-incelemesi]]: Graphify tek projede ölçerek denenebilir (henüz denenmedi); Ponytail yerine CLAUDE.md kuralı
+- [[2026-10-09-context-mode-incelemesi]]: Context Mode eklentisi kurulmadı (alt ajanları engelliyor, auto mode ile çakışıyor); yalnız MCP olarak denenebilir
 
 ## Arşiv
 - [[90-Archive/old-claude-memory/_index|Eski Claude hafıza klasörleri]]
