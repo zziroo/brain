@@ -16,6 +16,7 @@ Yusuf'un telefonu. Çin modeli (25098PN5AC), yurt dışından alındı; Türkiye
 - Bootloader açık (orange). Root yok.
 - Güncellemeler xiaomi.eu'nun kendi OTA'sından telefona gelir; resmi Xiaomi OTA bu cihaza hiç gelmez (17 Pro'nun global sürümü yok, Çin donanımına global ROM flaşı Xiaomi tarafından engelli).
 - IMEI: cihazın bildirdiği IMEI kutudakinden farklı; servis yazmış. e-Devlet "ithalat yoluyla kayıtlı" diyor ama bu kayıt o numaraya ait, cihaza değil. Yasal yol: kutudaki gerçek IMEI'yi e-Devlet'ten ithalat kaydıyla kendi adına kaydettirmek. **Açık iş.**
+- **Bildirim gecikmesi (2026-10-15, çözüldü):** HyperOS dondurucusu Google Play Services'i donduruyor, FCM kopuyordu. adb ile eklemek kalıcı olmadı (powerkeeper geri yazıyor); kalıcı çözüm **Shizuku + HyperOS FCM Fix** kuruldu. Yeniden başlatma sonrası Shizuku'yu yeniden başlatmak gerekir; detay ve komutlar: [[2026-10-15-hyperos-gms-dondurma-bildirim]]. Belirti dönerse önce FCM Fix ana ekranında "Protection active" var mı, Shizuku çalışıyor mu bak; sonra `adb shell settings get system MILLET_NO_RESTRICT_APP` içinde `com.google.android.gms` var mı. Karar: [[2026-10-15-xiaomi-17-pro-fcm-fix-karari]]. **Açık iş:** FCM Fix ve Shizuku'ya arayüzden "Kısıtlama yok" vermek, WhatsApp'ı son uygulamalarda kilitlemek, yeniden başlatma sonrası Shizuku'yu başlatma alışkanlığı.
 - Mac'te yedekler: `~/Downloads/xiaomi17pro-yedek/` (21 GB medya kopyası) ve `~/Downloads/xiaomi-eu-pandora/` (ROM arşivi + açılmış hali). Fotoğraflar Google Fotoğraflar'da doğrulandıktan sonra silinebilir.
 
 ## 2026-10-14 öncesi cihazda ne vardı (adb ile tespit)
@@ -35,3 +36,6 @@ Yusuf'un telefonu. Çin modeli (25098PN5AC), yurt dışından alındı; Türkiye
 ## İlgili
 - [[2026-10-14-xiaomi-17-pro-xiaomieu-secimi]]
 - [[2026-10-14-xiaomi-17-pro-kurulum-dersleri]]
+- [[2026-10-15-hyperos-gms-dondurma-bildirim]]
+- [[2026-10-15-xiaomi-17-pro-fcm-fix-karari]]
+- [[2026-10-15-xiaomi-17-pro-bildirim-oturumu]]
