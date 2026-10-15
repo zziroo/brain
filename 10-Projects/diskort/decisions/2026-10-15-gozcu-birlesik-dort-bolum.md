@@ -9,6 +9,8 @@ source: Claude Code oturumu 2026-10-15 "ZZ: yeni oturum yapısı ve SSH izinleri
 
 # Karar: Tek gece gözcüsü dört bölüm çalıştırır: geri bildirim, panel hataları, sunucu sağlığı, main kod incelemesi
 
+> 2026-10-16: C bölümü (sunucu sağlığı) Kuma push monitörlerine taşındı, gözcüde yalnız Mac yedek aynası kaldı: [[2026-10-16-makine-sagligi-kuma-push-gozcuden-cikti]].
+
 ## Bağlam
 Masaüstü uygulaması güncellenince zamanlanmış görevler ve şablonlar yeniden ele alındı. Kayıtlı tek görev günlük geri bildirim/hata rutiniydi; gece kod incelemesi 2026-10-10'da kaldırılmış, SKILL.md'si duruyordu ([[2026-10-10-gozcu-gunluk-gece-incelemesi-kaldirildi]]). Yusuf "hem hatalara, hem geri bildirimlere baksın, hem code review yapsın, birleştirsek uygun olur mu" diye sordu.
 
