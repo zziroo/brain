@@ -34,7 +34,9 @@ source: Claude Code oturumu 2026-10-16 "ziroo-edge: ops katmanı (Kuma + Netdata
 - Docker soketi iki konteynere salt okunur açık (root eşdeğeri bilgi); ikisi de yalnız 127.0.0.1 + Caddy arkasında.
 - basic auth 401 cevabında Caddy `Server: Caddy` başlığı kalıyor (uygulama cevaplarında kalkıyor); önemsiz, smoke kontrolünden çıkarıldı.
 - Kuma aynı makinede: makine çökerse susar; dış ping (healthchecks.io / UptimeRobot) hâlâ isteğe bağlı ve yok.
-- Açık: Kuma ilk kurulum (yönetici hesabı, Telegram bildirimi, izleme listesi: tussle, diskort, lk/turn, kapis, tools, games, ziroo.net, araçların `/healthz` uçları, konteynerler, disk), Yusuf yapacak ya da tarayıcı panelinde giriş yapınca Claude ekler.
+- Kuma ilk kurulumu 2026-10-16'da yapıldı (SQLite; yönetici hesabı Yusuf'ta, unutulursa `ssh -t vps 'docker exec -it kuma npm run reset-password'`). Bildirim: Telegram `ziroo_ops_bot` (token yalnız Kuma'da), "varsayılan etkin" + tüm servislere uygulandı; test mesajı geldi. Docker host: soket `/var/run/docker.sock` ("VPS Docker (soket)").
+- İzleme listesi (19, 60 sn): HTTP ziroo.net, tools.ziroo.net, games.ziroo.net, tussle `/healthz`, diskort `/api/health`, lk.ziroo.net, kapis `/healthz`, steam-avgr/rehber/song-finder/pdf-ceviri `/healthz`, ziroobank `/`; Docker konteyner ziroo-edge, tussle, infra-api-1, infra-livekit-1, kapis, ziroobank, netdata. Disk doluluğu Kuma'da yok (gece gözcüsü bakıyor; istenirse Netdata alarmı).
+- Tarayıcı dersi: Kuma'nın mobil düzeninde Kaydet düğmesi alt menünün arkasında kalıyor; form URL alanında Enter ile gönderilir. Bildirim formu açıkken sayfa yenilenirse form kaybolur.
 - Bu kurulum yapılınca Diskort admin panelindeki altyapı bölümü büyütülmez; Tussle admin paneli (uygulama katmanı) mobil-playus oturumunda ayrı iş.
 
 ## İlgili
