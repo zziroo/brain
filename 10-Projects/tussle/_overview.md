@@ -1,10 +1,10 @@
 ---
 type: project
 project: tussle
-date: 2026-10-15
+date: 2026-10-16
 status: active
 tags: [tussle, overview, oyun, mobil, pwa]
-source: "oturum 2026-10-15 (mobil-playus): Yayın 3 izleme; önceki: tema sadeleştirme, parti ayarları, sonraki gün, 25 oyun geri bildirimi"
+source: "oturum 2026-10-15/16 (mobil-playus): hata toplama + geri bildirim, izleme katmanları önerisi; önceki: Yayın 3 izleme, önceki: tema sadeleştirme, parti ayarları, sonraki gün, 25 oyun geri bildirimi"
 ---
 
 # Tussle: arkadaşlarla günlük mini oyun kapışması (Playus'un hafif rakibi)
@@ -82,6 +82,7 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 - **Canlı öncesi izleme yayında (2026-10-15 gece, `10dbe59`, OTA 0.20261015.2032, yedek `pre-10dbe59.db`, DB sürümü 16):** `POST /api/client-error` (kimliksiz, IP 30/10 dk, 8 KB) → `/opt/tussle/data/logs/client-errors.jsonl` (20 MB'ta `.1` döner, yedeğe girmez, oda kodları maskeli, kontrol karakterleri süzülür); `POST /api/feedback` (giriş, kullanıcı 5/saat) → `feedback` tablosu; Ayarlar'da tek alanlı "Geri bildirim" kartı. Okuma: `ssh vps 'docker exec tussle node scripts/feedback-cli.mjs list | ack <id> | errors --tail 20'`. İstemci aynı hatayı oturumda bir kez, en çok 5 gönderir. 1.730 test. Telefonda görülmedi. Sırada: Diskort gece gözcüsüne Tussle bölümü (jsonl + açık feedback) ([[10-Projects/diskort/decisions/2026-10-15-gozcu-birlesik-dort-bolum|gözcü]]). Gece yedeği kuruldu ([[2026-10-15-sunucuda-gece-yedegi-systemd]]); Mac yedek aynasına Tussle'ı ekle. Dış ping servisi (healthchecks.io / UptimeRobot) için hesap Yusuf'ta.
 - **OTA yayın akışı** ([[2026-10-15-ota-web-paketi-self-hosted-capgo]]): web değişikliği → sunucu yayını (gerekiyorsa) → `node scripts/ota-bundle.mjs && bash deploy/ota.sh`; uygulamalar sonraki açılışta alır (indirme hemen, geçiş bir sonraki açılış). Yapı yüklemek yalnız eklenti/izin/Capacitor değişince (`otaMinNative` artır). Sunucuda güncel paket 0.20261015.1920 (rev b3b1c0e); telefonda OTA çalıştığı doğrulandı.
 - **Mağaza (2026-10-15 durumu)** ([[2026-10-13-magaza-hesaplari-apple-bireysel-play-ziroo]]): iOS yapı 1 Beta App Review'da ("Waiting for Review"), yapı 2 (OTA'lı, `dcc001e`) yüklendi; **yapı 1 onayı gelince externalgroup'a yapı 2 eklenir, public link arkadaşlara**. Yusuf'un iOS cihazı yok. Android: OTA'lı APK Yusuf'ta çalışıyor; Play Console (bireysel, Ziroo) kimlik doğrulaması bekleniyor → sonra yükleme anahtarı + imzalı AAB (`*.keystore` gitignore'da, yedek Yusuf'ta), gizlilik sayfası (`tussle.ziroo.net/privacy`), mağaza görselleri (ikon 512, özellik grafiği 1024×500, ≥2 ekran görüntüsü), veri güvenliği + içerik derecelendirme formları, iç test grubu (arkadaş e-postaları). Mağaza adı **"Tussle: Daily Mini Games"**, birincil dil English (U.S.), Türkçe sonra. Native Google/Apple giriş sonra (Apple 4.8). Bu hazırlık yeni sohbette.
+- **Admin paneli + makine izleme (öneri, 2026-10-16, [[2026-10-16-izleme-katmanlari-uygulama-paneli-ve-makine-izleme]]):** önce `tussle.ziroo.net/admin` (geri bildirim, gruplu hatalar, kullanım, sürüm/sağlık; `ADMIN_TOKEN`), sonra ziroo-edge `ops/` ile Uptime Kuma + Netdata `ops.ziroo.net` (boş alt ad, Caddy'de site yok). Yusuf'tan: bildirim kanalı (Telegram/e-posta), panel şifresi, isteğe bağlı healthchecks.io. İkisi de "başlat" bekliyor.
 - Küçük açık sorular: Karşıya Geç kahramanı oyunda top, kapakta blok; uygulamada dokunuş başına boş `console` satırı (zararsız); istenirse Çark'a çok renk geri (`WEDGE_CANDY`).
 - Arkadaş geri bildirimi geldikçe yeni yayın partisi (kimlik eşle, yayınlara böl); sonra kalan sonsuz oyunların rampaları.
 - **Canlı sonrası**: dolaylı etkileşim modu (Tetris tarzı rakibe engel) ve gerçek arena oyunları; önce tek prototip (öneri sumo, gecikmeye dayanıklı; deterministik sim → geri sarmalı ağ kodu). M1: rövanş, maç geçmişi, yeniden katılma Yusuf kararıyla yok; oyun başına kişi sayısı filtresi kalabalık/canlı oyunlar gelince; bildirim Capacitor ile.
@@ -89,6 +90,7 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 - Kit/teknik: seçim düğmeleri yardımcısı; bayrakları tabloda ayırma (istenirse); Capacitor → TestFlight → mağaza; ertelenenler (ID token nonce, CSP, sözlük tembel yükleme, tepki toggle idempotent, `GET me` 30 oda).
 
 ## Önemli kararlar
+- [[2026-10-15-istemci-hata-toplama-jsonl-geri-bildirim-sqlite]] · [[2026-10-16-izleme-katmanlari-uygulama-paneli-ve-makine-izleme]] (öneri)
 - [[2026-10-08-web-cekirdegi-capacitor-ve-ad-tussle]]
 - [[2026-10-08-deterministik-sim-ve-sunucuda-tekrar-oynatma]]
 - [[2026-10-08-gorsel-dil-neon-oyuncak-koyu-varsayilan]]
@@ -144,6 +146,7 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 - [[2026-10-15-denge-turu-yusuf-telefon-geri-bildirimi]] (doğrulanmadı)
 
 ## Dersler
+- [[2026-10-15-kimliksiz-girdiden-terminale-giden-metni-suz]]
 - [[2026-10-15-paralel-dilimler-icin-once-protokolu-koordinator-yazar]]
 - [[2026-10-08-tussle-m0-dersleri]]
 - [[2026-10-08-cila-turu-dersleri]]
@@ -167,6 +170,7 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 - [[2026-10-15-tema-degisikligini-once-goster]]
 
 ## Oturumlar
+- [[sessions/2026-10-15-tussle-hata-toplama-geri-bildirim]]: hata toplama + geri bildirim yayını, admin/ops planı
 - [[2026-10-15-tussle-yayin-3-izleme]]: Yayın 3 izleme, sunucu + OTA yayını
 - [[sessions/2026-10-15-tussle-gece-yedegi]]: sunucuda systemd gece yedeği (yan oturum)
 - [[2026-10-08-tussle-tasarim-ve-m0-yayin]]
