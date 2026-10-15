@@ -2,7 +2,7 @@
 type: decision
 project: tussle
 date: 2026-10-16
-status: proposed
+status: active
 tags: [tussle, izleme, admin-panel, altyapi, ziroo-edge, ops]
 source: Claude Code oturumu 2026-10-15/16 "tussle: hata toplama + geri bildirim" (admin paneli sohbeti)
 ---
@@ -12,7 +12,7 @@ source: Claude Code oturumu 2026-10-15/16 "tussle: hata toplama + geri bildirim"
 ## Bağlam
 Yusuf "sunucu durumu için bir panel" istedi; makine bazlı mı oyun bazlı mı belirsizdi. Diskort'un admin panelinde makine/altyapı bölümü var ([[10-Projects/diskort/runbooks/admin-paneli-ve-loglar|Diskort admin paneli]]); gece gözcüsü de sunucu sağlığına bakıyor. `ops.ziroo.net` joker DNS'le VPS'e çözülüyor ama Caddy'de hiçbir siteye bağlı değil (boş).
 
-## Karar (henüz kurulmadı)
+## Karar (makine katmanı 2026-10-16'da kuruldu: [[10-Projects/diskort/decisions/2026-10-16-ops-katmani-kuma-netdata-ziroo-edge|ops katmanı]]; Tussle paneli henüz yok)
 1. **Uygulama katmanı:** her projenin kendi admin paneli yalnız kendi verisini gösterir. Tussle için `tussle.ziroo.net/admin`: geri bildirim (listele/ack), gruplanmış istemci hataları (mesaj, sayı, sürüm/platform, son görülme; 24 sa / 7 gün), kullanım (bugün oynayan, aktif oda, günlük koşu, canlı maç/parti, oyun başına oynanma, 14 günlük çizgi), sürüm ve sağlık (rev, OTA paketi ve istemci sürüm dağılımı, DB boyutu, son yedek, ws bağlı istemci). `/api/admin/*` + tek sayfa DOM, `.env`'de `ADMIN_TOKEN`, salt okunur + ack. Takma ad düzeyinde veri.
 2. **Makine katmanı:** VPS geneli (CPU/RAM/disk, konteynerler, siteler ayakta mı) hazır araçla: **Uptime Kuma** (yoklama + Telegram/e-posta bildirimi + durum sayfası) ve **Netdata** (canlı makine grafikleri), Caddy arkasında şifreli `ops.ziroo.net`. Yeri **ziroo-edge** reposu (`ops/` compose + host dosyası + deploy betiği); ileride gelecek makine düzeyi sistemler de oraya. Diskort panelindeki altyapı bölümü kalır ama büyütülmez. Dış yedek ping (healthchecks.io) makine tamamen çökerse diye, isteğe bağlı.
 3. **Rapor katmanı:** gece gözcüsü, mevcut; anlık izlemenin yerini tutmaz, tamamlar.
