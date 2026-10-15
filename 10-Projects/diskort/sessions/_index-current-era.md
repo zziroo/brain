@@ -77,3 +77,5 @@ Bu dizin yalnızca güncel-dönem aktarımında yazılan notları listeler (tari
 - 2026-10-15 · decision · [[2026-10-15-kanal-suresi-girmeden-ve-yayinci-uste]] — Kanal süresi girmeden görünür, yayın açanlar üste (#35)
 - 2026-10-15 · decision · [[2026-10-15-kisisel-giris-sesi-ertelendi]] — Kişiye özel giriş sesi ertelendi (#34)
 - 2026-10-15 · session · [[2026-10-15-canli-dogrulama-bakim-plani-geri-bildirim]] — canlı doğrulama, bakım planı, geri bildirim #34/#35/#36
+- 2026-10-15 · decision · [[2026-10-15-kisisel-giris-sesi]] — Kişisel giriş sesi: Discord soundboard tarzı, sunucu ffmpeg, dinleyici kaydırıcısı (#34, 0.11.1)
+- 2026-10-15 · session · [[2026-10-15-kisisel-giris-sesi-ve-0-11-1]] — kişisel giriş sesi, sürüm 0.11.1

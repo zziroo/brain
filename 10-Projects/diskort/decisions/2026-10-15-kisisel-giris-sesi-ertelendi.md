@@ -2,7 +2,7 @@
 type: decision
 project: diskort
 date: 2026-10-15
-status: active
+status: superseded
 tags: [ses-tasarimi, geri-bildirim, ertelendi]
 source: geri bildirim #34 (Dararius, 2026-10-14); diskort oturumu 2026-10-15
 ---
@@ -21,6 +21,8 @@ Dararius, Discord'daki gibi kullanıcının kendi yüklediği kısa sesin (3-5 s
 ## Reddedilen alternatifler
 - Hemen reddetmek: Yusuf kapıyı kapatmak istemedi, "ileride bakarız".
 - Yapmak: moderasyon ve yükleme işi, mevcut öncelikler (0.11.0 doğrulama, sunucu bakımı) önde.
+
+> Yerini aldı: [[2026-10-15-kisisel-giris-sesi]] (aynı gün yapıldı, 0.11.1).
 
 ## İlgili
 - [[tek-ses-paketi]] · [[urun-basit-tutma-reddedilen-fikirler]]
