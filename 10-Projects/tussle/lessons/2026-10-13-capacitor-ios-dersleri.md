@@ -23,5 +23,5 @@ source: oturum 2026-10-13 üçüncü (mobil-playus: şeker kalıntıları, Capac
 - Xiaomi'de `adb shell screencap` çoklu ekran yüzünden `-d <displayId>` ister (`dumpsys SurfaceFlinger --display-id`); `adb shell input` ise "USB hata ayıklama (Güvenlik ayarları)" izni olmadan reddediliyor. Dokunuşu kullanıcı yapar, görüntüyü biz alırız.
 - Android Studio'nun JDK'sı Java 25; Capacitor'ın ürettiği Gradle 8.14 bunu desteklemiyor, wrapper 9.1'e çekildi (AGP 8.13 ile uyumlu).
 - Play Console kaydında "Bir kuruluş" ekranı kolayca seçiliyor; bireysel hesap için bir önceki adımda "Kendim". Apple'da mağaza adı benzersiz, "Tussle" alınmıştı; 30 karakterlik alt başlıklı ad kurtardı.
-- App Store Connect yeni arayüzde External Testing bazı yeni hesaplarda hiç görünmüyor; Test Information, anlaşmalar, DSA tamamken bile. Çare destek talebi; vakit kaybetmeden Android'e geçmek doğru oldu.
+- App Store Connect yeni arayüzde External Testing, **ilk iç grup açılmadan görünmüyor** (Test Information/anlaşma/DSA ile ilgisi yok). Bir iç grup aç, dış bölüm belirir. Destek talebine gerek yoktu; Yusuf Apple yardım sayfasından buldu.
 - Telefon kare istatistiği: `adb shell dumpsys gfxinfo net.ziroo.tussle` (9.510 karede %0,12 takılma, p90 8 ms). Canlı log: `adb logcat -d | grep -E "chromium|Capacitor/Console"`.

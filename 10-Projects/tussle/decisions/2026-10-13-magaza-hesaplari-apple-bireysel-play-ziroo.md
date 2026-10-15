@@ -27,5 +27,5 @@ source: oturum 2026-10-13 üçüncü (mobil-playus: Capacitor iOS/Android, TestF
 - Kuruluş hesabı (Play) / kurumsal hesap (Apple) şimdi: belge + D-U-N-S + bekleme.
 - `com.tussle.app` benzeri kimlik: [[2026-10-13-paket-kimligi-net-ziroo-tussle-ve-ios-kabuk]].
 
-## Açık
-- App Store Connect'te **External Testing bölümü hiç görünmüyor** (Test Information kayıtlı, anlaşmalar aktif, gizli pencere denendi, Create Group yalnız iç grup açıyor). Apple Developer Support'a talep açıldı (2026-10-13); cevap bekleniyor. Yusuf'un iOS cihazı yok, iç grup işe yaramaz.
+## Açık → çözüldü (2026-10-15)
+- External Testing bölümü, **bir iç grup açılınca** beliriyor (Apple yardım sayfası "Invite external testers"; Yusuf buldu). Dış grup "externalgroup" + public link oluşturuldu; link, yapı Beta App Review'dan geçince çalışır. Apple destek talebi gereksiz kaldı.
