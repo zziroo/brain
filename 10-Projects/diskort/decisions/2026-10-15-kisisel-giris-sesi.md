@@ -18,6 +18,7 @@ Dararius'un #34 önerisi ([[2026-10-15-kisisel-giris-sesi-ertelendi]] ile ertele
 - **Dinleyici kontrolü (Discord ekran görüntüsünden):** aç/kapat anahtarı yerine **ses seviyesi kaydırıcısı** (0 = kapalı, genel ses çalar). Masaüstünde ses paneline yeni düğme: sol tık aç/kapat (üstü çizili ikon), sağ tık kaydırıcılı bağlam menüsü (+ "Ses Ayarları" → Bildirimler ve Sesler). Aynı kaydırıcı ayarlarda ve telefonda. Ayar `introSoundVolume` (0..1, varsayılan 1).
 - **Yükleme:** masaüstü dosyayı tarayıcıda çözer, 5 sn'den uzunsa dalga formu + başlangıç kaydırıcısı + dinleme; 15 dk'dan uzun dosya reddedilir (PCM bellek). Telefon ilk 5 sn'yi alır (başlangıç seçici yok), expo-document-picker ile.
 - **Moderasyon:** yönetici kaldırır (`DELETE /api/users/:id/intro-sound` USER_UPDATE gönderir; admin-cli `intro-sound-remove` yalnız DB+dosya) + dinleyici kaydırıcısı. Discord'da da aynı ikili (sunucu yöneticisi sesi siler, dinleyici soundboard'u susturur).
+- **Düzeltme (0.11.2, aynı akşam):** giriş sesi genel "girdi" sesinden *sonra* çalar (Discord sırası); masaüstünde uzunluk da seçilir (0,3–5 sn, sunucu `duration`); istemcide sabit 0,5 kazanç, sunucuda loudnorm -20 LUFS; çalarken sarı halka.
 - Kendi girişin sağırken de çalar (kendi işlemin), başkalarınınki sağırken çalmaz. Yeni bir giriş sesi öncekini durdurur; kanaldan çıkınca durur.
 
 ## Neden
