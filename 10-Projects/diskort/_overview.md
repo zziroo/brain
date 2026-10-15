@@ -1,7 +1,7 @@
 ---
 type: project
 project: diskort
-date: 2026-10-15
+date: 2026-10-16
 status: active
 tags: [diskort, overview]
 source: handoff notundan (artık kaldırıldı), diskurt-project ve diskort-* hafıza dosyalarından, 2026-10-01/02 oturumlarından
@@ -24,7 +24,7 @@ Ses + ekran paylaşımı kalitesi; metin kanalları, tepkiler, dosyalar, roller,
 - Kod haritası: Etkinlik [[etkinlik-kod-haritasi]].
 
 ## Güncel durum (2026-10-16; canlıdan doğrula)
-- **Admin paneli "Altyapı" sekmesi (2026-10-16, `a22c0dc`; sunucuda 01:49'da yayınlandı: `git pull`, api yeniden kuruldu, healthz 200, eski `/api/admin/system-history` 404, şema 27, bütünlük ok, seste 2 kişi kopmadı; giriş sonrası sekme görünümü Yusuf'ça kontrol edilmedi):** [[20-Areas/altyapi/proje-altyapi-standardi|standart]] gereği "Makine" sekmesi "Altyapı" oldu; makine geneli grafikler (CPU/RAM/ağ uzun geçmişi, `/api/admin/system-history`, `systemHistory.ts`, infra `network` kartı, Genel'deki İşlemci/Bellek kartları) kalktı, üstte Netdata bağlantısı. Diskort'a ait kartlar (konteynerler, LiveKit, TLS, yedek, Disk (veri), trafik kotası, sayaçlar) kaldı. Yayın: api konteyneri yeniden kurulur (admin.js statik, `git pull` ile gelir); sunucuda `/data/system-history.json` sahipsiz kaldı, silinebilir.
+- **Admin paneli "Altyapı" sekmesi (2026-10-16, `a22c0dc`; sunucuda 01:49'da yayınlandı: `git pull`, api yeniden kuruldu, healthz 200, eski `/api/admin/system-history` 404, şema 27, bütünlük ok, seste 2 kişi kopmadı; Yusuf giriş yaptı, sekme canlıda doğrulandı):** [[20-Areas/altyapi/proje-altyapi-standardi|standart]] gereği "Makine" sekmesi "Altyapı" oldu; makine geneli grafikler (CPU/RAM/ağ uzun geçmişi, `/api/admin/system-history`, `systemHistory.ts`, infra `network` kartı, Genel'deki İşlemci/Bellek kartları) kalktı, üstte Netdata bağlantısı. Diskort'a ait kartlar (konteynerler, LiveKit, TLS, yedek, Disk (veri), trafik kotası, sayaçlar) kaldı. Karar: [[decisions/2026-10-16-admin-paneli-makine-geneli-netdataya-tasindi]]; oturum: [[sessions/2026-10-16-admin-altyapi-sekmesi]]. Açık: sunucuda `/data/system-history.json` sahipsiz (silinebilir), `#makine` ile açılınca adres çubuğu yeniden yazılmıyor (kozmetik).
 - **0.11.2 (2026-10-15 21:58):** giriş sesi düzeltmeleri (Yusuf 0.11.1 denedi): önce genel "girdi" sesi sonra giriş sesi (Discord sırası), masaüstünde uzunluk seçimi 0,3–5 sn (sunucu `duration`), seviye yarıya (istemci 0,5 kazanç + loudnorm -20), çalanın avatarında sarı halka. Sunucu `80cc93b` deploy edildi (şema 27). APK/IPA yeniden kullanıldı, `latest*.yml` 0.11.2, OTA 200. Canlıda henüz denenmedi.
 - **0.11.1 (2026-10-15 21:29):** kişisel giriş sesi ([[2026-10-15-kisisel-giris-sesi]], geri bildirim #34: ≤5 sn ses, sunucu ffmpeg ile kırpar, ses panelinde Discord soundboard tarzı düğme + kaydırıcı, şema **27**, Docker imajına ffmpeg) ve kanal süresi/yayıncı üste (#35). Sunucu deploy edildi (`ef73be1`, şema 27, bütünlük ok, ffmpeg 5.1.9). Tüm masaüstü paketleri; APK 0.11.0 ve IPA 0.8.5 yeniden kullanıldı (JS-only, OTA); `latest*.yml` 0.11.1, OTA android/ios 200. #34/#35 "tamamlandı". Canlıda henüz denenmedi (panel düğmesi, başlangıç seçici, iOS'ta LiveKit ile karışım). Oturum: [[sessions/2026-10-15-kisisel-giris-sesi-ve-0-11-1]].
 - **0.11.0 (2026-10-12 23:40):** rol etiketleme @rol ([[rol-etiketleme]]), rol verme hedefin seviyesine bakmaz ([[rol-verme-hedefin-seviyesine-bakmaz]]), DPDFNet eşikleri gevşetildi + Android ayrı iş parçacığı 30 ms tampon, **yeni APK gerekir** ([[dpdfnet-esikler-gevsetildi-android-ayri-is-parcacigi]]), masaüstü yazılımsal AGC + konuşma seviyesi telemetrisi ([[masaustu-yazilimsal-agc]]), Android ses ekranı Animated OOM düzeltmesi, çıkış aygıtı sink-id düzeltmesi. Sunucu deploy edildi (d40e39f, şema 26). v0.11.0 yayınlandı: tüm masaüstü paketleri, yeni Android APK (runtime native-83d20c89), iOS IPA 0.8.5 yeniden; `latest*.yml` 0.11.0, OTA android/ios 200. Oturum: [[sessions/2026-10-12-rol-etiketi-dpdfnet-agc-oom]].
@@ -73,6 +73,7 @@ Ses + ekran paylaşımı kalitesi; metin kanalları, tepkiler, dosyalar, roller,
 - Kayıt: [[kayit-sadece-hesap-davetiyesi]]; ekran paylaşımı: [[ekran-paylasimi-sabit-presetler]]
 - Kozmetik: [[kozmetik-sunucudan-paketler]], [[kozmetik-sadece-hover]]
 - Arkadaşlık: [[arkadaslik-sistemi]]; roller: [[rol-etiketleme]], [[rol-verme-hedefin-seviyesine-bakmaz]]
+- İzleme: [[2026-10-16-ops-katmani-kuma-netdata-ziroo-edge]], [[2026-10-16-admin-paneli-makine-geneli-netdataya-tasindi]] (panel yalnız Diskort'a ait bilgi, makine geneli Netdata'da)
 - Sunucu: [[sunucu-lightnode-istanbula-tasindi]], [[2026-10-03-joker-dns-ve-tools-games-alt-alan-adlari]], [[2026-10-05-liste-sayfalari-ziroo-edge-te-ortak-neon-tasarim]] (ders: [[ajan-yayin-betigini-sahte-ssh-ile-denerken-canliya-cikti]])
 - Yayın sahnesi: [[yayin-arayuzu-discord-tarzi]], [[sahne-izgarada-coklu-yayin]]; yayın sesi: [[uygulamaya-ozel-yayin-sesi-ertelendi]]
 - Ses: [[model-calisirken-agc-kapali-ve-sinirlayici]], [[2026-10-15-kisisel-giris-sesi]], [[masaustu-yazilimsal-agc]], [[dpdfnet-esikler-gevsetildi-android-ayri-is-parcacigi]], [[konusma-halkasi-duyulan-sesten]]
@@ -99,6 +100,7 @@ Ses + ekran paylaşımı kalitesi; metin kanalları, tepkiler, dosyalar, roller,
 - [[sessions/2026-10-12-rol-etiketi-dpdfnet-agc-oom]]: rol etiketi, rol verme kuralı, DPDFNet eşikleri, masaüstü AGC, OOM, sink-id, 0.11.0
 - [[sessions/2026-10-15-canli-dogrulama-bakim-plani-geri-bildirim]]: canlı doğrulama (sunucu 99f3652, OTA 200), bakım planı 16 Ekim 07:30, geri bildirim #35 main'de, #34 ertelendi, #36 pil testi
 - [[sessions/2026-10-15-kisisel-giris-sesi-ve-0-11-1]]: kişisel giriş sesi (#34, üç ajan + inceleme), sürüm 0.11.1, şema 27, imajda ffmpeg
+- [[sessions/2026-10-16-admin-altyapi-sekmesi]]: admin "Makine" sekmesi "Altyapı" oldu, makine geneli Netdata'ya, `a22c0dc` yayında
 
 ## Çalışma kuralları (Claude)
 [[20-Areas/working-rules/_index|Çalışma kuralları]] (20-Areas): [[git-push-autonomy]], [[diskort-orchestrator-mode]], [[zamanlanmis-gorevler-ve-skiller]]
