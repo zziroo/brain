@@ -80,3 +80,4 @@ Bu dizin yalnızca güncel-dönem aktarımında yazılan notları listeler (tari
 - 2026-10-15 · decision · [[2026-10-15-kisisel-giris-sesi]] — Kişisel giriş sesi: Discord soundboard tarzı, sunucu ffmpeg, dinleyici kaydırıcısı (#34, 0.11.1)
 - 2026-10-15 · session · [[2026-10-15-kisisel-giris-sesi-ve-0-11-1]] — kişisel giriş sesi, sürüm 0.11.1
 - 2026-10-15 · lesson · [[ota-yeniden-yukleme-seste-eski-livekit-oturumunu-birakir]] — Seste iken OTA yeniden yüklemesi eski LiveKit oturumunu bırakır (0.11.2, iki Android)
+- [[2026-10-16-ziroo-edge-ops-katmani-kuma-netdata]]: ops.ziroo.net (Kuma + Netdata + Telegram), gözcüden makine sağlığı çıktı, /healthz standardı, admin Altyapı sekmesi
