@@ -25,3 +25,11 @@ source: oturum 2026-10-13 üçüncü (mobil-playus: şeker kalıntıları, Capac
 - Play Console kaydında "Bir kuruluş" ekranı kolayca seçiliyor; bireysel hesap için bir önceki adımda "Kendim". Apple'da mağaza adı benzersiz, "Tussle" alınmıştı; 30 karakterlik alt başlıklı ad kurtardı.
 - App Store Connect yeni arayüzde External Testing, **ilk iç grup açılmadan görünmüyor** (Test Information/anlaşma/DSA ile ilgisi yok). Bir iç grup aç, dış bölüm belirir. Destek talebine gerek yoktu; Yusuf Apple yardım sayfasından buldu.
 - Telefon kare istatistiği: `adb shell dumpsys gfxinfo net.ziroo.tussle` (9.510 karede %0,12 takılma, p90 8 ms). Canlı log: `adb logcat -d | grep -E "chromium|Capacitor/Console"`.
+
+## Ek: OTA (2026-10-15)
+- Capgo eklentisinin otomatik modları arka plana geçişte WebView'ı yeniliyor; oyun uygulamasında `onlyDownload` + boot'ta `set()` şart. İlk açılışta `notifyAppReady` için en az 30 sn sabit bekleme var (`appReadyTimeout` daha küçük verilse de).
+- Başarısız paket `autoDeleteFailed: true` (varsayılan) ile silinip yeniden indiriliyor → sonsuz döngü. `false` yap, başarısızları kendin kaydet.
+- Eklenti sürüm karşılaştırması yapmaz; "farklıysa indir". Sunucu kuralı her şeyi belirler.
+- `cap sync` ortamdaki export'u okur, `VAR=x a && b` ön eki b'ye ulaşmaz: `bundle.json`'dan okumak daha güvenli.
+- Emülatörde aynı iPhone simülatöründe başka oturumun uygulaması çalışıyor olabilir; ajanlar üstüne yazmadı, iOS OTA döngüsü doğrulanmadı.
+- Aynı sürümden (1.0) Beta App Review'a tek yapı gönderilebiliyor; ikinci yapı onay gelene kadar dış gruba eklenemiyor.

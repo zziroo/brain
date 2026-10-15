@@ -75,7 +75,9 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 **Telefonda hiç görülmedi:** 2026-10-15 işleri (19 oyunun yeni dengesi, Beat 4 yol, Piñata vuruş hissi, Fill Up koyu tema bandı, Hop altınları, parti hak döndürme ×1→×3, "Sonraki günü başlat" düğmesi ve gün kayması geri sayımı, tek tepki şeridi, satırdan kaydırma, yeni tema gerçek ekranda: gece birincil düğmenin gri konturu, ⚔ turuncu kaldı), Parti J'nin 3 oyunu (Köprü Kur, Ok Duvarı, Topla 10; Köprü Kur maskot kutusu ölçülmedi), 24 yeni şekersiz kapak, Dört Ok koyu tema, Parti I'in 4 oyunu (Basket, Jetpack, Şerit Kaç, Kargo Ayır), 13 oyunun yeni süre modeli ("+N sn" balonu dahil), Balon "+1 balon" yazısı, canlı alt sayfanın yeni düzeni (Yusuf gördü mü belirsiz, doğrulanmadı), sezon çipi Android düzeltmesi, Parti Gecesi (gerçek kişilerle de oynanmadı: sahne animasyonu/hızı, konfeti, ses/titreşim, koyu tema, 16 kişide şerit "+n" okunurluğu), tek seferlik kuralın iPhone arka plan davranışı, yeni oda ekranı (klavye açılınca bugün şeridi gizleniyor mu, mesaj satırı yeri, çip/şerit belirişi, skor kartları), rekor flaması, canlı kapışma ("Geçtin!" balonu gerçek maçta hiç görülmedi, eş zamanlı başlangıç, arka plandan dönüş), G+H'nin 14 oyunu, D, E, F partilerinin tamamı (yeni Vinç kuralı ve yeni kapaklar dahil) ve önceki turun listesi (hayalet el, 3-2-1, Android geri, outbox, şans hakkı, 120 Hz).
 
 ### Sıradaki işler
-00-c. **Mağaza testleri (2026-10-13 gece durumu)** ([[2026-10-13-magaza-hesaplari-apple-bireysel-play-ziroo]], [[2026-10-13-android-kabuk-ve-durum-cubugu-seridi]]):
+00-o. **OTA yayın akışı (2026-10-15'ten beri)** ([[2026-10-15-ota-web-paketi-self-hosted-capgo]]): web değişikliği → sunucu yayını (gerekiyorsa) → `node scripts/ota-bundle.mjs && bash deploy/ota.sh`; uygulamalar sonraki açılışta alır. Yapı yüklemek yalnız eklenti/izin/Capacitor değişince (`otaMinNative` artır). Sunucuda güncel paket 0.20261015.831. İlk gerçek OTA indirmesi telefonda henüz görülmedi.
+00-c. **Mağaza testleri (2026-10-15 durumu)**: iOS yapı 1 Beta App Review'da ("Waiting for Review"), yapı 2 (OTA'lı, `dcc001e`) yüklendi; **yapı 1 onayı gelince externalgroup'a yapı 2 eklenir, public link arkadaşlara**. Android: OTA'lı APK Yusuf'ta; Play Console kimlik doğrulaması bekleniyor → sonra imzalı AAB + iç test. Play hazırlığı (yükleme anahtarı, gizlilik sayfası, görseller, formlar) yeni sohbette.
+00-c-2. **Mağaza testleri (2026-10-13 gece durumu, tarihsel)** ([[2026-10-13-magaza-hesaplari-apple-bireysel-play-ziroo]], [[2026-10-13-android-kabuk-ve-durum-cubugu-seridi]]):
   - iOS: 1.0 (1) ASC'de "Ready to Submit"; dış grup "externalgroup" + public link hazır (2026-10-15; iç grup açılınca bölüm belirdi); **yapının Beta App Review onayı bekleniyor**, sonra link arkadaşlara. Yusuf'un iOS cihazı yok.
   - Android: kabuk hazır (`2740e7b`), Yusuf'un telefonunda `dist/tussle-debug.apk` (sideload) çalışıyor. **Play Console bireysel hesap açıldı (Ziroo), kimlik doğrulaması bekleniyor.** Sırada: yükleme anahtarı + imzalı AAB (`*.keystore` gitignore'da; anahtar yedeği Yusuf'ta), gizlilik politikası sayfası (`tussle.ziroo.net/privacy`; takma ad, cihaz kimliği, skorlar, isteğe bağlı Google/Apple), mağaza görselleri (ikon 512, özellik grafiği 1024×500, ≥2 ekran görüntüsü; simülatör/emülatörden), veri güvenliği + içerik derecelendirme formları, iç test grubu (arkadaş e-postaları).
   - Küçük: uygulamada dokunuş başına boş `console` satırı (zararsız); Capgo OTA ve native Google/Apple giriş sonra.
@@ -145,6 +147,7 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 - [[2026-10-13-paket-kimligi-net-ziroo-tussle-ve-ios-kabuk]]
 - [[2026-10-13-magaza-hesaplari-apple-bireysel-play-ziroo]]
 - [[2026-10-13-android-kabuk-ve-durum-cubugu-seridi]]
+- [[2026-10-15-ota-web-paketi-self-hosted-capgo]]
 - [[2026-10-13-oyun-adlari-her-dilde-ortak]]
 - [[2026-10-13-capacitor-gomulu-web-ve-canli-guncelleme]]
 - [[2026-10-15-tema-orta-yol-kart-konturu-yumusak-pembe]] ([[2026-10-08-gorsel-kimlik-seker-dukkani-acik-varsayilan]] arayüz dilini değiştirdi)
@@ -194,6 +197,7 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 - [[2026-10-13-tussle-kapaklar-parti-j-varyantlar-dort-ok]]
 - [[2026-10-13-tussle-seker-kalintilari-ve-capacitor-ios]]
 - [[2026-10-13-tussle-android-kabugu-testflight-play]]
+- [[2026-10-15-tussle-ota-canli-guncelleme]]
 - [[2026-10-15-tussle-tema-parti-sonraki-gun-denge-turu]]
 
 ## İlgili
