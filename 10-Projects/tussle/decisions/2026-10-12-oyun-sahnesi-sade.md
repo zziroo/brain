@@ -7,6 +7,8 @@ tags: [tussle, gorsel, tema]
 source: oturum 2026-10-12 (mobil-playus: denge ve sade tema turu)
 ---
 
+> **2026-10-15:** Arayüz (oyun dışı) dili de sadeleşti: [[2026-10-15-tema-orta-yol-kart-konturu-yumusak-pembe]]. Sahne kararı geçerli.
+
 # Karar: Oyun sahneleri sade (Şeker Dükkânı kapaklarda kalır, sahnede "her taraf şeker" yok)
 
 ## Bağlam

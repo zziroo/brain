@@ -9,6 +9,8 @@ source: oturum 2026-10-09 (mobil-playus: oda/sohbet/hareket/dil turu + oyun üre
 
 > **2026-10-11:** Yerleşim kısmı (üst kart, podyum şeridi, Tablo/Sezon/Üyeler hapları ve alt sayfaları) [[2026-10-11-oda-ekrani-sezon-bandi-ve-canli-ilk-3]] ile değişti. Sohbet tepki/yanıt, emoji paneli ve sezon grafiği kararları geçerli.
 
+> **2026-10-15:** Tepki (6 sabit emoji, çoklu) ve emoji paneli [[2026-10-15-sohbet-tek-tepki-ve-emoji-dugmesi-kalkti]] ile değiştirildi: tek tepki, 20 emoji şeridi, panel yok.
+
 # Karar: Oda ekranı sohbet merkezli; Tablo/Sezon/Üyeler alt sayfa; tepki ve yanıt var, GIF ertelendi
 
 ## Bağlam

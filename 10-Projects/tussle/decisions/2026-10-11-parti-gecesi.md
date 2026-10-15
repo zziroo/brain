@@ -7,6 +7,8 @@ tags: [tussle, parti-gecesi, canli-kapisma, karar]
 source: oturum 2026-10-11 (mobil-playus: M1 eksikleri + Parti Gecesi)
 ---
 
+> **2026-10-15:** Oyun sayısı (3/5/7 → 1–10) ve tek koşu kuralı (→ oyun başına 1–3 hak, en iyi skor) [[2026-10-15-parti-oyun-sayisi-ve-oyun-basina-hak]] ile değiştirildi. Gerisi geçerli.
+
 # Karar: Parti Gecesi, oda sahibinin açtığı etkinlik kartıdır; odadaki herkes katılır, oyunlar art arda, sıra puanıyla
 
 ## Bağlam

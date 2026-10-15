@@ -1,10 +1,10 @@
 ---
 type: project
 project: tussle
-date: 2026-10-13
+date: 2026-10-15
 status: active
 tags: [tussle, overview, oyun, mobil, pwa]
-source: oturum 2026-10-13 üçüncü (mobil-playus: şeker kalıntıları, Capacitor iOS)
+source: "oturum 2026-10-15 (mobil-playus): tema sadeleştirme, parti ayarları, sonraki gün, 25 oyun geri bildirimi"
 ---
 
 # Tussle: arkadaşlarla günlük mini oyun kapışması (Playus'un hafif rakibi)
@@ -12,17 +12,24 @@ source: oturum 2026-10-13 üçüncü (mobil-playus: şeker kalıntıları, Capac
 > Durum kaynağı bu sayfa; canlı gerçek değildir, işlem öncesi repo/sunucudan doğrula.
 
 ## Nedir
-Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç kasmayan**, odası tamamen ayarlanabilir, canlı kapışma planlı bir mobil web oyunu. Hedef önce arkadaş grubu, sonra App Store + Google Play (global, ad Tussle). Repo `~/ZZ/zProjects/mobil-playus` (git, main; GitHub özel `zziroo/tussle`). Dokümanlar: `docs/DESIGN.md` (ürün), `docs/M0-PLAN.md` (teknik sözleşme), `docs/GAME-CONTRACT.md` (oyun ekleme), `docs/ARCHITECTURE.md`, `docs/POLISH.md`, `docs/AUTH-SETUP.md`, `docs/VISUAL.md` (görsel yönerge; arayüz paleti "Şeker Dükkanı", kapaklar ve sahneler sade).
+Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç kasmayan**, odası tamamen ayarlanabilir, canlı kapışma planlı bir mobil web oyunu. Hedef önce arkadaş grubu, sonra App Store + Google Play (global, ad Tussle). Repo `~/ZZ/zProjects/mobil-playus` (git, main; GitHub özel `zziroo/tussle`). Dokümanlar: `docs/DESIGN.md` (ürün), `docs/M0-PLAN.md` (teknik sözleşme), `docs/GAME-CONTRACT.md` (oyun ekleme), `docs/ARCHITECTURE.md`, `docs/POLISH.md`, `docs/AUTH-SETUP.md`, `docs/VISUAL.md` (görsel yönerge; arayüz 2026-10-15'ten beri orta yol: kartlarda ince kontur, kontroller düz, ana renk yumuşak pembe; kapaklar ve sahneler sade).
 
 ## Teknoloji
 - İstemci: saf TS + Vite + Canvas 2D, framework yok; menüler DOM (rAF yalnız oyunda). PWA (manifest + SW; SW `/api`'yi hiç önbelleklemez).
 - Oyun sözleşmesi: 60 Hz sabit adım deterministik sim (`sim.ts`, DOM'suz) + `view.ts`; sim'de `Math.sin/cos/pow/hypot/random/Date` yasak (`shared/dmath`, `shared/rng`); adım başına sıfır tahsis; varsayılan 60 kare sınırı, "Yüksek kare hızı" ayarı.
 - Sunucu: Node 24 + `ws` + `node:sqlite`, tek konteyner; girdi günlüğü sunucuda tekrar oynatılır, skor sunucuda hesaplanır (hile ve tekrar izleme). Oda kodu (4 harf), günün oyunu `mixSeed(oda, gün, sezon)`, deneme hakkı, sezon, sohbet + otomatik akış satırları, misafir kimliği + Google/Apple bağlama (JWT doğrulama `node:crypto`), günlük `VACUUM INTO` yedek.
-- Oyunlar (51 kayıtlı = 47 + Parti J 3 + Dört Ok 1, hepsi günlük havuzda): M0 dörtlüsü + Parti A–J + Dört Ok. Plinko, Zar Kulesi, Salyangoz, Jeton İtici 2026-10-10'da; Gizli Geçit, Kutu Seç, Yüksek/Alçak, Örüntü ve Terazi, İp Atla, Fırlat 2026-10-13'te silindi; `src/shared/pool.ts` `OFF_POOL` mekanizması boş küme olarak duruyor. **Varyant yok** (2026-10-13'ten beri her oyun tek ve sabit; altyapı tek girişle duruyor), **oda parametresi yok**, denge kodda. Meta: `gesture` (hayalet el), `score {unit, decimals, better}` (doğal ölçü). Üretim kiti: `src/games/shell`, `npm run new-game`, `docs/GAME-CONTRACT.md`, yol haritası `docs/GAMES-ROADMAP.md`.
+- Oyunlar (48 kayıtlı, hepsi günlük havuzda; Bop, Pop or Stop, Catch 2026-10-15'te silindi): M0 dörtlüsü + Parti A–J + Dört Ok. Plinko, Zar Kulesi, Salyangoz, Jeton İtici 2026-10-10'da; Gizli Geçit, Kutu Seç, Yüksek/Alçak, Örüntü ve Terazi, İp Atla, Fırlat 2026-10-13'te silindi; `src/shared/pool.ts` `OFF_POOL` mekanizması boş küme olarak duruyor. **Varyant yok** (2026-10-13'ten beri her oyun tek ve sabit; altyapı tek girişle duruyor), **oda parametresi yok**, denge kodda. Meta: `gesture` (hayalet el), `score {unit, decimals, better}` (doğal ölçü). Üretim kiti: `src/games/shell`, `npm run new-game`, `docs/GAME-CONTRACT.md`, yol haritası `docs/GAMES-ROADMAP.md`.
 - i18n: TR/EN (`src/client/i18n`, `docs/I18N.md`); sunucu hata kodları; akış satırları yapısal.
 
-## Güncel durum (2026-10-13; canlıdan doğrula)
-**Yayında:** https://tussle.ziroo.net (VPS konteyner `tussle`, 127.0.0.1:8087, `/opt/tussle`, Caddy `hosts/tussle.caddy`, veri `/opt/tussle/data` (konteyner içinde `/data`), sırlar `/opt/tussle/.env`). Deploy: `bash deploy/release.sh` (yedek + `deploy/deploy.sh`) ya da yalnız `bash deploy/deploy.sh`. Son yayın `a2865d0` (2026-10-13, ortak oyun adları), DB sürümü 13 (şema değişmedi); GitHub `zziroo/tussle` aynı. Yayın öncesi yedekler `/opt/tussle/data/pre-*.db` (son: `pre-a2865d0.db`; elle alma: `docker exec tussle node -e` ile `VACUUM INTO '/data/pre-<rev>.db'`, veri `/data/tussle.db`; rev'i önce yerelde değişkene al). 1.702 test yeşil.
+## Güncel durum (2026-10-15; canlıdan doğrula)
+- **2026-10-15 oturumu** ([[2026-10-15-tussle-tema-parti-sonraki-gun-denge-turu]]): iki yayın `889735d` (tema + parti + sonraki gün) ve **`488c5ef`** (denge turu + sohbet + gün kayması); yedekler `pre-889735d.db`, `pre-488c5ef.db`. **DB sürümü 15** (migration 14 parti hakları, 15 `rooms.day_offset`). 1.664 test yeşil (101 dosya). **48 oyun.** GitHub main aynı (25 commit GitHub grafiği için 2026-10-14 tarihli).
+  - **Tema orta yol** ([[2026-10-15-tema-orta-yol-kart-konturu-yumusak-pembe]]): kartlar/sezon bandı/alt sayfalar/birincil düğme 2px kontur + 2px ofset gölge, kontroller düz, şeker deseni yok, koyu tema nötr gri, ana renk yumuşak pembe (#d0368a / gece #ff7ac0). Günlük sıralama listesinde skor birimsiz.
+  - **Parti esnek** ([[2026-10-15-parti-oyun-sayisi-ve-oyun-basina-hak]]): 1–10 oyun, oyun başına 1–3 hak, en iyi skor; "Hepsi rastgele"; `PARTY_LIVE_MAX_MS` 150 dk.
+  - **Sonraki gün** ([[2026-10-15-oda-sahibi-sonraki-gunu-baslatir-gun-kaymasi]]): herkes bitirince oda sahibi başlatır; erken başlatma takvimi kaydırır (`day_offset`), geri sayım ≤24 sa.
+  - **Sohbet** ([[2026-10-15-sohbet-tek-tepki-ve-emoji-dugmesi-kalkti]]): tek tepki, 20 emoji şeridi, emoji düğmesi yok, satırın her yerinden kaydırma.
+  - **Eleme + denge** ([[2026-10-15-bop-pop-or-stop-catch-silindi]], [[2026-10-15-denge-turu-yusuf-telefon-geri-bildirimi]]): 3 oyun silindi; 19 oyun Yusuf'un telefon geri bildirimiyle dengelendi (telefonda doğrulanmadı).
+- Önceki durum (2026-10-13): aşağıdaki maddeler yerinde; yayın/DB/test sayıları o günün.
+**Yayında:** https://tussle.ziroo.net (VPS konteyner `tussle`, 127.0.0.1:8087, `/opt/tussle`, Caddy `hosts/tussle.caddy`, veri `/opt/tussle/data` (konteyner içinde `/data`), sırlar `/opt/tussle/.env`). Deploy: `bash deploy/release.sh` (yedek + `deploy/deploy.sh`) ya da yalnız `bash deploy/deploy.sh`. Son yayın `488c5ef` (2026-10-15, denge turu + sohbet + gün kayması), DB sürümü 15; GitHub `zziroo/tussle` aynı. Yayın öncesi yedekler `/opt/tussle/data/pre-*.db` (son: `pre-488c5ef.db`; elle alma: `docker exec tussle node -e` ile `VACUUM INTO '/data/pre-<rev>.db'`, veri `/data/tussle.db`; rev'i önce yerelde değişkene al). 1.664 test yeşil (101 dosya).
 - **2026-10-13 ikinci oturum** ([[2026-10-13-tussle-kapaklar-parti-j-varyantlar-dort-ok]]), main `2609905` → `3fe3dc2` (18 commit), yayınlar `fd7368a`, `f04ef65`, `e1c252f`, `2db56a3`, `3fe3dc2`:
   - **Kapaklar şekersiz** ([[2026-10-13-kapaklar-ve-kucuk-resimler-sekersiz]]): 24 kapak yeniden çizildi, küçük resimler aynı SVG'den düzeldi; Şeker Dükkânı yalnız arayüz paleti.
   - **Parti J** ([[2026-10-13-terazi-ip-atla-firlat-yerine-parti-j]]): Terazi, İp Atla, Fırlat silindi (410 `game_gone`); Köprü Kur `kopru`, Ok Duvarı `okduvar`, Topla 10 `onluk`.
@@ -65,7 +72,7 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 - Şüpheli koşu bayrakları: refleks, hazine, sifre, katane, tamzaman, renkhafiza (saklanıyor, hiçbir yerde gösterilmiyor; kutu/yuksek/gecit/plinko oyunlarla silindi).
 - Google/Apple girişi kodda hazır, env yok (`docs/AUTH-SETUP.md`).
 
-**Telefonda hiç görülmedi:** Parti J'nin 3 oyunu (Köprü Kur, Ok Duvarı, Topla 10; Köprü Kur maskot kutusu ölçülmedi), 24 yeni şekersiz kapak, Dört Ok koyu tema, Parti I'in 4 oyunu (Basket, Jetpack, Şerit Kaç, Kargo Ayır), 13 oyunun yeni süre modeli ("+N sn" balonu dahil), Balon "+1 balon" yazısı, canlı alt sayfanın yeni düzeni (Yusuf gördü mü belirsiz, doğrulanmadı), sezon çipi Android düzeltmesi, Parti Gecesi (gerçek kişilerle de oynanmadı: sahne animasyonu/hızı, konfeti, ses/titreşim, koyu tema, 16 kişide şerit "+n" okunurluğu), tek seferlik kuralın iPhone arka plan davranışı, yeni oda ekranı (klavye açılınca bugün şeridi gizleniyor mu, mesaj satırı yeri, çip/şerit belirişi, skor kartları), rekor flaması, canlı kapışma ("Geçtin!" balonu gerçek maçta hiç görülmedi, eş zamanlı başlangıç, arka plandan dönüş), G+H'nin 14 oyunu, D, E, F partilerinin tamamı (yeni Vinç kuralı ve yeni kapaklar dahil) ve önceki turun listesi (hayalet el, 3-2-1, Android geri, outbox, şans hakkı, 120 Hz).
+**Telefonda hiç görülmedi:** 2026-10-15 işleri (19 oyunun yeni dengesi, Beat 4 yol, Piñata vuruş hissi, Fill Up koyu tema bandı, Hop altınları, parti hak döndürme ×1→×3, "Sonraki günü başlat" düğmesi ve gün kayması geri sayımı, tek tepki şeridi, satırdan kaydırma, yeni tema gerçek ekranda: gece birincil düğmenin gri konturu, ⚔ turuncu kaldı), Parti J'nin 3 oyunu (Köprü Kur, Ok Duvarı, Topla 10; Köprü Kur maskot kutusu ölçülmedi), 24 yeni şekersiz kapak, Dört Ok koyu tema, Parti I'in 4 oyunu (Basket, Jetpack, Şerit Kaç, Kargo Ayır), 13 oyunun yeni süre modeli ("+N sn" balonu dahil), Balon "+1 balon" yazısı, canlı alt sayfanın yeni düzeni (Yusuf gördü mü belirsiz, doğrulanmadı), sezon çipi Android düzeltmesi, Parti Gecesi (gerçek kişilerle de oynanmadı: sahne animasyonu/hızı, konfeti, ses/titreşim, koyu tema, 16 kişide şerit "+n" okunurluğu), tek seferlik kuralın iPhone arka plan davranışı, yeni oda ekranı (klavye açılınca bugün şeridi gizleniyor mu, mesaj satırı yeri, çip/şerit belirişi, skor kartları), rekor flaması, canlı kapışma ("Geçtin!" balonu gerçek maçta hiç görülmedi, eş zamanlı başlangıç, arka plandan dönüş), G+H'nin 14 oyunu, D, E, F partilerinin tamamı (yeni Vinç kuralı ve yeni kapaklar dahil) ve önceki turun listesi (hayalet el, 3-2-1, Android geri, outbox, şans hakkı, 120 Hz).
 
 ### Sıradaki işler
 00-c. **Mağaza testleri (2026-10-13 gece durumu)** ([[2026-10-13-magaza-hesaplari-apple-bireysel-play-ziroo]], [[2026-10-13-android-kabuk-ve-durum-cubugu-seridi]]):
@@ -73,6 +80,7 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
   - Android: kabuk hazır (`2740e7b`), Yusuf'un telefonunda `dist/tussle-debug.apk` (sideload) çalışıyor. **Play Console bireysel hesap açıldı (Ziroo), kimlik doğrulaması bekleniyor.** Sırada: yükleme anahtarı + imzalı AAB (`*.keystore` gitignore'da; anahtar yedeği Yusuf'ta), gizlilik politikası sayfası (`tussle.ziroo.net/privacy`; takma ad, cihaz kimliği, skorlar, isteğe bağlı Google/Apple), mağaza görselleri (ikon 512, özellik grafiği 1024×500, ≥2 ekran görüntüsü; simülatör/emülatörden), veri güvenliği + içerik derecelendirme formları, iç test grubu (arkadaş e-postaları).
   - Küçük: uygulamada dokunuş başına boş `console` satırı (zararsız); Capgo OTA ve native Google/Apple giriş sonra.
 00-c-eski. **TestFlight / mağaza (önceki not)**: iOS yapı 1.0 (1) App Store Connect'te "Ready to Submit" (2026-10-13); mağaza adı **"Tussle: Daily Mini Games"** ("Tussle" alınmıştı; ikon altı ad Tussle), birincil dil English (U.S.), Türkçe sonra eklenecek. Sırada: iç grup + kendi telefonu, dış grup (Apple beta incelemesi ~1 gün, public link); mağaza için ekran görüntüleri/metin/gizlilik sonra (simülatörden üretilecek); gerçek cihazda açılış ekranı, koyu tema durum çubuğu, paylaşım; sonra Android kabuğu (Yusuf Android Studio Rabbit 1 kuruyor; Play Console 25 $ kayıt, test e-postaları). Sonra imzalı OTA güncelleme (Capgo `capacitor-updater`, kendi sunucudan) ve native Google/Apple giriş (Apple 4.8).
+00-t2. **Telefon turu 2 (denge turu doğrulaması)** ([[2026-10-15-denge-turu-yusuf-telefon-geri-bildirimi]]): 19 oyunun yeni dengesi (`#/oyun/<id>`), Beat 4 yol hissi, Piñata vuruş hissi, Fill Up koyu tema hedef bandı, Hop altınlar, parti hak döndürme UX'i (×1→×2→×3), "Sonraki günü başlat" düğmesi (3/5 bitirdi yazısı, 409 toast, geri sayım), tepki şeridi, satırdan kaydırma, yeni tema gerçek ekranda (gece birincil düğmenin gri konturu, ⚔ turuncu kaldı).
 00-c0. ~~Capacitor → telefon/mağaza EN ÖNCE~~ (iOS kabuğu `7c97dd6` ile geldi) ([[2026-10-13-once-magaza-sonra-denge]], yol: [[2026-10-13-capacitor-gomulu-web-ve-canli-guncelleme]]; Yusuf'tan gerekecekler: Google Play 25 $ kayıt, test kullanıcı e-postaları; Apple Developer var; Yusuf: önce markete çıkalım, sonra herkes early access/test ile uygulamada direkt denesin).
 00-d. **Dört Ok telefon geri bildirimi bekleniyor** (v3 `3fe3dc2`: uzun rampa, alt çubuk, beginPath düzeltmesi).
 00-s. ~~Oyun içi şeker kalıntıları~~ kapandı (`3795d6e`); açık soru: Karşıya Geç kahramanı oyunda top, kapakta blok.
@@ -139,6 +147,12 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 - [[2026-10-13-android-kabuk-ve-durum-cubugu-seridi]]
 - [[2026-10-13-oyun-adlari-her-dilde-ortak]]
 - [[2026-10-13-capacitor-gomulu-web-ve-canli-guncelleme]]
+- [[2026-10-15-tema-orta-yol-kart-konturu-yumusak-pembe]] ([[2026-10-08-gorsel-kimlik-seker-dukkani-acik-varsayilan]] arayüz dilini değiştirdi)
+- [[2026-10-15-parti-oyun-sayisi-ve-oyun-basina-hak]] ([[2026-10-11-parti-gecesi]] kısmen değişti)
+- [[2026-10-15-oda-sahibi-sonraki-gunu-baslatir-gun-kaymasi]]
+- [[2026-10-15-sohbet-tek-tepki-ve-emoji-dugmesi-kalkti]] ([[2026-10-09-oda-ekrani-sohbet-merkezli]] tepki kısmı değişti)
+- [[2026-10-15-bop-pop-or-stop-catch-silindi]]
+- [[2026-10-15-denge-turu-yusuf-telefon-geri-bildirimi]] (doğrulanmadı)
 
 ## Dersler
 - [[2026-10-08-tussle-m0-dersleri]]
@@ -156,6 +170,11 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 - [[2026-10-13-parti-i-ve-sure-modeli-dersleri]]
 - [[2026-10-13-kapak-varyant-dort-ok-dersleri]]
 - [[2026-10-13-capacitor-ios-dersleri]]
+- [[2026-10-15-ajanlar-ortak-calisma-kopyasinda-git-stash-yasak]]
+- [[2026-10-15-ayrik-klasor-paralellik-ve-paylasilan-dosyalar]]
+- [[2026-10-15-vite-yeniden-yuklemeleri-tarayici-testini-boluyor]]
+- [[2026-10-15-izin-siniflandirici-ref-yazma-ve-deploy]]
+- [[2026-10-15-tema-degisikligini-once-goster]]
 
 ## Oturumlar
 - [[2026-10-08-tussle-tasarim-ve-m0-yayin]]
@@ -175,6 +194,7 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 - [[2026-10-13-tussle-kapaklar-parti-j-varyantlar-dort-ok]]
 - [[2026-10-13-tussle-seker-kalintilari-ve-capacitor-ios]]
 - [[2026-10-13-tussle-android-kabugu-testflight-play]]
+- [[2026-10-15-tussle-tema-parti-sonraki-gun-denge-turu]]
 
 ## İlgili
 Aynı VPS ve Caddy: [[10-Projects/kapis/_overview|KAPIŞ]] (ws sunucu kalıbı buradan), [[10-Projects/diskort/_overview|Diskort]]. Çalışma kuralları: [[orkestrasyon]], [[karar-dagilimi]].

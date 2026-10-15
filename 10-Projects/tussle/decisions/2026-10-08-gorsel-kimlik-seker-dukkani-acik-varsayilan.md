@@ -7,6 +7,8 @@ tags: [tussle, gorsel, tema, ui, telif]
 source: oturum 2026-10-08 gece (mobil-playus UI yenileme)
 ---
 
+> **2026-10-15:** Arayüz dili [[2026-10-15-tema-orta-yol-kart-konturu-yumusak-pembe]] ile değiştirildi: kontur 2px yalnız kartlarda, kontroller düz, şeker deseni yok, koyu tema nötr gri, ana renk yumuşak pembe. Logo ve sarı aynı.
+
 # Karar: görsel kimlik "Şeker Dükkanı" (krem zemin, konturlu sticker kartlar); Gündüz varsayılan
 
 ## Bağlam
