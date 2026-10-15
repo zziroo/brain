@@ -36,7 +36,7 @@ Yeni bir uygulama (oyun, araç, servis) yayına girerken bu kalıba uyar; var ol
 ## Mevcut durum (2026-10-16)
 | Proje | /healthz | Kuma | Yedek push | Panel | Not |
 |---|---|---|---|---|---|
-| Diskort | var (API, `d47cf72`) | site + 2 konteyner | var | var (`/admin`) | "Makine" sekmesinde makine geneli grafikler var → çıkarılacak, sekme "Altyapı" olacak |
+| Diskort | var (API, `d47cf72`) | site + 2 konteyner | var | var (`/admin`) | standarda uygun: "Altyapı" sekmesi yalnız Diskort bileşenleri + Netdata bağlantısı (`a22c0dc`, 2026-10-16; sunucuda yayın bekliyor) |
 | Tussle | var | site + konteyner | var | yok | panel sırada (geri bildirim/hata uçları hazır) |
 | KAPIŞ | var | site + konteyner | — | yok | kullanıcı verisi yok, panel gerekmez |
 | Araçlar (steam-avgr, rehber, song-finder, pdf-ceviri, ziroobank) | var (ziroobank `/`) | site; ziroobank konteyner | — | yok | ziroobank'a `/healthz` eklenebilir |
