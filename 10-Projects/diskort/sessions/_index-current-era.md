@@ -73,3 +73,7 @@ Bu dizin yalnızca güncel-dönem aktarımında yazılan notları listeler (tari
 - 2026-10-10 · lesson · [[electron-builder-csc-link-anahtar-zinciri-parolasi]] — electron-builder CSC_LINK macOS 26'da düşer; sertifikayı kendin aktar
 - 2026-10-10 · lesson · [[rutin-calisma-klasoru-silinince-oturum-acmaz]] — Rutinin çalışma klasörü yoksa oturum açılmaz
 - 2026-10-10 · session · [[2026-10-10-macos-imza-telefon-gostergesi-0-10-3]] — rutin klasörü, macOS imza, telefon göstergesi, 0.10.3
+- 2026-10-15 · decision · [[2026-10-15-sunucu-bakim-penceresi-07-30]] — Bakım penceresi 07:00–09:00, reboot 07:30; ilk toplu güncelleme 16 Ekim
+- 2026-10-15 · decision · [[2026-10-15-kanal-suresi-girmeden-ve-yayinci-uste]] — Kanal süresi girmeden görünür, yayın açanlar üste (#35)
+- 2026-10-15 · decision · [[2026-10-15-kisisel-giris-sesi-ertelendi]] — Kişiye özel giriş sesi ertelendi (#34)
+- 2026-10-15 · session · [[2026-10-15-canli-dogrulama-bakim-plani-geri-bildirim]] — canlı doğrulama, bakım planı, geri bildirim #34/#35/#36
