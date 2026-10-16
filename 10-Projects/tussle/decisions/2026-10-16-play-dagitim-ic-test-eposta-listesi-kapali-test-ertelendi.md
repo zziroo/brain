@@ -14,7 +14,7 @@ Play Console'da uygulama oluşturuldu, AAB iç teste yüklendi, 11 kurulum göre
 
 ## Karar
 1. Arkadaş grubu **iç test** ile oynar: liste "Tussle test" (şimdilik Yusuf'un Gmail'i), link `https://play.google.com/apps/internaltest/4701679197682475885`, 100 kişiye kadar; yeni Gmail geldikçe listeye eklenir, güncellemeler Play'den gelir.
-2. **Kapalı test** 12 Google hesabı (arkadaş, aile, ikinci hesaplar; kurup 14 gün silmemek yeter, oynamak gerekmez) toplandığında açılır; mağaza sayfası ondan sonra.
+2. **Kapalı test** 12 Google hesabı (arkadaş, aile, ikinci hesaplar; kurup 14 gün silmemek yeter, oynamak gerekmez) toplandığında açılır; mağaza sayfası ondan sonra. **(Güncellendi 2026-10-16 gece: kapalı test hesaplar toplanmadan Google Grubu ile açıldı ve incelemeye gitti, bkz. [[2026-10-16-kapali-test-google-grubuyla-acildi-mail-toplanmaz]].)**
 3. Sunucudan imzalı APK dağıtımı (`tussle.ziroo.net/tussle.apk`, OTA ile güncellenir) önerildi, Yusuf **gerek yok** dedi.
 4. Play Console seçimleri: kategori Oyun / Gündelik, hedef kitle 13+, reklam **Hayır** (reklam eklenince beyan değiştirilebilir), içerik derecelendirmesi IARC "Genel / Tüm yaşlar" (yalnız çevrimiçi etkileşim: oda sohbeti; engelleme/bildirme/denetim yok, etkileşim davetlilerle sınırlı), veri güvenliği 9 tür (`store/listing.md` §6), hesap oluşturma "Diğer: takma adlı misafir hesap", silme bağlantısı gizlilik sayfası, mağaza iletişim e-postası `privacy@ziroo.net` (Cloudflare Email Routing zaten açık; yönlendirme kuralı henüz kurulmadı), yapay zeka görsel etiketi **uygulanmadı** (gerçek ekranlar + vektör logo).
 5. Android `versionCode` 2 (iOS yapı 2 ile eşit); upload keystore `~/keys/tussle-upload.keystore` (yedeği iCloud Drive `Yedek/`), parola Yusuf'ta; `android/keystore.properties` gitignore'lu.
@@ -27,7 +27,7 @@ Play Console'da uygulama oluşturuldu, AAB iç teste yüklendi, 11 kurulum göre
 ## Reddedilen alternatifler
 - Sunucudan APK: Play güvencesi yok, bazı telefonlar uyarı verir; Yusuf istemedi.
 - Dahili uygulama paylaşımı: inceleme öncesi kapalı.
-- Kapalı testi hemen boş kanal olarak açmak: faydası yok, saat ancak 12 kişi kurunca işler.
+- Kapalı testi hemen boş kanal olarak açmak: faydası yok, saat ancak 12 kişi kurunca işler. (Sonradan değişti: grup + onaylı kanal hazır olsun ki arkadaşlar kendileri katılsın, [[2026-10-16-kapali-test-google-grubuyla-acildi-mail-toplanmaz]].)
 
 ## Sonuçlar / riskler
 - Playus'un onboarding akışı (slaytlar, bildirim izni, yaş kapısı, Google/Apple giriş) mağaza beyanlarını etkilemiyor; yaş kapısı ve "Yaş" veri türü ancak reklam gelirse gündeme gelir, push yok.
