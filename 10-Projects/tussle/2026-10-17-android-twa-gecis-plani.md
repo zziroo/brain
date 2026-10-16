@@ -7,7 +7,13 @@ tags: [tussle, android, twa, gecis, magaza, hesap]
 source: oturum 2026-10-17 gece (mobil-playus) TWA deneme sürümü; Yusuf'un Xiaomi karşılaştırması
 ---
 
-# Android TWA geçiş planı (karar Yusuf'ta)
+# Android TWA geçiş planı
+
+**Karar (Yusuf, 2026-10-17 gece): geçiş yapıldı.** Misafir hesaplar taşınmaz (kapalı testte kabul, seçenek c); durum çubuğu normal görünsün (immersive'in çentik şeridi "tuhaf"). Kod `ce1f519` (GitHub + sunucu, yedek `pre-ce1f519.db`): `android-twa/` artık `net.ziroo.tussle` versionCode 5 / 1.1, `TussleLauncherActivity` (Chrome'a açık renk şeması), splash, WebView yedeği; assetlinks'e Play App Signing (`0E:5C:…:79:66`, Play'den kurulu APK'dan okundu) + yükleme anahtarı (`E6:1E:…:A3:A3`); web: `isTwa` (referrer, raporlarda `twa`), tanıtım slaytlarında geri tuşu `CloseWatcher` ile (TWA'da doğrulandı). AAB `dist/tussle-release.aab` Play Console iç test taslağına yüklendi (5 (1.1)); sürüm notu ve yayın Yusuf'ta.
+- Gezinme çubuğu: Chrome 155 (Android 16) TWA'nın verdiği rengi yok sayıyor; açık şema zorlanınca beyaz (krem değil). Kitaplık 2.7.4 manifestteki `*_BAR_COLOR` değerlerini Chrome'a hiç geçirmiyor. Kabul edildi; Capacitor'daki gibi sayfanın çubuğun altına uzanması TWA'da yok.
+- Durum çubuğu sayfanın `theme-color`'ını izliyor (Gece'de koyu, CDP ile denendi).
+
+## Öneri ve plan (geçiş öncesi yazıldı)
 
 Deneme sonucu: **TWA'da Slice parmak kalkıkken akıcı, Capacitor uygulamasındaki takılma yok** (Yusuf, Xiaomi 17 Pro, Chrome 155, 2026-10-17 gece). Öneri: [[2026-10-17-android-twa-onerisi]]. Deneme yapısı repoda `android-twa/` (oturum [[sessions/2026-10-17-tussle-twa-deneme]]).
 
