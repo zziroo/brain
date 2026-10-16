@@ -12,3 +12,5 @@ source: Claude Code oturumu 2026-10-16 "tussle: admin paneli"
 Özellik ajanı duman testi için kendi `tsx` sürecini açıp desenle kapatınca, uygulamanın önizleme panosundan açılmış `tsx watch` (8087) de düştü; ajan `touch` ile yeniden başlattı. Kural: ajan briefine "kendi başlattığın süreci PID ile kapat, `pkill -f` desen kullanma; duman testi için ayrı port ve `DATA_DIR` kullan" yaz. Koordinatör tarayıcı kontrolünü `.claude/launch.json` yapılandırmasıyla (`tussle-admin`, 8089) yaptı; bu yol daha güvenli.
 
 İlgili: [[2026-10-15-ajanlar-ortak-calisma-kopyasinda-git-stash-yasak]] · [[2026-10-16-admin-paneli-tek-sayfa-admin-token-kapaliysa-404]]
+
+**Tekrar (aynı gün, mağaza hazırlığı yan oturumu):** görsel ajanı kendi sunucularını `pkill -f "tsx src/server/index.ts"` ile kapattı; brief'te kural yoktu. O an başka dev sunucu yoktu, zarar olmadı. Kural brief şablonuna girmeli: "kendi süreçlerini PID ile kapat, `pkill -f` yok".

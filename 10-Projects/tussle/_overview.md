@@ -86,14 +86,16 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 - **OTA yayın akışı** ([[2026-10-15-ota-web-paketi-self-hosted-capgo]]): web değişikliği → sunucu yayını (gerekiyorsa) → `node scripts/ota-bundle.mjs && bash deploy/ota.sh`; uygulamalar sonraki açılışta alır (indirme hemen, geçiş bir sonraki açılış). Yapı yüklemek yalnız eklenti/izin/Capacitor değişince (`otaMinNative` artır). Sunucuda güncel paket 0.20261015.1920 (rev b3b1c0e); telefonda OTA çalıştığı doğrulandı.
 - **Mağaza (2026-10-15 durumu)** ([[2026-10-13-magaza-hesaplari-apple-bireysel-play-ziroo]]): iOS yapı 1 Beta App Review'da ("Waiting for Review"), yapı 2 (OTA'lı, `dcc001e`) yüklendi; **yapı 1 onayı gelince externalgroup'a yapı 2 eklenir, public link arkadaşlara**. Yusuf'un iOS cihazı yok. Android: OTA'lı APK Yusuf'ta çalışıyor; Play Console (bireysel, Ziroo) kimlik doğrulaması bekleniyor → sonra yükleme anahtarı + imzalı AAB (`*.keystore` gitignore'da, yedek Yusuf'ta), gizlilik sayfası (`tussle.ziroo.net/privacy`), mağaza görselleri (ikon 512, özellik grafiği 1024×500, ≥2 ekran görüntüsü), veri güvenliği + içerik derecelendirme formları, iç test grubu (arkadaş e-postaları). Mağaza adı **"Tussle: Daily Mini Games"**, birincil dil English (U.S.), Türkçe sonra. Native Google/Apple giriş sonra (Apple 4.8). Bu hazırlık yeni sohbette.
 - **Admin paneli yapıldı (2026-10-16, `7d01386`)**; makine katmanı ziroo-edge'de kurulu ([[10-Projects/diskort/decisions/2026-10-16-ops-katmani-kuma-netdata-ziroo-edge|ops]]). Kalan: Yusuf panele telefondan baksın (anahtar sunucuda `/opt/tussle/.env`); isteğe bağlı küçükler: anahtarsız ack / `%61dmin` yol varyantı / `dataDir: null` testleri, `attempts.created_at` dizini (trafik artarsa), Diskort gece gözcüsüne Tussle bölümü.
-- **Mağaza hazırlığı oturumu başladı (2026-10-16, yan oturum "Tussle: mağaza hazırlığı")**: gizlilik sayfası `/privacy` (SW'de dışlanmalı, [[2026-10-16-sw-gezinti-onbellegi-yeni-sunucu-sayfalarini-kabuk-sanir]]), `store/` görseller (512 ikon, 1024×500, ≥4 ekran görüntüsü), `store/listing.md`, `docs/STORE.md` (AAB imzalama, Yusuf kontrol listesi). Commit ve yayın koordinatörde; iletişim e-postası Yusuf'tan.
+- **Mağaza hazırlığı yapıldı (2026-10-16, yan oturum [[sessions/2026-10-16-tussle-magaza-hazirligi]]; çalışma kopyasında, commit/yayın yok)**: gizlilik sayfası `/privacy` EN + `/privacy/tr` ([[2026-10-16-gizlilik-sayfasi-sunucudan-statik-en-tr]], SW v5, 5 test; e-posta taslak `privacy@ziroo.net`); `store/` ikon 512/1024, özellik grafiği, 5 Play + 5 iOS ekranı tek komutla üretilir ve geçici ([[2026-10-16-magaza-ekran-goruntuleri-puppeteer-uretilebilir-gecici]]); `store/listing.md` (EN/TR metinler, IARC, Data safety, App Privacy); `docs/STORE.md` (keystore.properties ile imza, `npm run build:aab`, Yusuf kontrol listesi). TestFlight: **yapı 1 Approved**, yapı 2 Ready to Submit → externalgroup + public link Yusuf'ta. Native Google/Apple giriş sonraya ([[2026-10-16-native-google-apple-giris-play-imzasindan-sonra]]). Uygulama bitmedi: Antrenman kalkacak, profile eklemeler gelecek; ekranlar ve metinler sonra yeniden.
 - Küçük açık sorular: Karşıya Geç kahramanı oyunda top, kapakta blok; uygulamada dokunuş başına boş `console` satırı (zararsız); istenirse Çark'a çok renk geri (`WEDGE_CANDY`).
 - Arkadaş geri bildirimi geldikçe yeni yayın partisi (kimlik eşle, yayınlara böl); sonra kalan sonsuz oyunların rampaları.
 - **Canlı sonrası**: dolaylı etkileşim modu (Tetris tarzı rakibe engel) ve gerçek arena oyunları; önce tek prototip (öneri sumo, gecikmeye dayanıklı; deterministik sim → geri sarmalı ağ kodu). M1: rövanş, maç geçmişi, yeniden katılma Yusuf kararıyla yok; oyun başına kişi sayısı filtresi kalabalık/canlı oyunlar gelince; bildirim Capacitor ile.
 - Tema toptan düzenleme (Yusuf kararı, sonra).
 - Kit/teknik: seçim düğmeleri yardımcısı; bayrakları tabloda ayırma (istenirse); Capacitor → TestFlight → mağaza; ertelenenler (ID token nonce, CSP, sözlük tembel yükleme, tepki toggle idempotent, `GET me` 30 oda).
+- **Mağaza, sırada**: Yusuf → iletişim e-postası, Play kimlik, keytool + `keystore.properties`, iç test, externalgroup'a yapı 2. Koordinatör → gizlilik sayfasını commit + yayın, `deploy/release.sh`'e `pre-*.db` budaması (gizlilik sözü 30 gün), canlı Caddy'de `log` yok teyidi. Sonra: Antrenman kaldır + profil, ekranları `store/make-graphics.mjs` ile yeniden al, native Google+Apple giriş dilimi (Play imzasından sonra), sohbette bildirme/engelleme (Apple 1.2, teyit).
 
 ## Önemli kararlar
+- [[2026-10-16-gizlilik-sayfasi-sunucudan-statik-en-tr]] · [[2026-10-16-magaza-ekran-goruntuleri-puppeteer-uretilebilir-gecici]] · [[2026-10-16-native-google-apple-giris-play-imzasindan-sonra]]
 - [[2026-10-16-admin-paneli-tek-sayfa-admin-token-kapaliysa-404]] ([[2026-10-16-izleme-katmanlari-uygulama-paneli-ve-makine-izleme]] uygulama katmanı yapıldı)
 - [[2026-10-16-telefon-turu-izleme-sesi-rozet-claw-cups-antrenman]] · [[2026-10-16-ana-renk-ikon-mavisi-pembe-vurgu-takasi]] ([[2026-10-15-tema-orta-yol-kart-konturu-yumusak-pembe]] renk kısmını değiştirdi)
 - [[2026-10-15-istemci-hata-toplama-jsonl-geri-bildirim-sqlite]] · [[2026-10-16-izleme-katmanlari-uygulama-paneli-ve-makine-izleme]] (öneri)
@@ -152,6 +154,7 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 - [[2026-10-15-denge-turu-yusuf-telefon-geri-bildirimi]] (doğrulanmadı)
 
 ## Dersler
+- [[2026-10-16-gizlilik-metni-brieften-degil-koddan]] · [[2026-10-16-play-ekran-orani-ve-32-bit-ikon]]
 - [[2026-10-16-sw-gezinti-onbellegi-yeni-sunucu-sayfalarini-kabuk-sanir]] · [[2026-10-16-ajan-pkill-desenle-baska-oturumun-dev-sunucusunu-oldurur]]
 - [[2026-10-16-renk-onizleme-css-degiskeni-ve-ajan-anahtar-sizintisi]]
 - [[2026-10-15-kimliksiz-girdiden-terminale-giden-metni-suz]]
@@ -178,6 +181,7 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 - [[2026-10-15-tema-degisikligini-once-goster]]
 
 ## Oturumlar
+- [[sessions/2026-10-16-tussle-magaza-hazirligi]]: mağaza hazırlığı (gizlilik sayfası, store/ görseller + metinler, AAB imza yolu, Yusuf listesi); commit yok
 - [[sessions/2026-10-16-tussle-admin-paneli]]: admin paneli yazıldı ve yayınlandı (`7d01386`); mağaza hazırlığı yan oturumu başladı
 - [[sessions/2026-10-16-tussle-telefon-geri-bildirimi-turu]]: telefon turu yayını (izleme sesi + rozet, Claw, Cups v5, Antrenman, Slice, ana renk mavi)
 - [[sessions/2026-10-15-tussle-hata-toplama-geri-bildirim]]: hata toplama + geri bildirim yayını, admin/ops planı
