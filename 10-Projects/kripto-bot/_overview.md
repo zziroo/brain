@@ -37,11 +37,11 @@ Stack önerisi: Python 3.12 + ccxt, pandas, pytest, async (Yusuf'a sorulacak, ce
 - Paket `src/kripto_bot/`: data, strategy (6 strateji), risk, backtest (+walk-forward), exchange, cli, paper. Komutlar: `uv run kbot download|backtest|paper-run|risk-reset --loop paper|show-config`.
 - Faz 2 ön koşul düzeltmeleri yapıldı: ayrı `state/risk_state_<paper|live>.json`, reset gün alanlarını korur, günlük taban önceki bar eşitliği, backtest gün devri, her fill'de state kaydı, `OrderTooSmall`, `SecretStr`.
 - Strateji araştırması (`reports/strategy-research-2026-10-16.md`): 1h/4h'de hiçbir şey çalışmıyor; 1d trend kuralları (özellikle `trend_filter_cross` 20/50/200, min_hold 5, cooldown 3) uzun vadede B&H'yi getiride yenmiyor ama max DD'yi yarıya indiriyor (2y: ~%25 vs %77-80), 2-4 işlem/yıl, ±%20 parametrede %98+ işaret korunuyor. Örneklem küçük (8 işlem/2y). Varsayılan config buna çekildi, **yalnız paper için**.
-- Açık ürün kararı (Yusuf): %15 kill switch bu stratejilere uymuyor (normal DD %25-60, aylar içinde ateşler ve bot kalıcı durur). Limit yükseltilsin mi, yoksa düşük DD'li ama sık duran bot mu?
+- Kill switch %40 (2026-10-16, Yusuf kararı Claude'a bıraktı): 1d trend stratejisinin olağan düşüşü %25-40, eşik 'strateji bozuldu' seviyesi. Tam döngüde (2019-20 tarzı) yine ateşleyebilir; o zaman insan reset'i gerekir.
 - Düşük/ileriye dönük notlar: toz (dust) satışları `OrderTooSmall` ile döngüyü durdurur (canlı öncesi çözülmeli); `price_hint` yoksa min-cost kontrolü atlanır; 1d'de %3 günlük limit hiç ateşlemez (bar=gün).
 
 ## Sıradaki işler
-- [ ] Yusuf kararı: kill switch yüzdesi (öneri: 1d trend için %35-50 ya da strateji seçimine göre) ve 3-6 ay paper dönemi
+- [ ] 3-6 ay paper/testnet dönemi (botun doğru davrandığını doğrular, stratejinin çalıştığını değil)
 - [ ] Faz 2: risk motorunu testnet'te gerçek emirli döngüye bağla; dust satışı ve `price_hint` zorunluluğu burada çözülür; 1d döngüsü için zamanlanmış çalıştırma (launchd/cron) tasarımı
 - [ ] Faz 3: salt okunur gözetim görevi (zamanlanmış), web pano
 - [ ] GitHub remote (özel) açılsın mı? (Yusuf)
