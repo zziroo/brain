@@ -38,6 +38,12 @@ iOS etkilenmez: WKWebView 60'ta düzenli çalışıyor, Capacitor kalır ([[2026
 - Oyunda 60 Hz'e kilitlemek: OnePlus'ta 60 Hz'de de takıldı.
 - GeckoView vb. başka motor gömmek: uygulama ~50+ MB büyür, Chrome'dan farklı motor, bakım yükü.
 
+## Yusuf'un soruları (2026-10-17)
+- **Standart mı?** Evet: TWA, Google'ın web uygulamalarını Play'de yayınlamak için resmi yolu (`androidbrowserhelper`, Play dokümanları, PWABuilder). Geçici çözüm değil.
+- **Apple tarafı da geçsin mi?** Olmaz. iOS'ta TWA karşılığı yok: bütün tarayıcılar WebKit kullanmak zorunda (iPhone'daki Chrome da WebKit), App Store yalnız siteyi açan kabuğu reddedebiliyor (4.2). Gerek de yok: WKWebView oyunu düzenli 60'ta çalıştırıyor. Geçişte Capacitor yalnız iOS kabuğu olarak kalır.
+- **Chrome yoksa?** Uyumlu başka tarayıcı (Samsung Internet, Edge, Opera) varsa onunla açılır. Hiç yoksa yedek yola düşer; önerilen yedek WebView (adres çubuğu yok, bugünkü davranış). Play'li telefonlarda Chrome önyüklü gelir.
+- **Titreşim farkı:** [[2026-10-17-oyun-titresimi-media-arayuz-touch]].
+
 ## İlgili
 - Devir notu: [[2026-10-17-twa-deneme-devir-notu]]
 - [[2026-10-16-kare-siniri-kalkti-her-vsyncte-cizim]]

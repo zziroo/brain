@@ -19,7 +19,7 @@ Play sürümüne dokunmadan, yanına kurulan bir **TWA deneme uygulaması** yapm
 ## Repo durumu (2026-10-17 00:30)
 - `main` = GitHub, temiz. Son commitler: `11127a3` (kare sınırı kalktı; **canlı**, OTA 0.20261016.1948, yedek `pre-11127a3.db`), `050c924` (Android `DisplayRatePlugin` ekran sabitleme + `onLoopActivity`; versionCode 4; **AAB çıkmadı**, Play'de hâlâ versionCode 3).
 - Android debug yapısı `applicationIdSuffix ".dev"` ile Play sürümünün yanına kurulur. Telefonlarda `net.ziroo.tussle.dev` kurulu.
-- Derleme: `JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home"`; adb `~/Library/Android/sdk/platform-tools/adb` (PATH'te yok). Xiaomi seri `cfa7c66`, OnePlus `3B15C400J8C00000`.
+- Derleme: `JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home"`; adb `~/Library/Android/sdk/platform-tools/adb` (PATH'te yok). Seri numaraları `adb devices -l` ile bulunur (model: Xiaomi 25098PN5AC, OnePlus CPH2747).
 
 ## Yapılacaklar
 1. TWA projesi: tercihen `android-twa/` gibi ayrı bir klasör (mevcut `android/` Capacitor kabuğuna dokunma). `com.google.androidbrowserhelper` `LauncherActivity` ile elle ya da Bubblewrap CLI ile. Paket adı deneme için `net.ziroo.tussle.twa`. Başlangıç URL'si `https://tussle.ziroo.net/`, tam ekran, dikey, açılış rengi sayfa rengi, ikon mevcut `icon.svg` türevleri.
@@ -36,7 +36,7 @@ Play sürümüne dokunmadan, yanına kurulan bir **TWA deneme uygulaması** yapm
 - Telefonda saniyelik `dumpsys` döngüsü kurma (cihazı kasıyor; bkz. ders notu).
 
 ## Ek: yavaş çekim top takibi
-Videoyu Xiaomi'den al: `adb -s cfa7c66 pull /sdcard/DCIM/Camera/VID_..._HSR_240.mp4`. Çalıştır: `ffmpeg -v error -i app.mp4 -vf scale=270:480 -f rawvideo -pix_fmt rgb24 - | node track.mjs 270 480` (ffmpeg dönüşü otomatik uygular, `transpose` ekleme).
+Videoyu Xiaomi'den al: `adb -s <xiaomi-seri> pull /sdcard/DCIM/Camera/VID_..._HSR_240.mp4`. Çalıştır: `ffmpeg -v error -i app.mp4 -vf scale=270:480 -f rawvideo -pix_fmt rgb24 - | node track.mjs 270 480` (ffmpeg dönüşü otomatik uygular, `transpose` ekleme).
 
 ```js
 // reads raw rgb24 frames W x H from stdin; per frame: saturated-pixel count, centroid; prints hold-run stats
