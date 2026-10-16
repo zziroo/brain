@@ -37,13 +37,12 @@ Stack önerisi: Python 3.12 + ccxt, pandas, pytest, async (Yusuf'a sorulacak, ce
 - Komutlar: `uv run kbot download|backtest|paper-run|run [--until-next-close|--loop]|status|risk-reset --loop paper|testnet|live|error-clear --loop testnet|live|show-config`.
 - Faz 2 (`trader.py`): her turda borsadan bakiye+ticker ile uzlaştırma, mum başına idempotent işlem (`state/trader_state_<mode>.json`), toz kuralı (min cost altı = flat), market emri + `fetch_order` doğrulaması, kill switch'te düzleştirme ve exit 2, hata kilidi `state/trader_error_<mode>.json` (insan `error-clear` ile açar), canlıda önceden var olan coinler `manage_existing_holdings` olmadan satılmaz. Live üç kapı aynen duruyor.
 - Zamanlama: `deploy/launchd/com.ziroo.kripto-bot.run.plist` saat başı :05'te `kbot run` (idempotent; launchd UTC bilmediği için saatlik). Kurulu değil.
-- **Gerçek borsaya karşı hiç çalıştırılmadı** (anahtar yok). İlk testnet turunda doğrulanacak: `fetch_order`'ın market emrinde hemen "closed" dönmesi, fee alanları, testnet hesabının ön yüklü BTC/ETH'sinin sinyal 0'da satılması.
+- İlk testnet turu 2026-10-16 atıldı: anahtar `.env`'de, `kbot status` ve `kbot run` çalıştı. Hesap ön yüklü (1 BTC, 1 ETH, 10.000 USDT; equity ~94.850 USDT), sinyal 1 → "hold", emir yok; ikinci tur "already" (idempotent). Emir yolu küçük al-sat ile doğrulandı: market emri hemen `closed`, `fetch_order` fee=None dönüyor (create yanıtında var; fallback eklendi). Not: ön yüklü bakiye yüzünden risk yüzdeleri 500 USD planını temsil etmiyor; testnet yalnız davranışı doğrular.
 - Strateji: 1d `trend_filter_cross` (20/50/200, min_hold 5, cooldown 3), kill switch %40. Araştırma raporu: `reports/strategy-research-2026-10-16.md`.
 - Bilinen sınırlar: sinyal mainnet mumundan, fiyat testnet ticker'ından; clientOrderId yalnız açık emirlerde tekil (asıl koruma uzlaştırma); kill switch satışı canlıda bot alışı kaydı yoksa reddedilir ve her saat loglanır.
 
 ## Sıradaki işler
-- [ ] Yusuf: testnet.binance.vision'dan anahtar alıp `.env`'e koyar; sonra `uv run kbot status` ve `uv run kbot run` (ilk gerçek tur, logları birlikte okunur)
-- [ ] İlk turdan sonra launchd kurulumu (`deploy/README.md`), 3-6 ay testnet gözlemi
+- [ ] launchd kurulumu (Yusuf onayıyla) (`deploy/README.md`), 3-6 ay testnet gözlemi
 - [ ] Faz 3: salt okunur gözetim görevi (zamanlanmış rapor: PnL, hata kilidi, kill switch) + web pano
 - [ ] GitHub remote (özel) açılsın mı? (Yusuf)
 - [ ] Canlıya geçiş kararı (Yusuf; ayrı hesap ya da `manage_existing_holdings`)
