@@ -1,7 +1,7 @@
 ---
 type: project
 project: kripto-bot
-date: 2026-10-16
+date: 2026-10-17
 status: active
 tags: [kripto-bot, overview, binance, trading, bot]
 source: ZZ oturumu "kripto-bot: proje başlangıcı" (2026-10-16)
@@ -32,20 +32,21 @@ Stack önerisi: Python 3.12 + ccxt, pandas, pytest, async (Yusuf'a sorulacak, ce
 - API anahtarlarını Yusuf `.env`'e kendisi koyar; `.env.example` repoda, `.env` gitignore'da. Testnet anahtarı: testnet.binance.vision
 - Canlıya geçişi yalnızca Yusuf yapar (bayrak + anahtar).
 
-## Güncel durum (2026-10-16, gece)
-- Yerel repo, 3 commit (`ecf98b8` Faz 1, `45eee48` inceleme düzeltmeleri, `bdb5a89` strateji araştırması). Remote yok. uv + Python 3.12, 86 test, ruff temiz.
-- Paket `src/kripto_bot/`: data, strategy (6 strateji), risk, backtest (+walk-forward), exchange, cli, paper. Komutlar: `uv run kbot download|backtest|paper-run|risk-reset --loop paper|show-config`.
-- Faz 2 ön koşul düzeltmeleri yapıldı: ayrı `state/risk_state_<paper|live>.json`, reset gün alanlarını korur, günlük taban önceki bar eşitliği, backtest gün devri, her fill'de state kaydı, `OrderTooSmall`, `SecretStr`.
-- Strateji araştırması (`reports/strategy-research-2026-10-16.md`): 1h/4h'de hiçbir şey çalışmıyor; 1d trend kuralları (özellikle `trend_filter_cross` 20/50/200, min_hold 5, cooldown 3) uzun vadede B&H'yi getiride yenmiyor ama max DD'yi yarıya indiriyor (2y: ~%25 vs %77-80), 2-4 işlem/yıl, ±%20 parametrede %98+ işaret korunuyor. Örneklem küçük (8 işlem/2y). Varsayılan config buna çekildi, **yalnız paper için**.
-- Kill switch %40 (2026-10-16, Yusuf kararı Claude'a bıraktı): 1d trend stratejisinin olağan düşüşü %25-40, eşik 'strateji bozuldu' seviyesi. Tam döngüde (2019-20 tarzı) yine ateşleyebilir; o zaman insan reset'i gerekir.
-- Düşük/ileriye dönük notlar: toz (dust) satışları `OrderTooSmall` ile döngüyü durdurur (canlı öncesi çözülmeli); `price_hint` yoksa min-cost kontrolü atlanır; 1d'de %3 günlük limit hiç ateşlemez (bar=gün).
+## Güncel durum (2026-10-17 gece, Faz 2 kodlandı)
+- Yerel repo, 5 commit (son: `811f129` Faz 2). Remote yok. uv + Python 3.12, 118 test, ruff temiz.
+- Komutlar: `uv run kbot download|backtest|paper-run|run [--until-next-close|--loop]|status|risk-reset --loop paper|testnet|live|error-clear --loop testnet|live|show-config`.
+- Faz 2 (`trader.py`): her turda borsadan bakiye+ticker ile uzlaştırma, mum başına idempotent işlem (`state/trader_state_<mode>.json`), toz kuralı (min cost altı = flat), market emri + `fetch_order` doğrulaması, kill switch'te düzleştirme ve exit 2, hata kilidi `state/trader_error_<mode>.json` (insan `error-clear` ile açar), canlıda önceden var olan coinler `manage_existing_holdings` olmadan satılmaz. Live üç kapı aynen duruyor.
+- Zamanlama: `deploy/launchd/com.ziroo.kripto-bot.run.plist` saat başı :05'te `kbot run` (idempotent; launchd UTC bilmediği için saatlik). Kurulu değil.
+- **Gerçek borsaya karşı hiç çalıştırılmadı** (anahtar yok). İlk testnet turunda doğrulanacak: `fetch_order`'ın market emrinde hemen "closed" dönmesi, fee alanları, testnet hesabının ön yüklü BTC/ETH'sinin sinyal 0'da satılması.
+- Strateji: 1d `trend_filter_cross` (20/50/200, min_hold 5, cooldown 3), kill switch %40. Araştırma raporu: `reports/strategy-research-2026-10-16.md`.
+- Bilinen sınırlar: sinyal mainnet mumundan, fiyat testnet ticker'ından; clientOrderId yalnız açık emirlerde tekil (asıl koruma uzlaştırma); kill switch satışı canlıda bot alışı kaydı yoksa reddedilir ve her saat loglanır.
 
 ## Sıradaki işler
-- [ ] 3-6 ay paper/testnet dönemi (botun doğru davrandığını doğrular, stratejinin çalıştığını değil)
-- [ ] Faz 2: risk motorunu testnet'te gerçek emirli döngüye bağla; dust satışı ve `price_hint` zorunluluğu burada çözülür; 1d döngüsü için zamanlanmış çalıştırma (launchd/cron) tasarımı
-- [ ] Faz 3: salt okunur gözetim görevi (zamanlanmış), web pano
+- [ ] Yusuf: testnet.binance.vision'dan anahtar alıp `.env`'e koyar; sonra `uv run kbot status` ve `uv run kbot run` (ilk gerçek tur, logları birlikte okunur)
+- [ ] İlk turdan sonra launchd kurulumu (`deploy/README.md`), 3-6 ay testnet gözlemi
+- [ ] Faz 3: salt okunur gözetim görevi (zamanlanmış rapor: PnL, hata kilidi, kill switch) + web pano
 - [ ] GitHub remote (özel) açılsın mı? (Yusuf)
-- [ ] Canlıya geçiş kararı (Yusuf)
+- [ ] Canlıya geçiş kararı (Yusuf; ayrı hesap ya da `manage_existing_holdings`)
 
 ## Kararlar
 - [[10-Projects/kripto-bot/decisions/claude-rolu-kurucu-ve-gozetmen|Claude kurucu ve gözetmen, karar kodda]]
