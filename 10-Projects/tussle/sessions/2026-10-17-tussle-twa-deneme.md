@@ -9,8 +9,8 @@ source: oturum 2026-10-17 gece (mobil-playus) yan oturum, brif [[2026-10-17-twa-
 
 # Oturum: Android TWA deneme sürümü, Slice akıcı
 
-- `android-twa/` (repoda, commit'lenmedi): `com.google.androidbrowserhelper:androidbrowserhelper:2.7.4` `LauncherActivity`, kendi Java kodu yok; paket `net.ziroo.tussle.twa`, açılış `https://tussle.ziroo.net/`, dikey, `immersive`, ikonlar `android/` kopyası, ad "Tussle TWA". AGP 8.13 / Gradle 9.1, APK 5 MB, Mac debug anahtarıyla imzalı.
-- Site: `src/client/public/.well-known/assetlinks.json` (deneme paketi + debug SHA-256) ve `tests/server-assetlinks.test.ts`; Vite `.well-known`'ı `dist/client`'a kopyalıyor (doğrulandı), statik işleyici `application/json` veriyor. **Yayınlanmadı** (Yusuf'un onayı bekliyor; `deploy/deploy.sh` `git archive HEAD` kullandığı için önce commit gerekir).
+- `android-twa/` (`23ba339`): `com.google.androidbrowserhelper:androidbrowserhelper:2.7.4` `LauncherActivity`, kendi Java kodu yok; paket `net.ziroo.tussle.twa`, açılış `https://tussle.ziroo.net/`, dikey, `immersive`, ikonlar `android/` kopyası, ad "Tussle TWA". AGP 8.13 / Gradle 9.1, APK 5 MB, Mac debug anahtarıyla imzalı.
+- Site: `src/client/public/.well-known/assetlinks.json` (deneme paketi + debug SHA-256), `/.well-known/` `no-cache` (`static.ts`), `tests/server-assetlinks.test.ts`; Vite `.well-known`'ı `dist/client`'a kopyalıyor. İnceleme ajanı (sonnet): kritik/yüksek yok. **Commit `23ba339`, Yusuf'un onayıyla yayında** (`release.sh`, yedek `pre-23ba339.db`, healthz ok; HEAD'deki `050c924` web kodu da girdi, web'de etkisiz). Google Asset Links API ve telefon (`pm get-app-links`: verified) doğruladı; TWA adres çubuksuz tam ekran açıldı, üstte çentik hizasında siyah şerit var.
 - Xiaomi'ye (`cfa7c66`) kuruldu; Chrome 155 TWA sağlayıcısı (varsayılan tarayıcı Chrome). Asset links yok → adres çubuklu açılıyor. Chrome'un deposunu paylaştığı için Yusuf'un web hesabı ("ziroo") geldi. OnePlus bağlı değildi.
 - **Sonuç (Yusuf): Slice TWA'da parmak kalkıkken akıcı, Capacitor uygulamasındaki takılma yok.** Geçiş planı: [[2026-10-17-android-twa-gecis-plani]]. Karar Yusuf'ta.
 

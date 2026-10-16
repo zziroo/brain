@@ -14,6 +14,7 @@ Deneme sonucu: **TWA'da Slice parmak kalkıkken akıcı, Capacitor uygulamasınd
 Geçiş ayrı bir iş; aşağıdaki sırayla, her adım ayrı onay.
 
 ## 1. Site tarafı (Capacitor'dan bağımsız, önce yayınlanabilir)
+- **Yayında (`23ba339`, 2026-10-17, yedek `pre-23ba339.db`; 050c924'ün web kodu da girdi, web'de etkisiz):** `/.well-known/assetlinks.json` 200, `application/json`, `no-cache`; Google Digital Asset Links API görüyor, telefonda `pm get-app-links` → verified; TWA adres çubuksuz, tam ekran açıldı.
 - `/.well-known/assetlinks.json` (`src/client/public/.well-known/`): deneme için `net.ziroo.tussle.twa` + Mac debug anahtarı. Geçişte `net.ziroo.tussle` + **Play App Signing anahtarının SHA-256'sı** (Console → Uygulama bütünlüğü) + yükleme anahtarının SHA-256'sı (`android/keystore.properties`'teki anahtar; elle kurulan AAB/APK için). Debug anahtarı girdisi geçişte çıkarılır. Doğrulanmazsa TWA adres çubuklu Custom Tab olur (deneme ekran görüntüsünde böyle).
 - `sw.js` bu yola dokunmuyor (yalnız navigasyon, `/assets`, `/icons`, `/fonts`, manifest yakalanıyor). Değişiklik gerekmedi.
 
@@ -54,4 +55,4 @@ Değişmez: Capacitor + WKWebView (60'ta düzenli). OTA iOS için sürer.
 ## Açık sorular (Yusuf)
 - Geçiş evet/hayır, ne zaman.
 - Hesap taşıma (b) mi (c) mi; (b)'de çakışma kuralı.
-- Tam ekran (`immersive`, durum ve gezinme çubuğu gizli) mi, durum çubuğu görünür mü. Denemede adres çubuğu yüzünden henüz görülmedi; assetlinks yayınlanınca görülür.
+- Tam ekran (`immersive`, durum ve gezinme çubuğu gizli) mi, durum çubuğu görünür mü. Denemede `immersive` çalışıyor ama üstte kamera çentiği hizasında **siyah şerit** kalıyor (Capacitor'da durum çubuğu sayfa renginde, içerik altından geçiyor). Seçenek: `DISPLAY_MODE` varsayılan + `STATUS_BAR_COLOR` sayfa rengi (çubuk görünür, şerit yok) ya da immersive'de çentiğe taşma (`DISPLAY_OVERRIDE` / kitaplık sürümüne bak).
