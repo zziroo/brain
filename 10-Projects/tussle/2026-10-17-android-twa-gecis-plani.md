@@ -13,7 +13,16 @@ source: oturum 2026-10-17 gece (mobil-playus) TWA deneme sürümü; Yusuf'un Xia
 - Gezinme çubuğu: Chrome 155 (Android 16) TWA'nın verdiği rengi yok sayıyor; açık şema zorlanınca beyaz (krem değil). Kitaplık 2.7.4 manifestteki `*_BAR_COLOR` değerlerini Chrome'a hiç geçirmiyor. Kabul edildi; Capacitor'daki gibi sayfanın çubuğun altına uzanması TWA'da yok.
 - Durum çubuğu sayfanın `theme-color`'ını izliyor (Gece'de koyu, CDP ile denendi).
 
-## Öneri ve plan (geçiş öncesi yazıldı)
+- **OnePlus 15'te de akıcı** (Yusuf, 2026-10-17 gece): iki telefonda da TWA'da takılma yok.
+
+## Açık konu: Chrome'un "Chrome'da çalıştırılıyor" bildirimi (Yusuf sevmedi)
+İlk açılışta Chrome üstte "Chrome'da çalıştırılıyor, tussle.ziroo.net oturum bilgileri Chrome'la paylaşılır" kartını gösteriyor (TWA için Chrome'un zorunlu gizlilik bildirimi, bir kez, "Anladım" ile kapanır). Yusuf: "sevmedim, farklı bir çözüme gideriz belki". Şimdilik TWA kalıyor; ileride bakılacak seçenekler:
+- Bildirimin kapatılabildiği bir yol var mı (Chrome / androidbrowserhelper sürüm notları; bugün bilinen bir API yok, teyit et).
+- WebView'e dönüp takılmanın kök sebebini bulmak (ders: [[2026-10-16-android-webview-parmak-kalkinca-takilma]]); bulunursa bildirim de, beyaz gezinme çubuğu da, Chrome'a bağımlılık da kalkar.
+- Başka motor gömmek (GeckoView vb.): uygulama ~50+ MB büyür, bakım yükü (önceden reddedildi, yeniden tartılabilir).
+- Kabul: bildirim yalnız ilk açılışta bir kez.
+
+
 
 Deneme sonucu: **TWA'da Slice parmak kalkıkken akıcı, Capacitor uygulamasındaki takılma yok** (Yusuf, Xiaomi 17 Pro, Chrome 155, 2026-10-17 gece). Öneri: [[2026-10-17-android-twa-onerisi]]. Deneme yapısı repoda `android-twa/` (oturum [[sessions/2026-10-17-tussle-twa-deneme]]).
 
