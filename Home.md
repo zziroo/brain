@@ -30,7 +30,7 @@ Buradan başla. Her şey buradan ya da bir projenin `_overview.md` dosyasından 
 - [[2026-10-05-liste-sayfalari-ziroo-edge-te-ortak-neon-tasarim]]: ziroo.net ana sayfası (kapılar) ve iki liste, ziroo-edge `www/`, `deploy-www.sh`
 - [[sunucu-vps]]: sunucu, DNS, Caddy yolları
 - [[2026-10-16-ops-katmani-kuma-netdata-ziroo-edge]]: makine izleme `ops.ziroo.net` (Uptime Kuma + Telegram, Netdata `/netdata/`), ziroo-edge `ops/`; 23 monitör + Telegram; yedek yaşı/disk/smoke saatlik betikle push ([[2026-10-16-makine-sagligi-kuma-push-gozcuden-cikti]]), gözcüden çıktı
-- [[2026-10-07-ziroo-maskotu-ziro]]: ziroo.net maskotu Ziro (neon sıfır) **askıda**; [[2026-10-15-marka-maskot-ve-karakter-analizi]]: Yusuf'un karakter analizi + 15 maskot adayı, seçim yapılmadı
+- [[2026-10-07-ziroo-maskotu-ziro]]: ziroo.net maskotu, adı artık **Ziroo** ([[2026-10-16-maskot-adi-ziroo]]); kafa ve tema seçimi bekliyor. [[2026-10-15-marka-maskot-ve-karakter-analizi]]: Yusuf'un karakter analizi ve maskot adayları
 
 ## Alanlar
 - [[20-Areas/altyapi/proje-altyapi-standardi|Proje altyapı standardı]]: her uygulama ne sunar (/healthz, konteyner, yedek, admin paneli bölümleri), Kuma'ya nasıl kaydedilir, makine bilgisi nerede durur

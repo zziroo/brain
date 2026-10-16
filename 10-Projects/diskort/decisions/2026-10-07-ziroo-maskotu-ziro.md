@@ -11,6 +11,7 @@ source: oturum 2026-10-07 (ZZ kökü), artifact https://claude.ai/artifact/Mff8V
 
 ## Güncelleme (2026-10-15)
 Yusuf aynı gün Z perçemini "garip duruyor hâlâ" dedi; maskot Yusuf'un karakter analizinden yeniden türetiliyor, 15 aday var, seçim yapılmadı. Ziro (Z'siz "yalnız sıfır" olarak) hâlâ aday. Bkz. [[2026-10-15-marka-maskot-ve-karakter-analizi]].
+- 2026-10-16: Konsepte dönüldü, ad **Ziroo** oldu ([[2026-10-16-maskot-adi-ziroo]]). Z perçemin yerine kafa ve neon dışı tema seçenekleri çizildi, seçim bekliyor.
 
 ## Bağlam
 Yusuf, markaların yaptığı gibi (farklı stillerde çizilen bir karakter) ziroo için de bir maskot ve karakter analizi istedi. Konsept olarak "neon sıfır yaratığı"nı seçti. Karakter sayfası (anatomi, kişilik, dört açı, 8 ifade, 6 stil, ürün kılıkları, ses tonu, kullanım kuralları) artifact olarak yayında, yalnız sahibine açık.
