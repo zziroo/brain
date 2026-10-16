@@ -2,7 +2,7 @@
 type: lesson
 project: tussle
 date: 2026-10-16
-status: unverified
+status: superseded
 tags: [tussle, performans, kare-hizi, android, ders]
 source: oturum 2026-10-16 (mobil-playus) Yusuf'un "Android'de ilk oyun kasar gibi oldu" bildirimi
 ---
@@ -17,6 +17,9 @@ Yusuf Android'de (Xiaomi) ilk oyunun "kasar gibi" olduğunu söyledi ve ekran h�
 - **Güçlü aday:** `highFps` kapalıyken `FrameLimiter` 60'ta sınırlıyor (`src/client/loop-math.ts`). 90 Hz'de 60, 90'ı tam bölmediği için kareler sırayla 11 ms ve 22 ms arayla geliyor. Ortalama 60 fps ama hareket titrek görünür. 120 Hz'de sorun yok, orada her ikinci kare çiziliyor.
 - Telefonun paneli 120 Hz olmasına rağmen ölçüm 90 çıktı. Muhtemelen HyperOS uygulamayı 90 Hz'e indiriyor. Oyun sırasında 120 ile 90 arasında geçiş olursa o da anlık takılma yapabilir.
 - Titreklik ilk oyuna özgü olmaz, her oyunda olur. Yalnız ilk oyunda takılıyorsa daha olası sebep soğuk başlangıç (ilk çizim, ses, font ısınması).
+
+## Sonuç (2026-10-16 gece, doğrulandı)
+adb ile ölçüldü: Xiaomi'nin uyarlanabilir paneli oyun sırasında 60 ↔ 120 Hz gidip geliyor; rAF atlayan 60 sınırı her geçişte 33 ms boşluk bırakıyordu. Sınır kaldırıldı: [[2026-10-16-kare-siniri-kalkti-her-vsyncte-cizim]]. Uygulamaya özgü kalan takılma ayrı: [[2026-10-16-android-webview-parmak-kalkinca-takilma]].
 
 ## Uygula
 - Önce Yusuf 90 Hz anahtarını açıp aynı oyunu oynasın. Daha akıcıysa: ekran hızı 60'ın katı değilse (90, 75, 144) varsayılan olarak ekranın kendi hızında çiz. Oyun mantığı 60 Hz'de kalır, çizim ara değerle yapılır.
