@@ -2,12 +2,14 @@
 type: resource
 project: tussle
 date: 2026-10-17
-status: active
+status: done
 tags: [tussle, android, twa, devir-notu]
 source: oturum 2026-10-16 gece (mobil-playus) kare hızı turu sonu
 ---
 
 # Devir notu: Android TWA deneme sürümü (`.twa`)
+
+**Bitti (2026-10-17):** deneme yapıldı, sonuç akıcı; [[sessions/2026-10-17-tussle-twa-deneme]], plan [[2026-10-17-android-twa-gecis-plani]].
 
 Yeni oturumun brifi. Öneri ve gerekçe: [[2026-10-17-android-twa-onerisi]]. Bulgular: [[2026-10-16-android-webview-parmak-kalkinca-takilma]].
 

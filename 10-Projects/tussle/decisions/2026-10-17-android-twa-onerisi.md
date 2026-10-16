@@ -9,7 +9,7 @@ source: oturum 2026-10-16 gece (mobil-playus) kare hızı turu; Yusuf "TWA denem
 
 # Öneri: Android uygulaması WebView yerine Chrome motorunda (TWA) çalışsın
 
-**Durum: önerildi, karar deneme sürümünden sonra.** Yusuf deneme sürümünü onayladı (2026-10-17'de yapılacak); geçiş kararı telefonda karşılaştırmadan sonra verilecek.
+**Durum: önerildi, deneme olumlu, geçiş kararı Yusuf'ta.** 2026-10-17 gece: TWA deneme sürümünde (`android-twa/`, Xiaomi) Slice parmak kalkıkken akıcı, Capacitor'daki takılma yok (Yusuf). Geçiş planı: [[2026-10-17-android-twa-gecis-plani]].
 
 ## Bağlam
 Android uygulamasında (Capacitor + System WebView) oyun parmak kalkınca takılıyor, aynı sayfa Chrome'da her durumda akıcı. WebView içinde denenen her şey (ekran modu, güç tasarrufu kapatma, oyun modu, ADPF) işe yaramadı: [[2026-10-16-android-webview-parmak-kalkinca-takilma]]. Akıcılık bir numaralı kural.
