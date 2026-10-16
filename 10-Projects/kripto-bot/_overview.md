@@ -32,17 +32,17 @@ Stack önerisi: Python 3.12 + ccxt, pandas, pytest, async (Yusuf'a sorulacak, ce
 - API anahtarlarını Yusuf `.env`'e kendisi koyar; `.env.example` repoda, `.env` gitignore'da. Testnet anahtarı: testnet.binance.vision
 - Canlıya geçişi yalnızca Yusuf yapar (bayrak + anahtar).
 
-## Güncel durum (2026-10-16, akşam)
-- Faz 1 tamam ve commit'li (`ecf98b8`, yerel repo, remote yok). uv + Python 3.12, 58 test geçiyor, ruff temiz.
-- Paket `src/kripto_bot/`: data, strategy (sma_ema_cross, rsi_mean_reversion), risk, backtest (+walk-forward), exchange, cli, paper. Komutlar: `uv run kbot download|backtest|paper-run|risk-reset|show-config`.
-- Backtest (BTC/ETH 1h, 2024-10-16..2026-10-16, `reports/backtest-2026-10-16.md`): stratejiler B&H'yi yenmiyor; SMA'nın artı görünen getirisi Ocak 2025'te kill switch'in ateşleyip nakitte kalmasından geliyor. Kill switch'siz hepsi eksi (-19..-48%). Walk-forward OOS da zayıf. Strateji henüz canlıya uygun değil.
-- İnceleme (opus) + şüpheci (sonnet): kritik/yüksek yok. Not alınan düşük bulgular Faz 2 öncesi yapılacak (aşağıda).
-- paper-run yalnız dry-run; piyasa verisi hep mainnet public, testnet yalnız emir için. Canlı emir üç kapı: `mode: live` + `allow_live_orders: true` + env `KBOT_I_UNDERSTAND_LIVE_TRADING=yes`; hiçbir çağıran `dry_run=False` geçmiyor.
+## Güncel durum (2026-10-16, gece)
+- Yerel repo, 3 commit (`ecf98b8` Faz 1, `45eee48` inceleme düzeltmeleri, `bdb5a89` strateji araştırması). Remote yok. uv + Python 3.12, 86 test, ruff temiz.
+- Paket `src/kripto_bot/`: data, strategy (6 strateji), risk, backtest (+walk-forward), exchange, cli, paper. Komutlar: `uv run kbot download|backtest|paper-run|risk-reset --loop paper|show-config`.
+- Faz 2 ön koşul düzeltmeleri yapıldı: ayrı `state/risk_state_<paper|live>.json`, reset gün alanlarını korur, günlük taban önceki bar eşitliği, backtest gün devri, her fill'de state kaydı, `OrderTooSmall`, `SecretStr`.
+- Strateji araştırması (`reports/strategy-research-2026-10-16.md`): 1h/4h'de hiçbir şey çalışmıyor; 1d trend kuralları (özellikle `trend_filter_cross` 20/50/200, min_hold 5, cooldown 3) uzun vadede B&H'yi getiride yenmiyor ama max DD'yi yarıya indiriyor (2y: ~%25 vs %77-80), 2-4 işlem/yıl, ±%20 parametrede %98+ işaret korunuyor. Örneklem küçük (8 işlem/2y). Varsayılan config buna çekildi, **yalnız paper için**.
+- Açık ürün kararı (Yusuf): %15 kill switch bu stratejilere uymuyor (normal DD %25-60, aylar içinde ateşler ve bot kalıcı durur). Limit yükseltilsin mi, yoksa düşük DD'li ama sık duran bot mu?
+- Düşük/ileriye dönük notlar: toz (dust) satışları `OrderTooSmall` ile döngüyü durdurur (canlı öncesi çözülmeli); `price_hint` yoksa min-cost kontrolü atlanır; 1d'de %3 günlük limit hiç ateşlemez (bar=gün).
 
 ## Sıradaki işler
-- [ ] Faz 2 ön koşul küçük düzeltmeler (inceleme bulguları): paper/canlı için ayrı risk state dosyası (`state/risk_state_paper.json` vs `_live`); `reset_kill_switch` gün alanlarını silmesin; günlük limit gün sınırında bir bar gecikiyor ve ilk barın kaybı sayılmıyor; paper döngüsünde her fill sonrası state kaydet; `amount_to_precision` sonrası qty>0 ve min cost kontrolü; config'de anahtarlar `SecretStr`.
-- [ ] Strateji çalışması: mevcut iki strateji edge vermiyor; daha düşük işlem sıklığı / trend filtresi / 4h zaman dilimi denenmeli, walk-forward ile dürüst raporlanmalı. Canlıya geçiş kararı bundan önce verilmez.
-- [ ] Faz 2: risk motorunu testnet'te gerçek emirli döngüye bağla
+- [ ] Yusuf kararı: kill switch yüzdesi (öneri: 1d trend için %35-50 ya da strateji seçimine göre) ve 3-6 ay paper dönemi
+- [ ] Faz 2: risk motorunu testnet'te gerçek emirli döngüye bağla; dust satışı ve `price_hint` zorunluluğu burada çözülür; 1d döngüsü için zamanlanmış çalıştırma (launchd/cron) tasarımı
 - [ ] Faz 3: salt okunur gözetim görevi (zamanlanmış), web pano
 - [ ] GitHub remote (özel) açılsın mı? (Yusuf)
 - [ ] Canlıya geçiş kararı (Yusuf)
