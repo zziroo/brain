@@ -2,10 +2,12 @@
 type: decision
 project: kripto-bot
 date: 2026-10-16
-status: active
+status: superseded
 tags: [kripto-bot, strateji, backtest, risk, kill-switch]
 source: kripto-bot oturumu "Faz 1 iskelet / Faz 2 düzeltmeler ve strateji" (2026-10-16)
 ---
+
+> **Kısmen yerine geçti (2026-10-16):** zaman dilimi 4h oldu, bkz. [[10-Projects/kripto-bot/decisions/zaman-dilimi-4h-yusuf-tercihi]]. Strateji, parametreler ve kill switch %40 hâlâ geçerli.
 
 # Karar: Varsayılan strateji 1d `trend_filter_cross` (20/50/200, min_hold 5, cooldown 3), kill switch %40; yalnız paper/testnet için
 
