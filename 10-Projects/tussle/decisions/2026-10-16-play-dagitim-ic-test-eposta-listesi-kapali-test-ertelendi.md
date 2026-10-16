@@ -31,7 +31,7 @@ Play Console'da uygulama oluşturuldu, AAB iç teste yüklendi, 11 kurulum göre
 
 ## Sonuçlar / riskler
 - Playus'un onboarding akışı (slaytlar, bildirim izni, yaş kapısı, Google/Apple giriş) mağaza beyanlarını etkilemiyor; yaş kapısı ve "Yaş" veri türü ancak reklam gelirse gündeme gelir, push yok.
-- `privacy@ziroo.net` mağazada görünüyor; kural kurulana kadar oraya gelen posta düşer.
+- `privacy@ziroo.net` mağazada görünüyor. (Düzeltme 2026-10-16: posta düşmüyor, ziroo.net catch-all zaten Gmail'e iletiyor: [[2026-10-16-ziroo-net-posta-catch-all-ayri-kural-yok]].)
 - Play Console ekranlarında URL'ler değişken; kontrol paneli görev listesi üzerinden gidilir.
 
 ## İlgili
