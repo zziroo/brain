@@ -1,6 +1,6 @@
 ---
 type: home
-date: 2026-10-13
+date: 2026-10-16
 ---
 
 # Home: ikinci beyin haritası
@@ -22,6 +22,7 @@ Buradan başla. Her şey buradan ya da bir projenin `_overview.md` dosyasından 
 - [[10-Projects/ziroobank/_overview|Ziroobank]]: arkadaş grubu taksit takibi (eski Google Sheet), tools.ziroo.net/ziroobank
 - [[10-Projects/song-finder/_overview|Song Finder]]: link verilen şarkıya sesi gerçekten benzeyen şarkıları bulan kişisel araç (tools.ziroo.net/song-finder)
 - [[10-Projects/pano/_overview|Pano]]: bütün Claude Code geçmişinin (Mac + Windows) animasyonlu dashboard'u; token, maliyet, oturum oynatıcı, akışlar. `/pano`, claude.ai'de özel Artifact kopyası
+- [[10-Projects/kripto-bot/_overview|Kripto Bot]]: Binance Global'de ~500 USD ile otonom spot trading botu (Python + ccxt önerisi); karar kodda, Claude kurucu ve salt okunur gözetmen; henüz kod yok
 - [[10-Projects/pdf-ceviri/_overview|PDF Çeviri Düzeltici]]: Trados'un bozuk Türkçe DOCX'ini orijinal PDF düzenine yerleştirir, tools.ziroo.net/pdf-ceviri
 
 ## Altyapı
