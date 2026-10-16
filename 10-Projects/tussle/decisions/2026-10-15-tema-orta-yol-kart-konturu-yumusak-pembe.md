@@ -40,3 +40,5 @@ Orta yol (`889735d`):
 ## İlgili
 - Arayüz dilini kısmen değiştirdi: [[2026-10-08-gorsel-kimlik-seker-dukkani-acik-varsayilan]], [[2026-10-12-oyun-sahnesi-sade]]
 - [[2026-10-15-tussle-tema-parti-sonraki-gun-denge-turu]]
+
+> Güncelleme 2026-10-16: ana renk kısmı değişti, pembe yerine ikon mavisi; bkz. [[2026-10-16-ana-renk-ikon-mavisi-pembe-vurgu-takasi]]. Kontur/gölge kısmı geçerli.

@@ -48,5 +48,12 @@ source: 2026-10-13 oturumu "pano: son 1 gün token analizi"; ~/.claude/CLAUDE.md
 - Review ajanları 4–18 çağrı, ≤108k ✓. Koordinatör zirve 253k (300k altı) ✓. Ekran görüntüsü ajan başına 0–6 (biri 13) ↓.
 - Kalan: mobil-playus denge turunda 5 Opus ajanı 100–172 çağrı, zirve 201–303k; 172 çağrılık ajan bölünmemiş (~10 $). Sonraki hedef: ajan brief'inde "tek oyun / ≤80 çağrı" sınırı.
 
+## Ölçüm 3 (15 Ekim 04:00 → 16 Ekim 02:50)
+- 236 $, 381M token, 2.711 çağrı, 22 oturum, 56 ajan; çağrı başı ortalama bağlam 140k (145k'dan). Ağır gün: 4 proje (mobil-playus 102 $, diskort 58 $, ZZ 51 $, ziroo-edge 25 $). Haftalık kota +18 puan (%47), Fable %59.
+- Ajan tarafı hedefte: 56 ajan 58 $ (13 Ekim 105 $). Zirveler ≤200k (biri 247k), en uzun ajan 85 çağrı, Sonnet review/skeptik 3–16 çağrı ✓. Haiku 1 ajan. Ekran görüntüsü ajanlarda 0–9, koordinatörde 0–7 ↓.
+- Para koordinatöre gitti: Fable 170 $ (%72; 13 Ekim 89 $), 920k çıktı token tek başına ~46 $. Zirveler: ziroo-edge ops 399k (185 çağrı, 24 browser_batch koordinatörde), diskort giriş sesi 348k (129 çağrı); 295k, 252k, 251k, 232k. 300k devir eşiği iki oturumda aşıldı.
+- Yeni israf: eski oturumu yeniden açmak. 7 Ekim'in marka/maskot oturumu 641k bağlamla açıldı, 15 çağrı = 7,3 $; 13 Ekim'in Tussle oturumu 375k ile 19 çağrı = 9,4 $. İkisi de sıfırdan brief'le 1–2 $'a yapılırdı.
+- Sonraki hedef: (1) 300k'da devir uygulanacak (ziroo-edge ve diskort oturumları); (2) tarayıcı işi koordinatörde değil ajanda; (3) 150k üstü eski oturumu devam ettirme, yeni oturum + kısa brief; (4) mekanik oturumları (deploy, küçük düzeltme, rapor) Opus'ta açma seçeneği Yusuf'ta duruyor.
+
 ## İlgili
 - [[2026-10-10-ajan-boyutu-ve-yalin-baglam]], [[orkestrasyon]], [[inceleme-kapisi]], [[araclar-ve-raporlar]], [[_index]]
