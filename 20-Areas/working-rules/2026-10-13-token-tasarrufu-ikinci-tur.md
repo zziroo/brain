@@ -55,5 +55,13 @@ source: 2026-10-13 oturumu "pano: son 1 gün token analizi"; ~/.claude/CLAUDE.md
 - Yeni israf: eski oturumu yeniden açmak. 7 Ekim'in marka/maskot oturumu 641k bağlamla açıldı, 15 çağrı = 7,3 $; 13 Ekim'in Tussle oturumu 375k ile 19 çağrı = 9,4 $. İkisi de sıfırdan brief'le 1–2 $'a yapılırdı.
 - Sonraki hedef: (1) 300k'da devir uygulanacak (ziroo-edge ve diskort oturumları); (2) tarayıcı işi koordinatörde değil ajanda; (3) 150k üstü eski oturumu devam ettirme, yeni oturum + kısa brief; (4) mekanik oturumları (deploy, küçük düzeltme, rapor) Opus'ta açma seçeneği Yusuf'ta duruyor.
 
+## Ölçüm 4 (16 Ekim 04:00 → 17 Ekim 01:10)
+- 229 $, 520M token, 2.963 çağrı, 21 oturum, 48 ajan; çağrı başı ortalama bağlam 176k (140k'dan geri yükseldi). Haftalık kota +13 puan (%60), **Fable +15 puan (%74)**; sıfırlanmaya 2 gün var, bu tempoda Fable kotası cumartesi gecesi dolar.
+- Model karışımı değişti: ana oturumların yarısı Opus'ta açıldı (ana Fable 91 $, ana Opus 86 $, ajanlar 50 $). Opus toplam 133 $ (%58), Fable 92 $.
+- Ajanlar yine hedefte: 48 ajan 50 $, zirve ≤204k, en uzun 82 çağrı, 12 Sonnet + 1 Haiku.
+- Günün sorunu tek oturum: "tussle: admin paneli" (Fable) 343 çağrı, zirve 628k, 5,3 saat, **135 ekran görüntüsü, 88 browser_batch**, 62 $ (günün %27'si). Koordinatör tarayıcı işini kendi yaptı, 300k devir uygulanmadı. Diğer şişkinler: Opus Tussle oturumu 286 çağrı / 407k / 20 $; ziroo-edge ana sayfa 171 çağrı / 329k / 17 görüntü; marka maskotu 343k.
+- Eski oturum yeniden açma tekrarlandı: 7 Ekim'in karakter tasarımı oturumu ikinci kez, 721k bağlamla 32 çağrı = 10,7 $ (dün 7,3 $).
+- Ders: ekran görüntüsü kuralı yalnız ajanlar için yazıldı, koordinatörler kapsam dışı kaldı; günün görüntülerinin çoğu (135 + 39 + 31 + 17) koordinatörlerde. Sonraki hedef: aynı kuralı koordinatöre de uygulamak (tarayıcı doğrulamasını ajana vermek ya da read_page/get_page_text ile yapmak), 300k'da devir, eski oturumu açmamak.
+
 ## İlgili
 - [[2026-10-10-ajan-boyutu-ve-yalin-baglam]], [[orkestrasyon]], [[inceleme-kapisi]], [[araclar-ve-raporlar]], [[_index]]

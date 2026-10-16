@@ -39,6 +39,12 @@ Her ajan soğuk başlar (iş yapmadan ~45-50k token bağlam) ve kodu yeniden oku
 - Kod öncesi keşif `haiku`/Explore ile; Haiku kapsamı: keşif, log/test özeti, yayın öncesi metin okuma.
 - Karar ve ölçüm: [[2026-10-13-token-tasarrufu-ikinci-tur]].
 
+## Üçüncü tur (2026-10-17)
+- Tarayıcı kuralı koordinatörü de kapsar: ekran görüntüsü yalnız düzen sorusunda, scale 0.5, sonda; birkaç adımdan uzun tarayıcı turu ajana devredilir (16 Ekim: tek koordinatör oturumu 135 görüntü, 628k bağlam, 62 $).
+- Koordinatör ~2 saat ya da ~100 çağrıda `get_usage` ile bağlama bakar; 300k devir eşiği uygulanır.
+- 150k üstü eski oturum yeni iş için açılmaz; yeni oturum + kısa brief (15–16 Ekim'de yeniden açılan 7 Ekim oturumları 7–11 $).
+- Ölçüm: [[2026-10-13-token-tasarrufu-ikinci-tur]] (Ölçüm 3 ve 4).
+
 ## Model seçimi
 - **Güncel (CLAUDE.md, 2026-10-10'da okundu):** koordinatör Fable'da çalışır; alt ajanlar onu asla devralmaz, `model` her zaman açıkça verilir. Varsayılan `opus` + `effort: "medium"` (çapraz kesen/tasarım ağırlıklı iş ve derin incelemede `high`). Aşağıdaki maddeler eski kuraldır.
 - Opus (inherit): çapraz kesen veya tasarım ağırlıklı iş, derin inceleme.
