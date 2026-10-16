@@ -1,7 +1,7 @@
 ---
 type: project
 project: kripto-bot
-date: 2026-10-17
+date: 2026-10-16
 status: active
 tags: [kripto-bot, overview, binance, trading, bot]
 source: ZZ oturumu "kripto-bot: proje başlangıcı" (2026-10-16)
@@ -32,7 +32,7 @@ Stack önerisi: Python 3.12 + ccxt, pandas, pytest, async (Yusuf'a sorulacak, ce
 - API anahtarlarını Yusuf `.env`'e kendisi koyar; `.env.example` repoda, `.env` gitignore'da. Testnet anahtarı: testnet.binance.vision
 - Canlıya geçişi yalnızca Yusuf yapar (bayrak + anahtar).
 
-## Güncel durum (2026-10-17 gece, Faz 2 kodlandı)
+## Güncel durum (2026-10-16 akşam, Faz 1-2-3 kodlandı)
 - Yerel repo, 11 commit (son: `945fe43` Faz 3). Remote yok. uv + Python 3.12, 144 test, ruff temiz.
 - Komutlar: `uv run kbot download|backtest|paper-run|run [--until-next-close|--loop]|status|report [--json]|dashboard|risk-reset --loop paper|testnet|live|error-clear --loop testnet|live|show-config`.
 - Faz 3 (2026-10-16): `trader` her dolan emri `state/trades_<mode>.jsonl`'e, her turu `state/equity_<mode>.jsonl`'e yazar. `kbot report` Türkçe günlük özet (FIFO gerçekleşen PnL, açık PnL, bayatlık, kill switch, hata kilidi), `kbot dashboard` tek dosya HTML pano (`reports/dashboard.html`, gitignore; her `kbot run` sonunda yenilenir; `.claude/launch.json` "dashboard" ile tarayıcıda önizleme). Claude zamanlanmış görevi `kripto-bot-gunluk-rapor` her gün 09:00'da raporu okuyup özetler (salt okunur; uygulama açıkken çalışır).
@@ -51,6 +51,15 @@ Stack önerisi: Python 3.12 + ccxt, pandas, pytest, async (Yusuf'a sorulacak, ce
 ## Kararlar
 - [[10-Projects/kripto-bot/decisions/claude-rolu-kurucu-ve-gozetmen|Claude kurucu ve gözetmen, karar kodda]]
 - [[10-Projects/kripto-bot/decisions/binance-global-tr-degil|Binance Global, TR değil]]
+- [[10-Projects/kripto-bot/decisions/strateji-1d-trend-filtresi-ve-kill-switch-40|Varsayılan 1d trend_filter_cross, kill switch %40]]
+- [[10-Projects/kripto-bot/decisions/faz2-emir-dongusu-guvenlik-tasarimi|Emir döngüsü: borsadan uzlaştırma, idempotent mum, hata kilidi]]
+- [[10-Projects/kripto-bot/decisions/bot-macte-calisir-vps-binance-engeli|Bot Mac'te, VPS kapalı (Binance engeli)]]
+
+## Dersler
+- [[10-Projects/kripto-bot/lessons/start-session-otomatik-tur-reddi|start_session otomatik tur reddi]]
+- [[10-Projects/kripto-bot/lessons/vps-binance-baglanti-sifirlama|VPS'ten Binance bağlantı sıfırlama, ccxt spot-only, data-api]]
+- [[10-Projects/kripto-bot/lessons/binance-testnet-gozlemleri|Binance testnet gözlemleri]]
 
 ## Oturumlar
 - [[10-Projects/kripto-bot/sessions/2026-10-16-proje-baslangici|2026-10-16 proje başlangıcı]]
+- [[10-Projects/kripto-bot/sessions/2026-10-16-faz1-faz2-faz3-ve-testnet|2026-10-16 Faz 1-2-3, testnet, günlük rapor]]
