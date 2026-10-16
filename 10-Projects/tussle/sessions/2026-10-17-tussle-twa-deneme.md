@@ -16,7 +16,7 @@ source: oturum 2026-10-17 gece (mobil-playus) yan oturum, brif [[2026-10-17-twa-
 
 ## Geçiş (aynı gece, Yusuf "geçiş yapabilirsin")
 - `ce1f519` yayında: TWA Play paketi (versionCode 5), assetlinks Play anahtarları, web `isTwa` + CloseWatcher geri tuşu, STORE.md / CAPACITOR.md. İnceleme ajanı (sonnet) iki turda kritik/yüksek bulmadı; önerdiği "ekran reddederse tarayıcı geri" eklendi. 1.741 test.
-- Play Console (Claude in Chrome): iç test taslağına AAB yüklendi; sürüm notunu doldurma otomatik izin denetimine takıldı, notu ve yayını Yusuf yapacak.
+- Play Console (Claude in Chrome): iç test taslağına AAB yüklendi; sürüm notunu doldurma ilk denemede otomatik izin denetimine takıldı, Yusuf "sen tamamla, son onayı ben veririm" deyince dolduruldu; "Kaydet ve yayınla"ya Yusuf bastı. Telefon ~20 dk sonra güncelledi; Play sürümü adres çubuksuz açılıyor, `isTwa` doğru.
 - Vault'ta diğer oturumun eklediği notlar okundu: titreşim TWA'da `TOUCH` kalır (bedel kabul), Chrome yoksa WebView yedeği (manifeste eklendi).
 
 ## Dersler
