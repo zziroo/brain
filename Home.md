@@ -32,6 +32,7 @@ Buradan başla. Her şey buradan ya da bir projenin `_overview.md` dosyasından 
 - [[10-Projects/ziroo-edge/_overview|ziroo-edge]]: sunucunun giriş kapısı (Caddy), joker DNS ve tools/games alt alan adları, ziroo.net ana sayfası ve listeler, makine izleme `ops.ziroo.net` (Uptime Kuma + Netdata)
 - [[vps-makinesi]]: paylaşılan VPS: makine, `ssh vps` erişimi, bakım, DNS, projelerin yerleşimi, izleme (Diskort'a özgü kısım: [[sunucu-vps]])
 - [[proje-altyapi-standardi|Proje altyapı standardı]]: her uygulama ne sunar (/healthz, konteyner, yedek, admin paneli bölümleri), Kuma'ya nasıl kaydedilir, makine bilgisi nerede durur
+- **Felaket kurtarma (yedek + kasa):** [[2026-10-17-felaket-kurtarma-yedegi]]
 - `20-Areas/altyapi/` kararları: [[sunucu-lightnode-istanbula-tasindi]] · [[ssh-yalnizca-anahtar-ile]] · [[2026-10-15-sunucu-bakim-penceresi-07-30]] · [[2026-10-16-ziroo-net-posta-catch-all-ayri-kural-yok]]
 
 ## Alanlar

@@ -13,7 +13,7 @@ source: memory diskurt-project.md
 Yusuf APK build'lerinin yavaşlığından şikayet edip "masaüstü ve mobili bu şekilde güncelliyor olalım" dedi.
 
 ## Karar
-- expo-updates kendi sunucumuza bakar: `/updates/expo/android` (Expo Updates protokolü v1, 204 = güncelleme yok), kod imzalı manifestler (özel anahtar `OneDrive\Yedekler\Diskort\ota-imza\` + GitHub secret `OTA_SIGNING_KEY`; açık sertifika `apps/mobile/certs/certificate.pem` repoda).
+- expo-updates kendi sunucumuza bakar: `/updates/expo/android` (Expo Updates protokolü v1, 204 = güncelleme yok), kod imzalı manifestler (özel anahtar `Kasa:diskort/ota-imza/` + GitHub secret `OTA_SIGNING_KEY`; açık sertifika `apps/mobile/certs/certificate.pem` repoda).
 - `runtimeVersion` = `@expo/fingerprint` özeti (`apps/mobile/scripts/runtime-version.mjs`); yerel build 'gelistirme'.
 - Release CI, parmak izi değişmediyse önceki release'in APK'larını yeniden kullanır; manifest `*-ota-android.json` varsa sunucu `required` = release sürümü.
 - İstemci: açılışta 4 sn'lik kapı (kontrol -> indir -> yeniden yükle); arka planda indir, seste değilken öne gelince uygula.

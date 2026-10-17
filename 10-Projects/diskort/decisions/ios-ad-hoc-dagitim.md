@@ -19,7 +19,7 @@ iOS'ta ücretsiz sideload eşdeğeri yok; Ad Hoc, inceleme ve TestFlight'sız da
 Ücretsiz sideload; App Store / TestFlight (kaynakta açıkça konuşulmamış, Ad Hoc'un avantajı olarak "no review/TestFlight" deniyor).
 
 ## Sonuçlar / riskler
-Herkese açık IPA, UDID listesini gömüyor (düşük risk, bilinen). Açık öneri: "IPA yalnız kendi sunucumuzdan". Gizli dosyalar `OneDrive\Yedekler\Diskort\ios-imza\` içinde (içerik ASLA yazılmaz).
+Herkese açık IPA, UDID listesini gömüyor (düşük risk, bilinen). Açık öneri: "IPA yalnız kendi sunucumuzdan". Gizli dosyalar `Kasa:diskort/ios-imza/` içinde (içerik ASLA yazılmaz).
 
 ## İlgili
 - [[mobil-ota-guncelleme]], [[_overview]]

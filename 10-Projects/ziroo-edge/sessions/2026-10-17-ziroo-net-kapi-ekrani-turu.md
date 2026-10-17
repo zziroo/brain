@@ -18,6 +18,11 @@ source: oturum "ziroo-edge: ana sayfa kapı ekranı turu" (2026-10-17, ZZ kök o
 - Review ajanı bir orta bulgu buldu ve düzeltildi: fare Ziroo'nun üstüne geçince kapı kapanıp Ziroo eve dönüyordu.
 - "GİR" için üç önizleme gösterildi; kullanıcı ışıklı eşiği seçti ve uygulandı (`d16f709`, review temiz).
 
+- İkinci geri bildirim: en altta Ziroo başlığın üstünde kırpık duruyordu, fareyle daha eşzamanlı olmalı, kapılar sonradan açılıyordu, Ziroo kapılar arasında gezsin. `c95f913`:
+  - Sayfa altta yeniden yüklenince `scrollY` bir an 0 okunuyor ama kutular kaydırılmış geliyordu. Kapı yerleri belgenin tepesine hesaplanıyor, Ziroo havada konuyordu. Ölçüm artık belge kökünün konumundan.
+  - Masaüstünde kapı aralarında yürüme, kapılar fareyle hemen açılıyor. Review'daki iki küçük bulgu düzeltildi.
+  - Kullanıcı onayıyla yayınlandı.
+
 ## Alınan kararlar
 - [[2026-10-16-ziroo-net-kaydirmali-2d-maskot]] (kapılar finali bölümüne eklendi)
 

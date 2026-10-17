@@ -55,6 +55,7 @@ Proje overview'ları: [[10-Projects/tussle/_overview|Tussle]] · [[10-Projects/k
 - **Sağlık ucu standardı:** her projede `/healthz` (düz "ok", uygulamanın kendi sürecinden). Kuma monitörleri buna bakar. Standart: [[proje-altyapi-standardi]].
 - **Makine izleme (2026-10-16):** https://ops.ziroo.net → Uptime Kuma (konteyner `kuma`, 127.0.0.1:3001, veri `/opt/ziroo-ops/kuma`, kendi girişi, Telegram bildirimi); https://ops.ziroo.net/netdata/ → Netdata (konteyner `netdata`, host ağı 127.0.0.1:19999, basic auth kullanıcı `ziroo`, şifre dosyası `/opt/ziroo-ops/netdata.pass`). Kaynak ziroo-edge `ops/` (`/opt/ziroo-edge/ops`), host bloğu `/opt/ziroo-sites/hosts/ops.caddy`; güncelleme yerelden `bash ops/deploy.sh`, kontrol `bash /opt/ziroo-edge/test/smoke.sh live ops`.
 - **Saatlik kontrol:** `ziroo-ops-check.timer` → `ops/check.sh` (yedek yaşı, disk, smoke → Kuma push; jetonlar `/opt/ziroo-ops/check.env`). [[2026-10-16-ops-katmani-kuma-netdata-ziroo-edge]], [[2026-10-16-makine-sagligi-kuma-push-gozcuden-cikti]]
+- **Gece makine yedeği (2026-10-17):** `ziroo-yedek.timer` 04:40 → `/var/backups/ziroo/<tarih>/` (7 gün, tüm proje verisi + sırlar + kurulum, açık anahtarla şifreli). Mac'e ve iCloud'a çekilir; yeni makineye kurtarma: [[2026-10-17-felaket-kurtarma-yedegi]].
 
 ## İlgili
 - [[sunucu-vps]] (Diskort'a özgü), [[secret-isleme-kurali]], [[caddy-redir-path-acik-yonlendirme]], [[2026-10-16-ziroo-net-posta-catch-all-ayri-kural-yok]]

@@ -20,7 +20,7 @@ Karar ve gerekçe: [[2026-10-05-windowstan-maca-gecis]]. Mac'te ilk oturumda bu 
 - [x] Git için Xcode araçları yoksa önce `xcode-select --install`, sonra `bash kur.sh git`.
 - [ ] (2026-10-07: Node v24 ve Claude masaüstü uygulaması var; Obsidian `/Applications`'ta yok) Node.js LTS, Claude Code CLI ve Obsidian'ı kur. Obsidian'da `~/ZZ/brain` klasörünü kasa olarak aç.
 - [x] `~/.ssh/diskort_vps` anahtarını taşı ve `chmod 600` ile izinlerini daralt.
-- [ ] (2026-10-07: OneDrive kurulu değil) OneDrive'ı kur; `Yedekler/Diskort` klasörü oradan gelir.
+- [x] ~~OneDrive'ı kur~~ Gerek kalmadı (2026-10-17): imzalar ve sırlar şifreli kasada, yedekler iCloud'da ([[2026-10-17-felaket-kurtarma-yedegi]]).
 - [x] (2026-10-07: paket yok; yalnızca `~/.claude/mac-tasima/` altında kur.sh'ın iki CRLF kayıt dosyası kaldı, `.env` yok) Kurulum bitince `mac-tasima` paketini sil. İçinde `.env` dosyaları var.
 
 ## Mac'te ilk Claude oturumu (Claude)

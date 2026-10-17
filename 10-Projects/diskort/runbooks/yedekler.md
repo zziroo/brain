@@ -15,5 +15,7 @@ source: memory diskort-server.md
 - **Windows (2026-10-07'ye kadar):** Görev Zamanlayıcı "Diskort veritabanı yedeği", günlük 12:00, `scripts/pull-db-backups.ps1` -> `%OneDrive%\Yedekler\Diskort`; Windows artık Silksong'a ayrıldığı için durdu, OneDrive'daki eski kopya duruyor.
 - Etkinlik ikonları (`/data/activity-icons`) yedekte DEĞİL; istemciler isteğe bağlı yeniden yükler.
 
+- **Bütün makine (2026-10-17):** diğer projeler, sırlar ve kurulum ziroo-edge `ziroo-yedek.timer` ile şifreli yedeklenir; iCloud kopyası ve kurtarma: [[2026-10-17-felaket-kurtarma-yedegi]].
+
 ## İlgili
 - [[sunucu-vps]], [[secret-isleme-kurali]]

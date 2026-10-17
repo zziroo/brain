@@ -28,19 +28,18 @@ _Son güncelleme: 2026-10-17; canlıdan doğrula. Eski ayrıntılı hâl: [[10-P
 - **Kapalı test:** Google Grubu "Tussle Test" ile; katılım mesajı gitti, 12 testçi toplanıyor ([[2026-10-16-kapali-test-google-grubuyla-acildi-mail-toplanmaz]]).
 - **iOS:** build 3 App Store Connect'te, build 2 Beta Review'dan geçti; herkese açık TestFlight bağlantısı henüz paylaşılmadı. Yusuf'un iOS cihazı yok. OTA artık yalnız iOS için, sunucudaki paket 0.20261016.1948 ([[2026-10-15-ota-web-paketi-self-hosted-capgo]]).
 - **Oyun:** 46 oyun, hepsi günlük havuzda; varyant ve oda parametresi yok. Oda ve parti sınırı 32. Kare sınırı yok, her vsync'te çizim ([[2026-10-16-kare-siniri-kalkti-her-vsyncte-cizim]]).
-- **Telefonda tam görülmeyenler:** tanıtım akışı ([[2026-10-16-animasyonlu-tanitim-akisi-herkes-bir-kez-gorur]]), admin paneli `/admin` ([[2026-10-16-admin-paneli-tek-sayfa-admin-token-kapaliysa-404]]), 2026-10-16 telefon turu ([[2026-10-16-telefon-turu-izleme-sesi-rozet-claw-cups-antrenman]]), 32 kişilik ara sahne.
+- **Telefon turu tamam (2026-10-17, Yusuf):** 2026-10-16 turu ve tanıtım akışı denendi, çoğunda sorun yok; gariplik hissedilirse ayrı oturum açılacak. Titreşim sistem "Dokunsal geri bildirim" açıkken çalışıyor.
 - **İzleme ve yedek:** istemci hata toplama + uygulama içi geri bildirim (`scripts/feedback-cli.mjs`); gece yedeği 04:20, `pre-*.db` 30 günde budanır, Mac aynası 14 gün tutar ([[2026-10-15-sunucuda-gece-yedegi-systemd]], [[2026-10-16-yedek-tutma-sureleri-gizlilik-sozune-baglandi]]). Makine izleme ziroo-edge'de ([[2026-10-16-ops-katmani-kuma-netdata-ziroo-edge|ops]]).
 - **Mağaza:** `/privacy` (EN/TR) yayında, Play girişi EN + TR. Google/Apple girişi kodda hazır, env yok (`docs/AUTH-SETUP.md`); native giriş Play imzasından sonra.
 
 ## Sıradaki işler
 1. **Kapalı test (TWA):** sürüm onaylanınca arkadaşlara gittiğini kontrol et; 12 kişi katılınca 14 gün say, sonra üretim başvurusu. Chrome'un ilk açılış bildirimi Yusuf'un hoşuna gitmedi, başka çözüm sonra (seçenekler plan notunda). Gezinme çubuğu beyaz.
 2. **iOS:** build 3'ü dış gruba ekle, herkese açık bağlantıyı aç (Yusuf).
-3. **Titreşim:** Yusuf sistem "Dokunsal geri bildirim" ayarını açıp denesin ([[2026-10-17-titresim-sistem-dokunsal-geri-bildirim-kapaliysa-yok]]).
-4. **Telefon doğrulaması:** tanıtım akışı (Play'den temiz kurulum, geri tuşu, gece teması), 32 kişilik ara sahne, izleme sesi ve göz rozeti (iki kişi), Cups üçlü döndürme, Antrenman arama çubuğu, gece temasında yeni mavi, Slice gece; admin paneline telefondan bak.
-5. **Mağaza sonrası:** Play tablet ekranları (istenirse), kısa açıklama uyarısı kalktı mı, AI öğe beyanı (Yusuf). Sonra Antrenman kalkar + profil, ekranlar `store/make-graphics.mjs` ile yeniden, native Google+Apple giriş, sohbette bildirme/engelleme (Apple 1.2).
-6. **Diskort gece gözcüsüne Tussle bölümü** (jsonl + açık geri bildirim).
-7. **Tanıtım:** sezon/kapışma slaytındaki düz yüzler yerine kimlikli figürler.
-8. **Sonra:** arkadaş geri bildirimiyle yayın partileri, sonsuz oyunların rampaları; dolaylı etkileşim modu ve arena prototipi (öneri sumo); tema toptan düzenleme; izlemenin ikinci tur adayları. Küçük açıklar ve kit işleri arşivde.
+3. **Sıradaki büyük iş: profil (kapsam 2026-10-17, Yusuf).** Ayrı profil ekranı (ana sayfa düğmesi açar, ayarlar dişliden). İçerik: genel istatistik, oyun başına rekor ızgarası (Antrenman'ın yerini alır), sezon geçmişi, rozetler. Odadaki oyuncu kartında başkaları da görür. Avatar: isteğe bağlı fotoğraf, varsayılan baş harf. Oda başına farklı profil yok (Claude kararı: tek küresel profil, karışıklık ve iş yükü). Mockup `src/client/mockups/profil.html` + `PROFIL-SPEC.md` onaylandı (2026-10-17): madalya altın/gümüş/bronz, başkasının rekorunda "senin en iyin" yan yana, fotoğraf için bildir düğmesi + admin'den kaldırma, rozetler mockup'taki gibi bu turda. Teknik: fotoğraf SQLite'ta BLOB (`user_photos`, yedek ve hesap silme kendiliğinden kapsar), rastgele anahtarlı `/api/photos/<key>` URL'si; istatistikler mevcut tablolardan `GET /api/users/:id/profile`; oda silinince o odanın geçmişi profilden düşer (kabul). Sözleşme tipleri `src/shared/protocol.ts` Profile bloğunda. Kod üç ajanla: fotoğraf (uçtan uca) + profil verisi paralel, sonra profil ekranı.
+4. **Mağaza sonrası:** Play tablet ekranları (istenirse), kısa açıklama uyarısı kalktı mı. AI öğe beyanı varsayılan "etiketleme"de kalıyor (oyun görselleri kodla çizili, ekranlar gerçek oyun görüntüsü; yalnız metinler Claude yazımı). Profil bitince ekranlar `store/make-graphics.mjs` ile yeniden, native Google+Apple giriş, sohbette bildirme/engelleme (Apple 1.2).
+5. **Diskort gece gözcüsüne Tussle bölümü** (jsonl + açık geri bildirim).
+6. **Tanıtım:** sezon/kapışma slaytındaki düz yüzler yerine kimlikli figürler.
+7. **Sonra:** arkadaş geri bildirimiyle yayın partileri, sonsuz oyunların rampaları; dolaylı etkileşim modu ve arena prototipi (öneri sumo); tema toptan düzenleme; izlemenin ikinci tur adayları. Küçük açıklar ve kit işleri arşivde.
 
 ## Önemli kararlar
 - [[2026-10-17-android-twa-onerisi]]: Android uygulaması WebView yerine Chrome motorunda (TWA), geçiş yapıldı · [[2026-10-17-oyun-titresimi-media-arayuz-touch]]
