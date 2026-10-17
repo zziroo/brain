@@ -2,12 +2,15 @@
 type: decision
 project: diskort
 date: 2026-10-07
-status: on-hold
+status: superseded
 tags: [ziroo-edge, marka, maskot, tasarim]
 source: oturum 2026-10-07 (ZZ kökü), artifact https://claude.ai/artifact/Mff8VuNXitNoPDRMKeG459
 ---
 
 # ziroo.net'in maskotu Ziro: neon sıfır, perçemi favicon'daki Z
+
+## Güncelleme (2026-10-16): yerini aldı
+Yeni tasarım ikili elemeyle seçildi (süzülen gövde, halka gözler, sade kafa, top eller): [[2026-10-16-ziroo-tasarimi-suzulen-halka-goz]]. Bu nottaki Z perçem, kollu-ayaklı gövde ve "Soytarı + Arkadaş" artık geçerli değil.
 
 ## Güncelleme (2026-10-15)
 Yusuf aynı gün Z perçemini "garip duruyor hâlâ" dedi; maskot Yusuf'un karakter analizinden yeniden türetiliyor, 15 aday var, seçim yapılmadı. Ziro (Z'siz "yalnız sıfır" olarak) hâlâ aday. Bkz. [[2026-10-15-marka-maskot-ve-karakter-analizi]].

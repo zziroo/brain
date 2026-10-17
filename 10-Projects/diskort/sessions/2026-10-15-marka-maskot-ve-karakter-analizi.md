@@ -34,6 +34,7 @@ source: oturum "marka: maskot ve karakter analizi" (ZZ kökü, 2026-10-07 → 20
 - Oturum scratchpad'indeki artifact kaynakları bir hafta içinde silinmiş. Güncelleme için kaynak `Artifact read` ile yayındaki sürümden geri alındı. Uzun süren bir artifact işinde kaynağın tek kopyası yayındaki sürümdür.
 
 ## Açık kalanlar
+- **2026-10-16 güncellemesi:** seçim yapıldı ([[2026-10-16-ziroo-tasarimi-suzulen-halka-goz]]); kafa sade, tema koyu çizgi. Aşağıdaki ilk madde kapandı. Oturum: [[2026-10-16-ziroo-maskot-eleme-3d-ve-teknikler]].
 - Maskot seçimi yapılmadı. Öne çıkan yol Ziroo (Z'siz); bekleyen iki seçim: **kafa** (öneri filiz) ve **ana tema** (öneri ay ışığı + minimal çizgi). Diğer yollar: Hancı/Kapıcı'yı geliştirmek ya da iki adayı birleştirmek.
 - Seçimden sonra Ziroo'nun karakter sayfası baştan yapılacak: ad, kafa, tema, dört açı, ifadeler, stiller, kılıklar ve son analize göre kişilik (analiz "Soytarı + Arkadaş" yerine "Arkadaş + Usta-Editör" önerdi).
 - Seçilen adayın tam karakter sayfası ve ziroo.net'e eklenmesi ziroo-edge oturumunda yapılacak.
