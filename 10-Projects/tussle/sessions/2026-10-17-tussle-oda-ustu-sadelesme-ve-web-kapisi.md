@@ -15,14 +15,21 @@ source: Claude Code oturumu 2026-10-17 akşam "tussle: oda başlığı ve kapak 
 3. Üç paralel opus ajanı aynı çalışma kopyasında (kapı; oda üstü + Oda sayfası; ana kart). i18n dosyaları ortaktı, çakışma olmadı. Sonra salt-okunur inceleme ajanı (opus) + ekran görüntüsü ajanı (sonnet, tohum veriyle puppeteer, `store/make-graphics.mjs` yaklaşımı). Bir orta bulgu: bildirimden açılan pencere kapıya düşer; sonnet ajanı doğrulayıp düzeltti ([[2026-10-17-bildirimden-acilan-pencere-referrer-ve-sessionstorage-tasimaz]]).
 4. Yeni ekranlar Yusuf'a gönderildi (eski hâl = kendi ekranları), "yayınlayabilirsin full sorun değil". İki commit (`7c69e83` arayüz, `95033ba` kapı; i18n hunks `git apply --cached` ile ayrıldı), `deploy/release.sh`, canlı doğrulandı.
 
+## İkinci yarı (gece)
+5. Yusuf referans uygulamanın ekranlarını gönderdi: Google/Apple önde, QR davet, oda kurma sihirbazı; slaytlar düz. Üç ajan: giriş formu, oda sihirbazı + QR (sunucu `POST rooms` saat alır), mevcut slayt/parti kayıtları. İnceleme: QR dom testi kök tsconfig'i kırıyordu (taşındı), davet bayrağı, odak; davet metni referansla aynıydı, değiştirildi. `95868bd`.
+6. Slayt tasarım ajanı başlatıldı; Yusuf "yükleniyor başlangıcıyla yapamaz mıydık" + "ikondan yükleme animasyonu" deyince durduruldu (henüz dosya yazmamıştı). Yeni ajan: `#boot` ikon (derlemede gömülü), tek akış, slaytlar silindi. İnceleme: sonsuz yükleniyor bekçisi, `#app` inert, transitionend hedefi, girişlide bekleme yok. `69a4dc0`, yayın + iOS OTA `0.20261017.1804`.
+7. Sürüm ayrışması sorusu (oda sahibi güncelledi, diğerleri değil): Android/web her açılışta sunucudan; iOS OTA sonraki soğuk açılışta; sıradaki iş overview'da.
+
 ## Kararlar
+- [[2026-10-17-acilis-tek-akis-ikon-yukleme-giris-formu-oda-sihirbazi-qr]]
 - [[2026-10-17-uygulama-disi-web-kapisi-ve-oda-ustu-sadelesti]]: kapı kuralları, Oda sayfası, sezon satırı, birimlerin yeri, reddedilenler.
 
 ## Durum
-- Yayın `95033ba`, 1.855 test, yedek `pre-95033ba.db`. Konteyner sağlıklı, canlı paket kapıyı içeriyor.
+- Yayın `69a4dc0` (öncekiler `95033ba`, `95868bd`), 1.853 test, yedekler `pre-95033ba.db`, `pre-69a4dc0.db`. Konteyner sağlıklı, canlı kabukta `#boot` var, OTA zip 200.
 - Vault ve hafıza: tarayıcı testleri artık `?web=1` ya da localhost ile.
 
 ## Doğrulanmayanlar
+- Açılış, giriş ekranı, oda sihirbazı, QR davet telefonda görülmedi; gerçek Google/Apple düğmeleriyle devir, girişli kullanıcıda solma, 12 sn bekçisi gerçek zamanlamada denenmedi.
 - Yeni oda üstü ve kapı sayfası telefonda görülmedi (yalnız puppeteer görüntüleri).
 - TWA'da uygulama kapalıyken bildirime dokununca açılış canlıda denenmedi (standalone kuralı kodda, testli).
 - Oda üstündeki "daha hak var", yazı-tura ve "bitti" durumları ajan tarafından tarayıcıda görülmedi (aynı `stripInfo` dalları).
