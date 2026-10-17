@@ -31,7 +31,7 @@ Kod `/Users/ziroo/ZZ/zProjects/ziroo-edge`, GitHub `zziroo/ziroo-edge` (özel, d
 
 ## Güncel durum
 _Son güncelleme: 2026-10-17; canlıdan doğrula._
-- **ziroo.net ana sayfası:** kaydırmalı 2D Ziroo hikâyesi yayında (son yayın `fc9f4c4`, 2026-10-17); altında kapılar. KAPIŞ şeridi ana sayfadan kalktı. Safari ve iOS'ta hiç denenmedi. Kapı ekranı turu (`9628017`: hızlı hover düzeltmesi, erken düşüş, büyük Ziroo, dokunma tepkileri) ve "Gir" yerine eşikte ok (`d16f709`) yayında. Kapı aralarında yürüyen Ziroo ve altta yeniden yüklemede havada konma düzeltmesi (`c95f913`) yayında. Havada (alt bilgiye kadar) süzülen Ziroo ve sayfa sonu ortalama (`6ea6779`, `fc9f4c4`) yayında. [[2026-10-16-ziroo-net-kaydirmali-2d-maskot]], [[2026-10-17-ziroo-net-kaydirmali-maskot]], [[2026-10-17-ziroo-net-kapi-ekrani-turu]].
+- **ziroo.net ana sayfası:** kaydırmalı 2D Ziroo hikâyesi ve kapı ekranı yayında (son yayın `dd47929`, 2026-10-17). Kapı ekranı: masaüstünde Ziroo fareyle havada süzülür, kapıya gelince yanına iner, kapılar fareyle hemen açılır, "Gir" yerine eşikte ok; telefonda ortadaki kapıya gider. Safari/iOS denenmedi. [[2026-10-16-ziroo-net-kaydirmali-2d-maskot]], [[2026-10-17-ziroo-net-kapi-ekrani-turu]].
 - **Listeler:** tools ve games listeleri ortak neon tasarımla yayında ([[2026-10-05-liste-sayfalari-ziroo-edge-te-ortak-neon-tasarim]]).
 - **Giriş kapısı:** Diskort'un gateway ve LiveKit bloklarında `stream_close_delay 5m` var, reload sesli kanalı koparmasın diye. Kanal doluyken reload hâlâ denenmedi ([[caddy-reload-websocketleri-keser]]).
 - **Ops (2026-10-16):** Kuma'da 23 monitör, bildirim Telegram'dan. Netdata `/netdata/` altında. Saatlik `ops/check.sh` yedek yaşı, disk ve smoke sonucunu Kuma'ya yollar ([[2026-10-16-ops-katmani-kuma-netdata-ziroo-edge]], [[2026-10-16-makine-sagligi-kuma-push-gozcuden-cikti]]).
@@ -39,8 +39,8 @@ _Son güncelleme: 2026-10-17; canlıdan doğrula._
 - **Sunucu bakımı:** 2026-10-16 07:30 için planlanan toplu güncelleme ve reboot yapıldı mı, doğrulanmadı ([[2026-10-15-sunucu-bakim-penceresi-07-30]]).
 
 ## Sıradaki işler
-1. **Maskot doğrulama:** Yusuf telefondan ve Safari'den bakar: çizgi animasyonu, düşüş, kapı açma, takılma, fps. Fareyle ve klavyeyle kapıya geçiş denenmedi. Yerel önizleme `.claude/onizleme/` (launch.json `home-onizleme`).
-2. **Açık ayarlar:** halka göz (`home.js` içindeki `EYE`), kapı açma gecikmesi 0,7–1 sn.
+1. **Maskot doğrulama:** Yusuf telefondan (Android'de titreme düzeltmesi `dd47929`) ve Safari/iOS'tan bakar: süzülme, yürüyüş, kapı açma, fps. Klavyeyle kapıya geçiş denenmedi. Yerel önizleme `.claude/onizleme/` (launch.json `home-onizleme`).
+2. **Açık ayar:** halka göz (`home.js` içindeki `EYE`).
 3. **Eski kopyaları temizle** (Faz D, `docs/gecis-tools-games-alt-alan-adlari.md`).
 4. **Sunucu bakımı:** yapılmadıysa Yusuf "başla" deyince ([[2026-10-15-sunucu-bakim-penceresi-07-30]]); sonra çıkış trafiğini 1000 GB planına göre izle.
 
