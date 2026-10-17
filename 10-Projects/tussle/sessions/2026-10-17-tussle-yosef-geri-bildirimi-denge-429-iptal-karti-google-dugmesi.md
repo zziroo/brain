@@ -31,3 +31,15 @@ Yayınlandı 2026-10-17 gece (`release.sh`, rev `e829939`, healthz ok): `fe8c460
 ## İnceleme
 - Review ajanı (opus): orta+ bulgu yok; düşük: yeniden çizimde `is-leaving` sınıfı kaybı ve destroy'da kalan zamanlayıcı (düzeltildi), denge live kapışmasında eksik log beklemesi ~4 dk (kabul), yol şablonunda yalnız küçük harfli kısa parçalar günlüğe geçebilir (teorik).
 - Google düğmesi review'ı (sonnet): GIS düğüm değiştirirse ölçek kaybı (düzeltildi), ResizeObserver kopmuyor (düzeltildi).
+
+## Devam (2026-10-18 gece): Google kod akışı (`82705b5`, yayınlandı, OTA 0.20261017.2301; sır bekliyor)
+- Yusuf bindirmeli düğmeyi "statik, tuş gibi değil" buldu; Apple'ın düğmesi bizim olduğu için basılma hissi vardı. Karar: Google'da da kendi düğmemiz + OAuth kod akışı (GIS `initCodeClient`, popup). Sunucu `GOOGLE_CLIENT_SECRET` ile kodu ID token'a çevirir, aynı `verifyToken` yolundan geçer. Sır yokken eski bindirme kalır, `providers.google.codeFlow` bayrağı seçer.
+- **Yusuf'un yapacağı:** Google Cloud Console → Credentials → web OAuth istemcisi → Client secret → `/opt/tussle/.env`'e `GOOGLE_CLIENT_SECRET=…` → `docker compose up -d --force-recreate` (docs/AUTH-SETUP.md §3.1). Sonra telefonda dene: onay ekranı her girişte çıkıyor mu (GIS kod istemcisi `prompt=consent` gönderiyor; can sıkarsa `select_account`/`login_hint` denenecek), TWA'da popup açılıyor mu.
+- Review (opus): kritik/yüksek yok; düşükler düzeltildi: odak yedeği geç gelen kodu düşürüyordu, iki düğme ortak istemciyi çakıştırıyordu, yanlış sır sessizdi (artık dakikada bir günlük satırı). Tarayıcıda yalnız hata yolu görüldü (önizleme popup'ı engelliyor); başarılı giriş yalnız testlerle doğrulandı.
+
+## Devam 2 (2026-10-18 gece): token akışı, tek dokunuş (`1c82008`, `ded6d74`; yayınlandı, OTA 0.20261017.2320)
+- Kod akışı canlıda çalıştı ama Google her girişte "ziroo.net hesabınızda tekrar oturum açıyorsunuz" ara ekranı gösterdi (kod akışı `prompt=consent`, değiştirilemez). Yusuf: "Apple gibi tek dokunuş olsun" + düğme yazısı soluk.
+- `1c82008`: Google hapı beyaz yazı, gri kontur yok (Google'ın #e3e3e3 koyu tema önerisinden sapma, Yusuf'un isteği).
+- `ded6d74`: GIS **token akışı** (`initTokenClient`, `prompt: ''`): önceden izin vermiş kullanıcıda ekran yok. Sunucu `verifyGoogleAccessToken`: tokeninfo (aud ∈ web/iOS istemci, sub, expires_in > 0, openid+email), userinfo'dan ad (sub eşleşmeli), e-posta yalnız doğrulanmışsa; 429/5xx/bozuk gövde → 502. Kod akışı, `GOOGLE_CLIENT_SECRET`, `codeFlow`, bindirmeli `renderButton` yolu ve `auth-providers.css` kaldırıldı. Sunucu `.env`'deki `GOOGLE_CLIENT_SECRET` satırı artık okunmuyor; silinebilir, Google Console'da sır Disable edilebilir (18 Eki'de üretilen yeni sır).
+- Review (opus): kritik/orta yok; düşük (429 → 401 yerine 502) düzeltildi. Doğrulanmadı: çok Google hesaplı cihazda hesap seçici, TWA'da popup; telefonda denenecek.
+- Ders: kendi düğmeyle Google girişi için doğru yol baştan token akışıydı (sır gerekmez, ara ekran yok); kod akışı bir ara adım oldu.
