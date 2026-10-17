@@ -26,7 +26,8 @@ Yusuf bir referans uygulamanın ekranlarını gönderdi (QR davet, grup kurma si
 - Uygulama içi QR tarayıcı: telefon kamerası yeter, sonra.
 
 ## Sonuçlar ve notlar
-- Yayın `69a4dc0`; iOS OTA paketi `0.20261017.1804` yayınlandı (`deploy/ota.sh`), eski iOS istemciler bir sonraki soğuk açılışta alır.
+- Telefonda ilk deneme: Android TWA'nın kendi açılış perdesi (aynı ikon, ortada) sayfa boyanana kadar duruyor, ikon kurulumu perdenin altında bitiyordu. `33f971d`: süre ilk boyanan kareden sayılır, ikon perdedeki gibi ortada başlayıp giriş ekranının başına kayar (360 ms), girişli kullanıcıda ortada solar. Simgeye uzun basınca çıkan "Site Settings" TWA kütüphanesinin kısayolu, normal.
+- Yayın `33f971d` (önceki `69a4dc0`); iOS OTA paketi `0.20261017.1820` yayınlandı (`deploy/ota.sh`), eski iOS istemciler bir sonraki soğuk açılışta alır.
 - Doğrulanmayan: telefonda hiçbiri görülmedi; gerçek Google/Apple düğmeleriyle devir; girişli kullanıcıda ana sayfaya solma; 12 sn bekçisi gerçek zamanlamada.
 - Sürüm ayrışması tartışması: Android/web her açılışta sunucudan alır; iOS OTA sonraki soğuk açılışta geçer, eski istemci yeni oyunu tanımaz. Sıradaki iş: bilinmeyen oyun için "yeniden başlat" kartı + OTA'yı `release.sh`'a bağlamak; asıl özellik oyunların sunucudan gelen bağımsız modül olması.
 - Oturum: [[2026-10-17-tussle-oda-ustu-sadelesme-ve-web-kapisi]] (aynı oturumun ikinci yarısı). Bkz. [[2026-10-17-uygulama-disi-web-kapisi-ve-oda-ustu-sadelesti]].
