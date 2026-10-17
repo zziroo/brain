@@ -30,6 +30,7 @@ Global kuralların damıtması. Orijinal dosya değiştirilmedi; geçerli olan h
 - [[hafiza-ve-vault-duzeni]]: bilgi nerede durur, tek kaynak kuralı, bakım ritmi
 - [[klasor-proje-eslemesi]]: kod klasörü → vault projesi tablosu (hook ve /kaydet okur)
 - [[2026-10-17-basla-yerine-hook-ve-bitir-komutu]]: `/basla` yerine SessionStart hook'u, `/kaydet` + `/bitir`
+- [[2026-10-17-oturum-komutlar-vault-duzeni-ve-yedek]]: oturum özeti; vault taşıma, felaket kurtarma yedeği ve kasa dersleri
 
 ## Diskort'a özgü
 - [[git-push-autonomy]]: doğrulanmış değişiklikte main'e commit + push serbest
