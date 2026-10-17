@@ -9,6 +9,8 @@ source: Windows ZZ kök oturumu 2026-10-07 (Mac'teki Claude'un yazdığı 4 madd
 
 # Karar: Windows makinesi yalnız Silksong modu (LoRA eğitimi) için kalıyor; geri kalan her şey Mac'te
 
+> **Güncelleme (2026-10-17, Yusuf):** Windows artık Claude için eski makine sayılır; yalnızca çok özel işler (LLM/LoRA eğitimi, Silksong modu) orada yapılır. Ana makine Mac. Windows'a özgü ortam notları [[90-Archive/windows-donemi/_index|arşive]] taşındı.
+
 ## Bağlam
 Geri kalan çalışma Mac'e geçti ([[2026-10-05-windowstan-maca-gecis]]). Mac'teki Claude, Windows'ta yapılacak son temizliği dört maddelik bir listeyle Yusuf'a verdi. Yusuf listeyi Windows'taki oturuma iletti. Maddeler: Işık Bekçisi'nin son hâli, repolardaki commit'lenmemiş ya da push'lanmamış işler, konuşma kayıtlarının zip'i, Silksong dışındaki oturumların arşivlenmesi.
 

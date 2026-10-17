@@ -44,6 +44,9 @@ Maskot Ziroo bugün yeniden tasarlandı ([[2026-10-16-maskot-adi-ziroo]]). Seçi
     - Kapılar kutulu kartlar yerine ışıklı ortak bir zeminde üç kemerli kapıdan oluşan bir koridor. Ziroo kapı görevlisi: fareyle üstüne gelinen kapıya zıplıyor ve kapıyı açıyor, telefonda ekranın ortasındaki kapıya gidiyor.
     - KAPIŞ "Öne çıkan" şeridi ana sayfadan kalktı; kullanıcı serbest bıraktı.
     - Ortam: zemin ışığı nefes alıyor, kapı ışığında toz süzülüyor.
+    - 2026-10-17 kapı ekranı turu (`9628017`): fare hedefi 90 ms bekleyince değişiyor, havadayken yeni hedefe yay yerine süzülerek düşüyor (önceden her hedefte biraz daha yukarı çıkıyordu). Düşüş eşiği öne alındı (`REL_FLOOR` 1.3), düşüş, sekme ve kapı açma kısaldı. Ziroo kapıda daha büyük (`Z_H` 0.7).
+    - Ziroo'ya dokunma: yalnız gövde dolgusu (`#zFill`) tıklanır. Kapı zemininde sırayla gerçek zıplama ve başka bir kapıyı açıp gösterme; başka her yerde iç grup `.z-tap` üstünde tek seferlik CSS tepkisi (zıplama, dönme, sallanma, basılma). Her yerde yapıldı, çünkü CSS tepkisi kaydırmaya bağlı uçuş yolunu bozmuyor. Fare kapıdan Ziroo'nun üstüne geçince kapıdan çıkmış sayılmaz.
+    - "Gir" düğmesi kalktı (`d16f709`): kapı aralanınca (fare, odak, Ziroo açınca) eşikteki ışıkta bir ok belirir. Kullanıcı üç önizlemeden "ışıklı eşik"i seçti; reddedilenler: Ziroo eliyle gösterir (konu ikonu ile), yalnız yuvarlak ok düğmesi. JS'siz ya da kurulum patlarsa düğme geri gelir (`.dr-go`).
   - **Yerel önizleme:** sunucu ve test sayfaları depoda `.claude/onizleme/` klasöründe (commit'lenmiyor); geçici klasör yeniden başlatmada silinmişti. Gizli önizleme panelinde görüntü alanı 0×0 olduğu için önce ekran boyutu sabitlenmeli. `/h.html` kareleri elle sürüyor.
 
 ## Neden
@@ -59,6 +62,5 @@ Maskot Ziroo bugün yeniden tasarlandı ([[2026-10-16-maskot-adi-ziroo]]). Seçi
 
 ## Açık kalanlar
 - Halka göz ayarı inceltilebilir; ayarlar `home.js` içindeki `EYE` nesnesinde.
-- Fareyle kapıya gelinince Ziroo'nun kapıyı açması 0,7–1 saniye sürüyor (önce zıplayıp konuyor).
 - Çizgi animasyonu Safari ve Firefox'ta denenmedi.
 - Safari ve iOS'ta denenmedi.
