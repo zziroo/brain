@@ -20,9 +20,4 @@ source: oturum 2026-10-17 gece (mobil-playus) yan oturum, brif [[2026-10-17-twa-
 - Vault'ta diğer oturumun eklediği notlar okundu: titreşim TWA'da `TOUCH` kalır (bedel kabul), Chrome yoksa WebView yedeği (manifeste eklendi).
 
 ## Dersler
-- Elle TWA kurarken `LauncherActivity` `ManageDataLauncherActivity`'nin manifestte tanımlı olmasını bekliyor; yoksa açılışta `IllegalArgumentException: Component class ... does not exist` ile çöküyor (2.7.4). Bubblewrap şablonundaki gibi `manageSpaceActivity` + etkinlik + `MANAGE_SPACE_URL` ekle.
-- Xiaomi'de `adb exec-out screencap -p` "Multiple displays" uyarısını PNG'nin başına yazıyor, dosya bozuk çıkıyor: `dumpsys SurfaceFlinger --display-id` ile kimliği al, `screencap -d <id> -p`.
-- Kilitli telefonda `am start` "ok" der ama etkinlik öne gelmez; önce `dumpsys window | grep isKeyguardShowing`.
-- androidbrowserhelper 2.7.4 `LauncherActivity` manifestteki çubuk renklerini Chrome'a geçirmiyor; telefon karanlık moddaysa Chrome koyu şema seçip gezinme çubuğunu siyah çiziyor. `TwaLauncher` alt sınıfıyla `setColorScheme(LIGHT)` verilince beyaz; `setNavigationBarColor` Chrome 155 / Android 16'da yok sayılıyor.
-- TWA'da sayfaya Chrome DevTools ile ulaşılır: `adb forward tcp:9333 localabstract:chrome_devtools_remote`, `curl localhost:9333/json`, sonra CDP `Runtime.evaluate` (Node 22+ yerleşik WebSocket). Referrer `android-app://<paket>/`, `CloseWatcher` var ve Android geri tuşunu alıyor.
-- Play App Signing SHA-256'sı Console'a girmeden alınabilir: Play'den kurulu uygulamanın `base.apk`'sını `adb pull`, `apksigner verify --print-certs`.
+Ayrı not: [[2026-10-17-twa-elle-kurulum-tuzaklari]] (manifest, çubuk renkleri, CloseWatcher, adb/CDP yöntemleri).
