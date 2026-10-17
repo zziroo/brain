@@ -31,6 +31,20 @@ Maskot Ziroo bugün yeniden tasarlandı ([[2026-10-16-maskot-adi-ziroo]]). Seçi
   - Ziroo durunca keskin yeniden çiziliyor (büyükken bulanık görünüyordu).
   - Başlık fontu **Unbounded** ExtraBold oldu. Kendi sunucumuzdan 10 KB'lık alt küme (Türkçe harfler, OFL) olarak sunuluyor. Kullanıcı seçti; Fredoka ve Syne seçenekleri seçilmedi.
   - Harfler **çizilerek** geliyor: önce dış çizgi çiziliyor, sonra renk doluyor. Kullanıcı seçti; yaylı zıplama, dalga ve 3D çevrilme seçenekleri seçilmedi.
+- **2026-10-17 turu (yayında, `76d2f09`):**
+  - **Geçişleri Ziroo yapıyor.** Sola uçarken eski başlığın harflerine çarpıp savuruyor, kenardan mesafeli sekip dönüyor ve yeni başlığı arkasından yazıyor; konunca harflerde sönen bir dalga oluyor.
+    - Ziroo artık kaydırmaya bağlı sabit bir yolda uçuyor; kaydırma ise kritik sönümlü bir yayla yumuşatılıyor. Bu sayede harfler tam Ziroo geçerken tepki veriyor ve iki başlık hiçbir anda üst üste binmiyor.
+    - Kullanıcı önceki harf kaçışını sevmişti ama titreme yapıyordu; bu çözüm etkileşimi koruyup titremeyi kaldırdı.
+  - **Okuma molası:** her başlık tamamlanınca 0,4 ekranlık kaydırma boyunca sahne duruyor. Kullanıcı yazıları okumak için geri kaydırıyordu.
+  - **Son sahne:** başlık "HADİ BAŞLA" kaldı.
+    - "İyi eğlenceler" düşünüldü; Unbounded'da fazla uzun kalıyor, site de yalnız oyun değil.
+    - Ziroo iki kelimenin arasından, harflerin arkasından bakıyor. Sol eli İ'nin noktası oluyor, sağ eli B'yi tutup ara ara el sallıyor.
+  - **Kapılar finali:**
+    - Ziroo son sahneden zamana bağlı, yerçekimli bir düşüşle kapılara iniyor. Kaydırmaya bağlı süzülme arkada kalıyordu; kullanıcı da "düşme" ile "süzülme" arasında kararsızdı.
+    - Kapılar kutulu kartlar yerine ışıklı ortak bir zeminde üç kemerli kapıdan oluşan bir koridor. Ziroo kapı görevlisi: fareyle üstüne gelinen kapıya zıplıyor ve kapıyı açıyor, telefonda ekranın ortasındaki kapıya gidiyor.
+    - KAPIŞ "Öne çıkan" şeridi ana sayfadan kalktı; kullanıcı serbest bıraktı.
+    - Ortam: zemin ışığı nefes alıyor, kapı ışığında toz süzülüyor.
+  - **Yerel önizleme:** sunucu ve test sayfaları depoda `.claude/onizleme/` klasöründe (commit'lenmiyor); geçici klasör yeniden başlatmada silinmişti. Gizli önizleme panelinde görüntü alanı 0×0 olduğu için önce ekran boyutu sabitlenmeli. `/h.html` kareleri elle sürüyor.
 
 ## Neden
 - Ziroo düz, harften türemiş bir karakter; SVG çizgisi 3D'den daha keskin ve daha hafif.
@@ -45,7 +59,6 @@ Maskot Ziroo bugün yeniden tasarlandı ([[2026-10-16-maskot-adi-ziroo]]). Seçi
 
 ## Açık kalanlar
 - Halka göz ayarı inceltilebilir; ayarlar `home.js` içindeki `EYE` nesnesinde.
-- Ziroo her başlığın son harfini büyük ölçüde örtüyor (harfler artık kaçmıyor).
+- Fareyle kapıya gelinince Ziroo'nun kapıyı açması 0,7–1 saniye sürüyor (önce zıplayıp konuyor).
 - Çizgi animasyonu Safari ve Firefox'ta denenmedi.
-- Telefonda balon Ziroo'nun eline biniyor, alt kısım boş kalıyor.
 - Safari ve iOS'ta denenmedi.
