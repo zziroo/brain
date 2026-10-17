@@ -25,6 +25,7 @@ source: oturum "ziroo-edge: ana sayfa kapı ekranı turu" (2026-10-17, ZZ kök o
 
 - Üçüncü geri bildirim: Ziroo yer değiştirmiyordu, yürüyüş takılıyordu, dönme tepkisi yapaydı, sayfa sonu ortalı değildi, fareyle havada gezme istendi (karma seçildi). `6ea6779`, review'daki iki küçük bulgu düzeltildi. Kullanıcı onayıyla yayınlandı.
 - Süzülme alanı alt bilgiye kadar açıldı (`fc9f4c4`), yayınlandı.
+- Telefonda alt kapılarda yanıp sönme bildirildi. Önizlemede tam yeniden üretilemedi. Olası neden: ortadaki kapı seçiminin eşik payı yoktu, iOS sayfa sonu esnemesinde Ziroo iki kapı arasında gidip geliyordu. Seçime kırpma, eşik payı ve 0,18 sn bekleme eklendi (`27b7168`). Gerçek telefonda doğrulanmadı.
 
 ## Alınan kararlar
 - [[2026-10-16-ziroo-net-kaydirmali-2d-maskot]] (kapılar finali bölümüne eklendi)
