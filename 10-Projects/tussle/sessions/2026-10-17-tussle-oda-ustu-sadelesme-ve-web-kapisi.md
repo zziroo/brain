@@ -20,18 +20,19 @@ source: Claude Code oturumu 2026-10-17 akşam "tussle: oda başlığı ve kapak 
 6. Slayt tasarım ajanı başlatıldı; Yusuf "yükleniyor başlangıcıyla yapamaz mıydık" + "ikondan yükleme animasyonu" deyince durduruldu (henüz dosya yazmamıştı). Yeni ajan: `#boot` ikon (derlemede gömülü), tek akış, slaytlar silindi. İnceleme: sonsuz yükleniyor bekçisi, `#app` inert, transitionend hedefi, girişlide bekleme yok. `69a4dc0`, yayın + iOS OTA `0.20261017.1804`.
 7. Telefonda açılış animasyonu görünmedi: TWA perdesi sayfa boyanana kadar örtüyor. `33f971d`: süre ilk kareden, ikon ortadan başa kayar; sonnet incelemesi (bekçi metni, "ya da" girişi, yedek zamanlayıcı) elle düzeltildi; yayın + OTA `0.20261017.1820`.
 8. Yine görünmedi: perde ilk kareden sonra da kalıyor. `d0d4556`: hareket hazır olunca oynar (`brand-open`), zamanlama yok; yayın + OTA `0.20261017.1830`. Yusuf TWA kabuğunu "site gibi" buldu; değerlendirme: native/Capacitor hayır (akıcılık), TWA'da web izleri turu → overview sıradaki işler.
-9. Sürüm ayrışması sorusu (oda sahibi güncelledi, diğerleri değil): Android/web her açılışta sunucudan; iOS OTA sonraki soğuk açılışta; sıradaki iş overview'da.
+9. Üçüncü deneme de görünmedi. Geçici teşhis: hareket 257 ms'de başlamış, perde altında. `load` + 350 ms → 450 ms'de başladı, Yusuf gördü. Teşhis kaldırıldı, yayın `88516f6`, OTA `0.20261017.1854`. Ders: [[2026-10-17-uygulama-kabugu-acilis-perdesi-load-olayina-kadar-sayfayi-orter]].
+10. Sürüm ayrışması sorusu (oda sahibi güncelledi, diğerleri değil): Android/web her açılışta sunucudan; iOS OTA sonraki soğuk açılışta; sıradaki iş overview'da.
 
 ## Kararlar
 - [[2026-10-17-acilis-tek-akis-ikon-yukleme-giris-formu-oda-sihirbazi-qr]]
 - [[2026-10-17-uygulama-disi-web-kapisi-ve-oda-ustu-sadelesti]]: kapı kuralları, Oda sayfası, sezon satırı, birimlerin yeri, reddedilenler.
 
 ## Durum
-- Yayın `d0d4556` (öncekiler `95033ba`, `95868bd`, `69a4dc0`, `33f971d`), 1.853 test, yedekler `pre-95033ba.db`, `pre-69a4dc0.db`. Konteyner sağlıklı, canlı kabukta `#boot` var, OTA zip 200.
+- Yayın `88516f6` (öncekiler `95033ba`, `95868bd`, `69a4dc0`, `33f971d`, `d0d4556`, `2841057`), 1.853 test, yedekler `pre-95033ba.db`, `pre-69a4dc0.db`. Konteyner sağlıklı, canlı kabukta `#boot` var, OTA zip 200.
 - Vault ve hafıza: tarayıcı testleri artık `?web=1` ya da localhost ile.
 
 ## Doğrulanmayanlar
-- Açılış, giriş ekranı, oda sihirbazı, QR davet telefonda görülmedi; gerçek Google/Apple düğmeleriyle devir, girişli kullanıcıda solma, 12 sn bekçisi gerçek zamanlamada denenmedi.
+- Açılış hareketi Android'de görüldü; giriş ekranı Android'de görüldü (Google düğmesi gerçek); oda sihirbazı, QR davet, iOS tarafı görülmedi; gerçek Google/Apple düğmeleriyle devir, girişli kullanıcıda solma, 12 sn bekçisi gerçek zamanlamada denenmedi.
 - Yeni oda üstü ve kapı sayfası telefonda görülmedi (yalnız puppeteer görüntüleri).
 - TWA'da uygulama kapalıyken bildirime dokununca açılış canlıda denenmedi (standalone kuralı kodda, testli).
 - Oda üstündeki "daha hak var", yazı-tura ve "bitti" durumları ajan tarafından tarayıcıda görülmedi (aynı `stripInfo` dalları).
