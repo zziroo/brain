@@ -63,5 +63,12 @@ source: 2026-10-13 oturumu "pano: son 1 gün token analizi"; ~/.claude/CLAUDE.md
 - Eski oturum yeniden açma tekrarlandı: 7 Ekim'in karakter tasarımı oturumu ikinci kez, 721k bağlamla 32 çağrı = 10,7 $ (dün 7,3 $).
 - Ders: ekran görüntüsü kuralı yalnız ajanlar için yazıldı, koordinatörler kapsam dışı kaldı; günün görüntülerinin çoğu (135 + 39 + 31 + 17) koordinatörlerde. Sonraki hedef: aynı kuralı koordinatöre de uygulamak (tarayıcı doğrulamasını ajana vermek ya da read_page/get_page_text ile yapmak), 300k'da devir, eski oturumu açmamak.
 
+## Ölçüm 5 (17 Ekim 04:00 → 18 Ekim 01:30)
+- 249 $, 620M token, 3.975 çağrı, 24 oturum, 81 ajan; çağrı başı ortalama bağlam 156k. Haftanın en yoğun günü (çağrı sayısı %34 arttı), maliyet %9 arttı. Haftalık kota +15 puan (%75), **Fable +13 puan (%87)**, sıfırlanmaya 26 saat.
+- Koordinatör düzeldi: en pahalı oturum 30 $ (önceki gün 62 $), görüntü en çok 26 (135 idi), ana Fable 65 $ (92 → 65). 300k aşan koordinatör yine 4 tane (430k, 366k, 345k, 313k).
+- Ajanlar bozuldu: 81 ajan 91 $ (50 → 91). 11 ajan 200k tavanını ya da 100 çağrıyı aştı (en büyük 153 çağrı / 262k / 6,7 $). Ekran görüntüsü ajanlarda 84, koordinatörlerde 102. Sonnet ajanlarından biri 68 çağrı / 224k (review sınırı ≤30 / ≤120k).
+- Eski oturum açma devam etti, bu kez arşivlemek için: üç 367–400k oturum 11–14 çağrıyla açılıp kapatıldı, ~11 $. Arşivleme için oturumu açmak gereksiz; `archive_session` dışarıdan çağrılır.
+- Sonuç: koordinatör kuralı ilk gün tuttu, ajan disiplini yoğun günde gevşedi. Sonraki hedef: ajan brief'inde ≤80 çağrı sınırının yazılı olması, Sonnet review ≤30 çağrı, arşivlemeyi oturum açmadan yapmak.
+
 ## İlgili
 - [[2026-10-10-ajan-boyutu-ve-yalin-baglam]], [[orkestrasyon]], [[inceleme-kapisi]], [[araclar-ve-raporlar]], [[_index]]
