@@ -22,12 +22,13 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 - i18n: TR/EN (`src/client/i18n`, `docs/I18N.md`); sunucu hata kodları; akış satırları yapısal.
 
 ## Güncel durum
-_Son güncelleme: 2026-10-17 akşam; canlıdan doğrula. Eski ayrıntılı hâl: [[10-Projects/tussle/sessions/2026-10-17-tussle-guncel-durum-arsivi|arşiv]]._
-- **Yayında:** https://tussle.ziroo.net, son yayın `ae39cc5` (2026-10-17 akşam; yedekler `pre-2731aeb.db` …), 1.844 test, DB sürümü 20. Konteyner `tussle` (127.0.0.1:8087, `/opt/tussle`, veri `/opt/tussle/data`, sırlar `/opt/tussle/.env`), Caddy `hosts/tussle.caddy`. Yayın `bash deploy/release.sh`; `.env` değişince `compose up -d` ([[2026-10-17-env-degisikligi-compose-restart-okumaz]]). Makine: [[vps-makinesi]].
+_Son güncelleme: 2026-10-17 gece; canlıdan doğrula. Eski ayrıntılı hâl: [[10-Projects/tussle/sessions/2026-10-17-tussle-guncel-durum-arsivi|arşiv]]._
+- **Yayında:** https://tussle.ziroo.net, son yayın `95033ba` (2026-10-17 gece; yedekler `pre-95033ba.db` …), 1.855 test, DB sürümü 20. Konteyner `tussle` (127.0.0.1:8087, `/opt/tussle`, veri `/opt/tussle/data`, sırlar `/opt/tussle/.env`), Caddy `hosts/tussle.caddy`. Yayın `bash deploy/release.sh`; `.env` değişince `compose up -d` ([[2026-10-17-env-degisikligi-compose-restart-okumaz]]). Makine: [[vps-makinesi]].
 - **Gelir ve bildirim (2026-10-17 akşam):** web push canlı (sunucu "push on"), hak paketleri odaya hediye (1/3/5, gün 10'da dolar, kurucu en çok 3; sunucu "iap play", ürünler henüz yok), sohbette bildir/engelle. Reklam yok, Play Oyun Hizmetleri atlandı, TWA kalıyor. [[2026-10-17-hak-paketleri-odaya-hediye-reklam-yok]], [[2026-10-17-magaza-gelir-bildirim-arastirmasi]], oturum [[2026-10-17-tussle-gelir-bildirim-magaza-yolu]].
 - **Android TWA:** Play `net.ziroo.tussle` **versionCode 6 / 1.2** (bildirim izni + Play Billing manifesti): iç testte yayında, kapalı test (alpha) kanalında Google incelemesinde. Sürüm 5'te bildirim izni yoktu, Chrome tarayıcı da kilitliydi ([[2026-10-17-twa-bildirim-devri-izinsiz-uygulama-chromeyi-de-kilitler]]). Komut satırından yükleme: `npm run play:upload`, kanala geçirme `--promote` (hizmet hesabı `tussle-play@…`, anahtar `~/.config/tussle/`). `android/` geri dönüş için duruyor. [[2026-10-17-android-twa-gecis-plani]].
-- **Kapalı test:** Google Grubu "Tussle Test" (herkes katılabilir), 12 testçi toplanıyor; web kurulum kartı Android ziyaretçiyi gruba + Play opt-in'e yönlendiriyor ([[2026-10-16-kapali-test-google-grubuyla-acildi-mail-toplanmaz]]). Açık test de üretim erişimini bekler.
+- **Kapalı test:** Google Grubu "Tussle Test" (herkes katılabilir), 12 testçi toplanıyor; web kapı sayfası Android ziyaretçiyi gruba + Play opt-in'e yönlendiriyor ([[2026-10-16-kapali-test-google-grubuyla-acildi-mail-toplanmaz]]). Açık test de üretim erişimini bekler.
 - **iOS:** build 4 (native Google+Apple girişi, profil gömülü) TestFlight iç + dış grupta; herkese açık bağlantı https://testflight.apple.com/join/PkEYg1MN (web kurulum kartında). Yusuf'un iOS cihazı yok. OTA yalnız iOS, sunucudaki paket 0.20261016.1948. iOS push (APNs) ve StoreKit tarafı kodda var ama anahtar/sözleşme yok.
+- **Uygulama-içi (2026-10-17 gece):** tarayıcı ziyaretçisi kapı sayfası görür (kurulum adımları, davet kodu); TWA/native/standalone/localhost/`?web=1` uygulamayı açar. Oda üst çubuğu: çan yok, dişli herkese (Oda sayfası), kaydırınca tek sezon satırı; ana kart skorsuz; birimler yalnız oyun bağlamında ([[2026-10-17-uygulama-disi-web-kapisi-ve-oda-ustu-sadelesti]]).
 - **Oyun:** 46 oyun, hepsi günlük havuzda; oda ve parti sınırı 32; kare sınırı yok ([[2026-10-16-kare-siniri-kalkti-her-vsyncte-cizim]]).
 - **Profil, giriş, izleme:** profil ekranı + fotoğraf + rozetler ([[2026-10-17-tussle-profil]]); Google/Apple girişi web + TWA + iOS native ([[2026-10-17-web-google-apple-girisi-acildi-android-twa-ile]], [[2026-10-17-ios-native-giris-capgo-social-login]]); istemci hata toplama + geri bildirim (`scripts/feedback-cli.mjs`), gece yedeği 04:20 ([[2026-10-15-sunucuda-gece-yedegi-systemd]]), makine izleme ziroo-edge'de.
 - **Mağaza:** `/privacy` (EN/TR) yayında, satın alma/bildirim/moderasyon metinleri güncel; Play girişi EN + TR.
@@ -36,11 +37,12 @@ _Son güncelleme: 2026-10-17 akşam; canlıdan doğrula. Eski ayrıntılı hâl:
 1. **Yusuf (mağaza):** Play ödeme profili + Google Payments satıcı hesabı → `tries_1/3/5` ürünleri (`docs/IAP.md`); "Uygulama içi satın alma: Evet" + IARC yeniden. Apple: Paid Apps sözleşmesi + consumable'lar + sandbox testçi; APNs `.p8` anahtarı. Telefona sürüm 6 gelince Ayarlar → Bildirimleri aç → izin istemi; sonucu `feedback-cli.mjs errors` ile oku.
 2. **Kapalı test:** 6 (1.2) onayı; 12 kişi katılınca 14 gün say, üretim başvurusu, sonra açık test/üretim; `install-links.ts` `stage: 'store'`. Chrome'un ilk açılış bildirimi için başka çözüm sonra; gezinme çubuğu beyaz.
 3. **Bildirimler 2 (kart hazır):** iOS APNs sürücüsü + `@capacitor/push-notifications`; satın alma iOS tarafı sandbox'ta denenecek. Satın alma Apple `iap.full` iade yolu elle (docs/IAP.md).
-4. **Profil sonrası:** Android geri tuşu, fotoğraf kırpma; 17 Eki UI turunu telefonda gör ([[2026-10-17-tussle-kapisma-izgarasi-bagli-hesap-hak-rozeti]]); build 3 kullanıcıları için iOS OTA paketini yenile; `store/README.md` Antrenman'sız mı kontrol.
+4. **Profil sonrası:** Android geri tuşu, fotoğraf kırpma; 17 Eki UI turunu ve yeni oda üstü/kapı sayfasını telefonda gör ([[2026-10-17-tussle-kapisma-izgarasi-bagli-hesap-hak-rozeti]], [[2026-10-17-tussle-oda-ustu-sadelesme-ve-web-kapisi]]); TWA'da uygulama kapalıyken bildirime dokununca kapıya düşmediğini dene; build 3 kullanıcıları için iOS OTA paketini yenile; `store/README.md` Antrenman'sız mı kontrol.
 5. **Mağaza sonrası:** Play tablet ekranları, kısa açıklama uyarısı; ekranlar `store/make-graphics.mjs` ile yeniden.
 6. **Diskort gece gözcüsüne Tussle bölümü**; tanıtımda kimlikli figürler; sonra: yayın partileri, sonsuz oyun rampaları, dolaylı etkileşim/arena, tema toptan düzenleme. Küçük açıklar ve kit işleri arşivde.
 
 ## Önemli kararlar
+- [[2026-10-17-uygulama-disi-web-kapisi-ve-oda-ustu-sadelesti]]: Tussle uygulama-içi (tarayıcıya kapı sayfası), oda üstü tek sezon satırı, Oda sayfası herkese, birimler yalnız oyun bağlamında
 - [[2026-10-17-hak-paketleri-odaya-hediye-reklam-yok]]: hak paketleri odaya hediye, gün 10'da dolar, reklam yok, PGS atlandı (araştırma: [[2026-10-17-magaza-gelir-bildirim-arastirmasi]], oturum: [[2026-10-17-tussle-gelir-bildirim-magaza-yolu]])
 - [[2026-10-17-web-google-apple-girisi-acildi-android-twa-ile]] (ders: [[2026-10-17-konsol-kurulumunda-onay-tiklamalari-kullanicida]], oturum: [[2026-10-17-tussle-google-apple-girisi]]) · [[2026-10-17-ios-native-giris-capgo-social-login]] (ders: [[2026-10-17-ios-native-giris-simulator-tuzaklari]], oturum: [[2026-10-17-tussle-ios-native-giris]])
 - [[2026-10-17-profil-ekrani-kapsami]] · [[2026-10-17-profil-fotografi-sqlite-blob-bildir-admin]] · [[2026-10-17-ai-oge-beyani-etiketlenmez]]
@@ -107,6 +109,7 @@ _Son güncelleme: 2026-10-17 akşam; canlıdan doğrula. Eski ayrıntılı hâl:
 - [[2026-10-15-denge-turu-yusuf-telefon-geri-bildirimi]] (doğrulanmadı)
 
 ## Dersler
+- [[2026-10-17-bildirimden-acilan-pencere-referrer-ve-sessionstorage-tasimaz]]
 - [[2026-10-17-twa-bildirim-devri-izinsiz-uygulama-chromeyi-de-kilitler]] · [[2026-10-17-env-degisikligi-compose-restart-okumaz]]
 - [[2026-10-17-pencere-acilisinda-inert-tum-sayfayi-yeniden-bicimlendirir]]
 - [[2026-10-17-ios-native-giris-simulator-tuzaklari]]
@@ -142,6 +145,7 @@ _Son güncelleme: 2026-10-17 akşam; canlıdan doğrula. Eski ayrıntılı hâl:
 - [[2026-10-15-tema-degisikligini-once-goster]]
 
 ## Oturumlar
+- [[2026-10-17-tussle-oda-ustu-sadelesme-ve-web-kapisi]]: oda üstü/ana kart sadeleşti, web kapısı (`7c69e83`, `95033ba`), inceleme bulgusu standalone kuralı
 - [[2026-10-17-tussle-gelir-bildirim-magaza-yolu]]: gelir modeli, bildirimler, bildir/engelle, Play API, kurulum kartı
 - [[2026-10-17-tussle-kapisma-izgarasi-bagli-hesap-hak-rozeti]]: kapışma ızgarası 4 sütun, bağlı hesap rozetleri, Çıkış/Sil düğmeleri, inert ertelendi, hak rozeti + deneme düğmesi (`a35b9db`, `c22c668`, `2db9eed`)
 - [[2026-10-17-tussle-ios-native-giris]]: iOS native Google+Apple girişi (`c0dd863`), build 4 yüklendi ve Beta Review'dan geçti
