@@ -33,6 +33,7 @@ source: Claude Code oturumu 2026-10-17 akşam "tussle: oda başlığı ve kapak 
 - Vault ve hafıza: tarayıcı testleri artık `?web=1` ya da localhost ile.
 
 ## Doğrulanmayanlar
+- Yeni slaytlar telefonda görülmedi; sezon ve kapışma slaytlarındaki düz daire yüzler 16 Eki tercihine aykırı (kimlikli figür istenmişti), sıradaki işlerde.
 - Açılış hareketi Android'de görüldü; giriş ekranı Android'de görüldü (Google düğmesi gerçek); oda sihirbazı, QR davet, iOS tarafı görülmedi; gerçek Google/Apple düğmeleriyle devir, girişli kullanıcıda solma, 12 sn bekçisi gerçek zamanlamada denenmedi.
 - Yeni oda üstü ve kapı sayfası telefonda görülmedi (yalnız puppeteer görüntüleri).
 - TWA'da uygulama kapalıyken bildirime dokununca açılış canlıda denenmedi (standalone kuralı kodda, testli).
