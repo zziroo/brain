@@ -4,7 +4,7 @@ project: tussle
 date: 2026-10-17
 status: active
 tags: [tussle, overview, oyun, mobil, pwa]
-source: "oturum 2026-10-17 (mobil-playus): profil ekranı + fotoğraf + rozetler yayında (`d33b787`, `a98a161`); önceki: oturum 2026-10-17 gece (mobil-playus): Android TWA deneme ve geçiş (`ce1f519`, iç test yayında, kapalı test incelemede); önceki: oturum 2026-10-16 gece (mobil-playus): kare sınırı kalktı (`11127a3`, OTA 0.20261016.1948), Android ekran sabitleme eklentisi (`050c924`, AAB yok), iOS build 3 yüklendi, Android WebView takılması bulgusu + TWA önerisi; önceki: oturum 2026-10-16 (mobil-playus): oda ve parti sınırı 32 yayında (`1d44092`, OTA 0.20261016.1743), 90 Hz kare düzensizliği bulgusu; önceki: kapalı test onaylandı, yedek budama + Mac aynası, Türkçe Play girişi incelemede; önceki: Play kapalı test Google Grubu ile kuruldu ve incelemeye gitti; önceki: animasyonlu tanıtım akışı yayını + privacy@ catch-all kontrolü; önceki: mağaza yayını + Play Console kurulumu; admin paneli yayını; önceki: telefon geri bildirimi turu (izleme sesi, antrenman, renk); önceki: hata toplama + geri bildirim, izleme katmanları önerisi; Yayın 3 izleme, önceki: tema sadeleştirme, parti ayarları, sonraki gün, 25 oyun geri bildirimi"
+source: "oturum 2026-10-17 (mobil-playus): Google ve Apple web girişi açıldı (yalnız sunucu .env); önceki: oturum 2026-10-17 (mobil-playus): profil ekranı + fotoğraf + rozetler yayında (`d33b787`, `a98a161`); önceki: oturum 2026-10-17 gece (mobil-playus): Android TWA deneme ve geçiş (`ce1f519`, iç test yayında, kapalı test incelemede); önceki: oturum 2026-10-16 gece (mobil-playus): kare sınırı kalktı (`11127a3`, OTA 0.20261016.1948), Android ekran sabitleme eklentisi (`050c924`, AAB yok), iOS build 3 yüklendi, Android WebView takılması bulgusu + TWA önerisi; önceki: oturum 2026-10-16 (mobil-playus): oda ve parti sınırı 32 yayında (`1d44092`, OTA 0.20261016.1743), 90 Hz kare düzensizliği bulgusu; önceki: kapalı test onaylandı, yedek budama + Mac aynası, Türkçe Play girişi incelemede; önceki: Play kapalı test Google Grubu ile kuruldu ve incelemeye gitti; önceki: animasyonlu tanıtım akışı yayını + privacy@ catch-all kontrolü; önceki: mağaza yayını + Play Console kurulumu; admin paneli yayını; önceki: telefon geri bildirimi turu (izleme sesi, antrenman, renk); önceki: hata toplama + geri bildirim, izleme katmanları önerisi; Yayın 3 izleme, önceki: tema sadeleştirme, parti ayarları, sonraki gün, 25 oyun geri bildirimi"
 ---
 
 # Tussle: arkadaşlarla günlük mini oyun kapışması (Playus'un hafif rakibi)
@@ -30,18 +30,20 @@ _Son güncelleme: 2026-10-17; canlıdan doğrula. Eski ayrıntılı hâl: [[10-P
 - **Oyun:** 46 oyun, hepsi günlük havuzda; varyant ve oda parametresi yok. Oda ve parti sınırı 32. Kare sınırı yok, her vsync'te çizim ([[2026-10-16-kare-siniri-kalkti-her-vsyncte-cizim]]).
 - **Profil (2026-10-17):** ayrı profil ekranı, isteğe bağlı fotoğraf, rozetler, oyuncu kartında özet; Antrenman kalktı. Web ve Android'de canlı, Yusuf beğendi; iOS OTA güncellenmedi ([[2026-10-17-tussle-profil]]). Telefon turu ve titreşim önceden tamam.
 - **İzleme ve yedek:** istemci hata toplama + uygulama içi geri bildirim (`scripts/feedback-cli.mjs`); gece yedeği 04:20, `pre-*.db` 30 günde budanır, Mac aynası 14 gün tutar ([[2026-10-15-sunucuda-gece-yedegi-systemd]], [[2026-10-16-yedek-tutma-sureleri-gizlilik-sozune-baglandi]]). Makine izleme ziroo-edge'de ([[2026-10-16-ops-katmani-kuma-netdata-ziroo-edge|ops]]).
-- **Mağaza:** `/privacy` (EN/TR) yayında, Play girişi EN + TR. Google/Apple girişi kodda hazır, env yok (`docs/AUTH-SETUP.md`); native giriş Play imzasından sonra.
+- **Mağaza:** `/privacy` (EN/TR) yayında, Play girişi EN + TR.
+- **Giriş (2026-10-17):** Google ve Apple ile giriş web'de ve Android TWA'da canlı, ikisi de telefonda denendi; iOS'ta düğmeler gizli ([[2026-10-17-web-google-apple-girisi-acildi-android-twa-ile]]).
 
 ## Sıradaki işler
 1. **Kapalı test (TWA):** sürüm onaylanınca arkadaşlara gittiğini kontrol et; 12 kişi katılınca 14 gün say, sonra üretim başvurusu. Chrome'un ilk açılış bildirimi Yusuf'un hoşuna gitmedi, başka çözüm sonra (seçenekler plan notunda). Gezinme çubuğu beyaz.
 2. **iOS:** build 3'ü dış gruba ekle, herkese açık bağlantıyı aç (Yusuf).
 3. **Profil sonrası:** telefonda Android geri tuşu (açık pencere kapanmalı) ve fotoğraf seçme/kırpma; iOS OTA paketini yenile (iOS profili göstermiyor); mağaza metinleri Antrenman'sız (`store/listing.md`, `store/README.md`, `docs/STORE.md`). Arkadaş geri bildirimi beklenecek.
-4. **Mağaza sonrası:** Play tablet ekranları (istenirse), kısa açıklama uyarısı kalktı mı. Ekranlar `store/make-graphics.mjs` ile yeniden, native Google+Apple giriş, sohbette bildirme/engelleme (Apple 1.2).
+4. **Mağaza sonrası:** Play tablet ekranları (istenirse), kısa açıklama uyarısı kalktı mı. Ekranlar `store/make-graphics.mjs` ile yeniden, iOS native Google+Apple giriş (yeni build ister; yan oturum kartı önerildi), `store/listing.md` "kabukta düğme yok" notu Android için eskidi, sohbette bildirme/engelleme (Apple 1.2).
 5. **Diskort gece gözcüsüne Tussle bölümü** (jsonl + açık geri bildirim).
 6. **Tanıtım:** sezon/kapışma slaytındaki düz yüzler yerine kimlikli figürler.
 7. **Sonra:** arkadaş geri bildirimiyle yayın partileri, sonsuz oyunların rampaları; dolaylı etkileşim modu ve arena prototipi (öneri sumo); tema toptan düzenleme; izlemenin ikinci tur adayları. Küçük açıklar ve kit işleri arşivde.
 
 ## Önemli kararlar
+- [[2026-10-17-web-google-apple-girisi-acildi-android-twa-ile]] (ders: [[2026-10-17-konsol-kurulumunda-onay-tiklamalari-kullanicida]], oturum: [[2026-10-17-tussle-google-apple-girisi]])
 - [[2026-10-17-profil-ekrani-kapsami]] · [[2026-10-17-profil-fotografi-sqlite-blob-bildir-admin]] · [[2026-10-17-ai-oge-beyani-etiketlenmez]]
 - [[2026-10-17-android-twa-onerisi]]: Android uygulaması WebView yerine Chrome motorunda (TWA), geçiş yapıldı · [[2026-10-17-oyun-titresimi-media-arayuz-touch]]
 - [[2026-10-16-oda-ve-parti-siniri-32-ayri-parti-sabiti]]: oda ve parti sınırı 32, ayrı `PARTY_MAX_PLAYERS`
