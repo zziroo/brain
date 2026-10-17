@@ -30,6 +30,9 @@ Yalnız Diskort ve Tussle veritabanları yedekleniyordu. ziroobank, rehber, kapi
 - **OneDrive'ı Mac'e kurmak:** Windows dönemine bağlı kalırdı; iCloud zaten var (5 GB ücretsiz, kullanım ~80 MB).
 - **Sunucuya age/rsync kurmak:** gereksiz paket; openssl ve tar akışı yetti.
 
+## iCloud Drive kapalıydı (ders)
+Betikler `~/Library/Mobile Documents/com~apple~CloudDocs/` klasörüne yazabildiği için iCloud kopyası çalışıyor sanıldı; oysa bu Mac'te iCloud Drive kapalıydı ve klasör yalnız yereldi (Finder "iCloud Drive'ı açın" diyordu). 2026-10-17'de Yusuf iCloud Drive'ı açtı (Masaüstü ve Belgeler eşzamanlaması KAPALI); macOS eski yerel klasörü temizledi, betikler yeniden kopyaladı, Yusuf Finder'da yüklendiğini gördü. Ders: iCloud'a yazıldı demeden önce iCloud Drive'ın açık olduğunu ve dosyanın yüklendiğini (Finder durum simgesi) doğrula.
+
 ## Kasa bakımı (ders)
 Kasadan dosya silmek yer açmaz: Finder silinenleri kasanın kendi Çöp'üne koyar ve sparsebundle kendiliğinden küçülmez. Sıra: kasa açıkken Çöp'ü boşalt → `hdiutil detach` → `hdiutil compact ~/Kasa.sparsebundle` (parola sorar) → `kasa-guncelle.sh --yalniz-kopyala`. 2026-10-17'de bu yolla 400 MB → 60 MB.
 
