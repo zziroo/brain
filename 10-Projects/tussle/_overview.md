@@ -4,7 +4,7 @@ project: tussle
 date: 2026-10-17
 status: active
 tags: [tussle, overview, oyun, mobil, pwa]
-source: "oturum 2026-10-17 (mobil-playus): Google ve Apple web girişi açıldı (yalnız sunucu .env); önceki: oturum 2026-10-17 (mobil-playus): profil ekranı + fotoğraf + rozetler yayında (`d33b787`, `a98a161`); önceki: oturum 2026-10-17 gece (mobil-playus): Android TWA deneme ve geçiş (`ce1f519`, iç test yayında, kapalı test incelemede); önceki: oturum 2026-10-16 gece (mobil-playus): kare sınırı kalktı (`11127a3`, OTA 0.20261016.1948), Android ekran sabitleme eklentisi (`050c924`, AAB yok), iOS build 3 yüklendi, Android WebView takılması bulgusu + TWA önerisi; önceki: oturum 2026-10-16 (mobil-playus): oda ve parti sınırı 32 yayında (`1d44092`, OTA 0.20261016.1743), 90 Hz kare düzensizliği bulgusu; önceki: kapalı test onaylandı, yedek budama + Mac aynası, Türkçe Play girişi incelemede; önceki: Play kapalı test Google Grubu ile kuruldu ve incelemeye gitti; önceki: animasyonlu tanıtım akışı yayını + privacy@ catch-all kontrolü; önceki: mağaza yayını + Play Console kurulumu; admin paneli yayını; önceki: telefon geri bildirimi turu (izleme sesi, antrenman, renk); önceki: hata toplama + geri bildirim, izleme katmanları önerisi; Yayın 3 izleme, önceki: tema sadeleştirme, parti ayarları, sonraki gün, 25 oyun geri bildirimi"
+source: "oturum 2026-10-17 (mobil-playus): iOS native Google+Apple girişi, build 4 onaylandı (`c0dd863`); önceki: oturum 2026-10-17 (mobil-playus): Google ve Apple web girişi açıldı (yalnız sunucu .env); önceki: oturum 2026-10-17 (mobil-playus): profil ekranı + fotoğraf + rozetler yayında (`d33b787`, `a98a161`); önceki: oturum 2026-10-17 gece (mobil-playus): Android TWA deneme ve geçiş (`ce1f519`, iç test yayında, kapalı test incelemede); önceki: oturum 2026-10-16 gece (mobil-playus): kare sınırı kalktı (`11127a3`, OTA 0.20261016.1948), Android ekran sabitleme eklentisi (`050c924`, AAB yok), iOS build 3 yüklendi, Android WebView takılması bulgusu + TWA önerisi; önceki: oturum 2026-10-16 (mobil-playus): oda ve parti sınırı 32 yayında (`1d44092`, OTA 0.20261016.1743), 90 Hz kare düzensizliği bulgusu; önceki: kapalı test onaylandı, yedek budama + Mac aynası, Türkçe Play girişi incelemede; önceki: Play kapalı test Google Grubu ile kuruldu ve incelemeye gitti; önceki: animasyonlu tanıtım akışı yayını + privacy@ catch-all kontrolü; önceki: mağaza yayını + Play Console kurulumu; admin paneli yayını; önceki: telefon geri bildirimi turu (izleme sesi, antrenman, renk); önceki: hata toplama + geri bildirim, izleme katmanları önerisi; Yayın 3 izleme, önceki: tema sadeleştirme, parti ayarları, sonraki gün, 25 oyun geri bildirimi"
 ---
 
 # Tussle: arkadaşlarla günlük mini oyun kapışması (Playus'un hafif rakibi)
@@ -23,27 +23,27 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 
 ## Güncel durum
 _Son güncelleme: 2026-10-17; canlıdan doğrula. Eski ayrıntılı hâl: [[10-Projects/tussle/sessions/2026-10-17-tussle-guncel-durum-arsivi|arşiv]]._
-- **Yayında:** https://tussle.ziroo.net, son yayın `a98a161` (2026-10-17, yedek `pre-a98a161.db`, profil + fotoğraf + geri tuşu pencereyi kapatır), 1.778 test, DB sürümü 17. Konteyner `tussle` (127.0.0.1:8087, `/opt/tussle`, veri `/opt/tussle/data`, sırlar `/opt/tussle/.env`), Caddy `hosts/tussle.caddy`. Yayın `bash deploy/release.sh` (yedek + deploy). Makine: [[vps-makinesi]].
+- **Yayında:** https://tussle.ziroo.net, son yayın `c0dd863` (2026-10-17, yedek `pre-c0dd863.db`, iOS native giriş sunucu tarafı), 1.780 test, DB sürümü 17. Konteyner `tussle` (127.0.0.1:8087, `/opt/tussle`, veri `/opt/tussle/data`, sırlar `/opt/tussle/.env`), Caddy `hosts/tussle.caddy`. Yayın `bash deploy/release.sh` (yedek + deploy). Makine: [[vps-makinesi]].
 - **Android TWA'ya geçti (2026-10-17):** Play `net.ziroo.tussle` versionCode 5 / 1.1 = `android-twa/` (Chrome motoru, akıcı). İç testte yayında, kapalı test (Alpha) Google incelemesinde. Misafir hesaplar taşınmaz (kabul). `android/` geri dönüş için duruyor. [[2026-10-17-android-twa-gecis-plani]], [[2026-10-17-tussle-twa-deneme]].
 - **Kapalı test:** Google Grubu "Tussle Test" ile; katılım mesajı gitti, 12 testçi toplanıyor ([[2026-10-16-kapali-test-google-grubuyla-acildi-mail-toplanmaz]]).
-- **iOS:** build 3 App Store Connect'te, build 2 Beta Review'dan geçti; herkese açık TestFlight bağlantısı henüz paylaşılmadı. Yusuf'un iOS cihazı yok. OTA artık yalnız iOS için, sunucudaki paket 0.20261016.1948 ([[2026-10-15-ota-web-paketi-self-hosted-capgo]]).
+- **iOS:** build 4 (native Google+Apple girişi, profil gömülü) Beta Review'dan geçti, iç + dış grupta; herkese açık TestFlight bağlantısı henüz paylaşılmadı. Yusuf'un iOS cihazı yok. OTA artık yalnız iOS için, sunucudaki paket 0.20261016.1948 ([[2026-10-15-ota-web-paketi-self-hosted-capgo]]).
 - **Oyun:** 46 oyun, hepsi günlük havuzda; varyant ve oda parametresi yok. Oda ve parti sınırı 32. Kare sınırı yok, her vsync'te çizim ([[2026-10-16-kare-siniri-kalkti-her-vsyncte-cizim]]).
 - **Profil (2026-10-17):** ayrı profil ekranı, isteğe bağlı fotoğraf, rozetler, oyuncu kartında özet; Antrenman kalktı. Web ve Android'de canlı, Yusuf beğendi; iOS OTA güncellenmedi ([[2026-10-17-tussle-profil]]). Telefon turu ve titreşim önceden tamam.
 - **İzleme ve yedek:** istemci hata toplama + uygulama içi geri bildirim (`scripts/feedback-cli.mjs`); gece yedeği 04:20, `pre-*.db` 30 günde budanır, Mac aynası 14 gün tutar ([[2026-10-15-sunucuda-gece-yedegi-systemd]], [[2026-10-16-yedek-tutma-sureleri-gizlilik-sozune-baglandi]]). Makine izleme ziroo-edge'de ([[2026-10-16-ops-katmani-kuma-netdata-ziroo-edge|ops]]).
 - **Mağaza:** `/privacy` (EN/TR) yayında, Play girişi EN + TR.
-- **Giriş (2026-10-17):** Google ve Apple ile giriş web'de ve Android TWA'da canlı, ikisi de telefonda denendi; iOS'ta düğmeler gizli ([[2026-10-17-web-google-apple-girisi-acildi-android-twa-ile]]).
+- **Giriş (2026-10-17):** Google ve Apple ile giriş web'de ve Android TWA'da canlı; iOS'ta build 4'ten itibaren native, simülatörde denendi ([[2026-10-17-web-google-apple-girisi-acildi-android-twa-ile]], [[2026-10-17-ios-native-giris-capgo-social-login]]).
 
 ## Sıradaki işler
 1. **Kapalı test (TWA):** sürüm onaylanınca arkadaşlara gittiğini kontrol et; 12 kişi katılınca 14 gün say, sonra üretim başvurusu. Chrome'un ilk açılış bildirimi Yusuf'un hoşuna gitmedi, başka çözüm sonra (seçenekler plan notunda). Gezinme çubuğu beyaz.
-2. **iOS:** build 3'ü dış gruba ekle, herkese açık bağlantıyı aç (Yusuf).
-3. **Profil sonrası:** telefonda Android geri tuşu (açık pencere kapanmalı) ve fotoğraf seçme/kırpma; iOS OTA paketini yenile (iOS profili göstermiyor); mağaza metinleri Antrenman'sız (`store/listing.md`, `store/README.md`, `docs/STORE.md`). Arkadaş geri bildirimi beklenecek.
-4. **Mağaza sonrası:** Play tablet ekranları (istenirse), kısa açıklama uyarısı kalktı mı. Ekranlar `store/make-graphics.mjs` ile yeniden, iOS native Google+Apple giriş (yeni build ister; yan oturum kartı önerildi), `store/listing.md` "kabukta düğme yok" notu Android için eskidi, sohbette bildirme/engelleme (Apple 1.2).
+2. **iOS:** build 4 için herkese açık TestFlight bağlantısını aç ve paylaş (Yusuf); ilk iOS kullanıcısının Google/Apple girişini izle. İstenirse giriş nonce doğrulaması.
+3. **Profil sonrası:** telefonda Android geri tuşu (açık pencere kapanmalı) ve fotoğraf seçme/kırpma; build 3 kullanıcıları için iOS OTA paketini yenile (build 4'te profil gömülü); mağaza metinleri Antrenman'sız (`store/listing.md`, `store/README.md`, `docs/STORE.md`). Arkadaş geri bildirimi beklenecek.
+4. **Mağaza sonrası:** Play tablet ekranları (istenirse), kısa açıklama uyarısı kalktı mı. Ekranlar `store/make-graphics.mjs` ile yeniden, sohbette bildirme/engelleme (Apple 1.2).
 5. **Diskort gece gözcüsüne Tussle bölümü** (jsonl + açık geri bildirim).
 6. **Tanıtım:** sezon/kapışma slaytındaki düz yüzler yerine kimlikli figürler.
 7. **Sonra:** arkadaş geri bildirimiyle yayın partileri, sonsuz oyunların rampaları; dolaylı etkileşim modu ve arena prototipi (öneri sumo); tema toptan düzenleme; izlemenin ikinci tur adayları. Küçük açıklar ve kit işleri arşivde.
 
 ## Önemli kararlar
-- [[2026-10-17-web-google-apple-girisi-acildi-android-twa-ile]] (ders: [[2026-10-17-konsol-kurulumunda-onay-tiklamalari-kullanicida]], oturum: [[2026-10-17-tussle-google-apple-girisi]])
+- [[2026-10-17-web-google-apple-girisi-acildi-android-twa-ile]] (ders: [[2026-10-17-konsol-kurulumunda-onay-tiklamalari-kullanicida]], oturum: [[2026-10-17-tussle-google-apple-girisi]]) · [[2026-10-17-ios-native-giris-capgo-social-login]] (ders: [[2026-10-17-ios-native-giris-simulator-tuzaklari]], oturum: [[2026-10-17-tussle-ios-native-giris]])
 - [[2026-10-17-profil-ekrani-kapsami]] · [[2026-10-17-profil-fotografi-sqlite-blob-bildir-admin]] · [[2026-10-17-ai-oge-beyani-etiketlenmez]]
 - [[2026-10-17-android-twa-onerisi]]: Android uygulaması WebView yerine Chrome motorunda (TWA), geçiş yapıldı · [[2026-10-17-oyun-titresimi-media-arayuz-touch]]
 - [[2026-10-16-oda-ve-parti-siniri-32-ayri-parti-sabiti]]: oda ve parti sınırı 32, ayrı `PARTY_MAX_PLAYERS`
@@ -108,6 +108,7 @@ _Son güncelleme: 2026-10-17; canlıdan doğrula. Eski ayrıntılı hâl: [[10-P
 - [[2026-10-15-denge-turu-yusuf-telefon-geri-bildirimi]] (doğrulanmadı)
 
 ## Dersler
+- [[2026-10-17-ios-native-giris-simulator-tuzaklari]]
 - [[2026-10-16-android-webview-parmak-kalkinca-takilma]] · [[2026-10-17-twa-elle-kurulum-tuzaklari]] · [[2026-10-17-titresim-sistem-dokunsal-geri-bildirim-kapaliysa-yok]]
 - [[2026-10-16-90-hz-ekranda-60-fps-siniri-duzensiz-kare]]
 - [[2026-10-16-ilk-acilisi-degistiren-web-icin-yeni-magaza-yapisi]] · [[2026-10-16-play-kisa-aciklamada-no-ads-tanitim-uyarisi]]
@@ -140,6 +141,7 @@ _Son güncelleme: 2026-10-17; canlıdan doğrula. Eski ayrıntılı hâl: [[10-P
 - [[2026-10-15-tema-degisikligini-once-goster]]
 
 ## Oturumlar
+- [[2026-10-17-tussle-ios-native-giris]]: iOS native Google+Apple girişi (`c0dd863`), build 4 yüklendi ve Beta Review'dan geçti
 - [[10-Projects/tussle/sessions/2026-10-17-tussle-guncel-durum-arsivi|2026-10-17 güncel durum arşivi]]: overview'un kısaltma öncesi "Güncel durum" ve "Sıradaki işler" bölümleri, olduğu gibi
 - [[2026-10-17-tussle-twa-deneme]]: TWA deneme (Slice akıcı), geçiş (`23ba339`, `ce1f519`), Play iç test yayında, kapalı test incelemede
 - [[2026-10-16-tussle-oda-parti-siniri-32]]: oda ve parti sınırı 32 (`1d44092`, OTA 0.20261016.1743), 90 Hz kare düzensizliği bulgusu

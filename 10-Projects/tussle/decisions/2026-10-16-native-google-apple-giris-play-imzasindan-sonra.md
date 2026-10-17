@@ -31,7 +31,7 @@ Native kabukta sağlayıcı düğmesi hiç yok (`src/client/ui/auth-providers.ts
 - Koordinatöre not bırakıldı (yan oturum notları klasörü, `magaza-hazirlik-notlar.md`).
 
 ## Güncelleme (2026-10-17)
-Android TWA'ya geçtiği için Android'de web girişi kullanılıyor; Android native Google istemcisi ve SHA-1 işi gereksiz. Bu kararın yalnız iOS kısmı geçerli: [[2026-10-17-web-google-apple-girisi-acildi-android-twa-ile]].
+Android TWA'ya geçtiği için Android'de web girişi kullanılıyor; Android native Google istemcisi ve SHA-1 işi gereksiz. Bu kararın yalnız iOS kısmı geçerli: [[2026-10-17-web-google-apple-girisi-acildi-android-twa-ile]]. iOS kısmı aynı gün yapıldı: [[2026-10-17-ios-native-giris-capgo-social-login]].
 
 ## İlgili
 - [[2026-10-16-gizlilik-sayfasi-sunucudan-statik-en-tr]] · [[2026-10-13-magaza-hesaplari-apple-bireysel-play-ziroo]]
