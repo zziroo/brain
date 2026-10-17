@@ -28,7 +28,7 @@ Son 14 günün `voice_sessions` tablosundan saatlik doluluk çıkarıldı: 07:00
 ## Sonuçlar / riskler
 - openssh yükselirken ssh ~90 sn düşer; systemd yükselmesi konteynerleri etkilemez.
 - Çekirdek 146 açılmazsa LightNode web konsolundan GRUB'da eski çekirdek (62) seçilir.
-- Doluluk ölçme yöntemi (voice_sessions saat histogramı) [[sunucu-vps]] runbook'unda.
+- Doluluk ölçme yöntemi (voice_sessions saat histogramı) Diskort'un [[sunucu-vps]] runbook'unda.
 
 ## İlgili
-- [[sunucu-vps]] · [[sunucu-lightnode-istanbula-tasindi]] · [[ssh-yalnizca-anahtar-ile]]
+- [[vps-makinesi]] · [[sunucu-lightnode-istanbula-tasindi]] · [[ssh-yalnizca-anahtar-ile]]

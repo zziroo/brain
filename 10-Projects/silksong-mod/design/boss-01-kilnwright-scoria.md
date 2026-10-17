@@ -1,3 +1,12 @@
+---
+type: resource
+project: silksong-mod
+date: 2026-10-06
+status: active
+tags: [silksong-mod, tasarim]
+source: Silksong mod tasarım oturumu (2026-10-06); boss 01 tasarımı
+---
+
 # Boss Tasarımı 01: Kilnwright Scoria
 
 > Silksong modu için özgün boss. Hedef: Team Cherry'nin yayınladığı bir boss gibi hissettirmek.

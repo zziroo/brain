@@ -41,4 +41,4 @@ source: Claude Code oturumu 2026-10-16 "ziroo-edge: ops katmanı (Kuma + Netdata
 - Bu kurulum yapılınca Diskort admin panelindeki altyapı bölümü büyütülmez; Tussle admin paneli (uygulama katmanı) mobil-playus oturumunda ayrı iş.
 
 ## İlgili
-- [[2026-10-16-izleme-katmanlari-uygulama-paneli-ve-makine-izleme]] · [[2026-10-15-gozcu-birlesik-dort-bolum]] · [[sunucu-vps]] · [[2026-10-03-caddy-ziroo-edge-projesine-ayrildi]]
+- [[2026-10-16-izleme-katmanlari-uygulama-paneli-ve-makine-izleme]] · [[2026-10-15-gozcu-birlesik-dort-bolum]] · [[vps-makinesi]] · [[2026-10-03-caddy-ziroo-edge-projesine-ayrildi]]

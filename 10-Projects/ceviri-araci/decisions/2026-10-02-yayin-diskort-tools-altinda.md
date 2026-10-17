@@ -32,4 +32,4 @@ Yusuf, çevirmen arkadaşının aracı bir linkten indirebilmesini istedi. Elde 
 - Sunucu yeniden kurulursa dosyalar gider; betik yeniden çalıştırılır.
 
 ## İlgili
-- [[10-Projects/ceviri-araci/_overview|Çeviri Aracı]], [[sunucu-vps|sunucu-vps]]
+- [[10-Projects/ceviri-araci/_overview|Çeviri Aracı]], [[vps-makinesi]]

@@ -1,3 +1,12 @@
+---
+type: resource
+project: silksong-mod
+date: 2026-10-07
+status: active
+tags: [silksong-mod, tasarim]
+source: Silksong mod oturumu (2026-10-07); katman planı notları
+---
+
 # Katman planı: bir oda katman katman nasıl kurulur
 
 > Tarih: 2026-10-07. Araçlar: `tools/biome/bands.py` (bant tablosu), `band_stats.py` + `scene_pieces.py --bands` (gerçek sahne ölçümü), `scatter.py` + `scatter_rules.py` (yoğunluk geçişi), `rooms4.py` (birleşik oda NEW2-m), `make_grid4.py` (ızgaralar). Çıktılar `D:\SilksongMod\work\biome_probe4\`.

@@ -23,7 +23,10 @@ Belirli bir tarih ve sefer saati(leri) için TCDD e-bilet sitesini düzenli aral
 - Yapılandırma `.env`: TELEGRAM_BOT_TOKEN, TARGET_DATE, TARGET_TIME(S), CHECK_INTERVAL_SECONDS, FROM/TO_STATION_ID/NAME (değerler bu vault'a yazılmaz; `.env`'ye dokunulmadı).
 - Yan dosyalar: `last_update_id.txt`, `subscribers.json` (tek abone), `scratch/refactor.py`, `venv/`.
 
-## Sonraki adımlar (öneri, doğrulanmadı)
+## Sıradaki işler
+
+_Not: öneri, doğrulanmadı_
+
 - README'yi güncelle: çok saatli takip (`TARGET_TIMES`), `/settings` menüsü ve istasyon seçimi anlatılmıyor; "`.env.example`" dosyası klasörde yok.
 - Sabit tarihler (03.05.2026) geçmişte kaldı; bot yeni tarih girilmeden anlamsız.
 - Bare `except:` blokları ve tarayıcıyı her kontrolde yeniden başlatma maliyeti iyileştirilebilir.

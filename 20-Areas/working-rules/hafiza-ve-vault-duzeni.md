@@ -17,10 +17,10 @@ Yeni bir Claude sohbeti hiçbir şey hatırlamaz. Açılışta yalnızca aşağ�
 | Global kurallar | `~/.claude/CLAUDE.md` | Dil, orkestrasyon, inceleme kapısı, karar dağılımı, vault işaretçisi | Her oturumda, otomatik |
 | Hafıza indeksi | `~/.claude/projects/<klasör>/memory/MEMORY.md` | Dosya başına tek satır | Sohbet o klasörde açılırsa |
 | Hafıza dosyaları | aynı klasör | Davranış kuralları, kısa kararlı gerçekler, işaretçiler | İlgili görünürse |
-| Vault | `C:\Users\yusuf\ZZ\brain` | Kararlar, dersler, runbook'lar, oturum özetleri, güncel durum | Aranırsa (kademeli) |
+| Vault | `/Users/ziroo/ZZ/brain` | Kararlar, dersler, runbook'lar, oturum özetleri, güncel durum | Aranırsa (kademeli) |
 | Ayarlar | `settings.json`, `settings.local.json` | İzinler | Otomatik |
 
-Hafıza **klasöre bağlıdır**: Diskort işi için sohbeti `ZZ\zProjects\diskort` içinde aç.
+Hafıza **klasöre bağlıdır**: Diskort işi için sohbeti `/Users/ziroo/ZZ/zProjects/diskort` içinde aç.
 
 ## Kural: tek kaynak
 - **Davranış kuralları ve Yusuf'un kararları** hafızada durur (kısa). Uzun gerekçe ve geçmiş vault'ta.

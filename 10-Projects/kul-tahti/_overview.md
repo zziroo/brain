@@ -19,7 +19,10 @@ Yusuf "yapabileceklerinin sınırını görmek istiyorum" diyerek istedi: kılı
 - Artifact yayını: depodaki `artifact.html` (index.html'in belge iskeleti olmayan hâli) + `style.css` ve `src/**` dosya eşlemesi.
 - Yaklaşık 20 bin satır. Orta kalite, 1080p: ~150-170 draw call, ~1,1M üçgen, kare başına ~2 ms CPU.
 
-## Güncel durum (2026-10-03)
+## Güncel durum
+
+_Son güncelleme: 2026-10-03_
+
 | Parça | Durum |
 |---|---|
 | İskelet + sözleşme | bitti (commit f71cbac) |

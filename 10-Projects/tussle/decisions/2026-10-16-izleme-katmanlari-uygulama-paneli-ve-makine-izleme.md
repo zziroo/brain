@@ -35,4 +35,4 @@ Sıra: önce Tussle paneli (bu projede), sonra ops kurulumu ziroo-edge klasörü
 - Tussle paneli için yeni bir sır (`ADMIN_TOKEN`) `/opt/tussle/.env`'e girecek.
 
 ## İlgili
-- [[_overview]] · [[2026-10-15-istemci-hata-toplama-jsonl-geri-bildirim-sqlite]] · [[2026-10-15-gozcu-birlesik-dort-bolum|gözcü]] · [[sunucu-vps|sunucu-vps]]
+- [[_overview]] · [[2026-10-15-istemci-hata-toplama-jsonl-geri-bildirim-sqlite]] · [[2026-10-15-gozcu-birlesik-dort-bolum|gözcü]] · [[vps-makinesi]]

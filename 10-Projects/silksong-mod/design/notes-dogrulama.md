@@ -1,3 +1,12 @@
+---
+type: resource
+project: silksong-mod
+date: 2026-10-06
+status: active
+tags: [silksong-mod, tasarim]
+source: Silksong mod oturumu (2026-10-06); oyun dosyalarından doğrulama notları
+---
+
 # Doğrulama notları (oyun dosyalarından)
 
 > Tarih: 2026-10-06. Kaynak: oyun build 22479045 (mod kopyası), decompile (`D:\SilksongMod\work\decomp\`), UnityPy ile okunan Addressables paketleri.

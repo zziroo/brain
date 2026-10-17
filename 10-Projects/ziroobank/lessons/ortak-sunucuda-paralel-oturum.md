@@ -14,4 +14,4 @@ source: ziroobank-expenses oturumu 2026-10-02
 - Ayrıca: `sed` aralığı ilk kapanan blokta durdu ve API `handle`'ı eksik kaldı. Ekleme sonrası canlı dosyayı grep'le kontrol et, URL'leri durum koduyla test et.
 
 ## İlgili
-- [[2026-10-02-caddy-ortak-site-klasoru]] · [[sunucu-vps]]
+- [[2026-10-02-caddy-ortak-site-klasoru]] · [[vps-makinesi]]

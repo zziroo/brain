@@ -30,4 +30,4 @@ Diskort Caddyfile'ı `{$DISKORT_DOMAIN}` bloğunda `import /etc/caddy/sites/*.ca
 - `/opt/ziroo-sites` repo dışında; sunucu yeniden kurulursa elle geri konmalı. Kullanan: steam, ziroobank.
 
 ## İlgili
-- [[sunucu-vps]], [[10-Projects/steam-avgr/_overview|Steam AGCR Paneli]], [[2026-10-02-oyunlar-diskort-alan-adinda-games-altinda]]
+- [[vps-makinesi]], [[10-Projects/steam-avgr/_overview|Steam AGCR Paneli]], [[2026-10-02-oyunlar-diskort-alan-adinda-games-altinda]]

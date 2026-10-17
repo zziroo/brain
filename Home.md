@@ -1,6 +1,6 @@
 ---
 type: home
-date: 2026-10-16
+date: 2026-10-17
 ---
 
 # Home: ikinci beyin haritası
@@ -24,16 +24,17 @@ Buradan başla. Her şey buradan ya da bir projenin `_overview.md` dosyasından 
 - [[10-Projects/pano/_overview|Pano]]: bütün Claude Code geçmişinin (Mac + Windows) animasyonlu dashboard'u; token, maliyet, oturum oynatıcı, akışlar. `/pano`, claude.ai'de özel Artifact kopyası
 - [[10-Projects/kripto-bot/_overview|Kripto Bot]]: Binance Global'de ~500 USD ile otonom spot trading botu (Python + ccxt önerisi); karar kodda, Claude kurucu ve salt okunur gözetmen; henüz kod yok
 - [[10-Projects/pdf-ceviri/_overview|PDF Çeviri Düzeltici]]: Trados'un bozuk Türkçe DOCX'ini orijinal PDF düzenine yerleştirir, tools.ziroo.net/pdf-ceviri
+- [[10-Projects/silksong-mod/_overview|Silksong modu]]: Hollow Knight: Silksong için özgün boss modu, Team Cherry kalitesi hedefi
+- [[10-Projects/ziroo-edge/_overview|ziroo-edge]]: sunucunun giriş kapısı (Caddy), ziroo.net ana sayfası, tools/games listeleri, ops katmanı (Uptime Kuma, Netdata)
+- [[10-Projects/marka/_overview|Marka]]: ziroo markası ve Ziroo maskotu (süzülen sıfır, halka gözler); kod klasörü yok
 
 ## Altyapı
-- [[2026-10-03-joker-dns-ve-tools-games-alt-alan-adlari]]: joker DNS, tools.ziroo.net ve games.ziroo.net (araç listesi tools.ziroo.net, oyun listesi games.ziroo.net)
-- [[2026-10-05-liste-sayfalari-ziroo-edge-te-ortak-neon-tasarim]]: ziroo.net ana sayfası (kapılar) ve iki liste, ziroo-edge `www/`, `deploy-www.sh`
-- [[sunucu-vps]]: sunucu, DNS, Caddy yolları
-- [[2026-10-16-ops-katmani-kuma-netdata-ziroo-edge]]: makine izleme `ops.ziroo.net` (Uptime Kuma + Telegram, Netdata `/netdata/`), ziroo-edge `ops/`; 23 monitör + Telegram; yedek yaşı/disk/smoke saatlik betikle push ([[2026-10-16-makine-sagligi-kuma-push-gozcuden-cikti]]), gözcüden çıktı
-- [[2026-10-07-ziroo-maskotu-ziro]]: ziroo.net maskotu, adı artık **Ziroo** ([[2026-10-16-maskot-adi-ziroo]]); tasarım seçildi: [[2026-10-16-ziroo-tasarimi-suzulen-halka-goz]], sitede yayında: [[2026-10-16-ziroo-net-kaydirmali-2d-maskot]]. [[2026-10-15-marka-maskot-ve-karakter-analizi]]: Yusuf'un karakter analizi ve maskot adayları
+- [[10-Projects/ziroo-edge/_overview|ziroo-edge]]: sunucunun giriş kapısı (Caddy), joker DNS ve tools/games alt alan adları, ziroo.net ana sayfası ve listeler, makine izleme `ops.ziroo.net` (Uptime Kuma + Netdata)
+- [[vps-makinesi]]: paylaşılan VPS: makine, `ssh vps` erişimi, bakım, DNS, projelerin yerleşimi, izleme (Diskort'a özgü kısım: [[sunucu-vps]])
+- [[proje-altyapi-standardi|Proje altyapı standardı]]: her uygulama ne sunar (/healthz, konteyner, yedek, admin paneli bölümleri), Kuma'ya nasıl kaydedilir, makine bilgisi nerede durur
+- `20-Areas/altyapi/` kararları: [[sunucu-lightnode-istanbula-tasindi]] · [[ssh-yalnizca-anahtar-ile]] · [[2026-10-15-sunucu-bakim-penceresi-07-30]] · [[2026-10-16-ziroo-net-posta-catch-all-ayri-kural-yok]]
 
 ## Alanlar
-- [[proje-altyapi-standardi|Proje altyapı standardı]]: her uygulama ne sunar (/healthz, konteyner, yedek, admin paneli bölümleri), Kuma'ya nasıl kaydedilir, makine bilgisi nerede durur
 - [[20-Areas/working-rules/_index|Çalışma kuralları]]: Claude ile nasıl çalışıyoruz (orkestrasyon, inceleme kapısı, karar dağılımı)
 - [[mac-gecisi-kontrol-listesi]]: **Windows → Mac geçişi (2026-10-05).** Mac'teki ilk oturum bu listeyi işler
 - [[2026-10-07-windows-makinesi-yalniz-silksong-icin]]: **Windows makinesi 2026-10-07'den beri yalnız Silksong modu (LoRA eğitimi) için**; diğer işler Mac'te
@@ -53,6 +54,4 @@ Buradan başla. Her şey buradan ya da bir projenin `_overview.md` dosyasından 
 - [[90-Archive/old-claude-memory/_index|Eski Claude hafıza klasörleri]]
 
 ## Bakım
-- Inbox: `00-Inbox/`
 - Yapı ve yazma kuralları: [[CLAUDE]]
-- [[10-Projects/silksong-mod/_overview|Silksong modu]] — özgün boss, Team Cherry kalitesi hedefi

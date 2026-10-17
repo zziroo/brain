@@ -15,7 +15,7 @@ source: oturum 2026-10-03/04 (song-finder)
 Spotify / YouTube / Apple Music / Deezer linki ya da "Sanatçı - Şarkı" alır, yaklaşık 15 öneriyi kart olarak verir (neden benzer, ses benzerliği yüzdesi, 30 sn önizleme, Spotify/YouTube linkleri). Amaç "aynı janr, aynı sanatçı" listesi değil, kulağa gerçekten benzeyenler. Yalnız Yusuf arar (parola), sonuç sayfaları linkle paylaşılabilir.
 
 ## Teknoloji
-- Kaynak `C:\Users\yusuf\ZZ\zProjects\song-finder` (yerel git, main; GitHub'a gönderilmedi, remote yok). Node, `app/` altında; yerelde `node --env-file-if-exists=.env app/server.js` (`.env` proje kökünde, `.env.example` var).
+- Kaynak `/Users/ziroo/ZZ/zProjects/song-finder` (yerel git, main; GitHub'a gönderilmedi, remote yok). Node, `app/` altında; yerelde `node --env-file-if-exists=.env app/server.js` (`.env` proje kökünde, `.env.example` var).
 - Akış: link çözme (Spotify embed sayfası, YouTube oEmbed, Deezer/iTunes) → adaylar (ListenBrainz, isteğe bağlı Last.fm, web araması yapan "topluluk" işçisi, "karakter" işçisi, Deezer sanatçı radyosu havuzu) → Deezer'da doğrulama → CLAP ile ses benzerliği ölçümü → sıralama.
 - Motor: başsız Claude Code CLI (`claude -p --restricted`, yalnız WebSearch/WebFetch). Kimlik 2026-10-09'dan beri Console API anahtarı `song-finder-prod` (`ANTHROPIC_API_KEY`, `/etc/song-finder.env`); anahtar yoksa abonelik belirtecine döner: [[2026-10-09-motor-kimligi-uygulama-basina-console-api-anahtari]]. Arama başına yaklaşık 45-60 bin token; yerelde 3-5 dakika, canlıda 7-9 dakika.
 - Ses: `Xenova/larger_clap_music_and_speech` (q8, 78 MB) + ffmpeg, ayrı alt süreçte, yaklaşık 380 MB bellek, parça başına ~1,2 sn; önbellek `DATA_DIR/audio-cache`.
@@ -40,7 +40,10 @@ https://tools.ziroo.net/song-finder → konteyner `song-finder` (127.0.0.1:8092,
 - Sırlar sunucuda: `/etc/song-finder.env` (`ANTHROPIC_API_KEY` = song-finder-prod; `APP_PASSWORD`: Rehber Okuyucu'nun parolasıyla aynı değer; `LASTFM_API_KEY`). `/etc/claude-token.env` boşaltıldı (yalnız yorum satırı), eski belirteç iptal edildi. Modeller `SF_MODEL_RESEARCH`/`SF_MODEL_RANK`=sonnet (kredi maliyeti için opus'tan çekildi).
 - İlk canlı arama (Rick Astley linki): 524 sn (yerelde ~4 dk), parça başına ses ölçümü 2,8 sn (yerelde 1,3), bellek tepe ~690 MB, yük ortalaması ~1,0; LiveKit'in CPU'su etkilenmedi (o sırada Diskort'ta görüşme olup olmadığı bilinmiyor).
 
-## Güncel durum (2026-10-09)
+## Güncel durum
+
+_Son güncelleme: 2026-10-09_
+
 - **2026-10-09:** motor kimliği Console API anahtarı `song-finder-prod`, modeller `sonnet` (opus'tan çekildi), yayında `532bbf9` ([[2026-10-09-api-anahtarina-gecis-ve-sonnet]]). Sonnet ile öneri kalitesi henüz denenmedi.
 - **2026-10-05:** arayüz neon temada, yayında `bbb2659` ([[2026-10-05-araclarin-arayuzu-neon-temaya-gecti]]).
 Yayında, commit `218b5ee`: keşif odaklı sürüm. Sonuçlar dört bilinirlik etiketiyle (keşif / az bilinen / bilinen / çok bilinen; Deezer şarkı `rank` + sanatçı `nb_fan`, `app/lib/popularity.js`) iki bölüme ayrılır: "Keşifler" (yalnız az bilinen, hedef 25) ve "Bilinen benzerler" (en fazla 6); sonuç sayfasında istemci tarafı bilinirlik kaydırıcısı. Topluluk işçisi kaldırıldı. Ses ölçümü 70 parça / 240 sn. Modeller sunucuda o tarihte `opus` idi (2026-10-09'dan beri `sonnet`). Kullanım sayfası `usage.html`. 110 test.

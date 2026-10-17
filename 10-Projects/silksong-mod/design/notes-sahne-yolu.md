@@ -1,3 +1,12 @@
+---
+type: resource
+project: silksong-mod
+date: 2026-10-07
+status: active
+tags: [silksong-mod, tasarim]
+source: Silksong mod oturumu (2026-10-07); decompile'dan sahne yolu notları
+---
+
 # Sahne yolu: kendi odalarımızı oyuna nasıl ekleriz
 
 > Tarih: 2026-10-07. Kaynak: decompile `D:\SilksongMod\work\decomp\` (satır numaraları bu dökümde; yol önekleri `Assembly-CSharp/`, `TeamCherry.TK2D/`), `work\scan\*.json`, UnityPy ile okunan paketler (mod kopyası, build 22479045): `resources.assets` içindeki `SceneTeleportMap`, `globalgamemanagers` (etiket, katman, çarpışma matrisi), sahne paketleri `demoend`, `dock_13`, `dock_14`, `ward_04`.

@@ -39,4 +39,4 @@ Ertelenmiş işti ([[2026-10-02-caddy-ortak-site-klasoru]]). Sunucuda Diskort d�
 - Geri dönüş: eski `diskort-caddy` imajı ve `infra_caddy-data` birimi sunucuda duruyor. Edge'i durdurup `cd /opt/diskort/infra && docker compose --profile caddy up -d caddy` çalıştırmak yeterli.
 
 ## İlgili
-- [[sunucu-vps]], [[deploy]], [[2026-10-02-caddy-ortak-site-klasoru]], [[2026-10-03-yayin-paylasilan-vps-kapis-ziroo-net]]
+- [[vps-makinesi]], [[deploy]], [[2026-10-02-caddy-ortak-site-klasoru]], [[2026-10-03-yayin-paylasilan-vps-kapis-ziroo-net]]

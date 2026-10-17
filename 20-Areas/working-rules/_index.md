@@ -1,7 +1,7 @@
 ---
 type: resource
 project: genel
-date: 2026-10-15
+date: 2026-10-17
 status: active
 tags: [working-rules, claude]
 source: C:\Users\yusuf\.claude\CLAUDE.md
@@ -22,6 +22,9 @@ Global kuralların damıtması. Orijinal dosya değiştirilmedi; geçerli olan h
 - [[inceleme-kapisi]]: merge öncesi ayrı inceleme ajanı, skeptic, bulgu eşikleri
 - [[karar-dagilimi]]: Yusuf neye karar verir, Claude neye
 - [[araclar-ve-raporlar]]: orkestrasyon raporu aracı
+- [[kod-inceleme-ajani-ve-supheci-ajan]]: inceleme ayrı salt okunur ajanla, orta+ bulgulara şüpheci ajan (inceleme kapısının kökeni)
+- [[ajan-modeli-dinamik-miras]]: eski kural, ajanlar koordinatörün modelini devralır (superseded; geçerli kural [[orkestrasyon]])
+- [[orkestrasyon-token-maliyeti]]: ders; orkestrasyonda maliyet bağlam boyutundan gelir (30-Resources)
 
 ## Düzen
 - [[hafiza-ve-vault-duzeni]]: bilgi nerede durur, tek kaynak kuralı, bakım ritmi
@@ -35,6 +38,14 @@ Global kuralların damıtması. Orijinal dosya değiştirilmedi; geçerli olan h
 ## Ortam ve otomasyon
 - [[izinler-ve-ayarlar]]: settings.json ve settings.local.json özeti
 - [[zamanlanmis-gorevler-ve-skiller]]: Diskort gözcü (geri bildirim + hata + sağlık + kod incelemesi, tek görev), senkronize skiller
+- [[izin-istemleri-ve-rutinler]]: rutinler neden sürekli izin ister (heredoc, birebir kayıt, `.claude` klasörü)
+- [[claude-altina-yazma-izin-sorar]]: `.claude` altına yazmak her zaman izin sorar, gözetimsiz görevler takılır
+- [[otomatik-mod-ssh-engeli-yeni-sohbette]]: otomatik mod bağlamsız yeni sohbette canlı sunucuya SSH'ı engeller; izin ayar dosyasında olmalı
+- [[rutin-calisma-klasoru-silinince-oturum-acmaz]]: zamanlanmış görevin klasörü yoksa oturum açılmaz
+- [[start-session-otomatik-tur-reddi]]: ToolSearch sonrası "Tool loaded." turunda start_session reddediliyor
+- [[scratchpad-yeniden-baslatmada-silinir]]: scratchpad yeniden başlatmada silinir
+- [[gizli-onizleme-panelinde-animasyon-durur-ve-gorunum-0x0]]: gizli önizleme panelinde rAF durur, görüntü alanı 0×0
+- [[telefonla-erisim]]: telefondan Mac'teki Claude oturumuna erişim (`claude rc`)
 
 ## Mac geçişi (2026-10-05)
 - [[2026-10-05-windowstan-maca-gecis]]: Windows → Mac taşıma kararı, paket ve yol çevirisi
@@ -43,3 +54,5 @@ Global kuralların damıtması. Orijinal dosya değiştirilmedi; geçerli olan h
 
 ## GitHub hesabı (2026-10-06)
 - [[2026-10-06-github-repolari-zziroo-hesabina-tasindi]]: 15 repo `zziroo` hesabına taşındı, yönlendirme ve remote notları
+- [[2026-10-07-zziroo-tasimasi-tamamlandi-ve-mac-listesi]]: taşımanın Mac ve sunucu tarafı bitti, Mac geçiş listesi işlendi
+- [[ince-taneli-anahtar-repo-baska-hesaba-tasininca-calismaz]]: repo başka hesaba taşınınca eski ince taneli anahtar yazamaz

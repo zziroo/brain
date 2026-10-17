@@ -32,7 +32,10 @@ Stack önerisi: Python 3.12 + ccxt, pandas, pytest, async (Yusuf'a sorulacak, ce
 - API anahtarlarını Yusuf `.env`'e kendisi koyar; `.env.example` repoda, `.env` gitignore'da. Testnet anahtarı: testnet.binance.vision
 - Canlıya geçişi yalnızca Yusuf yapar (bayrak + anahtar).
 
-## Güncel durum (2026-10-16 gece, Faz 1-2-3 kodlandı, 4h testnet'te)
+## Güncel durum
+
+_Son güncelleme: 2026-10-16 gece, Faz 1-2-3 kodlandı, 4h testnet'te_
+
 - Yerel repo, 12 commit (son: `9c16fde` 4h geçişi). Remote yok. uv + Python 3.12, 144 test, ruff temiz.
 - Komutlar: `uv run kbot download|backtest|paper-run|run [--until-next-close|--loop]|status|report [--json]|dashboard|risk-reset --loop paper|testnet|live|error-clear --loop testnet|live|show-config`.
 - Faz 3 (2026-10-16): `trader` her dolan emri `state/trades_<mode>.jsonl`'e, her turu `state/equity_<mode>.jsonl`'e yazar. `kbot report` Türkçe günlük özet (FIFO gerçekleşen PnL, açık PnL, bayatlık, kill switch, hata kilidi), `kbot dashboard` tek dosya HTML pano (`reports/dashboard.html`, gitignore; her `kbot run` sonunda yenilenir; `.claude/launch.json` "dashboard" ile tarayıcıda önizleme). Claude zamanlanmış görevi `kripto-bot-gunluk-rapor` her gün 09:00'da raporu okuyup özetler (salt okunur; uygulama açıkken çalışır).

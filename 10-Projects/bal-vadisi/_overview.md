@@ -20,7 +20,7 @@ Kovandan çıkan arılar çayırdaki çiçeklerden nektar toplar, bal geliştirm
 
 ## Teknoloji
 - Derleme yok: düz JS (klasik script'ler, ortak global'ler) + Canvas 2D. Tüm görseller kodla çiziliyor, dış dosya yok.
-- Klasör: `C:\Users\yusuf\ZZ\zProjects\bal-vadisi` (2026-10-02'de `incremantal-game`'den taşındı).
+- Klasör: `/Users/ziroo/ZZ/zProjects/bal-vadisi` (2026-10-02'de `incremantal-game`'den taşındı).
 - Yerel: `node serve.mjs` → http://localhost:5173. `?speed=N` hızlandırır.
 - Denge ölçümü: `tools/balance-sim.js` (`simulate({...})` kilometre taşı sürelerini verir).
 
@@ -28,7 +28,10 @@ Kovandan çıkan arılar çayırdaki çiçeklerden nektar toplar, bal geliştirm
 - **Canlı:** https://games.ziroo.net/bal-vadisi · oyun listesi: https://games.ziroo.net/ (2026-10-03'ten beri; eski adresler 301; oyun kayıtları yeni kökte sıfırdan başladı)
 - Sunucuda statik dosya olarak duruyor (`/opt/ziroo-www/games`); yayınlama: `bash deploy/deploy.sh` (2026-10-05'ten beri yalnız `bal-vadisi/`; oyun listesi ziroo-edge `www/games/`'te, [[2026-10-05-liste-sayfalari-ziroo-edge-te-ortak-neon-tasarim]]); betik yeni köke yayınlıyor (2026-10-03 geçişte kullanıldı). Karar: [[2026-10-03-joker-dns-ve-tools-games-alt-alan-adlari]] (eski: [[2026-10-02-oyunlar-diskort-alan-adinda-games-altinda]], [[2026-10-02-caddy-try-files-klasor-adresini-cozmuyor]]).
 
-## Durum (2026-10-02)
+## Güncel durum
+
+_Son güncelleme: 2026-10-02_
+
 | Parça | Durum |
 |---|---|
 | v1 oynanabilir sürüm | bitti; tıklama, satın alma, prestij, başarım, mobil yerleşim tarayıcıda doğrulandı |

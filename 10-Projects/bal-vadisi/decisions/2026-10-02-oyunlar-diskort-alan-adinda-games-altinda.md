@@ -30,4 +30,4 @@ Yusuf oyunun "herkes girebilecek şekilde" kendi sunucusuna yüklenmesini istedi
 - Kalıcı çözüm istenirse: Diskort Caddyfile'ına `/games/*` için ayrı `handle` (klasör index'i + gevşetilmiş CSP), bir sonraki Caddy yeniden başlatmasında.
 
 ## İlgili
-- [[sunucu-vps|sunucu-vps]], [[2026-10-02-caddy-try-files-klasor-adresini-cozmuyor]]
+- [[vps-makinesi]], [[2026-10-02-caddy-try-files-klasor-adresini-cozmuyor]]

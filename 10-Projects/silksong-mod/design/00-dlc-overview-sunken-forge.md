@@ -1,3 +1,12 @@
+---
+type: resource
+project: silksong-mod
+date: 2026-10-06
+status: active
+tags: [silksong-mod, tasarim]
+source: Silksong mod tasarım oturumları (2026-10-06); DLC genel tasarımı
+---
+
 # DLC Tasarımı: The Sunken Forge (Batık Ocak)
 
 > Silksong için mod olarak yapılacak mini-genişleme. Merkez: `boss-01-kilnwright-scoria.md`.

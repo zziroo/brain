@@ -35,4 +35,4 @@ Sunucu LightNode "Istanbul II" bölgesine taşındı: KVM, CPU Shared 2 vCPU, 4 
 - Eski sunucu: kapsayıcılar durduruldu, veri yerinde; birkaç gün sorunsuz kullanım sonrası Yusuf silecek.
 
 ## İlgili
-- [[sunucu-vps]] · [[2026-10-01-baglanti-teshisi-sadelestirme]] · [[saglayici-udp-paket-siniri]] · [[ekran-paylasimi-sabit-presetler]]
+- [[vps-makinesi]] · [[2026-10-01-baglanti-teshisi-sadelestirme]] · [[saglayici-udp-paket-siniri]] · [[ekran-paylasimi-sabit-presetler]]

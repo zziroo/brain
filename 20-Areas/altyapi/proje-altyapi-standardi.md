@@ -42,4 +42,4 @@ Yeni bir uygulama (oyun, araç, servis) yayına girerken bu kalıba uyar; var ol
 | Araçlar (steam-avgr, rehber, song-finder, pdf-ceviri, ziroobank) | var (ziroobank `/`) | site; ziroobank konteyner | — | yok | ziroobank'a `/healthz` eklenebilir |
 
 ## İlgili
-- ziroo-edge README "Makine izleme" ve "Yeni proje eklemek" · [[sunucu-vps|sunucu-vps]]
+- ziroo-edge README "Makine izleme" ve "Yeni proje eklemek" · [[vps-makinesi]]

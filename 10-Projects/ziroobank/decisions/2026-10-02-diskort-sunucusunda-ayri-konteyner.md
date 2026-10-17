@@ -33,4 +33,4 @@ Yusuf taksit takibini Google Sheet'ten kendi sunucusuna, araçlarını topladı�
 - Servis hesabı sheet'e artık erişemez; tekrar okumak gerekirse Yusuf paylaşmalı.
 
 ## İlgili
-- [[10-Projects/ziroobank/_overview|Ziroobank]] · [[sunucu-vps]] · [[2026-10-03-roller-ve-kullanici-yonetimi]]
+- [[10-Projects/ziroobank/_overview|Ziroobank]] · [[vps-makinesi]] · [[2026-10-03-roller-ve-kullanici-yonetimi]]

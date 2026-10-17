@@ -4,15 +4,19 @@ project: ziroobank
 date: 2026-10-05
 status: active
 tags: [ziroobank, finans, sunucu]
+source: ziroobank-expenses repo (git geçmişi) ve oturum 2026-10-03 (taşıma, roller, dersler)
 ---
 
 # Ziroobank: arkadaş grubunun taksit takibi (eski Google Sheet "ziroobank-odemeler")
 
-- Klasör `C:\Users\yusuf\ZZ\zProjects\ziroobank-expenses` (yerel git, remote yok). Node 24, bağımlılık yok, SQLite (`node:sqlite`).
-- Canlı: https://tools.ziroo.net/ziroobank/ (2026-10-03'ten beri; eski adres 301; çerez `Path=/ziroobank`, geçişte herkes bir kez yeniden girdi). Sunucu: Diskort VPS ([[sunucu-vps]]). Konteyner `ziroobank` (`/opt/ziroobank`, 127.0.0.1:3100), veri `/opt/ziroobank/data/ziroobank.db`, statik dosyalar `/opt/ziroo-www/tools/ziroobank/`, Caddy yolu `/opt/ziroo-sites/tools/ziroobank.caddy`. Neden böyle: [[2026-10-02-diskort-sunucusunda-ayri-konteyner]] (adres kısmı eski); güncel adres kararı ve XSS riski: [[2026-10-03-joker-dns-ve-tools-games-alt-alan-adlari]].
+- Klasör `/Users/ziroo/ZZ/zProjects/ziroobank-expenses` (yerel git, remote yok). Node 24, bağımlılık yok, SQLite (`node:sqlite`).
+- Canlı: https://tools.ziroo.net/ziroobank/ (2026-10-03'ten beri; eski adres 301; çerez `Path=/ziroobank`, geçişte herkes bir kez yeniden girdi). Sunucu: Diskort VPS ([[vps-makinesi]]). Konteyner `ziroobank` (`/opt/ziroobank`, 127.0.0.1:3100), veri `/opt/ziroobank/data/ziroobank.db`, statik dosyalar `/opt/ziroo-www/tools/ziroobank/`, Caddy yolu `/opt/ziroo-sites/tools/ziroobank.caddy`. Neden böyle: [[2026-10-02-diskort-sunucusunda-ayri-konteyner]] (adres kısmı eski); güncel adres kararı ve XSS riski: [[2026-10-03-joker-dns-ve-tools-games-alt-alan-adlari]].
 - Kurallar sheet ile aynı: Aylık = Toplam/Taksit, Bitiş = Başlangıç+Taksit−1, Kalan Taksit = Taksit − aralıktaki ödenmiş ay sayısı.
 
-## Güncel durum (2026-10-03)
+## Güncel durum
+
+_Son güncelleme: 2026-10-03_
+
 - **2026-10-05:** arayüz neon temada (`9b1ae8a`); Özet tablosunda geciken (geçmiş, ödenmemiş) aylar kırmızı + "Gecikti" rozeti (`3e69e03`). Yayında, `deploy/deploy.sh` Mac'ten çalıştı ([[2026-10-05-araclarin-arayuzu-neon-temaya-gecti]]).
 - Yayında, DB şeması v1 (roller). Hesaplar: `ziroo` (yönetici, ödeme yapmaz), `dararius`, `emre`, `tuna` (kullanıcı, ödeme yapan). Yetkiler: [[2026-10-03-roller-ve-kullanici-yonetimi]].
 - Yeni kullanıcıyı yönetici "Kullanıcılar" sekmesinden ekler; şifre bir kez gösterilir. İlk dört hesabın şifreleri sunucuda `/opt/ziroobank/secrets/passwords.txt`. Betik: `create-users.mjs --only <ad>` ya da `--all` ([[sifre-betigi-dosyayi-ezdi]]).

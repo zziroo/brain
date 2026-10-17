@@ -33,4 +33,4 @@ Gözcünün dört bölümünden "C sunucu sağlığı" Diskort'a değil makineye
 - İlk koşu 2026-10-16 01:03: Diskort yedeği 3 sa, Tussle 12 sa, disk %66, smoke geçti. Diskort yedeğinin 21:22'de olması (timer 04:00) açıklanmadı; bakılacak.
 
 ## İlgili
-- [[2026-10-16-ops-katmani-kuma-netdata-ziroo-edge]] · [[2026-10-15-gozcu-birlesik-dort-bolum]] (C bölümü bu kararla değişti) · [[sunucu-vps]] · [[yedekler]]
+- [[2026-10-16-ops-katmani-kuma-netdata-ziroo-edge]] · [[2026-10-15-gozcu-birlesik-dort-bolum]] (C bölümü bu kararla değişti) · [[vps-makinesi]] · [[yedekler]]

@@ -59,7 +59,10 @@ Klasör: `~/.claude/orchestration-report/`. **Git deposu değil**; sürüm geçm
 ## Yayın
 Özel Artifact (yalnız Yusuf görür, link paylaşılırsa görünür). Adres `/pano` skill'inde. Kendiliğinden güncellenmez.
 
-## Güncel durum (2026-10-13)
+## Güncel durum
+
+_Son güncelleme: 2026-10-13_
+
 - Yerel pano çalışıyor. Artifact'a giden veri (2026-10-13 gecesi üretildi): 326 oturum, 768 alt ajan, 1.308 istem, API karşılığı ~5.572 $.
 - Artifact 2026-10-13'te ilk kez yayınlandı (sürüm 1, metinli, maskeli). Okunan 5.672 metin "görüldü" olarak kaydedildi.
 

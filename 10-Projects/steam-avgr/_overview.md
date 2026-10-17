@@ -15,11 +15,11 @@ source: oturumlar 2026-10-02/03 (steam-avgr-calculator)
 Yusuf'un eski Google Sheets + Apps Script hesaplayıcısının yerine geçen panel. Herkes SteamID / vanity / profil linki girip kullanabilir. Steam profilindeki AGCR ile hesaplananı karşılaştırır (herkese açık ve "tümü" görünümü), en çok düşüren oyunlar, "şunu bitirirsem" hesabı, en ucuz hedefler (kalan başarım ya da tahmini süreye göre), AppID ile oyun ekleme, elle oyun ekleme, oyun hariç tutma (localStorage). Tasarım ziroobank tarzında.
 
 ## Teknoloji
-- Kaynak `C:\Users\yusuf\ZZ\zProjects\steam-avgr-calculator\app`, GitHub `zziroo/steam-avgr-calculator` (private, main). Node 22, bağımlılık yok, Dockerfile. README endpoint ve env'leri anlatır.
+- Kaynak `/Users/ziroo/ZZ/zProjects/steam-avgr-calculator/app`, GitHub `zziroo/steam-avgr-calculator` (private, main). Node 22, bağımlılık yok, Dockerfile. README endpoint ve env'leri anlatır.
 - Hız: `IPlayerService/GetTopAchievementsForGames` 20 oyun/istek, paralel. Sahip profili ~4-6 sn soğuk, önbellek 10 dk.
 - Gizli oyun tespiti: `GetPlayerAchievements` "Profile is not public" → gizli. Key'i harcadığı için yalnız `OWNER_STEAMID` hesabında çalışır.
 - Süreler: Steamhunters `api/apps/<id>` (medyan) ve `/achievements` (oranlar); kalan süre = medyan × Σ(-ln p, kilitli) / Σ(-ln p, tümü), alınamazlar hariç. Sunucuda 7 gün önbellek, eşzamanlılık 4.
-- Yayın: https://tools.ziroo.net/steam-avgr (2026-10-03'ten beri; eski `diskort.ziroo.net/tools/steam` 301 ile yönlenir, [[2026-10-03-joker-dns-ve-tools-games-alt-alan-adlari]]) → konteyner `steam-avgr` (127.0.0.1:8090), Caddy yolu `/opt/ziroo-sites/tools/steam-avgr.caddy`. Env `/etc/steam-avgr.env` (STEAM_API_KEY, OWNER_STEAMID). Güncelleme: kaynağı `/opt/steam-avgr`'a kopyala, `docker build -t steam-avgr .`, konteyneri aynı parametrelerle yeniden çalıştır (`--read-only --memory 256m -p 127.0.0.1:8090:8080`). Ayrıntı: [[sunucu-vps]].
+- Yayın: https://tools.ziroo.net/steam-avgr (2026-10-03'ten beri; eski `diskort.ziroo.net/tools/steam` 301 ile yönlenir, [[2026-10-03-joker-dns-ve-tools-games-alt-alan-adlari]]) → konteyner `steam-avgr` (127.0.0.1:8090), Caddy yolu `/opt/ziroo-sites/tools/steam-avgr.caddy`. Env `/etc/steam-avgr.env` (STEAM_API_KEY, OWNER_STEAMID). Güncelleme: kaynağı `/opt/steam-avgr`'a kopyala, `docker build -t steam-avgr .`, konteyneri aynı parametrelerle yeniden çalıştır (`--read-only --memory 256m -p 127.0.0.1:8090:8080`). Ayrıntı: [[vps-makinesi]].
 
 ## Kararlar
 - [[2026-10-03-joker-dns-ve-tools-games-alt-alan-adlari]]
@@ -37,7 +37,10 @@ Yusuf'un eski Google Sheets + Apps Script hesaplayıcısının yerine geçen pan
 ## Oturumlar
 - [[2026-10-02-steam-agcr-paneli-yayinda]]
 
-## Güncel durum (2026-10-03)
+## Güncel durum
+
+_Son güncelleme: 2026-10-03_
+
 - **2026-10-05:** arayüz neon temada, altta Araçlar'a dönüş linki; yayında `b9ff4c3` ([[2026-10-05-araclarin-arayuzu-neon-temaya-gecti]]).
 Yayında, commit `e7b9fa4`. Yusuf'un hesabı (kısıtlılar hariç, MultiVersus eklenmiş): panel tümü 195 / 132 / 6819 / %85,66, herkese açık %86,43; Steam sahip görünümü 197 / 133 / 6855 / %85, herkese açık 192 / 133 / 6761 / %86. Kalan 2 oyun büyük olasılıkla aile oyunları (biri 2/2, biri 34 açık ve bitmemiş); Yusuf kendisi ekleyecek.
 

@@ -14,4 +14,4 @@ source: memory diskort-server.md
 `restart caddy` TURN/TLS röle bağlantılarını kısa süre düşürür; önce açık oda olmadığını kontrol et. LiveKit'i yeniden başlatmak aktif aramaları ~6 sn düşürür (istemciler otomatik yeniden bağlanır). openssh yükseltilirken SSH ~90 sn bağlantı reddedebilir.
 
 ## İlgili
-- [[deploy]], [[sunucu-vps]]
+- [[deploy]], [[vps-makinesi]]

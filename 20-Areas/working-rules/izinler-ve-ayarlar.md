@@ -38,4 +38,4 @@ Windows dönemi satırları (artık Mac dosyasında yok): `curl` (iOS manifest, 
 - Zamanlanmış görevler bu izinlere göre yazıldı: [[zamanlanmis-gorevler-ve-skiller]].
 
 ## İlgili
-- [[_index]], [[sunucu-vps]]
+- [[_index]], [[vps-makinesi]]

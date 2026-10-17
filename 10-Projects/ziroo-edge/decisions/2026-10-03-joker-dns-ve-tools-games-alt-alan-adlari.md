@@ -23,7 +23,7 @@ Steam paneli, Çeviri Aracı, Ziroobank ve iki oyun `diskort.ziroo.net/tools` ve
 
 ## Nasıl çalışıyor
 - Kaynaklar ziroo-edge deposunda: araç listesi `www/tools/` (yayın `deploy-www.sh`), hub blokları `config/hubs/{tools,games}.caddy`, ortak snippet `config/snippets/ziroo-static.caddy`, eski adres yönlendirmeleri `config/diskort-yollari/tasinan-adresler.caddy` (sunucuda `/opt/ziroo-sites/tasinan-adresler.caddy`). Oyun listesi `bal-vadisi` deposunda `deploy/hub/` (**2026-10-05'te değişti:** iki liste de ziroo-edge `www/`'de, [[2026-10-05-liste-sayfalari-ziroo-edge-te-ortak-neon-tasarim]]).
-- Sunucuda statik kökler `/opt/ziroo-www/{tools,games}` (edge'de `/srv/www:ro`); proje-özel yollar `/opt/ziroo-sites/tools/<ad>.caddy` ve `/opt/ziroo-sites/games/<ad>.caddy`. Ayrıntı: [[sunucu-vps]]. Runbook ve smoke testi (`bash /opt/ziroo-edge/test/smoke.sh live`) ziroo-edge deposunda.
+- Sunucuda statik kökler `/opt/ziroo-www/{tools,games}` (edge'de `/srv/www:ro`); proje-özel yollar `/opt/ziroo-sites/tools/<ad>.caddy` ve `/opt/ziroo-sites/games/<ad>.caddy`. Ayrıntı: [[vps-makinesi]]. Runbook ve smoke testi (`bash /opt/ziroo-edge/test/smoke.sh live`) ziroo-edge deposunda.
 
 ## Neden
 - Alt alan adı: her proje kendi kökünde, alt yol sorunu yok, çerez ve localStorage kapsamı net.
