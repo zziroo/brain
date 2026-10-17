@@ -7,7 +7,7 @@ tags: [tussle, acilis, giris, onboarding, oda, qr, davet, ota]
 source: Claude Code oturumu 2026-10-17 gece "tussle: oda başlığı ve kapak sadeleştirme" (Yusuf: "Google/Apple girişi ön plana", "QR kodla davet", "ön ayarlar", "bunu yükleniyor başlangıcıyla yapamaz mıydık", "bizim icondan bir yükleniyor animasyonu")
 ---
 
-# Karar: açılış tek akış (ikon yükleme → giriş formu), tanıtım slaytları silindi; Google/Apple önde; oda kurma sihirbazı ve QR davet
+# Karar: açılış = yükleme ikonu → tam boy tanıtım slaytları (yeniden tasarlandı) → giriş formu; Google/Apple önde; oda kurma sihirbazı ve QR davet
 
 ## Bağlam
 Yusuf bir referans uygulamanın ekranlarını gönderdi (QR davet, grup kurma sihirbazı: ad → adın → günlük saat; Google girişi önde). Tussle'da form takma ad önceliyliydi, oda tek adımda açılıyordu, davet yalnız kod + bağlantıydı; dört tanıtım slaytı (16 Ekim) "düz" bulundu. Slaytları yeniden tasarlama ajanı başlatılmışken Yusuf "bunu yükleniyor başlangıcıyla yapamaz mıydık?" dedi; ajan durduruldu, yön değişti.
@@ -29,7 +29,8 @@ Yusuf bir referans uygulamanın ekranlarını gönderdi (QR davet, grup kurma si
 - Telefonda ilk deneme: Android TWA'nın kendi açılış perdesi (aynı ikon, ortada) sayfa boyanana kadar duruyor, ikon kurulumu perdenin altında bitiyordu. `33f971d`: süre ilk boyanan kareden sayılır, ikon perdedeki gibi ortada başlayıp giriş ekranının başına kayar (360 ms), girişli kullanıcıda ortada solar. Simgeye uzun basınca çıkan "Site Settings" TWA kütüphanesinin kısayolu, normal.
 - İkinci deneme de perdenin altında kaldı (perde ilk kareden sonra da duruyor). `d0d4556`: zamanlama yok; ikon perdedeki gibi kurulu ve durağan bekler (yükleme uzarsa 1,2 sn sonra dalga), uygulama hazır olunca yerinde zıplar + taç + göz kırpma (`brand-open`, 650 ms), sonra kayar. Girişli kullanıcı ve azaltılmış hareket: açılış yok.
 - Üçüncü deneme de görünmedi; geçici teşhis (istemci hata kanalı) sebebi gösterdi: perde `load`'a kadar duruyor. `2841057`: açılış `load` + 350 ms sonra; Yusuf gördü ([[2026-10-17-uygulama-kabugu-acilis-perdesi-load-olayina-kadar-sayfayi-orter]]). Teşhis kaldırıldı (`88516f6`).
-- Yayın `88516f6`; iOS OTA paketi `0.20261017.1854` yayınlandı (`deploy/ota.sh`), eski iOS istemciler bir sonraki soğuk açılışta alır.
+- **Düzeltme (`4e6cfc3`):** "Slaytları kaldır" seçeneği yanlışlıkla seçilmişti; Yusuf iki saat "slayt gelmiyor" derken ben ikon animasyonunu kovaladım. Slaytlar `95868bd`'den geri alındı ve tam boy tasarlandı (her slayt kendi şeker rengi, büyük sahne; kapışma slaytında çarpışan yüzler + "+10" + Parti Gecesi bileti). Sayfa içi zıplama/kayma kaldırıldı: perde zaten ikonu gösteriyor; yükleme ikonu `load` + 350 ms sonra solar, slayt 1 girişi o zaman oynar. Yalnız ilk açılış slayt; `tussle.introSeen`.
+- Yayın `4e6cfc3`; iOS OTA paketi `0.20261017.1933` yayınlandı (`deploy/ota.sh`), eski iOS istemciler bir sonraki soğuk açılışta alır.
 - Doğrulanmayan: telefonda hiçbiri görülmedi; gerçek Google/Apple düğmeleriyle devir; girişli kullanıcıda ana sayfaya solma; 12 sn bekçisi gerçek zamanlamada.
 - Sürüm ayrışması tartışması: Android/web her açılışta sunucudan alır; iOS OTA sonraki soğuk açılışta geçer, eski istemci yeni oyunu tanımaz. Sıradaki iş: bilinmeyen oyun için "yeniden başlat" kartı + OTA'yı `release.sh`'a bağlamak; asıl özellik oyunların sunucudan gelen bağımsız modül olması.
 - Oturum: [[2026-10-17-tussle-oda-ustu-sadelesme-ve-web-kapisi]] (aynı oturumun ikinci yarısı). Bkz. [[2026-10-17-uygulama-disi-web-kapisi-ve-oda-ustu-sadelesti]].

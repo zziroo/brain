@@ -21,14 +21,15 @@ source: Claude Code oturumu 2026-10-17 akşam "tussle: oda başlığı ve kapak 
 7. Telefonda açılış animasyonu görünmedi: TWA perdesi sayfa boyanana kadar örtüyor. `33f971d`: süre ilk kareden, ikon ortadan başa kayar; sonnet incelemesi (bekçi metni, "ya da" girişi, yedek zamanlayıcı) elle düzeltildi; yayın + OTA `0.20261017.1820`.
 8. Yine görünmedi: perde ilk kareden sonra da kalıyor. `d0d4556`: hareket hazır olunca oynar (`brand-open`), zamanlama yok; yayın + OTA `0.20261017.1830`. Yusuf TWA kabuğunu "site gibi" buldu; değerlendirme: native/Capacitor hayır (akıcılık), TWA'da web izleri turu → overview sıradaki işler.
 9. Üçüncü deneme de görünmedi. Geçici teşhis: hareket 257 ms'de başlamış, perde altında. `load` + 350 ms → 450 ms'de başladı, Yusuf gördü. Teşhis kaldırıldı, yayın `88516f6`, OTA `0.20261017.1854`. Ders: [[2026-10-17-uygulama-kabugu-acilis-perdesi-load-olayina-kadar-sayfayi-orter]].
-10. Sürüm ayrışması sorusu (oda sahibi güncelledi, diğerleri değil): Android/web her açılışta sunucudan; iOS OTA sonraki soğuk açılışta; sıradaki iş overview'da.
+10. Yanlış anlama: Yusuf "login geldi" derken slaytları kastediyordu; slaytlar yanlışlıkla seçilen seçenekle silinmişti. `95868bd`'den geri alınıp tam boy tasarlandı, zıplama/kayma kaldırıldı (perde ikonu zaten gösteriyor). `4e6cfc3`, OTA `0.20261017.1933`. Ders: belirsiz bir "gelmiyor" şikâyetinde önce neyin kastedildiğini sor; yakın zamanda silinen bir şey varsa onu hatırlat.
+11. Sürüm ayrışması sorusu (oda sahibi güncelledi, diğerleri değil): Android/web her açılışta sunucudan; iOS OTA sonraki soğuk açılışta; sıradaki iş overview'da.
 
 ## Kararlar
 - [[2026-10-17-acilis-tek-akis-ikon-yukleme-giris-formu-oda-sihirbazi-qr]]
 - [[2026-10-17-uygulama-disi-web-kapisi-ve-oda-ustu-sadelesti]]: kapı kuralları, Oda sayfası, sezon satırı, birimlerin yeri, reddedilenler.
 
 ## Durum
-- Yayın `88516f6` (öncekiler `95033ba`, `95868bd`, `69a4dc0`, `33f971d`, `d0d4556`, `2841057`), 1.853 test, yedekler `pre-95033ba.db`, `pre-69a4dc0.db`. Konteyner sağlıklı, canlı kabukta `#boot` var, OTA zip 200.
+- Yayın `4e6cfc3` (öncekiler `88516f6`, `95033ba`, `95868bd`, `69a4dc0`, `33f971d`, `d0d4556`, `2841057`), 1.853 test, yedekler `pre-95033ba.db`, `pre-69a4dc0.db`. Konteyner sağlıklı, canlı kabukta `#boot` var, OTA zip 200.
 - Vault ve hafıza: tarayıcı testleri artık `?web=1` ya da localhost ile.
 
 ## Doğrulanmayanlar
