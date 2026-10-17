@@ -30,9 +30,13 @@ Yalnız Diskort ve Tussle veritabanları yedekleniyordu. ziroobank, rehber, kapi
 - **OneDrive'ı Mac'e kurmak:** Windows dönemine bağlı kalırdı; iCloud zaten var (5 GB ücretsiz, kullanım ~80 MB).
 - **Sunucuya age/rsync kurmak:** gereksiz paket; openssl ve tar akışı yetti.
 
+## Kasa bakımı (ders)
+Kasadan dosya silmek yer açmaz: Finder silinenleri kasanın kendi Çöp'üne koyar ve sparsebundle kendiliğinden küçülmez. Sıra: kasa açıkken Çöp'ü boşalt → `hdiutil detach` → `hdiutil compact ~/Kasa.sparsebundle` (parola sorar) → `kasa-guncelle.sh --yalniz-kopyala`. 2026-10-17'de bu yolla 400 MB → 60 MB.
+
 ## Doğrulananlar / açık noktalar
 - Doğrulandı: sunucuda ilk yedek, Mac'e çekme (elle ve launchd ile), iCloud kopyası, kasadaki anahtarla 8 şifreli paketin çözülmesi, geri yüklenen ziroobank DB'sinde `integrity_check` ok.
 - Denenmedi: gerçek bir boş VPS'e uçtan uca kurtarma provası (öneri: geçici küçük VPS'te bir kez).
-- Açık: Kuma'da yedek yaşı için push monitörü (`PUSH_MAKINE_BACKUP`, `ops/check.sh`) henüz açılmadı; Cloudflare DNS dışa aktarımı kasaya eklenecek; Diskort/Tussle DB çekimi ziroo-edge'deki ortak betiğe taşınabilir.
+- Kuma push monitörü "yedek makine" (#27, Makine grubu, 2 saat) açık ve yeşil; `PUSH_MAKINE_BACKUP` sunucuda `check.env`'de (2026-10-17).
+- Açık: Cloudflare DNS dışa aktarımı kasaya eklenecek; Diskort/Tussle DB çekimi ziroo-edge'deki ortak betiğe taşınabilir.
 
 İlgili: [[yedekler]], [[secret-isleme-kurali]], [[2026-10-15-yedek-aynasi-mac-launchd]], [[proje-altyapi-standardi]]

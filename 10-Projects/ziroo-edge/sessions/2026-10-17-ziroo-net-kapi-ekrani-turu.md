@@ -23,6 +23,9 @@ source: oturum "ziroo-edge: ana sayfa kapı ekranı turu" (2026-10-17, ZZ kök o
   - Masaüstünde kapı aralarında yürüme, kapılar fareyle hemen açılıyor. Review'daki iki küçük bulgu düzeltildi.
   - Kullanıcı onayıyla yayınlandı.
 
+- Üçüncü geri bildirim: Ziroo yer değiştirmiyordu, yürüyüş takılıyordu, dönme tepkisi yapaydı, sayfa sonu ortalı değildi, fareyle havada gezme istendi (karma seçildi). `6ea6779`, review'daki iki küçük bulgu düzeltildi. Kullanıcı onayıyla yayınlandı.
+- Süzülme alanı alt bilgiye kadar açıldı (`fc9f4c4`), yayınlandı.
+
 ## Alınan kararlar
 - [[2026-10-16-ziroo-net-kaydirmali-2d-maskot]] (kapılar finali bölümüne eklendi)
 
