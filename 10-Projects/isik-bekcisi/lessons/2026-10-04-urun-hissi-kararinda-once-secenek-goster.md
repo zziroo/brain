@@ -20,4 +20,4 @@ source: oturum 2026-10-03/04 (incremantal-game, 55919b05)
 
 ## İlgili
 - [[2026-10-04-yaparak-ogren-ipuclari-oyunu-durduran-kart-yerine]]
-- [[20-Areas/working-rules/karar-dagilimi|Karar dağılımı]]
+- [[karar-dagilimi|Karar dağılımı]]

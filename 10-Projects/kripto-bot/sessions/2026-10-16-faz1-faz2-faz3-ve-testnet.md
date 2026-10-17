@@ -13,10 +13,10 @@ source: kripto-bot oturumu "Faz 1 iskelet → Faz 2 testnet → VPS → Faz 3" (
 - Ortam: brew ile uv, Python 3.12; yerel git repo (remote yok). 12 commit.
 - Faz 1: paket iskeleti, 2 strateji, risk motoru, backtest + walk-forward, ccxt sarmalayıcı, CLI; 2 yıllık BTC/ETH 1h raporu (stratejiler B&H'yi yenmiyor).
 - İnceleme düzeltmeleri (ayrı risk state, gün sınırı, SecretStr, emir boyutu).
-- Strateji araştırması: 4 yeni aday; varsayılan 1d `trend_filter_cross`, kill switch %40 → [[10-Projects/kripto-bot/decisions/strateji-1d-trend-filtresi-ve-kill-switch-40]].
-- Faz 2: `kbot run` (testnet gerçek emir), `status`, hata kilidi, `error-clear`, launchd plist → [[10-Projects/kripto-bot/decisions/faz2-emir-dongusu-guvenlik-tasarimi]].
-- Yusuf testnet anahtarını `.env`'e koydu; ilk tur "hold" (hesap ön yüklü, sinyal 1); küçük al-sat ile emir yolu doğrulandı → [[10-Projects/kripto-bot/lessons/binance-testnet-gozlemleri]].
-- VPS'e taşıma denendi, Binance bağlantı sıfırlamaları yüzünden bot Mac'te kaldı → [[10-Projects/kripto-bot/decisions/bot-macte-calisir-vps-binance-engeli]], [[10-Projects/kripto-bot/lessons/vps-binance-baglanti-sifirlama]].
+- Strateji araştırması: 4 yeni aday; varsayılan 1d `trend_filter_cross`, kill switch %40 → [[strateji-1d-trend-filtresi-ve-kill-switch-40]].
+- Faz 2: `kbot run` (testnet gerçek emir), `status`, hata kilidi, `error-clear`, launchd plist → [[faz2-emir-dongusu-guvenlik-tasarimi]].
+- Yusuf testnet anahtarını `.env`'e koydu; ilk tur "hold" (hesap ön yüklü, sinyal 1); küçük al-sat ile emir yolu doğrulandı → [[binance-testnet-gozlemleri]].
+- VPS'e taşıma denendi, Binance bağlantı sıfırlamaları yüzünden bot Mac'te kaldı → [[bot-macte-calisir-vps-binance-engeli]], [[vps-binance-baglanti-sifirlama]].
 - Faz 3: `kbot report`, `kbot dashboard`, işlem/eşitlik günlükleri; Claude zamanlanmış görevi `kripto-bot-gunluk-rapor` (her gün 09:13, salt okunur) kuruldu ve bir kez elle çalıştı.
 
 ## Yöntem notları

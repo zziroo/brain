@@ -13,4 +13,4 @@ source: Claude Code oturumu 2026-10-12 ("Failed to set sink id on remote audio t
 
 **Çözüm (c9d8102):** `'default'`/boş → `''` geç (livekit sabitlemez); kayıtlı kimlik `enumerateDevices` listesinde yoksa `''`; izin yokken liste boş `deviceId` dönebilir, o zaman kayıtlı kimliği olduğu gibi kullan; `devicechange` ile 300 ms debounce'lu geçiş; sfx tarafında sink zincirini sıraya diz (hızlı iki ses yarışı); `describe()` Error'ları `name: message` yazsın.
 
-Bağlantı: [[sessions/2026-10-12-rol-etiketi-dpdfnet-agc-oom]].
+Bağlantı: [[2026-10-12-rol-etiketi-dpdfnet-agc-oom]].

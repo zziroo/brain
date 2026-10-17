@@ -28,4 +28,4 @@ adb ile ölçüldü: Xiaomi'nin uyarlanabilir paneli oyun sırasında 60 ↔ 120
 
 ## İlgili
 - [[2026-10-08-web-cekirdegi-capacitor-ve-ad-tussle]] (varsayılan 60 kare sınırı kararı)
-- [[sessions/2026-10-16-tussle-oda-parti-siniri-32]]
+- [[2026-10-16-tussle-oda-parti-siniri-32]]

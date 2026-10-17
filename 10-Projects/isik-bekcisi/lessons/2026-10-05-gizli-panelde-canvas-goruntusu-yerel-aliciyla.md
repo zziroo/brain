@@ -22,4 +22,4 @@ source: oturum 53393f9a (incremantal-game): Yusuf pencerede değilken birleşmi�
 - Kırpılmış ve büyütülmüş görüntüler küçük çizimler (halka, göz, yapışma) için tam kareden daha çok şey söyler; tam kare için 0,5 ölçek yeter.
 - Arka planda çalışan alıcı süre sınırında kapanır, gerekince yeniden başlat.
 
-İlgili: [[10-Projects/bal-vadisi/lessons/2026-10-02-gizli-onizleme-panelinde-raf-durur|Gizli önizleme panelinde rAF durur]], [[10-Projects/isik-bekcisi/_overview|Işık Bekçisi]]
+İlgili: [[2026-10-02-gizli-onizleme-panelinde-raf-durur|Gizli önizleme panelinde rAF durur]], [[10-Projects/isik-bekcisi/_overview|Işık Bekçisi]]

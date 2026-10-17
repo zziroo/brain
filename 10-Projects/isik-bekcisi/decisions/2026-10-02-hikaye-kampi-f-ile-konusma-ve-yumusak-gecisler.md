@@ -45,7 +45,7 @@ Yusuf: "kamp güzel, konuşmalar artabilir, hikâye gibi yapılabilir", "kampa g
 - Konuşmayı istasyonu kullanmadan önce zorla oynatmak: yıldız almaya giden oyuncuyu bekletir.
 - Kapı önünde final sahnesini kapıya bağlamak: kapıdan çıkmak geri alınamaz; sahne Kandil'in sıradan konuşması olarak kaldı.
 - Gökyüzünde dokunmatik düzeni geri getirmek (kalemle alınamama bulgusu için): oyun masaüstü; "ilk dokunuş seçer, ikincisi alır" yeterli.
-- Bilgi kutusunu yıldızdan ayırmak (sabit panel): Yusuf bilgiyi imlecin yanında istemişti ([[ui-and-base-preferences]] hafızası); kutu yıldıza bağlı kaldı, yalnız yerleşimi akıllandı.
+- Bilgi kutusunu yıldızdan ayırmak (sabit panel): Yusuf bilgiyi imlecin yanında istemişti (`ui-and-base-preferences` (Claude hafızası, incremantal-game) hafızası); kutu yıldıza bağlı kaldı, yalnız yerleşimi akıllandı.
 
 ## Sonuçlar
 - Hikâye bağlama dalı incelemesi: kritik/yüksek yok, 1 orta (erken dönüş eşiği) + 3 düşük; geçiş dalı: 3 düşük; gökyüzü dalı: 2 orta (kalıcı kırmızı yanıp sönme, kör satın alma) + 9 düşük. Hepsi düzeltildi.

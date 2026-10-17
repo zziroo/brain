@@ -38,5 +38,5 @@ Faz 2'de `kbot run` testnet'e (ve üç kapı açılırsa canlıya) gerçek marke
 
 ## İlgili
 - [[10-Projects/kripto-bot/_overview]]
-- [[10-Projects/kripto-bot/decisions/claude-rolu-kurucu-ve-gozetmen]]
-- [[10-Projects/kripto-bot/lessons/binance-testnet-gozlemleri]]
+- [[claude-rolu-kurucu-ve-gozetmen]]
+- [[binance-testnet-gozlemleri]]

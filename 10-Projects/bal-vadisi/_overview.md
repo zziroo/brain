@@ -51,7 +51,7 @@ Kovandan çıkan arılar çayırdaki çiçeklerden nektar toplar, bal geliştirm
 - [[2026-10-02-caddy-try-files-klasor-adresini-cozmuyor]]
 
 ## Oturumlar
-- [[10-Projects/isik-bekcisi/sessions/2026-10-02-iki-oyun-yayin-ve-kamp-yenilemesi|2026-10-02: iki oyun, yayın ve kamp yenilemesi]] (bu oyun aynı oturumun ilk yarısında yazıldı)
+- [[2026-10-02-iki-oyun-yayin-ve-kamp-yenilemesi|2026-10-02: iki oyun, yayın ve kamp yenilemesi]] (bu oyun aynı oturumun ilk yarısında yazıldı)
 
 ## Kaynaklar
 - [[kosu-tabanli-incremental-shelldiver-rock-bottom-analizi]]: Yusuf'un "incremental" derken kastettiği tür

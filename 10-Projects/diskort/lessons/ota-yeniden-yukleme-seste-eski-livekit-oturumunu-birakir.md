@@ -24,4 +24,4 @@ source: diskort oturumu 2026-10-15 gece: 0.11.1/0.11.2 OTA sonrası iki Android'
 - Teşhis kaynakları: `/data/telemetry/<gün>.jsonl` (kullanıcı başına kalite), `incidents.jsonl`, LiveKit logu (`docker compose logs livekit | grep <identity>`), `netmin-*.jsonl` sondaları.
 
 ## İlgili
-- [[2026-10-15-kisisel-giris-sesi]] · [[zorunlu-istemci-guncellemesi]] · [[mobil-ota-guncelleme]] · [[sessions/2026-10-15-kisisel-giris-sesi-ve-0-11-1]]
+- [[2026-10-15-kisisel-giris-sesi]] · [[zorunlu-istemci-guncellemesi]] · [[mobil-ota-guncelleme]] · [[2026-10-15-kisisel-giris-sesi-ve-0-11-1]]

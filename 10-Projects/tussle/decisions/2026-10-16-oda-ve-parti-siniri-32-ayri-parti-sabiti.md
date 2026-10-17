@@ -36,4 +36,4 @@ Yusuf partinin neden 16 kişiyle sınırlı olduğunu sordu. 16 aslında oda üy
 
 ## İlgili
 - [[2026-10-11-parti-gecesi]]
-- [[sessions/2026-10-16-tussle-oda-parti-siniri-32]]
+- [[2026-10-16-tussle-oda-parti-siniri-32]]

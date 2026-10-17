@@ -15,4 +15,4 @@ source: 2026-10-02/03 oturumu; deploy.sh ve sunucu-vps runbook'u
 
 Genel kural: ortak bir klasöre yazan her betikte `-R` işlemlerini ve arşiv kökünü kendi alt yoluna sınırla; başka projelerin de oraya yazabileceğini varsay.
 
-İlgili: [[2026-10-02-yayin-diskort-tools-altinda]], [[10-Projects/diskort/runbooks/sunucu-vps|sunucu-vps]]
+İlgili: [[2026-10-02-yayin-diskort-tools-altinda]], [[sunucu-vps|sunucu-vps]]

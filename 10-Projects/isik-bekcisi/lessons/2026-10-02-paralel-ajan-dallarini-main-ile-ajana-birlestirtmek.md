@@ -21,4 +21,4 @@ Aksayan: hikâye bağlama ajanı lazer öncesi `main`'den dallandı ve `run.js`'
 - Önce test, sonra düzeltme istemek işe yarıyor: "erken dönüş" eşiği için önce başarısız olan vakayı `story-check`'e ekletmek, düzeltmenin gerçekten bulguyu kapattığını gösterdi.
 - Her orta bulgu için ayrı şüpheci şart değil: bulgu benzetim çıktısı ya da okunabilir bir kod satırıyla geliyorsa koordinatörün kendi doğrulaması yeter; şüpheci, kanıtı dolaylı olan bulgulara (kontrol dalındaki basılı tuş) ayrıldı ve orada daha basit bir düzeltme önerdi.
 
-İlgili: [[10-Projects/isik-bekcisi/_overview|Işık Bekçisi]], [[20-Areas/working-rules/araclar-ve-raporlar|Araçlar ve raporlar]]
+İlgili: [[10-Projects/isik-bekcisi/_overview|Işık Bekçisi]], [[araclar-ve-raporlar|Araçlar ve raporlar]]

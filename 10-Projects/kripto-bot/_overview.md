@@ -28,7 +28,7 @@ Klasör: `~/ZZ/zProjects/kripto-bot` (yerel git repo, Faz 1 commit'li; README ve
 Stack önerisi: Python 3.12 + ccxt, pandas, pytest, async (Yusuf'a sorulacak, cevap yoksa bu).
 
 ## Kurallar
-- Claude canlı hesapta asla emir vermez/tetiklemez, al-sat kararı almaz, çalışan botun risk parametrelerini kendi başına değiştirmez; izin verilse de. Bkz. [[10-Projects/kripto-bot/decisions/claude-rolu-kurucu-ve-gozetmen|Claude'un rolü]].
+- Claude canlı hesapta asla emir vermez/tetiklemez, al-sat kararı almaz, çalışan botun risk parametrelerini kendi başına değiştirmez; izin verilse de. Bkz. [[claude-rolu-kurucu-ve-gozetmen|Claude'un rolü]].
 - API anahtarlarını Yusuf `.env`'e kendisi koyar; `.env.example` repoda, `.env` gitignore'da. Testnet anahtarı: testnet.binance.vision
 - Canlıya geçişi yalnızca Yusuf yapar (bayrak + anahtar).
 
@@ -52,20 +52,20 @@ Stack önerisi: Python 3.12 + ccxt, pandas, pytest, async (Yusuf'a sorulacak, ce
 - [ ] Canlıya geçiş kararı (Yusuf; ayrı hesap ya da `manage_existing_holdings`)
 
 ## Kararlar
-- [[10-Projects/kripto-bot/decisions/claude-rolu-kurucu-ve-gozetmen|Claude kurucu ve gözetmen, karar kodda]]
-- [[10-Projects/kripto-bot/decisions/binance-global-tr-degil|Binance Global, TR değil]]
-- [[10-Projects/kripto-bot/decisions/strateji-1d-trend-filtresi-ve-kill-switch-40|Varsayılan 1d trend_filter_cross, kill switch %40]] (zaman dilimi kısmı yerine geçti)
-- [[10-Projects/kripto-bot/decisions/faz2-emir-dongusu-guvenlik-tasarimi|Emir döngüsü: borsadan uzlaştırma, idempotent mum, hata kilidi]]
-- [[10-Projects/kripto-bot/decisions/bot-macte-calisir-vps-binance-engeli|Bot Mac'te, VPS kapalı (Binance engeli)]]
-- [[10-Projects/kripto-bot/decisions/zaman-dilimi-4h-yusuf-tercihi|Zaman dilimi 1d → 4h (Yusuf'un tercihi)]]
+- [[claude-rolu-kurucu-ve-gozetmen|Claude kurucu ve gözetmen, karar kodda]]
+- [[binance-global-tr-degil|Binance Global, TR değil]]
+- [[strateji-1d-trend-filtresi-ve-kill-switch-40|Varsayılan 1d trend_filter_cross, kill switch %40]] (zaman dilimi kısmı yerine geçti)
+- [[faz2-emir-dongusu-guvenlik-tasarimi|Emir döngüsü: borsadan uzlaştırma, idempotent mum, hata kilidi]]
+- [[bot-macte-calisir-vps-binance-engeli|Bot Mac'te, VPS kapalı (Binance engeli)]]
+- [[zaman-dilimi-4h-yusuf-tercihi|Zaman dilimi 1d → 4h (Yusuf'un tercihi)]]
 
 ## Dersler
-- [[10-Projects/kripto-bot/lessons/start-session-otomatik-tur-reddi|start_session otomatik tur reddi]]
-- [[10-Projects/kripto-bot/lessons/vps-binance-baglanti-sifirlama|VPS'ten Binance bağlantı sıfırlama, ccxt spot-only, data-api]]
-- [[10-Projects/kripto-bot/lessons/binance-testnet-gozlemleri|Binance testnet gözlemleri]]
-- [[10-Projects/kripto-bot/lessons/zaman-dilimi-degisikligi-hemen-emir-tetikler|Zaman dilimi değişikliği hemen emir tetikler]]
+- [[start-session-otomatik-tur-reddi|start_session otomatik tur reddi]]
+- [[vps-binance-baglanti-sifirlama|VPS'ten Binance bağlantı sıfırlama, ccxt spot-only, data-api]]
+- [[binance-testnet-gozlemleri|Binance testnet gözlemleri]]
+- [[zaman-dilimi-degisikligi-hemen-emir-tetikler|Zaman dilimi değişikliği hemen emir tetikler]]
 
 ## Oturumlar
-- [[10-Projects/kripto-bot/sessions/2026-10-16-proje-baslangici|2026-10-16 proje başlangıcı]]
-- [[10-Projects/kripto-bot/sessions/2026-10-16-faz1-faz2-faz3-ve-testnet|2026-10-16 Faz 1-2-3, testnet, günlük rapor]]
-- [[10-Projects/kripto-bot/sessions/2026-10-16-4h-gecisi|2026-10-16 4h geçişi, testnet'te ilk satışlar]]
+- [[2026-10-16-proje-baslangici|2026-10-16 proje başlangıcı]]
+- [[2026-10-16-faz1-faz2-faz3-ve-testnet|2026-10-16 Faz 1-2-3, testnet, günlük rapor]]
+- [[2026-10-16-4h-gecisi|2026-10-16 4h geçişi, testnet'te ilk satışlar]]

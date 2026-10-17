@@ -13,4 +13,4 @@ Ses ekranında `SpeakingRing`, `TileFrame` ve `VoiceBar` render gövdesinde `pul
 
 **Kural:** `interpolate`/`multiply`/`add` sonuçlarını `useMemo` ile (bağımlılık: Animated.Value ref'leri) sakla; olay dinleyicilerinde durum değişmediyse `set` çağırma (ActiveSpeakersChanged küme karşılaştırması). Yığınsız "CRASH" + yüksek PSS ise yerel bellek: ayrı sorun (yeniden bağlanma döngüsü, WebRTC), JS'te aranmaz.
 
-Bağlantı: [[sessions/2026-10-12-rol-etiketi-dpdfnet-agc-oom]].
+Bağlantı: [[2026-10-12-rol-etiketi-dpdfnet-agc-oom]].

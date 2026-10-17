@@ -17,4 +17,4 @@ source: kripto-bot oturumu "Faz 2 testnet döngüsü" (2026-10-16)
 - Claude uygulamasının zamanlanmış görevi cron saatine birkaç dakika sabit gecikme ekler (09:00 → 09:13); bu normal.
 
 ## İlgili
-- [[10-Projects/kripto-bot/decisions/faz2-emir-dongusu-guvenlik-tasarimi]]
+- [[faz2-emir-dongusu-guvenlik-tasarimi]]

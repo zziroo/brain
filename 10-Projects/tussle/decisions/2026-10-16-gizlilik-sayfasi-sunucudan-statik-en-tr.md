@@ -34,4 +34,4 @@ Play ve App Store kalıcı bir gizlilik politikası URL'si ister. Uygulama bir S
 - Geliştirmede Vite `/privacy`'yi vekillemez; sayfa yalnız Node sunucusunda (8087 / canlı) görünür.
 
 ## İlgili
-- [[2026-10-13-magaza-hesaplari-apple-bireysel-play-ziroo]] · [[sessions/2026-10-16-tussle-magaza-hazirligi]]
+- [[2026-10-13-magaza-hesaplari-apple-bireysel-play-ziroo]] · [[2026-10-16-tussle-magaza-hazirligi]]

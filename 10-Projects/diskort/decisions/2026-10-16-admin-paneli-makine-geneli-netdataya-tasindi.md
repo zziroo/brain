@@ -10,7 +10,7 @@ source: Claude Code yan oturumu 2026-10-16 "diskort: admin Altyapı sekmesi" (op
 # Karar: Admin panelinin "Makine" sekmesi "Altyapı" oldu; makine geneli grafikler panelden çıktı, Netdata'ya bağlantı verildi
 
 ## Bağlam
-[[20-Areas/altyapi/proje-altyapi-standardi|Proje altyapı standardı]]: her uygulamanın paneli yalnız kendi bilgisini gösterir, makinenin geneli (CPU, RAM, disk, ağ) tek yerde, Netdata'da ([[2026-10-16-ops-katmani-kuma-netdata-ziroo-edge]]). Diskort paneli bu standarttan önce yazılmıştı ve "Makine" sekmesinde ikisi karışıktı. Yusuf: "doğru olması gereken neyse o".
+[[proje-altyapi-standardi|Proje altyapı standardı]]: her uygulamanın paneli yalnız kendi bilgisini gösterir, makinenin geneli (CPU, RAM, disk, ağ) tek yerde, Netdata'da ([[2026-10-16-ops-katmani-kuma-netdata-ziroo-edge]]). Diskort paneli bu standarttan önce yazılmıştı ve "Makine" sekmesinde ikisi karışıktı. Yusuf: "doğru olması gereken neyse o".
 
 ## Karar
 - Sekme adı ve anahtarı `makine` → `altyapi` ("Altyapı"); eski `#makine` ve `#sunucu` hash'leri ile localStorage'daki eski sekme adı yeni sekmeye düşer (`TAB_ALIASES`).
@@ -37,6 +37,6 @@ source: Claude Code yan oturumu 2026-10-16 "diskort: admin Altyapı sekmesi" (op
 - `SystemMonitor` hâlâ cpu/memUsed topluyor ve `/api/admin/dashboard` bunları gönderiyor; istemci yalnız `online`/`voice` serisini kullanıyor. Zararsız, istenirse sonra sadeleştirilir.
 
 ## İlgili
-- [[20-Areas/altyapi/proje-altyapi-standardi]] · [[2026-10-16-ops-katmani-kuma-netdata-ziroo-edge]] · [[yonetim-paneli-web-uzerinden]]
-- Runbook: [[runbooks/admin-paneli-ve-loglar]]
-- Oturum: [[sessions/2026-10-16-admin-altyapi-sekmesi]]
+- [[proje-altyapi-standardi]] · [[2026-10-16-ops-katmani-kuma-netdata-ziroo-edge]] · [[yonetim-paneli-web-uzerinden]]
+- Runbook: [[admin-paneli-ve-loglar]]
+- Oturum: [[2026-10-16-admin-altyapi-sekmesi]]

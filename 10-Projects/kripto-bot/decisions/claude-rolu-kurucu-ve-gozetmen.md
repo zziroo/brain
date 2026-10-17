@@ -33,4 +33,4 @@ Yusuf Binance hesabını doğrudan Claude'un yönetmesini, sonra da "agent olara
 
 ## İlgili
 - [[10-Projects/kripto-bot/_overview]]
-- [[10-Projects/kripto-bot/decisions/binance-global-tr-degil]]
+- [[binance-global-tr-degil]]

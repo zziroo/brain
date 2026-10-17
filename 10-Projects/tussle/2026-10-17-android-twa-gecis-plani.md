@@ -24,7 +24,7 @@ source: oturum 2026-10-17 gece (mobil-playus) TWA deneme sürümü; Yusuf'un Xia
 
 
 
-Deneme sonucu: **TWA'da Slice parmak kalkıkken akıcı, Capacitor uygulamasındaki takılma yok** (Yusuf, Xiaomi 17 Pro, Chrome 155, 2026-10-17 gece). Öneri: [[2026-10-17-android-twa-onerisi]]. Deneme yapısı repoda `android-twa/` (oturum [[sessions/2026-10-17-tussle-twa-deneme]]).
+Deneme sonucu: **TWA'da Slice parmak kalkıkken akıcı, Capacitor uygulamasındaki takılma yok** (Yusuf, Xiaomi 17 Pro, Chrome 155, 2026-10-17 gece). Öneri: [[2026-10-17-android-twa-onerisi]]. Deneme yapısı repoda `android-twa/` (oturum [[2026-10-17-tussle-twa-deneme]]).
 
 Geçiş ayrı bir iş; aşağıdaki sırayla, her adım ayrı onay.
 

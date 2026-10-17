@@ -39,4 +39,4 @@ Giriş tek sayfaydı (marka üçlüsü, logo, slogan, 4 kapak, isim formu). Yusu
 - İnceleme notu (düşük): sürüklemede `--ob-pos` her `pointermove`'da tüm şeritte stil hesabı yapar; zayıf telefonda takılırsa yalnız yakın slaytlara yaz.
 
 ## İlgili
-- [[_overview]] · [[sessions/2026-10-16-tussle-animasyonlu-tanitim-akisi]] · [[2026-10-08-marka-maskotu-uclu-blok-ve-ikon]] · [[2026-10-12-oyun-sahnesi-sade]] · [[2026-10-16-tanitim-animasyonu-gizli-bolmede-donar-headless-kayit]]
+- [[_overview]] · [[2026-10-16-tussle-animasyonlu-tanitim-akisi]] · [[2026-10-08-marka-maskotu-uclu-blok-ve-ikon]] · [[2026-10-12-oyun-sahnesi-sade]] · [[2026-10-16-tanitim-animasyonu-gizli-bolmede-donar-headless-kayit]]

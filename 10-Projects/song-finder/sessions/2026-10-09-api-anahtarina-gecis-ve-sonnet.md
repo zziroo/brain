@@ -20,7 +20,7 @@ source: ZZ kökü sohbeti 2026-10-09 "Claude API anahtarını nasıl değiştiri
 - [[2026-10-09-motor-kimligi-uygulama-basina-console-api-anahtari]] (model değişikliği de bu notta)
 
 ## Öğrenilenler
-- [[10-Projects/diskort/lessons/otomatik-mod-ssh-engeli-yeni-sohbette|Otomatik mod SSH engeli]] (2026-10-09 eki: yazma engeli, sözlü izinle açıldı; `read -s` komutları Terminal sekmesinde)
+- [[otomatik-mod-ssh-engeli-yeni-sohbette|Otomatik mod SSH engeli]] (2026-10-09 eki: yazma engeli, sözlü izinle açıldı; `read -s` komutları Terminal sekmesinde)
 
 ## Açık kalanlar
 - Console'da aylık harcama limiti kondu mu, doğrulanmadı (Yusuf'a üç kez önerildi).

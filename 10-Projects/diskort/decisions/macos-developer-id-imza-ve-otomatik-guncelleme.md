@@ -33,4 +33,4 @@ Yusuf: Mac'te küçük bir güncelleme gelse bile uygulamayı yeniden indirmek g
 - Gerçek otomatik güncelleme uçtan uca henüz denenmedi (ilk fırsat: 0.10.3 → sonraki sürüm). (unverified)
 
 ## İlgili
-- [[kod-imzalama-ertelendi]], [[surum-cikarma]], [[sessions/2026-10-10-macos-imza-telefon-gostergesi-0-10-3]]
+- [[kod-imzalama-ertelendi]], [[surum-cikarma]], [[2026-10-10-macos-imza-telefon-gostergesi-0-10-3]]

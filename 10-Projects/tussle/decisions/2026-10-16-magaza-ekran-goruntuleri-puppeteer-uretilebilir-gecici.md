@@ -35,4 +35,4 @@ Play telefon ekranı için en boy oranı ≤ 2:1 ve 320–3840 px ister; App Sto
 - Yapılmadı: tablet/iPad, tanıtım videosu, Türkçe ekranlar, çerçeve/altyazı.
 
 ## İlgili
-- [[2026-10-13-magaza-hesaplari-apple-bireysel-play-ziroo]] · [[sessions/2026-10-16-tussle-magaza-hazirligi]] · [[2026-10-16-play-ekran-orani-ve-32-bit-ikon]]
+- [[2026-10-13-magaza-hesaplari-apple-bireysel-play-ziroo]] · [[2026-10-16-tussle-magaza-hazirligi]] · [[2026-10-16-play-ekran-orani-ve-32-bit-ikon]]

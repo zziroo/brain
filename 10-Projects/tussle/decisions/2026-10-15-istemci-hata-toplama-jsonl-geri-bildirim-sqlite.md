@@ -10,14 +10,14 @@ source: Claude Code oturumu 2026-10-15 "tussle: hata toplama + geri bildirim"
 # Karar: İstemci hataları jsonl dosyasına, geri bildirim SQLite tablosuna; okuma CLI ile
 
 ## Bağlam
-Canlı öncesi izleme eksikti: istemcide yakalanmayan hatalar hiçbir yere gitmiyordu, arkadaşlar geri bildirimi sohbetten ya da WhatsApp'tan iletiyordu. Diskort'ta aynı ihtiyaç jsonl + admin panel + gece gözcüsüyle çözülmüştü; gözcüye Tussle bölümü eklemek için önce bu kanalların olması gerekiyordu ([[10-Projects/diskort/decisions/2026-10-15-gozcu-birlesik-dort-bolum|gözcü kararı]]).
+Canlı öncesi izleme eksikti: istemcide yakalanmayan hatalar hiçbir yere gitmiyordu, arkadaşlar geri bildirimi sohbetten ya da WhatsApp'tan iletiyordu. Diskort'ta aynı ihtiyaç jsonl + admin panel + gece gözcüsüyle çözülmüştü; gözcüye Tussle bölümü eklemek için önce bu kanalların olması gerekiyordu ([[2026-10-15-gozcu-birlesik-dort-bolum|gözcü kararı]]).
 
 ## Karar
 - `POST /api/client-error`: kimlik gerekmez (bearer varsa userId eklenir), IP başına 30 / 10 dk, gövde ≤ 8 KB (413). Satır `DATA_DIR/logs/client-errors.jsonl`'a yazılır (`ts` sunucu zamanı, IP yazılmaz); 20 MB'ta `client-errors.1.jsonl`'a döner (tek nesil). Dosya hiçbir yedeğe girmez (`docs/BACKUP.md`).
 - `POST /api/feedback`: bearer zorunlu, kullanıcı başına 5 / saat, IP 20 / saat, metin 1–1000 karakter. SQLite `feedback` tablosu (migration 16, `acked_at`); hesap birleşince satırlar taşınır, silinince silinir. Yanıt 201 `{id}`.
 - İstemci `src/client/report.ts`: `window.error` + `unhandledrejection`; aynı imza (mesaj + stack ilk 200 karakter) oturumda bir kez, oturum başına en çok 5 gönderim; `url` yalnız yol + hash, oda kodu `/oda/*` diye maskeli; oturum yoksa `sendBeacon` (text/plain, preflight çıkmaz), oturum varsa bearer'lı `fetch keepalive`. `rev` vite `__APP_REV__`, `ota` çalışan paketin içine gömülü `__BUNDLE_VERSION__` (yalnız uygulama kabuğunda).
 - Arayüz: Ayarlar'da tek alanlı "Geri bildirim" kartı (yalnız girişli kullanıcıya; `screen: settings`), gönderince "Teşekkürler, aldık!" toast'u, 429'da "Biraz sonra tekrar dene".
-- Okuma: `scripts/feedback-cli.mjs` (`list [--all]`, `ack <id>|--all`, `errors [--tail N]`), konteynerde `docker exec tussle node scripts/feedback-cli.mjs …` (Dockerfile yalnız bu dosyayı kopyalar). Basılan her alan C0/C1 kontrol karakterleri ve Unicode yön/sıfır genişlik işaretlerinden süzülür; sunucu da `cut` içinde C0/C1'i boşluğa çevirir ([[lessons/2026-10-15-kimliksiz-girdiden-terminale-giden-metni-suz|ders]]).
+- Okuma: `scripts/feedback-cli.mjs` (`list [--all]`, `ack <id>|--all`, `errors [--tail N]`), konteynerde `docker exec tussle node scripts/feedback-cli.mjs …` (Dockerfile yalnız bu dosyayı kopyalar). Basılan her alan C0/C1 kontrol karakterleri ve Unicode yön/sıfır genişlik işaretlerinden süzülür; sunucu da `cut` içinde C0/C1'i boşluğa çevirir ([[2026-10-15-kimliksiz-girdiden-terminale-giden-metni-suz|ders]]).
 
 ## Neden
 - Hata kayıtları yüksek hacimli ve değersiz-çoğunluklu: dosya + tail yeter, DB'yi şişirmez, yedeğe girmez.
@@ -41,4 +41,4 @@ Canlı öncesi izleme eksikti: istemcide yakalanmayan hatalar hiçbir yere gitmi
 - Uygulama kabuğunda sayfa kapanırken bearer'lı keepalive fetch'in gerçekten iletildiği doğrulanmadı.
 
 ## İlgili
-- [[_overview]] · [[sessions/2026-10-15-tussle-hata-toplama-geri-bildirim]] · [[2026-10-15-ota-web-paketi-self-hosted-capgo]]
+- [[_overview]] · [[2026-10-15-tussle-hata-toplama-geri-bildirim]] · [[2026-10-15-ota-web-paketi-self-hosted-capgo]]

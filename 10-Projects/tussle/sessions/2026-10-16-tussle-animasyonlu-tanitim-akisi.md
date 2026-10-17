@@ -17,11 +17,11 @@ source: Claude Code oturumu 2026-10-16 "tussle: oturum başlangıcı" (mobil-pla
 - Mail: Cloudflare'de catch-all → Gmail zaten açık; değişiklik yok.
 
 ## Alınan kararlar
-- [[decisions/2026-10-16-animasyonlu-tanitim-akisi-herkes-bir-kez-gorur]]
-- [[decisions/2026-10-16-ziroo-net-posta-catch-all-ayri-kural-yok]]
+- [[2026-10-16-animasyonlu-tanitim-akisi-herkes-bir-kez-gorur]]
+- [[2026-10-16-ziroo-net-posta-catch-all-ayri-kural-yok]]
 
 ## Öğrenilenler
-- [[lessons/2026-10-16-tanitim-animasyonu-gizli-bolmede-donar-headless-kayit]]
+- [[2026-10-16-tanitim-animasyonu-gizli-bolmede-donar-headless-kayit]]
 
 ## Açık kalanlar
 - Telefonda tanıtım: eski yan yüklenmiş APK farklı imzalı, Play sürümü üstüne kurulmaz → önce kaldır (Claude'un çıkarımı, `unverified`); ilk açılışta OTA iner, ikinci açılışta yeni tanıtım.

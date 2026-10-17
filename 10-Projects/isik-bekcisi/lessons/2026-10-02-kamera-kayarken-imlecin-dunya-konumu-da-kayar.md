@@ -20,4 +20,4 @@ Simülasyonu doğrudan süren testte (`campStep` + dünya koordinatlı `tap`) ha
 - Önizleme panelinde gerçek döngüyü test etmek için: `requestAnimationFrame`'i zamanlayıcıya bağla (`tools/dev.js` → `timerFrames()`), bir ekran görüntüsüyle ilk kareyi tetikle, sonra olayları dispatch et (`ev.click`, `ev.tap`, `ev.key`). Girdi, sahne geçişi ya da kamp kodu değiştiyse bu yol şart.
 - Panelde ekran görüntüsü sayfanın yalnızca sol üst 1/devicePixelRatio kısmını gösterebilir. Tam görünüm için yalnızca test sırasında `body`'yi `scale(1/devicePixelRatio)` ile küçült (köken `0 0`).
 
-İlgili: [[2026-10-02-bot-ve-test-araclari-girdi-yolunu-atladi]], [[2026-10-02-kamp-gezilebilir-us-ve-ayri-arayuz-kimligi]], [[10-Projects/bal-vadisi/lessons/2026-10-02-gizli-onizleme-panelinde-raf-durur|Gizli önizleme panelinde rAF durur]]
+İlgili: [[2026-10-02-bot-ve-test-araclari-girdi-yolunu-atladi]], [[2026-10-02-kamp-gezilebilir-us-ve-ayri-arayuz-kimligi]], [[2026-10-02-gizli-onizleme-panelinde-raf-durur|Gizli önizleme panelinde rAF durur]]

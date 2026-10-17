@@ -17,7 +17,7 @@ Steam'in rehber görüntüleyicisi tek uzun sayfa; okurken sürekli aşağı yuk
 ## Teknoloji
 - Kaynak `C:\Users\yusuf\ZZ\zProjects\achievement-guide-formatter` (Windows) ve `/Users/ziroo/ZZ/zProjects/achievement-guide-formatter` (Mac; yerel git, remote yok, main). Node 24, bağımlılık yok, `node:sqlite`, ESM, şema v6. Düzen: `src/`, `public/`, `test/` (157 test, çalıştırma `node --test test/*.test.js`), `deploy/`, sözleşme `docs/SPEC.md`.
 - HTML ayrıştırıcı elle yazıldı (`src/html.js`, `src/parse.js`); düğüm bütçesi 200k, derinlik 150, sayfa 3 MB.
-- AI motoru: sunucu içinden `claude -p` başsız kip, araçsız, kimlik 2026-10-09'dan beri Console API anahtarı `rehber-prod` (`ANTHROPIC_API_KEY`, `/etc/rehber.env`); anahtar yoksa abonelik belirtecine (`CLAUDE_CODE_OAUTH_TOKEN`) döner: [[10-Projects/song-finder/decisions/2026-10-09-motor-kimligi-uygulama-basina-console-api-anahtari|karar]]. Model talimatı `src/ai-prompt.md`; araştırma aşaması `src/research-prompt.md` (yalnız WebSearch/WebFetch). CLI'ye giden metinde `@` → `＠`. Neden: [[2026-10-04-ai-motoru-sunucu-icinde-claude-cli]].
+- AI motoru: sunucu içinden `claude -p` başsız kip, araçsız, kimlik 2026-10-09'dan beri Console API anahtarı `rehber-prod` (`ANTHROPIC_API_KEY`, `/etc/rehber.env`); anahtar yoksa abonelik belirtecine (`CLAUDE_CODE_OAUTH_TOKEN`) döner: [[2026-10-09-motor-kimligi-uygulama-basina-console-api-anahtari|karar]]. Model talimatı `src/ai-prompt.md`; araştırma aşaması `src/research-prompt.md` (yalnız WebSearch/WebFetch). CLI'ye giden metinde `@` → `＠`. Neden: [[2026-10-04-ai-motoru-sunucu-icinde-claude-cli]].
 - Sahip girişi (`OWNER_PASSWORD`, en az 12 karakter): AI üretimini yalnız sahip başlatır; ziyaretçi rehber ekler ve okur.
 - Arayüzde `innerHTML` yok, inline script/style yok (tools kökeni Ziroobank ile ortak): [[2026-10-03-joker-dns-ve-tools-games-alt-alan-adlari]].
 - Elle müdahale CLI: `node src/cli.js list|show|claim|submit|fail|requeue|delete|stats|add|import-html|research|cancel`.
@@ -47,7 +47,7 @@ https://tools.ziroo.net/rehber → konteyner `rehber` (127.0.0.1:8095, deneme 80
 ## Oturumlar
 - [[2026-10-04-ilk-surum-ve-yayin]]
 - [[2026-10-05-kalite-dil-arastirma-iptal]]
-- [[10-Projects/song-finder/sessions/2026-10-09-api-anahtarina-gecis-ve-sonnet|2026-10-09 API anahtarına geçiş ve Sonnet]] (Song Finder ile ortak oturum)
+- [[2026-10-09-api-anahtarina-gecis-ve-sonnet|2026-10-09 API anahtarına geçiş ve Sonnet]] (Song Finder ile ortak oturum)
 
 ## Güncel durum (2026-10-09)
 - **2026-10-09:** motor kimliği Console API anahtarı `rehber-prod`, `REHBER_MODEL=sonnet` (opus'tan çekildi; araştırma modeli boş olduğu için o da sonnet), yayında `c695e5a`. Sonnet ile kart kalitesi henüz denenmedi; düşerse yalnız bu araç Opus'a döner.

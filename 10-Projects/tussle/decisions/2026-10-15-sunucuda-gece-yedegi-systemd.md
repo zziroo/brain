@@ -28,8 +28,8 @@ Gece gözcüsüne yedek yaşı kontrolü eklenirken Tussle'ın sunucu düzeyinde
 
 ## Sonuçlar / riskler
 - Sunucuda doğrulandı: zamanlayıcı etkin, sonraki tetik 2026-10-16 04:24; ilk iki elle çalıştırma 92 KB yedek üretti.
-- Mac yedek aynası ([[10-Projects/diskort/decisions/2026-10-15-yedek-aynasi-mac-launchd|Diskort aynası]]) 2026-10-16 itibarıyla Tussle'ı da çekiyor, 14 gün ([[2026-10-16-yedek-tutma-sureleri-gizlilik-sozune-baglandi]]).
-- Yan oturum yanlış klasörde (ZZ) açıldı, iş mutlak yollarla doğru yürüdü ([[20-Areas/working-rules/2026-10-15-oneri-karti-mevcut-klasorde-acilir|ders]]).
+- Mac yedek aynası ([[2026-10-15-yedek-aynasi-mac-launchd|Diskort aynası]]) 2026-10-16 itibarıyla Tussle'ı da çekiyor, 14 gün ([[2026-10-16-yedek-tutma-sureleri-gizlilik-sozune-baglandi]]).
+- Yan oturum yanlış klasörde (ZZ) açıldı, iş mutlak yollarla doğru yürüdü ([[2026-10-15-oneri-karti-mevcut-klasorde-acilir|ders]]).
 
 ## İlgili
-- [[_overview]], [[10-Projects/diskort/decisions/2026-10-15-gozcu-birlesik-dort-bolum|gözcü]]
+- [[_overview]], [[2026-10-15-gozcu-birlesik-dort-bolum|gözcü]]

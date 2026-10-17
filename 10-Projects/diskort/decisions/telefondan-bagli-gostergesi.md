@@ -28,4 +28,4 @@ Eski istemciler alanı yok sayar, karışık oturumda yük aynı kalır; geriye 
 - "boşta + telefon" fiilen "uygulama arka planda" bilgisini verir (ürün tercihi).
 
 ## İlgili
-- [[arkadaslik-sistemi]], [[sessions/2026-10-10-macos-imza-telefon-gostergesi-0-10-3]]
+- [[arkadaslik-sistemi]], [[2026-10-10-macos-imza-telefon-gostergesi-0-10-3]]

@@ -23,4 +23,4 @@ Bot ve `tools/dev.js` hareket vektörünü kendileri verdiği için `readMove` (
 ## İncelemeden çıkan diğer düzeltmeler
 Eski sekmenin yeni kaydı ezmesi (kayıt damgası + bayat sekme yeniden yüklenir), tıklanan düğmede kalan odak yüzünden Boşluk/Enter'ın çift iş yapması, dokunmatikte ikinci parmağın yönlendirmeyi bozması, fener tozunun ve boss zaferinin kazanıldığı anda kaydedilmemesi.
 
-İlgili: [[10-Projects/isik-bekcisi/_overview|Işık Bekçisi]], [[10-Projects/bal-vadisi/lessons/2026-10-02-gizli-onizleme-panelinde-raf-durur|Gizli önizleme panelinde rAF durur]]
+İlgili: [[10-Projects/isik-bekcisi/_overview|Işık Bekçisi]], [[2026-10-02-gizli-onizleme-panelinde-raf-durur|Gizli önizleme panelinde rAF durur]]

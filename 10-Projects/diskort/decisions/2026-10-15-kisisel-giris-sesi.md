@@ -34,4 +34,4 @@ Dararius'un #34 önerisi ([[2026-10-15-kisisel-giris-sesi-ertelendi]] ile ertele
 - `ffmpeg-static` npm paketi: kurulumda GitHub'dan indirme, Docker derlemesinde kırılgan; Debian apt seçildi.
 
 ## İlgili
-- [[2026-10-15-kisisel-giris-sesi-ertelendi]] (superseded) · [[tek-ses-paketi]] · [[sessions/2026-10-15-kisisel-giris-sesi-ve-0-11-1]]
+- [[2026-10-15-kisisel-giris-sesi-ertelendi]] (superseded) · [[tek-ses-paketi]] · [[2026-10-15-kisisel-giris-sesi-ve-0-11-1]]

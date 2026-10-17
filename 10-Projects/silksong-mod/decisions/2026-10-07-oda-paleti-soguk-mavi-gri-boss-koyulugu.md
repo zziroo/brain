@@ -37,4 +37,4 @@ Yusuf NEW2-m odasını fazla parlak buldu ("tam Silksong havası vermedi"). Oyun
 ## İlgili
 - [[2026-10-07-biyom-cam-ocaklari-buz-mavisi]]
 - [[2026-10-07-oyun-vinyeti-karanlik-seviyesi]]
-- [[10-Projects/silksong-mod/design/notes-katman-plani|katman planı]]
+- [[notes-katman-plani|katman planı]]

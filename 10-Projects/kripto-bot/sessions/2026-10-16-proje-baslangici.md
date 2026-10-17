@@ -16,11 +16,11 @@ source: ZZ oturumu "kripto-bot: proje başlangıcı" (2026-10-16)
 - Faz 1 oturumu başlatılamadı (otomatik tur reddi); Yusuf'un "başlat" demesi bekleniyor.
 
 ## Alınan kararlar
-- [[10-Projects/kripto-bot/decisions/claude-rolu-kurucu-ve-gozetmen]]
-- [[10-Projects/kripto-bot/decisions/binance-global-tr-degil]]
+- [[claude-rolu-kurucu-ve-gozetmen]]
+- [[binance-global-tr-degil]]
 
 ## Öğrenilenler
-- [[10-Projects/kripto-bot/lessons/start-session-otomatik-tur-reddi]]
+- [[start-session-otomatik-tur-reddi]]
 
 ## Açık kalanlar
 - Stack onayı (Python + ccxt önerisi) ve bütçe/kayıp limiti varsayılanları Faz 1 oturumunda sorulacak.

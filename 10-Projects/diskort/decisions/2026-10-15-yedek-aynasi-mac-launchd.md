@@ -30,4 +30,4 @@ Windows'taki Görev Zamanlayıcı işi (`pull-db-backups.ps1` → OneDrive) 2026
 - Mac uykudaysa launchd uyanınca çalıştırır; kapalıysa o gün atlanır.
 
 ## İlgili
-- [[yedekler]], [[10-Projects/tussle/decisions/2026-10-15-sunucuda-gece-yedegi-systemd|Tussle gece yedeği]]
+- [[yedekler]], [[2026-10-15-sunucuda-gece-yedegi-systemd|Tussle gece yedeği]]

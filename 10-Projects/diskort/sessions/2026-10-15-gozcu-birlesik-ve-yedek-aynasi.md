@@ -10,11 +10,11 @@ source: Claude Code oturumu 2026-10-15 "ZZ: yeni oturum yapısı ve SSH izinleri
 # Oturum: masaüstü güncellemesi incelendi; gözcü dört bölüme birleşti, SSH alias'ı ve Mac yedek aynası kuruldu
 
 ## Yapılanlar
-- Yeni oturum yapısı (yan oturum, preset, cloud, SSH bağlantısı) anlatıldı; ajan modeli korundu, kurallar CLAUDE.md'ye yazıldı ([[20-Areas/working-rules/2026-10-15-yan-oturum-ssh-alias-auto-mod|karar]]).
+- Yeni oturum yapısı (yan oturum, preset, cloud, SSH bağlantısı) anlatıldı; ajan modeli korundu, kurallar CLAUDE.md'ye yazıldı ([[2026-10-15-yan-oturum-ssh-alias-auto-mod|karar]]).
 - `ssh vps` alias'ı ve izin kuralları; `defaultMode: auto`.
 - Gözcü birleştirildi ve ilk deneme temiz geçti ([[2026-10-15-gozcu-birlesik-dort-bolum]]); sağlık adımına yedek yaşı, boyutlar ve Mac ayna günlüğü eklendi.
 - Mac yedek aynası: `scripts/pull-db-backups.sh` + launchd ([[2026-10-15-yedek-aynasi-mac-launchd]]), Diskort main `8b65d32`.
-- Tussle gece yedeği yan oturumda kuruldu, Tussle main `90bf620` ([[10-Projects/tussle/decisions/2026-10-15-sunucuda-gece-yedegi-systemd|karar]]).
+- Tussle gece yedeği yan oturumda kuruldu, Tussle main `90bf620` ([[2026-10-15-sunucuda-gece-yedegi-systemd|karar]]).
 - İlk gözcü raporunda dikkat çeken: 14 Ekim gecesi ekran paylaşımında bir kez sunucu CPU baskısı %65 (tekrar ederse izlenecek).
 
 ## Açık işler
@@ -29,4 +29,4 @@ source: Claude Code oturumu 2026-10-15 "ZZ: yeni oturum yapısı ve SSH izinleri
 - Gözcünün 00:10 gece çalışması yeni metinle henüz koşmadı (elle 12:00'de koştu).
 
 ## İlgili
-- [[_overview]], [[yedekler]], [[20-Areas/working-rules/zamanlanmis-gorevler-ve-skiller|zamanlanmis-gorevler-ve-skiller]]
+- [[_overview]], [[yedekler]], [[zamanlanmis-gorevler-ve-skiller|zamanlanmis-gorevler-ve-skiller]]

@@ -31,7 +31,7 @@ Gelen kutusu Mac'te `/Users/ziroo/diskort-inbox/` (okunanlar `okundu/`), akış:
 **Windows:** iki görev de kapalı (2026-10-07'den beri); Windows yalnız Silksong için ([[2026-10-07-windows-makinesi-yalniz-silksong-icin]]).
 
 ## `skills/synced`
-**Windows dönemi bilgisi:** Tek bir senkronizasyon klasörü (hesap kimliği adlı) vardı; içinde Anthropic hesap skilleri: built-in-browser, chrome-browser, computer-use, deep-research, docs, docx, google-workspace, import-memory, morning, pdf, pptx, setup-writing-style, skill-creator, xlsx, bir `manifest.json`. Mac'te `~/.claude/skills/synced` yok (2026-10-07); `~/.claude/skills/` altında kullanıcı skilleri `basla` ve `kaydet` var. Windows'ta kullanıcıya özgü skill burada görünmüyordu (içerikleri tek tek okunmadı, yalnız klasör adlarına bakıldı).
+**Windows dönemi bilgisi:** Tek bir senkronizasyon klasörü (hesap kimliği adlı) vardı; içinde Anthropic hesap skilleri: built-in-browser, chrome-browser, computer-use, deep-research, docs, docx, google-workspace, import-memory, morning, pdf, pptx, setup-writing-style, skill-creator, xlsx, bir `manifest.json`. Mac'te `~/.claude/skills/synced` yok (2026-10-07); `~/.claude/skills/` altında kullanıcı skilleri: `kaydet`, `bitir`, `canli`, `pano` (2026-10-17; `basla` kaldırıldı, yerine SessionStart hook'u). Windows'ta kullanıcıya özgü skill burada görünmüyordu (içerikleri tek tek okunmadı, yalnız klasör adlarına bakıldı).
 
 ## İlgili
 - [[inceleme-kapisi]], [[izinler-ve-ayarlar]], [[_index]]

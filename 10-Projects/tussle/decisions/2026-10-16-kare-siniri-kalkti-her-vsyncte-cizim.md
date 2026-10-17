@@ -30,4 +30,4 @@ Yusuf Android'de (Xiaomi 17 Pro, OnePlus 15) oyunların 120 Hz'de takıldığın
 ## İlgili
 - [[2026-10-16-90-hz-ekranda-60-fps-siniri-duzensiz-kare]] (bu kararın çıkış hipotezi)
 - [[2026-10-08-web-cekirdegi-capacitor-ve-ad-tussle]] (eski "varsayılan 60 kare sınırı")
-- [[sessions/2026-10-16-tussle-kare-hizi-webview]]
+- [[2026-10-16-tussle-kare-hizi-webview]]

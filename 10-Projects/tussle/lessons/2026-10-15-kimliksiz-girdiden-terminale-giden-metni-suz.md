@@ -16,4 +16,4 @@ source: Claude Code oturumu 2026-10-15 "tussle: hata toplama + geri bildirim" (i
 - Sunucuda da (`cut` içinde, satır sonu ve sekme hariç) süz: dosyayı `tail`/`less`/editör de okur; CLI süzgeci yine kalır (eski kayıtlar, sunucuya güvenmeme).
 - Orta bulguda şüpheci ajan kuralı iyi çalıştı: bulguyu onayladı ve iki eksik (bozuk satır dalı, Unicode yön işaretleri) ekledi.
 
-İlgili: [[decisions/2026-10-15-istemci-hata-toplama-jsonl-geri-bildirim-sqlite]]
+İlgili: [[2026-10-15-istemci-hata-toplama-jsonl-geri-bildirim-sqlite]]

@@ -4,7 +4,7 @@ project: tussle
 date: 2026-10-17
 status: active
 tags: [tussle, android, twa, chrome, ders]
-source: oturum 2026-10-17 gece (mobil-playus) TWA deneme ve geçiş, [[sessions/2026-10-17-tussle-twa-deneme]]
+source: oturum 2026-10-17 gece (mobil-playus) TWA deneme ve geçiş, [[2026-10-17-tussle-twa-deneme]]
 ---
 
 # Ders: androidbrowserhelper ile elle TWA kurarken tuzaklar (2.7.4, Chrome 155, Android 16)

@@ -31,4 +31,4 @@ Yusuf mağaza ikonunda şapkanın tam ortalı olmadığını sordu. Kontrolde as
 - Telefondaki uyarlanabilir ikon zaten doğru görünüyordu (Yusuf ekran görüntüsü, 2026-10-16).
 
 ## İlgili
-- [[_overview]] · [[2026-10-08-marka-maskotu-uclu-blok-ve-ikon]] · [[2026-10-16-play-ekran-orani-ve-32-bit-ikon]] · [[sessions/2026-10-16-tussle-magaza-yayini-ve-play-console]]
+- [[_overview]] · [[2026-10-08-marka-maskotu-uclu-blok-ve-ikon]] · [[2026-10-16-play-ekran-orani-ve-32-bit-ikon]] · [[2026-10-16-tussle-magaza-yayini-ve-play-console]]

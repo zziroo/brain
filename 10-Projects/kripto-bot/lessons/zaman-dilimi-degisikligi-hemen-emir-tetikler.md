@@ -18,5 +18,5 @@ source: kripto-bot oturumu "4 saatlik mumlara geçiş" (2026-10-16)
 Ayrıca: Yusuf'a strateji rakamı verirken örneklem dışı (walk-forward) sonucu ver. 4h için önce örneklem içi "+29/+30%" söylendi, OOS BTC +8% (B&H +31%) çıktı; sonradan düzeltildi.
 
 ## İlgili
-- [[10-Projects/kripto-bot/decisions/zaman-dilimi-4h-yusuf-tercihi]]
-- [[10-Projects/kripto-bot/decisions/faz2-emir-dongusu-guvenlik-tasarimi]]
+- [[zaman-dilimi-4h-yusuf-tercihi]]
+- [[faz2-emir-dongusu-guvenlik-tasarimi]]

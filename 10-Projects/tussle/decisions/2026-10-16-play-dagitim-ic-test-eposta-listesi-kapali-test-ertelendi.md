@@ -35,4 +35,4 @@ Play Console'da uygulama oluşturuldu, AAB iç teste yüklendi, 11 kurulum göre
 - Play Console ekranlarında URL'ler değişken; kontrol paneli görev listesi üzerinden gidilir.
 
 ## İlgili
-- [[_overview]] · [[2026-10-13-magaza-hesaplari-apple-bireysel-play-ziroo]] · [[2026-10-16-gizlilik-sayfasi-sunucudan-statik-en-tr]] · [[2026-10-16-play-veri-guvenligi-formu-taslak-kaydet-diyalog-yigini]] · [[sessions/2026-10-16-tussle-magaza-yayini-ve-play-console]]
+- [[_overview]] · [[2026-10-13-magaza-hesaplari-apple-bireysel-play-ziroo]] · [[2026-10-16-gizlilik-sayfasi-sunucudan-statik-en-tr]] · [[2026-10-16-play-veri-guvenligi-formu-taslak-kaydet-diyalog-yigini]] · [[2026-10-16-tussle-magaza-yayini-ve-play-console]]

@@ -9,14 +9,14 @@ source: Claude Code oturumu 2026-10-16 "ziroo-edge: ops katmanı (Kuma + Netdata
 
 # Proje altyapı standardı: her uygulama ne sunar, nereye kaydedilir, panelinde ne olur
 
-Yeni bir uygulama (oyun, araç, servis) yayına girerken bu kalıba uyar; var olanlar da zamanla buna çekilir. Üç katman: **uygulama** (projenin kendisi), **makine** (ziroo-edge `ops/`, ops.ziroo.net), **rapor** (gece gözcüsü). Karar: [[10-Projects/tussle/decisions/2026-10-16-izleme-katmanlari-uygulama-paneli-ve-makine-izleme]], [[10-Projects/diskort/decisions/2026-10-16-ops-katmani-kuma-netdata-ziroo-edge]], [[10-Projects/diskort/decisions/2026-10-16-makine-sagligi-kuma-push-gozcuden-cikti]].
+Yeni bir uygulama (oyun, araç, servis) yayına girerken bu kalıba uyar; var olanlar da zamanla buna çekilir. Üç katman: **uygulama** (projenin kendisi), **makine** (ziroo-edge `ops/`, ops.ziroo.net), **rapor** (gece gözcüsü). Karar: [[2026-10-16-izleme-katmanlari-uygulama-paneli-ve-makine-izleme]], [[2026-10-16-ops-katmani-kuma-netdata-ziroo-edge]], [[2026-10-16-makine-sagligi-kuma-push-gozcuden-cikti]].
 
 ## 1. Uygulamanın sunduğu (proje sözleşmesi)
 - **Sağlık ucu:** `GET /healthz` → `200`, `text/plain`, gövde `ok`; sürecin kendisi cevaplar (statik dosya ya da Caddy yedeği değil). Kendi alan adında `https://<ad>.ziroo.net/healthz`, tools altında `https://tools.ziroo.net/<ad>/healthz`. Uygulamanın başka ad kullanması gerekiyorsa (`/api/health` gibi) `/healthz` da sunulur.
 - **Konteyner:** adı proje adı (`tussle`, `kapis`, `rehber`); `127.0.0.1:<port>`'ta dinler; Caddy dosyası `/opt/ziroo-sites/hosts/<ad>.caddy` ya da `tools|games/<ad>.caddy` (ziroo-edge README "Yeni proje eklemek"). Diskort'un `infra-api-1` / `infra-livekit-1` adları tarihsel istisna.
 - **Yerleşim:** kod `/opt/<ad>`, veri `/opt/<ad>/data`, sırlar `/opt/<ad>/.env` (600). Loglar `data/logs/*.jsonl`, döndürmeli (20 MB), yedeğe girmez.
 - **Yedek (veritabanı varsa):** gece systemd timer → `/var/backups/<ad>/latest.db.gz` (+ tarihli kopyalar, 14 gün). Kuma 26 saatte bir sinyal bekler.
-- **Geri bildirim ve istemci hataları (kullanıcısı olan uygulamalar):** `POST /api/feedback` (girişli, kota) ve `POST /api/client-error` (kimliksiz, IP kotası, maskeli) — Tussle örneği [[10-Projects/tussle/decisions/2026-10-15-istemci-hata-toplama-jsonl-geri-bildirim-sqlite]].
+- **Geri bildirim ve istemci hataları (kullanıcısı olan uygulamalar):** `POST /api/feedback` (girişli, kota) ve `POST /api/client-error` (kimliksiz, IP kotası, maskeli) — Tussle örneği [[2026-10-15-istemci-hata-toplama-jsonl-geri-bildirim-sqlite]].
 
 ## 2. Admin paneli (yalnız uygulamanın kendi bilgisi)
 - Adres `/admin` (kendi alan adında) ya da `/<ad>/admin`; `.env`'de `ADMIN_TOKEN`; salt okunur + "incelendi" işareti. Tek sayfa DOM, dış kütüphane yok.
@@ -42,4 +42,4 @@ Yeni bir uygulama (oyun, araç, servis) yayına girerken bu kalıba uyar; var ol
 | Araçlar (steam-avgr, rehber, song-finder, pdf-ceviri, ziroobank) | var (ziroobank `/`) | site; ziroobank konteyner | — | yok | ziroobank'a `/healthz` eklenebilir |
 
 ## İlgili
-- ziroo-edge README "Makine izleme" ve "Yeni proje eklemek" · [[10-Projects/diskort/runbooks/sunucu-vps|sunucu-vps]]
+- ziroo-edge README "Makine izleme" ve "Yeni proje eklemek" · [[sunucu-vps|sunucu-vps]]

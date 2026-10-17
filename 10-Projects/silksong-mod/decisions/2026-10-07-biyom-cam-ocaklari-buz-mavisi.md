@@ -39,4 +39,4 @@ Tasarım bölgeyi Deep Docks'a bağlı bir dökümhane alt bölgesi olarak tarif
 - [[2026-10-07-sahne-yolu-kabuk-demo-end-ve-kayit-hijyeni]]
 - [[2026-10-07-sahne-lorasi-veri-dengesi]]
 - [[2026-10-07-silksong-sahne-yapisi-olculen-degerler]]
-- [[10-Projects/silksong-mod/design/notes-katman-plani|Katman planı]]
+- [[notes-katman-plani|Katman planı]]

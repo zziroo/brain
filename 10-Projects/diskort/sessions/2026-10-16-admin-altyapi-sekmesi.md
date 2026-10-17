@@ -19,7 +19,7 @@ source: Claude Code yan oturumu 2026-10-16 gece (Mac) "diskort: admin Altyapı s
 - Vault: standart notundaki "Mevcut durum" tablosu, overview, admin runbook'u güncellendi.
 
 ## Alınan kararlar
-- [[decisions/2026-10-16-admin-paneli-makine-geneli-netdataya-tasindi]]
+- [[2026-10-16-admin-paneli-makine-geneli-netdataya-tasindi]]
 
 ## Öğrenilenler
 - Yeni ders yok. Deploy sırasında seste kişi varken api konteynerini yeniden kurmak sesi düşürmedi (LiveKit ayrı; gateway yeniden bağlandı).

@@ -36,4 +36,4 @@ Bireysel Play hesabında mağazaya çıkmak için 12 test kullanıcısının 14 
 - PC'de Google Play Games form faktörünün pakette "etkin" gitmesi bilerek seçilmedi (Console'un varsayılanı gibi görünüyor); sorun çıkarırsa Gelişmiş ayarlar'dan kapatılır.
 
 ## İlgili
-- [[_overview]] · [[2026-10-16-play-dagitim-ic-test-eposta-listesi-kapali-test-ertelendi]] · [[2026-10-16-play-kapali-test-kurulumu-onay-captcha-ve-ad-id-engeli]] · [[sessions/2026-10-16-tussle-play-kapali-test-google-grubu]]
+- [[_overview]] · [[2026-10-16-play-dagitim-ic-test-eposta-listesi-kapali-test-ertelendi]] · [[2026-10-16-play-kapali-test-kurulumu-onay-captcha-ve-ad-id-engeli]] · [[2026-10-16-tussle-play-kapali-test-google-grubu]]

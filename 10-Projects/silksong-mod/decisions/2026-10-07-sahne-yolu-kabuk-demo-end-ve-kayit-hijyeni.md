@@ -39,4 +39,4 @@ Bölgenin odalarının oyunda birer sahne olarak var olması gerekiyor. Mevcut b
 ## İlgili
 - [[2026-10-06-kayit-yonlendirme-diske-gomulu-dll]]
 - [[2026-10-07-oyun-vinyeti-karanlik-seviyesi]]
-- [[10-Projects/silksong-mod/design/notes-sahne-yolu|Sahne yolu notu]]
+- [[notes-sahne-yolu|Sahne yolu notu]]

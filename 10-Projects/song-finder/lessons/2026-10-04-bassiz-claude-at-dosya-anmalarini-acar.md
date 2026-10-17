@@ -16,4 +16,4 @@ source: oturum 2026-10-04 (song-finder), deneme dosyasıyla doğrulandı (CLI 2.
 **Ayrıca:** `--restricted` + `--system-prompt` ile kullanıcı `CLAUDE.md`'si yüklenmiyor, ama işçi bağlamında hesap e-postası ve ortam bilgisi duruyor.
 
 Bağlantı: [[10-Projects/song-finder/_overview|Song Finder]]
-- 2026-10-05: Rehber Okuyucu'da (CLI stdin, araştırma aşaması) de doğrulandı ve aynı yöntemle kapatıldı: [[10-Projects/rehber-okuyucu/lessons/claude-cli-gizli-max-turns-bayragi]]
+- 2026-10-05: Rehber Okuyucu'da (CLI stdin, araştırma aşaması) de doğrulandı ve aynı yöntemle kapatıldı: [[claude-cli-gizli-max-turns-bayragi]]

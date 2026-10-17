@@ -34,5 +34,5 @@ Mevcut biçimlendirme hattı ve okuyucu aynen kullanılır; araştırma rehberi 
 - Web'den gelen metin herkese açık yayınlanır (yalnız metin olarak çizilir).
 
 ## İlgili
-- [[10-Projects/song-finder/lessons/2026-10-04-bassiz-claude-at-dosya-anmalarini-acar]]
+- [[2026-10-04-bassiz-claude-at-dosya-anmalarini-acar]]
 - [[10-Projects/rehber-okuyucu/_overview|Rehber Okuyucu]]

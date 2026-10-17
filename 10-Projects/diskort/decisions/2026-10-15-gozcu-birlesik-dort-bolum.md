@@ -36,8 +36,8 @@ Masaüstü uygulaması güncellenince zamanlanmış görevler ve şablonlar yeni
 ## Sonuçlar / riskler
 - İlk deneme 2026-10-15 12:00: 19 commit / 144 dosya tarandı, önemli bulgu yok, sunucu sağlam, ~10 dk, Fable high. Rutinin modeli uygulamanın rutin ayarından düşürülebilir (Opus medium yeter); henüz yapılmadı.
 - `git grep` izni eksikti, iki kez sordu; diskort `settings.local.json`'a `git -C <repo> grep *` ve `ls-tree *` eklendi.
-- Global `permissions.defaultMode: auto` açıldı; rutinler ve yeni oturumlar auto başlar ([[20-Areas/working-rules/izinler-ve-ayarlar|izinler-ve-ayarlar]]).
+- Global `permissions.defaultMode: auto` açıldı; rutinler ve yeni oturumlar auto başlar ([[izinler-ve-ayarlar|izinler-ve-ayarlar]]).
 
 ## İlgili
 - Önceki: [[2026-10-10-gozcu-gunluk-gece-incelemesi-kaldirildi]] (superseded), [[gozcu-ve-gece-inceleme-rutinleri]]
-- [[20-Areas/working-rules/zamanlanmis-gorevler-ve-skiller|zamanlanmis-gorevler-ve-skiller]], [[gelen-kutusu-ve-rutinler]], [[yedekler]]
+- [[zamanlanmis-gorevler-ve-skiller|zamanlanmis-gorevler-ve-skiller]], [[gelen-kutusu-ve-rutinler]], [[yedekler]]

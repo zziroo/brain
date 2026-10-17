@@ -35,4 +35,4 @@ Kare sınırı kalktıktan sonra ([[2026-10-16-kare-siniri-kalkti-her-vsyncte-ci
 
 ## İlgili
 - [[2026-10-16-90-hz-ekranda-60-fps-siniri-duzensiz-kare]]
-- [[sessions/2026-10-16-tussle-kare-hizi-webview]]
+- [[2026-10-16-tussle-kare-hizi-webview]]

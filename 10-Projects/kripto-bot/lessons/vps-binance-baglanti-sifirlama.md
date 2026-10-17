@@ -17,4 +17,4 @@ source: kripto-bot oturumu "VPS'e taşıma ve Faz 3" (2026-10-16)
 - Mac'ten tar ile taşırken `COPYFILE_DISABLE=1` koy; yoksa `._*` AppleDouble dosyaları ve "unknown extended header" uyarıları gelir. Çıkarınca `chown -R root:root`, yoksa git "dubious ownership" der.
 
 ## İlgili
-- [[10-Projects/kripto-bot/decisions/bot-macte-calisir-vps-binance-engeli]]
+- [[bot-macte-calisir-vps-binance-engeli]]

@@ -19,7 +19,7 @@ source: yan oturum "Tussle: sunucuda gece veritabanı yedeği" (ZZ kökünden ba
 
 ## Açık işler
 - Mac yedek aynasına Tussle'ı eklemek.
-- Yan oturum yanlış klasörde (ZZ) açıldı; ders: [[20-Areas/working-rules/2026-10-15-oneri-karti-mevcut-klasorde-acilir|öneri kartı]].
+- Yan oturum yanlış klasörde (ZZ) açıldı; ders: [[2026-10-15-oneri-karti-mevcut-klasorde-acilir|öneri kartı]].
 
 ## İlgili
 - [[_overview]]

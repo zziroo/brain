@@ -33,5 +33,5 @@ Tekrar okumayı yoruyor ve sırayla okurken bağlamı koparıyordu; kök neden i
 İstem etkisi yalnız yeni üretimlerde görülür; canlıdaki eski belgeler yeniden üretilmeden değişmez (panel ve birebir ayıklama hariç).
 
 ## İlgili
-- [[10-Projects/rehber-okuyucu/decisions/2026-10-04-walkthrough-rehberde-adimlar-yol-haritasinda]]
+- [[2026-10-04-walkthrough-rehberde-adimlar-yol-haritasinda]]
 - [[10-Projects/rehber-okuyucu/_overview|Rehber Okuyucu]]

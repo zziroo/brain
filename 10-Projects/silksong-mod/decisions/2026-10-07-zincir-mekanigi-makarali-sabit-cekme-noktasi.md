@@ -15,7 +15,7 @@ source: Windows oturumu 2026-10-07 akşam (Scoria ilk davranış, repo 82cf0cc, 
 ## Karar
 - **A (seçildi):** zincir şahmerdandan tavandaki makaraya çıkar, ikinci makaradan örsün yanındaki sabit çekme noktasına iner. Scoria ucu aşağı çektikçe çekiç yükselir, bırakınca örse düşer. Scoria A1/B3'ten önce çekme noktasına yürür; bu yürüyüş ek telegraph. Diğer saldırılar her yerden.
 - Yükselmiş çekiç kamerada kalmalı; örsün çarpışması Scoria'yı da durdurmalı (ilk sürümde içinden geçiyor).
-- Tasarım dokümanı güncellendi: [[10-Projects/silksong-mod/design/boss-01-kilnwright-scoria|Boss 01]] başlık notu ve §6.
+- Tasarım dokümanı güncellendi: [[boss-01-kilnwright-scoria|Boss 01]] başlık notu ve §6.
 
 ## Neden
 - A'nın gövde maliyeti tek 6 karelik zincir çekme klibi (kaba pozu zaten var); çekiç, zincir ve makara koddan hareket ediyor, kare istemiyor.

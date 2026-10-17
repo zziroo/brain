@@ -10,7 +10,7 @@ source: kripto-bot oturumu "4 saatlik mumlara geçiş" (2026-10-16)
 # Karar: Zaman dilimi 1d → 4h (Yusuf'un tercihi); strateji ve kill switch %40 aynen
 
 ## Bağlam
-Yusuf botun kısa vadeli, sık al-sat yapacağını sanıyordu; 1d stratejide ilk gün hiç emir çıkmayınca "anlık al-sat, belki kaldıraç" diye sordu. 1h'in maliyet yüzünden zararda olduğu ([[10-Projects/kripto-bot/decisions/strateji-1d-trend-filtresi-ve-kill-switch-40|1d kararı]]) ve kaldıracın proje kuralıyla yasak olduğu anlatıldı; ara seçenek olarak 4h sunuldu. Yusuf "daha riskli işlemlere okeyim" dedi.
+Yusuf botun kısa vadeli, sık al-sat yapacağını sanıyordu; 1d stratejide ilk gün hiç emir çıkmayınca "anlık al-sat, belki kaldıraç" diye sordu. 1h'in maliyet yüzünden zararda olduğu ([[strateji-1d-trend-filtresi-ve-kill-switch-40|1d kararı]]) ve kaldıracın proje kuralıyla yasak olduğu anlatıldı; ara seçenek olarak 4h sunuldu. Yusuf "daha riskli işlemlere okeyim" dedi.
 
 ## Karar
 - `config.yaml`: `timeframe: 4h`, walk-forward `train_bars: 2190`, `test_bars: 540` (commit `9c16fde`). Strateji `trend_filter_cross` 20/50/200, min_hold 5, cooldown 3 aynen (bar cinsinden: 20 saat elde tut, 12 saat bekle).
@@ -33,5 +33,5 @@ Yusuf botun kısa vadeli, sık al-sat yapacağını sanıyordu; 1d stratejide il
 
 ## İlgili
 - [[10-Projects/kripto-bot/_overview]]
-- [[10-Projects/kripto-bot/decisions/strateji-1d-trend-filtresi-ve-kill-switch-40]]
-- [[10-Projects/kripto-bot/lessons/zaman-dilimi-degisikligi-hemen-emir-tetikler]]
+- [[strateji-1d-trend-filtresi-ve-kill-switch-40]]
+- [[zaman-dilimi-degisikligi-hemen-emir-tetikler]]

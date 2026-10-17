@@ -39,4 +39,4 @@ source: Windows oturumu 2026-10-07 (oyun içi karşılaştırmalar Room_Forge, t
 
 ## İlgili
 - [[2026-10-07-animasyon-hatti-kukla-kaba-poz-v8c-lora]]
-- [[10-Projects/silksong-mod/design/boss-01-kilnwright-scoria|Boss 01 tasarımı §5]]
+- [[boss-01-kilnwright-scoria|Boss 01 tasarımı §5]]

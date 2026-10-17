@@ -32,5 +32,5 @@ Yusuf hosting tercihini Claude'a bıraktı (Mac zaten hep açık; VPS de var). V
 
 ## İlgili
 - [[10-Projects/kripto-bot/_overview]]
-- [[10-Projects/kripto-bot/lessons/vps-binance-baglanti-sifirlama]]
-- [[10-Projects/kripto-bot/decisions/faz2-emir-dongusu-guvenlik-tasarimi]]
+- [[vps-binance-baglanti-sifirlama]]
+- [[faz2-emir-dongusu-guvenlik-tasarimi]]

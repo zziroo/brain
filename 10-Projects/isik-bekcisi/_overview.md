@@ -172,7 +172,7 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 - [[2026-10-02-paralel-ajan-dallarini-main-ile-ajana-birlestirtmek]]
 - [[2026-10-04-urun-hissi-kararinda-once-secenek-goster]]
 - [[2026-10-04-zorunlu-donus-noktasi-hikaye-kapisi-olabilir]]
-- [[10-Projects/bal-vadisi/lessons/2026-10-02-gizli-onizleme-panelinde-raf-durur|Gizli önizleme panelinde rAF durur]]
+- [[2026-10-02-gizli-onizleme-panelinde-raf-durur|Gizli önizleme panelinde rAF durur]]
 - [[2026-10-05-paralel-dallar-ayni-olay-adini-farkli-anlamda-kullanabilir]]
 - [[2026-10-05-gizli-panelde-canvas-goruntusu-yerel-aliciyla]]
 - [[2026-10-05-yakalama-basina-odul-sinerjiyi-carpana-cevirir]]

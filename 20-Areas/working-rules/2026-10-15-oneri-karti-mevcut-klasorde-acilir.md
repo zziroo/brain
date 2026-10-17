@@ -17,4 +17,4 @@ Tussle gece yedeği işi ZZ kökündeki oturumdan `start_session` kartı olarak 
 - CLAUDE.md "Side sessions" maddesine yazıldı (2026-10-15).
 
 ## İlgili
-- [[2026-10-15-yan-oturum-ssh-alias-auto-mod]], [[orkestrasyon]], [[10-Projects/tussle/decisions/2026-10-15-sunucuda-gece-yedegi-systemd|Tussle gece yedeği]]
+- [[2026-10-15-yan-oturum-ssh-alias-auto-mod]], [[orkestrasyon]], [[2026-10-15-sunucuda-gece-yedegi-systemd|Tussle gece yedeği]]

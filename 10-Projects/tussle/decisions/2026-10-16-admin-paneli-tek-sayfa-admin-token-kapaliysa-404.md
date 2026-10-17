@@ -43,4 +43,4 @@ source: Claude Code oturumu 2026-10-16 "tussle: admin paneli" (yayın 7d01386)
 - Küçük açıklar: 403 dışı bir 403/404 (ör. `bad_origin`) anahtarı silmez artık, yalnız `admin.forbidden`/`no_endpoint` siler. İsteğe bağlı testler: anahtarsız ack, `%61dmin` yol varyantı, `dataDir: null`.
 
 ## İlgili
-- [[_overview]] · [[2026-10-16-izleme-katmanlari-uygulama-paneli-ve-makine-izleme]] · [[2026-10-15-istemci-hata-toplama-jsonl-geri-bildirim-sqlite]] · [[sessions/2026-10-16-tussle-admin-paneli]]
+- [[_overview]] · [[2026-10-16-izleme-katmanlari-uygulama-paneli-ve-makine-izleme]] · [[2026-10-15-istemci-hata-toplama-jsonl-geri-bildirim-sqlite]] · [[2026-10-16-tussle-admin-paneli]]
