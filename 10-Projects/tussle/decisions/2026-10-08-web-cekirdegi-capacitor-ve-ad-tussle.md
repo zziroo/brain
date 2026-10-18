@@ -24,3 +24,5 @@ Oyun çekirdeği DOM'dan bağımsız saf TS + Canvas 2D; aynı paket `tussle.zir
 - Flutter + Flame / Godot: tek gerekçe iPhone'da 120 Hz'di; Yusuf 120'yi şart olmaktan çıkardı. Yeni dil ve araç zinciri.
 - Unity: ağır, ısınma (Playus'un sorunu).
 - Adlar: Panayır (Türkiye dışı zayıf), Meydan/Dakika (genel), Kapışma (KAPIŞ'a yakın), Rakip (Mini Rival var), Dustup/Kerfuffle/Bout (ikinci sırada kaldı).
+
+**Ek (2026-10-18):** "iPhone'da 120 Hz için Flutter/Godot gerekir, WKWebView 60'ta" varsayımı yanlıştı: WKWebView iOS 15'ten beri 120 Hz çizebiliyor, yalnız uygulamanın Info.plist'ine `CADisableMinimumFrameDurationOnPhone = YES` konması şart (varsayılan 60 kilidi). Anahtar `ab842fd` ile eklendi; cihazda henüz ölçülmedi (Yusuf'ta iOS cihaz yok).
