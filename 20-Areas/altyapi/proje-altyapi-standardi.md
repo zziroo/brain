@@ -31,7 +31,7 @@ Yeni bir uygulama (oyun, araç, servis) yayına girerken bu kalıba uyar; var ol
 - Smoke: ziroo-edge `test/smoke.sh`'e `/healthz` satırı (saatlik betik koşturur).
 
 ## 4. Rapor katmanı (gece gözcüsü)
-- Projeye özgü bölüm (geri bildirim, hata grupları, kod incelemesi) gözcüye eklenir; makine sağlığı eklenmez (Kuma'da).
+- Projeye özgü bölüm (geri bildirim, hata grupları, kod incelemesi) global `gece-gozcusu` görevine eklenir (`~/.claude/scheduled-tasks/gece-gozcusu/SKILL.md`: SYSTEMS satırı, izinli ssh şekli, adım, kod incelemesi sıcak noktaları; repo için `~/ZZ/gozcu/inceleme/<ad>.txt` imleci ve `~/ZZ/.claude/settings.local.json`'a `git -C` kuralları); makine sağlığı eklenmez (Kuma'da). Karar: [[2026-10-18-global-gece-gozcusu]].
 
 ## Mevcut durum (2026-10-16)
 | Proje | /healthz | Kuma | Yedek push | Panel | Not |

@@ -25,7 +25,7 @@ Komut desenleri gruplanmış özettir; literal komutlar, SSH satırları ve hash
 | Git (yazma) | `git branch *`, `git push *` |
 | GitHub CLI | `gh release *`, `gh release view/download`, `gh run *` |
 | MCP | `mcp__scheduled-tasks__list_scheduled_tasks` |
-| Dosya yolları | `Read/Write/Edit` için gelen kutusu `//Users/ziroo/diskort-inbox/**` ve inceleme işaretçisi `//Users/ziroo/diskort-review/**`; `git -C /Users/ziroo/ZZ/zProjects/diskort ...` okuma kuralları |
+| Dosya yolları | `Read/Write/Edit` için eski `//Users/ziroo/diskort-inbox/**` ve `//Users/ziroo/diskort-review/**` (2026-10-18'den beri klasörler yok, kurallar zararsız kalıntı); `git -C /Users/ziroo/ZZ/zProjects/diskort ...` okuma kuralları. Gece gözcüsünün kuralları `~/ZZ/.claude/settings.local.json`'da ([[2026-10-18-global-gece-gozcusu]]) |
 
 Windows dönemi satırları (artık Mac dosyasında yok): `curl` (iOS manifest, IPA indirme), `unzip`, PowerShell biçimli git okuma kuralları, `Read` için eski `~/.claude/diskort-review/` yolu.
 

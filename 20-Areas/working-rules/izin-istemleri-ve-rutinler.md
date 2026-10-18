@@ -13,7 +13,7 @@ source: a7b70327-6e05-4060-a15b-293ddac27162.jsonl, 394744c4-d9f8-5503-a075-3edd
 Kullanıcı "Allow once"tan başka seçenek çıkmadığını ve her seferinde onay gerektiğini bildirdi.
 
 ## Nedenleri ve çözümler
-- `cat <<'EOF'` ile dosya yazmak "gizlenmiş komut" sayılıp yalnız "Allow once" verir. Çözüm: dosya yazmayı Write/Edit araçlarıyla, hata özetini hazır betikle (`diskort-inbox\hata-ozet.js`, sunucuda salt okur) yapmak.
+- `cat <<'EOF'` ile dosya yazmak "gizlenmiş komut" sayılıp yalnız "Allow once" verir. Çözüm: dosya yazmayı Write/Edit araçlarıyla, hata özetini hazır betikle (bugün `~/ZZ/gozcu/araclar/hata-ozet.js`, sunucuda salt okur) yapmak.
 - "Always allow" komutu birebir (commit numarası dahil) kaydeder. Çözüm: `settings.local.json`'a joker kurallar (`git log/diff/show *` Bash ve PowerShell için; `gh release view/download` ile sınırlı).
 - Claude, kendi izin dosyasını değiştiremez (kendi izinlerini değiştirme yasağı); kullanıcı ekler. Kullanıcının elle eklediği dosyada iki kez JSON virgül hatası çıktı; geçersiz JSON tüm izinleri kaybettirebilir, kaydedince doğrula.
 - `.claude` altındaki her dosya "hassas" sayıldığı için izin listesine rağmen yazma onay ister: gelen kutusunu dışarı taşıdık ([[gozcu-ve-gece-inceleme-rutinleri]]).

@@ -2,13 +2,15 @@
 type: decision
 project: diskort
 date: 2026-10-15
-status: active
+status: superseded
 tags: [diskort, rutin, otomasyon, code-review, yedek]
 source: Claude Code oturumu 2026-10-15 "ZZ: yeni oturum yapısı ve SSH izinleri"
 ---
 
 # Karar: Tek gece gözcüsü dört bölüm çalıştırır: geri bildirim, panel hataları, sunucu sağlığı, main kod incelemesi
 
+> 2026-10-18: yerini global gece gözcüsü aldı: [[2026-10-18-global-gece-gozcusu]] (Diskort adımları aynen sürüyor, gelen kutusu `~/ZZ/gozcu/`).
+>
 > 2026-10-16: C bölümü (sunucu sağlığı) Kuma push monitörlerine taşındı, gözcüde yalnız Mac yedek aynası kaldı: [[2026-10-16-makine-sagligi-kuma-push-gozcuden-cikti]].
 
 ## Bağlam

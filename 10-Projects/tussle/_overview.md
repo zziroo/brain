@@ -41,7 +41,7 @@ _Son güncelleme: 2026-10-18 akşam; canlıdan doğrula. Eski ayrıntılı hâl:
 3. **iOS cihazda ilk deneme:** iPhone'lu testçi ile APNs bildirimi ve sandbox satın alma (kod ve sunucu hazır, kimse denemedi). Her iOS yüklemesinden sonra `npm run ios:testflight` (önce `store/testflight-notes.txt`).
 4. **Cila turu kalanı** ([[2026-10-18-tussle-cila-turu-tema-ekranlar]]): mağaza ekran görüntülerini konsollara yükleme (Yusuf, `store/README.md`); telefonda ince konturlar ve parti lobisi/host paneli bakışı. (Gece TWA gezinme çubuğu sorunu TWA bırakıldığı için düştü.)
 5. **Mağaza sonrası:** Play tablet ekranları, kısa açıklama uyarısı.
-6. **Diskort gece gözcüsüne Tussle bölümü**; tanıtımda kimlikli figürler; sonra: yayın partileri, sonsuz oyun rampaları, dolaylı etkileşim/arena, tema toptan düzenleme. Tembel parçalar rafta ([[2026-10-17-oyunlar-tembel-parca-modul-sistemi-rafta]]). Küçük açıklar ve kit işleri arşivde.
+6. ~~Gece gözcüsüne Tussle bölümü~~ yapıldı 2026-10-18: global `gece-gozcusu` her gece Tussle geri bildirimlerini (ack yapmadan), istemci hatalarını ve main commit'lerini tarar, rapor `~/ZZ/gozcu/` ([[2026-10-18-global-gece-gozcusu]]). Tanıtımda kimlikli figürler; sonra: yayın partileri, sonsuz oyun rampaları, dolaylı etkileşim/arena, tema toptan düzenleme. Tembel parçalar rafta ([[2026-10-17-oyunlar-tembel-parca-modul-sistemi-rafta]]). Küçük açıklar ve kit işleri arşivde.
 
 ## Önemli kararlar
 - [[2026-10-18-android-titresim-sistem-ayarini-izler]]: Android titreşimi performHapticFeedback, sistem ayarını izler (MEDIA kararının yerine).

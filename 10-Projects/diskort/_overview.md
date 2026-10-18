@@ -42,7 +42,7 @@ _Son güncelleme: 2026-10-17; canlıdan doğrula. Eski ayrıntılı hâl: [[10-P
 5. **Yayın kalitesi:** yayıncı bit hızı sıçraması; zayıf hatlı izleyiciye düşük katman (ertelendi); Sonar yayın sesi ([[sonar-yayin-sesine-kendi-sesini-katar]]); telefon ısınması (`watch` telemetrisi).
 6. **Prob motoru:** yalnız-UDP kesintileri ayrı sayılsın, boş odadaki "aday" gürültüsü azalsın.
 7. **Geri bildirim #36** (Android arka plan sesleri): Yusuf Xiaomi'de pil kısıtlamasını kapatıp dener; gelmezse sonraki APK'ya telemetri.
-8. **Rutin:** gözcünün yeni metinle ilk gece çalışmasını doğrula, modelini Opus medium'a düşür ([[2026-10-15-gozcu-birlesik-dort-bolum]]). `mic.fallback` ve `reportClientError('kozmetik')` kayıtlarını izle; Etkinlik için gerçek hayat geri bildirimi topla.
+8. **Rutin:** Diskort gözcüsü 2026-10-18'de global `gece-gozcusu`na dönüştü (Diskort adımları aynen; rapor `~/ZZ/gozcu/`, `## Diskort` bölümü; [[2026-10-18-global-gece-gozcusu]]). Modeli Opus medium'a düşürmek hâlâ açık. `mic.fallback` ve `reportClientError('kozmetik')` kayıtlarını izle; Etkinlik için gerçek hayat geri bildirimi topla.
 9. **Yusuf'un cihaz testleri:** telefonda kozmetikler, mobil Skia setleri, mobil ses ekranı ve yayın kutucukları, masaüstü sahne, rolsüz DM profili.
 10. **Repo taşıma artıkları:** sunucu `GITHUB_REPO` varsayılanı sonraki api kurulumunda devreye girer; Yusuf eski `yusufholat` anahtarını iptal eder. Sahipsiz dal `origin/mimari-tanitim-videosu`: karar Yusuf'ta.
 11. **Yusuf'a hatırlat:** eski sunucuyu sil (içinde bilinmeyen bir `set-env.sh` var).
@@ -62,7 +62,7 @@ _Son güncelleme: 2026-10-17; canlıdan doğrula. Eski ayrıntılı hâl: [[10-P
 - Yayın sahnesi: [[yayin-arayuzu-discord-tarzi]], [[sahne-izgarada-coklu-yayin]]; yayın sesi: [[uygulamaya-ozel-yayin-sesi-ertelendi]]
 - Ses: [[model-calisirken-agc-kapali-ve-sinirlayici]], [[2026-10-15-kisisel-giris-sesi]], [[masaustu-yazilimsal-agc]], [[dpdfnet-esikler-gevsetildi-android-ayri-is-parcacigi]], [[konusma-halkasi-duyulan-sesten]]
 - Release: [[surum-cikarma-kurali]], [[surum-1-0-ertelendi]]; imzalama: [[kod-imzalama-ertelendi]] (Windows), [[macos-developer-id-imza-ve-otomatik-guncelleme]]
-- Rutin: [[2026-10-10-gozcu-gunluk-gece-incelemesi-kaldirildi]]; presence: [[telefondan-bagli-gostergesi]]
+- Rutin: [[2026-10-10-gozcu-gunluk-gece-incelemesi-kaldirildi]], [[2026-10-15-gozcu-birlesik-dort-bolum]] (yerini aldı: [[2026-10-18-global-gece-gozcusu]]); presence: [[telefondan-bagli-gostergesi]]
 - Mobil: [[android-min-api-26]], [[mobil-ota-guncelleme]], [[ios-ad-hoc-dagitim]]; UI: [[sunucu-rail-rozeti]]
 
 ## Runbook'lar
