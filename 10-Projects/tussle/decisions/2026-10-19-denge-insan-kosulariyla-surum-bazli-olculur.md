@@ -33,5 +33,10 @@ Bot tabloları iki yönde de kayıyor: takip/ezber oyunlarında bot insandan 2-6
 - Analizi sunucuya uç nokta olarak koymak: tek seferlik okuma için yayın ve bakım yükü; script yeterli.
 - Pratik koşularını saklamaya başlamak: şimdilik gereksiz, günlük + canlı yeterince veri veriyor.
 
-## Bekleyen
-Yusuf hangi oyunların ayarlanacağını seçecek; ayar normal akışla (oyun başına ajan, botlar + tarayıcıda oynama, inceleme ajanı, meta.version artışı), partiler halinde ([[2026-10-13-once-magaza-sonra-denge]]).
+## Yusuf'un kararı (19 Eki)
+- **Kısa koşulu oyunlar şimdilik ellenmiyor:** kısa süre oyunu keşfedememekten olabilir. Yusuf YOSEF'le konuşacak; benzer şikâyet gelirse ele alınır.
+- **Uzunlarda ölçüt "bitiyor mu":** belli bir sonu olan oyun (sabit tur, taban + bonus + 90 sn tavan) uzun da olsa kalır; zorluğu bir yerde durduğu için iyi oyuncuda bitmeyen oyun düzeltilir. Bu ayrımla:
+  - Bitmeyen (aday): **Bardak** v5 (hız 19. turda 233 ms tabanına oturuyor, sonrası zorlaşmıyor; oyuncular 16-28 top, 78-145 sn), **Çizgi** v1 (zorluk bir sınıra yaklaşıp duruyor; 15 koşunun 5'i log boyutu için konmuş 80 sn teknik tavanda bitti).
+  - Tasarım gereği uzun, biter: Basket (taban 60 sn, en kötü koşu 62 sn; %23 tavanda), Çift (taban 50; %33 tavanda), Hedef (taban 45; koşular ~80 sn'de kendiliğinden bitiyor). Bonus cömert ama kalabilir.
+  - Kendiliğinden biten: Zincir (pencere yetişiyor), Tam Zamanı (7 tur), Işık (20 tur).
+- Ayar normal akışla (oyun başına ajan, botlar + tarayıcıda oynama, inceleme ajanı, meta.version artışı), partiler halinde ([[2026-10-13-once-magaza-sonra-denge]]).
