@@ -26,3 +26,8 @@ source: "oturum 2026-10-18 (ziroo-edge): site yapısı ve Tussle'ın yeri; commi
 - 4 eş kapı (Oyunlar, Araçlar, Tussle, Diskort): kategori ve ürün aynı ağırlıkta, tutarsız.
 - Kapıların altında ayrı vitrin şeridi: maskot etkileşimini ürünlere taşımıyordu.
 - Oyunlarda alt kategoriler: 4 oyunla erken; 8–10 oyundan sonra.
+
+## Ek (aynı gün, `2a60886`): tek ekrana sığdırma
+- Ölçüt: sayfa en dipteyken başlık tepede, alt bilgi ekranda. Kapı alanı eni CSS'te görünür yükseklikten hesaplanır (`--dw`, clamp 520–920px); zoom CSS görünüm alanını küçülttüğü için ayrıca ele alınmaz.
+- Açıklamalar tek satır; fareli masaüstünde yalnız hover/odak/Ziroo kapıyı açınca (opacity, yeri ayrılı, düzen kaymaz). Telefonda ve JS'siz hep görünür.
+- Reddedilen: açıklamaları tamamen kaldırmak (telefon/erişilebilirlik için gerekli), sabit piksel kırılımları (zoom'u karşılamaz).
