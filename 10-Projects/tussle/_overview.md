@@ -35,7 +35,7 @@ _Son güncelleme: 2026-10-18 akşam; canlıdan doğrula. Eski ayrıntılı hâl:
 - **Mağaza:** `/privacy` (EN/TR) yayında, satın alma/bildirim/moderasyon metinleri güncel; Play girişi EN + TR.
 
 ## Sıradaki işler
-0. **Android mini oyun motoru (18 Eki kararı):** oyunlar QuickJS + Android Canvas motorunda, arayüz Capacitor'a döner, TWA bırakılır; Slice denemesi Yusuf'ta "hiç bu kadar akmamıştı". Fazlar ve repo durumu: [[2026-10-18-mini-motor-faz-devir-notu]], karar [[2026-10-18-android-mini-oyun-motoru]]. Faz 3 (Capacitor'a dönüş) bitti, yayında [[2026-10-18-tussle-android-capacitor-donusu-faz-3]]; **1.3'te Play satın alma + FCM bildirimi ve iOS'ta APNs (OTA düzeltmesiyle) henüz denenmedi**. Dal `android-mini-motor`: Faz 1 bitti (18 Eki, `05e08a9`; 46 oyun, görsel karşılaştırma 50/52, ses, titreşim, gece), Yusuf his testi bekliyor.
+0. **Android mini oyun motoru (18 Eki kararı):** oyunlar QuickJS + Android Canvas motorunda, arayüz Capacitor'a döner, TWA bırakılır; Slice denemesi Yusuf'ta "hiç bu kadar akmamıştı". Fazlar ve repo durumu: [[2026-10-18-mini-motor-faz-devir-notu]], karar [[2026-10-18-android-mini-oyun-motoru]]. Faz 3 (Capacitor'a dönüş) bitti, yayında [[2026-10-18-tussle-android-capacitor-donusu-faz-3]]; **1.3'te Play satın alma + FCM bildirimi ve iOS'ta APNs (OTA düzeltmesiyle) henüz denenmedi**. Dal `android-mini-motor`: Faz 1 bitti (18 Eki, `05e08a9`; 46 oyun, görsel karşılaştırma 50/52, ses, titreşim, gece; Yusuf his testi tamam) [[2026-10-18-tussle-mini-motor-faz-1]]; Faz 2 oturumu başladı. Basket çekme menzili ayrı oturumda (oyun hatası, web'de de var).
 1. **Mağaza bekleyenleri (18 Eki öğlen, oturum [[2026-10-18-tussle-kalan-isler-testflight-urunler-play-konsol]]):** Play %15: hesap grubu kuruldu (yalnız Ziroo), şart kabul düğmesi Ödeme profilinde çıkınca Yusuf basar (tıklama sınıflandırıcıya takılır). Play IARC yeni anketi incelemede (Brezilya 14+). Apple build 5 beta incelemesinde. Apple sandbox testçi yok (iPhone'lu testçi için gerekli).
 2. **Kapalı test:** 3/12 testçi; 12 olunca 14 gün say, üretim başvurusu, sonra açık test/üretim; `install-links.ts` `stage: 'store'`.
 3. **iOS cihazda ilk deneme:** iPhone'lu testçi ile APNs bildirimi ve sandbox satın alma (kod ve sunucu hazır, kimse denemedi). Her iOS yüklemesinden sonra `npm run ios:testflight` (önce `store/testflight-notes.txt`).
@@ -119,6 +119,8 @@ _Son güncelleme: 2026-10-18 akşam; canlıdan doğrula. Eski ayrıntılı hâl:
 - [[2026-10-15-denge-turu-yusuf-telefon-geri-bildirimi]] (doğrulanmadı)
 
 ## Dersler
+- [[2026-10-18-canvas-textbaseline-os2-typo-metrikleri]]: ressamda baseline OS/2 typo metrikleriyle (Chrome gibi)
+- [[2026-10-18-paylasilan-telefonda-am-start-baska-oturumun-testini-boler]]: paylaşılan telefonda öne getirme yalnız cihaz serbestken
 - [[2026-10-18-capacitor-android-donusu-tuzaklari]]: push eklentisi `then` tuzağı (iOS'u da vurmuştu), Firebase Android OAuth istemcisi elle, worktree origin/main'den kesilir.
 - [[2026-10-18-chrome-klavye-yalniz-gorsel-gorunumu-daraltir-scrollintoview-calismaz]]: klavyede yerleşim küçülmez, önce taşma yarat.
 - [[2026-10-18-magaza-formlari-ve-urun-olusturma-siniflandiriciya-takilir-script-yusuf-kosturur]]: mağaza formu/ürün işi scriptle Yusuf'a; Play ve Apple tuzakları.
