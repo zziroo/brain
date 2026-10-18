@@ -31,7 +31,7 @@ Kod `/Users/ziroo/ZZ/zProjects/ziroo-edge`, GitHub `zziroo/ziroo-edge` (özel, d
 
 ## Güncel durum
 _Son güncelleme: 2026-10-18; canlıdan doğrula._
-- **ziroo.net ana sayfası:** iki sıra kapı yayında (2026-10-18, `81991f8`): üstte Oyunlar/Araçlar, altta Tussle/Kapış/Diskort ürün kapıları; hikâye 7 bölüm aynı sırayla; tanıtım sayfaları `ziroo.net/tussle/`, `ziroo.net/diskort/`; Oyunlar'da Tussle öne çıkan kart ([[2026-10-18-ziroo-net-iki-sira-kapi-bolumler-ve-urunler]]). Kapı ekranı (başlık + iki sıra + alt bilgi) görünür yüksekliğe ve tarayıcı yakınlaştırmasına göre tek ekrana sığar (alt sınır 520px, %150 zoom'da kaydırır); fareli masaüstünde açıklama yalnız kapı açılınca belirir (`2a60886`). Maskotun sıralar arası atlayışı canlı tarayıcıda gözle denenmedi; Safari/iOS ve gerçek telefon denenmedi. Önceki: [[2026-10-16-ziroo-net-kaydirmali-2d-maskot]], [[2026-10-17-ziroo-net-kapi-ekrani-turu]].
+- **ziroo.net ana sayfası:** iki sıra kapı yayında (`2a60886`, 2026-10-18): üstte Oyunlar/Araçlar, altta Tussle/Kapış/Diskort; hikâye aynı sırayla 7 bölüm; tanıtım sayfaları `ziroo.net/tussle/`, `ziroo.net/diskort/`; kapı ekranı yüksekliğe ve zoom'a göre tek ekrana sığar ([[2026-10-18-ziroo-net-iki-sira-kapi-bolumler-ve-urunler]]).
 - **Listeler:** tools ve games listeleri ortak neon tasarımla yayında ([[2026-10-05-liste-sayfalari-ziroo-edge-te-ortak-neon-tasarim]]).
 - **Giriş kapısı:** Diskort'un gateway ve LiveKit bloklarında `stream_close_delay 5m` var, reload sesli kanalı koparmasın diye. Kanal doluyken reload hâlâ denenmedi ([[caddy-reload-websocketleri-keser]]).
 - **Ops (2026-10-16):** Kuma'da 23 monitör, bildirim Telegram'dan. Netdata `/netdata/` altında. Saatlik `ops/check.sh` yedek yaşı, disk ve smoke sonucunu Kuma'ya yollar ([[2026-10-16-ops-katmani-kuma-netdata-ziroo-edge]], [[2026-10-16-makine-sagligi-kuma-push-gozcuden-cikti]]).
@@ -39,7 +39,7 @@ _Son güncelleme: 2026-10-18; canlıdan doğrula._
 - **Sunucu bakımı:** 2026-10-16 07:30 için planlanan toplu güncelleme ve reboot yapıldı mı, doğrulanmadı ([[2026-10-15-sunucu-bakim-penceresi-07-30]]).
 
 ## Sıradaki işler
-1. **Maskot doğrulama:** Yusuf telefondan (Android'de titreme düzeltmesi `dd47929`) ve Safari/iOS'tan bakar: süzülme, yürüyüş, kapı açma, fps. Klavyeyle kapıya geçiş denenmedi. Yerel önizleme `.claude/onizleme/` (launch.json `home-onizleme`).
+1. **Gözle doğrulama:** Yusuf gerçek tarayıcıda ve telefonda bakar: sıralar arası atlayış (`ROW_T`, `ROW_H`), açıklamanın belirişi, telefonda 5 kapıda ortadaki kapı seçimi; Safari/iOS hiç denenmedi. Yerel önizleme launch.json `home-onizleme`.
 2. **Açık ayar:** halka göz (`home.js` içindeki `EYE`).
 3. **Eski kopyaları temizle** (Faz D, `docs/gecis-tools-games-alt-alan-adlari.md`).
 4. **Sunucu bakımı:** yapılmadıysa Yusuf "başla" deyince ([[2026-10-15-sunucu-bakim-penceresi-07-30]]); sonra çıkış trafiğini 1000 GB planına göre izle.
@@ -52,7 +52,7 @@ _Son güncelleme: 2026-10-18; canlıdan doğrula._
 - Makine geneli: [[vps-makinesi]], [[proje-altyapi-standardi]], [[2026-10-15-sunucu-bakim-penceresi-07-30]]
 
 ## Dersler
-[[caddy-reload-websocketleri-keser]] · [[caddy-redir-path-acik-yonlendirme]] · [[caddy-bind-mount-restart]] · [[2026-10-16-saglik-ucu-surecten-cevaplanmali-kuma-netdata-tuzaklari]] · [[mac-ten-yayin-copyfile-disable-ve-exe-siz-ceviri-sayfasi]] · [[turkce-sayfada-css-buyuk-harf-noktali-i]] · [[background-clip-text-harf-kutusu-disini-boyamaz]] · [[animation-kisayolu-duraklatma-kuralini-ezer]] · [[mobilde-buyuk-olceklenen-katman-ve-durmayan-dongu-kasar]] · [[ajan-yayin-betigini-sahte-ssh-ile-denerken-canliya-cikti]]
+[[caddy-reload-websocketleri-keser]] · [[caddy-redir-path-acik-yonlendirme]] · [[caddy-bind-mount-restart]] · [[2026-10-16-saglik-ucu-surecten-cevaplanmali-kuma-netdata-tuzaklari]] · [[mac-ten-yayin-copyfile-disable-ve-exe-siz-ceviri-sayfasi]] · [[turkce-sayfada-css-buyuk-harf-noktali-i]] · [[background-clip-text-harf-kutusu-disini-boyamaz]] · [[animation-kisayolu-duraklatma-kuralini-ezer]] · [[mobilde-buyuk-olceklenen-katman-ve-durmayan-dongu-kasar]] · [[sigdirma-olcutu-sayfa-dibinde-ve-zoom-kucuk-gorunum-alani]] · [[ajan-yayin-betigini-sahte-ssh-ile-denerken-canliya-cikti]]
 
 ## Oturumlar
 - [[2026-10-03-tools-games-alt-alan-adi-gecisi]]: tools/games alt alan adları, joker DNS
@@ -61,3 +61,4 @@ _Son güncelleme: 2026-10-18; canlıdan doğrula._
 - [[2026-10-05-araclarin-arayuzu-neon-temaya-gecti]]: altı aracın arayüzü neon temaya geçti, Mac'ten ilk yayın
 - [[2026-10-16-ziroo-edge-ops-katmani-kuma-netdata]]: Kuma + Netdata, gözcüden makine sağlığı çıktı
 - [[2026-10-17-ziroo-net-kaydirmali-maskot]]: ana sayfaya kaydırmalı 2D Ziroo
+- [[2026-10-18-ziroo-net-iki-sira-kapi-ve-tanitim-sayfalari]]: Tussle'ın yeri, 2+3 kapı, tanıtım sayfaları, tek ekrana sığdırma
