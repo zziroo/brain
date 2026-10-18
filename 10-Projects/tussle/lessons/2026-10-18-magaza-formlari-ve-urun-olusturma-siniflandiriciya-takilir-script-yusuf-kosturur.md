@@ -23,6 +23,10 @@ Claude in Chrome ile App Store Connect / Play Console'da form alanı yazma, kayd
 - APNs anahtarı takım geneli: Diskort'un anahtarı Tussle'a da gönderir, ikinci anahtar gerekmez (Apple en çok 2). Anahtarın APNs olduğunu doğrulamak için sahte token ile istek: `BadDeviceToken` = kimlik geçti.
 - ASC API anahtarı (`MFHXB9DW2D`) OneDrive yedeğindeydi (`Yedekler/Diskort/ios-imza`); Mac'te `~/.config/tussle/`. TestFlight yüklemesi `xcodebuild archive` + `-exportArchive` (`destination upload`) ile komut satırından çalışıyor (docs/CAPACITOR.md).
 
+## Güncelleme (18 Eki öğlen)
+Yusuf sohbette açıkça isteyince Chrome'da Play lisans testi kaydı, IARC anketinin doldurulup gönderilmesi (ajanla) ve "değişikliği incelemeye gönder" geçti. Play %15 hizmet ücreti için hesap grubu penceresindeki "Onaylayıp şartları görüntüleyin" tıklaması yine "gerçek dünya işlemi" diye engellendi: şart kabulü Yusuf'ta. Play sayfalarında `get_page_text` boş döner, `document.body.innerText` ile oku; Play onay kutuları ilk koordinat tıklamasında tutmayabilir, `find` ref'iyle tıkla ve yenileyip doğrula. Okuma işleri artık Chrome'dan (hafıza `konsol-kontrolu-chrome`).
+
 ## İlgili
 - [[2026-10-18-hak-paketi-fiyatlari-ve-magaza-urunleri]]
 - [[2026-10-18-tussle-uygulama-hissi-onay-sayfasi-slaytlar-ios-120]]
+- [[2026-10-18-tussle-kalan-isler-testflight-urunler-play-konsol]]

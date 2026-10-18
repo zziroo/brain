@@ -25,7 +25,7 @@ Play ödeme profili ve Apple Paid Apps anlaşması aynı gece açıldı; ürünl
 - Capacitor'a dönüş ihtimali nedeniyle beklemek: mağaza tarafı (ürün, fiyat, anlaşma, sunucu doğrulaması) platform kabuğundan bağımsız; yalnız Android istemci yolu değişirdi.
 
 ## Sonuçlar / riskler
-- Apple ürünleri "Missing metadata": inceleme ekran görüntüsü build 5 gönderiminde elle.
+- Apple ürünleri 18 Eki öğlen Ready to Submit: bölgeler + inceleme görüntüsü API ile ([[2026-10-18-testflight-dis-test-ve-apple-urun-metadatasi-api-ile]]).
 - Play'de fiyat alt sınırı 0,49 $'ı kabul etti; bazı ülkelerde Play asgariye çeker.
 
 ## İlgili
