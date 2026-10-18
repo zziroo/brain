@@ -44,7 +44,8 @@ _Son güncelleme: 2026-10-18; canlıdan doğrula._
 2. **Push:** ziroo-edge `dc9abed` ve `bad5151` GitHub'a gönderilmedi.
 3. **Açık ayar:** halka göz (`home.js` içindeki `EYE`).
 4. **Eski kopyaları temizle** (Faz D, `docs/gecis-tools-games-alt-alan-adlari.md`).
-5. **Sunucu bakımı:** yapılmadıysa Yusuf "başla" deyince ([[2026-10-15-sunucu-bakim-penceresi-07-30]]); sonra çıkış trafiğini 1000 GB planına göre izle.
+5. **iCloud yedek kopyası HATA (18.10 12:30):** `ops/yedek/mac-cek.sh` iCloud adımında `rsync: unexpected end of file`; yerel kopya tamam. Gece gözcüsü yakaladı ([[2026-10-18-oturum-global-gece-gozcusu]]).
+6. **Sunucu bakımı:** yapılmadıysa Yusuf "başla" deyince ([[2026-10-15-sunucu-bakim-penceresi-07-30]]); sonra çıkış trafiğini 1000 GB planına göre izle.
 
 ## Kararlar
 - Caddy ayrıldı: [[2026-10-03-caddy-ziroo-edge-projesine-ayrildi]] (önce: [[2026-10-02-caddy-ortak-site-klasoru]])

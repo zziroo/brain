@@ -31,6 +31,7 @@ Global kuralların damıtması. Orijinal dosya değiştirilmedi; geçerli olan h
 - [[klasor-proje-eslemesi]]: kod klasörü → vault projesi tablosu (hook ve /kaydet okur)
 - [[2026-10-17-basla-yerine-hook-ve-bitir-komutu]]: `/basla` yerine SessionStart hook'u, `/kaydet` + `/bitir`
 - [[2026-10-17-oturum-komutlar-vault-duzeni-ve-yedek]]: oturum özeti; vault taşıma, felaket kurtarma yedeği ve kasa dersleri
+- [[2026-10-18-oturum-global-gece-gozcusu]]: oturum özeti; Diskort gözcüsü global gece gözcüsüne dönüştü (karar [[2026-10-18-global-gece-gozcusu]])
 
 ## Diskort'a özgü
 - [[git-push-autonomy]]: doğrulanmış değişiklikte main'e commit + push serbest
@@ -43,6 +44,7 @@ Global kuralların damıtması. Orijinal dosya değiştirilmedi; geçerli olan h
 - [[claude-altina-yazma-izin-sorar]]: `.claude` altına yazmak her zaman izin sorar, gözetimsiz görevler takılır
 - [[otomatik-mod-ssh-engeli-yeni-sohbette]]: otomatik mod bağlamsız yeni sohbette canlı sunucuya SSH'ı engeller; izin ayar dosyasında olmalı
 - [[rutin-calisma-klasoru-silinince-oturum-acmaz]]: zamanlanmış görevin klasörü yoksa oturum açılmaz
+- [[rutin-izin-modu-yan-oturumda-kaydedilmez]]: yan oturumda oluşturulan zamanlanmış görev izin modunu kaydetmez
 - [[start-session-otomatik-tur-reddi]]: ToolSearch sonrası "Tool loaded." turunda start_session reddediliyor
 - [[scratchpad-yeniden-baslatmada-silinir]]: scratchpad yeniden başlatmada silinir
 - [[gizli-onizleme-panelinde-animasyon-durur-ve-gorunum-0x0]]: gizli önizleme panelinde rAF durur, görüntü alanı 0×0
