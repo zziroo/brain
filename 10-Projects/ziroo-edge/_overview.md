@@ -1,7 +1,7 @@
 ---
 type: project
 project: ziroo-edge
-date: 2026-10-17
+date: 2026-10-18
 status: active
 tags: [ziroo-edge, overview, caddy, sunucu, ziroo-net]
 source: "diskort _overview.md'nin ziroo-edge kısımları (2026-10-17 öncesi), 10-Projects/ziroo-edge altına taşınan notlar (vault commit 7d618f1), ziroo-edge README"
@@ -30,8 +30,8 @@ Kod `/Users/ziroo/ZZ/zProjects/ziroo-edge`, GitHub `zziroo/ziroo-edge` (özel, d
 - Yeni proje eklemek: [[proje-altyapi-standardi]] ve README "Yeni proje eklemek".
 
 ## Güncel durum
-_Son güncelleme: 2026-10-17; canlıdan doğrula._
-- **ziroo.net ana sayfası:** kaydırmalı 2D Ziroo hikâyesi ve kapı ekranı yayında (son yayın `dd47929`, 2026-10-17). Kapı ekranı: masaüstünde Ziroo fareyle havada süzülür, kapıya gelince yanına iner, kapılar fareyle hemen açılır, "Gir" yerine eşikte ok; telefonda ortadaki kapıya gider. Safari/iOS denenmedi. [[2026-10-16-ziroo-net-kaydirmali-2d-maskot]], [[2026-10-17-ziroo-net-kapi-ekrani-turu]].
+_Son güncelleme: 2026-10-18; canlıdan doğrula._
+- **ziroo.net ana sayfası:** iki sıra kapı yayında (2026-10-18, `81991f8`): üstte Oyunlar/Araçlar, altta Tussle/Kapış/Diskort ürün kapıları; hikâye 7 bölüm aynı sırayla; tanıtım sayfaları `ziroo.net/tussle/`, `ziroo.net/diskort/`; Oyunlar'da Tussle öne çıkan kart ([[2026-10-18-ziroo-net-iki-sira-kapi-bolumler-ve-urunler]]). Maskotun sıralar arası atlayışı canlı tarayıcıda gözle denenmedi; Safari/iOS ve gerçek telefon denenmedi. Önceki: [[2026-10-16-ziroo-net-kaydirmali-2d-maskot]], [[2026-10-17-ziroo-net-kapi-ekrani-turu]].
 - **Listeler:** tools ve games listeleri ortak neon tasarımla yayında ([[2026-10-05-liste-sayfalari-ziroo-edge-te-ortak-neon-tasarim]]).
 - **Giriş kapısı:** Diskort'un gateway ve LiveKit bloklarında `stream_close_delay 5m` var, reload sesli kanalı koparmasın diye. Kanal doluyken reload hâlâ denenmedi ([[caddy-reload-websocketleri-keser]]).
 - **Ops (2026-10-16):** Kuma'da 23 monitör, bildirim Telegram'dan. Netdata `/netdata/` altında. Saatlik `ops/check.sh` yedek yaşı, disk ve smoke sonucunu Kuma'ya yollar ([[2026-10-16-ops-katmani-kuma-netdata-ziroo-edge]], [[2026-10-16-makine-sagligi-kuma-push-gozcuden-cikti]]).
@@ -47,7 +47,7 @@ _Son güncelleme: 2026-10-17; canlıdan doğrula._
 ## Kararlar
 - Caddy ayrıldı: [[2026-10-03-caddy-ziroo-edge-projesine-ayrildi]] (önce: [[2026-10-02-caddy-ortak-site-klasoru]])
 - Alan adları: [[2026-10-03-joker-dns-ve-tools-games-alt-alan-adlari]]
-- Listeler ve ana sayfa: [[2026-10-05-liste-sayfalari-ziroo-edge-te-ortak-neon-tasarim]], [[2026-10-16-ziroo-net-kaydirmali-2d-maskot]]
+- Listeler ve ana sayfa: [[2026-10-05-liste-sayfalari-ziroo-edge-te-ortak-neon-tasarim]], [[2026-10-16-ziroo-net-kaydirmali-2d-maskot]], [[2026-10-18-ziroo-net-iki-sira-kapi-bolumler-ve-urunler]]
 - Ops: [[2026-10-16-ops-katmani-kuma-netdata-ziroo-edge]], [[2026-10-16-makine-sagligi-kuma-push-gozcuden-cikti]]
 - Makine geneli: [[vps-makinesi]], [[proje-altyapi-standardi]], [[2026-10-15-sunucu-bakim-penceresi-07-30]]
 
