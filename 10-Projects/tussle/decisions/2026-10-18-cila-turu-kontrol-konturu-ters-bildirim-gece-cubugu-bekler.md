@@ -30,6 +30,7 @@ Yusuf: "açık temada geri tuşu, hediye tuşu, alttan çıkan 'gönderildi' bil
 - Görülmedi: parti lobisi, host paneli, izleme ekranı, `.today-gift-btn` (tohumda ulaşılamadı); telefonda bakılmalı.
 - Düşük kalanlar: 'sistem' teması oyun/sayfa açıkken değişirse çubuk eski renkte kalır; iç içe sayfalar ters sırayla kapanırsa çubuk iki kat koyu kalır.
 - Mağaza görselleri ve Apple ürün inceleme görüntüsü yenilendi; konsola yükleme Yusuf'ta.
+- Yayın: `6e62748`, OTA 0.20261018.1044 (18 Eki öğleden sonra), yedek `pre-6e62748.db`.
 
 ## İlgili
 - [[2026-10-18-android-twa-kalir-web-izleri-kodda-kapatilir]]
