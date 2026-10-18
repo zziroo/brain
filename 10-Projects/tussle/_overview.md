@@ -38,11 +38,12 @@ _Son güncelleme: 2026-10-18 öğleden sonra; canlıdan doğrula. Eski ayrıntı
 1. **Mağaza bekleyenleri (18 Eki öğlen, oturum [[2026-10-18-tussle-kalan-isler-testflight-urunler-play-konsol]]):** Play %15: hesap grubu kuruldu (yalnız Ziroo), şart kabul düğmesi Ödeme profilinde çıkınca Yusuf basar (tıklama sınıflandırıcıya takılır). Play IARC yeni anketi incelemede (Brezilya 14+). Apple build 5 beta incelemesinde. Apple sandbox testçi yok (iPhone'lu testçi için gerekli).
 2. **Kapalı test:** 3/12 testçi; 12 olunca 14 gün say, üretim başvurusu, sonra açık test/üretim; `install-links.ts` `stage: 'store'`.
 3. **iOS cihazda ilk deneme:** iPhone'lu testçi ile APNs bildirimi ve sandbox satın alma (kod ve sunucu hazır, kimse denemedi). Her iOS yüklemesinden sonra `npm run ios:testflight` (önce `store/testflight-notes.txt`).
-4. **Kapsamlı cila turu (ayrı oturum "tussle: kapsamlı cila turu", 18 Eki başladı):** tema/çubuk renkleri, gece temasında TWA gezinme çubuğu (`android-twa` colors.xml), ekran ekran tutarlılık; ardından `make-graphics.mjs shots gift` + `apple-iap.mjs` ile görseller. [[2026-10-18-android-twa-kalir-web-izleri-kodda-kapatilir]].
+4. **Cila turu (18 Eki, commit `949a453` + mağaza görselleri `6e62748`, yayında değil):** [[2026-10-18-cila-turu-kontrol-konturu-ters-bildirim-gece-cubugu-bekler]]. Kalan: yayın (`release.sh`) Yusuf onayıyla; Play/App Store ekran görüntülerini konsola yükleme (Yusuf, `store/README.md`); telefonda bakış (ince konturlar, parti lobisi/host paneli); gece TWA gezinme çubuğu Chrome hatası, bekliyor.
 5. **Mağaza sonrası:** Play tablet ekranları, kısa açıklama uyarısı.
 6. **Diskort gece gözcüsüne Tussle bölümü**; tanıtımda kimlikli figürler; sonra: yayın partileri, sonsuz oyun rampaları, dolaylı etkileşim/arena, tema toptan düzenleme. Tembel parçalar rafta ([[2026-10-17-oyunlar-tembel-parca-modul-sistemi-rafta]]). Küçük açıklar ve kit işleri arşivde.
 
 ## Önemli kararlar
+- [[2026-10-18-cila-turu-kontrol-konturu-ters-bildirim-gece-cubugu-bekler]]: kontroller iki temada konturlu (`--control-line`), bildirim ters renk, gündüz oyun zemini, theme-color yığını; gece Android çubuğu Chrome düzeltene kadar bekler
 - [[2026-10-18-android-twa-kalir-web-izleri-kodda-kapatilir]]: TWA kalır, web izleri kodda kapatılır; WebView'e dönüş yine reddedildi.
 - [[2026-10-18-hak-paketi-fiyatlari-ve-magaza-urunleri]]: 0,49 / 0,99 / 1,49 $; iki mağazada scriptle ürün.
 - [[2026-10-18-google-girisi-kendi-dugme-token-akisi]]: web/TWA Google girişi kendi düğme + GIS token akışı, tek dokunuş, sır gerekmez (bindirme ve kod akışı reddedildi)

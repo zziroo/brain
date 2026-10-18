@@ -25,6 +25,8 @@ Kare sınırı kalktıktan sonra ([[2026-10-16-kare-siniri-kalkti-her-vsyncte-ci
 - Telefonu 60 Hz'e almak: sürdü (OnePlus).
 - `appCategory="game"` + `GameManager.setGameState(GAMEPLAY_UNINTERRUPTIBLE)` + ADPF ipucu oturumu (main, RenderThread, WebView GPU, Viz; 8,3 ms hedef, oturum açıldığı `dumpsys performance_hint` ile doğrulandı): sürdü, geri alındı.
 - Titreşim kapalı: fark yok.
+- **2026-10-18 (TWA'dan dönüş denemesi, Xiaomi 17 Pro):** `appCategory="game"` + `isGame` + `WebView.setRendererPriorityPolicy(RENDERER_PRIORITY_IMPORTANT)`, ayrıca Xiaomi Game Turbo'ya elle eklenip **performans modunda** açıldı: parmak kalkınca yine takıldı. Geri alındı, commit yok. Capacitor'a dönüş akıcılık yüzünden kapalı kalır.
+- Oyun olarak tanınma: Xiaomi Game Turbo yan kurulan uygulamayı `appCategory="game"` ile kendiliğinden eklemedi; Play'deki TWA (Oyunlar › Casual) da listede yoktu. Xiaomi kendi listesini kullanıyor; kullanıcı elle ekleyebiliyor.
 
 ## Uygula
 - Android'de oyun akıcılığı için WebView yerine Chrome motoru (TWA) denenecek: [[2026-10-17-android-twa-onerisi]], devir notu [[2026-10-17-twa-deneme-devir-notu]].
