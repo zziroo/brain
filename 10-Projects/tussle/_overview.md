@@ -35,11 +35,12 @@ _Son güncelleme: 2026-10-18 gece; canlıdan doğrula. Eski ayrıntılı hâl: [
 ## Sıradaki işler
 0. **Cihaz teyitleri:** YOSEF'le iPhone'da parti (kart "X oynuyor · süre", sürüm farkında güncelleme ekranı), Basket v3 his testi, Faz 4d (ses, haptik, 120 Hz, IOSurface), Android 1.7'de satın alma ve Xiaomi bildirim rehberi (Play'den kurulunca kart, oda yolu, iki ayar açıkken kapalı uygulamaya bildirim; [[2026-10-18-tussle-xiaomi-bildirim-rehberi]]); mini motor paritesi emülatörde (renk, matematik, isik).
 1. **Lobi önerileri (Yusuf karar verecek):** n/32 rozetine dokununca katılan adları, dolu slotta geri bildirim, host panelinde oyun havuzu özet satırı. `live.mismatch`/`live.invalid` reddinde hemen düşme ayrı kural kararı.
-2. **Mağaza bekleyenleri:** Play %15 şart kabulü (Yusuf, Ödeme profili), IARC anketi incelemede, Apple sandbox testçi yok ([[2026-10-18-tussle-kalan-isler-testflight-urunler-play-konsol]]).
-3. **Kapalı test:** 12 testçi olunca 14 gün, üretim başvurusu, sonra açık test/üretim; `install-links.ts` `stage: 'store'`.
-4. **iOS ilk denemeler:** APNs bildirimi ve sandbox satın alma (kod hazır).
-5. **Bekleyenler:** gözcünün yakaladığı iCloud yedek kopyası hatası (Mac); okunmamış Tussle geri bildirimleri #1, #2; mağaza ekran görüntüleri (Yusuf, `store/README.md`), Play tablet ekranları.
-6. **Sonra:** tanıtımda kimlikli figürler, yayın partileri, sonsuz oyun rampaları, dolaylı etkileşim/arena, tema toptan düzenleme. Tembel parçalar rafta ([[2026-10-17-oyunlar-tembel-parca-modul-sistemi-rafta]]).
+2. **Oyun dengesi, insan verisi (Yusuf seçecek):** gerçek koşu raporu (`scripts/balance-report.mjs`, dal `claude/heuristic-dirac-c207c7`, yayına girmez). Çok kısa: Köprü, Kargo, Bambu, Bıçak, Ritim, Yörünge, Katane; çok uzun: Bardak, Çizgi, Hedef, Çift, Zincir, Basket; Denge v4 hedefte ama açılışı tuzak ([[2026-10-19-denge-insan-kosulariyla-surum-bazli-olculur]], [[2026-10-19-ilk-kosu-ucurumu-ve-insan-tepki-sureleri]]).
+3. **Mağaza bekleyenleri:** Play %15 şart kabulü (Yusuf, Ödeme profili), IARC anketi incelemede, Apple sandbox testçi yok ([[2026-10-18-tussle-kalan-isler-testflight-urunler-play-konsol]]).
+4. **Kapalı test:** 12 testçi olunca 14 gün, üretim başvurusu, sonra açık test/üretim; `install-links.ts` `stage: 'store'`.
+5. **iOS ilk denemeler:** APNs bildirimi ve sandbox satın alma (kod hazır).
+6. **Bekleyenler:** gözcünün yakaladığı iCloud yedek kopyası hatası (Mac); okunmamış Tussle geri bildirimleri #1, #2; mağaza ekran görüntüleri (Yusuf, `store/README.md`), Play tablet ekranları.
+7. **Sonra:** tanıtımda kimlikli figürler, yayın partileri, sonsuz oyun rampaları, dolaylı etkileşim/arena, tema toptan düzenleme. Tembel parçalar rafta ([[2026-10-17-oyunlar-tembel-parca-modul-sistemi-rafta]]).
 
 ## Önemli kararlar
 - [[2026-10-18-canli-macta-yalniz-dogrulanmis-sonuc-surum-zorunlu]]: canlı maçta yalnız doğrulanmış sonuç, gameVersion zorunlu, geri uyum yok.
