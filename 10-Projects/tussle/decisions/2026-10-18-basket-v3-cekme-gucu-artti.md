@@ -13,7 +13,7 @@ source: oturum "tussle: Basket çekme menzili" (2026-10-18), dal basket-pull-ran
 Yusuf mini motorda Basket'te en alta kadar çekince bile potaya yetişemediğini söyledi. Motor değil, oyunun menzili: top alanın %83'ünde, parmak alanla sınırlı, topdan dibe en fazla ~0,30 genişlik çekiş; POWER 0,1 ile tepe ~0,58, ilk pota ~0,64, en yüksek ~0,93 istiyor. Yalnız yukarıdan başlayan çekişler ("her yerden çek") çalışıyordu. Web/iOS'ta da aynı.
 
 ## Karar
-`POWER` 0,1 → 0,15, `MAX_PULL` 0,5 → 0,34 (en yüksek hız aynı ~0,05). `meta.version` 3. Topun ortasından alan dibine çekiş, 9 tohumda en yüksek çemberi 0,3+ genişlikle aşar. Nişan çizgisi `pull*POWER` kullandığı için view değişmedi. Testler: dibe çekiş her potayı aşar; seviye 0 ve en yüksek seviyede topdan dibe çekiş basket olur (eski değerlerle ikisi de düşer). Sonraki oyun partisiyle çıkar, yayınlanmadı.
+`POWER` 0,1 → 0,15, `MAX_PULL` 0,5 → 0,34 (en yüksek hız aynı ~0,05). `meta.version` 3. Topun ortasından alan dibine çekiş, 9 tohumda en yüksek çemberi 0,3+ genişlikle aşar. Nişan çizgisi `pull*POWER` kullandığı için view değişmedi. Testler: dibe çekiş her potayı aşar; seviye 0 ve en yüksek seviyede topdan dibe çekiş basket olur (eski değerlerle ikisi de düşer). 18 Eki akşam main'e birleşti (`1e2852d`, inceleme düzeltmeleri `c05e072`), `624c6e0` ile yayında; telefonda his testi hâlâ bekliyor (inceleme: bot hata ölçeği iyimser, sabit parmak hatasında orta oyuncu daha düşük).
 
 ## Neden
 Tek düğme, oyunun görünümü ve yerleşimi aynı kalır; en yüksek hız değişmediği için "her yerden çek"en oyuncular için üst sınır aynı.

@@ -11,6 +11,8 @@ source: oturum 2026-10-18 akşam (mobil-playus, "tussle: durum ve kalan işler")
 
 - **Gradle "Unable to locate a Java Runtime":** kabukta Java yok. `JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home" ./gradlew bundleRelease` (android/ içinde). `build:aab` web kısmını (`build:app`) bitirdikten sonra düşer; yeniden yalnız Gradle adımını koşmak yeter.
 - **xcodebuild "invalid option '-allowProvisioningUpdates -authenticationKeyPath …'":** `docs/CAPACITOR.md`'deki `AUTH="…"; xcodebuild … $AUTH` kalıbı zsh'te tek argüman olur (zsh kelimeye bölmez). Bayrakları doğrudan yaz ya da `${=AUTH}` kullan.
+- **Play yükleme anahtarı:** `npm run play:upload` ortam değişkeni ister: `PLAY_SERVICE_ACCOUNT_JSON=$HOME/.config/tussle/play-service-account.json` (yükleme ve `--promote` API ile sınıflandırıcıya takılmadan çalıştı, 18 Eki).
+- **TestFlight "What to Test" (whatsNew) ✓/✗ gibi karakterleri reddeder** (409 `INVALID_TEXT`); `store/testflight-notes.txt`'te kelimeyle yaz. Play sürüm notları aynı karakterleri kabul etti.
 - Release arşivinde DEBUG yollarının olmadığını doğrulama: `strings App.app/App | grep -c TussleStartHash` = 0.
 
 İlgili: [[2026-10-13-capacitor-ios-dersleri]], oturum [[2026-10-18-tussle-durum-kalan-isler-ios-motor-yayin]].
