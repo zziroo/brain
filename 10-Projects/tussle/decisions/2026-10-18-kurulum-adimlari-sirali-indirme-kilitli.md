@@ -10,7 +10,7 @@ source: oturum 2026-10-18 akşam "tussle: kurulum kartı adımları" (ziroo-edge
 # Karar: kurulum kartında adımlar sıralı, indirme adımı 1 ve 2 bitene kadar kilitli
 
 ## Bağlam
-Arkadaşlar tussle.ziroo.net'teki "Tussle'ı uygulama olarak kur" kartında 1. (Google grubu) ve 2. (Play'de test kullanıcısı ol) adımı atlayıp doğrudan "Google Play'den indir"e bastı. Kapalı testte grup + opt-in olmadan Play uygulamayı göstermiyor. Sebep: son düğme hep vurguluydu (`btn-primary`), ilk ikisi sönük düz düğmeydi; adım gibi görünmüyorlardı. Aynı gün ziroo.net'teki Tussle kapısı ara sayfa yerine doğrudan tussle.ziroo.net'e yönlendirildi (ziroo-edge), kart tek kurulum anlatımı oldu.
+Arkadaşlar tussle.ziroo.net'teki "Tussle'ı uygulama olarak kur" kartında 1. (Google grubu) ve 2. (Play'de test kullanıcısı ol) adımı atlayıp doğrudan "Google Play'den indir"e bastı. Kapalı testte grup + opt-in olmadan Play uygulamayı göstermiyor. Sebep: son düğme hep vurguluydu (`btn-primary`), ilk ikisi sönük düz düğmeydi; adım gibi görünmüyorlardı. Aynı gün ziroo.net/tussle/ ara sayfası kaldı ama Android/iOS düğmeleri yerine tek "İndir" düğmesi tussle.ziroo.net'e gidiyor (ziroo-edge `dc9abed`); kurulumu yalnız bu kart anlatıyor ([[2026-10-18-tanitim-sayfasi-tanitir-kurulum-urunun-sitesinde]]).
 
 ## Karar
 - Büyük, renkli numara rozeti (34 px) ve her adımın altında bir açıklama satırı (`install.*Hint`, TR + EN).

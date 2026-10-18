@@ -4,7 +4,7 @@ project: ziroo-edge
 date: 2026-10-18
 status: active
 tags: [ziroo-edge, overview, caddy, sunucu, ziroo-net]
-source: "diskort _overview.md'nin ziroo-edge kısımları (2026-10-17 öncesi), 10-Projects/ziroo-edge altına taşınan notlar (vault commit 7d618f1), ziroo-edge README"
+source: "oturum 2026-10-18 akşam (tanıtım sayfaları); diskort _overview.md'nin ziroo-edge kısımları (2026-10-17 öncesi), 10-Projects/ziroo-edge altına taşınan notlar (vault commit 7d618f1), ziroo-edge README"
 ---
 
 # ziroo-edge: sunucunun giriş kapısı (Caddy), ziroo.net ana sayfası, araç/oyun listeleri ve makine izleme
@@ -31,7 +31,8 @@ Kod `/Users/ziroo/ZZ/zProjects/ziroo-edge`, GitHub `zziroo/ziroo-edge` (özel, d
 
 ## Güncel durum
 _Son güncelleme: 2026-10-18; canlıdan doğrula._
-- **ziroo.net ana sayfası:** iki sıra kapı yayında (`2a60886`, 2026-10-18): üstte Oyunlar/Araçlar, altta Tussle/Kapış/Diskort; hikâye aynı sırayla 7 bölüm; tanıtım sayfaları `ziroo.net/tussle/`, `ziroo.net/diskort/`; kapı ekranı yüksekliğe ve zoom'a göre tek ekrana sığar ([[2026-10-18-ziroo-net-iki-sira-kapi-bolumler-ve-urunler]]).
+- **ziroo.net ana sayfası:** iki sıra kapı yayında (`2a60886`, 2026-10-18): üstte Oyunlar/Araçlar, altta Tussle/Kapış/Diskort; hikâye aynı sırayla 7 bölüm; kapı ekranı yüksekliğe ve zoom'a göre tek ekrana sığar ([[2026-10-18-ziroo-net-iki-sira-kapi-bolumler-ve-urunler]]).
+- **Tanıtım sayfaları:** `/tussle/` (tek İndir düğmesi tussle.ziroo.net'e), `/kapis/` (Oyna düğmesi kapis.ziroo.net'e), `/diskort/`; kurulum adımları yalnız ürünün kendi sitesinde (`bad5151`; [[2026-10-18-tanitim-sayfasi-tanitir-kurulum-urunun-sitesinde]]). ziroo-edge commitleri push'lanmadı.
 - **Listeler:** tools ve games listeleri ortak neon tasarımla yayında ([[2026-10-05-liste-sayfalari-ziroo-edge-te-ortak-neon-tasarim]]).
 - **Giriş kapısı:** Diskort'un gateway ve LiveKit bloklarında `stream_close_delay 5m` var, reload sesli kanalı koparmasın diye. Kanal doluyken reload hâlâ denenmedi ([[caddy-reload-websocketleri-keser]]).
 - **Ops (2026-10-16):** Kuma'da 23 monitör, bildirim Telegram'dan. Netdata `/netdata/` altında. Saatlik `ops/check.sh` yedek yaşı, disk ve smoke sonucunu Kuma'ya yollar ([[2026-10-16-ops-katmani-kuma-netdata-ziroo-edge]], [[2026-10-16-makine-sagligi-kuma-push-gozcuden-cikti]]).
@@ -39,15 +40,16 @@ _Son güncelleme: 2026-10-18; canlıdan doğrula._
 - **Sunucu bakımı:** 2026-10-16 07:30 için planlanan toplu güncelleme ve reboot yapıldı mı, doğrulanmadı ([[2026-10-15-sunucu-bakim-penceresi-07-30]]).
 
 ## Sıradaki işler
-1. **Gözle doğrulama:** Yusuf gerçek tarayıcıda ve telefonda bakar: sıralar arası atlayış (`ROW_T`, `ROW_H`), açıklamanın belirişi, telefonda 5 kapıda ortadaki kapı seçimi; Safari/iOS hiç denenmedi. Yerel önizleme launch.json `home-onizleme`.
-2. **Açık ayar:** halka göz (`home.js` içindeki `EYE`).
-3. **Eski kopyaları temizle** (Faz D, `docs/gecis-tools-games-alt-alan-adlari.md`).
-4. **Sunucu bakımı:** yapılmadıysa Yusuf "başla" deyince ([[2026-10-15-sunucu-bakim-penceresi-07-30]]); sonra çıkış trafiğini 1000 GB planına göre izle.
+1. **Gözle doğrulama:** Yusuf gerçek tarayıcıda ve telefonda bakar: sıralar arası atlayış (`ROW_T`, `ROW_H`), açıklamanın belirişi, telefonda 5 kapıda ortadaki kapı seçimi; Safari/iOS hiç denenmedi. Yerel önizleme launch.json `home-onizleme`. Tanıtım sayfaları `/tussle/` ve `/kapis/` da telefonda bakılmalı.
+2. **Push:** ziroo-edge `dc9abed` ve `bad5151` GitHub'a gönderilmedi.
+3. **Açık ayar:** halka göz (`home.js` içindeki `EYE`).
+4. **Eski kopyaları temizle** (Faz D, `docs/gecis-tools-games-alt-alan-adlari.md`).
+5. **Sunucu bakımı:** yapılmadıysa Yusuf "başla" deyince ([[2026-10-15-sunucu-bakim-penceresi-07-30]]); sonra çıkış trafiğini 1000 GB planına göre izle.
 
 ## Kararlar
 - Caddy ayrıldı: [[2026-10-03-caddy-ziroo-edge-projesine-ayrildi]] (önce: [[2026-10-02-caddy-ortak-site-klasoru]])
 - Alan adları: [[2026-10-03-joker-dns-ve-tools-games-alt-alan-adlari]]
-- Listeler ve ana sayfa: [[2026-10-05-liste-sayfalari-ziroo-edge-te-ortak-neon-tasarim]], [[2026-10-16-ziroo-net-kaydirmali-2d-maskot]], [[2026-10-18-ziroo-net-iki-sira-kapi-bolumler-ve-urunler]]
+- Listeler ve ana sayfa: [[2026-10-05-liste-sayfalari-ziroo-edge-te-ortak-neon-tasarim]], [[2026-10-16-ziroo-net-kaydirmali-2d-maskot]], [[2026-10-18-ziroo-net-iki-sira-kapi-bolumler-ve-urunler]], [[2026-10-18-tanitim-sayfasi-tanitir-kurulum-urunun-sitesinde]]
 - Ops: [[2026-10-16-ops-katmani-kuma-netdata-ziroo-edge]], [[2026-10-16-makine-sagligi-kuma-push-gozcuden-cikti]]
 - Makine geneli: [[vps-makinesi]], [[proje-altyapi-standardi]], [[2026-10-15-sunucu-bakim-penceresi-07-30]]
 
@@ -62,3 +64,4 @@ _Son güncelleme: 2026-10-18; canlıdan doğrula._
 - [[2026-10-16-ziroo-edge-ops-katmani-kuma-netdata]]: Kuma + Netdata, gözcüden makine sağlığı çıktı
 - [[2026-10-17-ziroo-net-kaydirmali-maskot]]: ana sayfaya kaydırmalı 2D Ziroo
 - [[2026-10-18-ziroo-net-iki-sira-kapi-ve-tanitim-sayfalari]]: Tussle'ın yeri, 2+3 kapı, tanıtım sayfaları, tek ekrana sığdırma
+- [[2026-10-18-tussle-kapisi-ve-kapis-tanitim-sayfasi]]: Tussle ara sayfası tek İndir düğmesi, Kapış tanıtım sayfası

@@ -31,3 +31,6 @@ source: "oturum 2026-10-18 (ziroo-edge): site yapısı ve Tussle'ın yeri; commi
 - Ölçüt: sayfa en dipteyken başlık tepede, alt bilgi ekranda. Kapı alanı eni CSS'te görünür yükseklikten hesaplanır (`--dw`, clamp 520–920px); zoom CSS görünüm alanını küçülttüğü için ayrıca ele alınmaz.
 - Açıklamalar tek satır; fareli masaüstünde yalnız hover/odak/Ziroo kapıyı açınca (opacity, yeri ayrılı, düzen kaymaz). Telefonda ve JS'siz hep görünür.
 - Reddedilen: açıklamaları tamamen kaldırmak (telefon/erişilebilirlik için gerekli), sabit piksel kırılımları (zoom'u karşılamaz).
+
+## Ek (aynı gün akşam, `bad5151`): Kapış da tanıtım sayfasına açılır
+- Kapış kapısı artık `kapis.ziroo.net` yerine `ziroo.net/kapis/` tanıtım sayfasına gider; Tussle tanıtım sayfasında platform düğmeleri kalktı. Ayrıntı: [[2026-10-18-tanitim-sayfasi-tanitir-kurulum-urunun-sitesinde]].
