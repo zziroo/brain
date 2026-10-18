@@ -2,7 +2,7 @@
 type: decision
 project: tussle
 date: 2026-10-17
-status: active
+status: superseded
 tags: [tussle, android, titresim, haptics, twa]
 source: oturum 2026-10-16/17 (mobil-playus); Yusuf "hangisi normal bilmiyorum, sana bırakıyorum"
 ---
@@ -24,3 +24,5 @@ Android'in tanımında `TOUCH` klavye ve düğme tıkları içindir; müzik, vid
 ## Reddedilen alternatifler
 - Hepsi `TOUCH` (bugünkü hâl): dokunsal geri bildirimi kapatan kullanıcı oyunda hiç titreşim almaz, oyun hissi kaybolur.
 - Hepsi `MEDIA`: sistem ayarını kapatan kullanıcıya arayüz tıkları da gelir, beklenmeyen davranış.
+
+> **Yerine geçti (2026-10-18):** Android Capacitor'da titreşim artık sistem ayarını izliyor: [[2026-10-18-android-titresim-sistem-ayarini-izler]].

@@ -2,7 +2,7 @@
 type: decision
 project: tussle
 date: 2026-10-18
-status: active
+status: superseded
 tags: [tussle, android, twa, uygulama-hissi]
 source: oturum 2026-10-18 "tussle: durum özeti" (uygulama hissi turu)
 ---
@@ -30,3 +30,5 @@ TWA kalır. Web izleri kod tarafında kapatılır: tarayıcı `confirm()` yerine
 ## İlgili
 - [[2026-10-17-android-twa-onerisi]]
 - [[2026-10-18-tussle-uygulama-hissi-onay-sayfasi-slaytlar-ios-120]]
+
+> **Yerine geçti (2026-10-18 akşam):** Android Capacitor arayüzüne döndü, oyunlar mini motora: [[2026-10-18-android-mini-oyun-motoru]], [[2026-10-18-tussle-android-capacitor-donusu-faz-3]].
