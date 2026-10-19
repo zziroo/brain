@@ -70,5 +70,13 @@ source: 2026-10-13 oturumu "pano: son 1 gün token analizi"; ~/.claude/CLAUDE.md
 - Eski oturum açma devam etti, bu kez arşivlemek için: üç 367–400k oturum 11–14 çağrıyla açılıp kapatıldı, ~11 $. Arşivleme için oturumu açmak gereksiz; `archive_session` dışarıdan çağrılır.
 - Sonuç: koordinatör kuralı ilk gün tuttu, ajan disiplini yoğun günde gevşedi. Sonraki hedef: ajan brief'inde ≤80 çağrı sınırının yazılı olması, Sonnet review ≤30 çağrı, arşivlemeyi oturum açmadan yapmak.
 
+## Ölçüm 6 (18 Ekim 04:00 → 19 Ekim 04:00, haftanın son günü)
+- 308 $, 849M token, 5.814 çağrı, 24 oturum, 90 ajan; çağrı başı ortalama bağlam 146k. Haftanın en pahalı günü; Yusuf kota sıfırlanmadan önce bilerek eforu yükseltti ve tempoyu artırdı. Çağrı sayısı %46 arttı, maliyet %24; çıktı/çağrı değişmedi (~640 tok), efor artışı maliyete yansımadı, hacim yansıdı.
+- Model: Fable neredeyse devre dışı (41 $, %13; ana Fable 26 $), Opus 252 $ (%82). Fable kotası dolmadan hafta bitti; haftalık sıfırlama 19 Ekim 04:00'da geldi.
+- Koordinatör: en pahalı oturum 24 $ (Fable, 433k, 8 saat), 300k üstü 8 oturum (433k, 392k, 352k, 335k, 325k, 323k, 300k). Devir yine yapılmadı ama tek oturuma yığılma yok; maliyet 19 oturuma yayıldı.
+- Ajanlar: 90 ajan 124 $; 9'u 100 çağrı / 200k'yı aştı (en büyük 109 çağrı, 245k zirve). Sonnet review düzeldi: 26 ajan, en büyüğü 59 çağrı / 151k.
+- **Ekran görüntüsü en kötü gün:** koordinatörlerde 125, ajanlarda 228, toplam 353 görüntü. Tussle'ın TWA/Capacitor ve bildirim işleri telefon/emülatör görseline dayanıyordu; kural yazılı ama bu iş türünde uygulanmıyor.
+- Sonuç: kota baskısı yokken disiplin gevşiyor; para yine işe gitti (Tussle mağaza/TWA/bildirim), israf payı ~%15 (görüntüler + 300k üstü oturumlar). Yeni haftada hedef: emülatör/telefon doğrulamasında görüntü yerine log ve `control` çıktıları; koordinatör devri.
+
 ## İlgili
 - [[2026-10-10-ajan-boyutu-ve-yalin-baglam]], [[orkestrasyon]], [[inceleme-kapisi]], [[araclar-ve-raporlar]], [[_index]]
