@@ -30,8 +30,8 @@ Klasör sütunu: `/Users/ziroo/ZZ/zProjects/` altındaki ad ya da `~` ile başla
 | voice-detector | voice-detector |
 | web-boss-teaser | kul-tahti |
 | web-fps-game | kapis |
-| ziroo-dns-vpn | ziroo-dns-vpn |
 | ziroo-edge | ziroo-edge |
+| ziroo-vpn | ziroo-vpn |
 | ziroobank-expenses | ziroobank |
 | ~/.claude/orchestration-report | pano |
 

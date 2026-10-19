@@ -1,20 +1,20 @@
 ---
 type: project
-project: ziroo-dns-vpn
+project: ziroo-vpn
 date: 2026-10-20
 status: active
-tags: [ziroo-dns-vpn, overview, vpn, sansur, sunucu]
+tags: [ziroo-vpn, overview, vpn, sansur, sunucu]
 source: "ZZ kök oturumu 2026-10-19/20 (araştırma: kendi VPN'imiz)"
 ---
 
-# ziroo-dns-vpn: Türkiye'deki engelleri aşmak için kendi VPN'imiz (Yusuf + arkadaşlar)
+# ziroo-vpn: Türkiye'deki engelleri aşmak için kendi VPN'imiz (Yusuf + arkadaşlar)
 
 > Durum kaynağı bu sayfa; canlı gerçek değildir. Sunucu durumunu işlem yapmadan önce canlıdan doğrula.
 
 ## Nedir
 Kendi sunucumuzda çalışan, birkaç kişilik özel VPN. Amaç: Discord (2024'ten beri engelli) ve kriz dönemlerinde engellenen ya da yavaşlatılan siteler (Twitter vb.); genel günlük kullanım. Surfshark gibi hazır servis yerine kendi sunucumuz: daha hızlı, IP'si bilinmediği için engellenmesi zor, sınırsız cihaz.
 
-Kod klasörü `/Users/ziroo/ZZ/zProjects/ziroo-dns-vpn` (2026-10-05'te boş açılmıştı, geçmişte konuşması yok; 2026-10-20'de bu proje için kullanılmaya başlandı).
+Kod klasörü `/Users/ziroo/ZZ/zProjects/ziroo-vpn` (2026-10-05'te boş açılan `ziroo-dns-vpn` klasörü 2026-10-20'de bu adla yeniden adlandırıldı; geçmişte konuşması yok).
 
 ## Kararlar
 - [[2026-10-20-kendi-vpn-ayri-frankfurt-sunucusu-hazir-istemci]]: ayrı LightNode VPS (Frankfurt), hazır istemci + abonelik linki, kendi uygulama yok

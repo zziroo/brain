@@ -1,6 +1,6 @@
 ---
 type: decision
-project: ziroo-dns-vpn
+project: ziroo-vpn
 date: 2026-10-20
 status: active
 tags: [vpn, sunucu, lightnode, frankfurt, sansur]
@@ -36,4 +36,4 @@ Türkiye'de Discord engelli, kriz dönemlerinde Twitter gibi siteler engelleniyo
 - IP engellenirse yeni IP / yeni VPS gerekir; abonelik linki geçişi kolaylaştırır.
 
 ## İlgili
-- [[10-Projects/ziroo-dns-vpn/_overview|ziroo-dns-vpn]] · [[vps-makinesi]] · [[sunucu-lightnode-istanbula-tasindi]]
+- [[10-Projects/ziroo-vpn/_overview|ziroo-vpn]] · [[vps-makinesi]] · [[sunucu-lightnode-istanbula-tasindi]]

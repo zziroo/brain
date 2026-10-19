@@ -26,7 +26,7 @@ Buradan başla. Her şey buradan ya da bir projenin `_overview.md` dosyasından 
 - [[10-Projects/pdf-ceviri/_overview|PDF Çeviri Düzeltici]]: Trados'un bozuk Türkçe DOCX'ini orijinal PDF düzenine yerleştirir, tools.ziroo.net/pdf-ceviri
 - [[10-Projects/silksong-mod/_overview|Silksong modu]]: Hollow Knight: Silksong için özgün boss modu, Team Cherry kalitesi hedefi
 - [[10-Projects/ziroo-edge/_overview|ziroo-edge]]: sunucunun giriş kapısı (Caddy), ziroo.net ana sayfası, tools/games listeleri, ops katmanı (Uptime Kuma, Netdata)
-- [[10-Projects/ziroo-dns-vpn/_overview|ziroo-dns-vpn]]: Türkiye'deki engelleri (Discord, Twitter) aşmak için kendi VPN'imiz; ayrı Frankfurt sunucusu, hazır istemci + abonelik linki; sunucu henüz alınmadı
+- [[10-Projects/ziroo-vpn/_overview|ziroo-vpn]]: Türkiye'deki engelleri (Discord, Twitter) aşmak için kendi VPN'imiz; ayrı Frankfurt sunucusu, hazır istemci + abonelik linki; sunucu henüz alınmadı
 - [[10-Projects/marka/_overview|Marka]]: ziroo markası ve Ziroo maskotu (süzülen sıfır, halka gözler); kod klasörü yok
 
 ## Altyapı
