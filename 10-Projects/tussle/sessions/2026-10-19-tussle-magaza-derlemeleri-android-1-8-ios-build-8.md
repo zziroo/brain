@@ -4,7 +4,7 @@ project: tussle
 date: 2026-10-19
 status: active
 tags: [tussle, magaza, android, ios, derin-baglanti, textzoom, yayin]
-source: yan oturum "mağaza derlemeleri" (2026-10-19 ~03:50-04:30, mobil-playus), commit `8c2b7d7`
+source: yan oturum "mağaza derlemeleri" (2026-10-19 ~03:50-04:30, mobil-playus), commit'ler `8c2b7d7` `d9ecc45` `f069ab9`
 ---
 
 # Oturum: mağaza derlemeleri — Android 1.8 (vc 12), iOS 1.2 (build 8)
@@ -20,5 +20,9 @@ Amaç: `98c61ab`'deki iki yerel değişikliği telefonlara ulaştırmak (OTA ile
 - **iOS:** arşiv + export yükleme başarılı (~04:05); `testflight.mjs 8`: VALID, What to Test yazıldı, dış gruba eklendi, beta incelemesine gönderildi (~04:10).
 
 ## Bekleyen
-- Xiaomi bağlı değildi: Play'den 1.8 kurulunca `adb shell pm get-app-links net.ziroo.tussle` = verified ve `am start ... -d 'https://tussle.ziroo.net/?oda=TEST'` uygulamayı açıyor mu; büyük sistem yazısında arkadaşın telefonu.
+- **Xiaomi teyidi (04:25):** Play'den 1.8 (vc 12) kuruldu; `pm get-app-links` = `tussle.ziroo.net: verified` (imza `0E:5C:...:79:66`); `cmd package resolve-activity -f 0x00010000` davet linkini `net.ziroo.tussle/.MainActivity`'ye, `/privacy`'yi Chrome'a çözüyor. Uygulamayı öne getiren `am start` paylaşılan cihaz kuralı yüzünden koşulmadı; elle dokunuş teyidi bekliyor.
+- Ders: Yusuf dahili test listesindeydi ama katılım linkini (https://play.google.com/apps/internaltest/4701679197682475885) bu hesapla kabul etmemişti; Play kapalı testi ("Erken erişim") verdi, orada 1.8 incelemedeyken 1.7 geldi. Linki kabul edince 1.8 hemen geldi.
+- Bekleyen: büyük sistem yazısında arkadaşın telefonu; kapalı testteki 1.8 Google incelemesinde.
 - iPhone'da build 8: Notlar'da davet linkine uzun bas, "Tussle'da aç".
+
+Dersler: [[2026-10-19-play-dahili-test-listede-olmak-yetmez-katilim-linki]], [[2026-10-19-app-links-ve-app-id-yetenegi-komut-satirindan]]; worktree ile mağaza derlemesi [[2026-10-18-yayin-temiz-worktree-den-yan-oturum-ayni-klasorde]].
