@@ -21,12 +21,17 @@ Kod klasörü `/Users/ziroo/ZZ/zProjects/ziroo-vpn` (2026-10-05'te boş açılan
 
 ## Güncel durum
 _Son güncelleme: 2026-10-20; canlıdan doğrula._
-- **Sunucu henüz alınmadı.** Plan: LightNode, Frankfurt, CPU Shared 1 vCPU / 2 GB, Ubuntu 24.04, SSH anahtarıyla giriş. Yusuf satın alacak (ödeme ve hesap onun tarafında).
-- Satın almadan önce bakılacak: planın aylık trafik kotası (birkaç kişi genel kullanımda kişi başı 100-300 GB/ay).
-- Sunucu açılınca: `~/.ssh/config`'e `vpn` takma adı, güvenlik duvarı, otomatik güvenlik güncellemesi (LightNode imajında unattended-upgrades maskeli geliyor, bkz. [[sunucu-lightnode-istanbula-tasindi]]), sonra VPN kurulumu.
+- **Sunucu henüz alınmadı.** Plan: LightNode, Frankfurt, CPU Shared 1 vCPU / 2 GB, Ubuntu 24.04, SSH anahtarıyla giriş; satın alma Yusuf'ta.
+- Kurulum oturumu proje klasöründe açıldı ("ziroo-vpn: kurulum", 2026-10-20): public key, yığın önerisi, sunucu gelince kurulum. Oturum özeti: [[2026-10-20-kendi-vpn-fikri-ve-kararlar]].
+
+## Sıradaki işler
+- Satın almadan önce planın aylık trafik kotasına bak (kişi başı 100-300 GB/ay).
+- Sunucu yığınını seç (3x-ui / sing-box / Hiddify Manager / Amnezia), protokol desteğini web'den doğrula.
+- Sunucu açılınca: `~/.ssh/config`'e `vpn` takma adı, ufw, şifreli SSH kapalı, unattended-upgrades (LightNode imajında maskeli, bkz. [[sunucu-lightnode-istanbula-tasindi]]), sonra kurulum ve kişi başı abonelik linki.
+- Bitiş ölçütü: Mac ve telefonda bağlantı, Discord açılıyor, Türk siteleri doğrudan, Reality yedeği ayrıca test edilmiş.
 
 ## Teknik yön (kurulumda netleşecek)
-- **Protokoller:** biri gizlenmiş ve DPI'ye dayanıklı (VLESS + Reality, yedek), biri hızlı günlük (UDP tabanlı: Hysteria2, WireGuard ya da AmneziaWG). Hangi panelin hangisini desteklediği kurulumda doğrulanacak: 3x-ui Xray protokollerini sunar, AmneziaWG sunmaz; sing-box sunucu / Hiddify Manager / Amnezia seçenekleri karşılaştırılacak.
+- **Protokoller:** biri gizlenmiş ve DPI'ye dayanıklı (VLESS + Reality, yedek), biri hızlı günlük (UDP tabanlı: Hysteria2, WireGuard ya da AmneziaWG). Hangi panelin hangisini desteklediği kurulumda doğrulanacak: 3x-ui Xray protokollerini sunar, AmneziaWG'yi büyük ihtimalle sunmaz (doğrulanmadı); sing-box sunucu / Hiddify Manager / Amnezia seçenekleri karşılaştırılacak.
 - **Dağıtım:** kişi başı abonelik linki; istemci Hiddify / sing-box (iOS'ta Streisand ya da Hiddify), Windows'ta v2rayN ya da Hiddify.
 - **Split tunneling:** Türk IP'leri doğrudan (geoip:tr direct), gerisi VPN. Banka ve yerli platformlar yurt dışı IP görmesin.
 - **Telefon:** her zaman açık VPN.
