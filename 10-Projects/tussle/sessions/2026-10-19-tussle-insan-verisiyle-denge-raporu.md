@@ -16,7 +16,7 @@ source: oturum "tussle: insan verisiyle denge raporu" (mobil-playus yan oturumu,
 - Tam tablo ve iki log analizi (Denge dokunuş tarafı/gecikme, Köprü bırakma hatası) yan oturum notlar klasöründe kaldı; script ile yeniden üretilir.
 
 ## Yusuf'un kararı
-Hiçbir oyun şimdi ayarlanmıyor. Kısa koşulu oyunlar keşif sorunu olabilir, şikâyet gelirse ele alınır. Uzunlarda ölçüt "bitiyor mu": bitmeyen Bardak ve Çizgi aday, Basket/Çift/Hedef'in sonu belli. Yusuf önce YOSEF'le konuşacak.
+Hiçbir oyun şimdi ayarlanmıyor. Kısa koşulu oyunlar keşif sorunu olabilir, şikâyet gelirse ele alınır. Uzunlarda ölçüt "bitiyor mu": bitmeyen Bardak ve Çizgi çıktı; Bardak paralel oturumda v6 ile zaten çözülmüştü ([[2026-10-19-serit-ve-bardak-90-sn-tavan]]), kalan aday Çizgi. Basket/Çift/Hedef'in sonu belli. Yusuf önce YOSEF'le konuşacak.
 
 ## Doğrulanmayanlar
 - Kısa koşuların "keşif" mi "zorluk" mu olduğu ayrılmadı; ilk koşu / sonraki koşu farkı ipucu (Denge ve Köprü öğreniliyor, Yörünge ikinci koşuda da 6 sn).
