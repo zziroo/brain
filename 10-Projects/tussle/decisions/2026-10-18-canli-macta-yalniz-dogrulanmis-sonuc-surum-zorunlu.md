@@ -2,10 +2,12 @@
 type: decision
 project: tussle
 date: 2026-10-18
-status: active
+status: partially-superseded
 tags: [tussle, canli-mac, parti, surum, hile, ota]
 source: oturum "tussle: durum ve sıradaki işler" (2026-10-18 akşam), commit `624c6e0`
 ---
+
+> **19 Eki:** eski sürümde düşme ve koşu öncesi durdurma kaldırıldı, bkz. [[2026-10-19-canli-macta-eski-surum-oynar-sonucu-sayilmaz]].
 
 # Karar: Canlı maçta yalnız doğrulanmış sonuç sayılır, oyun sürümü uyuşmayan istemci oyuna başlamaz
 
