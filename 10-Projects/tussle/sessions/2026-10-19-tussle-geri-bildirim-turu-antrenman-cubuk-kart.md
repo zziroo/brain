@@ -36,3 +36,9 @@ Cihazda his: iki satırlı başlık, oda kartı, karttan otomatik oyuna geçiş,
 
 ## Sıradaki
 [[10-Projects/tussle/_overview|Overview]] "Sıradaki işler" 0 ve 0a maddeleri (mağaza derlemeleri, cihaz teyitleri).
+
+## Sonrası (04:00–04:40)
+- Gerçek veriyle oda üstü v2 + v3: satırlar tek blok, 1 px sızıntı kapandı, "SEZON #N · Gün N/M", başlıktan hediye düğmesi kalktı ([[2026-10-19-oda-ustu-iki-satir-sezon-ve-bugun]]). İnceleme temiz. Yayın sunucu `466b32d`, OTA 0.20261019.116, temiz ayrık worktree'den (mağaza oturumu aynı klasördeydi).
+- Mağaza derlemeleri ayrı oturumda: Android 1.8 vc 12, iOS build 8 ([[2026-10-19-tussle-magaza-derlemeleri-android-1-8-ios-build-8]]). Yusuf'un Xiaomi'si kapalı test kanalında; 1.8 Google incelemesinde, dahili test katılımı yarım (link o oturumda).
+- Doğrulanmayan: iki satırın telefonda hissi, karttan otomatik oyun, iPhone hediye düğmesi, büyük yazı arkadaşın telefonunda, App Link (1.8 kurulunca).
+

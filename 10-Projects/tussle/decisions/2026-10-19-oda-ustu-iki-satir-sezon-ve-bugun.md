@@ -17,6 +17,7 @@ Oda ekranında sezon bandı ve bugün kartı aşağı kayınca üst çubuk iki b
 - Sezon bandı kaydırılıp çıkınca başlık sarı bir hapa dönüşür: "Sezon" · #sıra · taç + lider. **Puan ve seri yok** (sıra puandan türer, seri ve gün kutuları bantta duruyor), gün kutuları yok.
 - Bugün kartı kaydırılıp çıkınca çubuğun altında beyaz bugün satırı: oyun küçük resmi · ad · bugünün lideri · ▶ veya jeton. **Skor yok.** Başlatacak bir şey yoksa ▶ yerine bir sonraki oyuna geri sayım.
 - İkisi de geri düğmesi gibi konturlu, bindirme (yerleşim kaymaz), histerezis korunur; sezon hapı bant yüklenene kadar çıkmaz. ▶ dışındaki her dokunuş en üste gider.
+- **v2–v3 (gerçek veriyle, 19 Eki ~04:30, `9e21c13`, `466b32d`):** iki satır 8 px arayla tek blok, arkası tek parça opak zemin (tam piksel; aradan 1 px sohbet sızıyordu); iki hap da 44 px. Sezon hapı: koyu "SEZON" · madalya renkli sıra çipi (gümüş artık pasif gibi değil) · "Gün N/M" · lider. Bugün satırında lider adı önceliklidir, süre kısa ("12sa"). **Başlıkta hediye düğmesi yok**: hediye hakların bitince bugün kartında, oyun sonu kartında ve oda panelinde; sezon hapı sağ kenara kadar uzar. Ek sezon bilgisi ("7 gün kaldı") eklenmedi: Gün N/M'yi tekrar eder, lideri sıkıştırır.
 
 ## Neden
 Renk iki bilgiyi ayırır: gözün ilk bakışta "bu sezon mu bugün mü" demesi gerekmez. Puan ve seri sezon bandında ve sezon sayfasında zaten var; sıra puandan türediği için ayrı puan göstermek çubuğu doldurur. Skor bugün satırında lider çipiyle çakışır ve her oyunda birimi farklı.
