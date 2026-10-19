@@ -1,7 +1,7 @@
 ---
 type: project
 project: tussle
-date: 2026-10-19
+date: 2026-10-20
 status: active
 tags: [tussle, overview, oyun, mobil, pwa]
 source: "oturum 2026-10-19 (mobil-playus: denge partisi, oda kilidi, tema düzeltmeleri); önceki oturumlar sessions/ altında"
@@ -22,16 +22,16 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 - i18n: TR/EN (`src/client/i18n`, `docs/I18N.md`); sunucu hata kodları; akış satırları yapısal.
 
 ## Güncel durum
-_Son güncelleme: 2026-10-19 akşamüstü; canlıdan doğrula. Ayrıntı: oturum [[2026-10-19-tussle-denge-partisi-oda-kilidi]], eski hâl [[10-Projects/tussle/sessions/2026-10-17-tussle-guncel-durum-arsivi|arşiv]]._
-- **Yayında:** https://tussle.ziroo.net, sunucu `1a89ebf`, main = origin/main, OTA 0.20261019.2012, DB 23. Konteyner `tussle` (127.0.0.1:8087, `/opt/tussle`, veri `/opt/tussle/data`, sırlar `.env`). Yayın `bash deploy/release.sh` (önce DB yedeği, kirli ağaçta reddeder; [[2026-10-18-yayin-temiz-worktree-den-yan-oturum-ayni-klasorde]]); `.env` değişince `compose up -d --force-recreate`.
-- **19 Eki yayınları:** denge partisi / ortak tempo ([[2026-10-19-sonsuz-oyun-tempo-hedefi]]), oda kilidi ([[2026-10-19-oda-ilk-arkadas-katilana-kadar-kilitli]]), İngilizce oyun kimlikleri, sezon dili, gizli Antrenman; sohbette gün ayırıcı + ↓ rozeti, paylaşım ekranı ([[2026-10-19-tussle-sohbet-gun-ayirici-paylasim]]); arayüz cilası: B itme + C paylaşılan öğe geçişleri, sonra doldur, maskot yükleyici, Gece kontrastı ([[2026-10-19-tussle-arayuz-cilasi-gecis-maskot]]); akşam telefon notları: karttan karta geçiş, bitmiş gün afişi, ilk girişte önceden çekme ([[2026-10-19-tussle-karttan-karta-gecis-bitmis-gun-afisi]]).
+_Son güncelleme: 2026-10-20 gece; canlıdan doğrula. Ayrıntı: oturum [[2026-10-19-tussle-denge-partisi-oda-kilidi]], eski hâl [[10-Projects/tussle/sessions/2026-10-17-tussle-guncel-durum-arsivi|arşiv]]._
+- **Yayında:** https://tussle.ziroo.net, sunucu `5c0161e`, main = origin/main, OTA 0.20261019.2145, DB 24. Konteyner `tussle` (127.0.0.1:8087, `/opt/tussle`, veri `/opt/tussle/data`, sırlar `.env`). Yayın `bash deploy/release.sh` (önce DB yedeği, kirli ağaçta reddeder; [[2026-10-18-yayin-temiz-worktree-den-yan-oturum-ayni-klasorde]]); `.env` değişince `compose up -d --force-recreate`.
+- **19 Eki yayınları:** denge partisi / ortak tempo ([[2026-10-19-sonsuz-oyun-tempo-hedefi]]), oda kilidi ([[2026-10-19-oda-ilk-arkadas-katilana-kadar-kilitli]]), İngilizce oyun kimlikleri, sezon dili, gizli Antrenman; sohbette gün ayırıcı + ↓ rozeti, paylaşım ekranı ([[2026-10-19-tussle-sohbet-gun-ayirici-paylasim]]); arayüz cilası: B itme + C paylaşılan öğe geçişleri, sonra doldur, maskot yükleyici, Gece kontrastı ([[2026-10-19-tussle-arayuz-cilasi-gecis-maskot]]); gece telefon notları: karttan karta geçiş, bitmiş gün afişi, ilk girişte önceden çekme ([[2026-10-19-karttan-karta-gecis-bitmis-gun-afisi]]), sezon kartı H1c + 7 kutu + 7–30 gün ([[2026-10-20-sezon-karti-h1c-gun-noktalari-7-kutu]]), Geçmiş ekranı ([[2026-10-20-sezon-gecmisi-ayri-ekran]]), sade oyuncu kartı ([[2026-10-20-oyuncu-karti-denemeler-profil-baglantisi]]); oturum [[2026-10-19-tussle-karttan-karta-gecis-bitmis-gun-afisi]].
 - **Gelir:** hak paketleri odaya hediye, reklam yok ([[2026-10-17-hak-paketleri-odaya-hediye-reklam-yok]]); Play TR 9,99/19,99/29,99 ₺ ([[2026-10-19-play-hak-paketleri-tr-fiyati]]); Apple doğrulaması açık. Bildirim: web push + APNs + FCM, yalnız ön plandaki odada susar.
 - **Android:** Play `net.ziroo.tussle`, 1.9 (vc 13, @capacitor/share) iç + kapalı test (19 Eki 17:00), App Links doğrulandı ([[2026-10-19-tussle-magaza-derlemeleri-android-1-8-ios-build-8]]); tuzaklar [[2026-10-18-magaza-derlemesi-ortam-tuzaklari-java-home-zsh]]. Kapalı test: 12 testçi tamam (19 Eki), 14 gün sayıyor.
 - **iOS:** build 9 (1.3, @capacitor/share) yüklendi, dış test + beta incelemesi (19 Eki); TestFlight https://testflight.apple.com/join/PkEYg1MN; dağıtım `npm run ios:testflight`.
 - **İzleme:** istemci hataları + geri bildirim (`scripts/feedback-cli.mjs`; mağaza hataları `iap.purchase …`), gece yedeği 04:20, gece gözcüsü ([[2026-10-18-global-gece-gozcusu]]), canlı DB okuma [[2026-10-18-canli-db-okuma-docker-exec-node-sqlite]].
 
 ## Sıradaki işler
-1. **Cihaz teyitleri (19 Eki yayınları):** geçiş hissi (B itme, oda/avatar/sezon/rekor/oyuncu C dönüşümü, bugün tablosu yerinde açılma), yavaş ağda maskot + 8 sn Uyku + dokununca uyanma, iPhone'da ilk dokunuşta ses (AudioContext boşta kuruluyor), klavye açıkken sohbet (↓/tepki klavyeyi kapatmamalı), Gece teması, eski iPhone'da B'ye düşüş; 1.9/build 9'da paylaşım ekranı; oda kilidi, yeni tempo (beğenilmezse `git revert fb9f2dd`), parti lobisi, Android satın alma (TR), iPhone hediye düğmesi.
+1. **Cihaz teyitleri (19–20 Eki yayınları):** ilk girişte kart dönüşümü, bitmiş gün afişi + hediye rozeti, sezon kartı (gün noktaları, Gece'de rozet konturu silik mi), Geçmiş ekranı + Android geri tuşu, oyuncu kartı denemeleri, parti bekleme maskotu; geçişler hâlâ fark edilmiyorsa yavaşlatma kararı; geçiş hissi (B itme, oda/avatar/sezon/rekor/oyuncu C dönüşümü, bugün tablosu yerinde açılma), yavaş ağda maskot + 8 sn Uyku + dokununca uyanma, iPhone'da ilk dokunuşta ses (AudioContext boşta kuruluyor), klavye açıkken sohbet (↓/tepki klavyeyi kapatmamalı), Gece teması, eski iPhone'da B'ye düşüş; 1.9/build 9'da paylaşım ekranı; oda kilidi, yeni tempo (beğenilmezse `git revert fb9f2dd`), parti lobisi, Android satın alma (TR), iPhone hediye düğmesi.
 2. **Açık soru (Yusuf):** açık temayı da etkileyen küçük kontrastlar (kilitli kart 1/2, üyeler sayfası davet kartı, kendi mesaj saati, "2 hak", parti buton yazıları); sayfaya çevrilebilecek listeler sonraya.
 3. **Denge ölçümü:** yayından sonra sürüm bazlı insan medyanı (`scripts/balance-report.mjs`, dal `claude/heuristic-dirac-c207c7`, yalnız yerel; [[2026-10-19-denge-insan-kosulariyla-surum-bazli-olculur]]); Sort It'te ölüm nedeni log replay ile. Yeni tahminler bot tabanlı.
 4. **Herkes için zar (Playus fikri):** satın alan rekorunu geçince odaya hak açılır, geçemezse devreder; ücretli/ücretsiz kararı Yusuf'ta.
@@ -41,6 +41,7 @@ _Son güncelleme: 2026-10-19 akşamüstü; canlıdan doğrula. Ayrıntı: oturum
 8. **Sonra:** tanıtımda kimlikli figürler, dolaylı etkileşim/arena, tema toptan düzenleme. Tembel parçalar rafta ([[2026-10-17-oyunlar-tembel-parca-modul-sistemi-rafta]]).
 
 ## Önemli kararlar
+- [[2026-10-20-sezon-karti-h1c-gun-noktalari-7-kutu]] · [[2026-10-20-sezon-uzunlugu-7-30-gun]] · [[2026-10-20-sezon-gecmisi-ayri-ekran]] · [[2026-10-20-oyuncu-karti-denemeler-profil-baglantisi]] · [[2026-10-19-karttan-karta-gecis-bitmis-gun-afisi]]: sezon kartı (sıra|lider, gün noktaları, 7 kutu), sezon 7–30 gün, Geçmiş ekranı, sade oyuncu kartı, karttan karta geçiş + bitmiş gün afişi.
 - [[2026-10-19-ekran-gecisi-itme-paylasilan-oge-sonra-doldur]] · [[2026-10-19-maskot-yukleyici-karisik-havuz-uyku]]: B itme her yerde, C ortak nesnede, ekran geçişten sonra dolar; maskot yükleyici havuzu, 8 sn Uyku. Ders: [[2026-10-19-gecis-olcumu-gizli-bolme-ve-view-transition-tuzaklari]]
 - [[2026-10-19-oyun-kimlikleri-ingilizce-kebab-case]]: oyun kimlikleri görünen addan İngilizce kebab-case, rota `#/game`, DB göçü 22.
 - [[2026-10-19-oda-ustu-iki-satir-sezon-ve-bugun]] · [[2026-10-19-ana-sayfa-oda-karti-v3]] · [[2026-10-19-antrenman-gizli-testci-modu-ve-ayri-veri]] · [[2026-10-19-serit-ve-bardak-90-sn-tavan]] · [[2026-10-19-web-hediye-dugmesi-uygulamaya-yonlendirir]]
@@ -122,6 +123,7 @@ _Son güncelleme: 2026-10-19 akşamüstü; canlıdan doğrula. Ayrıntı: oturum
 - [[2026-10-15-denge-turu-yusuf-telefon-geri-bildirimi]] (doğrulanmadı)
 
 ## Dersler
+- [[2026-10-19-onceden-cekme-gun-satirini-olusturmamali]]: odayı önceden çekmek today/catalog ile günün satırını oluşturup seçimi dondurur; önce salt okunur detay, `picked` ise devam.
 - [[2026-10-19-oyun-kimligi-yeniden-adlandirma-dersleri]]: kimlik yeniden adlandırmada kör bul-değiştir olmaz (etiket/birim çakışması, log `g`, eski göç fixture'ları).
 - [[2026-10-19-yayin-ayri-worktree-dalindan-kismi-geri-alma]] · [[2026-10-19-android-textzoom-sistem-yazi-boyutu]]
 - [[2026-10-18-canli-db-okuma-docker-exec-node-sqlite]]: canlı DB host'ta sqlite3 yok, konteynerde node:sqlite salt okunur.
@@ -169,6 +171,7 @@ _Son güncelleme: 2026-10-19 akşamüstü; canlıdan doğrula. Ayrıntı: oturum
 - [[2026-10-15-tema-degisikligini-once-goster]]
 
 ## Oturumlar
+- [[2026-10-19-tussle-karttan-karta-gecis-bitmis-gun-afisi]]: telefon notları turu: geçişler, bitmiş gün afişi, önceden çekme, sezon kartı/Geçmiş, oyuncu kartı (`5c0161e`, OTA 0.20261019.2145, DB 24)
 - [[2026-10-19-tussle-oyun-kimlikleri-ingilizce]]: oyun kimlikleri İngilizceye (`c81a8b7`, yayın bekliyor)
 - [[2026-10-19-tussle-geri-bildirim-turu-antrenman-cubuk-kart]]: Bardak v6, Şerit v4, gizli Antrenman, Apple IAP açık, derin bağlantılar, oda üstü iki satır, oda kartı v3 (`98c61ab`, OTA 0.20261019.51)
 - [[2026-10-19-tussle-bildirim-geri-bildirimler-serit-kim-burada]]: bildirim, kim burada rozeti, Şerit v3 (`e2de09a`, OTA 2131)
