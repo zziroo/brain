@@ -52,6 +52,7 @@ Buradan başla. Her şey buradan ya da bir projenin `_overview.md` dosyasından 
 - [[2026-10-10-ajan-token-analizi]]: ajan maliyetinin kaynağı bağlam boyutu; son 7 gün karşılaştırması ve efor (2026-10-10)
 - [[2026-10-06-graphify-ve-ponytail-incelemesi]]: Graphify tek projede ölçerek denenebilir (henüz denenmedi); Ponytail yerine CLAUDE.md kuralı
 - [[2026-10-09-context-mode-incelemesi]]: Context Mode eklentisi kurulmadı (alt ajanları engelliyor, auto mode ile çakışıyor); yalnız MCP olarak denenebilir
+- [[2026-10-20-bgts-context-engine-incelemesi]]: BGTS Context Engine kurulmadı (yalnız dosya bulma ölçülmüş, harness yok); yerine düz kod haritası
 
 ## Arşiv
 - [[90-Archive/old-claude-memory/_index|Eski Claude hafıza klasörleri]]

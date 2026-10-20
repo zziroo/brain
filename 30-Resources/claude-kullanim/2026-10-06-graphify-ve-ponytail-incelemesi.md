@@ -16,7 +16,7 @@ Bir Instagram reel'i "limite takılmayı önleyen, token azaltan, dosyaları tek
 - Projeyi yerel tarayıp (kod ayrıştırma + çağrı grafiği) bilgi grafiği çıkarıyor; ajan dosyaları tek tek okumak yerine grafiği sorguluyor. Çıktı `graphify-out/` (graph.json, rapor, html).
 - Kendi ölçümü: 52 dosyalık repoda sorgu maliyeti ~123k → ~1.7k token. Pazarlama rakamı, ama asıl derdimize (her ajanın ~45–50k soğuk başlangıcı) dokunuyor.
 - Dikkat: doküman ve görselleri kavram çıkarmak için Claude'a gönderiyor (token yakar); grafik eskiyince yeniden üretmek gerekir.
-- **Karar:** en büyük kod tabanında, proje oturumunda dene; önce/sonra ajan başlangıç token'larını orkestrasyon raporuyla karşılaştır. Henüz denenmedi (2026-10-16).
+- **Karar:** en büyük kod tabanında, proje oturumunda dene; önce/sonra ajan başlangıç token'larını orkestrasyon raporuyla karşılaştır. Henüz denenmedi (2026-10-16). 2026-10-20: önce düz kod haritası denenecek, Graphify yalnız o yetmezse ([[2026-10-20-bgts-context-engine-incelemesi]]).
 
 ## Ponytail
 - Yazılım değil, kural seti (skill): kod yazmadan önce "gerçekli mi, kod tabanında var mı, standart kütüphane yapıyor mu" sordurur. Kendi iddiası %54 daha az kod.

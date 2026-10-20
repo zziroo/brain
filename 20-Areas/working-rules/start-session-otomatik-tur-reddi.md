@@ -19,6 +19,13 @@ Kart (`own_initiative`) çözüm değil: kart mevcut klasörde (ZZ) açılır, `
 - `start_session` tool'unu kullanıcının asıl mesajını aldığım turda değil, **önceden** (örneğin ilk yanıtı yazarken) yükle; böylece kullanıcının "başlat" dediği tur temiz bir kullanıcı turu olur.
 - Reddedilirse: brifingi proje klasörüne not olarak yaz (`BASLANGIC-NOTU.md` gibi), kullanıcıdan tek kelimelik yeni bir mesaj iste, sonraki turda başlat.
 
+## Tekrar (2026-10-20, status: unverified neden)
+ZZ oturumu "araştırma: tweet doğrulama"da iki ret yaşandı:
+1. İlk ret, alt ajan raporu (SubagentHandback) ile gelen turdaydı. Bu beklenen durum.
+2. İkinci ret ise kullanıcının gerçek mesajıyla açılan turdaydı: "düşündüğün değişiklikleri uygulayabilirsin". Olası neden: genel bir onay "oturum başlat" sayılmıyor, ya da önceki görev bildirimi turun sınıfını etkiledi. Neden doğrulanmadı.
+
+Uygulanan çözüm şuydu: brief vault'a devir notu olarak yazıldı ([[2026-10-20-kod-haritasi-devir-notu]]) ve kullanıcıdan açık bir "başlat" mesajı istendi. Ek ders: alt ajan çalışırken bir oturum açılacaksa, kullanıcıdan oturumu açıkça isteyen bir cümle beklenir.
+
 ## İlgili
 - [[10-Projects/kripto-bot/_overview]]
 - [[20-Areas/working-rules/_index]]
