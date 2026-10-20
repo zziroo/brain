@@ -16,3 +16,5 @@ ssh vps 'cd /opt/tussle && TUSSLE_TAG=latest TUSSLE_REV=$(git rev-parse --short 
 ```
 
 (`/opt/tussle` kökünde compose dosyası yok; `-f deploy/compose.yml` şart.) Ayrıca `/opt/tussle/data` altına konan dosyalar konteyner kullanıcısı `node` (uid 1000) tarafından okunabilmeli: `chown 1000:1000`, mod 600.
+
+**20 Eki tekrarı:** `APPLE_ANDROID=1` eklenirken `/opt/tussle` içinde düz `docker compose up` yine "no configuration file" verdi. Doğrusu `TUSSLE_TAG=latest TUSSLE_REV=<rev> docker compose -f deploy/compose.yml up -d --force-recreate`; değişiklikten önce `.env` yedeği (`.env.bak-<konu>`). Oturum: [[2026-10-20-tussle-ayarlar-acilis-splash-android-apple]].

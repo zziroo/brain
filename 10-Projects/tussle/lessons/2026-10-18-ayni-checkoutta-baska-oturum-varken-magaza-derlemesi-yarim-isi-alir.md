@@ -19,3 +19,5 @@ source: oturum 2026-10-18 akşam (mobil-playus, "tussle: durum ve kalan işler")
 - Yüklemeden sonra paketin içeriği doğrulanabilir: `unzip -l dist/tussle-release.aab` + bundle'da beklenen/beklenmeyen dize araması.
 
 İlgili: [[2026-10-15-ayrik-klasor-paralellik-ve-paylasilan-dosyalar]], [[2026-10-18-tussle-kurulum-adimlari-sirali]], oturum [[2026-10-18-tussle-durum-kalan-isler-ios-motor-yayin]].
+
+**20 Eki uygulaması:** paralel ajanlar aynı çalışma kopyasında farklı dosyalarda sorunsuz çalıştı; mağaza derlemesi (Android 1.10) alınan çalışma kopyasına yarım iş sızmasın diye açılış animasyonu işi worktree'de yapıldı. Oturum [[2026-10-20-tussle-ayarlar-acilis-splash-android-apple]].

@@ -38,3 +38,5 @@ Yavaş açılan ekranlar için yükleme göstergesi gerekti; Yusuf "maskot üçl
 - [[2026-10-08-marka-maskotu-uclu-blok-ve-ikon]]
 - [[2026-10-19-ekran-gecisi-itme-paylasilan-oge-sonra-doldur]]
 - [[2026-10-19-tussle-arayuz-cilasi-gecis-maskot]]
+
+- 20 Eki: soğuk açılış maskotu kaldırıldı (logoya uçuş her açılışta oynuyor): [[2026-10-20-acilis-animasyonu-logoya-ucus]].

@@ -35,3 +35,5 @@ Parti Gecesi 3/5/7 sabit oyun sayısı ve oyun başına tek koşuyla açılmış
 ## İlgili
 - [[2026-10-11-parti-gecesi]] (oyun sayısı ve tek koşu kısmını değiştirdi)
 - [[2026-10-15-tussle-tema-parti-sonraki-gun-denge-turu]]
+
+- 20 Eki: oyun başı hak seçimi kalktı, tek "Kaç hak" seçimi: [[2026-10-20-parti-gecesi-tek-hak-secimi]].

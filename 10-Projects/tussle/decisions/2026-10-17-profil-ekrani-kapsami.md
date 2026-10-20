@@ -42,3 +42,5 @@ Ayarlar ekranında yalnız takma ad ve hesap bağlama vardı; "Antrenman kalkaca
 
 ## İlgili
 - [[2026-10-17-tussle-profil]] · mockup `src/client/mockups/profil.html`, `PROFIL-SPEC.md`
+
+- 20 Eki: ayarlar girişi ana ekrana taşındı, profildeki dişli kalktı: [[2026-10-20-ayarlar-girisi-ana-ekranda-diskli-disli]].

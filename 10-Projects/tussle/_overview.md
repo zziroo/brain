@@ -4,7 +4,7 @@ project: tussle
 date: 2026-10-20
 status: active
 tags: [tussle, overview, oyun, mobil, pwa]
-source: "oturum 2026-10-19 (mobil-playus: denge partisi, oda kilidi, tema düzeltmeleri); önceki oturumlar sessions/ altında"
+source: "oturum 2026-10-20 öğleden sonra (mobil-playus: ayarlar, açılış, splash, Android Apple girişi); önceki oturumlar sessions/ altında"
 ---
 
 # Tussle: arkadaşlarla günlük mini oyun kapışması (Playus'un hafif rakibi)
@@ -22,27 +22,30 @@ Playus (`club.playus`, günlük 1 dk mini oyun + grup sezonu) benzeri ama **hiç
 - i18n: TR/EN (`src/client/i18n`, `docs/I18N.md`); sunucu hata kodları; akış satırları yapısal.
 
 ## Güncel durum
-_Son güncelleme: 2026-10-20 akşam (rozetler yayında, [[2026-10-20-tussle-rozetler-kontur-kapanis-iskelet]]); canlıdan doğrula. Ayrıntı: oturum [[2026-10-19-tussle-denge-partisi-oda-kilidi]], eski hâl [[10-Projects/tussle/sessions/2026-10-17-tussle-guncel-durum-arsivi|arşiv]]._
-- **Yayında:** https://tussle.ziroo.net, sunucu `0787aa4`, main = origin/main, OTA 0.20261020.645, DB 24. Konteyner `tussle` (127.0.0.1:8087, `/opt/tussle`, veri `/opt/tussle/data`, sırlar `.env`). Yayın `bash deploy/release.sh` (önce DB yedeği, kirli ağaçta reddeder; [[2026-10-18-yayin-temiz-worktree-den-yan-oturum-ayni-klasorde]]); `.env` değişince `compose up -d --force-recreate`.
-- **19 Eki yayınları:** denge partisi / ortak tempo ([[2026-10-19-sonsuz-oyun-tempo-hedefi]]), oda kilidi ([[2026-10-19-oda-ilk-arkadas-katilana-kadar-kilitli]]), İngilizce oyun kimlikleri, sezon dili, gizli Antrenman; sohbette gün ayırıcı + ↓ rozeti, paylaşım ekranı ([[2026-10-19-tussle-sohbet-gun-ayirici-paylasim]]); arayüz cilası: B itme + C paylaşılan öğe geçişleri, sonra doldur, maskot yükleyici, Gece kontrastı ([[2026-10-19-tussle-arayuz-cilasi-gecis-maskot]]); gece telefon notları: karttan karta geçiş, bitmiş gün afişi, ilk girişte önceden çekme ([[2026-10-19-karttan-karta-gecis-bitmis-gun-afisi]]), sezon kartı H1c + 7 kutu + 7–30 gün ([[2026-10-20-sezon-karti-h1c-gun-noktalari-7-kutu]]), Geçmiş ekranı ([[2026-10-20-sezon-gecmisi-ayri-ekran]]), sade oyuncu kartı ([[2026-10-20-oyuncu-karti-denemeler-profil-baglantisi]]); oturum [[2026-10-19-tussle-karttan-karta-gecis-bitmis-gun-afisi]].
-- **Gelir:** hak paketleri odaya hediye, reklam yok ([[2026-10-17-hak-paketleri-odaya-hediye-reklam-yok]]); Play TR 9,99/19,99/29,99 ₺ ([[2026-10-19-play-hak-paketleri-tr-fiyati]]); Apple doğrulaması açık. Bildirim: web push + APNs + FCM, yalnız ön plandaki odada susar.
-- **Android:** Play `net.ziroo.tussle`, 1.9 (vc 13, @capacitor/share) iç + kapalı test (19 Eki 17:00), App Links doğrulandı ([[2026-10-19-tussle-magaza-derlemeleri-android-1-8-ios-build-8]]); tuzaklar [[2026-10-18-magaza-derlemesi-ortam-tuzaklari-java-home-zsh]]. Kapalı test: 12 testçi tamam (19 Eki), 14 gün sayıyor.
-- **iOS:** build 9 (1.3, @capacitor/share) yüklendi, dış test + beta incelemesi (19 Eki); TestFlight https://testflight.apple.com/join/PkEYg1MN; dağıtım `npm run ios:testflight`.
-- **İzleme:** istemci hataları + geri bildirim (`scripts/feedback-cli.mjs`; mağaza hataları `iap.purchase …`), gece yedeği 04:20, gece gözcüsü ([[2026-10-18-global-gece-gozcusu]]), canlı DB okuma [[2026-10-18-canli-db-okuma-docker-exec-node-sqlite]].
+_Son güncelleme: 2026-10-20 öğleden sonra ([[2026-10-20-tussle-ayarlar-acilis-splash-android-apple]]); canlıdan doğrula. Önceki: [[2026-10-20-tussle-rozetler-kontur-kapanis-iskelet]], [[2026-10-19-tussle-karttan-karta-gecis-bitmis-gun-afisi]], eski hâl [[10-Projects/tussle/sessions/2026-10-17-tussle-guncel-durum-arsivi|arşiv]]._
+- **Yayında:** https://tussle.ziroo.net, sunucu `9730a9a`, main = `c525277`, OTA 0.20261020.1216, DB 24. Konteyner `tussle` (127.0.0.1:8087, `/opt/tussle`, veri `/opt/tussle/data`, sırlar `.env`). Yayın `bash deploy/release.sh` ([[2026-10-18-yayin-temiz-worktree-den-yan-oturum-ayni-klasorde]]); `.env` değişince `docker compose -f deploy/compose.yml up -d --force-recreate` ([[2026-10-17-env-degisikligi-compose-restart-okumaz]]).
+- **20 Eki yayınları:** rozetler, kontur, kapanış geçişleri, iskeletler ([[2026-10-20-kademeli-rozetler-bronz-gumus-altin]]); ana ekranda ayarlar dişlisi ([[2026-10-20-ayarlar-girisi-ana-ekranda-diskli-disli]]); Parti tek "Kaç hak" ([[2026-10-20-parti-gecesi-tek-hak-secimi]]); ilk oda dokunuşu dolu açılır ([[2026-10-20-ilk-oda-dokunusu-ana-sayfa-ozetinden-on-kart]]); logoya uçuş açılışı ([[2026-10-20-acilis-animasyonu-logoya-ucus]]); Android'de Apple girişi, `APPLE_ANDROID=1` açık ([[2026-10-20-android-apple-girisi-custom-tab-sunucu-yonlendirme]]).
+- **Gelir:** hak paketleri odaya hediye, reklam yok ([[2026-10-17-hak-paketleri-odaya-hediye-reklam-yok]]); Play TR 9,99/19,99/29,99 ₺ ([[2026-10-19-play-hak-paketleri-tr-fiyati]]); Apple doğrulaması açık. Bildirim: web push + APNs + FCM.
+- **Android:** Play `net.ziroo.tussle`, 1.10 (vc 14: splash ilk boyamaya kadar + VectorDrawable ikon, [[2026-10-20-android-splash-ilk-boyamaya-kadar-ve-web-boot-esit-boy]]) iç + kapalı test (20 Eki); `npm run play:upload`. Kapalı test: 12 testçi (19 Eki), 14 gün sayıyor. Tuzaklar [[2026-10-18-magaza-derlemesi-ortam-tuzaklari-java-home-zsh]].
+- **iOS:** build 9 (1.3) dış test (19 Eki); 20 Eki işleri OTA ile geldi, yeni build gerekmedi. TestFlight https://testflight.apple.com/join/PkEYg1MN; dağıtım `npm run ios:testflight`.
+- **İzleme:** istemci hataları + geri bildirim (`scripts/feedback-cli.mjs`), gece yedeği 04:20, gece gözcüsü ([[2026-10-18-global-gece-gozcusu]]), canlı DB okuma [[2026-10-18-canli-db-okuma-docker-exec-node-sqlite]]. Kod haritası `docs/kod-haritasi.md` (bakım `harita.mjs kontrol`).
 
 ## Sıradaki işler
-- **Kod haritası:** yapıldı (20 Eki, `070e0a4`): `docs/kod-haritasi.md` 162 satır; bakım `node ~/.claude/skills/kod-haritasi/harita.mjs kontrol` (yapı değiştiren commit öncesi). Belgelerdeki eskimiş yerler (ARCHITECTURE "Directories", GAME-CONTRACT §0 `renkesle`, android-twa README) haritanın Tuzaklar bölümünde; düzeltilmedi. Sistem: [[2026-10-20-token-ucuncu-tur-kod-haritasi-ve-kural-gozden-gecirme]].
-0. **20 Eki yayını telefon teyidi:** avatar/şerit konturları (Gece), kapanış geçişleri, sohbet/profil iskeletleri, rozet popup'ı (iPhone çentiği, Android geri); rozet eşiklerini veriyle yeniden ayarla, Ev sahibi kademesini kalıcılaştırmayı düşün ([[2026-10-20-kademeli-rozetler-bronz-gumus-altin]]).
-1. **Cihaz teyitleri (19–20 Eki yayınları):** ilk girişte kart dönüşümü, bitmiş gün afişi + hediye rozeti, sezon kartı (gün noktaları, Gece'de rozet konturu silik mi), Geçmiş ekranı + Android geri tuşu, oyuncu kartı denemeleri, parti bekleme maskotu; geçişler hâlâ fark edilmiyorsa yavaşlatma kararı; geçiş hissi (B itme, oda/avatar/sezon/rekor/oyuncu C dönüşümü, bugün tablosu yerinde açılma), yavaş ağda maskot + 8 sn Uyku + dokununca uyanma, iPhone'da ilk dokunuşta ses (AudioContext boşta kuruluyor), klavye açıkken sohbet (↓/tepki klavyeyi kapatmamalı), Gece teması, eski iPhone'da B'ye düşüş; 1.9/build 9'da paylaşım ekranı; oda kilidi, yeni tempo (beğenilmezse `git revert fb9f2dd`), parti lobisi, Android satın alma (TR), iPhone hediye düğmesi.
-2. **Açık soru (Yusuf):** açık temayı da etkileyen küçük kontrastlar (kilitli kart 1/2, üyeler sayfası davet kartı, kendi mesaj saati, "2 hak", parti buton yazıları); sayfaya çevrilebilecek listeler sonraya.
-3. **Denge ölçümü:** yayından sonra sürüm bazlı insan medyanı (`scripts/balance-report.mjs`, dal `claude/heuristic-dirac-c207c7`, yalnız yerel; [[2026-10-19-denge-insan-kosulariyla-surum-bazli-olculur]]); Sort It'te ölüm nedeni log replay ile. Yeni tahminler bot tabanlı.
-4. **Herkes için zar (Playus fikri):** satın alan rekorunu geçince odaya hak açılır, geçemezse devreder; ücretli/ücretsiz kararı Yusuf'ta.
-5. **Mağaza:** Play %15 şart kabulü (Yusuf), IARC incelemede, Apple sandbox testçi yok ([[2026-10-18-tussle-kalan-isler-testflight-urunler-play-konsol]]); mağaza ekran görüntüleri (Yusuf, `store/README.md`).
-6. **Kapalı test → üretim:** 14 gün dolunca üretim başvurusu; `install-links.ts` `stage: 'store'`.
+0. **Telefon teyidi (20 Eki yayınları):** 1.10 Play'den gelince açılış (logoya uçuş, oturumlu yol) + splash keskinliği/eşleşmesi; Android Apple girişi ilk deneme (Ayarlar → hesap bağlama: dönüş otomatik mi, yedek "Tussle'a dön" mi); iPhone'da açılış ve tanıtım yerleşimi; avatar → profil geçişi 44 px; konturlar (Gece), kapanış geçişleri, iskeletler, rozet popup'ı; rozet eşiklerini veriyle ayarla ([[2026-10-20-kademeli-rozetler-bronz-gumus-altin]]). Cihaz hissini ölçümle doğrula ([[2026-10-20-cihaz-hissi-adb-kaydi-ve-cdp-ile-olculur]]).
+1. **Cihaz teyitleri (19 Eki):** bitmiş gün afişi + hediye rozeti, sezon kartı, Geçmiş + Android geri, oyuncu kartı, yavaş ağda maskot + Uyku, iPhone'da ilk dokunuşta ses, klavye açıkken sohbet, Gece teması, paylaşım ekranı; oda kilidi, yeni tempo (beğenilmezse `git revert fb9f2dd`), parti lobisi, Android satın alma (TR), iPhone hediye düğmesi.
+2. **Açık soru (Yusuf):** küçük kontrastlar (kilitli kart 1/2, davet kartı, kendi mesaj saati, "2 hak", parti buton yazıları).
+3. **Denge ölçümü:** sürüm bazlı insan medyanı (`scripts/balance-report.mjs`, dal `claude/heuristic-dirac-c207c7`; [[2026-10-19-denge-insan-kosulariyla-surum-bazli-olculur]]).
+4. **Herkes için zar (Playus fikri):** ücretli/ücretsiz kararı Yusuf'ta.
+5. **Mağaza:** Play %15 şart kabulü (Yusuf), IARC, Apple sandbox testçi yok ([[2026-10-18-tussle-kalan-isler-testflight-urunler-play-konsol]]); ekran görüntüleri (Yusuf).
+6. **Kapalı test → üretim:** 14 gün dolunca başvuru; `install-links.ts` `stage: 'store'`.
 7. **iOS ilk denemeler:** APNs ve sandbox satın alma.
-8. **Sonra:** tanıtımda kimlikli figürler, dolaylı etkileşim/arena, tema toptan düzenleme. Tembel parçalar rafta ([[2026-10-17-oyunlar-tembel-parca-modul-sistemi-rafta]]).
+8. **Küçük açıklar:** `android-twa` yedek kabuğunda `data-boot` yok (Play'i etkilemiyor); belgelerdeki eskimiş yerler kod haritasının Tuzaklar bölümünde.
+9. **Sonra:** tanıtımda kimlikli figürler, dolaylı etkileşim/arena, tema toptan düzenleme. Tembel parçalar rafta ([[2026-10-17-oyunlar-tembel-parca-modul-sistemi-rafta]]).
 
 ## Önemli kararlar
+- [[2026-10-20-android-apple-girisi-custom-tab-sunucu-yonlendirme]]: Android'de Apple girişi Custom Tab + `apple-redirect.ts`, `APPLE_ANDROID` bayrağı.
+- [[2026-10-20-acilis-animasyonu-logoya-ucus]] · [[2026-10-20-android-splash-ilk-boyamaya-kadar-ve-web-boot-esit-boy]]: logoya uçuş açılışı, splash ilk boyamaya kadar, eşit boy.
+- [[2026-10-20-ayarlar-girisi-ana-ekranda-diskli-disli]] · [[2026-10-20-parti-gecesi-tek-hak-secimi]] · [[2026-10-20-ilk-oda-dokunusu-ana-sayfa-ozetinden-on-kart]]: ayarlar dişlisi ana ekranda, tek "Kaç hak", ilk oda dokunuşu dolu.
 - [[2026-10-20-kademeli-rozetler-bronz-gumus-altin]] · [[2026-10-20-gorsel-kurallar-kontur-kapanis-gecisi-iskelet]]: 10 kademeli rozet + profil istatistikleri; avatar düz kontur, kapanışta düşüş, iskelet yükleme.
 - [[2026-10-20-sezon-karti-h1c-gun-noktalari-7-kutu]] · [[2026-10-20-sezon-uzunlugu-7-30-gun]] · [[2026-10-20-sezon-gecmisi-ayri-ekran]] · [[2026-10-20-oyuncu-karti-denemeler-profil-baglantisi]] · [[2026-10-19-karttan-karta-gecis-bitmis-gun-afisi]]: sezon kartı (sıra|lider, gün noktaları, 7 kutu), sezon 7–30 gün, Geçmiş ekranı, sade oyuncu kartı, karttan karta geçiş + bitmiş gün afişi.
 - [[2026-10-19-ekran-gecisi-itme-paylasilan-oge-sonra-doldur]] · [[2026-10-19-maskot-yukleyici-karisik-havuz-uyku]]: B itme her yerde, C ortak nesnede, ekran geçişten sonra dolar; maskot yükleyici havuzu, 8 sn Uyku. Ders: [[2026-10-19-gecis-olcumu-gizli-bolme-ve-view-transition-tuzaklari]]
@@ -126,6 +129,7 @@ _Son güncelleme: 2026-10-20 akşam (rozetler yayında, [[2026-10-20-tussle-roze
 - [[2026-10-15-denge-turu-yusuf-telefon-geri-bildirimi]] (doğrulanmadı)
 
 ## Dersler
+- [[2026-10-20-cihaz-hissi-adb-kaydi-ve-cdp-ile-olculur]] · [[2026-10-20-webview-raster-ucus-animasyonunda-gpu-donmasi]] · [[2026-10-20-testte-yanlis-uygulama-acilabilir-debug-surumu-kaldir]]: cihaz hissini 120 Hz kayıt/CDP ile ölç; WebView raster donması; yanlış uygulama/debug sürümü.
 - [[2026-10-20-siniflandirici-canli-yayin-ve-db-okumayi-son-mesaj-onaylamadikca-engeller]]: yayın/DB okuma için her seferinde açık onay.
 - [[2026-10-19-onceden-cekme-gun-satirini-olusturmamali]]: odayı önceden çekmek today/catalog ile günün satırını oluşturup seçimi dondurur; önce salt okunur detay, `picked` ise devam.
 - [[2026-10-19-oyun-kimligi-yeniden-adlandirma-dersleri]]: kimlik yeniden adlandırmada kör bul-değiştir olmaz (etiket/birim çakışması, log `g`, eski göç fixture'ları).
@@ -175,6 +179,7 @@ _Son güncelleme: 2026-10-20 akşam (rozetler yayında, [[2026-10-20-tussle-roze
 - [[2026-10-15-tema-degisikligini-once-goster]]
 
 ## Oturumlar
+- [[2026-10-20-tussle-ayarlar-acilis-splash-android-apple]]: ayarlar dişlisi, tek hak, logoya uçuş, Android splash, Android Apple girişi (`9730a9a`, OTA 0.20261020.1216, Android 1.10)
 - [[2026-10-20-tussle-rozetler-kontur-kapanis-iskelet]]: kontur, kapanış geçişleri, iskeletler, kademeli rozetler (`0787aa4`, OTA 0.20261020.645)
 - [[2026-10-19-tussle-karttan-karta-gecis-bitmis-gun-afisi]]: telefon notları turu: geçişler, bitmiş gün afişi, önceden çekme, sezon kartı/Geçmiş, oyuncu kartı (`5c0161e`, OTA 0.20261019.2145, DB 24)
 - [[2026-10-19-tussle-oyun-kimlikleri-ingilizce]]: oyun kimlikleri İngilizceye (`c81a8b7`, yayın bekliyor)

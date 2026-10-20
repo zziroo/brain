@@ -35,3 +35,5 @@ Giriş ekranı yalnız takma adla misafir hesap açıyordu. Google/Apple kodu ha
 
 ## İlgili
 - [[2026-10-17-android-twa-onerisi]] · [[2026-10-17-tussle-google-apple-girisi]] · [[2026-10-17-konsol-kurulumunda-onay-tiklamalari-kullanicida]]
+
+- 20 Eki: Android Capacitor uygulamasında Apple girişi Custom Tab + sunucu yönlendirmesiyle geri geldi: [[2026-10-20-android-apple-girisi-custom-tab-sunucu-yonlendirme]].
