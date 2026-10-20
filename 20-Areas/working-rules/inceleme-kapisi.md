@@ -16,6 +16,8 @@ source: C:\Users\yusuf\.claude\CLAUDE.md (Review gate)
 
 Diskort'ta ek olarak gece 00:10'da `main` için ikinci bir güvenlik ağı incelemesi çalışır: [[zamanlanmis-gorevler-ve-skiller]].
 
+*2026-10-20:* Review ve skeptik ajanları artık tanımlı tipler: `inceleme` ve `supheci` (`~/.claude/agents/`). Bkz. [[2026-10-20-token-ucuncu-tur-kod-haritasi-ve-kural-gozden-gecirme]].
+
 ## Neden
 Yusuf, main'e giren her şeyin bağımsız ve düşmanca bir kontrolden geçmesini istedi ([[diskort-orchestrator-mode]]).
 

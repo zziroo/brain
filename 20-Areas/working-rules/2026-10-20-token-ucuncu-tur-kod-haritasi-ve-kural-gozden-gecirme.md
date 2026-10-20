@@ -28,6 +28,8 @@ source: 2026-10-20 ZZ oturumu "araştırma: tweet doğrulama" (BGTS Context Engi
 6. **Riskli review istisnası:** Giriş, ödeme/IAP, sunucu/API, izinler, sır işleme ve veri göçüne dokunan diff'ler `effort: "high"` ile incelenir. Bunlarda doğrudan çağıranların ötesine de bakılabilir, çağrı sınırı yoktur (bağlam yine ≤200k).
 7. **Model satırı gerçeğe uyduruldu:** Koordinatör modelini ve eforunu kullanıcı seçer; 19 Ekim'den beri çoğunlukla Opus. Dışa giden metinler (mağaza sayfası, marka, açık sayfalar) yayın öncesinde Haiku değil Sonnet ile okunur.
 
+8. **`inceleme` ve `supheci` ajan tipleri** (`~/.claude/agents/`, global, her projede geçerli): review Opus medium (riskli alanda `high`), skeptik Sonnet; ikisi de yalnız Bash+Read araçlı, salt okuma kuralı, kapsam ve çıktı biçimi tanımda. Neden: kurallar her brief'te tekrar yazılıyordu ve review ajanları sınırı aşıyordu. Tanım kuralı koordinatörün hafızasından bağımsız yapar. Bash açık olduğu için salt okunurluk araçla değil talimatla korunur. Kod yazan ajanlar tanımsız kalır (`general-purpose` + brief), çünkü işleri her seferinde farklı.
+
 ## Neden
 - Maliyet bağlam × çağrı. En büyük kalem, ajanların koddaki yeri aramak için harcadığı çağrılar. Harita ve keşif ajanı bu çağrıları keser, kaliteyi düşürmez.
 - Kurallar yazılıydı ama uygulanmıyordu (300k devir, Haiku keşfi). Hook, hatırlatmayı modelin önüne koyuyor.
