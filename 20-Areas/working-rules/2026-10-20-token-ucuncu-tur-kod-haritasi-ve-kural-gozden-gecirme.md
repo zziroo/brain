@@ -50,7 +50,9 @@ source: 2026-10-20 ZZ oturumu "araştırma: tweet doğrulama" (BGTS Context Engi
 - **Global kural** (`~/.claude/CLAUDE.md` Orchestration): yapıyı değiştiren commit öncesi koordinatör `kontrol` çalıştırır, haritayı aynı commit'te düzeltir; haritasız projede büyük işe başlarken harita teklif edilir.
 - **Tussle:** `docs/kod-haritasi.md` 162 satır (`070e0a4`). Opus high ajanı iskeletten ~63 çağrı / 253k token. Doğrulama: Haiku `kesif` üç gerçek soruyu (sohbet tepkisi akışı, "hak bitti" hata kodu, yeni rozet) haritayla ~15 çağrıda doğru cevapladı; eksik çıkan iki işaretçi eklendi.
 - **Betikte bilinen sınırlar:** 3 karakterden kısa semboller, tireli CSS adları/değişkenler denetlenmez; noktalı i18n anahtarında yalnız son parça aranır.
-- **Sıradaki:** incremantal-game, diskort (`/kod-haritasi olustur`).
+- **Yayılım (aynı gün, 6 yan oturum):** diskort 316, web-fps-game (kapis) 198, incremantal-game 153, achievement-guide-formatter 153, web-boss-teaser 140, string-tool 109 satır; hepsi kontrol 0, yerel commit (push yok). Kesif denemeleri 3–16 çağrı. Eşik: ~10k satır altı projeye harita yok (kripto-bot, song-finder, voice-detector, bal-vadisi, ziroobank, steam-avgr, trencheck, ziroo-edge).
+- **Ders:** yan oturum brief'ine "vault değişikliğini commit + push et" yazılmadı; altı overview satırı commit'siz kaldı, koordinatör topladı. Vault'a yazan yan oturum brief'inde commit/push talimatı olsun.
+- **Betik v2 (oturum raporlarından):** kök klasör adı kesme hatası düzeldi; paket adı (`@x/y`), import yolu, rota, git dışı ama diskte olan yol, uzantısız ad (`Dockerfile`) artık yanlış alarm vermiyor; klasör ve glob sembol aramasını gevşetmiyor (yalnız yedek havuz); css/html büyük dosya sayımına girdi; `--siki` ile "sembol en yakın önceki dosyada değil" uyarısı (akışlarda gürültülü, varsayılan kapalı). Belgelerdeki eskimiş yerler her haritanın Tuzaklar bölümünde.
 
 ## Sonuçlar / riskler
 - Harita bakımsız kalırsa ajanı yanlış yere yönlendirir. Bakım kuralı commit'e bağlandı; `kesif` ajanı da haritada gördüğü yanlışları raporluyor.
