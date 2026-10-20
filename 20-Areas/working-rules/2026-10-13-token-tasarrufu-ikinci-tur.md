@@ -78,5 +78,12 @@ source: 2026-10-13 oturumu "pano: son 1 gün token analizi"; ~/.claude/CLAUDE.md
 - **Ekran görüntüsü en kötü gün:** koordinatörlerde 125, ajanlarda 228, toplam 353 görüntü. Tussle'ın TWA/Capacitor ve bildirim işleri telefon/emülatör görseline dayanıyordu; kural yazılı ama bu iş türünde uygulanmıyor.
 - Sonuç: kota baskısı yokken disiplin gevşiyor; para yine işe gitti (Tussle mağaza/TWA/bildirim), israf payı ~%15 (görüntüler + 300k üstü oturumlar). Yeni haftada hedef: emülatör/telefon doğrulamasında görüntü yerine log ve `control` çıktıları; koordinatör devri.
 
+## Ölçüm 7 (19 Ekim 04:00 → 20 Ekim 04:00, yeni haftanın ilk günü)
+- 264 $, 819M token, 5.788 çağrı, 15 oturum, 92 ajan; çağrı başı ortalama bağlam 141k. Tamamı Opus (%96; Fable 2 $). Haftalık kota ilk günde %20 civarı (20 Ekim akşamı %20, Fable %3).
+- İlk kez ajanlar koordinatörü geçti: ajanlar 154 $, ana oturumlar 105 $. 13 ajan 100 çağrı / 200k'yı aştı (en büyük 150 çağrı; zirveler 248k, 250k). Ajanlarda 246 ekran görüntüsü (bir ajanda 21). Sonnet ajanları yerinde: 17 tane, en büyüğü 55 çağrı / 110k.
+- Koordinatör: oturum sayısı azaldı (24 → 15) ama uzadı: 279, 252, 234, 191 çağrılık oturumlar; 300k üstü 5 tane (483k, 428k, 397k, 377k, 372k). Devir yine yapılmadı; 483k'lık oturumun son çağrıları ilkinin 3 katı.
+- Koordinatörde görüntü 59 (125'ten düştü), telefon geçişleri oturumunda 24.
+- Sonuç: kalıp aynı, sadece taraf değişti. Koordinatör kuralı yarı yarıya tutuyor, ajanlara verilen brief'lerde tavan ve görüntü kuralı yazılmıyor. Yeni hedef: brief şablonuna "≤100 çağrı, ≤200k, görüntü yalnız sonda" satırı; koordinatörde 300k uyarısı geldiğinde gerçekten devir.
+
 ## İlgili
 - [[2026-10-10-ajan-boyutu-ve-yalin-baglam]], [[orkestrasyon]], [[inceleme-kapisi]], [[araclar-ve-raporlar]], [[_index]]
