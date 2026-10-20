@@ -17,6 +17,7 @@ Global CLAUDE.md Orchestration bölümüne dört madde eklendi:
 1. **Ajan boyutu:** ajan başına ~≤100 çağrı, ≤300k bağlam. 150+ çağrı sürecek iş aşamalara bölünür, her aşama kısa devir notuyla (dosyalar, kararlar, kalan iş) yeni ajana. Küçük iş bölünmez.
 2. **Tekrarlayan aynı kalıp (ör. temalar):** bir ajan ilk örneği + ortak altyapıyı kurar ve dosya listesini çıkarır; kalanlar bu net tarifle yapılır. Mekanik tekrar `sonnet`'e gidebilir, tasarım/his `opus`'ta kalır.
 3. **Yalın bağlam her ajan isteminde:** önce grep, sonra satır aralığı; aynı dosyayı tekrar okuma; build/test/kurulum çıktısı önce `grep -iE "error|fail|warn"`, sonra `tail -40`.
+   - *Güncelleme 2026-10-20:* "satır aralığı" kısmı değişti: ~500 satıra kadar dosya bütün okunur, kod haritası önce okunur. Bkz. [[2026-10-20-token-ucuncu-tur-kod-haritasi-ve-kural-gozden-gecirme]].
 4. **Koordinatör:** ajan değişikliğinin tamamı yerine inceleme bulgularına güvenir; ~400k bağlamı geçince kararları vault'a yazıp `/compact` ya da yeni oturum.
 
 Efor: ajanlarda mevcut kural sürer (Opus medium, gerekirse high; xhigh/max yok). **Koordinatörün eforunu Yusuf seçer**, CLAUDE.md'ye kural yazılmadı.
