@@ -53,6 +53,7 @@ https://tools.ziroo.net/rehber → konteyner `rehber` (127.0.0.1:8095, deneme 80
 
 _Son güncelleme: 2026-10-09_
 
+- **2026-10-20:** kod haritası `docs/kod-haritasi.md` (153 satır, commit `a021358`, README'de işaretçi); bakım: yapı değiştiren commit öncesi `node ~/.claude/skills/kod-haritasi/harita.mjs kontrol`.
 - **2026-10-09:** motor kimliği Console API anahtarı `rehber-prod`, `REHBER_MODEL=sonnet` (opus'tan çekildi; araştırma modeli boş olduğu için o da sonnet), yayında `c695e5a`. Sonnet ile kart kalitesi henüz denenmedi; düşerse yalnız bu araç Opus'a döner.
 - **2026-10-05 akşam:** arayüz neon temada (`6239cde`); arayüzde "sahip" yerine "admin", bilgi etiketleri büyük harfe çevrilmiyor (`a5114d9`). Yayında; DB yedeği `/opt/rehber/backup/20261005-190742` ([[2026-10-05-araclarin-arayuzu-neon-temaya-gecti]]).
 Yayında, commit `fb767ec` (son DB yedeği `/opt/rehber/backup/20261005-180314`). Motor o tarihte `opus` (2026-10-09'dan beri `sonnet`), günlük sınır 30. Canlıda 6 rehber + 1 AI araştırması (Wolfenstein II, `app612880`, İngilizce, hazır; yol haritası zayıftı → araştırma istemine oynanış sırası eklendi, yeniden araştırma bekliyor). Witcher 3 artık hazır (Yusuf yeniden üretmiş). Bu oturumda yayına girenler: her bilgi tek yerde + tek Dikkat paneli + nedenli Dikkat maddeleri, Özgün/TR/EN çıktı ve Steam resmi başarım adları (okuyucuda dil seçimi), AI araştırması, üretim iptali, `@` genişletmesinin kapatılması, İngilizce belgede "İ" büyük harf düzeltmesi.

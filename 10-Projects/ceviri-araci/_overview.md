@@ -41,6 +41,7 @@ Yusuf'un çevirmen arkadaşı için. Oyun stüdyoları İngilizce dil dosyaları
 
 _Son güncelleme: 2026-10-03_
 
+- **2026-10-20:** kod haritası eklendi: repo `docs/kod-haritasi.md` (`e5cb31c`); ajanlar önce onu okur. Projede CLAUDE.md yok, işaretçi eklenmedi.
 - **2026-10-05:** indirme sayfası neon temada (`29bb7ef`), elle yayınlandı çünkü betik Mac'te `.exe` olmadan çalışmıyor ([[mac-ten-yayin-copyfile-disable-ve-exe-siz-ceviri-sayfasi]]). Electron arayüzü eski görünümde.
 v0.2.0 yayında (sunucuda yalnız son sürüm durur), 333 test geçiyor. v0.2.0 ile: Ren'Py desteği, Excel'de ve uygulamada dosya başına renk (paylaşılan palet `src/core/stats.ts`), Kelime / Dosya Toplamı / Genel Toplam sütunları. Dağıtım betiğinin kapsamı daraltıldı (commit b52a86c); bu düzeltmeden sonra yeniden yayın gerekmedi, sunucudaki dosyalar aynı.
 

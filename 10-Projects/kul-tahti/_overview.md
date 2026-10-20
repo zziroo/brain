@@ -28,6 +28,7 @@ _Son güncelleme: 2026-10-03_
 | İskelet + sözleşme | bitti (commit f71cbac) |
 | 4 modül + entegrasyon düzeltmeleri | bitti, inceleme kapısından geçti (commit ad3cc61) |
 | Artifact sayfa sarmalayıcısı depoda | bitti (commit ee47c4e) |
+| Kod haritası `docs/kod-haritasi.md` | bitti 2026-10-20 (commit ad16934); bakım: `node ~/.claude/skills/kod-haritasi/harita.mjs kontrol` |
 | Uçtan uca akış (başlık → keşif → giriş → savaş → 2. faz → ölüm/zafer → tekrar) | koordinatör tarayıcıda scriptle doğruladı (kareler elle ilerletildi, gerçek zamanlı oynanmadı) |
 | Artifact olarak yayın | yayınlandı (özel): https://claude.ai/artifact/4eeBeW1nWvxJ9imd6DjaDW. **Doğrulanmadı**: panelde claude.ai oturumu yoktu |
 | Gerçek oynanış hissi (zorluk, animasyon akıcılığı, müzik) | **doğrulanmadı**, Yusuf'un denemesini bekliyor |
