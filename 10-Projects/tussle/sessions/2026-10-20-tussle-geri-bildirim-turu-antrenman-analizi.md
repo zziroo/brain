@@ -33,7 +33,7 @@ Yusuf'un iki hesabından gelen 15 açık geri bildirim + yan hesaptan 79 antrenm
 ## Açık kalanlar
 - Telefon teyidi: swing hissi (ölçek değişti, eski rekorlarla karşılaştırılamaz), crack-it HUD'daki kısalan anahtar, bitiş satırı konumları (quick-math kart içi, snake baş bandında alta kayar, knife-toss çark altı), on-time "Henüz değil", hoop yeniden yükleme.
 - Bitiş satırına geçmeyen 4 oyun: four-arrows, lights, stop-wheel, color-match (metin kendi arayüzüne gömülü).
-- Deploy anında açık olan swing/stop-wheel günü eski parametreyle (gravity 6, 50 sn) oynanır; test aşamasında kabul edildi ([[geri-uyum-gerekmez]] ilkesi).
+- Deploy anında açık olan swing/stop-wheel günü eski parametreyle (gravity 6, 50 sn) oynanır; test aşamasında kabul edildi ([[2026-10-18-canli-macta-yalniz-dogrulanmis-sonuc-surum-zorunlu]]: geri uyum yok ilkesi).
 - `games.crack-it.pool` anahtarı kodda kullanılmıyor görünüyor; `boncuk` birimi listede ama kullanılmıyor.
 
 ## Dersler
