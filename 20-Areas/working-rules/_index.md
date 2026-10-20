@@ -16,7 +16,7 @@ Global kuralların damıtması. Orijinal dosya değiştirilmedi; geçerli olan h
 - [[orkestrasyon]]: koordinatör + arka plan ajanları, satır içi mi ajan mı, model seçimi
 - [[2026-10-10-ajan-boyutu-ve-yalin-baglam]]: ajan boyutu sınırı, aşamalara bölme, yalın bağlam (token analizinden)
 - [[2026-10-13-token-tasarrufu-ikinci-tur]]: review diff'e sınırlı, 200k tavan, Haiku keşif, ekran görüntüsü kısıtı (ikinci tur analiz)
-- [[2026-10-20-token-ucuncu-tur-kod-haritasi-ve-kural-gozden-gecirme]]: kod haritası, bağlam uyarısı hook'u, kesif ajanı; bütün dosya okuma, yumuşak çağrı sınırı, riskli review istisnası (üçüncü tur)
+- [[2026-10-20-token-ucuncu-tur-kod-haritasi-ve-kural-gozden-gecirme]]: kod haritası (global `/kod-haritasi` skill + `harita.mjs`, 7 projede yapıldı 20 Eki), bağlam uyarısı hook'u, kesif ajanı; bütün dosya okuma, yumuşak çağrı sınırı, riskli review istisnası (üçüncü tur)
 - [[2026-10-15-yan-oturum-ssh-alias-auto-mod]]: masaüstü güncellemesi; yan oturum ne zaman, `ssh vps` tek biçim, varsayılan izin kipi auto
 - [[2026-10-15-oneri-karti-mevcut-klasorde-acilir]]: ders; öneri kartı preset taşımaz, proje işi kartla önerilmez
 - [[2026-10-15-oturum-basliklari-konu-oneki-ve-klasor-adlari]]: oturum başlığı `<proje>: <konu>`, ZZ kökünde önek konu (sistem/araştırma/marka/kişisel); mobil-playus ve incremantal-game klasörleri değişmedi, nedenleri

@@ -35,6 +35,8 @@ Klasör sütunu: `/Users/ziroo/ZZ/zProjects/` altındaki ad ya da `~` ile başla
 | ziroobank-expenses | ziroobank |
 | ~/.claude/orchestration-report | pano |
 
+- Masaüstü uygulamasının ortam kutusu klasör adı yerine GitHub repo adını gösterebiliyor (`mobil-playus` → "tussle", çalışma klasörü ipucunda doğru yol; 2026-10-20, neden doğrulanmadı). Klasörü yeniden adlandırma: hafıza yolu, preset ve bu tablo eski ada bağlı.
+
 ## Proje klasörü olmayan konular
 ZZ kökündeki oturumlar (başlık öneki konudur, bkz. [[2026-10-15-oturum-basliklari-konu-oneki-ve-klasor-adlari]]):
 - `sistem:` → `20-Areas/working-rules/` (karar ve dersler tarihli not olarak)
