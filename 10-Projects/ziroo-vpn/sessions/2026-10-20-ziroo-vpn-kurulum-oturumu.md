@@ -26,6 +26,11 @@ source: "ziroo-vpn: kurulum oturumu (proje klasörü, 2026-10-20)"
 - **İstemci denemeleri:** Hiddify iOS-on-Mac → Hiddify Mac (proxy) → Happ Mac (Xray TUN) + DNS düzeltmesi. Ayrıntı: [[2026-10-20-mac-vpn-istemcisi-tuzaklari]].
 - **Eski kalıntı temizlendi:** Mac'te eskiden kurulu SplitWire'ın (ByeDPI + WARP) kalıntıları temizlendi. Geriye yalnız Wi-Fi DNS'i (1.1.1.1) ve tercih dosyası kalmıştı. Discord'un VPN'siz açılmasının sebebi o DNS'ti: TurkNet Discord'u DNS ile engelliyor.
 
+- **Kapanışta temizlik:**
+  - Test için Homebrew'den kurulan sing-box ve xray kaldırıldı; SplitWire'ın boş tercih dosyası silindi.
+  - Sunucuda kimlik bilgisi kopyası tutan kurulum kaydı silindi.
+  - Hiddify'ı Yusuf kaldırıyor; Mac'te kalan istemci Happ.
+
 ## Doğrulananlar
 - **Mac (Happ, Hysteria2 ve Reality ayrı ayrı):**
   - X/Twitter `loc=DE` (130.94.63.238), Trendyol `loc=TR` (Yusuf'un IP'si).

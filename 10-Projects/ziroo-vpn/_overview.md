@@ -26,7 +26,7 @@ Kod klasörü `/Users/ziroo/ZZ/zProjects/ziroo-vpn` (2026-10-05'te boş açılan
 
 ## Güncel durum
 _Son güncelleme: 2026-10-20; canlıdan doğrula._
-- **Çalışıyor:** tek kullanıcı (Yusuf). Mac (Happ masaüstü, Xray TUN) ve Android (Happ, mobil veri) doğrulandı. Discord yazışma ve ses çalışıyor, Türk siteleri Türk IP'siyle, gerisi Almanya'dan. Reality yedeği ayrıca test edildi.
+- **Çalışıyor:** tek kullanıcı (Yusuf). Mac (Happ masaüstü, Xray TUN) ve Android (Happ, mobil veri) doğrulandı. Discord yazışma ve ses çalışıyor, Türk siteleri Türk IP'siyle, gerisi Almanya'dan. Reality yedeği ayrıca test edildi. Hiddify bırakıldı.
 - **Sunucu:**
   - LightNode Frankfurt, `ziroo-vpn-fra`, 1 vCPU / 2 GB, Ubuntu 24.04, IP 130.94.63.238.
   - Pay-By-Traffic 1000 GB/ay, ≈7,71 $/ay. Kota dolunca 10 kbps; yükseltme var (sunucu durdurulur), düşürme yok.
