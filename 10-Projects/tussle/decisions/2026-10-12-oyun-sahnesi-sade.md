@@ -2,12 +2,14 @@
 type: decision
 project: tussle
 date: 2026-10-12
-status: active
+status: superseded
 tags: [tussle, gorsel, tema]
 source: oturum 2026-10-12 (mobil-playus: denge ve sade tema turu)
 ---
 
-> **2026-10-15:** Arayüz (oyun dışı) dili de sadeleşti: [[2026-10-15-tema-orta-yol-kart-konturu-yumusak-pembe]]. Sahne kararı geçerli.
+> **2026-10-21:** Bu karar değişti, bkz. [[2026-10-21-oyun-sahnesi-dolu-ama-sakin]].
+>
+> **2026-10-15:** Arayüz (oyun dışı) dili de sadeleşti: [[2026-10-15-tema-orta-yol-kart-konturu-yumusak-pembe]]. (Sahne kararı o tarihte geçerliydi, 21 Ekim'de değişti.)
 
 # Karar: Oyun sahneleri sade (Şeker Dükkânı kapaklarda kalır, sahnede "her taraf şeker" yok)
 
