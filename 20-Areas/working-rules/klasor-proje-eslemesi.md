@@ -11,7 +11,7 @@ source: 2026-10-17 kaydet/basla komutları ve vault düzeni oturumu; karar [[202
 
 Oturum başlangıcı hook'u (`~/.claude/hooks/oturum-baslangici.mjs`) ve `/kaydet`, `/bitir` hangi `10-Projects/<proje>/` klasörünün kullanılacağını **bu tablodan** okur. Klasör adı vault adıyla aynı olsa da buraya yaz. Yeni proje açınca bir satır ekle.
 
-Klasör sütunu: `/Users/ziroo/ZZ/zProjects/` altındaki ad ya da `~` ile başlayan tam yol. Vault sütunu boşsa (`-`) proje vault'ta tutulmuyor.
+Klasör sütunu: `/Users/ziroo/ZZ/zProjects/` (Mac) ya da `C:\Users\yusuf\ZZ\zProjects\` (Windows, 2026-10-21'den beri aynı hook) altındaki ad ya da `~` ile başlayan tam yol. Vault sütunu boşsa (`-`) proje vault'ta tutulmuyor.
 
 | Klasör | Vault projesi |
 |---|---|

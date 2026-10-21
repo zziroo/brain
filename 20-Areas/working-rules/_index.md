@@ -55,6 +55,7 @@ Global kuralların damıtması. Orijinal dosya değiştirilmedi; geçerli olan h
 - [[2026-10-05-windowstan-maca-gecis]]: Windows → Mac taşıma kararı, paket ve yol çevirisi
 - [[mac-gecisi-kontrol-listesi]]: Mac tarafında yapılacaklar (açık)
 - [[2026-10-07-windows-makinesi-yalniz-silksong-icin]]: Windows makinesi yalnız Silksong (LoRA) için kaldı; son temizlik (2026-10-07)
+- [[2026-10-21-windows-temiz-kurulum-hook-ve-bitir]]: arızalı disk sonrası temiz Windows; eski disk H:'den taşınanlar, hook + `/bitir` Windows'a kuruldu, stdin dersi (2026-10-21)
 
 ## GitHub hesabı (2026-10-06)
 - [[2026-10-06-github-repolari-zziroo-hesabina-tasindi]]: 15 repo `zziroo` hesabına taşındı, yönlendirme ve remote notları
