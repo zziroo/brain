@@ -2,7 +2,7 @@
 type: session
 project: tussle
 date: 2026-10-21
-status: active
+status: done
 tags: [tussle, gorsel, devir, brief, parti-3]
 source: Claude Code oturumu "tussle: görsel tur (dolu ama sakin)" (koordinatör, 273k context'te devretti)
 ---
