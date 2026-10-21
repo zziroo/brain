@@ -7,7 +7,7 @@ tags: [tussle, arena, oyunlar, karar]
 source: Claude Code oturumu "tussle: arena devam turu" (2026-10-21)
 ---
 
-# Arena ikinci parti: görünüm dikişi, Crown, Trails, Paint ve Type Race main'de (yayında değil)
+# Arena ikinci parti: görünüm dikişi, Crown, Trails, Paint ve Type Race (yayında, OTA 0.20261021.1500)
 
 ## Bağlam
 Sumo prototipi ve telemetri/uyarlanabilir gecikme yayındaydı ([[2026-10-21-arena-modu-dort-oyun-ve-sumo-prototipi]], [[2026-10-21-arena-kasma-veri-acligi-uyarlanabilir-render-gecikmesi]]). Yusuf: "Arena'nın devam turlarına başlayalım; etkileşimli oyunların ne kadar iyi olacağını kestiremiyorum; ekranda bir yazı var, herkes kendi telefonundan yazıyor, en hızlı yazan kazanıyor gibi ortak ekranlı canlı oyunlar da olabilir; sana bıraktım."
@@ -16,7 +16,7 @@ Sumo prototipi ve telemetri/uyarlanabilir gecikme yayındaydı ([[2026-10-21-are
 - **Beş arena oyunu main'de (`cb415fe`):** Sumo + Crown (Sumo motoru; taç taşıma süresi, 45 sn), Trails (ızgara-yön motoru, 22×22; iz/duvar öldürür, 50 sn, 25. sn'den sonra hızlanır), Paint (aynı motor; hücre boyama, 45 sn), **Type Race** (Yusuf fikri: tohumdan 6 kelimelik Türkçe cümle, herkes kendi klavyesinde yazar, ortak pistte ilerleme; ilk bitiren kazanır, 45 sn). Kurallar `docs/ARENA-PLAN.md` §7–§10, ürün tablosu `docs/ARENA-GAMES.md`.
 - **İstemci görünüm dikişi:** `arena-screen.ts` yalnız kabuk (snapshot halkası, gecikme, telemetri, geri sayım, sonuç); oyuna özgü çizim/girdi/HUD `src/client/arena/<id>-view.ts`, sözleşme `view.ts` (`ArenaView`/`ArenaViewRun`: `draw(prev,next,t)`, `pointer`, `preview`, `mount` kendi DOM'u için, `hud`, `layout: 'wide'`), metinler `texts.ts`. Yeni oyun = sim + registry + i18n + texts + view + views.ts + test; kabuğa dokunulmaz.
 - **Protokol:** `ain`'e isteğe bağlı `c` (yazılan karakter kodu, `isArenaChar`). Sunucuda yuva başına 8'lik karakter kuyruğu, her tick bir karakter (aynı tick'e düşen iki tuş kaybolmasın; inceleme bulgusu). Yön girdisi "son kazanır" kaldı.
-- **Yayın yok:** telefon teyidi ve yayın kararı Yusuf'ta. Rozet yuvaları, izleme, parti, kapak görselleri bu turda yok.
+- **Yayın:** Yusuf "yayınlayabilirsin, ben de denerim" dedi; `cb415fe` sunucuda, OTA 0.20261021.1500 (21 Eki ~18:00). Telefon teyidi Yusuf'ta. Rozet yuvaları, izleme, parti, kapak görselleri bu turda yok.
 
 ## Neden
 - Yusuf etkileşimli (fizik) oyunların hissinden emin değil; Type Race gecikmeden hiç etkilenmeyen bir "ortak ekran" örneği olarak aynı partiye kondu: iki motor + bir metin oyunu, his kıyaslanabilsin.
