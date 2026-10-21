@@ -36,7 +36,7 @@ Buradan başla. Her şey buradan ya da bir projenin `_overview.md` dosyasından 
 - [[proje-altyapi-standardi|Proje altyapı standardı]]: her uygulama ne sunar (/healthz, konteyner, yedek, admin paneli bölümleri), Kuma'ya nasıl kaydedilir, makine bilgisi nerede durur
 - **Felaket kurtarma (yedek + kasa):** [[2026-10-17-felaket-kurtarma-yedegi]]
 - `20-Areas/altyapi/` kararları: [[sunucu-lightnode-istanbula-tasindi]] · [[ssh-yalnizca-anahtar-ile]] · [[2026-10-15-sunucu-bakim-penceresi-07-30]] · [[2026-10-16-ziroo-net-posta-catch-all-ayri-kural-yok]]
-- `20-Areas/cihazlar/`: [[2026-10-21-arizali-diskten-yeni-diske-gecis-ve-arsiv-duzeni|Windows disk geçişi ve D:\Arsiv düzeni]] · [[2026-10-21-steam-klip-ve-ekran-goruntusu-userdata-icinde]] · [[2026-10-21-onedrive-kaldirildi-klasor-yedekleme-yok]]
+- `20-Areas/cihazlar/`: [[2026-10-21-arizali-diskten-yeni-diske-gecis-ve-arsiv-duzeni|Windows disk geçişi ve D:\Arsiv düzeni]] · [[2026-10-21-steam-klip-ve-ekran-goruntusu-userdata-icinde]] · [[2026-10-21-onedrive-kaldirildi-klasor-yedekleme-yok]] · [[2026-10-21-harici-diskte-efi-ve-kurtarma-bolumu-diskpart-ile-silinir]]
 
 ## Alanlar
 - [[20-Areas/working-rules/_index|Çalışma kuralları]]: Claude ile nasıl çalışıyoruz (orkestrasyon, inceleme kapısı, karar dağılımı)
