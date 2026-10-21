@@ -29,7 +29,10 @@ Arızalı sistem diski (Force MP510, 15–16 Ekim'de mavi ekranlar) söküldü, 
 
 ## Açık kalanlar
 - Hook'un gerçek bir yeni proje oturumunda çalıştığı doğrulanmadı (Windows'ta ilk Silksong oturumu gösterecek).
+- ~~Oturum listesinin uygulamada görünmesi~~ Doğrulandı: uygulama yeniden başlatılınca 8 açık ve 192+ arşivli oturum, doğru klasörlerle geldi. Klasörü olmayan projelerin (Diskort, Işık Bekçisi…) oturumlarını açmadan önce proje klonlanmalı.
 - H:'deki kişisel klasörler (Documents, Downloads, Videos 186 GB, Steam kayıtları) taşınmadı; eski disk takılı kaldıkça erişilebilir.
 - Global `~/.claude/CLAUDE.md` Windows'ta 1 Ekim sürümü; Mac'teki güncel sürümle karşılaştırılmadı.
+
+Klasör düzeni kararı: [[2026-10-21-windows-zz-duzeni-yalniz-brain-ve-silksong]].
 
 İlgili: [[klasor-proje-eslemesi]], [[hafiza-ve-vault-duzeni]], [[_index]]
