@@ -132,6 +132,8 @@ _Son güncelleme: 2026-10-21 gece ([[2026-10-21-arena-parti-2-gecikmesiz-oyunlar
 - [[2026-10-15-denge-turu-yusuf-telefon-geri-bildirimi]] (doğrulanmadı)
 
 ## Dersler
+- [[2026-10-21-sunucu-otoriteli-gercek-zamanli-oyun-telefonda-hantal]] — arena gecikmesi; gecikmesiz kalıplar
+- [[2026-10-21-paralel-arena-ajanlari-worktree-tabani-ve-ekleme-cakismalari]] — worktree tabanı + birleştirme Sonnet'e
 - [[2026-10-20-cihaz-hissi-adb-kaydi-ve-cdp-ile-olculur]] · [[2026-10-20-webview-raster-ucus-animasyonunda-gpu-donmasi]] · [[2026-10-20-testte-yanlis-uygulama-acilabilir-debug-surumu-kaldir]]: cihaz hissini 120 Hz kayıt/CDP ile ölç; WebView raster donması; yanlış uygulama/debug sürümü.
 - [[2026-10-20-siniflandirici-canli-yayin-ve-db-okumayi-son-mesaj-onaylamadikca-engeller]]: yayın/DB okuma için her seferinde açık onay.
 - [[2026-10-19-onceden-cekme-gun-satirini-olusturmamali]]: odayı önceden çekmek today/catalog ile günün satırını oluşturup seçimi dondurur; önce salt okunur detay, `picked` ise devam.
@@ -182,6 +184,7 @@ _Son güncelleme: 2026-10-21 gece ([[2026-10-21-arena-parti-2-gecikmesiz-oyunlar
 - [[2026-10-15-tema-degisikligini-once-goster]]
 
 ## Oturumlar
+- [[2026-10-21-tussle-arena-devam-turu]] — iki arena partisi, iki yayın
 - [[2026-10-20-tussle-ayarlar-acilis-splash-android-apple]]: ayarlar dişlisi, tek hak, logoya uçuş, Android splash, Android Apple girişi (`9730a9a`, OTA 0.20261020.1216, Android 1.10)
 - [[2026-10-20-tussle-rozetler-kontur-kapanis-iskelet]]: kontur, kapanış geçişleri, iskeletler, kademeli rozetler (`0787aa4`, OTA 0.20261020.645)
 - [[2026-10-19-tussle-karttan-karta-gecis-bitmis-gun-afisi]]: telefon notları turu: geçişler, bitmiş gün afişi, önceden çekme, sezon kartı/Geçmiş, oyuncu kartı (`5c0161e`, OTA 0.20261019.2145, DB 24)
