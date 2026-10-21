@@ -28,3 +28,7 @@ source: "oturum 2026-10-21 akşam (mobil-playus: rol sadeleştirme)"
 ## Açık
 - Açık parti varken "Parti Gecesi" sekmesi diğerlerinde de görünür; açmaya çalışan "Bu odada zaten bir parti var" uyarısı alır. Gizlemek istenirse küçük iş.
 - Telefon teyidi: ⚔ solda kas hafızası, herkesin parti açması, sonraki gün düğmesi üyelerde.
+
+
+## İlgili
+- Aynı akşamın devamı: [[2026-10-21-kapisma-1v1-arena-sekmesi-acilis-sahneleri]]; oturum [[2026-10-21-tussle-roller-kapisma-1v1-arena-sekmesi]].
