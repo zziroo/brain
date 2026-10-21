@@ -2,7 +2,7 @@
 type: decision
 project: tussle
 date: 2026-10-09
-status: active
+status: superseded
 tags: [tussle, sans-hakki, sosyal, sunucu]
 source: oturum 2026-10-09 (mobil-playus: Parti B + C, deneme hakkı ayırma, şans hakkı, skor ölçüleri)
 ---
