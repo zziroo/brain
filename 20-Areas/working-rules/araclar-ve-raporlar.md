@@ -25,3 +25,4 @@ source: C:\Users\yusuf\.claude\CLAUDE.md (Tools)
 
 ## İlgili
 - [[orkestrasyon]], [[_index]]
+- **Kancalar (`~/.claude/hooks/`):** `baglam-uyarisi.mjs` (UserPromptSubmit, ana oturum: 300k devir ve eski oturum uyarısı), `ajan-tavani.mjs` (PostToolUse, alt ajan: 200k / 100 çağrı / 5 görüntü uyarısı, 2026-10-22). İkisi de hata durumunda sessiz çıkar, hiçbir şeyi engellemez.

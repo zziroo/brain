@@ -45,6 +45,12 @@ Her ajan soğuk başlar (iş yapmadan ~45-50k token bağlam) ve kodu yeniden oku
 - 150k üstü eski oturum yeni iş için açılmaz; yeni oturum + kısa brief (15–16 Ekim'de yeniden açılan 7 Ekim oturumları 7–11 $).
 - Ölçüm: [[2026-10-13-token-tasarrufu-ikinci-tur]] (Ölçüm 3 ve 4).
 
+## Dördüncü tur (2026-10-22): kural kâğıttan mekanizmaya
+- Ölçüm 5–8 gösterdi: koordinatör kuralları tuttu (178 → 83 $/gün), ajan tavanı ve görüntü kuralı brief'lere yazılmadığı için tutmadı (günde 13–17 tavan üstü ajan, 165–246 görüntü).
+- `~/.claude/hooks/ajan-tavani.mjs` (PostToolUse, yalnız alt ajanlarda): ajanın transkriptinden bağlam, çağrı ve görüntü sayısını okur; 200k'da bir kez, 100 çağrıdan sonra her ~40 çağrıda, her 5 görüntüde ajana hatırlatma ekler. Durum dosyası tmp'de, aynı eşik için tekrar uyarmaz. 5 MB transkriptte ~60 ms.
+- Kalite tavizi değerlendirmesi (22 Ekim): bağlam sınırı kaliteyi artırır (uzun bağlamda kayıp, bayat okuma); görüntü kuralı görsel işte gerçek taviz, "yasak" değil "sonda bir kez"; review daraltması riskli alanlarda kaldırıldı; model seçimi yerinde kullanılırsa tavizsiz. Kalite ölçülmüyor; sinyaller: yeniden iş oranı, review bulgu/çürütme oranı, yayın sonrası hata.
+- Karar: token kuralları yerinde kalır, günlük ölçüm ajan disiplini düzelince haftalığa iner.
+
 ## Model seçimi
 - **Güncel (CLAUDE.md, 2026-10-10'da okundu):** koordinatör Fable'da çalışır; alt ajanlar onu asla devralmaz, `model` her zaman açıkça verilir. Varsayılan `opus` + `effort: "medium"` (çapraz kesen/tasarım ağırlıklı iş ve derin incelemede `high`). Aşağıdaki maddeler eski kuraldır.
 - Opus (inherit): çapraz kesen veya tasarım ağırlıklı iş, derin inceleme.
