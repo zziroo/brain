@@ -21,3 +21,5 @@ Yusuf "her ekran bir yerden çıkmış gibi kompakt ve uyumlu" olsun istedi ve �
 - **Geçmiş bağlantısı sağ üstte X'in yanında:** X ile yarışır, padding hilesi gerekiyordu.
 - **A varyantı (Geçmiş için `liveLink` satırı, kutu 137 px):** tek bağlantı için fazla yer; satır dili uzun listelerde değerli. Yusuf ikisini de beğendi, Claude B'yi (pill, kutu 64 px) seçti.
 - **Ana ekran / oda ekranını da aynı kalıba çekmek:** kart yapısı kimlik, dokunulmadı.
+
+**Ek (22 Eki, profil):** sayısal "bir bakışta" bilgi (istatistikler) karo ızgarası olarak kalır, satır dili ayar/eylem/bağlantı listeleri içindir; karo ızgarası şablona kutu içinde `.live-block` olarak girer (rozet ızgarası gibi). Yusuf satır sürümünü görünce karoları geri istedi.

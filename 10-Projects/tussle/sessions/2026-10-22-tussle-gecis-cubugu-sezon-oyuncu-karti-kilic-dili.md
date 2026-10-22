@@ -37,3 +37,9 @@ Yusuf dört şey istedi: (1) ana ↔ oda geçişinde sistem çubuğunun yanıp s
 
 ## Kararlar
 - [[2026-10-22-kilic-sayfa-dili-genel-sablon]]
+
+- Ayarlar sayfası da aynı şablona geçti ve yayınlandı (6330e48, OTA 0.20261022.1058): avatar+ad+hesap chip lede, Görünüm/Oyun/Hesap/Uygulama/Bildirimler/Engellenenler/Geri bildirim/Hakkında kutuları, liveSwitch; Çıkış/Sil gerçek düğme (17 Eki kararı). account.ts head/section/actions diye üçe bölündü, davranış aynı (inceleme high: temiz, bir düşük görsel bulgu kapatıldı).
+
+- Oda ayarları da aynı şablona geçti ve yayınlandı (2123e8c, OTA 0.20261022.1116): oda adı başlık, kod + üye chip lede, Davet et pill (herkese), oyun havuzu liveFold ile katlı (Yusuf: katlı iyi), Kaydet yapışkan liveSend + "Değişiklik yok/Kaydedilmemiş" notu; sahip sayfası 3071→1573 px. İnceleme: bulgu yok.
+
+- Profil + düzenleme sayfası da şablona geçti (da56efa, OTA .1140); Yusuf "Genel" istatistiklerini satır yerine eski 6 karo olarak istedi ("bir bakıp okumak", 22 Eki): karolar kutu içinde geri geldi, büyük değerlerde yazı bir kademe küçülür, ızgara bozulmaz (a6819e3, OTA 0.20261022.1149). Ders: salt sayısal "bir bakışta" bilgi karo ister, satır dili ayar/eylem listeleri için; şablona karo ızgarası kutu içinde `.live-block` olarak girer (rozetler gibi). Açık: rekor alt sayfası (openRecordSheet) ve tüm sezonlar sayfası eski dilde; web hedef değil (Yusuf, 22 Eki).
