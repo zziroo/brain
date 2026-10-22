@@ -2,7 +2,7 @@
 type: session
 project: tussle
 date: 2026-10-22
-status: open
+status: done
 tags: [tussle, ses, devir, brief]
 source: Claude Code oturumu "tussle: arena oyunları kısa ve etkileşimli" (uzaktan kontrolde oturum başlatılamadı, brief buraya yazıldı)
 ---
