@@ -1,7 +1,7 @@
 ---
 type: project
 project: diskort
-date: 2026-10-17
+date: 2026-10-22
 status: active
 tags: [diskort, overview]
 source: handoff notundan (artık kaldırıldı), diskurt-project ve diskort-* hafıza dosyalarından, 2026-10-01/02 oturumlarından
@@ -24,10 +24,9 @@ Ses + ekran paylaşımı kalitesi; metin kanalları, tepkiler, dosyalar, roller,
 - Kod haritası: Etkinlik [[etkinlik-kod-haritasi]].
 
 ## Güncel durum
-_Son güncelleme: 2026-10-17; canlıdan doğrula. Eski ayrıntılı hâl: [[10-Projects/diskort/sessions/2026-10-17-diskort-guncel-durum-arsivi|arşiv]]._
-- **İstemci 0.11.2 yayında** (2026-10-15): giriş sesi düzeltmeleri; 0.11.1 kişisel giriş sesi ve kanal süresi/yayıncı üste ([[2026-10-15-kisisel-giris-sesi]]). Canlıda henüz denenmedi. Mobil OTA ile: Android APK 0.11.0, iOS IPA 0.8.5. 1.0 ertelendi ([[surum-1-0-ertelendi]]).
-- **Sunucu:** `a22c0dc` + `cfeb160` (2026-10-16): 0.11.2, `/healthz`, admin "Altyapı" sekmesi. DB şeması **27**, imajda ffmpeg. Panelde yalnız Diskort'a ait kartlar; makine geneli Netdata'da ([[2026-10-16-admin-paneli-makine-geneli-netdataya-tasindi]]).
-- **Bekleyen (main'de, sürüm yok):** `22ac734`, OTA yeniden yüklemeden önce sesten çıkma ([[ota-yeniden-yukleme-seste-eski-livekit-oturumunu-birakir]]). Yusuf: "askıya al, başka güncellemelerle çıkar" (2026-10-15).
+_Son güncelleme: 2026-10-22; canlıdan doğrula. Eski ayrıntılı hâl: [[10-Projects/diskort/sessions/2026-10-17-diskort-guncel-durum-arsivi|arşiv]]._
+- **İstemci 0.11.3 yayında** (2026-10-22): okunmamış rozeti (dock/görev çubuğu), ses satırında sabit sağ yuva + yayın küçük resmi, yayında tek tık/zoom, OTA öncesi sesten çıkma (`22ac734`) ([[2026-10-22-rozet-sahne-prob-ve-0-11-3]], karar [[2026-10-22-yayin-izleme-tek-tik-zoom-ve-ses-satirinda-sabit-yuva]]). Canlıda denenmedi. Mobil OTA ile: Android APK 0.11.0, iOS IPA 0.8.5. 1.0 ertelendi ([[surum-1-0-ertelendi]]).
+- **Sunucu:** `8caf99b` (2026-10-22): prob motoru UDP/TCP serileri ayrı (`probe.proto`), boş odada "aday" yazılmıyor; kayıtlar yalnız-UDP'de teşhiste sağlayıcı kesintisi sayılmaz ([[2026-10-22-sonda-serisi-sinirsiz-buyume-ve-yeniden-oynatma-sira-yapayligi]]). DB şeması **27**, imajda ffmpeg. Panelde yalnız Diskort'a ait kartlar; makine geneli Netdata'da ([[2026-10-16-admin-paneli-makine-geneli-netdataya-tasindi]]).
 - **Sağlık ucu:** API `/healthz` düz "ok"; Kuma'nın `diskort.ziroo.net` monitörü buna bakar ([[proje-altyapi-standardi]]).
 - **Kod haritası:** `docs/kod-haritasi.md` (316 satır, `93f8bb9`, 2026-10-20); ajanlar önce onu okur. Yapı değiştiren commit öncesi `node ~/.claude/skills/kod-haritasi/harita.mjs kontrol` ([[2026-10-20-token-ucuncu-tur-kod-haritasi-ve-kural-gozden-gecirme]]).
 - **Giriş kapısı ve ziroo.net:** [[10-Projects/ziroo-edge/_overview|ziroo-edge]]. Diskort siteleri `infra/caddy/diskort.caddy`, değişiklik `bash /opt/ziroo-edge/reload.sh` ([[2026-10-03-caddy-ziroo-edge-projesine-ayrildi]]). Reload WebSocket'leri keser; `stream_close_delay 5m` var, kanal doluyken denenmedi ([[caddy-reload-websocketleri-keser]]).
@@ -36,12 +35,12 @@ _Son güncelleme: 2026-10-17; canlıdan doğrula. Eski ayrıntılı hâl: [[10-P
 - **İzin sistemi:** otomatik mod, Yusuf o oturumda sohbette söylemedikçe ssh deploy ve tag/push'u engelleyebilir. Sor, sonra her komutu ayrı çağrıyla çalıştır.
 
 ## Sıradaki işler
-1. **0.11.x canlı doğrulama:** giriş sesi sırası, uzunluk seçici, seviye, sarı halka, panel düğmesi, telefonda yükleme/çalma, iOS'ta LiveKit ile karışım. Rahatsız edici ses: `admin-cli intro-sound-remove`.
+1. **0.11.x canlı doğrulama:** 0.11.3 masaüstü: dock rozeti (Windows overlay), ses satırı hizası ve yayın küçük resmi, yayında tek tık/zoom hissi (250 ms gecikme, 4× sınır); giriş sesi sırası, uzunluk seçici, seviye, sarı halka, panel düğmesi, telefonda yükleme/çalma, iOS'ta LiveKit ile karışım. Rahatsız edici ses: `admin-cli intro-sound-remove`.
 2. **0.11.0 doğrulama:** yeni APK kurulumu, masaüstü AGC gerçek mikrofonla, telefonda DPDFNet 30 ms tampon (Xiaomi'de 7,5 ms eşiği aşılıp model kapanıyor, doğrulanmadı), Android OOM tekrarı.
 3. **Eski doğrulamalar:** 0.10.3 (Mac'te elle kurulum, sonraki sürümde macOS otomatik güncelleme uçtan uca, `.p12` yedeğe taşınacak), 0.10.0 (arkadaşlık akışı iki cihazla, donanım simulcast, telefonda izleme FPS'i). Ayrıntı arşivde.
-4. **Sonraki sürüm:** `22ac734`'ü başka işlerle, mümkünse kanal boşken çıkar.
+4. **Yalnız-UDP kesinti kayıtları:** üretimde `probe.proto: udp` kayıtlarının sıklığına bak (gözcü raporu); gürültü yaparsa eşik.
 5. **Yayın kalitesi:** yayıncı bit hızı sıçraması; zayıf hatlı izleyiciye düşük katman (ertelendi); Sonar yayın sesi ([[sonar-yayin-sesine-kendi-sesini-katar]]); telefon ısınması (`watch` telemetrisi).
-6. **Prob motoru:** yalnız-UDP kesintileri ayrı sayılsın, boş odadaki "aday" gürültüsü azalsın.
+6. **Yayın küçük resmi** önizleme indirme maliyeti (her istemci, 25 sn, ≤256 KB) kalabalıkta sorun olursa satırda yalnız hover'da göster.
 7. **Geri bildirim #36** (Android arka plan sesleri): Yusuf Xiaomi'de pil kısıtlamasını kapatıp dener; gelmezse sonraki APK'ya telemetri.
 8. **Rutin:** Diskort gözcüsü 2026-10-18'de global `gece-gozcusu`na dönüştü (Diskort adımları aynen; rapor `~/ZZ/gozcu/`, `## Diskort` bölümü; [[2026-10-18-global-gece-gozcusu]]). Modeli Opus medium'a düşürmek hâlâ açık. `mic.fallback` ve `reportClientError('kozmetik')` kayıtlarını izle; Etkinlik için gerçek hayat geri bildirimi topla.
 9. **Yusuf'un cihaz testleri:** telefonda kozmetikler, mobil Skia setleri, mobil ses ekranı ve yayın kutucukları, masaüstü sahne, rolsüz DM profili.
@@ -60,7 +59,7 @@ _Son güncelleme: 2026-10-17; canlıdan doğrula. Eski ayrıntılı hâl: [[10-P
 - Arkadaşlık: [[arkadaslik-sistemi]]; roller: [[rol-etiketleme]], [[rol-verme-hedefin-seviyesine-bakmaz]]
 - İzleme: panel yalnız Diskort'a ait bilgiyi gösterir [[2026-10-16-admin-paneli-makine-geneli-netdataya-tasindi]]; makine izleme (Kuma, Netdata) ziroo-edge'de: [[2026-10-16-ops-katmani-kuma-netdata-ziroo-edge]]
 - Sunucu: [[sunucu-lightnode-istanbula-tasindi]]; makine geneli [[vps-makinesi]]; giriş kapısı, alan adları ve ziroo.net: [[10-Projects/ziroo-edge/_overview|ziroo-edge]] (Caddy'nin ayrılması: [[2026-10-03-caddy-ziroo-edge-projesine-ayrildi]])
-- Yayın sahnesi: [[yayin-arayuzu-discord-tarzi]], [[sahne-izgarada-coklu-yayin]]; yayın sesi: [[uygulamaya-ozel-yayin-sesi-ertelendi]]
+- Yayın sahnesi: [[yayin-arayuzu-discord-tarzi]], [[sahne-izgarada-coklu-yayin]], [[2026-10-22-yayin-izleme-tek-tik-zoom-ve-ses-satirinda-sabit-yuva]]; yayın sesi: [[uygulamaya-ozel-yayin-sesi-ertelendi]]
 - Ses: [[model-calisirken-agc-kapali-ve-sinirlayici]], [[2026-10-15-kisisel-giris-sesi]], [[masaustu-yazilimsal-agc]], [[dpdfnet-esikler-gevsetildi-android-ayri-is-parcacigi]], [[konusma-halkasi-duyulan-sesten]]
 - Release: [[surum-cikarma-kurali]], [[surum-1-0-ertelendi]]; imzalama: [[kod-imzalama-ertelendi]] (Windows), [[macos-developer-id-imza-ve-otomatik-guncelleme]]
 - Rutin: [[2026-10-10-gozcu-gunluk-gece-incelemesi-kaldirildi]], [[2026-10-15-gozcu-birlesik-dort-bolum]] (yerini aldı: [[2026-10-18-global-gece-gozcusu]]); presence: [[telefondan-bagli-gostergesi]]
@@ -70,7 +69,7 @@ _Son güncelleme: 2026-10-17; canlıdan doğrula. Eski ayrıntılı hâl: [[10-P
 [[sunucu-vps]] (makine geneli: [[vps-makinesi]]) · [[deploy]] · [[surum-cikarma]] · [[geri-bildirim-inceleme]] · [[kozmetik-yayinlama]] · [[ios-cihaz-ekleme]] · [[yedekler]] · [[admin-paneli-ve-loglar]] · [[gelen-kutusu-ve-rutinler]] · [[yerel-ui-test-ortami]]
 
 ## Dersler
-[[ota-yeniden-yukleme-seste-eski-livekit-oturumunu-birakir]] · [[dev-ortami-tuzaklari]] · [[electron-cdp-testi]] · [[yerel-installer-testi-userdata]] · [[rn-android-border-nan]] · [[kozmetik-avif-tam-aralik]] · [[worktree-silme-windows]] · [[secret-isleme-kurali]] · [[caddy-bind-mount-restart]] · [[dpdfnet-fallback-koku-neden]] · [[saglayici-udp-paket-siniri]] · [[sonar-yayin-sesine-kendi-sesini-katar]] · [[yerel-testte-ekran-paylasimi-gercek-pencere]] · [[server-testleri-tam-kosuda-kararsiz]] · [[caddy-reload-websocketleri-keser]] · [[ajan-yayin-betigini-sahte-ssh-ile-denerken-canliya-cikti]] · [[github-macos-runner-kapasitesi]] · [[electron-net-fetch-rangeerror]] · [[electron-builder-csc-link-anahtar-zinciri-parolasi]] · [[rn-animated-interpolate-render-icinde-oom]] · [[kotlin-derlemesi-mac-te-yok-android-ci-ile-dogrula]] · [[livekit-default-cikis-aygitini-somut-kimlige-sabitler]]
+[[ota-yeniden-yukleme-seste-eski-livekit-oturumunu-birakir]] · [[dev-ortami-tuzaklari]] · [[electron-cdp-testi]] · [[yerel-installer-testi-userdata]] · [[rn-android-border-nan]] · [[kozmetik-avif-tam-aralik]] · [[worktree-silme-windows]] · [[secret-isleme-kurali]] · [[caddy-bind-mount-restart]] · [[dpdfnet-fallback-koku-neden]] · [[saglayici-udp-paket-siniri]] · [[sonar-yayin-sesine-kendi-sesini-katar]] · [[yerel-testte-ekran-paylasimi-gercek-pencere]] · [[server-testleri-tam-kosuda-kararsiz]] · [[caddy-reload-websocketleri-keser]] · [[ajan-yayin-betigini-sahte-ssh-ile-denerken-canliya-cikti]] · [[github-macos-runner-kapasitesi]] · [[electron-net-fetch-rangeerror]] · [[electron-builder-csc-link-anahtar-zinciri-parolasi]] · [[rn-animated-interpolate-render-icinde-oom]] · [[kotlin-derlemesi-mac-te-yok-android-ci-ile-dogrula]] · [[livekit-default-cikis-aygitini-somut-kimlige-sabitler]] · [[2026-10-22-sonda-serisi-sinirsiz-buyume-ve-yeniden-oynatma-sira-yapayligi]]
 
 ## Oturumlar ve ek kararlar/dersler
 - [[_index-dev-era]]: geliştirme dönemi (C:\dev, 2026-09-26..28)
@@ -82,6 +81,7 @@ _Son güncelleme: 2026-10-17; canlıdan doğrula. Eski ayrıntılı hâl: [[10-P
 - [[2026-10-15-canli-dogrulama-bakim-plani-geri-bildirim]]: canlı doğrulama (sunucu 99f3652, OTA 200), bakım planı 16 Ekim 07:30, geri bildirim #35 main'de, #34 ertelendi, #36 pil testi
 - [[2026-10-15-kisisel-giris-sesi-ve-0-11-1]]: kişisel giriş sesi (#34, üç ajan + inceleme), sürüm 0.11.1, şema 27, imajda ffmpeg
 - [[2026-10-16-admin-altyapi-sekmesi]]: admin "Makine" sekmesi "Altyapı" oldu, makine geneli Netdata'ya, `a22c0dc` yayında
+- [[2026-10-22-rozet-sahne-prob-ve-0-11-3]]: okunmamış rozeti, ses satırında sabit yuva + yayın küçük resmi, yayında tek tık/zoom, prob motoru UDP/TCP, sunucu deploy, 0.11.3
 - [[10-Projects/diskort/sessions/2026-10-17-diskort-guncel-durum-arsivi|2026-10-17 güncel durum arşivi]]: overview'un kısaltma öncesi "Güncel durum" ve "Sıradaki işler" bölümleri, olduğu gibi
 - ziroo-edge ve marka oturumları (tools/games geçişi, liste sayfaları, ziroo.net, maskot) artık kendi overview'larında: [[10-Projects/ziroo-edge/_overview|ziroo-edge]], [[10-Projects/marka/_overview|marka]]
 
@@ -89,4 +89,4 @@ _Son güncelleme: 2026-10-17; canlıdan doğrula. Eski ayrıntılı hâl: [[10-P
 [[20-Areas/working-rules/_index|Çalışma kuralları]] (20-Areas): [[git-push-autonomy]], [[diskort-orchestrator-mode]], [[zamanlanmis-gorevler-ve-skiller]]. Diskort'tan taşınan genel kurallar ve dersler (telefonla erişim, izin istemleri, SSH engeli, zziroo taşıması, ince taneli anahtar, rutin çalışma klasörü, `.claude` altına yazma) de orada.
 
 ## Sürüm özeti
-0.1.2 metin kanalları (2026-09-26) · 0.1.3 zorunlu otomatik güncelleme · 0.1.4 client-core · 0.2.0 Android v1 · 0.2.x OTA · 0.3.0 tepkiler+ekler · 0.3.1 DeepFilterNet 3 · 0.3.2 profil fotoğrafları · 0.3.3 tema UI · 0.3.4 GPU ekran kodlama · 0.4.0 roller · 0.8.1 iOS Ad Hoc + şema 21 · 0.9.0 Etkinlik · 0.9.2 kozmetik paketleri · 0.9.3 DPDFNet düzeltmesi · 0.9.4 bağlantı teşhisi çalışması · 0.9.5 sahnede çoklu yayın + AGC/sınırlayıcı + yerel konuşma halkası · 0.9.6 DM'de arama + ekran paylaşımı + engelleme (şema 25) · 0.10.0 arkadaşlık + donanım simulcast + 720p30 (şema 26) · 0.10.3 macOS imza + telefon göstergesi · 0.11.0 rol etiketi + masaüstü AGC + DPDFNet eşikleri (yeni APK) · 0.11.1 kişisel giriş sesi + kanal süresi (şema 27) · 0.11.2 giriş sesi düzeltmeleri.
+0.1.2 metin kanalları (2026-09-26) · 0.1.3 zorunlu otomatik güncelleme · 0.1.4 client-core · 0.2.0 Android v1 · 0.2.x OTA · 0.3.0 tepkiler+ekler · 0.3.1 DeepFilterNet 3 · 0.3.2 profil fotoğrafları · 0.3.3 tema UI · 0.3.4 GPU ekran kodlama · 0.4.0 roller · 0.8.1 iOS Ad Hoc + şema 21 · 0.9.0 Etkinlik · 0.9.2 kozmetik paketleri · 0.9.3 DPDFNet düzeltmesi · 0.9.4 bağlantı teşhisi çalışması · 0.9.5 sahnede çoklu yayın + AGC/sınırlayıcı + yerel konuşma halkası · 0.9.6 DM'de arama + ekran paylaşımı + engelleme (şema 25) · 0.10.0 arkadaşlık + donanım simulcast + 720p30 (şema 26) · 0.10.3 macOS imza + telefon göstergesi · 0.11.0 rol etiketi + masaüstü AGC + DPDFNet eşikleri (yeni APK) · 0.11.1 kişisel giriş sesi + kanal süresi (şema 27) · 0.11.2 giriş sesi düzeltmeleri · 0.11.3 okunmamış rozeti + ses satırı yuvası + yayın tek tık/zoom + OTA öncesi sesten çıkma.

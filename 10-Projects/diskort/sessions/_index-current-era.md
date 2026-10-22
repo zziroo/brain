@@ -81,3 +81,6 @@ Bu dizin yalnızca güncel-dönem aktarımında yazılan notları listeler (tari
 - 2026-10-15 · session · [[2026-10-15-kisisel-giris-sesi-ve-0-11-1]] — kişisel giriş sesi, sürüm 0.11.1
 - 2026-10-15 · lesson · [[ota-yeniden-yukleme-seste-eski-livekit-oturumunu-birakir]] — Seste iken OTA yeniden yüklemesi eski LiveKit oturumunu bırakır (0.11.2, iki Android)
 - [[2026-10-16-ziroo-edge-ops-katmani-kuma-netdata]]: ops.ziroo.net (Kuma + Netdata + Telegram), gözcüden makine sağlığı çıktı, /healthz standardı, admin Altyapı sekmesi
+- 2026-10-22 · session · [[2026-10-22-rozet-sahne-prob-ve-0-11-3]] — okunmamış rozeti, ses satırı yuvası + yayın küçük resmi, yayında tek tık/zoom, prob motoru, 0.11.3
+- 2026-10-22 · decision · [[2026-10-22-yayin-izleme-tek-tik-zoom-ve-ses-satirinda-sabit-yuva]] — Yayın izlemede doğrudan etkileşim, ses satırında sabit yuva, rozet = bahsetme + DM
+- 2026-10-22 · lesson · [[2026-10-22-sonda-serisi-sinirsiz-buyume-ve-yeniden-oynatma-sira-yapayligi]] — Sonda serisi dizi tutulursa sınırsız büyür; yeniden oynatma sırası yapay kesinti üretir

@@ -23,7 +23,7 @@ isimkayit VDS'inde sunucuya gelen UDP ~1400 paket/sn'yi geçince gelen bütün U
 - **Gösterge yalnız giden kayba ve pinge bakar;** ping, yanıt alınan son STUN ölçümünde takılı kalır. Kayıp + sabit ping = paketler gecikmiyor, düşürülüyor (kuyruk değil süzgeç).
 - **Sunucu sayaçları temizse ve herkes aynı anda etkileniyorsa** sorun sanal makinenin önündedir; içeriden düzeltilemez.
 - **Sağlayıcı seçerken sormak yetmez, ölçmek gerekir.** Saatlik sunucu aç, paket hızı testini çalıştır, sonra karar ver. Basit yol: sunucuda saniyelik UDP sayacı, istemciden kademeli gönderim.
-- **Yalnız UDP'yi etkileyen kesinti sonda motorundan kaçabiliyor:** araya giren TCP sondaları art arda kayıp serisini bozuyor (2. koşu kayda geçmedi). UDP ve TCP serileri ayrı sayılmalı — açık iş.
+- **Yalnız UDP'yi etkileyen kesinti sonda motorundan kaçabiliyor:** araya giren TCP sondaları art arda kayıp serisini bozuyor (2. koşu kayda geçmedi). UDP ve TCP serileri ayrı sayılmalı — 2026-10-22'de yapıldı (`probe.proto`, [[2026-10-22-sonda-serisi-sinirsiz-buyume-ve-yeniden-oynatma-sira-yapayligi]]).
 - Yerel DNS vekili (dnscrypt-proxy) taşıma sonrası eski adresi önbellekte tutabilir; sorun sunucuda değildir.
 
 ## Açıklanmayan
