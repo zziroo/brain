@@ -26,3 +26,4 @@ source: C:\Users\yusuf\.claude\CLAUDE.md (Tools)
 ## İlgili
 - [[orkestrasyon]], [[_index]]
 - **Kancalar (`~/.claude/hooks/`):** `baglam-uyarisi.mjs` (UserPromptSubmit, ana oturum: 300k devir ve eski oturum uyarısı), `ajan-tavani.mjs` (PostToolUse, alt ajan: 200k / 100 çağrı / 5 görüntü uyarısı, 2026-10-22). İkisi de hata durumunda sessiz çıkar, hiçbir şeyi engellemez.
+- **Günlük ölçüm:** `python3 -I ~/.claude/orchestration-report/gunluk-olcum.py <since ISO> <mtime epoch> [until ISO]` (ör. `2026-10-21T01:00:00Z 1761008400 2026-10-22T01:00:00Z`); oturum ve ajan başına çağrı, zirve bağlam, çıktı, $, ekran görüntüsü, süre, model ve sık araçlar. Günlük yorum için `usage.mjs --since/--until` toplamlarıyla birlikte okunur (2026-10-22).

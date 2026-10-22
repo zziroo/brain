@@ -62,3 +62,4 @@ Global kuralların damıtması. Orijinal dosya değiştirilmedi; geçerli olan h
 - [[2026-10-06-github-repolari-zziroo-hesabina-tasindi]]: 15 repo `zziroo` hesabına taşındı, yönlendirme ve remote notları
 - [[2026-10-07-zziroo-tasimasi-tamamlandi-ve-mac-listesi]]: taşımanın Mac ve sunucu tarafı bitti, Mac geçiş listesi işlendi
 - [[ince-taneli-anahtar-repo-baska-hesaba-tasininca-calismaz]]: repo başka hesaba taşınınca eski ince taneli anahtar yazamaz
+- [[2026-10-22-gunluk-token-olcumu-ve-ajan-tavani-kancasi]] — 15–21 Ekim günlük ölçümler, haftada çağrı başı maliyet yarıya; ajan tavanı kancası
