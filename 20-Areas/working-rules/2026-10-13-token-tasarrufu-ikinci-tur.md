@@ -85,5 +85,26 @@ source: 2026-10-13 oturumu "pano: son 1 gün token analizi"; ~/.claude/CLAUDE.md
 - Koordinatörde görüntü 59 (125'ten düştü), telefon geçişleri oturumunda 24.
 - Sonuç: kalıp aynı, sadece taraf değişti. Koordinatör kuralı yarı yarıya tutuyor, ajanlara verilen brief'lerde tavan ve görüntü kuralı yazılmıyor. Yeni hedef: brief şablonuna "≤100 çağrı, ≤200k, görüntü yalnız sonda" satırı; koordinatörde 300k uyarısı geldiğinde gerçekten devir.
 
+## Ölçüm 8 (20–21 Ekim, iki tam gün; 22 Ekim'de geriye dönük ölçüldü)
+- **20 Ekim:** 325 $, 851M token, 6.156 çağrı, 27 oturum, **134 ajan** (rekor); çağrı başı bağlam 138k. Ajanlar 201 $, koordinatörler 120 $ (Fable 48, Opus 72). 17 ajan tavan üstü (170 çağrı / 299k, 165 / 256k). İlk gerçek `kesif` kullanımı: 13 Haiku ajanı. Sonnet 18 ajan, en büyüğü 45 çağrı. 300k üstü koordinatör 3 (365k, 350k, 327k). Görüntü: ana 40, ajan 221.
+- **21 Ekim:** 221 $, 578M token, 3.668 çağrı, 12 oturum, 72 ajan; çağrı başı bağlam 157k. Ajanlar 131 $, koordinatörler 83 $. 14 ajan tavan üstü, biri **242 çağrı / 419k** (tek ajan ~15 $; bölünmesi gereken iş). Haiku 3. 300k üstü koordinatör 2 (361k, 337k). Görüntü: ana 31, ajan 165.
+- 22 Ekim öğlen: 6 $; haftalık kota %44 (3,3 günde), Fable %24. Pazar'a ~%90 ile varılır.
+
+## Haftalık bakış (13–21 Ekim)
+| Gün | $ | Çağrı | $/çağrı | Koordinatör $ | Ajan $ | Ajan sayısı |
+|---|---|---|---|---|---|---|
+| 13 | 194 | 3.185 | 0,061 | 89 | 105 | 58 |
+| 14 | 68 | 1.227 | 0,055 | ? | ? | 18 |
+| 15 | 236 | 2.711 | 0,087 | 178 | 58 | 56 |
+| 16 | 229 | 2.963 | 0,077 | 177 | 50 | 48 |
+| 17 | 249 | 3.975 | 0,063 | 153 | 91 | 81 |
+| 18 | 308 | 5.814 | 0,053 | 179 | 124 | 90 |
+| 19 | 264 | 5.788 | 0,046 | 105 | 154 | 92 |
+| 20 | 325 | 6.156 | 0,053 | 120 | 201 | 134 |
+| 21 | 221 | 3.668 | 0,060 | 83 | 131 | 72 |
+- Günlük maliyet düz (220–325 $), ama çağrı sayısı iki katına çıktı: **çağrı başı maliyet 0,087 → 0,05 $**, yani aynı parayla iki kat iş. Kazanç koordinatörden geldi (178 → 83 $), ajanlara dağıtım arttı (50 → 130–200 $).
+- Kalan üç israf değişmedi: ajan tavanı aşımı (günde 13–17 ajan), ajanlarda ekran görüntüsü (günde 165–246), koordinatörde 300k üstü 2–5 oturum. Bunlar brief'e yazılmadığı sürece ajan sayısı arttıkça büyür.
+- Model: Fable artık yalnız seçili koordinatörlerde (günde 0–54 $); Haiku `kesif` 20 Ekim'de devreye girdi.
+
 ## İlgili
 - [[2026-10-10-ajan-boyutu-ve-yalin-baglam]], [[orkestrasyon]], [[inceleme-kapisi]], [[araclar-ve-raporlar]], [[_index]]
