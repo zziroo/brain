@@ -9,7 +9,7 @@ source: C:\Users\yusuf\.claude\CLAUDE.md (Tools)
 
 # Orkestrasyon ve ajan akışı raporu `orchestration-report` klasöründeki betikle üretilir
 
-- Yer: `/Users/ziroo/.claude/orchestration-report/` (Windows'ta `C:\Users\yusuf\.claude\orchestration-report\` idi). Çalıştırma: `node report.mjs [--session <id>] [--project <dir-key>]`; çıktı HTML ve JSON olarak `out/` altına yazılır.
+- Yer: `~/.claude/orchestration-report/` (2026-10-22'den beri `~/ZZ/claude-kurulum/claude/orchestration-report`'a symlink; repo [[2026-10-22-claude-kurulum-reposu]]) (Windows'ta `C:\Users\yusuf\.claude\orchestration-report\` idi). Çalıştırma: `node report.mjs [--session <id>] [--project <dir-key>]`; çıktı HTML ve JSON olarak `out/` altına yazılır.
 - Yusuf rapor isterse HTML Artifact olarak yayınlanır; yayından önce HTML'in tamamı okunur. İlk rapor yayımlanmış: https://claude.ai/artifact/Fif4G4UAd5tCiR78RocHsg (yeni oturumun raporu yeni artifact'a gidebilir).
 - Bilinen tuhaflık: hâlâ çalışan ajanlar raporda "Yarım kaldı" görünür.
 - Token/maliyet raporu: `node usage.mjs [--since YYYY-MM-DD] [--until <tarih>] [--kaynak mac|windows] [--out <dosya.html>]`. Bütün kaynaklardaki oturum ve subagent transkriptlerini tarar; model, proje, gün ve oturum bazında token ve API liste fiyatı karşılığını `out/usage.html` dosyasına yazar. Max aboneliğinde gerçek fatura sabit; buradaki $ "API'den olsaydı" tahminidir. Mesajlar kimliğe göre tekilleştirilir. Fiyat tablosu `usage.mjs` ve `ortak.mjs`'te ayrı ayrı durur (ikisine de aynı satır eklenir); 2026-10-13'te Haiku 5.5 eklendi.
