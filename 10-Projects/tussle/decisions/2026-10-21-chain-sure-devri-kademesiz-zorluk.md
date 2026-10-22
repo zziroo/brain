@@ -2,7 +2,7 @@
 type: decision
 project: tussle
 date: 2026-10-21
-status: active
+status: superseded
 tags: [tussle, oyun-tasarimi, chain, denge]
 source: Claude Code oturumu "tussle: mevcut durum kapsamlı çalışma" (geri bildirim turu 2); oturum notu [[2026-10-21-tussle-geri-bildirim-turu-2-ve-gorsel-analiz]]
 ---
@@ -18,3 +18,5 @@ source: Claude Code oturumu "tussle: mevcut durum kapsamlı çalışma" (geri bi
 - Yalnız tahta boyutlarını yumuşatmak: hız hâlâ ödüllenmez, herkes yine aynı yerde ölür.
 
 **Uygulama:** `src/games/chain/sim.ts` (devir + tavan, kademesiz tahta listesi), `chain` sürümü v6. Denge bot ölçümü yukarıdaki sayılar. Telefon teyidi bekliyor (devir hissi).
+
+> Yerine geçen: [[2026-10-22-chain-tek-sure-renkli-sayilar]] (v7).
