@@ -19,6 +19,9 @@ Yusuf oyunları telefonda tek tek oynayıp notları ara ara gönderdi; "bitti" d
 - **Oyun bazlı**: balance v6 (zeminde büyük sarı rüzgâr oku, windStart 3→8, rampSec 40→15, iyi oyuncu 15-25 sn), bridge v4 (perfect bonusu ve genişleme yok, gölge platforma kırpıldı), stack v7 (taban = perfect büyüme tavanı 0.62, ilk blok 0.44), hoop v5 (sabit 30 sn, sepet başına süre eki yok), keep-up v3 (ikinci top 10. vuruşta, her 10'da bir, en çok 4; top sayısına göre yerçekimi gevşer), knife-toss v3 (atış kapısı 18 tick, bıçak 7°, maxKnives 50, tek yön dalgalı hız; hızlı dövme avantajı gitti), flip-match v5 (tek BonusClock 24 sn + tahta başına 8 sn), fill-up v3 (Tam! ek bardak vermez, MAX_GLASSES 12), chain (geri sayımda tahta boş), crack-it (aktif hane konturu, rakam düşerek gelir, tambur dönüşü yok), pinata (yıldız yerine şerit ortasında parlak bant), reflex (isabetteki "^" göz ağız gibi okunuyordu, kalktı), lane-dash duvar olayı tekrarı düzeldi (EDGE_OFF kilidi), görüş 24→17 m.
 - **Yanlış başlangıç hakkı** (sunucu): replay'de 4 sn altında kendi biten, `meta.end` 'auto', şüpheli olmayan koşu günde 1 kez hak düşürmez; `tries.false_start` (göç 30), SETTLED/triesUsed/streak/prevBest/profil sorguları süzer, `nextTryIndex` = MAX(k)+1, `today.triesNext`. Sonuç kartında "Yanlış başlangıç, hak gitmedi". Karar [[2026-10-23-yanlis-baslangic-hakki-sunucu-replayden-gunde-bir]].
 
+## Ders
+- [[2026-10-23-paralel-ajanlar-tek-vite-sunucusu-hmr-ve-paylasilan-sozluk]]
+
 ## Açık / doğrulanmadı
 - Telefonda hiçbiri denenmedi; özellikle balance sertliği (casual bot 10 sn), hoop 30 sn'de casual ~4 sayı, keep-up 4 top hissi, stack tabanı hâlâ ilk bloktan geniş (bilinçli: ulaşılabilir tavan).
 - Ses yoğunluğu sadeleştirme turu (Yusuf: "normal oyun sesleri de çok") yapılmadı, ayrı tur.
