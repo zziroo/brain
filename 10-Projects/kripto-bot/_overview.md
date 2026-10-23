@@ -1,7 +1,7 @@
 ---
 type: project
 project: kripto-bot
-date: 2026-10-16
+date: 2026-10-23
 status: active
 tags: [kripto-bot, overview, binance, trading, bot]
 source: ZZ oturumu "kripto-bot: proje başlangıcı" (2026-10-16)
@@ -34,22 +34,19 @@ Stack önerisi: Python 3.12 + ccxt, pandas, pytest, async (Yusuf'a sorulacak, ce
 
 ## Güncel durum
 
-_Son güncelleme: 2026-10-16 gece, Faz 1-2-3 kodlandı, 4h testnet'te_
+_Son güncelleme: 2026-10-23, ilk 5 sembol, 4h testnet'te, ilk alım-satım kapandı_
 
-- Yerel repo, 12 commit (son: `9c16fde` 4h geçişi). Remote yok. uv + Python 3.12, 144 test, ruff temiz.
-- Komutlar: `uv run kbot download|backtest|paper-run|run [--until-next-close|--loop]|status|report [--json]|dashboard|risk-reset --loop paper|testnet|live|error-clear --loop testnet|live|show-config`.
-- Faz 3 (2026-10-16): `trader` her dolan emri `state/trades_<mode>.jsonl`'e, her turu `state/equity_<mode>.jsonl`'e yazar. `kbot report` Türkçe günlük özet (FIFO gerçekleşen PnL, açık PnL, bayatlık, kill switch, hata kilidi), `kbot dashboard` tek dosya HTML pano (`reports/dashboard.html`, gitignore; her `kbot run` sonunda yenilenir; `.claude/launch.json` "dashboard" ile tarayıcıda önizleme). Rapor görevi: 2026-10-18'den beri global `gece-gozcusu` (her gece 00:10) `kbot report` + launchctl durumunu okur, kod değişikliklerini (risk/exchange/trader) inceler, kill switch/hata kilidi/bayat botta ACİL bildirim atar; eski 09:00 görevi `kripto-bot-gunluk-rapor` durduruldu ([[2026-10-18-global-gece-gozcusu]]).
-- Faz 2 (`trader.py`): her turda borsadan bakiye+ticker ile uzlaştırma, mum başına idempotent işlem (`state/trader_state_<mode>.json`), toz kuralı (min cost altı = flat), market emri + `fetch_order` doğrulaması, kill switch'te düzleştirme ve exit 2, hata kilidi `state/trader_error_<mode>.json` (insan `error-clear` ile açar), canlıda önceden var olan coinler `manage_existing_holdings` olmadan satılmaz. Live üç kapı aynen duruyor.
-- Zamanlama: bot **Mac'te** launchd ajanı `com.ziroo.kripto-bot.run` ile her saat :05'te çalışıyor (Mac hep açık). VPS'e taşıma denendi (2026-10-16): kod `/opt/kripto-bot`'ta, systemd timer kurulu ama **kapalı**; VPS'ten Binance'e isteklerin ~yarısı anında sıfırlanıyor, diğer siteler sorunsuz (Binance'e özgü filtre). Ayrıntı `deploy/README.md`. İki bot aynı anda çalışmamalı.
-- İlk testnet turu 2026-10-16 atıldı: anahtar `.env`'de, `kbot status` ve `kbot run` çalıştı. Hesap ön yüklü (1 BTC, 1 ETH, 10.000 USDT; equity ~94.850 USDT), sinyal 1 → "hold", emir yok; ikinci tur "already" (idempotent). Emir yolu küçük al-sat ile doğrulandı: market emri hemen `closed`, `fetch_order` fee=None dönüyor (create yanıtında var; fallback eklendi). Not: ön yüklü bakiye yüzünden risk yüzdeleri 500 USD planını temsil etmiyor; testnet yalnız davranışı doğrular.
-- Strateji: **4h** `trend_filter_cross` (20/50/200, min_hold 5, cooldown 3), kill switch %40 (2026-10-16'da 1d'den 4h'e, Yusuf'un tercihi; OOS BTC +8% vs B&H +31%, ETH +41% vs +4%, DD %33-39). Araştırma raporu: `reports/strategy-research-2026-10-16.md`.
-- Testnet hesabı: 4h geçişinde sinyal 0 → 16:05'te ön yüklü 1 BTC + 1 ETH satıldı; hesap nakitte (~94.378 USDT), sonraki alımlar sembol başına en fazla 500 USD. İlk 4h alımı ve kapanan işlem henüz yok.
-- Bilinen sınırlar: sinyal mainnet mumundan, fiyat testnet ticker'ından; clientOrderId yalnız açık emirlerde tekil (asıl koruma uzlaştırma); kill switch satışı canlıda bot alışı kaydı yoksa reddedilir ve her saat loglanır.
+- Yerel repo (son: `d9a9aa2`), remote yok. uv + Python 3.12, 163 test, ruff temiz. Komutlar: `kbot download|backtest|paper-run|run|status|report [--json]|dashboard|risk-reset|error-clear|show-config`.
+- Bot **Mac'te**, launchd `com.ziroo.kripto-bot.run` her saat :05. VPS kurulu ama kapalı (Binance bağlantı sıfırlaması, [[bot-macte-calisir-vps-binance-engeli]]). İki bot aynı anda çalışmamalı.
+- Strateji: **4h** `trend_filter_cross` (20/50/200, min_hold 5, cooldown 3), kill switch %40. Semboller: **BTC, ETH, SOL, XRP, BNB** ([[sembol-listesi-ilk-5]]); statik `equity/N` dilim, sembol başına en fazla 500 USD.
+- Hata kilidi: emir öncesi ccxt NetworkError artık kilitlemez, tur atlanır ([[emir-oncesi-ag-hatasi-kilitlemez]]); diğer her hata kilitler, insan `error-clear` ile açar.
+- Testnet hesabı (~95.957 USDT, ön yüklü coinler satıldı): ilk 4h alım ~492 USDT BTC, satıldı: **-9,37 USDT** (ilk kapanan işlem). 2026-10-23'te hepsi nakitte. Testnet günde 7-9 turu ağ hatasıyla atlıyor.
+- Gözetim: `kbot report` / `kbot dashboard`; global `gece-gozcusu` her gece 00:10 raporu okur ([[2026-10-18-global-gece-gozcusu]]).
+- Bilinen sınırlar: sinyal mainnet mumundan, fiyat testnet ticker'ından; ön yüklü bakiye yüzünden risk yüzdeleri 500 USD planını temsil etmez; rapor ağ sayaçları modsuz (canlı geçişte karışabilir).
 
 ## Sıradaki işler
-- [x] launchd kurulumu (Mac, saatlik :05)
-- [x] Faz 3: salt okunur gözetim (`kbot report`, `kbot dashboard`, 09:00 günlük rapor görevi)
-- [ ] 3-6 ay testnet gözlemi (4h); ilk alım/satım döngüsünü ve FIFO PnL'i raporda doğrula
+- [ ] 3-6 ay testnet gözlemi (4h, 5 sembol); yeni coinlerin alım-satımlarını raporda izle
+- [ ] Rapor: ağ atlamaları yüzünden bayatlayınca "Bilgisayar açık mı?" yerine "testnet'e ulaşılamadı" desin; ağ sayaçlarını moda göre ayır (canlıdan önce)
 - [ ] ETH DD'si kill switch %40'a yakın: eşik kalsın mı? (Yusuf)
 - [ ] GitHub remote (özel) açılsın mı? (Yusuf)
 - [ ] Canlıya geçiş kararı (Yusuf; ayrı hesap ya da `manage_existing_holdings`)
@@ -61,6 +58,8 @@ _Son güncelleme: 2026-10-16 gece, Faz 1-2-3 kodlandı, 4h testnet'te_
 - [[faz2-emir-dongusu-guvenlik-tasarimi|Emir döngüsü: borsadan uzlaştırma, idempotent mum, hata kilidi]]
 - [[bot-macte-calisir-vps-binance-engeli|Bot Mac'te, VPS kapalı (Binance engeli)]]
 - [[zaman-dilimi-4h-yusuf-tercihi|Zaman dilimi 1d → 4h (Yusuf'un tercihi)]]
+- [[sembol-listesi-ilk-5|Sembol listesi ilk 5 (BTC, ETH, SOL, XRP, BNB)]]
+- [[emir-oncesi-ag-hatasi-kilitlemez|Emir öncesi ağ hatası kilitlemez]]
 
 ## Dersler
 - [[start-session-otomatik-tur-reddi|start_session otomatik tur reddi]]
@@ -72,3 +71,4 @@ _Son güncelleme: 2026-10-16 gece, Faz 1-2-3 kodlandı, 4h testnet'te_
 - [[2026-10-16-proje-baslangici|2026-10-16 proje başlangıcı]]
 - [[2026-10-16-faz1-faz2-faz3-ve-testnet|2026-10-16 Faz 1-2-3, testnet, günlük rapor]]
 - [[2026-10-16-4h-gecisi|2026-10-16 4h geçişi, testnet'te ilk satışlar]]
+- [[2026-10-17-sembol-listesi-ve-ag-hatasi-kilidi|2026-10-17..23 ilk 5 sembol, ağ hatası kilidi, ilk alım-satım]]

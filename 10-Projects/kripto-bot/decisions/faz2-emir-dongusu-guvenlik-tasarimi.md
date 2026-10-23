@@ -37,6 +37,7 @@ Faz 2'de `kbot run` testnet'e (ve üç kapı açılırsa canlıya) gerçek marke
 - Kill switch satışı canlıda bot alışı kaydı yoksa reddedilir ve her saat loglanır.
 
 ## İlgili
+- [[emir-oncesi-ag-hatasi-kilitlemez]] (2026-10-20: emir öncesi ağ hatası artık kilitlemez)
 - [[10-Projects/kripto-bot/_overview]]
 - [[claude-rolu-kurucu-ve-gozetmen]]
 - [[binance-testnet-gozlemleri]]

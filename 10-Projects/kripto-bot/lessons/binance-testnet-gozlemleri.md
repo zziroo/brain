@@ -15,6 +15,7 @@ source: kripto-bot oturumu "Faz 2 testnet döngüsü" (2026-10-16)
 - `newClientOrderId` tekilliği yalnız açık emirler arasında; dolmuş emirden sonra aynı id reddedilmez. Dedupe için güvenme, borsadan uzlaştır.
 - Anahtar kontrolü yaparken değeri yazdırma: `grep -cE "^BINANCE_TESTNET_API_(KEY|SECRET)=.{10,}" .env` yeter.
 - Claude uygulamasının zamanlanmış görevi cron saatine birkaç dakika sabit gecikme ekler (09:00 → 09:13); bu normal.
+- `testnet.binance.vision` sık cevap vermiyor: 2026-10-22/23'te günde 7-9 saatlik tur exchangeInfo'da NetworkError ile atlandı. Emir öncesi olduğu için kilit yok ([[emir-oncesi-ag-hatasi-kilitlemez]]); rapordaki "N saat çalışmadı" uyarısı bu yüzden yanıltıcı olabilir.
 
 ## İlgili
 - [[faz2-emir-dongusu-guvenlik-tasarimi]]
