@@ -2,10 +2,12 @@
 type: decision
 project: diskort
 date: 2026-09-30
-status: active
+status: superseded
 tags: [diskort, kozmetik, performans, mobil]
 source: 54dc3a33-8a43-4d66-8774-07b1dfa4d58f.jsonl
 ---
+
+> Geçersiz (2026-10-23): kozmetikler tamamen kaldırıldı, bkz. [[2026-10-23-kozmetikler-tamamen-kaldirildi]].
 
 # Karar: Kozmetikler yalnızca üzerine gelince (masaüstü) ya da açılmış profilde (telefon) oynar, diğer her yerde sabit poster
 

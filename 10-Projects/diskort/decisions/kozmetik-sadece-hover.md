@@ -2,10 +2,12 @@
 type: decision
 project: diskort
 date: 2026-09-30
-status: active
+status: superseded
 tags: [diskort, kozmetik, performans, 0-9-3]
 source: memory diskort-cosmetics-plan.md ("After 0.9.2"), diskort-handoff.md
 ---
+
+> Geçersiz (2026-10-23): kozmetikler tamamen kaldırıldı, bkz. [[2026-10-23-kozmetikler-tamamen-kaldirildi]].
 
 # Kozmetikler yalnızca işaret edilince oynar (Discord gibi), tüm platformlarda
 

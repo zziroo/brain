@@ -2,10 +2,12 @@
 type: decision
 project: diskort
 date: 2026-09-30
-status: active
+status: superseded
 tags: [diskort, kozmetik, mimari, sunucu, video]
 source: 54dc3a33-8a43-4d66-8774-07b1dfa4d58f.jsonl
 ---
+
+> Geçersiz (2026-10-23): kozmetikler tamamen kaldırıldı, bkz. [[2026-10-23-kozmetikler-tamamen-kaldirildi]].
 
 # Karar: Kozmetik setleri uygulamada çizilmez; sunucudan gelen ön-render (6 sn, 30 fps, kesintisiz döngü) paketler olarak oynatılır
 

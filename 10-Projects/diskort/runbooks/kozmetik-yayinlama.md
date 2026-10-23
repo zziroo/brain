@@ -2,10 +2,12 @@
 type: resource
 project: diskort
 date: 2026-09-30
-status: active
+status: superseded
 tags: [diskort, runbook, kozmetik]
 source: memory diskort-cosmetics-plan.md
 ---
+
+> Geçersiz (2026-10-23): kozmetikler tamamen kaldırıldı, bkz. [[2026-10-23-kozmetikler-tamamen-kaldirildi]].
 
 # Yeni kozmetik set: render aracıyla üret, bundle'ı kuru çalıştır, production'a CLI ile yayınla
 

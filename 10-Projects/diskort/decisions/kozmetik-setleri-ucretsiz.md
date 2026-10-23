@@ -2,10 +2,12 @@
 type: decision
 project: diskort
 date: 2026-09-28
-status: active
+status: superseded
 tags: [diskort, kozmetik, urun]
 source: a7b70327-6e05-4060-a15b-293ddac27162.jsonl
 ---
+
+> Geçersiz (2026-10-23): kozmetikler tamamen kaldırıldı, bkz. [[2026-10-23-kozmetikler-tamamen-kaldirildi]].
 
 # Karar: Altı kozmetik set herkese ücretsizdir
 
