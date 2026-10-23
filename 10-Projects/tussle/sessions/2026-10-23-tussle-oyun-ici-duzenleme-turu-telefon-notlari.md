@@ -9,7 +9,7 @@ source: Claude Code oturumu "tussle: oyun içi düzenleme turu (telefon notları
 
 # Oturum: Yusuf'un telefon notlarından oyun içi düzenleme turu (21 madde, tek commit)
 
-Yusuf oyunları telefonda tek tek oynayıp notları ara ara gönderdi; "bitti" deyince hepsi gruplandı, 7 paralel ajan + 2 inceleme ile tek commit'e (`9934b0a`) toplandı. Typecheck temiz, 2700 test geçti. **Yayın bu oturumda yapılmadı** (Yusuf'un kararı bekleniyor).
+Yusuf oyunları telefonda tek tek oynayıp notları ara ara gönderdi; "bitti" deyince hepsi gruplandı, 7 paralel ajan + 2 inceleme ile tek commit'e (`9934b0a`) toplandı. Typecheck temiz, 2700 test geçti. Yusuf'un onayıyla yayınlandı: sunucu 9934b0a, OTA 0.20261023.1607 (yedek pre-9934b0a.db), DB göç 30.
 
 ## Yapılan
 - **Ortak HUD** (`src/games/shell/hud.ts` yeniden): skor üst ortada, sayı büyük kalın, birim küçük soluk; tek tur göstergesi `hud.setRound(n,total)` sağ üstte hap (brake artık 1/7 gösteriyor; split, fill-up, reflex, on-time, color-recall kendi tur noktalarını/yazılarını bıraktı). Karar [[2026-10-23-ortak-hud-skor-ortada-tur-hapi-ipucu-ve-altin-yok]].
