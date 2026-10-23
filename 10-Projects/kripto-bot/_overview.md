@@ -34,19 +34,21 @@ Stack önerisi: Python 3.12 + ccxt, pandas, pytest, async (Yusuf'a sorulacak, ce
 
 ## Güncel durum
 
-_Son güncelleme: 2026-10-23, ilk 5 sembol, 4h testnet'te, ilk alım-satım kapandı_
+_Son güncelleme: 2026-10-23 akşam, okuma çağrılarına ağ tekrarı eklendi_
 
-- Yerel repo (son: `d9a9aa2`), remote yok. uv + Python 3.12, 163 test, ruff temiz. Komutlar: `kbot download|backtest|paper-run|run|status|report [--json]|dashboard|risk-reset|error-clear|show-config`.
+- Yerel repo (son: `b21bc0f`), remote yok. uv + Python 3.12, 171 test, ruff temiz. Komutlar: `kbot download|backtest|paper-run|run|status|report [--json]|dashboard|risk-reset|error-clear|show-config`.
 - Bot **Mac'te**, launchd `com.ziroo.kripto-bot.run` her saat :05. VPS kurulu ama kapalı (Binance bağlantı sıfırlaması, [[bot-macte-calisir-vps-binance-engeli]]). İki bot aynı anda çalışmamalı.
 - Strateji: **4h** `trend_filter_cross` (20/50/200, min_hold 5, cooldown 3), kill switch %40. Semboller: **BTC, ETH, SOL, XRP, BNB** ([[sembol-listesi-ilk-5]]); statik `equity/N` dilim, sembol başına en fazla 500 USD.
-- Hata kilidi: emir öncesi ccxt NetworkError artık kilitlemez, tur atlanır ([[emir-oncesi-ag-hatasi-kilitlemez]]); diğer her hata kilitler, insan `error-clear` ile açar.
+- Hata kilidi: emir öncesi ccxt NetworkError artık kilitlemez, tur atlanır ([[emir-oncesi-ag-hatasi-kilitlemez]]); diğer her hata kilitler, insan `error-clear` ile açar. Salt okunur çağrılar (exchangeInfo, bakiye, fiyat) NetworkError'da tur içinde 3 kez denenir (2 s/5 s); emir çağrıları ve 418/429 asla ([[okuma-cagrilarina-ag-tekrari]]). Mum çekimi (mainnet OHLCV) tekrar kapsamında değil.
 - Testnet hesabı (~95.957 USDT, ön yüklü coinler satıldı): ilk 4h alım ~492 USDT BTC, satıldı: **-9,37 USDT** (ilk kapanan işlem). 2026-10-23'te hepsi nakitte. Testnet günde 7-9 turu ağ hatasıyla atlıyor.
 - Gözetim: `kbot report` / `kbot dashboard`; global `gece-gozcusu` her gece 00:10 raporu okur ([[2026-10-18-global-gece-gozcusu]]).
 - Bilinen sınırlar: sinyal mainnet mumundan, fiyat testnet ticker'ından; ön yüklü bakiye yüzünden risk yüzdeleri 500 USD planını temsil etmez; rapor ağ sayaçları modsuz (canlı geçişte karışabilir).
 
 ## Sıradaki işler
 - [ ] 3-6 ay testnet gözlemi (4h, 5 sembol); yeni coinlerin alım-satımlarını raporda izle
-- [ ] Rapor: ağ atlamaları yüzünden bayatlayınca "Bilgisayar açık mı?" yerine "testnet'e ulaşılamadı" desin; ağ sayaçlarını moda göre ayır (canlıdan önce)
+- [x] Rapor: ağ atlamaları yüzünden bayatlayınca "borsaya ulaşamıyor" diyor (2026-10-23)
+- [ ] Rapor: ağ sayaçlarını moda göre ayır (canlıdan önce)
+- [ ] Binance TLS sıfırlamaları (21-23 Ekim günde 5→9 atlama, Google sorunsuz): tekrar deneme yetmezse Mac'in ağ yolunu (utun/VPN, ISS) incele
 - [ ] ETH DD'si kill switch %40'a yakın: eşik kalsın mı? (Yusuf)
 - [ ] GitHub remote (özel) açılsın mı? (Yusuf)
 - [ ] Canlıya geçiş kararı (Yusuf; ayrı hesap ya da `manage_existing_holdings`)
