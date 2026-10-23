@@ -17,7 +17,7 @@ Global kuralların damıtması. Orijinal dosya değiştirilmedi; geçerli olan h
 - [[2026-10-10-ajan-boyutu-ve-yalin-baglam]]: ajan boyutu sınırı, aşamalara bölme, yalın bağlam (token analizinden)
 - [[2026-10-13-token-tasarrufu-ikinci-tur]]: review diff'e sınırlı, 200k tavan, Haiku keşif, ekran görüntüsü kısıtı (ikinci tur analiz)
 - [[2026-10-20-token-ucuncu-tur-kod-haritasi-ve-kural-gozden-gecirme]]: kod haritası (global `/kod-haritasi` skill + `harita.mjs`, 7 projede yapıldı 20 Eki), bağlam uyarısı hook'u, kesif ajanı; bütün dosya okuma, yumuşak çağrı sınırı, riskli review istisnası (üçüncü tur)
-- [[2026-10-22-claude-kurulum-reposu]]: `~/.claude` düzeni (kurallar, kancalar, ajanlar, skill'ler, rapor betikleri) ayrı özel repoda, symlink ile bağlı; brain'e konmadı, nedenleri
+- [[2026-10-22-claude-kurulum-reposu]]: `~/.claude` düzeni (kurallar, kancalar, ajanlar, skill'ler, rapor betikleri) ayrı özel repoda, symlink ile bağlı; brain'e konmadı, nedenleri; brain yeniden PRIVATE
 - [[2026-10-22-gunluk-token-olcumu-ve-ajan-tavani-kancasi]]: 15–21 Ekim günlük ölçümler, haftada çağrı başı maliyet yarıya; ajan tavanı kancası
 - [[2026-10-22-sesli-okuma-ahenk-kancasi]]: cevaplar yerel Ahenk Cep TTS ile `oku` yazınca okunur (otomatik değil); uygulama tuşu ElevenLabs, değişmez
 - [[2026-10-15-yan-oturum-ssh-alias-auto-mod]]: masaüstü güncellemesi; yan oturum ne zaman, `ssh vps` tek biçim, varsayılan izin kipi auto

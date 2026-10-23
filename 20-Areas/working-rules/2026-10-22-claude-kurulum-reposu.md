@@ -15,6 +15,8 @@ source: "sistem: claude-kurulum reposu" oturumu (ZZ kökü)
 - Repoya girmeyen kişisel veri: `orchestration-report/out/` (rapor çıktıları) ve `pano/yayin-maskeler.json` (Apple anahtar kimliği, arkadaş adları). `.gitignore`'da; kur.sh ilk kurulumda bunları eski klasörden yeni yere taşır.
 - Markdown ve betiklerdeki sabit `/Users/ziroo/...` yolları `~/...` oldu (`gunluk-olcum.py` `expanduser`).
 
+- Aynı gün `zziroo/brain` GitHub'da PUBLIC bulundu (kullanıcı başka makineden göstermek için açmıştı); vault özel varsayımıyla yazıldığından (runbook'larda sunucu IP'si var) yeniden PRIVATE yapıldı. Diğer makinede iki repoyu çekmek için `gh auth login` gerekir.
+
 ## Neden
 - Brain bir not kasası ve public; çalışan kod, kanca ve kişisel ölçüm verisi oraya ait değil. İki depo paralel çalışır: brain kararı ve dersi tutar, claude-kurulum uygulanan düzeni.
 - Symlink sayesinde `~/.claude` altındaki her düzenleme doğrudan repoda görünür; iki makine `git pull` ile aynı düzeni kullanır.
