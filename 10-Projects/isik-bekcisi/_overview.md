@@ -53,13 +53,13 @@ _Son içerik güncellemesi: 2026-10-24; canlıdan doğrula. Eski tablo ve devir 
 - **Doğrulanmayanlar:** sesleri hiçbir ajan dinlemedi; 13 Ekim özelliklerini insan oynamadı; Son Nöbet'in son birleşik hâli oynanmadı; gamepad 2. dilimi yalnız sahte gamepad'le denendi; yazısız işaretler ve fener halkası Yusuf'la denenmedi (halka ajanlara soluk geldi); Kalp'in halka uyarısı artık yazısız (görsel + ses), denenmedi. Oturum: [[2026-10-24-hikaye-rafta-yazisiz-ogretme-yayin]].
 
 ## Sıradaki işler
-0. **Yazısız öğretme, faz 2** (2026-10-24): faz 1 canlıda (`4283dfd`). Yusuf oynayıp simgeli hâli değerlendirsin; sonra seçenek 2 (ilk sefer koreografisi, fener çağırır) kararı. İlk fener kotası (`BEACON_ENERGY[0]`, ~8 sefer) ayrı karar. Hikâye işleri (metin, sohbet, günce) rafta, yeni özellikte yazılmaz.
-1. **Yusuf oynasın** (canlıda ya da yerelde `?chapter=N`): ağaç tutuşturma hissi, alevler (ekran görüntüsünde garip geldi), kaya kırma boş mu, fırtına ve gök yıldırımı, Parlama evrimi, sesler. Genel yorumu bekleniyor.
-2. **Ağacın "+%" yıldızlarını fiil yıldızlarına kes.** Parlama evrimi ve günün diğer işleri ~1,4 / ~2,7 sefer kısalttı; bu kesimde geri verilecek.
-3. **İsin kamp yapıları.** Açık: Çayır'da is birikiyor (ilk is yıldızı 1. fenerden sonra), gece hâlâ az kıvılcım bırakıyor.
-4. **Kalp ayarı** (`VIGIL.light`).
-5. **Genel denge** (Yusuf'un kararı): oynayınca Kayıtlar'daki "Şafağa kadar" satırı veri olsun, sonra `TIER_SCALE` ile tek seferde ayar. 2026-10-08 ölçümü: Harabeler 5,7–6,6 sefer (hedef 7–9).
-6. **Bekleyen eski oynama soruları** (pervane adil mi, kamp işaretleri, kalın lazer, odak simgesi büyük olsun, kamera ve nöbet, öğretici baştan tasarımı): arşivde.
+0. **Yusuf "gece derinleşir"i oynasın** (canlıda `0ec7042`; `?chapter=0`, `?chapter=2`, `?chapter=4`): sınır hissi, Çayır temposu, lamba adları, üst kenar parıltısı, geç fener nöbetlerinin uzunluğu. Oturum: [[2026-10-24-gece-derinlesir-kota-kalkti-yayin]]. Dönüşe göre: `SOOT.deepen`, Kalp (`VIGIL.light`) ve geç fenerlerin tutuşması birlikte ayarlanır.
+1. **Kırılan Dünya rafa** (`BREAK.off` true + yıldızları gizle): Yusuf fark etmedi, ağaçlar karanlıkta okunmuyor. Küçük iş.
+2. **Yazısız öğretme, faz 2** (2026-10-24): faz 1 canlıda. Simgeli hâlin değerlendirmesi; sonra seçenek 2 (ilk sefer koreografisi) kararı. Hikâye rafta, yeni özellikte yazılmaz.
+3. **Ağacın "+%" yıldızlarını fiil yıldızlarına kes.** İlke: basış → dünyada görünür olay; otomatik zincirler (Nakarat, Tutuşma, Akkor, havuzlar) azalır ya da tek gürültülü şeye katlanır.
+4. **İsin kamp yapıları.** Çayır'da isin ilk alıcısı artık Şok Dalgası (kademe 0); gerisi açık.
+5. **Genel denge** (Yusuf'un kararı): Kayıtlar'daki "Şafağa kadar" satırı veri olsun; kota tabanlı eski ölçümler tarih.
+6. **Bekleyen eski oynama soruları** (pervane adil mi, kamp işaretleri, kalın lazer, odak simgesi, kamera ve nöbet): arşivde.
 7. **Sonraya:** standart dışı gamepad eşleme tablosu, kayan yıldızlar ve bölge olayları, ışığı kesen harita; Son Nöbet'in son dilimi (ses, ipuçları, adlar).
 
 ## Bilinen küçük eksikler
