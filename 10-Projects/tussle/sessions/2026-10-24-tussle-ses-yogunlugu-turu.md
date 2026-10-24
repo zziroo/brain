@@ -12,7 +12,7 @@ source: Claude Code oturumu 24 Eki akşam (Fable), commit c49d511
 
 Yusuf: "halledilmeyen işler kaldı mı?" → kalanlar listelendi; denge raporu (worktree `heuristic-dirac-c207c7`, dal `c81a8b7`) rafa: oyunlar çok değişti, sonra bakılır. Ses yoğunluğu turu seçildi: tüm oyunlar elden geçsin, nerede ne sıklıkla ses.
 
-## Yapılanlar (commit `c49d511`, yayınlanmadı)
+## Yapılanlar (commit `c49d511` + `e634db2`; yayın 21:18: sunucu e634db2, OTA 0.20261024.1819, yedek pre-e634db2.db)
 - **Envanter** (3 sonnet ajanı, salt okunur): 44 oyun + kabuk + arena + arayüz, her ses çağrısı dosya:satır, tetik, tahmini sıklık, tür (olay/ipucu/dekor). Tipik koşuda ~1900 ses; en yoğun crack-it/how-many 2,9/sn, chop 2,7, fill-up 2,6, bounce 2,3, stack 2,1.
 - **İlke + tablo** `docs/ses-yogunluk-turu.md`: karar [[2026-10-24-bir-olay-bir-ses-dekor-sesi-yok]]. Yusuf'un seçimleri: chop/bounce/four-arrows sessiz + titreşim; lights olduğu gibi; arena kuralı onay.
 - **Uygulama** (3 opus ajanı: oyunlar A–K, L–Z, arena+şablon+belgeler): yalnız view eşlemeleri; sim yalnız split ve color-recall'da (EV_SHELL_SECOND tur başı basılmıyor, skor/replay aynı). crack-it tahmin başına tek ses (lambalar sessiz, son lambada hit/pop); fill-up bardak başına tek ses; stack bırakış başına tek ses; split kesim hit/miss; treasure kazı pop'u kaldı (envanter yanılmıştı: boş kazının tek sesi); knife-toss saplanma pop'u bir render ertelenir, elma hit'iyle çakışırsa çalmaz. Arena: sumo/crown çarpışma thud'ı yalnız benim; pocket top-top ve puck disk-disk pop kalktı; `ArenaView.ownHaptics` (number-hunt) kabuk girdi titreşimini atlar. `_ornek` şablonu ve GAME-CONTRACT §5 yeniden yazıldı.
@@ -21,7 +21,7 @@ Yusuf: "halledilmeyen işler kaldı mı?" → kalanlar listelendi; denge raporu 
 
 ## Açık
 - **Arayüz sesleri (karar: öneriyle devam):** 41 düğme `tap`'ı kalktı; anlamlı beş ses kaldı (rakip hazır hit, hediye badge, parti sonucu win/hit, VS whoosh+thud, ses açıldı hit). Bekçi testine "UI: no button click sound" eklendi. Ayrı commit.
-- Yayın yapılmadı; telefonda dinlenmedi (özellikle sessiz chop/bounce/four-arrows hissi, crack-it tek ses, stack).
+- Yayınlandı; telefonda dinlenmedi (özellikle sessiz chop/bounce/four-arrows hissi, crack-it tek ses, stack).
 - Denge raporu rafta (worktree duruyor).
 
 ## Ders
