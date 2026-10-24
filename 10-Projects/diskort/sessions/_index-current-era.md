@@ -84,3 +84,6 @@ Bu dizin yalnızca güncel-dönem aktarımında yazılan notları listeler (tari
 - 2026-10-22 · session · [[2026-10-22-rozet-sahne-prob-ve-0-11-3]] — okunmamış rozeti, ses satırı yuvası + yayın küçük resmi, yayında tek tık/zoom, prob motoru, 0.11.3
 - 2026-10-22 · decision · [[2026-10-22-yayin-izleme-tek-tik-zoom-ve-ses-satirinda-sabit-yuva]] — Yayın izlemede doğrudan etkileşim, ses satırında sabit yuva, rozet = bahsetme + DM
 - 2026-10-22 · lesson · [[2026-10-22-sonda-serisi-sinirsiz-buyume-ve-yeniden-oynatma-sira-yapayligi]] — Sonda serisi dizi tutulursa sınırsız büyür; yeniden oynatma sırası yapay kesinti üretir
+- 2026-10-24 · session · [[2026-10-24-yayin-pip-ve-0-12-1]] — yüzen yayın penceresi (StreamPip), 0.12.1 yayında
+- 2026-10-24 · decision · [[2026-10-24-yayin-yuzen-pencere-pip]] — Sahne kapanınca köşeye yapışan, 16:9 boyutlanan yüzen yayın penceresi
+- 2026-10-24 · lesson · [[2026-10-24-pointer-capture-click-hedefini-degistirir]] — Sarmalayıcıda pointerdown capture içteki click'i sarmalayıcıya taşır

@@ -1,7 +1,7 @@
 ---
 type: project
 project: diskort
-date: 2026-10-23
+date: 2026-10-24
 status: active
 tags: [diskort, overview]
 source: handoff notundan (artık kaldırıldı), diskurt-project ve diskort-* hafıza dosyalarından, 2026-10-01/02 oturumlarından
@@ -37,7 +37,7 @@ _Son güncelleme: 2026-10-24; canlıdan doğrula. Eski ayrıntılı hâl: [[10-P
 - **İzin sistemi:** otomatik mod, Yusuf o oturumda sohbette söylemedikçe ssh deploy ve tag/push'u engelleyebilir. Sor, sonra her komutu ayrı çağrıyla çalıştır.
 
 ## Sıradaki işler
-1. **0.12.0 canlı doğrulama:** oyun sayfası popover'ı Windows'ta (Steam oyununda doğrudan bağlantılar, Epic/elle eklenen oyunda arama), kozmetiksiz profil/üye listesi/ses kutucukları, mobil ses kutucuğu yüksekliği (128'e indi), yeni APK ve IPA kurulumu; ses satırı sağ yuva hizası. Sonra 0.11.3 masaüstü: dock rozeti (Windows overlay), ses satırı hizası ve yayın küçük resmi, yayında tek tık/zoom hissi (250 ms gecikme, 4× sınır); giriş sesi sırası, uzunluk seçici, seviye, sarı halka, panel düğmesi, telefonda yükleme/çalma, iOS'ta LiveKit ile karışım. Rahatsız edici ses: `admin-cli intro-sound-remove`.
+1. **0.12.1 ve 0.12.0 canlı doğrulama:** yüzen yayın penceresi (sürükleme hissi, tutamaçlar, taşıma sonrası tık, sağ alt varsayılanın mesaj kutusunu kapatıp kapatmadığı; [[2026-10-24-yayin-yuzen-pencere-pip]]); oyun sayfası popover'ı Windows'ta (Steam oyununda doğrudan bağlantılar, Epic/elle eklenen oyunda arama), kozmetiksiz profil/üye listesi/ses kutucukları, mobil ses kutucuğu yüksekliği (128'e indi), yeni APK ve IPA kurulumu; ses satırı sağ yuva hizası. Sonra 0.11.3 masaüstü: dock rozeti (Windows overlay), ses satırı hizası ve yayın küçük resmi, yayında tek tık/zoom hissi (250 ms gecikme, 4× sınır); giriş sesi sırası, uzunluk seçici, seviye, sarı halka, panel düğmesi, telefonda yükleme/çalma, iOS'ta LiveKit ile karışım. Rahatsız edici ses: `admin-cli intro-sound-remove`.
 2. **0.11.0 doğrulama:** yeni APK kurulumu, masaüstü AGC gerçek mikrofonla, telefonda DPDFNet 30 ms tampon (Xiaomi'de 7,5 ms eşiği aşılıp model kapanıyor, doğrulanmadı), Android OOM tekrarı.
 3. **Eski doğrulamalar:** 0.10.3 (Mac'te elle kurulum, sonraki sürümde macOS otomatik güncelleme uçtan uca, `.p12` yedeğe taşınacak), 0.10.0 (arkadaşlık akışı iki cihazla, donanım simulcast, telefonda izleme FPS'i). Ayrıntı arşivde.
 4. **Yalnız-UDP kesinti kayıtları:** üretimde `probe.proto: udp` kayıtlarının sıklığına bak (gözcü raporu); gürültü yaparsa eşik.
@@ -84,6 +84,7 @@ _Son güncelleme: 2026-10-24; canlıdan doğrula. Eski ayrıntılı hâl: [[10-P
 - [[2026-10-15-kisisel-giris-sesi-ve-0-11-1]]: kişisel giriş sesi (#34, üç ajan + inceleme), sürüm 0.11.1, şema 27, imajda ffmpeg
 - [[2026-10-16-admin-altyapi-sekmesi]]: admin "Makine" sekmesi "Altyapı" oldu, makine geneli Netdata'ya, `a22c0dc` yayında
 - [[2026-10-22-rozet-sahne-prob-ve-0-11-3]]: okunmamış rozeti, ses satırında sabit yuva + yayın küçük resmi, yayında tek tık/zoom, prob motoru UDP/TCP, sunucu deploy, 0.11.3
+- [[2026-10-24-yayin-pip-ve-0-12-1]]: yüzen yayın penceresi (StreamPip), 0.12.1 yayında; karar [[2026-10-24-yayin-yuzen-pencere-pip]], ders [[2026-10-24-pointer-capture-click-hedefini-degistirir]]
 - [[2026-10-23-kozmetikler-kaldirildi-oyun-sayfasi-0-12-0]]: kozmetikler her platformdan kaldırıldı (şema 28), oyun sayfası popover'ı, sağ yuva kayması, 0.12.0 yayında
 - [[10-Projects/diskort/sessions/2026-10-17-diskort-guncel-durum-arsivi|2026-10-17 güncel durum arşivi]]: overview'un kısaltma öncesi "Güncel durum" ve "Sıradaki işler" bölümleri, olduğu gibi
 - ziroo-edge ve marka oturumları (tools/games geçişi, liste sayfaları, ziroo.net, maskot) artık kendi overview'larında: [[10-Projects/ziroo-edge/_overview|ziroo-edge]], [[10-Projects/marka/_overview|marka]]
