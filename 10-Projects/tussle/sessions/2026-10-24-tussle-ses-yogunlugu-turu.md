@@ -20,7 +20,7 @@ Yusuf: "halledilmeyen işler kaldı mı?" → kalanlar listelendi; denge raporu 
 - **İnceleme** (opus): 1 orta (number-hunt ıskası ownHaptics sonrası titreşimsiz kaldı → `fx.haptic(40)`), 2 düşük (politika regex'i sfxHaptic'i yakalamıyordu → düzeltildi + pozitif örnek testi; crack-it'te kare takılırsa tahmin sesi kaybolabilirdi → faz bitişinde `guessSound`). Orta bulgu koddan doğrudan doğrulandı, şüpheci gerekmedi. Tüm testler: 187 dosya geçti.
 
 ## Açık
-- **Arayüz sesleri:** 41 düğme `tap`'ı (oda 13, ana sayfa 9, kabuk 5, profil 4, antrenman 3, parti paneli 3, giriş 2, ayarlar 1, Hazırım 1) + anlamlı beş ses (rakip hazır hit, hediye badge, parti sonucu win/hit, VS whoosh+thud, ses açıldı hit). Öneri: 41 tap kalkar, beşi kalır; Yusuf'un kararı bekleniyor.
+- **Arayüz sesleri (karar: öneriyle devam):** 41 düğme `tap`'ı kalktı; anlamlı beş ses kaldı (rakip hazır hit, hediye badge, parti sonucu win/hit, VS whoosh+thud, ses açıldı hit). Bekçi testine "UI: no button click sound" eklendi. Ayrı commit.
 - Yayın yapılmadı; telefonda dinlenmedi (özellikle sessiz chop/bounce/four-arrows hissi, crack-it tek ses, stack).
 - Denge raporu rafta (worktree duruyor).
 
