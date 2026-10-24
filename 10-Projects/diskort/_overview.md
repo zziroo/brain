@@ -83,8 +83,8 @@ _Son güncelleme: 2026-10-24; canlıdan doğrula. Eski ayrıntılı hâl: [[10-P
 - [[2026-10-15-canli-dogrulama-bakim-plani-geri-bildirim]]: canlı doğrulama (sunucu 99f3652, OTA 200), bakım planı 16 Ekim 07:30, geri bildirim #35 main'de, #34 ertelendi, #36 pil testi
 - [[2026-10-15-kisisel-giris-sesi-ve-0-11-1]]: kişisel giriş sesi (#34, üç ajan + inceleme), sürüm 0.11.1, şema 27, imajda ffmpeg
 - [[2026-10-16-admin-altyapi-sekmesi]]: admin "Makine" sekmesi "Altyapı" oldu, makine geneli Netdata'ya, `a22c0dc` yayında
-- [[2026-10-22-rozet-sahne-prob-ve-0-11-3]]: okunmamış rozeti, ses satırında sabit yuva + yayın küçük resmi, yayında tek tık/zoom, prob motoru UDP/TCP, sunucu deploy, 0.11.3
 - [[2026-10-24-yayin-pip-ve-0-12-1]]: yüzen yayın penceresi (StreamPip), 0.12.1 yayında; karar [[2026-10-24-yayin-yuzen-pencere-pip]], ders [[2026-10-24-pointer-capture-click-hedefini-degistirir]]
+- [[2026-10-22-rozet-sahne-prob-ve-0-11-3]]: okunmamış rozeti, ses satırında sabit yuva + yayın küçük resmi, yayında tek tık/zoom, prob motoru UDP/TCP, sunucu deploy, 0.11.3
 - [[2026-10-23-kozmetikler-kaldirildi-oyun-sayfasi-0-12-0]]: kozmetikler her platformdan kaldırıldı (şema 28), oyun sayfası popover'ı, sağ yuva kayması, 0.12.0 yayında
 - [[10-Projects/diskort/sessions/2026-10-17-diskort-guncel-durum-arsivi|2026-10-17 güncel durum arşivi]]: overview'un kısaltma öncesi "Güncel durum" ve "Sıradaki işler" bölümleri, olduğu gibi
 - ziroo-edge ve marka oturumları (tools/games geçişi, liste sayfaları, ziroo.net, maskot) artık kendi overview'larında: [[10-Projects/ziroo-edge/_overview|ziroo-edge]], [[10-Projects/marka/_overview|marka]]
