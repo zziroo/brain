@@ -1,7 +1,7 @@
 ---
 type: project
 project: kripto-bot
-date: 2026-10-23
+date: 2026-10-24
 status: active
 tags: [kripto-bot, overview, binance, trading, bot]
 source: ZZ oturumu "kripto-bot: proje başlangıcı" (2026-10-16)
@@ -62,15 +62,18 @@ _Son güncelleme: 2026-10-23 akşam, okuma çağrılarına ağ tekrarı eklendi_
 - [[zaman-dilimi-4h-yusuf-tercihi|Zaman dilimi 1d → 4h (Yusuf'un tercihi)]]
 - [[sembol-listesi-ilk-5|Sembol listesi ilk 5 (BTC, ETH, SOL, XRP, BNB)]]
 - [[emir-oncesi-ag-hatasi-kilitlemez|Emir öncesi ağ hatası kilitlemez]]
+- [[okuma-cagrilarina-ag-tekrari|Salt okunur borsa çağrılarına 3 denemelik ağ tekrarı]]
 
 ## Dersler
 - [[start-session-otomatik-tur-reddi|start_session otomatik tur reddi]]
 - [[vps-binance-baglanti-sifirlama|VPS'ten Binance bağlantı sıfırlama, ccxt spot-only, data-api]]
 - [[binance-testnet-gozlemleri|Binance testnet gözlemleri]]
 - [[zaman-dilimi-degisikligi-hemen-emir-tetikler|Zaman dilimi değişikliği hemen emir tetikler]]
+- [[bot-calismiyor-uyarisinda-once-log-zamanlarina-bak|"Bot çalışmadı" uyarısında önce log zamanlarına bak]]
 
 ## Oturumlar
 - [[2026-10-16-proje-baslangici|2026-10-16 proje başlangıcı]]
 - [[2026-10-16-faz1-faz2-faz3-ve-testnet|2026-10-16 Faz 1-2-3, testnet, günlük rapor]]
 - [[2026-10-16-4h-gecisi|2026-10-16 4h geçişi, testnet'te ilk satışlar]]
 - [[2026-10-17-sembol-listesi-ve-ag-hatasi-kilidi|2026-10-17..23 ilk 5 sembol, ağ hatası kilidi, ilk alım-satım]]
+- [[2026-10-23-binance-ag-kesintisi-ve-okuma-tekrari|2026-10-23 Binance ağ kesintisi teşhisi, okuma çağrılarına tekrar]]
