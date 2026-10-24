@@ -14,7 +14,7 @@ Oyun sırasında başarı/zorluk için ikinci bir gösterge yok: kademe/mileston
 ## Neden
 Yusuf: antrenman için kurulan başarı metreleri gereksiz; oyun içinde ses/rozet olmasın. Zorluk rampası (hızlanma) oyunun gerilimi olarak kalır ama sayıyla yazmak ikinci ölçü oluyor ve "oyunda tek ölçü" kuralına aykırı ([[2026-10-20-oyunda-tek-olcu-ikinci-birim-yok]]); oyuncu hızlandığını zaten görüyor.
 
-## Kalanlar (bilinçli)
+## Kalanlar (bilinçli) — 24 Eki'de bunlar da kalktı, bkz. [[2026-10-24-oyun-icinde-kombo-tur-hapi-ve-level-sesi-de-yok]]
 - Kombo çarpanı ×n (beat, target, bounce, stack): puanı doğrudan çarpıyor, göstermezsek +15/+30 sıçramaları açıklamasız kalır.
 - n/toplam ilerleme sayacı (split, on-time, reflex, color-recall, fill-up): başarı değil kalan iş; süre çubuğu bunu söylemiyor.
 - Tur/seviye geçişi `level` sesleri (split, lights, right-door, keep-up, balance, bounce, knife-toss, spiral, color-recall, crack-it): evre değişimini duyurur; ileride `level` adı paletten çıkıp bilgi verenler `pop`, kutlama olanlar sessiz olabilir (önerildi, karar yok).

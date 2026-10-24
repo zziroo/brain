@@ -16,6 +16,7 @@ Yusuf: biriken telefon teyitleri kapatıldı ("şu an sorun yok"); küçük aç�
   - Uygulanan A; B varyantları görüntü olarak vault `gorsel-2026-10-24-kontrast/` (`karsilastirma.html`). Yusuf'un seçimi bekleniyor: kilit 1/2 (A koyu/mercan, B beyaz/koyu mercan), davet kartı (A beyaz/koyu mavi, B koyu/açık mavi), boş jeton (A gri disk .5, B soluk dolgu + kenar), parti küçük resmi (A beyaz yıldız, B sarı yıldız/koyu mor).
 
 ## Kararlar / notlar
+- Karar [[2026-10-24-oyun-icinde-kombo-tur-hapi-ve-level-sesi-de-yok]], ders [[2026-10-24-kontrast-testi-token-ciftlerini-gorur-sabit-renk-ve-gradyani-pikselden-olc]].
 - Tur hapı kalkınca on-time, reflex, color-recall'da HUD hiçbir şey çizmiyor; süre çubuğu da kapalı. Oyun bitişi ani hissedilirse hap geri gelebilir (`round:true` tek satır).
 - Brief dışı, dokunulmadı: hop HUD rozetinde metre; slice "{n} şeker birden!" (anlık olay çıkartması).
 - Parti modunda oyun anlatımı (Melih): hazır kartı zaten howTo + hayalet el gösteriyor, 5 sn geri sayım. Öneri bekliyor (aşağıda).
