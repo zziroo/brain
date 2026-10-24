@@ -43,14 +43,16 @@ Yusuf'un asıl istediği tür: belli bir süre aktif oynanan, kampa dönüp geli
 - **Kod haritası:** `docs/kod-haritasi.md` (2026-10-20, `7cdfb56`, yerelde; push yok). Bakım: yapı değiştiren commit öncesi `node ~/.claude/skills/kod-haritasi/harita.mjs kontrol`.
 
 ## Güncel durum
-_Son içerik güncellemesi: 2026-10-13 (2026-10-17'de yalnız sadeleşti); canlıdan doğrula. Eski tablo ve devir listeleri: [[10-Projects/isik-bekcisi/sessions/2026-10-17-isik-bekcisi-guncel-durum-arsivi|arşiv]]._
+_Son içerik güncellemesi: 2026-10-24; canlıdan doğrula. Eski tablo ve devir listeleri: [[10-Projects/isik-bekcisi/sessions/2026-10-17-isik-bekcisi-guncel-durum-arsivi|arşiv]]._
 - **Canlı = main `9509943`** (2026-10-13 gece): Parlama evrimi (Şok Dalgası, Yanan Halka, Gün Doğumu), Kırılan Dünya, Zincir Fırtına ([[2026-10-13-parlama-evrimi-sok-dalgasi-yanan-halka-gun-dogumu]], [[2026-10-13-kirilan-dunya-ve-zincir-firtina-yazildi]]). Bot: ana 35,4 / özensiz 44,5 sefer. Oturum: [[2026-10-13-kirilan-dunya-firtina-parlama-evrimi-yayin]].
 - **2026-10-12/13'ten beri canlıda:** nöbet tavanı kalktı, Atılım silindi, her kademede sonsuz yıldızlar, İs yıldız tozunun yerini aldı, `?chapter=N` bölüm kaydı. Kayıt sürümü 7; eski kayıtlar sıfırlandı (Yusuf kabul etti). [[2026-10-12-kapi-yok-uzunluk-icerikten-atilim-silindi-sonsuz-yildizlar]], [[2026-10-12-is-yildiz-tozunun-yerine-tek-kaynak-gece]].
 - **Yön:** içerik genişliği değil, güç ekranda görünsün ([[2026-10-13-guc-ekranda-gorunsun-dunya-kirilir]]).
+- **2026-10-24 (yerelde, yayınlanmadı):** hikâye rafta (`STORY.on` false, data.js): konuşma plakası, sefer tepkileri ve günce kapalı; küçük sohbet ve işlevsel baloncuklar duruyor; story-check bayrağı kendisi açar. Yusuf ilk biyomu oynadı: 4-5 seferde ilk fener dolmadı (kota ~8 sefer, çubuk %80'de nöbeti bekler), yazılı ipuçları okunmuyor → yazısız öğretme önerisi: [[2026-10-24-yazisiz-ogretme-secenekleri]] (karar bekliyor).
 - **Denge:** yalnız bot ölçümü var, gerçek oyuncu ölçümü yok. Kalp kolaylaştı (~2 deneme), sonra ayarlanacak. Hedef oyun uzunluğu Yusuf'un kararı ([[2026-10-05-devir-oyun-uzunlugu]]).
 - **Doğrulanmayanlar:** sesleri hiçbir ajan dinlemedi; son özellikleri insan oynamadı; Son Nöbet'in son birleşik hâli oynanmadı; gamepad 2. dilimi (gökyüzü, paneller) yalnız sahte gamepad'le denendi; öğretici ipuçları insanla denenmedi (Yusuf: tamamen değiştirilebilir); hikâye Türkçesini Yusuf'tan başka okuyan olmadı.
 
 ## Sıradaki işler
+0. **Yazısız öğretme** (Yusuf'un önceliği, 2026-10-24): seçenek yazısı [[2026-10-24-yazisiz-ogretme-secenekleri]]; Yusuf seçince ajan dilimi. Hikâye işleri (metin, sohbet, günce) rafta, yeni özellikte yazılmaz.
 1. **Yusuf oynasın** (canlıda ya da yerelde `?chapter=N`): ağaç tutuşturma hissi, alevler (ekran görüntüsünde garip geldi), kaya kırma boş mu, fırtına ve gök yıldırımı, Parlama evrimi, sesler. Genel yorumu bekleniyor.
 2. **Ağacın "+%" yıldızlarını fiil yıldızlarına kes.** Parlama evrimi ve günün diğer işleri ~1,4 / ~2,7 sefer kısalttı; bu kesimde geri verilecek.
 3. **İsin kamp yapıları.** Açık: Çayır'da is birikiyor (ilk is yıldızı 1. fenerden sonra), gece hâlâ az kıvılcım bırakıyor.
