@@ -18,7 +18,7 @@ source: oturum "tussle: küçük açıklar (kombo, luck, kontrast)" (2026-10-24)
 - Kalanlar: oyun sonu çıkartmaları ve sonuç satırları; skorun kendisi metre ise HUD'da (hop metre rozeti dokunulmadı); slice'ın anlık "{n} şeker birden!" olay çıkartması.
 
 ## Neden
-Oyunda tek ölçü skor. Çarpanı göstermeyip puana sokmak sıçramaları açıklamasız bırakırdı, bu yüzden çarpan sim'den çıktı. Tur sayısı ve seviye sesi de oyun içi ilerleme göstergesi; Yusuf'un sadelik çizgisi ([[yusuf-sadelik-tercihi]] hafızası).
+Oyunda tek ölçü skor. Çarpanı göstermeyip puana sokmak sıçramaları açıklamasız bırakırdı, bu yüzden çarpan sim'den çıktı. Tur sayısı ve seviye sesi de oyun içi ilerleme göstergesi; Yusuf'un sadelik çizgisi (Claude hafızası "yusuf-sadelik-tercihi").
 
 ## Reddedilen alternatifler
 - Çarpanı sim'de bırakıp yalnız rozeti gizlemek: açıklamasız +30'lar.
