@@ -8,7 +8,7 @@ source: Claude Code oturumu "ışık bekçisi: durum ve sıradaki işler", 2026-
 ---
 # Öğretme yazısız olsun: mevcut 32 ipucunun sınıflaması ve üç seçenek
 
-Yusuf 2026-10-24: "Guide'ı yazı olarak yapınca okunmuyor; sezgisel, yazısız bir tutorial yapalım." (Önceki karar: ipuçları tamamen değişebilir, [[tutorial-open-to-redesign]], oyun asla durmaz.)
+Yusuf 2026-10-24: "Guide'ı yazı olarak yapınca okunmuyor; sezgisel, yazısız bir tutorial yapalım." (Önceki karar: ipuçları tamamen değişebilir, Claude hafızası "tutorial-open-to-redesign", oyun asla durmaz.)
 Aynı gün hikâye rafa kaldırıldı (`STORY.on` false), öğretme artık hikâyeye yaslanamaz.
 
 ## Sınıflama (ui.js `MARKS`, i18n `h_*`)
