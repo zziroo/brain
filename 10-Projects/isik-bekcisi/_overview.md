@@ -1,10 +1,10 @@
 ---
 type: project
 project: isik-bekcisi
-date: 2026-10-13
+date: 2026-10-24
 status: active
 tags: [isik-bekcisi, oyun, incremental, kosu-tabanli, canvas]
-source: C:\Users\yusuf\ZZ\zProjects\incremantal-game (CLAUDE.md); oturumlar 2026-10-02 (6d8df6c2, 72fd0708), 2026-10-04 (9e4d0124), 2026-10-05 (53393f9a), 2026-10-06 (fb8e3060, iki tur), 2026-10-07 (e5a9fa92 / 5f403d52, akşam 1249d80e), 2026-10-07 gece → 10-08 (dd56e56a + a15a1fc5), 2026-10-08 (nöbet tavanı), 2026-10-12 → 10-13 (b89a4bee: tavan kalktı, Atılım silindi, İs)
+source: C:\Users\yusuf\ZZ\zProjects\incremantal-game (CLAUDE.md); oturumlar 2026-10-02 (6d8df6c2, 72fd0708), 2026-10-04 (9e4d0124), 2026-10-05 (53393f9a), 2026-10-06 (fb8e3060, iki tur), 2026-10-07 (e5a9fa92 / 5f403d52, akşam 1249d80e), 2026-10-07 gece → 10-08 (dd56e56a + a15a1fc5), 2026-10-08 (nöbet tavanı), 2026-10-12 → 10-13 (b89a4bee: tavan kalktı, Atılım silindi, İs), 2026-10-24 (hikâye rafta, yazısız öğretme)
 ---
 
 # Işık Bekçisi: fenerle karanlık vadiye koşular yapılan koşu-tabanlı incremental oyun
@@ -47,9 +47,9 @@ _Son içerik güncellemesi: 2026-10-24; canlıdan doğrula. Eski tablo ve devir 
 - **Canlı = main `4283dfd`** (2026-10-24: hikâye rafta + yazısız öğretme faz 1; GitHub'a push edilmedi). Önceki canlı `9509943` (2026-10-13 gece): Parlama evrimi (Şok Dalgası, Yanan Halka, Gün Doğumu), Kırılan Dünya, Zincir Fırtına ([[2026-10-13-parlama-evrimi-sok-dalgasi-yanan-halka-gun-dogumu]], [[2026-10-13-kirilan-dunya-ve-zincir-firtina-yazildi]]). Bot: ana 35,4 / özensiz 44,5 sefer. Oturum: [[2026-10-13-kirilan-dunya-firtina-parlama-evrimi-yayin]].
 - **2026-10-12/13'ten beri canlıda:** nöbet tavanı kalktı, Atılım silindi, her kademede sonsuz yıldızlar, İs yıldız tozunun yerini aldı, `?chapter=N` bölüm kaydı. Kayıt sürümü 7; eski kayıtlar sıfırlandı (Yusuf kabul etti). [[2026-10-12-kapi-yok-uzunluk-icerikten-atilim-silindi-sonsuz-yildizlar]], [[2026-10-12-is-yildiz-tozunun-yerine-tek-kaynak-gece]].
 - **Yön:** içerik genişliği değil, güç ekranda görünsün ([[2026-10-13-guc-ekranda-gorunsun-dunya-kirilir]]).
-- **2026-10-24 (yerelde, yayınlanmadı):** hikâye rafta (`STORY.on` false, data.js): konuşma plakası, sefer tepkileri ve günce kapalı; küçük sohbet ve işlevsel baloncuklar duruyor; story-check bayrağı kendisi açar. Yusuf ilk biyomu oynadı: 4-5 seferde ilk fener dolmadı (kota ~8 sefer, çubuk %80'de nöbeti bekler), yazılı ipuçları okunmuyor → yazısız öğretme kararı: [[2026-10-24-yazisiz-ogretme-secenekleri]] (seçenek 1 seçildi, yazıldı ve 2026-10-24 canlıya yayınlandı, `4283dfd`: koç işaretleri yalnız tuş kapağı, bilgi işaretleri ve metin bantları silindi, hazır fenerin ve sönük yol lambasının yerde halkası; seçenek 2 Yusuf oynadıktan sonra, 3 hikâyeyle sonra).
+- **2026-10-24:** hikâye rafta ([[2026-10-24-hikaye-rafta-tek-bayrak]]). Yusuf ilk biyomu oynadı: 4-5 seferde ilk fener dolmadı (kota ~8 sefer, çubuk %80'de nöbeti bekler), yazılı ipuçları okunmuyor → yazısız öğretme kararı: [[2026-10-24-yazisiz-ogretme-secenekleri]] (seçenek 1 seçildi, yazıldı ve 2026-10-24 canlıya yayınlandı, `4283dfd`: koç işaretleri yalnız tuş kapağı, bilgi işaretleri ve metin bantları silindi, hazır fenerin ve sönük yol lambasının yerde halkası; seçenek 2 Yusuf oynadıktan sonra, 3 hikâyeyle sonra).
 - **Denge:** yalnız bot ölçümü var, gerçek oyuncu ölçümü yok. Kalp kolaylaştı (~2 deneme), sonra ayarlanacak. Hedef oyun uzunluğu Yusuf'un kararı ([[2026-10-05-devir-oyun-uzunlugu]]).
-- **Doğrulanmayanlar:** sesleri hiçbir ajan dinlemedi; son özellikleri insan oynamadı; Son Nöbet'in son birleşik hâli oynanmadı; gamepad 2. dilimi (gökyüzü, paneller) yalnız sahte gamepad'le denendi; öğretici ipuçları insanla denenmedi (Yusuf: tamamen değiştirilebilir); hikâye Türkçesini Yusuf'tan başka okuyan olmadı.
+- **Doğrulanmayanlar:** sesleri hiçbir ajan dinlemedi; 13 Ekim özelliklerini insan oynamadı; Son Nöbet'in son birleşik hâli oynanmadı; gamepad 2. dilimi yalnız sahte gamepad'le denendi; yazısız işaretler ve fener halkası Yusuf'la denenmedi (halka ajanlara soluk geldi); Kalp'in halka uyarısı artık yazısız (görsel + ses), denenmedi. Oturum: [[2026-10-24-hikaye-rafta-yazisiz-ogretme-yayin]].
 
 ## Sıradaki işler
 0. **Yazısız öğretme, faz 2** (2026-10-24): faz 1 canlıda (`4283dfd`). Yusuf oynayıp simgeli hâli değerlendirsin; sonra seçenek 2 (ilk sefer koreografisi, fener çağırır) kararı. İlk fener kotası (`BEACON_ENERGY[0]`, ~8 sefer) ayrı karar. Hikâye işleri (metin, sohbet, günce) rafta, yeni özellikte yazılmaz.

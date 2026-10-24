@@ -2,7 +2,7 @@
 type: decision
 project: isik-bekcisi
 date: 2026-10-24
-status: proposed
+status: active
 tags: [tutorial, ui, koc-isaretleri]
 source: Claude Code oturumu "ışık bekçisi: durum ve sıradaki işler", 2026-10-24
 ---
@@ -49,7 +49,10 @@ Toplam: 12 ipucu ve 3 bant tamamen kalkar; 14 ipucu tek bir tekrar eden "ışın
 2. **Dünya öğretir + simgeler.** 1'e ek: ilk sefer koreografisi (çayırda ilk ruh tek başına tam önde; ilk kabuklu ve ilk karacık tek, güvenli), hazır fener oyuncuyu çağırır (halka + ışık çizgisi, çubuk ikinci yarıyı fenerde gösterir), yol lambası yaklaşınca kıvılcım çakar. run.js spawn kuralları + render; 3-5 gün. En iyi his, bot dengesi için yeniden ölçüm gerekir (ilk sefer değişir).
 3. **Gösterim.** Sakinler gösterir (Kandil kampta ışını ve parlamayı yapar, oyuncu taklit eder; kampta deneme ruhu). Karakter ve animasyon işi, hikâye raftayken temelsiz; pahalı. Şimdi önerilmez.
 
-## Öneri
+## Karar (2026-10-24, Yusuf)
+Seçenek 1 seçildi ve yazıldı (depo `4283dfd`, canlıda): koç işaretleri yalnız tuş kapağı (`k_walk`, `k_aim`, `k_hold` nabızlı, `k_press`, `k_use`, `k_click`), bilgi işaretleri ve metin bantları silindi (yalnız `audioWake` kaldı), `h_siege` yalnız nöbet sürerken; hazır fenerin yerde sıcak halkası (`siegeRing()`, render.js `ringGlow`/`ringHoles`/`groundRing`), sönük yol lambasının serin halkası. Seçenek 2 (dünya öğretir: ilk sefer koreografisi, fener çağırır) Yusuf simgeli hâli oynadıktan sonra; "ikisini beraber kurgulayabiliriz" dedi, emin değil. Seçenek 3 hikâyeyle birlikte sonraya ([[2026-10-24-hikaye-rafta-tek-bayrak]]).
+
+## Öneri (karardan önce)
 İki faz: önce 1 (bir ajan, tek dilim: yazı tamamen gider, simge dili oturur), sonra 2'nin nöbet ve ilk sefer parçaları. Denge ölçümü yalnız 2'den sonra.
 
 ## Açık soru (Yusuf'un kararı)
