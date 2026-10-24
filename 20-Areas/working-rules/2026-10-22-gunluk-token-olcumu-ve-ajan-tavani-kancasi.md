@@ -22,5 +22,5 @@ source: "sistem: 15 Ekim token ölçümü" oturumu (15–22 Ekim, ZZ kökü)
 - Token kuralları yerinde kalır; kalite tavizi değerlendirmesi [[orkestrasyon]] dördüncü turda. Ajan disiplini düzelince günlük ölçüm haftalığa iner.
 
 ## Doğrulanmayan
-- `ajan-tavani.mjs` canlı bir ajanda henüz tetiklenmedi; eski transkriptle test edildi. İlk kontrol: bir sonraki ölçümde tavan üstü ajan sayısı.
+- `ajan-tavani.mjs` canlı bir ajanda henüz tetiklenmedi; eski transkriptle test edildi. İlk kontrol (23 Ekim, Ölçüm 9): 22 Ekim'de 100 çağrıyı aşan ajan yok, 200k'yı aşan 4 ve hepsi 213k'nın altında; kanca işliyor görünüyor.
 - Hook girdisinde alt ajan için `transcript_path`'in ajanın kendi dosyası mı olduğu varsayım; betik iki ihtimali de ele alıyor.
